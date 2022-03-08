@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Prepaid.GetRecharge" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Prepaid.GetRecharge" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:40204/PreTransacService.svc?xsd=xsd3" namespace="Claro" />
+  <xs:import schemaLocation="http://localhost:40204/PreTransacService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Prepaid" />
+  <xs:complexType name="RechargeRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="Claro" base="q1:Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="END_DATE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FLAG" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MSISDN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NUMBER_REG" type="xs:int" />
+          <xs:element minOccurs="0" name="START_DATE" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RechargeRequest" nillable="true" type="tns:RechargeRequest" />
+  <xs:complexType name="RechargeResponse">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Prepaid" minOccurs="0" name="ListRecharge" nillable="true" type="q2:ArrayOfRecharge" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Prepaid" minOccurs="0" name="ObjRecharge" nillable="true" type="q3:Recharge" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RechargeResponse" nillable="true" type="tns:RechargeResponse" />
+</xs:schema>

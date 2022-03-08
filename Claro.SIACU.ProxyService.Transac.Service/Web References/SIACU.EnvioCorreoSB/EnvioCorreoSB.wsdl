@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WL5G3N0:definitions xmlns:WL5G3N2="http://claro.com.pe/eai/util/enviocorreo" xmlns:WL5G3N1="http://claro.com.pe/eai/util/enviocorreo/types" xmlns:WL5G3N3="http://schemas.xmlsoap.org/wsdl/soap/" name="EnvioCorreoSB" targetNamespace="http://claro.com.pe/eai/util/enviocorreo" xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/">
+  <WL5G3N0:types>
+    <xsd:schema xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://claro.com.pe/eai/util/enviocorreo" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:types="http://claro.com.pe/eai/util/enviocorreo/types" xmlns:WL5G3N4="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" elementFormDefault="qualified" targetNamespace="http://claro.com.pe/eai/util/enviocorreo" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+    <xsd:schema xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://claro.com.pe/eai/util/enviocorreo" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:types="http://claro.com.pe/eai/util/enviocorreo/types" xmlns:WL5G3N4="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import schemaLocation="http://172.19.74.189:8901/EnvioCorreoSB/proxy_services/EnvioCorreoSB?SCHEMA%2FEnvioCorreoSB%2Fwsdl%2FEnvioCorreoSB" namespace="http://claro.com.pe/eai/util/enviocorreo/types" />
+    </xsd:schema>
+  </WL5G3N0:types>
+  <WL5G3N0:message name="enviarCorreoRequestMsg">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:enviarCorreoRequest" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="enviarCorreoResponseMsg">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:enviarCorreoResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:portType name="EnvioCorreoSBPortType">
+    <WL5G3N0:operation name="enviarCorreo">
+      <WL5G3N0:input message="WL5G3N2:enviarCorreoRequestMsg" />
+      <WL5G3N0:output message="WL5G3N2:enviarCorreoResponseMsg" />
+    </WL5G3N0:operation>
+  </WL5G3N0:portType>
+  <WL5G3N0:binding name="EnvioCorreoSBPortTypeSOAP11Binding" type="WL5G3N2:EnvioCorreoSBPortType">
+    <WL5G3N3:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <WL5G3N0:operation name="enviarCorreo">
+      <WL5G3N3:operation soapAction="http://claro.com.pe/eai/util/enviocorreo/enviarCorreo" style="document" />
+      <WL5G3N0:input>
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+  </WL5G3N0:binding>
+  <WL5G3N0:service name="EnvioCorreoSBPortTypeSOAP11BindingQSService">
+    <WL5G3N0:documentation>OSB Service</WL5G3N0:documentation>
+    <WL5G3N0:port name="EnvioCorreoSBPortTypeSOAP11BindingQSPort" binding="WL5G3N2:EnvioCorreoSBPortTypeSOAP11Binding">
+      <WL5G3N3:address location="http://172.19.74.189:8901/EnvioCorreoSB/proxy_services/EnvioCorreoSB" />
+    </WL5G3N0:port>
+  </WL5G3N0:service>
+</WL5G3N0:definitions>

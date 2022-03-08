@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.BlackWhiteList.GetStateLineEmail" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.BlackWhiteList.GetStateLineEmail" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd38" namespace="Tools.Entity" />
+  <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd40" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.GetDataPower" />
+  <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd41" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.BlackWhiteList" />
+  <xs:complexType name="SearchStateLineEmailRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="Tools.Entity" base="q1:Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="MessageRequest" nillable="true" type="tns:SearchStateLineEmailMessageRequest" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SearchStateLineEmailRequest" nillable="true" type="tns:SearchStateLineEmailRequest" />
+  <xs:complexType name="SearchStateLineEmailMessageRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Body" nillable="true" type="tns:SearchStateLineEmailBodyRequest" />
+      <xs:element minOccurs="0" name="Header" nillable="true" type="tns:SearchStateLineEmailHeaderRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SearchStateLineEmailMessageRequest" nillable="true" type="tns:SearchStateLineEmailMessageRequest" />
+  <xs:complexType name="SearchStateLineEmailBodyRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="correo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nroTelefono" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SearchStateLineEmailBodyRequest" nillable="true" type="tns:SearchStateLineEmailBodyRequest" />
+  <xs:complexType name="SearchStateLineEmailHeaderRequest">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.GetDataPower" minOccurs="0" name="HeaderRequest" nillable="true" type="q2:HeaderRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SearchStateLineEmailHeaderRequest" nillable="true" type="tns:SearchStateLineEmailHeaderRequest" />
+  <xs:complexType name="SearchStateLineEmailResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MessageResponse" nillable="true" type="tns:SearchStateLineEmailMessageResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SearchStateLineEmailResponse" nillable="true" type="tns:SearchStateLineEmailResponse" />
+  <xs:complexType name="SearchStateLineEmailMessageResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Body" nillable="true" type="tns:SearchStateLineEmailBodyResponse" />
+      <xs:element minOccurs="0" name="Header" nillable="true" type="tns:SearchStateLineEmailHeaderResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SearchStateLineEmailMessageResponse" nillable="true" type="tns:SearchStateLineEmailMessageResponse" />
+  <xs:complexType name="SearchStateLineEmailBodyResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigoRespuesta" nillable="true" type="xs:string" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.BlackWhiteList" minOccurs="0" name="datosCliente" nillable="true" type="q3:datosCliente" />
+      <xs:element minOccurs="0" name="mensajeRespuesta" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SearchStateLineEmailBodyResponse" nillable="true" type="tns:SearchStateLineEmailBodyResponse" />
+  <xs:complexType name="SearchStateLineEmailHeaderResponse">
+    <xs:sequence>
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.GetDataPower" minOccurs="0" name="HeaderResponse" nillable="true" type="q4:HeaderResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SearchStateLineEmailHeaderResponse" nillable="true" type="tns:SearchStateLineEmailHeaderResponse" />
+</xs:schema>

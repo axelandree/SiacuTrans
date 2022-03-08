@@ -1,0 +1,66 @@
+﻿@{
+ 
+    Layout = null;
+}
+<script type="text/javascript" src="~/Areas/Transactions/Content/Lib/BloqueoF12.js"></script>
+<div id="ContentRestricSellInfoPromotionUploadInfoProm">
+    <div id="forCargaMasiva" class="col-md-12">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="table-responsive">
+                    <table id="tblDataCargaMasiva" class="table  table-striped table-hover table-responsive claro-modal-tabla table-bordered">
+                        
+                        <tbody>
+                            <tr>
+                                <th colspan="4" width="100%">
+                                    <input type="radio" id='radio_todas_Lineas' class="myCheck" name="radio_lineas" value="N" />
+                                    <label for="radio_todas_Lineas" class="control-label" style="cursor:pointer;">Aplicar Cambios a todas líneas del cliente</label>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th colspan="2" width="50%">
+                                    <input type="radio" id='radio_algunas_Lineas' class="myCheck" name="radio_lineas" value="S" />
+                                    <label for="radio_algunas_Lineas" class="control-label" style="cursor:pointer;">Aplicar Cambios a algunas líneas del cliente &nbsp;</label>
+                                    @*<button style="width: 30%" class="btn claro-btn-info btn-sm btn-link" id="btnExaminar" type="button" data-toggle="modal" disabled>Examinar...&nbsp;</button>*@
+
+
+                                </th>
+                                <th width="40%">
+                                    <input type="file" id="dataFile" class="form-control" name="dataFile" value="Examinar" disabled />
+                                </th>
+                                <th width="10%">
+                                    <button class="btn claro-btn-info btn-sm" id="btnCarga" type="button" disabled>Cargar</button>
+                                </th>
+                                @*<th>
+                                        <button style="width: 50%" class="btn claro-btn-info btn-sm btn-link" id="btnExaminar" type="button" data-toggle="modal" disabled>Examinar...</button>
+                                    </th>
+                                    <th>
+                                        <button style="width: 40%" class="btn claro-btn-info btn-sm btn-link" id="btnCarga" type="button" data-toggle="modal" disabled>Cargar</button>
+                                    </th>*@
+                            </tr>
+                            @*<tr>
+                                    <td colspan="4" style="text-align:center;">
+                                    <button style="width: 20%" class="btn claro-btn-info btn-sm" id="btnGrabar" type="button">Grabar</button>
+                                    </td>
+                                </tr>*@
+                            <tr>
+                                <td style="border-right: 0px;"><span id="spanCargaMasivo" style="color:red;"> </span></td>
+                                <td colspan="3" style="text-align:left; border-left:0px;">                                   
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="hidden" id="hdNumeroDocumento" name="hdNumeroDocumento" value="@ViewBag.numeroDocumento" />
+        <input type="hidden" id="hdstrTelefono" name="hdstrTelefono" value="@ViewBag.Telefono" />
+    @*<input type="hidden" id="hdNumeroDocumento" name="hdNumeroDocumento" value="32403057" />
+    <input type="hidden" id="hdstrTelefono" name="hdstrTelefono" value="943390207" />*@
+    <input type="hidden" id="hdstrProcessAnyLine" name="hdstrProcessAnyLine" value="0" />
+</div>
+
+
+@Scripts.Render("~/bundles/Transactions/UploadInfoProm")

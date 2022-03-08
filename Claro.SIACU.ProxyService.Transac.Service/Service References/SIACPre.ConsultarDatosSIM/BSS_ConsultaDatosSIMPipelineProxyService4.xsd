@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:bss="http://claro.com.pe/esb/message/bssconsultadatossim/consultarDatosSIM/v1/" xmlns:base="http://claro.com.pe/esb/data/generico/baseschema/v1/" elementFormDefault="qualified" targetNamespace="http://claro.com.pe/esb/message/bssconsultadatossim/consultarDatosSIM/v1/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import schemaLocation="http://172.19.91.123:10512/BSS_ConsultaDatosSIM/SRV_BSS_ConsultaDatosSIM/Service/Exposition/BSS_ConsultaDatosSIMPipelineProxyService?SCHEMA%2FBSS_ConsultaDatosSIM%2FSRV_BSS_ConsultaDatosSIM%2FResources%2FXSD%2FBaseSchema" namespace="http://claro.com.pe/esb/data/generico/baseschema/v1/" />
+  <xsd:complexType name="consultaDatosSIMType">
+    <xsd:sequence>
+      <xsd:element name="msisdn" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ResponseDataconsultarDatosSIM">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="1" name="listaDatosSIM" type="bss:DatosSIMType" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="listaResponseOpcional" type="base:ResponseOpcionalType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="consultarDatosSIMRequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="consultaDatosSIM" type="bss:consultaDatosSIMType" />
+        <xsd:element minOccurs="1" maxOccurs="1" name="listaRequestOpcional" type="base:RequestOpcionalType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="consultarDatosSIMResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="responseStatus" type="base:responseStatus" />
+        <xsd:element name="responseData" type="bss:ResponseDataconsultarDatosSIM" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="DatosSIMType">
+    <xsd:sequence>
+      <xsd:element name="idLote" type="xsd:string" />
+      <xsd:element name="fechaReg" type="xsd:string" />
+      <xsd:element name="iccid" type="xsd:string" />
+      <xsd:element name="imsi" type="xsd:string" />
+      <xsd:element name="pin" type="xsd:string" />
+      <xsd:element name="puk" type="xsd:string" />
+      <xsd:element name="pin2" type="xsd:string" />
+      <xsd:element name="puk2" type="xsd:string" />
+      <xsd:element name="adm" type="xsd:string" />
+      <xsd:element name="cmdCrear" type="xsd:string" />
+      <xsd:element name="cmdCreudb" type="xsd:string" />
+      <xsd:element name="estadoCod" type="xsd:string" />
+      <xsd:element name="estadoDes" type="xsd:string" />
+      <xsd:element name="r" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

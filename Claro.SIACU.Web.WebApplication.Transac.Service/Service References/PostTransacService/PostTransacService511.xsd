@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetUserExistsBSCS" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetUserExistsBSCS" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd3" namespace="Claro" />
+  <xs:complexType name="UserExistsBSCSRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="Claro" base="q1:Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Users" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserExistsBSCSRequest" nillable="true" type="tns:UserExistsBSCSRequest" />
+  <xs:complexType name="UserExistsBSCSResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Result" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserExistsBSCSResponse" nillable="true" type="tns:UserExistsBSCSResponse" />
+</xs:schema>

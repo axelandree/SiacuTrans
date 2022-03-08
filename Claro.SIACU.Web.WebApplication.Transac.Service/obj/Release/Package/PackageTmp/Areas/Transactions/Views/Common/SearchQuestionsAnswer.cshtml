@@ -1,0 +1,51 @@
+﻿@{
+    Layout = null;
+    //ViewBag.Title = "SearchQuestionsAnswer";
+    
+}
+<script type="text/javascript" src="~/Areas/Transactions/Content/Lib/BloqueoF12.js"></script>
+<div id="SearchQuestionsAnswerContainer" class="contenedor">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="EstiloTablaPlantilla" style="overflow-y:scroll; width:97%;height:300px;">
+                <div class="panel-heading claro-bg-second">
+                    <label id="Label10" style="padding:10px">Preguntas de seguridad para desvinculación de equipo móvil</label>
+
+                    <label id="lblTitTipoCliente" style="padding:10px">Tipo de Cliente : </label>
+                    <label id="lblTipoClienteModal"></label>
+                </div>
+                <table style="width:100%;">
+                    <tbody>
+                        <tr>
+                            <td colspan="3">
+                                <div id="divTblPreguntas" align="center">
+                                    <table id="TblPreguntas" class="Arial11BV1" style="font-size:12px; width:100%;">
+                                        
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="col-md-8">
+                        <div class="form-group col-md-3 text-center">
+                            <div class="panel panel-default" style="padding: 2% !important; margin-bottom: 0px">
+                                <button type="button" class="btn claro-btn-info btn-sm" id="btnConfirmar">Confirmar</button>
+                                <button type="button" class="btn claro-btn-info btn-sm" id="btnCerrar">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label id="Label1">Nro. Afirmaciones:</label>
+                        <label id="lblNroAfirmaciones">1</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script id="load" src="~/Areas/Transactions/Scripts/SearchQuestionsAnswer/SearchQuestionsAnswer.js"></script>

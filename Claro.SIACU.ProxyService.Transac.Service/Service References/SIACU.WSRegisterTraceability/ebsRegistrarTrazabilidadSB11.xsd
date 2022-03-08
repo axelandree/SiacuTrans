@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="http://claro.com.pe/eai/RegistrarTrazabilidad/ws/types" elementFormDefault="qualified" targetNamespace="http://claro.com.pe/eai/RegistrarTrazabilidad/ws/types" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="registrarRequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditRequest" type="parametrosAuditRequest" />
+        <xsd:element name="biometria" type="parametrosBiometria" />
+        <xsd:element minOccurs="0" name="listaCamposAdicionales" type="ListaCamposAdicionalesType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="registrarResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditResponse" type="parametrosAuditResponse" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="parametrosAuditRequest">
+    <xsd:sequence>
+      <xsd:element name="idTransaccion" type="xsd:string" />
+      <xsd:element name="ipAplicacion" type="xsd:string" />
+      <xsd:element name="nombreAplicacion" type="xsd:string" />
+      <xsd:element name="usuarioAplicacion" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="parametrosAuditResponse">
+    <xsd:sequence>
+      <xsd:element name="idTransaccion" type="xsd:string" />
+      <xsd:element name="codRespuesta" type="xsd:string" />
+      <xsd:element name="msjRespuesta" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="parametrosBiometria">
+    <xsd:sequence>
+      <xsd:element name="idPadre" type="xsd:string" />
+      <xsd:element name="codOperacion" type="xsd:string" />
+      <xsd:element name="sistema" type="xsd:string" />
+      <xsd:element name="codCanal" type="xsd:string" />
+      <xsd:element name="codPdv" type="xsd:string" />
+      <xsd:element name="codModalVenta" type="xsd:string" />
+      <xsd:element name="tipoDocumento" type="xsd:string" />
+      <xsd:element name="numeroDocumento" type="xsd:string" />
+      <xsd:element name="lineas" type="xsd:string" />
+      <xsd:element name="veprnId" type="xsd:string" />
+      <xsd:element name="dniAutorizado" type="xsd:string" />
+      <xsd:element name="usuarioCtaRed" type="xsd:string" />
+      <xsd:element name="idHijo" type="xsd:string" />
+      <xsd:element name="padreAnt" type="xsd:string" />
+      <xsd:element name="dniConsultado" type="xsd:string" />
+      <xsd:element name="wsOrigen" type="xsd:string" />
+      <xsd:element name="tipoValidacion" type="xsd:string" />
+      <xsd:element name="origenTipo" type="xsd:string" />
+      <xsd:element name="codigoError" type="xsd:string" />
+      <xsd:element name="mensajeProceso" type="xsd:string" />
+      <xsd:element name="estado" type="xsd:string" />
+      <xsd:element name="flag" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ListaCamposAdicionalesType">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="campoAdicional">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="nombreCampo" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="valor" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

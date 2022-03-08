@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetServiceBSCS" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetServiceBSCS" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd3" namespace="Claro" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid" />
+  <xs:complexType name="ServiceBSCSRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="Claro" base="q1:Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="StrCodServ" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StrSystem" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StrUser" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ServiceBSCSRequest" nillable="true" type="tns:ServiceBSCSRequest" />
+  <xs:complexType name="ServiceBSCSResponse">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid" minOccurs="0" name="ListServiceBSCS" nillable="true" type="q2:ArrayOfServiceBSCS" />
+      <xs:element minOccurs="0" name="StrDesServ" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrMsg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrResult" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServiceBSCSResponse" nillable="true" type="tns:ServiceBSCSResponse" />
+</xs:schema>

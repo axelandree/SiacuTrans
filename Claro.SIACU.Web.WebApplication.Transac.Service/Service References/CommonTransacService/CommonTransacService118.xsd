@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetSendEmailSB" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetSendEmailSB" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd3" namespace="Claro" />
+  <xs:complexType name="SendEmailSBRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="Claro" base="q1:Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Archivo" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="SessionId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TransactionId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strAppCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strAppID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strAppUser" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strAsunto" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strDestinatario" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strHTMLFlag" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strMensaje" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strNomFile" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strRemitente" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SendEmailSBRequest" nillable="true" type="tns:SendEmailSBRequest" />
+  <xs:complexType name="SendEmailSBResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigoRespuesta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="idTransaccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="mensajeRespuesta" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SendEmailSBResponse" nillable="true" type="tns:SendEmailSBResponse" />
+</xs:schema>

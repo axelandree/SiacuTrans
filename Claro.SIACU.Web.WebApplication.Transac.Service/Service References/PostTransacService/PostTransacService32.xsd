@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetChangePhoneNumber" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetChangePhoneNumber" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd3" namespace="Claro" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid" />
+  <xs:complexType name="ChangePhoneNumberRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="Claro" base="q1:Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="APPLICATION_ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="APPLICATION_PWD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CLASIFICATION_RED" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CONTRACT" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="COST" type="xs:double" />
+          <xs:element minOccurs="0" name="COSTMEDNO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CURRENT_PHONE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CUSTOMER_TYPE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EST_TRASLADO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FLAG_CHANGECHIP" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FLAG_FIDELIZE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FLAG_LOCUTION" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HLR" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NATIONAL_CODE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NEW_PHONE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NUMBER_PHONES" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PHONE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PHONE_TYPE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="USER" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ChangePhoneNumberRequest" nillable="true" type="tns:ChangePhoneNumberRequest" />
+  <xs:complexType name="ChangePhoneNumberResponse">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid" minOccurs="0" name="LstChangePhoneNumber" nillable="true" type="q2:ArrayOfChangePhoneNumber" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid" minOccurs="0" name="LstSimCardPhone" nillable="true" type="q3:ArrayOfSimCardPhone" />
+      <xs:element minOccurs="0" name="RESPONSE" type="xs:boolean" />
+      <xs:element minOccurs="0" name="RESPONSE_CODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RESPONSE_MESSAGE" nillable="true" type="xs:string" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid" minOccurs="0" name="objChangePhoneNumber" nillable="true" type="q4:ChangePhoneNumber" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ChangePhoneNumberResponse" nillable="true" type="tns:ChangePhoneNumberResponse" />
+</xs:schema>

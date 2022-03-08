@@ -1,0 +1,1197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://claro.com.pe/eai/ws/sap/simcards" xmlns:types="http://claro.com.pe/eai/ws/sap/simcards/types" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://claro.com.pe/eai/ws/sap/simcards" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema elementFormDefault="qualified" targetNamespace="http://claro.com.pe/eai/ws/sap/simcards/types">
+      <xsd:element name="consultarTelefonoDispRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="idTransaccion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="ipAplicacion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="nombreAplicacion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="usuarioAplicacion" type="xsd:string" />
+            <xsd:element name="cantidadTelef" type="xsd:integer" />
+            <xsd:element name="clasifRed" type="xsd:string" />
+            <xsd:element name="tipoCliente" type="xsd:string" />
+            <xsd:element name="codigoNacional" type="xsd:string" />
+            <xsd:element name="tipoNroTelef" type="xsd:string" />
+            <xsd:element name="codigoHlr" type="xsd:string" />
+            <xsd:element name="nroTelef" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="consultarTelefonoDispResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="idTransaccion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="codigoResultado" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="mensajeResultado" type="xsd:string" />
+            <xsd:element name="itData">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" name="itDataRow" type="types:itDataType" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="itReturn">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" name="itReturnRow" type="types:itReturnType" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="consultarTelefonoTodosRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="idTransaccion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="ipAplicacion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="nombreAplicacion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="usuarioAplicacion" type="xsd:string" />
+            <xsd:element name="nroTelef" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="consultarTelefonoTodosResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="idTransaccion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="codigoResultado" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="mensajeResultado" type="xsd:string" />
+            <xsd:element name="itNumTelef">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" name="itNumTelefRow" type="types:itNumTelefType" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="itReturn">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" name="itReturnRow" type="types:itReturnType" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="consultarStatusTelefonoRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="idTransaccion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="ipAplicacion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="nombreAplicacion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="usuarioAplicacion" type="xsd:string" />
+            <xsd:element name="nroTelef" type="xsd:string" />
+            <xsd:element name="nroSerie" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="consultarStatusTelefonoResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="idTransaccion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="codigoResultado" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="mensajeResultado" type="xsd:string" />
+            <xsd:element name="gtOutTab">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" name="gtOutTabRow" type="types:gtOutTabType" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="itReturn">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" name="itReturnRow" type="types:itReturnType" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="cambiarStatusTelefonoRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="idTransaccion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="ipAplicacion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="nombreAplicacion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="usuarioAplicacion" type="xsd:string" />
+            <xsd:element name="cantNro" type="xsd:integer" />
+            <xsd:element name="region" type="xsd:string" />
+            <xsd:element name="clasifRed" type="xsd:string" />
+            <xsd:element name="codigoHlr" type="xsd:string" />
+            <xsd:element name="tipoCliente" type="xsd:string" />
+            <xsd:element name="statusInicial" type="xsd:string" />
+            <xsd:element name="statusFinal" type="xsd:string" />
+            <xsd:element name="usuario" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="cambiarStatusTelefonoResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="idTransaccion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="codigoResultado" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="mensajeResultado" type="xsd:string" />
+            <xsd:element name="subRc" type="xsd:integer" />
+            <xsd:element name="esResumen">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" name="esResumenRow" type="types:esResumenType" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="etDetalle">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" name="etDetalleRow" type="types:etDetalleType" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="itReturn">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" name="itReturnRow" type="types:itReturnType" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="cambiarStatusRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="idTransaccion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="ipAplicacion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="nombreAplicacion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="usuarioAplicacion" type="xsd:string" />
+            <xsd:element name="nroTelef" type="xsd:string" />
+            <xsd:element name="status" type="xsd:string" />
+            <xsd:element name="usuario" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="cambiarStatusResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="idTransaccion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="codigoResultado" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="mensajeResultado" type="xsd:string" />
+            <xsd:element name="itReturn">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" name="itReturnRow" type="types:itReturnType" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="reversionCambioNumeroRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="idTransaccion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="ipAplicacion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="nombreAplicacion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="usuarioAplicacion" type="xsd:string" />
+            <xsd:element name="telefAn" type="xsd:string" />
+            <xsd:element name="telefNv" type="xsd:string" />
+            <xsd:element name="usuario" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="reversionCambioNumeroResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="idTransaccion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="codigoResultado" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="mensajeResultado" type="xsd:string" />
+            <xsd:element name="itReturn">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" name="itReturnRow" type="types:itReturnType" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="registroIMSIPortabilidadRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="idTransaccion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="ipAplicacion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="nombreAplicacion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="usuarioAplicacion" type="xsd:string" />
+            <xsd:element name="nroTelef" type="xsd:string" />
+            <xsd:element name="clasifRed" type="xsd:string" />
+            <xsd:element name="tipoNroTelef" type="xsd:string" />
+            <xsd:element name="nroSerie" type="xsd:string" />
+            <xsd:element name="tipoCliente" type="xsd:string" />
+            <xsd:element name="region" type="xsd:string" />
+            <xsd:element name="material" type="xsd:string" />
+            <xsd:element name="usuario" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="registroIMSIPortabilidadResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="idTransaccion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="codigoResultado" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="mensajeResultado" type="xsd:string" />
+            <xsd:element name="itReturn">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" name="itReturnRow" type="types:itReturnType" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="actualizarNroTelefRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="idTransaccion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="ipAplicacion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="nombreAplicacion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="usuarioAplicacion" type="xsd:string" />
+            <xsd:element name="telefAn" type="xsd:string" />
+            <xsd:element name="telefNv" type="xsd:string" />
+            <xsd:element name="usuario" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="actualizarNroTelefResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="idTransaccion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="codigoResultado" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="mensajeResultado" type="xsd:string" />
+            <xsd:element name="itReturn">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" name="itReturnRow" type="types:itReturnType" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="eliminarNroTelefRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="idTransaccion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="ipAplicacion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="nombreAplicacion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="usuarioAplicacion" type="xsd:string" />
+            <xsd:element name="nroTelef" type="xsd:string" />
+            <xsd:element name="usuario" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="eliminarNroTelefResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="idTransaccion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="codigoResultado" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="mensajeResultado" type="xsd:string" />
+            <xsd:element name="itReturn">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" name="itReturnRow" type="types:itReturnType" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="listarMSISDNreservaRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="idTransaccion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="ipAplicacion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="nombreAplicacion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="usuarioAplicacion" type="xsd:string" />
+            <xsd:element name="region" type="xsd:string" />
+            <xsd:element name="clasifRed" type="xsd:string" />
+            <xsd:element name="codigoHlr" type="xsd:string" />
+            <xsd:element name="tipoNroTelef" type="xsd:string" />
+            <xsd:element name="tipoCliente" type="xsd:string" />
+            <xsd:element name="clasifDesti" type="xsd:string" />
+            <xsd:element name="cantidadBuscar" type="xsd:integer" />
+            <xsd:element name="status" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="listarMSISDNreservaResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="idTransaccion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="codigoResultado" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="mensajeResultado" type="xsd:string" />
+            <xsd:element name="itReturn">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" name="itReturnRow" type="types:itReturnType" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="itWork">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" name="itWorkRow" type="types:itWorkType" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="itNroTel">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" name="itNroTelRow" type="types:itNroTelType" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="rollbackPelVendidoRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="idTransaccion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="ipAplicacion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="nombreAplicacion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="usuarioAplicacion" type="xsd:string" />
+            <xsd:element name="nroSerie" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="rollbackPelVendidoResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="idTransaccion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="codigoResultado" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="mensajeResultado" type="xsd:string" />
+            <xsd:element name="subRc" type="xsd:integer" />
+            <xsd:element name="itReturn">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" name="itReturnRow" type="types:itReturnType" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="cambiarStatusVendidoRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="idTransaccion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="ipAplicacion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="nombreAplicacion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="usuarioAplicacion" type="xsd:string" />
+            <xsd:element name="nroTelef" type="xsd:string" />
+            <xsd:element name="usuario" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="cambiarStatusVendidoResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="idTransaccion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="codigoResultado" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="mensajeResultado" type="xsd:string" />
+            <xsd:element name="subRc" type="xsd:integer" />
+            <xsd:element name="itReturn">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" name="itReturnRow" type="types:itReturnType" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="obtenerDatosNroTelefRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="idTransaccion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="ipAplicacion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="nombreAplicacion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="usuarioAplicacion" type="xsd:string" />
+            <xsd:element name="nroTelef" type="xsd:string" />
+            <xsd:element name="material" type="xsd:string" />
+            <xsd:element name="nroSerie" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="obtenerDatosNroTelefResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="idTransaccion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="codigoResultado" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="mensajeResultado" type="xsd:string" />
+            <xsd:element minOccurs="1" name="nroSimcardsData">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" name="nroSimcardsDataRow" type="types:nroSimcardsDataType" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="itReturn">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" name="itReturnRow" type="types:itReturnType" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="obtenerNroTelefSerieRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="idTransaccion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="ipAplicacion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="nombreAplicacion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="usuarioAplicacion" type="xsd:string" />
+            <xsd:element name="nroTelef" type="xsd:string" />
+            <xsd:element name="nroSerie" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="obtenerNroTelefSerieResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="idTransaccion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="codigoResultado" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="mensajeResultado" type="xsd:string" />
+            <xsd:element name="nroTelef" type="xsd:string" />
+            <xsd:element name="nroSerie" type="xsd:string" />
+            <xsd:element name="itReturn">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" name="itReturnRow" type="types:itReturnType" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="obtenerNroTelefRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="idTransaccion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="ipAplicacion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="nombreAplicacion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="usuarioAplicacion" type="xsd:string" />
+            <xsd:element name="itInput">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" name="itInputRow" type="types:itMatSerType" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="obtenerNroTelefResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="idTransaccion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="codigoResultado" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="mensajeResultado" type="xsd:string" />
+            <xsd:element name="itOutput">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" name="itOutputRow" type="types:itTelSerType" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="itReturn">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" name="itReturnRow" type="types:itReturnType" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="obtenerHLRRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="idTransaccion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="ipAplicacion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="nombreAplicacion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="usuarioAplicacion" type="xsd:string" />
+            <xsd:element name="nroTelef" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="obtenerHLRResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="idTransaccion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="codigoResultado" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="mensajeResultado" type="xsd:string" />
+            <xsd:element name="codigoHlr" type="xsd:string" />
+            <xsd:element name="itReturn">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" name="itReturnRow" type="types:itReturnType" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="actualizarSimcardPorReposicionRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="idTransaccion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="ipAplicacion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="nombreAplicacion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="usuarioAplicacion" type="xsd:string" />
+            <xsd:element name="nroTelef" type="xsd:string" />
+            <xsd:element name="nroSerie" type="xsd:string" />
+            <xsd:element name="descripcionProducto" type="xsd:string" />
+            <xsd:element name="usuario" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="actualizarSimcardPorReposicionResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="idTransaccion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="codigoResultado" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="mensajeResultado" type="xsd:string" />
+            <xsd:element name="itReturn">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" name="itReturnRow" type="types:itReturnType" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="desasociarNroTelefSerieRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="idTransaccion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="ipAplicacion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="nombreAplicacion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="usuarioAplicacion" type="xsd:string" />
+            <xsd:element name="nroTelef" type="xsd:string" />
+            <xsd:element name="nroSerie" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="desasociarNroTelefSerieResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="idTransaccion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="codigoResultado" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="mensajeResultado" type="xsd:string" />
+            <xsd:element name="itReturn">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" name="itReturnRow" type="types:itReturnType" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="asociarNroTelefSerieRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="idTransaccion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="ipAplicacion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="nombreAplicacion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="usuarioAplicacion" type="xsd:string" />
+            <xsd:element name="nroTelef" type="xsd:string" />
+            <xsd:element name="nroSerie" type="xsd:string" />
+            <xsd:element name="material" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="asociarNroTelefSerieResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="idTransaccion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="codigoResultado" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="mensajeResultado" type="xsd:string" />
+            <xsd:element name="itOutput">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" name="itOutputRow" type="types:itWorkType" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="itReturn">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" name="itReturnRow" type="types:itReturnType" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="obtenerNroTelefPostRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="idTransaccion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="ipAplicacion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="nombreAplicacion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="usuarioAplicacion" type="xsd:string" />
+            <xsd:element name="itInput">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" name="itInputRow" type="types:itMatSerType" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="obtenerNroTelefPostResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="idTransaccion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="codigoResultado" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="mensajeResultado" type="xsd:string" />
+            <xsd:element name="itOutput">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" name="itOutputRow" type="types:itTelSerType" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="itReturn">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" name="itReturnRow" type="types:itReturnType" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="itDataType">
+        <xsd:sequence>
+          <xsd:element name="nroTelef" type="xsd:string" />
+          <xsd:element name="codigoHlr" type="xsd:string" />
+          <xsd:element name="descClred" type="xsd:string" />
+          <xsd:element name="descRegio" type="xsd:string" />
+          <xsd:element name="descTpcli" type="xsd:string" />
+          <xsd:element name="descTptlf" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="itReturnType">
+        <xsd:sequence>
+          <xsd:element name="tipo" type="xsd:string" />
+          <xsd:element name="claseMensaje" type="xsd:string" />
+          <xsd:element name="numeroMensaje" type="xsd:string" />
+          <xsd:element name="mensaje" type="xsd:string" />
+          <xsd:element name="numeroLog" type="xsd:string" />
+          <xsd:element name="numeroConsecutivoInterno" type="xsd:string" />
+          <xsd:element name="mensajeV1" type="xsd:string" />
+          <xsd:element name="mensajeV2" type="xsd:string" />
+          <xsd:element name="mensajeV3" type="xsd:string" />
+          <xsd:element name="mensajeV4" type="xsd:string" />
+          <xsd:element name="parametro" type="xsd:string" />
+          <xsd:element name="lineas" type="xsd:integer" />
+          <xsd:element name="campo" type="xsd:string" />
+          <xsd:element name="sistema" type="xsd:string" />
+          <xsd:element name="codigo" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="itNumTelefType">
+        <xsd:sequence>
+          <xsd:element name="nroTelef" type="xsd:string" />
+          <xsd:element name="marcCorta" type="xsd:string" />
+          <xsd:element name="codigRtpe" type="xsd:string" />
+          <xsd:element name="pniAbierto" type="xsd:string" />
+          <xsd:element name="empresa" type="xsd:string" />
+          <xsd:element name="bezei" type="xsd:string" />
+          <xsd:element name="descrRed" type="xsd:string" />
+          <xsd:element name="codigoHlr" type="xsd:string" />
+          <xsd:element name="descrStatus" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="gtOutTabType">
+        <xsd:sequence>
+          <xsd:element name="codRet" type="xsd:integer" />
+          <xsd:element name="desCod" type="xsd:string" />
+          <xsd:element name="texto" type="xsd:string" />
+          <xsd:element name="statusSim" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="esResumenType">
+        <xsd:sequence>
+          <xsd:element name="cantSol" type="xsd:integer" />
+          <xsd:element name="cantCarg" type="xsd:integer" />
+          <xsd:element name="codigoHlr" type="xsd:string" />
+          <xsd:element name="region" type="xsd:string" />
+          <xsd:element name="regionDes" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="etDetalleType">
+        <xsd:sequence>
+          <xsd:element name="correl" type="xsd:integer" />
+          <xsd:element name="rangoInicial" type="xsd:string" />
+          <xsd:element name="rangoFinal" type="xsd:string" />
+          <xsd:element name="cantidad" type="xsd:integer" />
+          <xsd:element name="region" type="xsd:string" />
+          <xsd:element name="inC" type="xsd:string" />
+          <xsd:element name="codigoHlr" type="xsd:string" />
+          <xsd:element name="regionDes" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="itWorkType">
+        <xsd:sequence>
+          <xsd:element name="nroTelef" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="itNroTelType">
+        <xsd:sequence>
+          <xsd:element name="nroTelef" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="nroSimcardsDataType">
+        <xsd:sequence>
+          <xsd:element name="nroTelef" type="xsd:string" />
+          <xsd:element name="region" type="xsd:string" />
+          <xsd:element name="codigoRed" type="xsd:string" />
+          <xsd:element name="codigoHlr" type="xsd:string" />
+          <xsd:element name="status" type="xsd:string" />
+          <xsd:element name="fecCarga" type="xsd:date" />
+          <xsd:element name="usoCarga" type="xsd:string" />
+          <xsd:element name="tipoNro" type="xsd:string" />
+          <xsd:element name="loteBscs" type="xsd:string" />
+          <xsd:element name="tipoCliente" type="xsd:string" />
+          <xsd:element name="codigoDest" type="xsd:string" />
+          <xsd:element name="loteDest" type="xsd:string" />
+          <xsd:element name="loteMkt" type="xsd:string" />
+          <xsd:element name="serNr" type="xsd:string" />
+          <xsd:element name="matNr" type="xsd:string" />
+          <xsd:element name="kunNr" type="xsd:string" />
+          <xsd:element name="matNrAntig" type="xsd:string" />
+          <xsd:element name="fecTrafico" type="xsd:date" />
+          <xsd:element name="bm" type="xsd:string" />
+          <xsd:element name="tipoDocCliente" type="xsd:string" />
+          <xsd:element name="cliente" type="xsd:string" />
+          <xsd:element name="statusChipRep" type="xsd:string" />
+          <xsd:element name="fecCambio" type="xsd:date" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="itMatSerType">
+        <xsd:sequence>
+          <xsd:element name="material" type="xsd:string" />
+          <xsd:element name="nroSerie" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="itTelSerType">
+        <xsd:sequence>
+          <xsd:element name="nroTelef" type="xsd:string" />
+          <xsd:element name="nroSerie" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </types>
+  <message name="consultarTelefonoMsgDispRequest">
+    <part name="parameters" element="types:consultarTelefonoDispRequest" />
+  </message>
+  <message name="consultarTelefonoDispMsgResponse">
+    <part name="parameters" element="types:consultarTelefonoDispResponse" />
+  </message>
+  <message name="consultarTelefonoTodosMsgRequest">
+    <part name="parameters" element="types:consultarTelefonoTodosRequest" />
+  </message>
+  <message name="consultarTelefonoTodosMsgResponse">
+    <part name="parameters" element="types:consultarTelefonoTodosResponse" />
+  </message>
+  <message name="consultarStatusTelefonoMsgRequest">
+    <part name="parameters" element="types:consultarStatusTelefonoRequest" />
+  </message>
+  <message name="consultarStatusTelefonoMsgResponse">
+    <part name="parameters" element="types:consultarStatusTelefonoResponse" />
+  </message>
+  <message name="cambiarStatusTelefonoMsgRequest">
+    <part name="parameters" element="types:cambiarStatusTelefonoRequest" />
+  </message>
+  <message name="cambiarStatusTelefonoMsgResponse">
+    <part name="parameters" element="types:cambiarStatusTelefonoResponse" />
+  </message>
+  <message name="cambiarStatusMsgRequest">
+    <part name="parameters" element="types:cambiarStatusRequest" />
+  </message>
+  <message name="cambiarStatusMsgResponse">
+    <part name="parameters" element="types:cambiarStatusResponse" />
+  </message>
+  <message name="reversionCambioNumeroMsgRequest">
+    <part name="parameters" element="types:reversionCambioNumeroRequest" />
+  </message>
+  <message name="reversionCambioNumeroMsgResponse">
+    <part name="parameters" element="types:reversionCambioNumeroResponse" />
+  </message>
+  <message name="registroIMSIPortabilidadMsgRequest">
+    <part name="parameters" element="types:registroIMSIPortabilidadRequest" />
+  </message>
+  <message name="registroIMSIPortabilidadMsgResponse">
+    <part name="parameters" element="types:registroIMSIPortabilidadResponse" />
+  </message>
+  <message name="actualizarNroTelefMsgRequest">
+    <part name="parameters" element="types:actualizarNroTelefRequest" />
+  </message>
+  <message name="actualizarNroTelefMsgResponse">
+    <part name="parameters" element="types:actualizarNroTelefResponse" />
+  </message>
+  <message name="eliminarNroTelefMsgRequest">
+    <part name="parameters" element="types:eliminarNroTelefRequest" />
+  </message>
+  <message name="eliminarNroTelefMsgResponse">
+    <part name="parameters" element="types:eliminarNroTelefResponse" />
+  </message>
+  <message name="listarMSISDNreservaMsgRequest">
+    <part name="parameters" element="types:listarMSISDNreservaRequest" />
+  </message>
+  <message name="listarMSISDNreservaMsgResponse">
+    <part name="parameters" element="types:listarMSISDNreservaResponse" />
+  </message>
+  <message name="rollbackPelVendidoMsgRequest">
+    <part name="parameters" element="types:rollbackPelVendidoRequest" />
+  </message>
+  <message name="rollbackPelVendidoMsgResponse">
+    <part name="parameters" element="types:rollbackPelVendidoResponse" />
+  </message>
+  <message name="cambiarStatusVendidoMsgRequest">
+    <part name="parameters" element="types:cambiarStatusVendidoRequest" />
+  </message>
+  <message name="cambiarStatusVendidoMsgResponse">
+    <part name="parameters" element="types:cambiarStatusVendidoResponse" />
+  </message>
+  <message name="obtenerDatosNroTelefMsgRequest">
+    <part name="parameters" element="types:obtenerDatosNroTelefRequest" />
+  </message>
+  <message name="obtenerDatosNroTelefMsgResponse">
+    <part name="parameters" element="types:obtenerDatosNroTelefResponse" />
+  </message>
+  <message name="obtenerNroTelefSerieMsgRequest">
+    <part name="parameters" element="types:obtenerNroTelefSerieRequest" />
+  </message>
+  <message name="obtenerNroTelefSerieMsgResponse">
+    <part name="parameters" element="types:obtenerNroTelefSerieResponse" />
+  </message>
+  <message name="obtenerNroTelefMsgRequest">
+    <part name="parameters" element="types:obtenerNroTelefRequest" />
+  </message>
+  <message name="obtenerNroTelefMsgResponse">
+    <part name="parameters" element="types:obtenerNroTelefResponse" />
+  </message>
+  <message name="obtenerHLRMsgRequest">
+    <part name="parameters" element="types:obtenerHLRRequest" />
+  </message>
+  <message name="obtenerHLRMsgResponse">
+    <part name="parameters" element="types:obtenerHLRResponse" />
+  </message>
+  <message name="actualizarSimcardPorReposicionMsgRequest">
+    <part name="parameters" element="types:actualizarSimcardPorReposicionRequest" />
+  </message>
+  <message name="actualizarSimcardPorReposicionMsgResponse">
+    <part name="parameters" element="types:actualizarSimcardPorReposicionResponse" />
+  </message>
+  <message name="asociarNroTelefSerieMsgRequest">
+    <part name="parameters" element="types:asociarNroTelefSerieRequest" />
+  </message>
+  <message name="asociarNroTelefSerieMsgResponse">
+    <part name="parameters" element="types:asociarNroTelefSerieResponse" />
+  </message>
+  <message name="desasociarNroTelefSerieMsgRequest">
+    <part name="parameters" element="types:desasociarNroTelefSerieRequest" />
+  </message>
+  <message name="desasociarNroTelefSerieMsgResponse">
+    <part name="parameters" element="types:desasociarNroTelefSerieResponse" />
+  </message>
+  <message name="obtenerNroTelefPostMsgRequest">
+    <part name="parameters" element="types:obtenerNroTelefPostRequest" />
+  </message>
+  <message name="obtenerNroTelefPostMsgResponse">
+    <part name="parameters" element="types:obtenerNroTelefPostResponse" />
+  </message>
+  <portType name="SimcardsPortType">
+    <operation name="consultarTelefonoDisp">
+      <input message="tns:consultarTelefonoMsgDispRequest" />
+      <output message="tns:consultarTelefonoDispMsgResponse" />
+    </operation>
+    <operation name="consultarTelefonoTodos">
+      <input message="tns:consultarTelefonoTodosMsgRequest" />
+      <output message="tns:consultarTelefonoTodosMsgResponse" />
+    </operation>
+    <operation name="consultarStatusTelefono">
+      <input message="tns:consultarStatusTelefonoMsgRequest" />
+      <output message="tns:consultarStatusTelefonoMsgResponse" />
+    </operation>
+    <operation name="cambiarStatusTelefono">
+      <input message="tns:cambiarStatusTelefonoMsgRequest" />
+      <output message="tns:cambiarStatusTelefonoMsgResponse" />
+    </operation>
+    <operation name="cambiarStatus">
+      <input message="tns:cambiarStatusMsgRequest" />
+      <output message="tns:cambiarStatusMsgResponse" />
+    </operation>
+    <operation name="reversionCambioNumero">
+      <input message="tns:reversionCambioNumeroMsgRequest" />
+      <output message="tns:reversionCambioNumeroMsgResponse" />
+    </operation>
+    <operation name="registroIMSIPortabilidad">
+      <input message="tns:registroIMSIPortabilidadMsgRequest" />
+      <output message="tns:registroIMSIPortabilidadMsgResponse" />
+    </operation>
+    <operation name="actualizarNroTelef">
+      <input message="tns:actualizarNroTelefMsgRequest" />
+      <output message="tns:actualizarNroTelefMsgResponse" />
+    </operation>
+    <operation name="eliminarNroTelef">
+      <input message="tns:eliminarNroTelefMsgRequest" />
+      <output message="tns:eliminarNroTelefMsgResponse" />
+    </operation>
+    <operation name="listarMSISDNreserva">
+      <input message="tns:listarMSISDNreservaMsgRequest" />
+      <output message="tns:listarMSISDNreservaMsgResponse" />
+    </operation>
+    <operation name="rollbackPelVendido">
+      <input message="tns:rollbackPelVendidoMsgRequest" />
+      <output message="tns:rollbackPelVendidoMsgResponse" />
+    </operation>
+    <operation name="cambiarStatusVendido">
+      <input message="tns:cambiarStatusVendidoMsgRequest" />
+      <output message="tns:cambiarStatusVendidoMsgResponse" />
+    </operation>
+    <operation name="obtenerDatosNroTelef">
+      <input message="tns:obtenerDatosNroTelefMsgRequest" />
+      <output message="tns:obtenerDatosNroTelefMsgResponse" />
+    </operation>
+    <operation name="obtenerNroTelefSerie">
+      <input message="tns:obtenerNroTelefSerieMsgRequest" />
+      <output message="tns:obtenerNroTelefSerieMsgResponse" />
+    </operation>
+    <operation name="obtenerNroTelef">
+      <input message="tns:obtenerNroTelefMsgRequest" />
+      <output message="tns:obtenerNroTelefMsgResponse" />
+    </operation>
+    <operation name="obtenerHLR">
+      <input message="tns:obtenerHLRMsgRequest" />
+      <output message="tns:obtenerHLRMsgResponse" />
+    </operation>
+    <operation name="actualizarSimcardPorReposicion">
+      <input message="tns:actualizarSimcardPorReposicionMsgRequest" />
+      <output message="tns:actualizarSimcardPorReposicionMsgResponse" />
+    </operation>
+    <operation name="asociarNroTelefSerie">
+      <input message="tns:asociarNroTelefSerieMsgRequest" />
+      <output message="tns:asociarNroTelefSerieMsgResponse" />
+    </operation>
+    <operation name="desasociarNroTelefSerie">
+      <input message="tns:desasociarNroTelefSerieMsgRequest" />
+      <output message="tns:desasociarNroTelefSerieMsgResponse" />
+    </operation>
+    <operation name="obtenerNroTelefPost">
+      <input message="tns:obtenerNroTelefPostMsgRequest" />
+      <output message="tns:obtenerNroTelefPostMsgResponse" />
+    </operation>
+  </portType>
+  <binding name="SimcardsPortTypeSOAP11Binding" type="tns:SimcardsPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="consultarTelefonoDisp">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/sap/simcards/consultarTelefonoDisp" style="document" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="parameters" />
+      </output>
+    </operation>
+    <operation name="consultarTelefonoTodos">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/sap/simcards/consultarTelefonoTodos" style="document" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="parameters" />
+      </output>
+    </operation>
+    <operation name="consultarStatusTelefono">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/sap/simcards/consultarStatusTelefono" style="document" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="parameters" />
+      </output>
+    </operation>
+    <operation name="cambiarStatusTelefono">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/sap/simcards/cambiarStatusTelefono" style="document" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="parameters" />
+      </output>
+    </operation>
+    <operation name="cambiarStatus">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/sap/simcards/cambiarStatus" style="document" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="parameters" />
+      </output>
+    </operation>
+    <operation name="reversionCambioNumero">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/sap/simcards/reversionCambioNumero" style="document" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="parameters" />
+      </output>
+    </operation>
+    <operation name="registroIMSIPortabilidad">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/sap/simcards/registroIMSIPortabilidad" style="document" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="parameters" />
+      </output>
+    </operation>
+    <operation name="actualizarNroTelef">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/sap/simcards/actualizarNroTelef" style="document" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="parameters" />
+      </output>
+    </operation>
+    <operation name="eliminarNroTelef">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/sap/simcards/eliminarNroTelef" style="document" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="parameters" />
+      </output>
+    </operation>
+    <operation name="listarMSISDNreserva">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/sap/simcards/listarMSISDNreserva" style="document" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="parameters" />
+      </output>
+    </operation>
+    <operation name="rollbackPelVendido">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/sap/simcards/rollbackPelVendido" style="document" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="parameters" />
+      </output>
+    </operation>
+    <operation name="cambiarStatusVendido">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/sap/simcards/cambiarStatusVendido" style="document" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="parameters" />
+      </output>
+    </operation>
+    <operation name="obtenerDatosNroTelef">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/sap/simcards/obtenerDatosNroTelef" style="document" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="parameters" />
+      </output>
+    </operation>
+    <operation name="obtenerNroTelefSerie">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/sap/simcards/obtenerNroTelefSerie" style="document" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="parameters" />
+      </output>
+    </operation>
+    <operation name="obtenerNroTelef">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/sap/simcards/obtenerNroTelef" style="document" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="parameters" />
+      </output>
+    </operation>
+    <operation name="obtenerHLR">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/sap/simcards/obtenerNroTelef" style="document" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="parameters" />
+      </output>
+    </operation>
+    <operation name="actualizarSimcardPorReposicion">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/sap/simcards/actualizarSimcardPorReposicion" style="document" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="parameters" />
+      </output>
+    </operation>
+    <operation name="asociarNroTelefSerie">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/sap/simcards/asociarNroTelefSerie" style="document" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="parameters" />
+      </output>
+    </operation>
+    <operation name="desasociarNroTelefSerie">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/sap/simcards/desasociarNroTelefSerie" style="document" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="parameters" />
+      </output>
+    </operation>
+    <operation name="obtenerNroTelefPost">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/sap/simcards/obtenerNroTelefPost" style="document" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="parameters" />
+      </output>
+    </operation>
+  </binding>
+  <service name="ebsSimcards">
+    <port name="ebsSimcards" binding="tns:SimcardsPortTypeSOAP11Binding">
+      <soap:address location="http://172.19.74.68:8909/SimcardsWS/ebsSimcards" />
+    </port>
+  </service>
+</definitions>

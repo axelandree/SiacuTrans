@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetRegisterCampaign" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetRegisterCampaign" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd95" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetDataPower" />
+  <xs:complexType name="GetRegisterCampaignRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MessageRequest" nillable="true" type="tns:GetRegisterCampaignMessageRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetRegisterCampaignRequest" nillable="true" type="tns:GetRegisterCampaignRequest" />
+  <xs:complexType name="GetRegisterCampaignMessageRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Body" nillable="true" type="tns:GetRegisterCampaignBodyRequest" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetDataPower" minOccurs="0" name="Header" nillable="true" type="q1:HeadersRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetRegisterCampaignMessageRequest" nillable="true" type="tns:GetRegisterCampaignMessageRequest" />
+  <xs:complexType name="GetRegisterCampaignBodyRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="registrarCampaniaRequest" nillable="true" type="tns:RegisterCampaignRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetRegisterCampaignBodyRequest" nillable="true" type="tns:GetRegisterCampaignBodyRequest" />
+  <xs:complexType name="RegisterCampaignRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="auditRequest" nillable="true" type="tns:GetRegisterCampaignAuditRequest" />
+      <xs:element minOccurs="0" name="registrarCampania" nillable="true" type="tns:GetRegisterCampaing" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RegisterCampaignRequest" nillable="true" type="tns:RegisterCampaignRequest" />
+  <xs:complexType name="GetRegisterCampaignAuditRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idTransaccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ipAplicacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nombreAplicacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="usuarioAplicacion" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetRegisterCampaignAuditRequest" nillable="true" type="tns:GetRegisterCampaignAuditRequest" />
+  <xs:complexType name="GetRegisterCampaing">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="campaniaCodigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="campaniaDescripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="coId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="estado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaActivacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaCrea" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaModifica" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nroCont" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nroContDet" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nroDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nroLinea" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nroPed" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nroPedDet" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nroSec" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="planCodigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="planDescripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoOpeCodigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoOpeDescripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoPrdCodigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoPrdDescripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tmCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="usuarioCrea" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="usuarioModifica" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetRegisterCampaing" nillable="true" type="tns:GetRegisterCampaing" />
+  <xs:complexType name="GetRegisterCampaignResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MessageResponse" nillable="true" type="tns:GetRegisterCampaignMessageResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetRegisterCampaignResponse" nillable="true" type="tns:GetRegisterCampaignResponse" />
+  <xs:complexType name="GetRegisterCampaignMessageResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Body" nillable="true" type="tns:GetRegisterCampaignBodyResponse" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetDataPower" minOccurs="0" name="Header" nillable="true" type="q2:HeadersResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetRegisterCampaignMessageResponse" nillable="true" type="tns:GetRegisterCampaignMessageResponse" />
+  <xs:complexType name="GetRegisterCampaignBodyResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="registrarCampaniaResponse" nillable="true" type="tns:RegisterCampaignResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetRegisterCampaignBodyResponse" nillable="true" type="tns:GetRegisterCampaignBodyResponse" />
+  <xs:complexType name="RegisterCampaignResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="auditResponse" nillable="true" type="tns:GetRegisterCampaignAuditResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RegisterCampaignResponse" nillable="true" type="tns:RegisterCampaignResponse" />
+  <xs:complexType name="GetRegisterCampaignAuditResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigoRespuesta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="idTransaccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="mensajeRespuesta" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetRegisterCampaignAuditResponse" nillable="true" type="tns:GetRegisterCampaignAuditResponse" />
+</xs:schema>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="AuditService" elementFormDefault="qualified" targetNamespace="AuditService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Audit">
+    <xs:sequence>
+      <xs:element name="TrackCode" nillable="true" type="xs:string" />
+      <xs:element name="ApplicationCode" nillable="true" type="xs:string" />
+      <xs:element name="IpClient" nillable="true" type="xs:string" />
+      <xs:element name="ClientName" nillable="true" type="xs:string" />
+      <xs:element name="ServerName" nillable="true" type="xs:string" />
+      <xs:element name="SearchValue" nillable="true" type="xs:string" />
+      <xs:element name="Message" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Audit" nillable="true" type="tns:Audit" />
+</xs:schema>

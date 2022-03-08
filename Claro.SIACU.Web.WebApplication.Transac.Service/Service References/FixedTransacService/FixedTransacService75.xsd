@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.ClaroVideo.GetHistoryDevice" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.ClaroVideo.GetHistoryDevice" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd38" namespace="Tools.Entity" />
+  <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd50" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.ClaroVideo" />
+  <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd40" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.GetDataPower" />
+  <xs:complexType name="HistoryDeviceRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="Tools.Entity" base="q1:Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="MessageRequest" nillable="true" type="tns:HistoryDeviceMessageRequest" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="HistoryDeviceRequest" nillable="true" type="tns:HistoryDeviceRequest" />
+  <xs:complexType name="HistoryDeviceMessageRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Body" nillable="true" type="tns:HistoryDeviceBodyRequest" />
+      <xs:element minOccurs="0" name="Header" nillable="true" type="tns:HistoryDeviceHeaderRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HistoryDeviceMessageRequest" nillable="true" type="tns:HistoryDeviceMessageRequest" />
+  <xs:complexType name="HistoryDeviceBodyRequest">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.ClaroVideo" minOccurs="0" name="historialServDispCVRequest" nillable="true" type="q2:HistorialServDispCVRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HistoryDeviceBodyRequest" nillable="true" type="tns:HistoryDeviceBodyRequest" />
+  <xs:complexType name="HistoryDeviceHeaderRequest">
+    <xs:sequence>
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.GetDataPower" minOccurs="0" name="HeaderRequest" nillable="true" type="q3:HeaderRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HistoryDeviceHeaderRequest" nillable="true" type="tns:HistoryDeviceHeaderRequest" />
+  <xs:complexType name="HistoryDeviceResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MessageResponse" nillable="true" type="tns:HistoryDeviceMessageResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HistoryDeviceResponse" nillable="true" type="tns:HistoryDeviceResponse" />
+  <xs:complexType name="HistoryDeviceMessageResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Body" nillable="true" type="tns:HistoryDeviceBodyResponse" />
+      <xs:element minOccurs="0" name="Header" nillable="true" type="tns:HistoryDeviceHeaderResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HistoryDeviceMessageResponse" nillable="true" type="tns:HistoryDeviceMessageResponse" />
+  <xs:complexType name="HistoryDeviceBodyResponse">
+    <xs:sequence>
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.ClaroVideo" minOccurs="0" name="historialServDispCVResponse" nillable="true" type="q4:HistorialServDispCVResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HistoryDeviceBodyResponse" nillable="true" type="tns:HistoryDeviceBodyResponse" />
+  <xs:complexType name="HistoryDeviceHeaderResponse">
+    <xs:sequence>
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.GetDataPower" minOccurs="0" name="HeaderResponse" nillable="true" type="q5:HeaderResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HistoryDeviceHeaderResponse" nillable="true" type="tns:HistoryDeviceHeaderResponse" />
+</xs:schema>

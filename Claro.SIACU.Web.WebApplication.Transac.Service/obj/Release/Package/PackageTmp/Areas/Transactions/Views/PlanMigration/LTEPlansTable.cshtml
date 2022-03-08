@@ -1,0 +1,32 @@
+﻿@model Claro.SIACU.Web.WebApplication.Transac.Service.Areas.Transactions.Models.LTE.LteMigrationModel
+<script type="text/javascript" src="~/Areas/Transactions/Content/Lib/BloqueoF12.js"></script>
+<div id="PlansTable">
+    <table id="tblListadoV" class="table  table-striped table-hover table-responsive claro-modal-tabla ">
+        <thead class="claro-bg-primary">
+            <tr>
+                <th class="col-sm-1">Sel</th>
+                <th class="col-sm-6">Nombre del Plan</th>
+                <th class="col-sm-5">Solucion</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model.plans != null)
+            {
+                foreach (var item in Model.plans)
+                {
+                    <tr>
+                        <td></td>
+                        <td>@item.strDesPlanSisact</td>
+                        <td>@item.strSolucion </td>
+                        <td>@item.strCodPlanSisact</td>
+                    </tr>
+                }
+
+            }
+        </tbody>
+    </table>
+</div>
+<script src="~/Areas/Transactions/Scripts/PlanMigration/LTEPlansTable.js"></script>
+
+

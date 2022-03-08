@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="http://claro.com.pe/eai/ws/consultaigv/consultaigvws/types" xmlns:base="http://claro.com.pe/eai/ws/baseschema" elementFormDefault="qualified" targetNamespace="http://claro.com.pe/eai/ws/consultaigv/consultaigvws/types" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import schemaLocation="http://172.19.74.189:8901/PRS_ConsultaIGV/proxy_services/ConsultaIGV?SCHEMA%2FPRS_ConsultaIGV%2Fexternal%2Fxsd%2FBaseSchema" namespace="http://claro.com.pe/eai/ws/baseschema" />
+  <xsd:element name="consultarIGVRequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditoria" type="base:AuditRequestType" />
+        <xsd:element name="updateCache" type="xsd:integer" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="consultarIGVResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element minOccurs="1" maxOccurs="unbounded" name="listaIGVS" type="ListaIGVSResponseType" />
+        <xsd:element name="defaultServiceResponse" type="base:DefaultServiceResponse" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="ListaIGVSResponseType">
+    <xsd:sequence>
+      <xsd:element name="imputId" type="xsd:integer" />
+      <xsd:element name="impuvDes" type="xsd:string" />
+      <xsd:element name="igv" type="xsd:double" />
+      <xsd:element name="igvD" type="xsd:double" />
+      <xsd:element name="impunTipDoc" type="xsd:integer" />
+      <xsd:element name="impudFecRegistro" type="xsd:string" />
+      <xsd:element name="impudFecIniVigencia" type="xsd:string" />
+      <xsd:element name="impudFecFinVigencia" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

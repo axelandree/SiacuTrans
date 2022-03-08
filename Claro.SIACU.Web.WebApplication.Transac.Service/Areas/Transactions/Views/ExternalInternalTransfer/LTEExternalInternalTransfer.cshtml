@@ -1,0 +1,945 @@
+﻿@{
+
+    Layout = null;
+}
+<script type="text/javascript" src="~/Areas/Transactions/Content/Lib/BloqueoF12.js"></script>
+<div id="LTEExternalInternalTransfer"  class="container-fluid">
+   
+    <div class="scrollbudy">
+        <div class="col-md-3">
+
+            <div id="PostpaidDataCustomer" class="panel claro-panel-primary ">
+                <div id="customerDataHead" role="tab" class="panel-heading">
+                    <span class="glyphicon glyphicon-user"></span>
+                    <a data-toggle="collapse" href="#DatosClientecollapse" aria-expanded="true" data-parent="#DataCustomer" aria-controls="customerDataCollapse" class="collapsed transaction-ref-color"> Datos del Cliente</a>
+                </div>
+                <div id="DatosClientecollapse" class="panel-body panel-collapse collapse in" role="tabpanel" aria-labelledby="customerDataHead">
+                    <table class="table table-condensed">
+                        <tr>
+                            <td>Contrato</td>
+                            <td><label id="lblIdContract"></label></td>
+                        </tr>
+                        <tr>
+                            <td>Customer ID</td>
+                            <td><label id="lblCustomerID"></label></td>
+                        </tr>
+                        <tr>
+                            <td>Tipo de Cliente</td>
+                            <td><label id="lbltypeCustomer"></label></td>
+                        </tr>
+                        <tr>
+                            <td>Cliente</td>
+                            <td><label id="lblCustomerName"></label></td>
+                        </tr>
+                        <tr>
+                            <td>Contacto</td>
+                            <td><label id="lblContact"></label></td>
+                        </tr>
+                        
+
+                        <tr>
+                            <td>DNI/RUC</td>
+                            <td><label id="lblIdentificationDocument"></label></td>
+                        </tr>
+
+                        <tr>
+                            <td>Representante Legal</td>
+                            <td><label id="lblRepLegal"></label></td>
+                        </tr>
+
+                        <tr>
+                            <td>Plan Actual</td>
+                            <td><label id="lblPlanActual"></label></td>
+                        </tr>
+
+                        <tr>
+                            <td>Fecha de Activación</td>
+                            <td><label id="lblDateAct"></label></td>
+                        </tr>
+                        <tr>
+                            <td>Ciclo de Facturación</td>
+                            <td><label id="lblCycleBilling"></label></td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Límite de Crédito<br />(S/ inc. IGV)</td>
+                            <td><label id="lblBillingAmount"></label></td>
+                        </tr>
+
+                        <tr style="display:none">
+                            <td >Cod. Edificio</td>
+                            <td><label id="CodeBuilding"></label></td>
+                        </tr>
+
+                        <tr style="display:none">
+                            <td>Estado</td>
+                            <td><label id="lblStatus"></label></td>
+                        </tr>
+
+                        <tr style="display:none">
+                            <td>Fecha Vcto.</td>
+                            <td><label id="lblDateVcto"></label></td>
+                        </tr>
+                        <tr style="display:none">
+                            <td>Cuenta</td>
+                            <td><label id="lblCuenta"></label></td>
+                        </tr>
+
+
+                    </table>
+                </div>
+                <div id="addressDataHead" role="tab" class="panel-heading">
+                    <span class="glyphicon glyphicon-home"></span>
+                    <a data-toggle="collapse" href="#addressDataCollapse" aria-expanded="false" data-parent="#DataCustomer" aria-controls="addressDataCollapse" class="collapsed transaction-ref-color"> Dirección de Facturación</a>
+                </div>
+                <div class="panel-body panel-collapse collapse" id="addressDataCollapse" role="tabpanel" aria-labelledby="addressDataHead">
+                    <table class="table table-condensed">
+                        <tr>
+                            <td>Dirección</td>
+                            <td><label id="lblAddress"></label></td>
+                        </tr>
+                        <tr>
+                            <td>Referencia</td>
+                            <td><label id="lblAddressNote"></label></td>
+                        </tr>
+                        <tr>
+                            <td>Pais</td>
+                            <td><label id="lblCountry"></label></td>
+                        </tr>
+                        <tr>
+                            <td>Departamento</td>
+                            <td><label id="lblDepartament"></label></td>
+                        </tr>
+                        <tr>
+                            <td>Provincia</td>
+                            <td><label id="lblProvince"></label></td>
+                        </tr>
+                        <tr>
+                            <td>Distrito</td>
+                            <td><label id="lblDistrict"></label></td>
+                        </tr>
+                        <tr style="display:none">
+                            <td>Código Plano</td>
+                            <td><label id="lblCodePlane"></label></td>
+                        </tr>
+                        <tr>
+                            <td>Código Ubigeo</td>
+                            <td><label id="lblCodeUbigeo"></label></td>
+                        </tr>
+                       
+                    </table>
+                </div>
+
+                <div id="BussinessRuleHead" role="tab" class="panel-heading">
+                    <span class="glyphicon glyphicon-rub"></span>
+                    <a data-toggle="collapse" href="#BussinessRule" aria-expanded="true" data-parent="#DataCustomer" aria-controls="customerDataCollapse" class="collapsed transaction-ref-color">&nbsp;  Reglas de Atención</a>
+                </div>
+                <div id="BussinessRule" class="panel-body panel-collapse collapse" role="tabpanel" aria-labelledby="customerDataHead">
+
+                </div>
+
+            </div>
+
+
+        </div>
+        <div id="content" class="col-md-9 transaction-content">
+
+            <div class="panel-tabs">
+                <ul id="divDashboardTabs" class="nav nav-tabs" role="tablist" data-tabs="tabs">
+                    <li id="liInternalTransf" class="active text-center " style="width:50%; "><a href="#divInternalTransf" role="tab" data-toggle="tab" data-parent="divTransfTabs"><i class="fa fa-building-o" aria-hidden="true"></i><strong>&nbsp; Traslado interno</strong> </a></li>
+                    <li id="liExternalTransf" class=" text-center " style="width:50%"><a href="#divExternalTransf" role="tab" data-toggle="tab" data-parent="divTransfTabs"><i class="fa fa-map" aria-hidden="true"></i> <strong> &nbsp;Traslado Externo</strong></a></li>
+                </ul>
+                <div class="tab-content">
+                    <div id="divInternalTransf" class="tab-pane active">
+                        <div id="tabProductInternal" class="step tab-pane active" role="tabpanel" percent="16%">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <form class="form-horizontal">
+
+                                        <div class="panel claro-panel-primary">
+                                            <div id="divExternalTransfer" role="tab" class="panel-heading">
+                                                <span class="fa fa-table"></span>
+                                                <label data-toggle="collapse" href="#" aria-expanded="true" data-parent="#DataCustomer" aria-controls="customerDataCollapse" class="collapsed transaction-ref-color"> Detalle de Productos</label>
+                                            </div>
+                                            <div class="panel-body">
+
+                                                @*<div id="IDdivtabProductsExternal"></div>*@
+                                                <div id="IDdivtabProductsInternal"></div>
+                                            </div>
+                                        </div>
+
+                                        <br />
+                                        <div id="IDdivtabTypeWorkInternal"></div>
+                                        <center>
+                                            <button id="btnSaveInternal" type="button" class="btn transaction-button btn_saveTransaction"><span class="glyphicon glyphicon-floppy-disk"></span> Guardar</button>
+                                            <button id="btnCloseInternal" type="button" class="btn transaction-button"><span class="glyphicon glyphicon-home"></span> Cerrar</button>
+                                            <button id="btnConstancyInternal" type="button" class="btn transaction-button "><span class="glyphicon glyphicon-list-alt"></span> Constancia</button>
+                                        </center>
+                                    </form>
+                                </div>
+                                <div id="divErrorInternal"></div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div id="divExternalTransf" class="tab-pane fade ">
+
+                        <div class="transaction-container-step">
+
+                            <div class="process">
+                                <div class="process-row nav nav-tabs">
+                                    <div class="process-step process-step-5-left">
+                                        <button type="button" class="btn btn-circle transaction-button" data-toggle="tab" role="tab" href="#tabProducts" percent="0%" index="1"><i class="fa fa-table" aria-hidden="true"></i></button>
+                                        <p>Productos</p>
+                                    </div>
+                                    <div class="process-step process-step-5">
+                                        <button type="button" class="btn btn-circle " data-toggle="tab" role="tab" href="#tabNewDestAddress" percent="30%" index="2"><i class="fa fa-address-book" aria-hidden="true"></i></button>
+                                        <p>Nueva Dirección</p>
+                                    </div>
+                                    <div class="process-step process-step-5">
+                                        <button type="button" class="btn btn-circle disabled" data-toggle="tab" role="tab" href="#tabNoteAddress" percent="50%" index="3" disabled><i class="fa fa-book" aria-hidden="true"></i></button>
+                                        <p>Notas Direccion</p>
+                                    </div>
+                                    <div class="process-step process-step-5">
+                                        <button type="button" class="btn btn-circle disabled" data-toggle="tab" role="tab" href="#tabTypeWorkFid" percent="70%" index="4" disabled><i class="fa fa-cogs" aria-hidden="true"></i></button>
+                                        <p>Tipo Trabajo</p>
+                                    </div>
+
+                                    <div class="process-step process-step-5-right">
+                                        <button type="button" class="btn btn-circle disabled" data-toggle="tab" role="tab" href="#tabSummary" percent="99%" index="5" disabled><i class="fa fa-list-ul" aria-hidden="true"></i></button>
+                                        <p>Resumen</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="transaction-progress">
+                                <div class="progress transaction-bar">
+                                    <div id="prog" class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="tab-content">
+                            <div id="tabProducts" class="step tab-pane active" role="tabpanel" percent="16%">
+                                <div class="panel claro-panel-primary">
+                                    <div id="divExternalTransfer" role="tab" class="panel-heading">
+                                        <span class="fa fa-table"></span>
+                                        <label data-toggle="collapse" href="#" aria-expanded="true" data-parent="#DataCustomer" aria-controls="customerDataCollapse" class="collapsed transaction-ref-color"> Detalle de Productos</label>
+                                    </div>
+                                    <div class="panel-body">
+                                        <form class="form-horizontal">
+                                            <div id="IDdivtabProductsExternal"></div>
+                                            <div class="form-group">
+                                                <div class="col-sm-12 text-right">
+                                                    <button type="button" id="idNext1"  class="btn transaction-button next-step">Siguiente <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="tabNewDestAddress" class="step tab-pane fade" role="tabpanel" percent="32%">
+                                <div class="panel claro-panel-primary">
+                                    <div role="tab" class="panel-heading">
+                                        <span class="fa fa-address-book"></span>
+                                        <label data-toggle="collapse" href="#" aria-expanded="true" data-parent="#DataCustomer" aria-controls="customerDataCollapse" class="collapsed transaction-ref-color"> Nueva Dirección</label>
+                                    </div>
+                                    <div class="panel-body">
+                                        <form class="form-horizontal">
+
+                                            <div class="form-group">
+                                                <label class="col-sm-2 control-label ">Calle/Av/Jr (*)</label>
+                                                <div class="col-sm-3">
+                                                    <select class="form-control input-sm" id="ddlStreet"></select>
+                                                </div>
+
+                                                <label class="col-sm-3 control-label input-sm">Nombre Calle/Av/Jr (*)</label>
+
+
+                                                <div class="col-sm-4">
+                                                    <label>
+                                                        <input type="text" class="form-control input-sm" id="txtNameStreet" aria-describedby="helpBlock2">
+                                                    </label>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-sm-2 control-label "> Número (*)</label>
+
+                                                <div class="col-sm-2">
+                                                    <label>
+                                                        <input type="text" class="form-control input-sm" id="txtNumber" aria-describedby="helpBlock2">
+                                                    </label>
+                                                </div>
+
+                                                <label class="col-sm-1 control-label" style="float: left">
+                                                    S/N
+                                                    <input class="checkbox-inline input-sm" type="checkbox" id="chkSN" value="true">
+                                                </label>
+
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-sm-2 control-label">Mz/Bloque/Edif. </label>
+                                                <div class="col-sm-3">
+                                                    <select class="form-control input-sm" id="ddlTipMzBloEdi"></select>
+
+                                                </div>
+                                                <label class="col-sm-3 control-label">Nro Mz/Bloque/Edif. </label>
+                                                <div class="col-sm-2">
+                                                    <label>
+                                                        <input type="text" class="form-control input-sm" id="txtNumberBlock" aria-describedby="helpBlock2">
+                                                    </label>
+                                                </div>
+                                                <label class="col-sm-1 control-label">Lote </label>
+                                                <div class="col-sm-1">
+                                                    <label>
+                                                        <input type="text" class="form-control input-sm" id="txtLot" aria-describedby="helpBlock2">
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-sm-2 control-label">Tipo Dpto./Int. </label>
+                                                <div class="col-sm-3">
+                                                    <select class="form-control input-sm" id="ddlDepartment"></select>
+                                                </div>
+
+                                                <label class="col-sm-3 control-label">Número Dpto./Int.</label>
+                                                <div class="col-sm-2">
+                                                    <label>
+                                                        <input type="text" class="form-control input-sm" id="ddlNumberDepartment" aria-describedby="helpBlock2">
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <div class=" col-sm-2"></div>
+                                                <div class=" col-sm-2"></div>
+                                                <label class="col-sm-2"></label>
+                                                <label class="col-sm-2"></label>
+                                                <label class="col-sm-3 control-label label" style="color: red">(máx. 100 Caracteres)</label>
+
+                                                <div class="col-sm-1">
+                                                    <label>
+                                                        <input type="text" class="form-control input-sm" readonly="readonly" id="txtConDir" aria-describedby="helpBlock2">
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </form>
+
+                                        <center>
+                                            <button type="button" id="idPrev2" class="btn transaction-button prev-step"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Anterior</button>
+                                            <button type="button" id="idNext2" class="btn transaction-button next-trans">Siguiente <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>
+                                            <button id="btnClose" type="button" class="btn transaction-button"><span class="glyphicon glyphicon-home"></span> Cerrar</button>
+                                        </center>
+                                    </div>
+                                    <br />
+                                </div>
+                            </div>
+                            <div id="tabNoteAddress" class="step tab-pane fade" role="tabpanel" percent="48%">
+                                <div class="panel claro-panel-primary">
+                                    <div role="tab" class="panel-heading">
+                                        <span class="fa fa-book"></span>
+                                        <label data-toggle="collapse" href="#" aria-expanded="true" data-parent="#DataCustomer" aria-controls="customerDataCollapse" class="collapsed transaction-ref-color"> Notas Dirección</label>
+                                    </div>
+                                    <div class="panel-body">
+                                        <form class="form-horizontal">
+                                            <div class="form-group">
+                                                <label class="col-sm-2 control-label">Urb/Res/Pjo (*)</label>
+                                                <div class="col-sm-3">
+                                                    <select class="form-control input-sm" id="ddlNoteUrbanization"></select>
+                                                </div>
+                                                <label class="col-sm-3 control-label">Nombre Urb/Res/Pjo (*)</label>
+                                                <div class="col-sm-4">
+                                                    <label>
+                                                        <input type="text" class="form-control input-sm" id="txtNoteUrbanization" aria-describedby="helpBlock2">
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-sm-2 control-label">Zona/Etapa</label>
+                                                <div class="col-sm-3">
+                                                    <select class="form-control input-sm" id="ddlNoteZote"></select>
+                                                </div>
+                                                <label class="col-sm-3 control-label"> Nombre Zona/Etapa</label>
+                                                <div class="col-sm-4">
+                                                    <label>
+                                                        <input type="text" class="form-control input-sm" id="txtNoteNameZote" aria-describedby="helpBlock2">
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-2 control-label"> Referencia</label>
+                                                @*<div >*@
+                                                <label class="col-sm-6">
+                                                    <input type="text" class="form-control input-sm" id="txtNoteReference" aria-describedby="helpBlock2">
+                                                </label>
+                                                @*</div>*@
+                                                <label class="col-sm-2 control-label"> </label>
+                                                <div class="col-sm-2">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-sm-2 control-label">País </label>
+                                                <div class="col-sm-3">
+                                                    <select class="form-control input-sm" id="ddlNoteCountry">
+                                                        <option value="0">PERU</option>
+                                                    </select>
+                                                </div>
+                                                <label class="col-sm-2 control-label"> Departamento (*)</label>
+                                                <div class="col-sm-3">
+                                                    <select class="form-control input-sm" id="ddlNoteDepartment"></select>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-sm-2 control-label">Provincia (*)</label>
+                                                <div class="col-sm-3">
+                                                    <select class="form-control input-sm" id="ddlNoteProvince"></select>
+                                                </div>
+                                                <label class="col-sm-2 control-label"> Distrito (*)</label>
+                                                <div class="col-sm-3">
+                                                    <select class="form-control input-sm" id="ddlNoteDistrict"></select>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-sm-2 control-label">Cod. Postal</label>
+                                                <div class="col-sm-2">
+                                                    <label>
+                                                        <input type="text" class="form-control input-sm" id="txtNoteCodePostal" aria-describedby="helpBlock2">
+                                                    </label>
+                                                </div>
+                                                <label class="col-sm-1 control-label"></label>
+                                                <label class="col-sm-2 control-label"> Centro Poblado (*)</label>
+                                                <div class="col-sm-3">
+                                                    <select class="form-control input-sm" id="ddlNoteCenterPopulated"></select>
+                                                </div>
+
+                                            </div>
+                                            <div class="form-group">
+                                                <div class=" col-sm-2"></div>
+                                                <div class=" col-sm-2"></div>
+                                                <label class="col-sm-2"></label>
+                                                <label class="col-sm-2"></label>
+                                                <label class="col-sm-3 control-label label" style="color: red">(máx. 100 Caracteres)</label>
+
+                                                <div class="col-sm-1">
+                                                    <label>
+                                                        <input type="text" class="form-control input-sm" readonly="readonly" id="txtConNotDir" aria-describedby="helpBlock2">
+                                                    </label>
+                                                </div>
+                                            </div>
+
+
+                                            @* <div class="panel panel-default">*@
+                                            <div class="form-group">
+                                                <div class="panel-body">
+                                                    <label class="col-sm-6 control-label" style="float: left">
+                                                        <input class="checkbox-inline input-sm" type="checkbox" id="chkUseChangeBilling" value="true">
+                                                        Utilizar Datos para Cambio de Dirección de Facturación
+                                                    </label>
+                                                    <label class="col-sm-6 control-label" style="float: left">
+
+                                                    </label>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group" style="display:none">
+                                                <label class="col-md-3 control-label" style="float: left">
+                                                    Código de Plano:
+                                                </label>
+
+                                                <label class="col-md-2  col-sm-12 control-label" style="float: left">
+
+                                                    <input type="text" class="form-control input-sm" id="txtCodPla" readonly="readonly" aria-describedby="helpBlock2">
+                                                </label>
+                                                <label class="col-md-1  col-sm-12 control-label " style="float: left; cursor: pointer">
+                                                    <span class="label label-default" id="lnkCob">Validar Cobertura</span>
+                                                </label>
+                                                <label class="col-md-1 radio-inline">
+                                                </label>
+                                                <label class="col-md-1  radio-inline">
+                                                    <input id="idtruelnkCob" value="0" type="radio" name="optlnkCob" />SI
+                                                </label>
+                                                <label class="col-md-1 radio-inline">
+                                                    <input id="idfalselnkCob" value="1" type="radio" name="optlnkCob" />NO
+                                                </label>
+                                            </div>
+                                            <div class="form-group" style="display:none">
+                                                <label class=" col-md-3 control-label" style="float: left">
+                                                Código de Edificio:
+                                                </label>
+                                                <label class="col-md-2  col-sm-12 control-label">
+
+                                                    <input type="text" class="form-control input-sm" id="txtCodEdi" readonly="readonly" aria-describedby="helpBlock2">
+                                                </label>
+                                                <label class="col-md-1  col-sm-12 control-label" style="float: left; cursor: pointer">
+                                                    <span class="label label-default" id="lnkValEdi">&nbsp;Validar &nbsp;Edificio&nbsp;</span>
+                                                </label>
+                                                <label class="col-md-1 radio-inline">
+                                                </label>
+                                                <label class="col-md-1  radio-inline">
+                                                    <input id="idtruelnkValEdi" value="0" type="radio" name="oplnkValEdi" />SI
+                                                </label>
+                                                <label class="col-md-1 radio-inline">
+                                                    <input id="idfalselnkValEdi" value="1" type="radio" name="oplnkValEdi" />NO
+                                                </label>
+
+                                            </div>
+
+
+                                        </form>
+
+                                        <center>
+                                            <button type="button" id="idPrev3" class="btn transaction-button prev-step"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Anterior</button>
+                                            <button type="button" id="idNext3" class="btn transaction-button next-trans">Siguiente <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>
+                                            <button id="btnClosea" type="button" class="btn transaction-button"><span class="glyphicon glyphicon-home"></span> Cerrar</button>
+                                        </center>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div id="tabTypeWorkFid" class="step tab-pane fade" role="tabpanel" percent="64%">
+                                <div class="panel panel-default">
+                                    <div class="panel-body">
+                                        <div id="IDdivtabTypeWorkExternal"></div>
+
+
+                                        <center>
+                                            <button type="button" id="idPrev4" class="btn transaction-button prev-step"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Anterior</button>
+                                            <button type="button" id="idNext4" class="btn transaction-button next-trans btn_saveTransaction">Siguiente <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>               
+                                            <button id="btnCloseb" type="button" class="btn transaction-button"><span class="glyphicon glyphicon-home"></span> Cerrar</button>                   
+                                        </center>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="tabSummary" class="step tab-pane fade" role="tabpanel" percent="100%">
+                                <div class="panel claro-panel-primary">
+                                    <div id="tabSummary" role="tab" class="panel-heading">
+                                        <span class="glyphicon glyphicon-list-alt"></span>
+                                        <label data-toggle="collapse" aria-expanded="true" data-parent="#DataCustomer" aria-controls="customerDataCollapse" class="collapsed transaction-ref-color"> Resumen</label>
+                                    </div>
+                                    <div class="panel-body">
+                                        <table class="table table-condensed">
+                                            <tbody>
+                                                <tr class="active">
+                                                    <td class="col-lg-3"><label id="lblNewAddress" data-bind-transfer="Translate">Nueva Dirección de Destino</label></td>
+                                                    <td class="col-lg-3"></td>
+                                                    <td class="col-lg-3"></td>
+                                                    <td class="col-lg-3"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Calle/Av/Jr (*)</td>
+                                                    <td><label id="" data-bind-transfer="Region"></label></td>
+                                                    <td>Nombre Calle/Av/Jr (*)</td>
+                                                    <td><label id="" data-bind-transfer="ddlNombreCalle"></label></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Número (*)</td>
+                                                    <td><label id="" data-bind-transfer="txtNumero"></label></td>
+                                                    <td>S/N</td>
+                                                    <td><label id="" data-bind-transfer="txtSN"></label></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Mz/Bloque/Edif.</td>
+                                                    <td><label id="" data-bind-transfer="ddlMz"></label></td>
+                                                    <td>Nro Mz/Bloque/Edif.</td>
+                                                    <td><label id="" data-bind-transfer="NroMz"></label></td>
+
+                                                </tr>
+                                                <tr>
+                                                    @*Lote*@
+                                                    <td>Lote.</td>
+                                                    <td><label id="" data-bind-transfer="txtLote"></label></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Tipo Dpto./Int.</td>
+                                                    <td><label id="" data-bind-transfer="ddlTipo"></label></td>
+                                                    <td>Número Dpto./Int.</td>
+                                                    <td><label id="" data-bind-transfer="NumeroDpto"></label></td>
+                                                </tr>
+                                                <tr class="active">
+                                                    <td><label id="lblNoteAddress" data-bind-transfer="Translate">Referencia</label></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Urb/Res/Pjo (*)</td>
+                                                    <td><label id="" data-bind-transfer="ddlUrb"></label></td>
+                                                    <td>Nombre Urb/Res/Pjo (*)</td>
+                                                    <td><label id="" data-bind-transfer="NombreUrb"></label></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Zona/Etapa</td>
+                                                    <td><label id="lblStartHLR" data-bind-transfer="ddlZona"></label></td>
+                                                    <td>Nombre Zona/Etapa</td>
+                                                    <td><label id="" data-bind-transfer="NombreZona"></label></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Referencia (*)</td>
+                                                    <td><label id="" data-bind-transfer="Referencia"></label></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>País</td>
+                                                    <td><label id="" data-bind-transfer="Pais"></label></td>
+                                                    <td>Departamento (*)</td>
+                                                    <td><label id="" data-bind-transfer="Departamento"></label></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Provincia (*)</td>
+                                                    <td><label id="" data-bind-transfer="Provincia"></label></td>
+                                                    <td>Distrito (*)</td>
+                                                    <td><label id="" data-bind-transfer="Distrito"></label></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Cod. Postal</td>
+                                                    <td><label id="" data-bind-transfer="CodPostal"></label></td>
+                                                    <td>Centro Poblado (*)</td>
+                                                    <td><label id="" data-bind-transfer="CentroPoblado"></label></td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2"><label>Utilizar datos para cambio de dirección de facturación</label> </td>
+                                                    <td><label id="" data-bind-transfer="chkUpdate"></label></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr style="display:none">
+                                                    <td>Código de Plano:</td>
+                                                    <td><label id="" data-bind-transfer="CodPlano"></label></td>
+                                                    <td>Validar Cobertura</td>
+                                                    <td><label id="" data-bind-transfer="ValidarCobertura"></label></td>
+                                                </tr>
+                                                <tr style="display:none">
+                                                    <td>Código de Edificio:</td>
+                                                    <td><label id="" data-bind-transfer="CodEdificio"></label></td>
+                                                    <td>Validar Edificio</td>
+                                                    <td><label id="" data-bind-transfer="ValidarEdificio"></label></td>
+                                                </tr>
+                                                <tr class="active">
+                                                    <td><label id="lblWorkType" data-bind-transfer="">Tipo Trabajo</label></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Tipo de Trabajo</td>
+                                                    <td><label id="" data-bind-transfer="TipTrabajo"></label></td>
+                                                    <td>Motivo SOT</td>
+                                                    <td><label id="" data-bind-transfer="MotiveSoft"></label></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Sub Tipo de Trabajo</td>
+                                                    <td><label id="" data-bind-transfer="SubTipTrabajo"></label></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Fecha Compromiso (*): </td>
+                                                    <td><label id="" data-bind-transfer="FechCompromiso"></label></td>
+                                                    <td>Horario (*): </td>
+                                                    <td><label id="" data-bind-transfer="Horario"></label></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Fidelizar </td>
+                                                    <td><label id="" data-bind-transfer="chkFidelizar"></label></td>
+                                                    <td>Costo de Instalación(S/ Inc. IGV)</td>
+                                                    <td><label id="" data-bind-transfer="txtMonto"></label></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>E-mail </td>
+                                                    <td><label id="" data-bind-transfer="chkEmail"></label></td>
+                                                    <td></td>
+                                                    <td><label id="" data-bind-transfer="Email"></label></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Punto de Atención</td>
+                                                    <td><label id="" data-bind-transfer="PuntVenta"></label></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Notas</td>
+                                                    <td colspan="3"><label id="" data-bind-transfer="Notas"></label></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <center>
+                                            <button type="button" id="idPrev5" class="btn transaction-button prev-step"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Anterior</button>
+                                            <button id="btnSave" type="button" class="btn transaction-button btn_saveTransaction"><span class="glyphicon glyphicon-floppy-disk"></span> Guardar</button>
+                                            <button id="btnClosec" type="button" class="btn transaction-button"><span class="glyphicon glyphicon-home"></span> Cerrar</button>
+                                            <button id="btnConstancy" type="button" class="btn transaction-button "><span class="glyphicon glyphicon-list-alt"></span> Constancia</button>
+                                        </center>
+                                        <br />
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="divErrorExternal"></div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="divErrorAlert" class="alert alert-transaction alert-danger" role="alert" style="display:none">
+        <button type="button" id="closeErrorAlert" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <strong><span id="lblErrorMessage"></span></strong>
+    </div>
+
+    <div id="pnlValidarPlano" title="Validar Plano" class="claro-panel-primary" style="display: none; width: 850px; overflow: hidden">
+        <div id="pnlListaPlano" style="height:300px">
+            <table id="tblListaPlano" class="table table-hover table-bordered table-striped" border="0" style="border: none; width: 100%;">
+                <thead class="btn-danger">
+                    <tr>
+                        <td>
+                            &nbsp;
+                        </td>
+                        <td>
+                            <label id="Label19">Id Plano</label>
+                        </td>
+                        <td>
+                            <label id="Label23">Descripción</label>
+                        </td>
+                        <td>
+                            <label id="Label27">Distrito</label>
+                        </td>
+                        <td>
+                            <label id="Label68">Centro Poblado</label>
+                        </td>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <br />
+        <div class="panel-footer">
+
+            <table class="tablaDatos" border="0" style="border-spacing: 0; border-collapse: collapse; width:100%; border: none">
+                <tr>
+                    <td style="width: 25%; text-align: left" colspan="2">
+                        &nbsp;
+                    </td>
+                    <td style="width: 25%; text-align: right">
+                        <input type="button" id="btnAcePla" value="Aceptar" class="btn transaction-button" style="width: 126px;
+                        height: 25px" />
+                    </td>
+                    <td style="width: 25%; text-align: left">
+                        &nbsp;
+                        <input type="button" id="btnCerPla" name="btnCerPla" value="Cerrar" class="btn transaction-button" style="width: 126px;
+                        height: 25px" />
+                    </td>
+                    <td style="width: 25%; text-align: left" colspan="2">
+                        &nbsp;
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div id="pnlValidarEdificio" title="Validar Edificio" class="claro-panel-primary" style="display: none; width: 850px; overflow: hidden">
+        <div id="pnlListaEdificio" style="height:300px">
+            <table id="tblListaEdificio" class="table table-hover table-bordered table-striped" border="0" style="border: none; width: 100%;">
+                <thead class="btn-danger">
+                    <tr>
+                        <td>
+                            &nbsp;
+                        </td>
+                        <td>
+                            <label id="Label45">Item</label>
+                        </td>
+                        <td>
+                            <label id="Label46">Departamento</label>
+                        </td>
+                        <td>
+                            <label id="Label48">Provincia</label>
+                        </td>
+                        <td>
+                            <label id="Label49">Distrito</label>
+                        </td>
+                        <td>
+                            <label id="Label51">Dirección</label>
+                        </td>
+                        <td>
+                            <label id="Label53">Plano</label>
+                        </td>
+                        <td>
+                            <label id="Label54">Edificio</label>
+                        </td>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <br />
+
+        <div class="panel-footer">
+
+            <table class="tablaDatos" border="0" style="border-spacing: 0; border-collapse: collapse; width :100%; border: none">
+                <tr>
+                    <td style="width: 25%; text-align: left" colspan="2">
+                        &nbsp;
+                    </td>
+                    <td style="width: 25%; text-align: center">
+                        <input type="button" id="btnAceEdi" value="Aceptar" class="btn transaction-button"
+                               style="width: 126px; height: 25px" />
+                    </td>
+                    <td style="width: 25%; text-align: center">
+                        &nbsp;
+                        <input type="button" id="btnCerEdi" name="btnCerEdi" value="Cerrar" class="btn transaction-button"
+                               style="width: 126px; height: 25px" />
+                    </td>
+                    <td style="width: 25%; text-align: left" colspan="2">
+                        &nbsp;
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+    <div id="IDdivtabTypeWork" class="panel claro-panel-primary" style="display: none">
+        <div role="tab" class="panel-heading">
+            <span class="fa fa-cogs"></span>
+            <label data-toggle="collapse" href="#" aria-expanded="true" data-parent="#DataCustomer" aria-controls="customerDataCollapse" class="collapsed transaction-ref-color"> Tipo Trabajo</label>
+        </div>
+        <div class="panel-body">
+            <form class="form-horizontal">
+
+                <div class="form-group">
+                    <label for="ddlTypeWork" class="col-sm-2 control-label">Tipo de Trabajo</label>
+                    <div class="col-sm-4">
+                        <select class="form-control input-sm" id="ddlTypeWork" disabled></select>
+                    </div>
+
+                    <label for="ddlReasonSot" class="col-sm-2 control-label">Motivo SOT</label>
+                    <div class="col-sm-4">
+                        <select class="form-control input-sm" id="ddlReasonSot"></select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="ddlTypeSubWork" class="col-sm-2 control-label">Sub Tipo de Trabajo (*)</label>
+                    <div class="col-sm-4">
+                        <select class="form-control input-sm" id="ddlTypeSubWork"></select>
+                    </div>
+                </div>
+
+                        @Html.Partial("~/Areas/Transactions/Views/Shared/ViewPartial/Schedule.cshtml",
+                            new ViewDataDictionary {
+                                { "Text_Id", "txt_dDateProgramming" },
+                                { "Select_Id", "cboSchedule" },
+                                { "Button_Id", "btnValidateSchedule" },
+                                { "Combo_JobTypes" , "ddlTypeWork"},
+                                { "Combo_SubJobType" , "ddlTypeSubWork"},
+                                { "Input_Size" , "input-xs"},
+                                { "strDateServer", @DateTime.Now.ToString("MM/dd/yyyy") },
+                                { "strDateNew", @DateTime.Now.AddDays(0).ToString("MM/dd/yyyy") },
+                                { "Button_Save", "btn_saveTransaction"}
+                            })
+              
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" style="float: left">
+                        Fidelizar
+                        <input class="checkbox-inline" type="checkbox" id="chkLoyalty" value="true">
+                    </label>
+
+                    <label class="col-sm-4 control-label" style="float: left">
+                        Costo de Instalación (Con IGV) S/ :
+                    </label>
+                    <div class="col-sm-2">
+                        <input type="text" readonly="readonly" class="form-control input-sm" id="txChargeAmount" aria-describedby="helpBlock2">
+                    </div>
+
+
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" style="float: left">
+                        E-mail
+                        <input class="checkbox-inline input-sm" type="checkbox" id="chkSendMail" value="true">
+                    </label>
+
+                    <div class="col-sm-4" id="dContenedorEmail">
+                        <input type="email" id="txtSendMail" class="form-control" placeholder="Correo Electrónico" style="display: none;">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="ddlCACDAC" class="col-sm-2 control-label"> Punto de Atención</label>
+                    <div class="col-sm-4">
+                        <select class="form-control input-sm" id="ddlCACDAC"></select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="txtNote" class="col-sm-2 control-label">Notas</label>
+                    <div class="col-sm-9">
+                        <textarea class="form-control input-sm" style="resize: none" rows="6" placeholder="Agregar Notas" id="txtNote"></textarea>
+                    </div>
+                </div>
+
+</form>
+        </div>
+    </div>
+
+    <div id="IDdivtabProducts" style="display:none">
+        <table id="tblExtransf" class="table table-bordered  table-striped">
+            <thead class="btn-danger">
+                <tr>
+                    <th style="width:100px">Cod. Material</th>
+                    <th style="width:100px">Cod. SAP</th>
+                    <th style="width:100px">Num. Serie</th>
+                    <th style="width:100px">Mac Ad.</th>
+                    <th style="width:100px">Desc. Material</th>
+                    <th style="width:100px">Tipo Equipo</th>
+                    <th style="width:100px">Código / Id Producto</th>
+                    <th style="width:100px">Modelo</th>
+                    <th style="width:100px">Conv. Type</th>
+                    <th style="width:100px">Serv/Paque. Principal</th>
+                    <th style="width:100px">Head End</th>
+                    <th style="width:100px">Perfil</th>
+                    <th style="width:100px">Número</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+</div>
+
+<input id="hidOpcion" type="hidden" name="hidOpcion" />
+<input id="hidCodOpcion" type="hidden" name="hidCodOpcion" />
+<input id="hidAccion" type="hidden" name="hidAccion" />
+
+
+
+<input type="hidden" id="ServerDate" value="@ViewBag.FechaServer" />
+<input type="hidden" id="hndHistoryETA" value="" />
+<input type="hidden" id="hndValidateETA" value="0" />
+
+@*@section scripts{*@
+
+
+@Scripts.Render("~/bundles/steps")
+@Scripts.Render("~/bundles/Transactions/Auth/AuthUser")
+@Scripts.Render("~/bundles/Transactions/ExternalInternalTransfer/LTEExternalInternalTransfer")
+<script src="~/Areas/Transactions/Scripts/ReadRecordPdf/ReadRecord.js"></script>
+
+@*"~/Areas/Transactions/Scripts/ExternalInternalTransfer/LTEExternalInternalTransfer.js"*@
+
+@*<script src="~/Areas/Transactions/Scripts/ExternalInternalTransfer/LTEExternalInternalTransfer.js"></script>*@
+@*}*@

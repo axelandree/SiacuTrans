@@ -1,0 +1,198 @@
+﻿
+@*@{
+    ViewBag.Title = "Cambio de Número";
+    //Layout = null;
+    Layout = "~/Areas/Transactions/Views/Shared/_Layout.cshtml";
+    ViewBag.TitleHtml = "CAMBIO DE NÚMERO";
+}*@
+
+@using System.Web.Optimization;
+
+@{
+    Layout = null;
+}
+
+<script type="text/javascript" src="~/Areas/Transactions/Content/Lib/BloqueoF12.js"></script>
+<div id="PostPaidChangePhoneNumber" class="contenedor">
+    <div class="scrollbudy">
+        <div class="col-md-3">
+            <div id="DataCustomer" class="panel-group" role="tablist" aria-multiselectable="true">
+
+                <div class="panel claro-panel-primary">
+
+                    <div id="customerDataHead" role="tab" class="panel-heading">
+                        <span class="glyphicon glyphicon-user"></span>
+                        <a data-toggle="collapse" href="#customer" aria-expanded="true" data-parent="#DataCustomer" aria-controls="customerDataCollapse" class="collapsed transaction-ref-color"> Datos del Cliente</a>
+                    </div>
+
+                    <div class="panel-body panel-collapse collapse in" id="customer" role="tabpanel" aria-labelledby="customerDataHead">
+
+                        <table class="table table-condensed">
+                            <tbody>
+                                <tr>
+                                    <td class="col-md-3">Nro. Teléfono</td>
+                                    <td class="col-md-3"><label id="lblPhoneNumber"></label></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-3">Tipo de Cliente</td>
+                                    <td class="col-md-3"><label id="lblCustomerType"></label></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-3">Cliente</td>
+                                    <td class="col-md-3"><label id="lblCustomerName"></label></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-3">Contacto del cliente</td>
+                                    <td class="col-md-3"><label id="lblCustomerContact"></label></td>
+                                </tr>
+                                <tr>
+                                    <td>Contacto</td>
+                                    <td><label id="lblContactCust"></label></td>
+                                </tr>
+                                <tr>
+                                    <td>Representante Legal</td>
+                                    <td><label id="lblLegalRepresentative"></label></td>
+                                </tr>
+                                <tr>
+                                    <td>DNI/RUC</td>
+                                    <td><label id="lblIdentificationDocument"></label></td>
+                                </tr>
+                                <tr>
+                                    <td>Doc. Repres. Legal</td>
+                                    <td><label id="lblIdentificationDocumentoLR"></label></td>
+                                </tr>
+                                <tr>
+                                    <td>Fecha de Activación</td>
+                                    <td><label id="lblActivationDate"></label></td>
+                                </tr>
+                                @*<tr>
+                                    <td>Fecha ult. Recarga</td>
+                                    <td><label id="lblLastDateRecharge"></label></td>
+                                </tr>*@
+                                <tr>
+                                    <td>Fecha de Nacimiento</td>
+                                    <td><label id="lblBornDate"></label></td>
+                                </tr>
+                                @*<tr>
+                                    <td>Monto ult. Recarga</td>
+                                    <td><label id="lblLastMountRecharge"></label></td>
+                                </tr>*@
+                                <tr id="trNroTriados">
+                                    <td>Número triados</td>
+                                    <td><label id="lblNumberTriado"></label></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div id="businessRulesHead" role="tab" class="panel-heading">
+                        <span class="glyphicon glyphicon-th-list"></span>
+                        <a data-toggle="collapse" href="#businessRulesCollapse" aria-expanded="true" data-parent="#DataCustomer" aria-controls="businessRulesCollapse" class="collapsed transaction-ref-color"> Reglas de Atención</a>
+                    </div>
+                    <div id="businessRulesCollapse" class="panel-body panel-collapse collapse" role="tabpanel" aria-labelledby="businessRulesHead">
+                        <div id="divRules">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div id="tabChangePhoneNumber" role="tabpanel" percent="0%">
+                <div class="panel claro-panel-primary">
+                    <div class="panel-heading">
+                        Cambio de Número Postpago
+                    </div>
+                    <div class="panel-body">
+                        <form class="form-horizontal">
+                            <div class="form-group">
+                                <label for="ddlLocation" class="col-sm-3 control-label">Localidad Nuevo Número</label>
+                                <div class="col-sm-3">
+                                    <select id="ddlLocation" class="form-control input-sm"></select>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input id="chkTranslationNumber" type="checkbox" disabled>
+                                            Traslado Número
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="txtStartHLR" class="col-sm-3 control-label">HLR Inicial</label>
+                                <div class="col-sm-2">
+                                    <input type="text" id="txtStartHLR" class="form-control input-sm" readonly/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="txtNewNumber" class="col-sm-3 control-label">Nuevo número</label>
+                                <div class="col-sm-3">
+                                    <input type="text" id="txtNewNumber" class="form-control input-sm" readonly/>
+                                </div>
+                                <div class="col-sm-3">
+                                    <button id="btnSearch" type="button" class="btn transaction-button btn-sm"><span class="glyphicon glyphicon-search"></span> Buscar</button>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="txtEndHLR" class="col-sm-3 control-label">HLR Final</label>
+                                <div class="col-sm-2">
+                                    <input type="text" id="txtEndHLR" class="form-control input-sm" readonly/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">Fidelizar</label>
+                                <div class="col-sm-3">
+                                    <label class="radio-inline">
+                                        <input type="radio" name="Fidelize" id="rdFidelizeYes" value="1"> SI
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="Fidelize" id="rdFidelizeNot" value="2"> NO
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="txtCostTrans" class="col-sm-3 control-label">Costo de la transacción</label>
+                                <div id="divCostoTrans" class="col-sm-2">
+                                    <input type="text" id="txtCostTrans" class="form-control input-sm text-right" disabled />
+                                </div>
+                                <div id="divCostTransCorp" class="col-sm-2">
+                                    <select id="ddlCostCorp" class="form-control input-sm text-right"></select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="ddlCACDAC" class="col-sm-3 control-label">Punto de Atención</label>
+                                <div class="col-sm-3">
+                                    <select id="ddlCACDAC" class="form-control input-sm"></select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="txtNotas" class="col-sm-3 control-label">Notas</label>
+                                <div class="col-sm-6">
+                                    <textarea id="taNotas" class="form-control" rows="3"></textarea>
+                                </div>
+                            </div>
+                            <div id="divErrorAlert" class="alert alert-transaction alert-danger" role="alert">
+                                <button id="divClose" type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <strong><span id="lblErrorMessage"></span></strong>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-12 text-center">
+                                    @*<div class="btn-group" role="group" aria-label="...">*@
+                                    <button id="btnSave" type="button" class="btn transaction-button"><span class="glyphicon glyphicon-floppy-disk"></span> Guardar</button>
+                                    <button id="btnClose" type="button" class="btn transaction-button"><span class="glyphicon glyphicon-home"></span> Cerrar</button>
+                                    <button id="btnConstancy" type="button" class="btn transaction-button" disabled><span class="glyphicon glyphicon-list-alt"></span> Constancia</button>
+                                    @*</div>*@
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+@Scripts.Render("~/bundles/Transactions/Postpaid/ChangePhoneNumber")
+<script src="~/Areas/Transactions/Scripts/ReadRecordPdf/ReadRecord.js"></script>

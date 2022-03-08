@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetModifyServiceQuotAmount" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetModifyServiceQuotAmount" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd3" namespace="Claro" />
+  <xs:complexType name="ModifyServiceQuotAmountRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="Claro" base="q1:Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DCost" type="xs:double" />
+          <xs:element minOccurs="0" name="IntCodId" type="xs:int" />
+          <xs:element minOccurs="0" name="IntPeriod" type="xs:int" />
+          <xs:element minOccurs="0" name="IntSnCode" type="xs:int" />
+          <xs:element minOccurs="0" name="IntSpCode" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ModifyServiceQuotAmountRequest" nillable="true" type="tns:ModifyServiceQuotAmountRequest" />
+  <xs:complexType name="ModifyServiceQuotAmountResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Result" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ModifyServiceQuotAmountResponse" nillable="true" type="tns:ModifyServiceQuotAmountResponse" />
+</xs:schema>

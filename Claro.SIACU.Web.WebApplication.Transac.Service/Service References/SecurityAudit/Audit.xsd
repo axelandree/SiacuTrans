@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="Claro.Audit.Register" elementFormDefault="qualified" targetNamespace="Claro.Audit.Register" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:55209/Audit.svc?xsd=xsd3" namespace="Claro" />
+  <xs:complexType name="RegisterRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="Claro" base="q1:Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="clientIP" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="serverIP" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="amount" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="clientName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="serverName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="service" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="phone" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="text" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="transaction" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RegisterRequest" nillable="true" type="tns:RegisterRequest" />
+</xs:schema>

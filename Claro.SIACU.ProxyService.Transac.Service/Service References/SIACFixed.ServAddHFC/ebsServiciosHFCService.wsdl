@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://claro.com.pe/eai/ws/ventas/servicioshfc" name="ebsServiciosHFCService" targetNamespace="http://claro.com.pe/eai/ws/ventas/servicioshfc" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://172.19.74.68:8909/ServiciosHFCWS/ebsServiciosHFCSB11?xsd=1" namespace="http://claro.com.pe/eai/ws/ventas/servicioshfc" />
+    </xsd:schema>
+  </types>
+  <message name="ejecutarReconexionServicio">
+    <part name="parameters" element="tns:ejecutarReconexionServicioRequest" />
+  </message>
+  <message name="ejecutarReconexionServicioResponse">
+    <part name="parameters" element="tns:ejecutarReconexionServicioResponse" />
+  </message>
+  <message name="ejecutarSuspencionServicio">
+    <part name="parameters" element="tns:ejecutarSuspencionServicioRequest" />
+  </message>
+  <message name="ejecutarSuspencionServicioResponse">
+    <part name="parameters" element="tns:ejecutarSuspencionServicioResponse" />
+  </message>
+  <message name="activarServiciosAdicionales">
+    <part name="parameters" element="tns:activarServiciosAdicionalesRequest" />
+  </message>
+  <message name="activarServiciosAdicionalesResponse">
+    <part name="parameters" element="tns:activarServiciosAdicionalesResponse" />
+  </message>
+  <message name="desactivarServiciosAdicionales">
+    <part name="parameters" element="tns:desactivarServiciosAdicionalesRequest" />
+  </message>
+  <message name="desactivarServiciosAdicionalesResponse">
+    <part name="parameters" element="tns:desactivarServiciosAdicionalesResponse" />
+  </message>
+  <portType name="ebsServiciosHFCSB11">
+    <operation name="ejecutarReconexionServicio">
+      <input message="tns:ejecutarReconexionServicio" />
+      <output message="tns:ejecutarReconexionServicioResponse" />
+    </operation>
+    <operation name="ejecutarSuspencionServicio">
+      <input message="tns:ejecutarSuspencionServicio" />
+      <output message="tns:ejecutarSuspencionServicioResponse" />
+    </operation>
+    <operation name="activarServiciosAdicionales">
+      <input message="tns:activarServiciosAdicionales" />
+      <output message="tns:activarServiciosAdicionalesResponse" />
+    </operation>
+    <operation name="desactivarServiciosAdicionales">
+      <input message="tns:desactivarServiciosAdicionales" />
+      <output message="tns:desactivarServiciosAdicionalesResponse" />
+    </operation>
+  </portType>
+  <binding name="ebsServiciosHFCSoapPort11Binding" type="tns:ebsServiciosHFCSB11">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="ejecutarReconexionServicio">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/ventas/servicioshfc/ejecutarReconexionServicio" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ejecutarSuspencionServicio">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/ventas/servicioshfc/ejecutarSuspencionServicio" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="activarServiciosAdicionales">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/ventas/servicioshfc/activarServiciosAdicionales" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="desactivarServiciosAdicionales">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/ventas/servicioshfc/desactivarServiciosAdicionales" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="ebsServiciosHFCService">
+    <port name="ebsServiciosHFCSoapPort11" binding="tns:ebsServiciosHFCSoapPort11Binding">
+      <soap:address location="http://172.19.74.68:8909/ServiciosHFCWS/ebsServiciosHFCSB11" />
+    </port>
+  </service>
+</definitions>

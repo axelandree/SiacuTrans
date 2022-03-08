@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetConsultarPaqDisponibles" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetConsultarPaqDisponibles" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd3" namespace="Claro" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd95" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetDataPower" />
+  <xs:complexType name="ConsultarPaqDisponibles_x0020_Request">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="Claro" base="q1:Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="MessageRequest" nillable="true" type="tns:ConsultarPaqDisponiblesMessageRequest" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ConsultarPaqDisponibles_x0020_Request" nillable="true" type="tns:ConsultarPaqDisponibles_x0020_Request" />
+  <xs:complexType name="ConsultarPaqDisponiblesMessageRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Body" nillable="true" type="tns:ConsultarPaqDisponiblesBodyRequest" />
+      <xs:element minOccurs="0" name="Header" nillable="true" type="tns:ConsultarPaqDisponibles_x0020_HeaderRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConsultarPaqDisponiblesMessageRequest" nillable="true" type="tns:ConsultarPaqDisponiblesMessageRequest" />
+  <xs:complexType name="ConsultarPaqDisponiblesBodyRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigoCategoria" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="idCategoria" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="idContrato" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="prepagoCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tmCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConsultarPaqDisponiblesBodyRequest" nillable="true" type="tns:ConsultarPaqDisponiblesBodyRequest" />
+  <xs:complexType name="ConsultarPaqDisponibles_x0020_HeaderRequest">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetDataPower" minOccurs="0" name="HeaderRequest" nillable="true" type="q2:HeaderRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConsultarPaqDisponibles_x0020_HeaderRequest" nillable="true" type="tns:ConsultarPaqDisponibles_x0020_HeaderRequest" />
+  <xs:complexType name="ConsultarPaqDisponibles_x0020_Response">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MessageResponse" nillable="true" type="tns:ConsultarPaqDisponibles_x0020_MessageResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConsultarPaqDisponibles_x0020_Response" nillable="true" type="tns:ConsultarPaqDisponibles_x0020_Response" />
+  <xs:complexType name="ConsultarPaqDisponibles_x0020_MessageResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Body" nillable="true" type="tns:ConsultarPaqDisponiblesBodyResponse" />
+      <xs:element minOccurs="0" name="Header" nillable="true" type="tns:ConsultarPaqDisponiblesHeaderResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConsultarPaqDisponibles_x0020_MessageResponse" nillable="true" type="tns:ConsultarPaqDisponibles_x0020_MessageResponse" />
+  <xs:complexType name="ConsultarPaqDisponiblesBodyResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="defaultServiceResponse" nillable="true" type="tns:defaultServiceResponse" />
+      <xs:element minOccurs="0" name="listaProductosDeCompra" nillable="true" type="tns:ArrayOflistaProductosDeCompra" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConsultarPaqDisponiblesBodyResponse" nillable="true" type="tns:ConsultarPaqDisponiblesBodyResponse" />
+  <xs:complexType name="defaultServiceResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idRespuesta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="idSesion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="idTransaccional" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="mensaje" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="defaultServiceResponse" nillable="true" type="tns:defaultServiceResponse" />
+  <xs:complexType name="ArrayOflistaProductosDeCompra">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="listaProductosDeCompra" nillable="true" type="tns:listaProductosDeCompra" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOflistaProductosDeCompra" nillable="true" type="tns:ArrayOflistaProductosDeCompra" />
+  <xs:complexType name="listaProductosDeCompra">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cantidadFavoritos" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="catnId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="catvCodCategoria" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="catvTitulo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="codTipoLinea" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="codigoPaquete" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="codigoProducto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="estadoMetodoPago" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="finVigencia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="flagValidarSaldoPontis" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="idMetodoPago" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="idProductoDeCompra" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="idProductoDeCompraAsociado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="idTipoLinea" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="iniVigencia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="listaCaracteristicasProducto" nillable="true" type="tns:ArrayOflistaCaracteristicasProducto" />
+      <xs:element minOccurs="0" name="moneda2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nombreMetodoPago" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nombreProducto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="precio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="recomendadoCategoriaOrden" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoVigencia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tituloProducto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="vigencia" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="listaProductosDeCompra" nillable="true" type="tns:listaProductosDeCompra" />
+  <xs:complexType name="ArrayOflistaCaracteristicasProducto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="listaCaracteristicasProducto" nillable="true" type="tns:listaCaracteristicasProducto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOflistaCaracteristicasProducto" nillable="true" type="tns:ArrayOflistaCaracteristicasProducto" />
+  <xs:complexType name="listaCaracteristicasProducto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="estilo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="idCaracteristica" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="idProducto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="orden" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="listaCaracteristicasProducto" nillable="true" type="tns:listaCaracteristicasProducto" />
+  <xs:complexType name="ConsultarPaqDisponiblesHeaderResponse">
+    <xs:sequence>
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetDataPower" minOccurs="0" name="HeaderResponse" nillable="true" type="q3:HeaderResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConsultarPaqDisponiblesHeaderResponse" nillable="true" type="tns:ConsultarPaqDisponiblesHeaderResponse" />
+</xs:schema>

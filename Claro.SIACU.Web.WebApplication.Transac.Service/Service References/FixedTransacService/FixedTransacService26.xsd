@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.ClaroVideo.GetUpdateClientSN" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.ClaroVideo.GetUpdateClientSN" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd38" namespace="Tools.Entity" />
+  <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd50" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.ClaroVideo" />
+  <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd40" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.GetDataPower" />
+  <xs:complexType name="UpdateClientSNRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="Tools.Entity" base="q1:Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="MessageRequest" nillable="true" type="tns:UpdateClientSNMessageRequest" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UpdateClientSNRequest" nillable="true" type="tns:UpdateClientSNRequest" />
+  <xs:complexType name="UpdateClientSNMessageRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Body" nillable="true" type="tns:UpdateClientSNBodyRequest" />
+      <xs:element minOccurs="0" name="Header" nillable="true" type="tns:UpdateClientSNHeaderRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UpdateClientSNMessageRequest" nillable="true" type="tns:UpdateClientSNMessageRequest" />
+  <xs:complexType name="UpdateClientSNBodyRequest">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.ClaroVideo" minOccurs="0" name="updateUserOttRequest" nillable="true" type="q2:UpdateUserOttRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UpdateClientSNBodyRequest" nillable="true" type="tns:UpdateClientSNBodyRequest" />
+  <xs:complexType name="UpdateClientSNHeaderRequest">
+    <xs:sequence>
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.GetDataPower" minOccurs="0" name="HeaderRequest" nillable="true" type="q3:HeaderRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UpdateClientSNHeaderRequest" nillable="true" type="tns:UpdateClientSNHeaderRequest" />
+  <xs:complexType name="UpdateClientSNResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MessageResponse" nillable="true" type="tns:UpdateClientSNMessageResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UpdateClientSNResponse" nillable="true" type="tns:UpdateClientSNResponse" />
+  <xs:complexType name="UpdateClientSNMessageResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Body" nillable="true" type="tns:UpdateClientSNBodyResponse" />
+      <xs:element minOccurs="0" name="Header" nillable="true" type="tns:UpdateClientSNHeaderResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UpdateClientSNMessageResponse" nillable="true" type="tns:UpdateClientSNMessageResponse" />
+  <xs:complexType name="UpdateClientSNBodyResponse">
+    <xs:sequence>
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.ClaroVideo" minOccurs="0" name="updateUserOttResponse" nillable="true" type="q4:updateUserOttResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UpdateClientSNBodyResponse" nillable="true" type="tns:UpdateClientSNBodyResponse" />
+  <xs:complexType name="UpdateClientSNHeaderResponse">
+    <xs:sequence>
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.GetDataPower" minOccurs="0" name="HeaderResponse" nillable="true" type="q5:HeaderResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UpdateClientSNHeaderResponse" nillable="true" type="tns:UpdateClientSNHeaderResponse" />
+</xs:schema>

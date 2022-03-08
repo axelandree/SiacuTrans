@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="http://claro.com.pe/eai/ws/baseschema" elementFormDefault="qualified" targetNamespace="http://claro.com.pe/eai/ws/baseschema" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType name="auditRequestType">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="1" name="idTransaccion" type="xsd:string" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="ipAplicacion" type="xsd:string" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="nombreAplicacion" type="xsd:string" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="usuarioAplicacion" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="auditResponseType">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="1" name="idTransaccion" type="xsd:string" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="codigoRespuesta" type="xsd:string" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="mensajeRespuesta" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ListaRequestOpcional">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="RequestOpcional" type="RequestOpcionalComplexType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ListaResponseOpcional">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="ResponseOpcional" type="ResponseOpcionalComplexType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ResponseOpcionalComplexType">
+    <xsd:sequence>
+      <xsd:element name="clave" type="xsd:string" />
+      <xsd:element name="valor" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="RequestOpcionalComplexType">
+    <xsd:sequence>
+      <xsd:element name="clave" type="xsd:string" />
+      <xsd:element name="valor" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="listAddress">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="address">
+        <xsd:complexType>
+          <xsd:attribute name="customerId" type="xsd:string" />
+          <xsd:attribute name="dniRuc" type="xsd:string" />
+          <xsd:attribute name="dniRuc2" type="xsd:string" />
+          <xsd:attribute name="repreLegal" type="xsd:string" />
+          <xsd:attribute name="tipoDocumentoRep" type="xsd:string" />
+          <xsd:attribute name="razonSocial" type="xsd:string" />
+          <xsd:attribute name="nombres" type="xsd:string" />
+          <xsd:attribute name="apellido" type="xsd:string" />
+          <xsd:attribute name="cargo" type="xsd:string" />
+          <xsd:attribute name="numTelefono" type="xsd:string" />
+          <xsd:attribute name="numCelular" type="xsd:string" />
+          <xsd:attribute name="numFax" type="xsd:string" />
+          <xsd:attribute name="email" type="xsd:string" />
+          <xsd:attribute name="nombreComercial" type="xsd:string" />
+          <xsd:attribute name="contactoCliente" type="xsd:string" />
+          <xsd:attribute name="fechaNacimiento" type="xsd:string" />
+          <xsd:attribute name="nacionalidad" type="xsd:string" />
+          <xsd:attribute name="sexo" type="xsd:string" />
+          <xsd:attribute name="estadoCivil" type="xsd:string" />
+          <xsd:attribute name="direccion_fact" type="xsd:string" />
+          <xsd:attribute name="notasDireccion_fact" type="xsd:string" />
+          <xsd:attribute name="distrito_fact" type="xsd:string" />
+          <xsd:attribute name="provincia_fact" type="xsd:string" />
+          <xsd:attribute name="departamento_fact" type="xsd:string" />
+          <xsd:attribute name="codigoPostal_fact" type="xsd:string" />
+          <xsd:attribute name="direccion_leg" type="xsd:string" />
+          <xsd:attribute name="notasDireccion_leg" type="xsd:string" />
+          <xsd:attribute name="distrito_leg" type="xsd:string" />
+          <xsd:attribute name="provincia_leg" type="xsd:string" />
+          <xsd:attribute name="departamento_leg" type="xsd:string" />
+          <xsd:attribute name="codigoPostal_leg" type="xsd:string" />
+          <xsd:attribute name="ciudad" type="xsd:string" />
+          <xsd:attribute name="pais" type="xsd:string" />
+          <xsd:attribute name="motivo" type="xsd:string" />
+          <xsd:attribute name="usuario" type="xsd:string" />
+          <xsd:attribute name="fechaRegistro" type="xsd:string" />
+          <xsd:attribute name="updCliente" type="xsd:string" />
+          <xsd:attribute name="updDataMinor" type="xsd:string" />
+          <xsd:attribute name="updDirLegal" type="xsd:string" />
+          <xsd:attribute name="updDirFac" type="xsd:string" />
+          <xsd:attribute name="updRepLegal" type="xsd:string" />
+          <xsd:attribute name="updContact" type="xsd:string" />
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="datosClienteType">
+    <xsd:sequence>
+      <xsd:element name="nombre" type="xsd:string" />
+      <xsd:element name="apellidos" type="xsd:string" />
+      <xsd:element name="cuenta" type="xsd:string" />
+      <xsd:element name="customer_id" type="xsd:string" />
+      <xsd:element name="razon_social" type="xsd:string" />
+      <xsd:element name="tip_doc" type="xsd:string" />
+      <xsd:element name="sexo" type="xsd:string" />
+      <xsd:element name="num_doc" type="xsd:string" />
+      <xsd:element name="titulo" type="xsd:string" />
+      <xsd:element name="telef_principal" type="xsd:string" />
+      <xsd:element name="estado_civil" type="xsd:string" />
+      <xsd:element name="estado_civil_id" type="xsd:string" />
+      <xsd:element name="fecha_nac" type="xsd:string" />
+      <xsd:element name="lug_nac" type="xsd:string" />
+      <xsd:element name="tip_doc_c" type="xsd:string" />
+      <xsd:element name="ruc_dni" type="xsd:string" />
+      <xsd:element name="nomb_comercial" type="xsd:string" />
+      <xsd:element name="contacto_cliente" type="xsd:string" />
+      <xsd:element name="rep_legal" type="xsd:string" />
+      <xsd:element name="telef_contacto" type="xsd:string" />
+      <xsd:element name="fax" type="xsd:string" />
+      <xsd:element name="email" type="xsd:string" />
+      <xsd:element name="cargo" type="xsd:string" />
+      <xsd:element name="consultor" type="xsd:string" />
+      <xsd:element name="asesor" type="xsd:string" />
+      <xsd:element name="direccion_fac" type="xsd:string" />
+      <xsd:element name="urbanizacion_fac" type="xsd:string" />
+      <xsd:element name="distrito_fac" type="xsd:string" />
+      <xsd:element name="provincia_fac" type="xsd:string" />
+      <xsd:element name="cod_postal_fac" type="xsd:string" />
+      <xsd:element name="departamento_fac" type="xsd:string" />
+      <xsd:element name="pais_fac" type="xsd:string" />
+      <xsd:element name="direccion_leg" type="xsd:string" />
+      <xsd:element name="urbanizacion_leg" type="xsd:string" />
+      <xsd:element name="distrito_leg" type="xsd:string" />
+      <xsd:element name="provincia_leg" type="xsd:string" />
+      <xsd:element name="cod_postal_leg" type="xsd:string" />
+      <xsd:element name="departamento_leg" type="xsd:string" />
+      <xsd:element name="pais_leg" type="xsd:string" />
+      <xsd:element name="nacionalidad" type="xsd:string" />
+      <xsd:element name="co_id" type="xsd:string" />
+      <xsd:element name="nicho_id" type="xsd:string" />
+      <xsd:element name="num_cuentas" type="xsd:string" />
+      <xsd:element name="num_lineas" type="xsd:string" />
+      <xsd:element name="ciclo_fac" type="xsd:string" />
+      <xsd:element name="status_cuenta" type="xsd:string" />
+      <xsd:element name="modalidad" type="xsd:string" />
+      <xsd:element name="codigo_tipo_cliente" type="xsd:string" />
+      <xsd:element name="tipo_cliente" type="xsd:string" />
+      <xsd:element name="fecha_act" type="xsd:string" />
+      <xsd:element name="limite_credito" type="xsd:string" />
+      <xsd:element name="segmento" type="xsd:string" />
+      <xsd:element name="respon_pago" type="xsd:string" />
+      <xsd:element name="credit_score" type="xsd:string" />
+      <xsd:element name="forma_pago" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

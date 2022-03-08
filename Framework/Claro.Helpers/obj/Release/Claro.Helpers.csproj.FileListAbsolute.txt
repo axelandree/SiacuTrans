@@ -1,0 +1,16 @@
+C:\NET\Framework\Claro.Helpers\bin\Release\Claro.Helpers.dll
+C:\NET\Framework\Claro.Helpers\bin\Release\Claro.Helpers.pdb
+C:\NET\Framework\Claro.Helpers\bin\Release\EPPlus.dll
+C:\NET\Framework\Claro.Helpers\obj\Release\Claro.Helpers.dll
+C:\NET\Framework\Claro.Helpers\obj\Release\Claro.Helpers.pdb
+D:\NET\Framework\Claro.Helpers\bin\Release\Claro.Helpers.dll
+D:\NET\Framework\Claro.Helpers\bin\Release\Claro.Helpers.pdb
+D:\NET\Framework\Claro.Helpers\bin\Release\EPPlus.dll
+D:\NET\Framework\Claro.Helpers\obj\Release\Claro.Helpers.dll
+D:\NET\Framework\Claro.Helpers\obj\Release\Claro.Helpers.pdb
+C:\NET_camb\Framework\Claro.Helpers\bin\Release\Claro.Helpers.dll
+C:\NET_camb\Framework\Claro.Helpers\bin\Release\Claro.Helpers.pdb
+C:\NET_camb\Framework\Claro.Helpers\bin\Release\EPPlus.dll
+C:\NET_camb\Framework\Claro.Helpers\obj\Release\Claro.Helpers.csprojResolveAssemblyReference.cache
+C:\NET_camb\Framework\Claro.Helpers\obj\Release\Claro.Helpers.dll
+C:\NET_camb\Framework\Claro.Helpers\obj\Release\Claro.Helpers.pdb

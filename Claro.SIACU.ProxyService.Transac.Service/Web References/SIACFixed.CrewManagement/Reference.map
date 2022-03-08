@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://limdeseaiv28.tim.com.pe:8909/ebsADMCUAD_Capacity/ebsADMCUAD_CapacitySB11?xsd=1" filename="ebsADMCUAD_CapacitySB11.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://172.19.74.223:8909/ebsADMCUAD_Capacity/ebsADMCUAD_CapacitySB11?WSDL" filename="ebsADMCUAD_CapacityService.wsdl" />
+  </Results>
+</DiscoveryClientResultsFile>

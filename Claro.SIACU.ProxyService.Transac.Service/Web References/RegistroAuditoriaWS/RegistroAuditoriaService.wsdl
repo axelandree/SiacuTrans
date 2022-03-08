@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://service.eai.auditoria.claro.com.pe/RegistroAuditoriaWS" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="RegistroAuditoriaService" targetNamespace="http://service.eai.auditoria.claro.com.pe/RegistroAuditoriaWS" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://limdeseaiv26.tim.com.pe:8909/RegistroAuditoria/RegistroAuditoriaPortSB11?xsd=1" namespace="http://service.eai.auditoria.claro.com.pe/RegistroAuditoriaWS" />
+    </xsd:schema>
+  </types>
+  <message name="registroAuditoria">
+    <part name="registroAuditoria" element="tns:registroAuditoria" />
+  </message>
+  <message name="registroAuditoriaResponse">
+    <part name="registroAuditoriaResponse" element="tns:registroAuditoriaResponse" />
+  </message>
+  <portType name="RegistroAuditoriaPortType">
+    <operation name="registroAuditoria">
+      <input wsam:Action="http://service.eai.auditoria.claro.com.pe/RegistroAuditoriaWS/registroAuditoria" message="tns:registroAuditoria" />
+      <output wsam:Action="http://service.eai.auditoria.claro.com.pe/RegistroAuditoriaWS/RegistroAuditoriaPortType/registroAuditoriaResponse" message="tns:registroAuditoriaResponse" />
+    </operation>
+  </portType>
+  <binding name="RegistroAuditoriaPortSB11Binding" type="tns:RegistroAuditoriaPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="registroAuditoria">
+      <soap:operation soapAction="http://service.eai.auditoria.claro.com.pe/RegistroAuditoriaWS/registroAuditoria" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="RegistroAuditoriaService">
+    <port name="RegistroAuditoriaPortSB11" binding="tns:RegistroAuditoriaPortSB11Binding">
+      <soap:address location="http://limdeseaiv26.tim.com.pe:8909/RegistroAuditoria/RegistroAuditoriaPortSB11" />
+    </port>
+  </service>
+</definitions>

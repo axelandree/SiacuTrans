@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.ProxyService.Transac.Service.InstantLinkSOA" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.ProxyService.Transac.Service.InstantLinkSOA" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Response">
+    <xs:sequence>
+      <xs:element name="notificationsField" nillable="true" type="tns:ArrayOfNotification" />
+      <xs:element name="requestParametersField" nillable="true" type="tns:ArrayOfParameter" />
+      <xs:element name="responseHeaderField" nillable="true" type="tns:ResponseHeader" />
+      <xs:element name="responseParametersField" nillable="true" type="tns:ArrayOfParameter" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Response" nillable="true" type="tns:Response" />
+  <xs:complexType name="ArrayOfNotification">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Notification" nillable="true" type="tns:Notification" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfNotification" nillable="true" type="tns:ArrayOfNotification" />
+  <xs:complexType name="Notification">
+    <xs:sequence>
+      <xs:element name="levelField" type="xs:int" />
+      <xs:element name="messageField" nillable="true" type="xs:string" />
+      <xs:element name="messageIdField" nillable="true" type="xs:string" />
+      <xs:element name="orderNoField" nillable="true" type="xs:string" />
+      <xs:element name="requestIdField" type="xs:long" />
+      <xs:element name="timeStampField" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Notification" nillable="true" type="tns:Notification" />
+  <xs:complexType name="ArrayOfParameter">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Parameter" nillable="true" type="tns:Parameter" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfParameter" nillable="true" type="tns:ArrayOfParameter" />
+  <xs:complexType name="Parameter">
+    <xs:sequence>
+      <xs:element name="nameField" nillable="true" type="xs:string" />
+      <xs:element name="valueField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Parameter" nillable="true" type="tns:Parameter" />
+  <xs:complexType name="ResponseHeader">
+    <xs:sequence>
+      <xs:element name="finishedDateField" type="xs:dateTime" />
+      <xs:element name="finishedDateFieldSpecified" type="xs:boolean" />
+      <xs:element name="orderNoField" nillable="true" type="xs:string" />
+      <xs:element name="priorityField" type="xs:int" />
+      <xs:element name="priorityFieldSpecified" type="xs:boolean" />
+      <xs:element name="receivedDateField" type="xs:dateTime" />
+      <xs:element name="receivedDateFieldSpecified" type="xs:boolean" />
+      <xs:element name="reqUserField" nillable="true" type="xs:string" />
+      <xs:element name="requestIdField" type="xs:long" />
+      <xs:element name="statusField" type="xs:int" />
+      <xs:element name="statusMessageField" nillable="true" type="xs:string" />
+      <xs:element name="statusMessageIdField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseHeader" nillable="true" type="tns:ResponseHeader" />
+</xs:schema>

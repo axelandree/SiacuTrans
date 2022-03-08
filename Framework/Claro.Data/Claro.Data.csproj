@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7DC4FCDB-62D7-4151-957A-984FA98FCA74}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Claro.Data</RootNamespace>
+    <AssemblyName>Claro.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Binaries\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=2.112.1.2, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Binaries\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configuration\FtpConfigurationElement.cs" />
+    <Compile Include="Configuration\FtpConfigurationElementCollection.cs" />
+    <Compile Include="Configuration\NetworkConfigurationElement.cs" />
+    <Compile Include="Configuration\NetworkConfigurationElementCollection.cs" />
+    <Compile Include="Configuration\RestServiceConfigurationElement.cs" />
+    <Compile Include="Configuration\RestServiceConfigurationElementCollection.cs" />
+    <Compile Include="Database\OraDbTypeTable.cs" />
+    <Compile Include="DbParameter.cs" />
+    <Compile Include="DataSection.cs" />
+    <Compile Include="DataSettings.cs" />
+    <Compile Include="DbColumnAttribute.cs" />
+    <Compile Include="Configuration\DbConnectionConfigurationElement.cs" />
+    <Compile Include="Configuration\DbConnectionConfigurationElementCollection.cs" />
+    <Compile Include="DbFactory.cs" />
+    <Compile Include="Configuration\DbProcedureConfigurationElement.cs" />
+    <Compile Include="Configuration\DbProcedureConfigurationElementCollection.cs" />
+    <Compile Include="DbProvider.cs" />
+    <Compile Include="DbTableAttribute.cs" />
+    <Compile Include="Ftp.cs" />
+    <Compile Include="IDbCommandConfig.cs" />
+    <Compile Include="IDbConnectionConfig.cs" />
+    <Compile Include="IDbConnectionConfiguration.cs" />
+    <Compile Include="IEnumerable.cs" />
+    <Compile Include="IFtpConfiguration.cs" />
+    <Compile Include="INetworkConfiguration.cs" />
+    <Compile Include="MapDriveHelper.cs" />
+    <Compile Include="Network.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RestService.cs" />
+    <Compile Include="Service.cs" />
+    <Compile Include="Configuration\ServiceConfigurationElement.cs" />
+    <Compile Include="Configuration\ServiceConfigurationElementCollection.cs" />
+    <Compile Include="SuccessCode.cs" />
+    <Compile Include="WebService.cs" />
+    <Compile Include="Configuration\WebServiceConfigurationElement.cs" />
+    <Compile Include="Configuration\WebServiceConfigurationElementCollection.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Claro.Entity\Claro.Entity.csproj">
+      <Project>{5b432611-cd37-4a2b-bcba-7509064e68ba}</Project>
+      <Name>Claro.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Claro.Security\Claro.Security.csproj">
+      <Project>{d558ea9e-478c-48d3-9c53-805c8f5669db}</Project>
+      <Name>Claro.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Claro.Web\Claro.Web.csproj">
+      <Project>{1630f11c-9caa-4a49-9bb2-7a3ccba1cd17}</Project>
+      <Name>Claro.Web</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

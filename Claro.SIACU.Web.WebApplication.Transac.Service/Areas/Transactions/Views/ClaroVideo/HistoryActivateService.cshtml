@@ -1,0 +1,31 @@
+﻿<script type="text/javascript" src="~/Areas/Transactions/Content/Lib/BloqueoF12.js"></script>
+<div id="ContentHistoryActivateService">
+    <div class="panel panel-default" style="margin-left:15px; margin-right:15px">
+        <div class="panel-body">
+            <div class="row" style="margin-left:1px; margin-right:1px">
+                <div class="well">
+                    <table id="tbHistoryActivateService" class="table  table-striped table-hover table-responsive claro-modal-tabla table-bordered">
+                        <thead class="claro-bg-primary">
+                            <tr>
+                                <th style="text-align:center">Titulo</th>
+                                <th style="text-align: center">Estado</th>
+                                <th style="text-align: center">Fecha de Activaci&oacute;n</th>
+                                <th style="text-align: center">Fecha de Expiraci&oacute;n</th>
+                                <th style="text-align: center">Precio</th>
+                                <th style="text-align: center">Servicio</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+            </div>
+        </div>
+    </div>
+    <input type="hidden" id="hdDescripcion" value="@ViewBag.descripcion" />
+    <input type="hidden" id="hdSession" value="@ViewBag.session" />
+    <input type="hidden" id="hdMobile" value="@ViewBag.mobile" />
+</div>
+
+@Scripts.Render("~/bundles/Transactions/HistoryActivateService")

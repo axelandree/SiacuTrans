@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetAvailabilitySimcard" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetAvailabilitySimcard" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd3" namespace="Claro" />
+  <xs:complexType name="AvailabilitySimcardRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="Claro" base="q1:Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ContractId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SimcardSeries" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SimcardSeriesOld" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AvailabilitySimcardRequest" nillable="true" type="tns:AvailabilitySimcardRequest" />
+  <xs:complexType name="AvailabilitySimcardResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="Claro" base="q2:Response">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ResultCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResultMessage" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AvailabilitySimcardResponse" nillable="true" type="tns:AvailabilitySimcardResponse" />
+</xs:schema>

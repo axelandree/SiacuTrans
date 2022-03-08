@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetValidateQuantityCampaign" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetValidateQuantityCampaign" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd95" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetDataPower" />
+  <xs:complexType name="GetValidateQuantityCampaignRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MessageRequest" nillable="true" type="tns:GetValidateQuantityCampaignMessageRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetValidateQuantityCampaignRequest" nillable="true" type="tns:GetValidateQuantityCampaignRequest" />
+  <xs:complexType name="GetValidateQuantityCampaignMessageRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Body" nillable="true" type="tns:GetValidateQuantityCampaignBodyRequest" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetDataPower" minOccurs="0" name="Header" nillable="true" type="q1:HeadersRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetValidateQuantityCampaignMessageRequest" nillable="true" type="tns:GetValidateQuantityCampaignMessageRequest" />
+  <xs:complexType name="GetValidateQuantityCampaignBodyRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="validarCantidadCampaniaRequest" nillable="true" type="tns:ValidateQuantityCampaignRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetValidateQuantityCampaignBodyRequest" nillable="true" type="tns:GetValidateQuantityCampaignBodyRequest" />
+  <xs:complexType name="ValidateQuantityCampaignRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="auditRequest" nillable="true" type="tns:GetValidateQuantityCampaignAuditRequest" />
+      <xs:element minOccurs="0" name="casoEspecial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="codAplicativo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="codTipoProducto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="descTipoProducto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="numeroDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoOperacion" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ValidateQuantityCampaignRequest" nillable="true" type="tns:ValidateQuantityCampaignRequest" />
+  <xs:complexType name="GetValidateQuantityCampaignAuditRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idTransaccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ipAplicacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nombreAplicacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="usuarioAplicacion" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetValidateQuantityCampaignAuditRequest" nillable="true" type="tns:GetValidateQuantityCampaignAuditRequest" />
+  <xs:complexType name="GetValidateQuantityCampaignResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MessageResponse" nillable="true" type="tns:GetValidateQuantityCampaignMessageResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetValidateQuantityCampaignResponse" nillable="true" type="tns:GetValidateQuantityCampaignResponse" />
+  <xs:complexType name="GetValidateQuantityCampaignMessageResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Body" nillable="true" type="tns:GetValidateQuantityCampaignBodyResponse" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetDataPower" minOccurs="0" name="Header" nillable="true" type="q2:HeadersResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetValidateQuantityCampaignMessageResponse" nillable="true" type="tns:GetValidateQuantityCampaignMessageResponse" />
+  <xs:complexType name="GetValidateQuantityCampaignBodyResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="validarCantidadCampaniaResponse" nillable="true" type="tns:ValidateQuantityCampaignResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetValidateQuantityCampaignBodyResponse" nillable="true" type="tns:GetValidateQuantityCampaignBodyResponse" />
+  <xs:complexType name="ValidateQuantityCampaignResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="auditResponse" nillable="true" type="tns:GetValidateQuantityCampaignAuditResponse" />
+      <xs:element minOccurs="0" name="listarCantMaxProducto" nillable="true" type="tns:GetValidateQuantityCampaignListCantMaxProductResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ValidateQuantityCampaignResponse" nillable="true" type="tns:ValidateQuantityCampaignResponse" />
+  <xs:complexType name="GetValidateQuantityCampaignAuditResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigoRespuesta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="idTransaccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="mensajeRespuesta" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetValidateQuantityCampaignAuditResponse" nillable="true" type="tns:GetValidateQuantityCampaignAuditResponse" />
+  <xs:complexType name="GetValidateQuantityCampaignListCantMaxProductResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="tipoProducto" nillable="true" type="tns:ArrayOfGetValidateQuantityCampaignKindProductResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetValidateQuantityCampaignListCantMaxProductResponse" nillable="true" type="tns:GetValidateQuantityCampaignListCantMaxProductResponse" />
+  <xs:complexType name="ArrayOfGetValidateQuantityCampaignKindProductResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GetValidateQuantityCampaignKindProductResponse" nillable="true" type="tns:GetValidateQuantityCampaignKindProductResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGetValidateQuantityCampaignKindProductResponse" nillable="true" type="tns:ArrayOfGetValidateQuantityCampaignKindProductResponse" />
+  <xs:complexType name="GetValidateQuantityCampaignKindProductResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cantMaxProducto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="codProducto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="descProducto" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetValidateQuantityCampaignKindProductResponse" nillable="true" type="tns:GetValidateQuantityCampaignKindProductResponse" />
+</xs:schema>

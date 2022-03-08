@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.ClaroVideo.GetContractedBusinessServices" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.ClaroVideo.GetContractedBusinessServices" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd38" namespace="Tools.Entity" />
+  <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd50" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.ClaroVideo" />
+  <xs:complexType name="ContractedBusinessServicesRequestPostPaid">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="Tools.Entity" base="q1:Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Application" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContractId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DesPlan" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ServiceCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="System" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Telephone" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="User" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ContractedBusinessServicesRequestPostPaid" nillable="true" type="tns:ContractedBusinessServicesRequestPostPaid" />
+  <xs:complexType name="ContractedBusinessServicesResponsePostPaid">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.ClaroVideo" minOccurs="0" name="BSCSServices" nillable="true" type="q2:ArrayOfServiceBSCSPostPaid" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.ClaroVideo" minOccurs="0" name="ContractServices" nillable="true" type="q3:ArrayOfContractServicesPostPaid" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.ClaroVideo" minOccurs="0" name="PhoneContracts" nillable="true" type="q4:ArrayOfPhoneContractPostPaid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ContractedBusinessServicesResponsePostPaid" nillable="true" type="tns:ContractedBusinessServicesResponsePostPaid" />
+</xs:schema>

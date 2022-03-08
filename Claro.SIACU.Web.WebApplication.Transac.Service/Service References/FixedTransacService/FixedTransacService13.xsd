@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.RegisterInteractionAdjust" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.RegisterInteractionAdjust" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd3" namespace="Claro" />
+  <xs:complexType name="RegisterInteractionAdjustRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="Claro" base="q1:Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ActualizarCamposSap" nillable="true" type="tns:ActualizarCamposSap" />
+          <xs:element minOccurs="0" name="AprobarDocumento" nillable="true" type="tns:AprobarDocumento" />
+          <xs:element minOccurs="0" name="ContingClafifyAct" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RegistrarAjusteOAC" nillable="true" type="tns:RegistrarAjusteOAC" />
+          <xs:element minOccurs="0" name="RegistrarAreaImputable" nillable="true" type="tns:RegistrarAreaImputable" />
+          <xs:element minOccurs="0" name="RegistrarCabeceraDoc" nillable="true" type="tns:RegistrarCabeceraDoc" />
+          <xs:element minOccurs="0" name="RegistrarDetalleDoc" nillable="true" type="tns:RegistrarDetalleDoc" />
+          <xs:element minOccurs="0" name="RegistrarDetalleInteraccion" nillable="true" type="tns:RegistrarDetalleInteraccion" />
+          <xs:element minOccurs="0" name="RegistrarExportarSap" nillable="true" type="tns:RegistrarExportarSap" />
+          <xs:element minOccurs="0" name="RegistrarInteraccion" nillable="true" type="tns:RegistrarInteraccion" />
+          <xs:element minOccurs="0" name="listaRequestOpcional" nillable="true" type="tns:ArrayOfObjetoOpcional" />
+          <xs:element minOccurs="0" name="pLTE" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RegisterInteractionAdjustRequest" nillable="true" type="tns:RegisterInteractionAdjustRequest" />
+  <xs:complexType name="ActualizarCamposSap">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="piErrorWsSap" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piFlagEnvioSap" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piReintentosWsSap" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ActualizarCamposSap" nillable="true" type="tns:ActualizarCamposSap" />
+  <xs:complexType name="AprobarDocumento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="piIdTipoDoc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piUsuAprob" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AprobarDocumento" nillable="true" type="tns:AprobarDocumento" />
+  <xs:complexType name="RegistrarAjusteOAC">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="docsRef" nillable="true" type="tns:ArrayOfDetalleDocs" />
+      <xs:element minOccurs="0" name="piCodAplicacionOAC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piCodCuenta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piCodMotivoAjuste" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piEstado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piFechaAjuste" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piFechaCancelacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piIdReclamoOrigen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piMonedaOrigen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piNSaldoAjuste" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piTipoAjuste" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piTipoOperacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piTipoServicio" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RegistrarAjusteOAC" nillable="true" type="tns:RegistrarAjusteOAC" />
+  <xs:complexType name="ArrayOfDetalleDocs">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DetalleDocs" nillable="true" type="tns:DetalleDocs" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDetalleDocs" nillable="true" type="tns:ArrayOfDetalleDocs" />
+  <xs:complexType name="DetalleDocs">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="piNroDocumentoCxc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piTipoDocCxc" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DetalleDocs" nillable="true" type="tns:DetalleDocs" />
+  <xs:complexType name="RegistrarAreaImputable">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ListadoAreaImputable" nillable="true" type="tns:ArrayOfAreaImputable" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RegistrarAreaImputable" nillable="true" type="tns:RegistrarAreaImputable" />
+  <xs:complexType name="ArrayOfAreaImputable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AreaImputable" nillable="true" type="tns:AreaImputable" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAreaImputable" nillable="true" type="tns:ArrayOfAreaImputable" />
+  <xs:complexType name="AreaImputable">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="piArimIdArea" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piArimIdCategoria" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piArimIdMotivo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piArimTotalImputable" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AreaImputable" nillable="true" type="tns:AreaImputable" />
+  <xs:complexType name="RegistrarCabeceraDoc">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="piCicloFact" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piCiudad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piClienteCta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piCodigoPais" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piDireccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piDocRef" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piErrorWsSap" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piFechaDocRef" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piFechaVenc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piIdCliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piIdResponsabCrm" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piIdTipCliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piIdTipoDoc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piMontoIgv" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piNombreCliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piNumDoc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piNumIdentFiscal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piOhxAct" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piReintentosWsSap" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piResponsabCrm" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piSubTotalAfecto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piSubTotalNoAfecto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piSubjetoImp" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piTipoIdentFiscal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piUsuRegistro" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piVersionSap6" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RegistrarCabeceraDoc" nillable="true" type="tns:RegistrarCabeceraDoc" />
+  <xs:complexType name="RegistrarDetalleDoc">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ListaDetDocAdicional" nillable="true" type="tns:ArrayOfDetDocAdicional" />
+      <xs:element minOccurs="0" name="ListaRegistroDetDocum" nillable="true" type="tns:ArrayOfRegistroDetDocum" />
+      <xs:element minOccurs="0" name="piNumDocAjuste" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RegistrarDetalleDoc" nillable="true" type="tns:RegistrarDetalleDoc" />
+  <xs:complexType name="ArrayOfDetDocAdicional">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DetDocAdicional" nillable="true" type="tns:DetDocAdicional" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDetDocAdicional" nillable="true" type="tns:ArrayOfDetDocAdicional" />
+  <xs:complexType name="DetDocAdicional">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="pIdAreaImputar" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="pIdCategoria" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="pIdMotivo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="pIdResponsable" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="pIgvImporteAjustarIgv" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="pImporte" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="pImporteAjustar" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="pImporteAjustarIgv" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="pNombreAreaImputar" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="pNombreCategoria" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="pNombreMotivo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="pNombreResponsable" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DetDocAdicional" nillable="true" type="tns:DetDocAdicional" />
+  <xs:complexType name="ArrayOfRegistroDetDocum">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RegistroDetDocum" nillable="true" type="tns:RegistroDetDocum" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRegistroDetDocum" nillable="true" type="tns:ArrayOfRegistroDetDocum" />
+  <xs:complexType name="RegistroDetDocum">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="pFechaDesde" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="pFechaHasta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="pIdCategoria" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="pIgv" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="pImporte" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="pMontoSinIgv" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="pSubCategoria" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="pTelefono" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="pTipoTran" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="pTotal" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RegistroDetDocum" nillable="true" type="tns:RegistroDetDocum" />
+  <xs:complexType name="RegistrarDetalleInteraccion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="piAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piAddress5" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piAdjustmentAmount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piAdjustmentReason" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piAmountUnit" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piBasket" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piBirthday" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piChargeAmount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piCity" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piClarifyInteraction" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piClaroLdn1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piClaroLdn2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piClaroLdn3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piClaroLdn4" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piClaroNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piClarolocal1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piClarolocal2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piClarolocal3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piClarolocal4" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piClarolocal5" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piClarolocal6" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piContactPhone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piContactSex" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piDepartment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piDistrict" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piDniLegalRep" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piDocumentNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piEmail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piEmailConfirmation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piExpireDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piFax" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piFirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piFixedNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piFlagChangeUser" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piFlagCharge" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piFlagLegalRep" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piFlagOther" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piFlagRegistered" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piFlagTitular" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piIccid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piImei" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piInter1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piInter10" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piInter11" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piInter12" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piInter13" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piInter14" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piInter15" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piInter16" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piInter17" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piInter18" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piInter19" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piInter2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piInter20" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piInter21" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piInter22" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piInter23" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piInter24" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piInter25" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piInter26" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piInter27" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piInter28" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piInter29" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piInter3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piInter30" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piInter4" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piInter5" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piInter6" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piInter7" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piInter8" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piInter9" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piLastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piLastnameRep" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piLdiNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piLotCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piMaritalStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piModel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piMonth" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piNameLegalRep" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piOccupation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piOldClaroLdn1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piOldClaroLdn2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piOldClaroLdn3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piOldClaroLdn4" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piOldClarolocal1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piOldClarolocal2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piOldClarolocal3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piOldClarolocal4" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piOldClarolocal5" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piOldClarolocal6" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piOldDocNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piOldFirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piOldFixedNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piOldFixedPhone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piOldLastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piOldLdiNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piOperationType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piOstNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piOtherDocNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piOtherFirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piOtherLastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piOtherPhone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piPhoneLegalRep" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piPlusInter2interact" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piPosition" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piReason" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piReferenceAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piReferencePhone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piRegistrationReason" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piTypeDocument" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piZipCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RegistrarDetalleInteraccion" nillable="true" type="tns:RegistrarDetalleInteraccion" />
+  <xs:complexType name="RegistrarExportarSap">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="piClaseDocumentoCab" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piClaveNegCab" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piClaveNegDet" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piClavePosCab" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piClavePosDet" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piCuentaCab" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piCuentaIgv" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piFlagEliminarAnterior" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piIndicadorSap" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piIndivaDet" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piMonedaCab" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piSociedadCab" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piTextoCab" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piTipoDocCab" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piTipoDocDet" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piTipoDocIgv" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RegistrarExportarSap" nillable="true" type="tns:RegistrarExportarSap" />
+  <xs:complexType name="RegistrarInteraccion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="piAccount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piAgente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piClase" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piCoId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piCodPlano" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piContactObjId1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piFlagCaso" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piHechoEnUno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piInconven" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piInconvenCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piMetodoContacto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piNotas" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piPhone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piResultado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piServAfect" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piServAfectCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piSiteObjId1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piSubClase" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piTipo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piTipoInter" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piUsrProceso" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piValor1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="piValor2" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RegistrarInteraccion" nillable="true" type="tns:RegistrarInteraccion" />
+  <xs:complexType name="ArrayOfObjetoOpcional">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ObjetoOpcional" nillable="true" type="tns:ObjetoOpcional" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfObjetoOpcional" nillable="true" type="tns:ArrayOfObjetoOpcional" />
+  <xs:complexType name="ObjetoOpcional">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="campo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="valor" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ObjetoOpcional" nillable="true" type="tns:ObjetoOpcional" />
+  <xs:complexType name="RegisterInteractionAdjustResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="Claro" base="q2:Response">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="auditResponse" nillable="true" type="tns:auditResponseType" />
+          <xs:element minOccurs="0" name="farenNroSar" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="idDocAut" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="idInteract" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="listaResponseOpcional" nillable="true" type="tns:ArrayOfparametrosType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RegisterInteractionAdjustResponse" nillable="true" type="tns:RegisterInteractionAdjustResponse" />
+  <xs:complexType name="auditResponseType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigoRespuesta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="idTransaccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="mensajeRespuesta" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="auditResponseType" nillable="true" type="tns:auditResponseType" />
+  <xs:complexType name="ArrayOfparametrosType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="parametrosType" nillable="true" type="tns:parametrosType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfparametrosType" nillable="true" type="tns:ArrayOfparametrosType" />
+  <xs:complexType name="parametrosType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ParametrosType" nillable="true" type="tns:ObjetoOpcional" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="parametrosType" nillable="true" type="tns:parametrosType" />
+</xs:schema>

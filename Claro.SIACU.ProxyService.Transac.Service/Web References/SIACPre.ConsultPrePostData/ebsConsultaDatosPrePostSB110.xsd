@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="http://claro.com.pe/eai/ws/baseschema" elementFormDefault="qualified" targetNamespace="http://claro.com.pe/eai/ws/baseschema" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType name="auditRequestType">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="1" name="idTransaccion" type="xsd:string" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="ipAplicacion" type="xsd:string" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="nombreAplicacion" type="xsd:string" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="usuarioAplicacion" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="auditResponseType">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="1" name="idTransaccion" type="xsd:string" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="codigoRespuesta" type="xsd:string" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="mensajeRespuesta" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="parametrosType">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="objetoOpcional">
+        <xsd:complexType>
+          <xsd:attribute name="campo" type="xsd:string" />
+          <xsd:attribute name="valor" type="xsd:string" />
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="parametrosTypeLlamadas">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="objetoOpcionalLlamadas">
+        <xsd:complexType>
+          <xsd:attribute name="campo" type="xsd:string" />
+          <xsd:attribute name="valor" type="xsd:string" />
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="parametrosTypeRecargas">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="objetoOpcionalRecargas">
+        <xsd:complexType>
+          <xsd:attribute name="campo" type="xsd:string" />
+          <xsd:attribute name="valor" type="xsd:string" />
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="parametrosTypeHistorial">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="objetoOpcionalHistorial">
+        <xsd:complexType>
+          <xsd:attribute name="campo" type="xsd:string" />
+          <xsd:attribute name="valor" type="xsd:string" />
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="consultaPrepagoType">
+    <xsd:sequence>
+      <xsd:element name="listaOperacionesConsulta" type="listaOperacionesConsultaType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="consultaPostpagoType">
+    <xsd:sequence>
+      <xsd:element name="parametrosConsultaPostpago" type="parametrosPostpagoType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="datosPostpagoType">
+    <xsd:sequence>
+      <xsd:element name="parametrosRespuestaPostpago" type="parametrosPostpagoType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="datosPrepagoType">
+    <xsd:sequence>
+      <xsd:element name="parametrosRespuestaPrepago" type="listaOperacionesRespuestaType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="listaOperacionesConsultaType">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="operacionesConsulta" type="operacionesType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="listaOperacionesRespuestaType">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="operacionesRespuesta" type="operacionesType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="listaConsultaSaldoRespuestaType">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="operacionesRespuesta" type="consultaSaldosType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="operacionesType">
+    <xsd:sequence>
+      <xsd:element name="codigoOperacion" type="xsd:string" />
+      <xsd:element name="listaModificador" type="listaModificadorType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="consultaSaldosType">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="listaEstaticas" type="listaDetalleEstaticasType" />
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="listaDinamicasAgrupadas" type="listaDetalleDinamicasType" />
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="listaPaquetesAgrupadas" type="listaDetallePaquetesType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="listaDetalleDinamicasType">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="listaDinamicas" type="parametroDinamicaType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="listaDetallePaquetesType">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="listaPaquetes" type="parametroPaqueteType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="listaDetalleEstaticasType">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="listaDetalleEstaticas" type="parametroEstaticaType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="listaModificadorType">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="modificador" type="modificadorType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="listaConsultasSaldoType">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="listaEstatica" type="listaEstaticaType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="parametrosUnicosType">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="1" name="BOLSV_NOM_COMERCIAL" type="xsd:string" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="SALDO" type="xsd:string" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="ENTIV_UNIDAD_PRESENT" type="xsd:string" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="VENCIMIENTO" type="xsd:string" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="PUNTOS" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="listaEstaticaType">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="estatica" type="estaticaType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="estaticaType" />
+  <xsd:complexType name="parametroEstaticaType">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="Estatica" type="parametroType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="parametroDinamicaType">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="Dinamica" type="parametroType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="parametroPaueteType">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="Paquete" type="parametroType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="parametroBonosType">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="Bonos" type="parametroType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="parametroPaqueteType">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="Paquetes" type="parametroType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="parametroRestantesType">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="Restantes" type="parametroType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="listaAgrupacionType">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="bolsa" type="bolsaType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="listaPromocionType">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="promocion" type="promocionType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="modificadorType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="parametro" type="parametroType" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="parametroLista" type="parametroListaType" />
+    </xsd:sequence>
+    <xsd:attribute name="nombreModificador" type="xsd:string" use="required" />
+  </xsd:complexType>
+  <xsd:complexType name="parametroType">
+    <xsd:attribute name="nombre" type="xsd:string" use="required" />
+    <xsd:attribute name="valor" type="xsd:string" use="required" />
+  </xsd:complexType>
+  <xsd:complexType name="bolsaType">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="parametroLista" type="parametroType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="promocionType">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="parametroLista" type="parametroType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="consultaSaldoType">
+    <xsd:sequence>
+      <xsd:element name="BOLSV_ID" type="xsd:string" />
+      <xsd:element name="BOLSV_NOMBRE" type="xsd:string" />
+      <xsd:element name="BOLSV_NOM_COMERCIAL" type="xsd:string" />
+      <xsd:element name="BOLSN_ID_DESTINO" type="xsd:string" />
+      <xsd:element name="BOLSN_ID_ENTIDAD" type="xsd:string" />
+      <xsd:element name="BOLSN_ID_TIPO_BOLSA" type="xsd:string" />
+      <xsd:element name="BOLSN_ID_TIPO_MOVI" type="xsd:string" />
+      <xsd:element name="BOLSN_ID_TIPO_COSTO" type="xsd:string" />
+      <xsd:element name="BOLSN_ID_AGRUPACION" type="xsd:string" />
+      <xsd:element name="BOLSN_ID_PROMOCION" type="xsd:string" />
+      <xsd:element name="BOLSN_ID_PAQUETE" type="xsd:string" />
+      <xsd:element name="DESTV_NOMBRE" type="xsd:string" />
+      <xsd:element name="ENTIV_NOMBRE" type="xsd:string" />
+      <xsd:element name="TBOLV_NOMBRE" type="xsd:string" />
+      <xsd:element name="TMOVV_NOMBRE" type="xsd:string" />
+      <xsd:element name="TCOSV_NOMBRE" type="xsd:string" />
+      <xsd:element name="AGRUV_NOMBRE" type="xsd:string" />
+      <xsd:element name="PROMV_NOMBRE" type="xsd:string" />
+      <xsd:element name="PQTEV_NOMBRE" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="obtenerConsultaType">
+    <xsd:sequence>
+      <xsd:element name="ID_BOLSA" type="xsd:string" />
+      <xsd:element name="NOMBRE_BOLSA" type="xsd:string" />
+      <xsd:element name="NOMCOMERCIAL_BOLSA" type="xsd:string" />
+      <xsd:element name="ID_DESTINO" type="xsd:string" />
+      <xsd:element name="NOM_DESTINO" type="xsd:string" />
+      <xsd:element name="ID_ENTIDAD" type="xsd:string" />
+      <xsd:element name="NOM_ENTIDAD" type="xsd:string" />
+      <xsd:element name="ID_TIPO_BOLSA" type="xsd:string" />
+      <xsd:element name="NOM_TIPO_BOLS" type="xsd:string" />
+      <xsd:element name="ID_TIPO_MOVI" type="xsd:string" />
+      <xsd:element name="NOM_TIPO_MOVI" type="xsd:string" />
+      <xsd:element name="ID_TIPO_COSTO" type="xsd:string" />
+      <xsd:element name="NOM_TIPO_COSTO" type="xsd:string" />
+      <xsd:element name="ID_AGRUPACION" type="xsd:string" />
+      <xsd:element name="NOM_AGRUPACION" type="xsd:string" />
+      <xsd:element name="ID_PROMOCION" type="xsd:string" />
+      <xsd:element name="NOM_PROMOCION" type="xsd:string" />
+      <xsd:element name="ID_PAQUETE" type="xsd:string" />
+      <xsd:element name="NOM_PAQUETE" type="xsd:string" />
+      <xsd:element name="USUA_REGISTRO" type="xsd:string" />
+      <xsd:element name="FECHA_REGISTRO" type="xsd:string" />
+      <xsd:element name="USUA_ACTUALIZA" type="xsd:string" />
+      <xsd:element name="FEC_ACTUALIZA" type="xsd:string" />
+      <xsd:element name="ESTADO" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="parametroListaType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="parametro" type="parametroType" />
+    </xsd:sequence>
+    <xsd:attribute name="nombre" type="xsd:string" use="required" />
+  </xsd:complexType>
+  <xsd:complexType name="parametrosPostpagoType">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="parametro" type="parametroType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="datoLineaType">
+    <xsd:sequence>
+      <xsd:element name="tipo" type="xsd:string" />
+      <xsd:element name="subTipo" type="xsd:string" />
+      <xsd:element name="bloqueado" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="PrepagoConsultaSaldoType">
+    <xsd:sequence>
+      <xsd:element name="saldoRecarga" type="SaldoBolsaType" />
+      <xsd:element name="saldoSMS" type="SaldoBolsaType" />
+      <xsd:element name="saldoPaqueteDatos" type="SaldoBolsaType" />
+      <xsd:element name="consumoPaqueteDatos" type="SaldoBolsaType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="SaldoBolsaType">
+    <xsd:sequence>
+      <xsd:element name="cantidad" type="xsd:string" />
+      <xsd:element name="unidad" type="xsd:string" />
+      <xsd:element name="vigencia" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="listaHistorialComprasType">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="operacionesConsulta" type="parametrosTypeHistorial" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="listaDetalleLlamadasType">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="operacionesConsulta" type="parametrosTypeLlamadas" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="listaDetalleRecargasType">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="operacionesConsulta" type="parametrosTypeRecargas" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="listaObtenerConsultaType">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="obtenerConsulta" type="obtenerConsultaType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="listaResponseOpcionalType">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="objetoResponseOpcional">
+        <xsd:complexType>
+          <xsd:attribute name="campo" type="xsd:string" />
+          <xsd:attribute name="valor" type="xsd:string" />
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="listaConsultaSaldosType">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="operacionesConsulta" type="consultaSaldoType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="listaConsultarConsumoType">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="operacionesConsulta" type="parametrosType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ConsultaDatosPrepagoType">
+    <xsd:sequence>
+      <xsd:element name="customerID" type="xsd:string" />
+      <xsd:element name="cgpa" type="xsd:string" />
+      <xsd:element name="providerID" type="xsd:string" />
+      <xsd:element name="useTestEnvironment" type="xsd:string" />
+      <xsd:element name="activeFnFOption" type="xsd:string" />
+      <xsd:element name="isLocked" type="xsd:string" />
+      <xsd:element name="isLockedForPeriodicRecharge" type="xsd:string" />
+      <xsd:element name="planGroupID" type="xsd:string" />
+      <xsd:element name="isFirstCallPassed" type="xsd:string" />
+      <xsd:element name="subscriberLifeCycleStatus" type="xsd:string" />
+      <xsd:element name="firstCallDate" type="xsd:string" />
+      <xsd:element name="rechargingPeriod" type="xsd:string" />
+      <xsd:element name="expiryDate" type="xsd:string" />
+      <xsd:element name="deletionDate" type="xsd:string" />
+      <xsd:element name="isFnFPossible" type="xsd:string" />
+      <xsd:element name="userGroup0" type="xsd:string" />
+      <xsd:element name="userGroup1" type="xsd:string" />
+      <xsd:element name="fnFNumber0" type="xsd:string" />
+      <xsd:element name="fnFNumber1" type="xsd:string" />
+      <xsd:element name="fnFNumber2" type="xsd:string" />
+      <xsd:element name="fnFNumber3" type="xsd:string" />
+      <xsd:element name="fnFNumber4" type="xsd:string" />
+      <xsd:element name="fnFNumber5" type="xsd:string" />
+      <xsd:element name="fnFNumber6" type="xsd:string" />
+      <xsd:element name="fnFNumber7" type="xsd:string" />
+      <xsd:element name="fnFNumber8" type="xsd:string" />
+      <xsd:element name="tariffModelNumber" type="xsd:string" />
+      <xsd:element name="postpaid" type="xsd:string" />
+      <xsd:element name="subscriberStatus" type="xsd:string" />
+      <xsd:element name="subscriberLastStatus" type="xsd:string" />
+      <xsd:element name="statusChangeDate" type="xsd:string" />
+      <xsd:element name="onPeakAccountIDBalance" type="xsd:string" />
+      <xsd:element name="onPeakAccountIDExpiryDate" type="xsd:string" />
+      <xsd:element name="sMSLoyaltyAccountIDBalance" type="xsd:string" />
+      <xsd:element name="sMSLoyaltyAccountIDExpiryDate" type="xsd:string" />
+      <xsd:element name="voiceLoyaltyAccountIDBalance" type="xsd:string" />
+      <xsd:element name="voiceLoyaltyAccountIDExpiryDate" type="xsd:string" />
+      <xsd:element name="gPRSLoyaltyAccountIDBalance" type="xsd:string" />
+      <xsd:element name="gPRSLoyaltyAccountIDExpiryDate" type="xsd:string" />
+      <xsd:element name="sMSPromoAccountIDBalance" type="xsd:string" />
+      <xsd:element name="sMSPromoAccountIDExpiryDate" type="xsd:string" />
+      <xsd:element name="voice1PromoAccountIDBalance" type="xsd:string" />
+      <xsd:element name="voice1PromoAccountIDExpiryDate" type="xsd:string" />
+      <xsd:element name="voice2PromoAccountIDBalance" type="xsd:string" />
+      <xsd:element name="voice2PromoAccountIDExpiryDate" type="xsd:string" />
+      <xsd:element name="gPRSPromoAccountIDBalance" type="xsd:string" />
+      <xsd:element name="gPRSPromoAccountIDExpiryDate" type="xsd:string" />
+      <xsd:element name="bonusPromoAccountIDBalance" type="xsd:string" />
+      <xsd:element name="bonusPromoAccountIDExpiryDate" type="xsd:string" />
+      <xsd:element name="mMSLoyaltyAccountIDBalance" type="xsd:string" />
+      <xsd:element name="mMSLoyaltyAccountIDExpiryDate" type="xsd:string" />
+      <xsd:element name="mMSPromoAccountIDBalance" type="xsd:string" />
+      <xsd:element name="mMSPromoAccountIDExpiryDate" type="xsd:string" />
+      <xsd:element name="bonusCounter_Account52Balance" type="xsd:string" />
+      <xsd:element name="bonusCounter_Account52ExpiryDate" type="xsd:string" />
+      <xsd:element name="bonusCounter_Account54Balance" type="xsd:string" />
+      <xsd:element name="bonusCounter_Account54ExpiryDate" type="xsd:string" />
+      <xsd:element name="bonusCounter_Account57Balance" type="xsd:string" />
+      <xsd:element name="bonusCounter_Account57ExpiryDate" type="xsd:string" />
+      <xsd:element name="bonusCounter_Account58Balance" type="xsd:string" />
+      <xsd:element name="bonusCounter_Account58ExpiryDate" type="xsd:string" />
+      <xsd:element name="voucherRchFraudCounter" type="xsd:string" />
+      <xsd:element name="counterChangeFnFnoForFree" type="xsd:string" />
+      <xsd:element name="counterChangeFAnoForFree" type="xsd:string" />
+      <xsd:element name="counterChangeHZInoForFree" type="xsd:string" />
+      <xsd:element name="counterSubscribeFAForFree" type="xsd:string" />
+      <xsd:element name="counterSubscribeFnFForFree" type="xsd:string" />
+      <xsd:element name="counterSubscribeHZIForFree" type="xsd:string" />
+      <xsd:element name="counterSubscribeMLCForFree" type="xsd:string" />
+      <xsd:element name="counterChangeTariffForFree" type="xsd:string" />
+      <xsd:element name="cNTNumber" type="xsd:string" />
+      <xsd:element name="isCNTPossible" type="xsd:string" />
+      <xsd:element name="imsi" type="xsd:string" />
+      <xsd:element name="isSelect" type="xsd:string" />
+      <xsd:element name="bonoRecargaVozBalance" type="xsd:string" />
+      <xsd:element name="bonoRecargaVozExpiryDate" type="xsd:string" />
+      <xsd:element name="bonoRecargaSMSBalance" type="xsd:string" />
+      <xsd:element name="bonoRecargaSMSExpiryDate" type="xsd:string" />
+      <xsd:element name="paqueteProMOCBalance" type="xsd:string" />
+      <xsd:element name="paqueteProMOCExpiryDate" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="listaFnFType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="numeroFNF" type="numeroFnFType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="numeroFnFType">
+    <xsd:attribute name="indice" type="xsd:string" use="required" />
+    <xsd:attribute name="telefono" type="xsd:string" use="required" />
+  </xsd:complexType>
+  <xsd:complexType name="listaHistoricoPaquetesType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="historicoPaquetes" type="historicoPaquetesType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="historicoPaquetesType">
+    <xsd:sequence>
+      <xsd:element name="nombreBolsa" type="xsd:string" />
+      <xsd:element name="vigencia" type="xsd:string" />
+      <xsd:element name="fechaVencimiento" type="xsd:string" />
+      <xsd:element name="costo" type="xsd:string" />
+      <xsd:element name="tipoPaquete" type="xsd:string" />
+      <xsd:element name="fechaAdquisicion" type="xsd:string" />
+      <xsd:element name="estado" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="listaHistoricoRecargasType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="historicoRecargas" type="historicoRecargasType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="historicoRecargasType">
+    <xsd:sequence>
+      <xsd:element name="montoRecarga" type="xsd:string" />
+      <xsd:element name="canal" type="xsd:string" />
+      <xsd:element name="fechaRecarga" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="listaConsumoRecargasType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="consumoRecargas" type="consumoRecargasType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="consumoRecargasType">
+    <xsd:sequence>
+      <xsd:element name="fechaEvento" type="xsd:string" />
+      <xsd:element name="tipoConsumo" type="xsd:string" />
+      <xsd:element name="numeroDestinoAPN" type="xsd:string" />
+      <xsd:element name="nombreBolsa" type="xsd:string" />
+      <xsd:element name="montoConsumido" type="xsd:string" />
+      <xsd:element name="saldo" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="listaSaldosPostpagoType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="saldosPostpago" type="saldosPostpagoType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="saldosPostpagoType">
+    <xsd:sequence>
+      <xsd:element name="grupoBolsa" type="xsd:string" />
+      <xsd:element name="bolsaId" type="xsd:string" />
+      <xsd:element name="nombreBolsa" type="xsd:string" />
+      <xsd:element name="estado" type="xsd:string" />
+      <xsd:element name="destino" type="xsd:string" />
+      <xsd:element name="tipoUnidad" type="xsd:string" />
+      <xsd:element name="unidadesAsignadas" type="xsd:string" />
+      <xsd:element name="consumo" type="xsd:string" />
+      <xsd:element name="saldoDisponible" type="xsd:string" />
+      <xsd:element name="tarifa" type="xsd:string" />
+      <xsd:element name="tarifaId" type="xsd:string" />
+      <xsd:element name="tipoBolsa" type="xsd:string" />
+      <xsd:element name="fechaExpiracion" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

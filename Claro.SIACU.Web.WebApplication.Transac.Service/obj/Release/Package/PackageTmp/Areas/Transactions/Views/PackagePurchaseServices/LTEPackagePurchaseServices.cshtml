@@ -1,0 +1,275 @@
+﻿@{
+    //ViewBag.Title = "COMPRA DE PAQUETES FIJA";
+    Layout = null;
+}
+
+<style>
+    body {
+        padding-right: 0 !important;
+    }
+</style>
+
+<div id="LTEPackagePurchaseServices" class="container-fluid">
+
+    <div class="scrollbudy">
+        <div class="col-sm-3">
+            <div id="DataCustomer" class="panel-group" role="tablist" aria-multiselectable="true">
+                <div class="panel claro-panel-primary">
+                    <div id="customerDataHead" role="tab" class="panel-heading">
+                        <span class="glyphicon glyphicon-user"></span>
+                        <a data-toggle="collapse" href="#customerDataCollapse" aria-expanded="true" data-parent="#DataCustomer" aria-controls="customerDataCollapse" class="collapsed transaction-ref-color">Datos del Cliente</a>
+                    </div>
+                    <div class="panel-body panel-collapse collapse in" id="customerDataCollapse" role="tabpanel" aria-labelledby="customerDataHead">
+                        <table class="table table-condensed">
+                            <tbody>
+                                <tr>
+                                    <td class="col-sm-6"><label class="control-label">Contrato:</label></td>
+                                    <td class="col-sm-6">
+                                        <label id="lblContrato"></label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-6"><label class="control-label">Customer ID:</label></td>
+                                    <td class="col-sm-6"><label id="lblCustomerID"></label></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-6"><label class="control-label">Tipo de Cliente:</label></td>
+                                    <td class="col-sm-6"><label id="lblTipoCliente"></label></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-6"><label class="control-label">Cliente:</label></td>
+                                    <td class="col-sm-6"><label id="lblCliente"></label></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-6"><label class="control-label">Contacto:</label></td>
+                                    <td class="col-sm-6"><label id="lblContacto"></label></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-6"><label class="control-label">DNI/RUC:</label></td>
+                                    <td class="col-sm-6"><label id="lblDNI_RUC"></label></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-6"><label class="control-label">Representante Legal:</label></td>
+                                    <td class="col-sm-6"><label id="lblRepren_Legal"></label></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-6"><label class="control-label">Plan Actual:</label></td>
+                                    <td><label id="lblPlan"></label></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-6"><label class="control-label">Fecha Activación:</label></td>
+                                    <td class="col-sm-6"><label id="lblFechaActivacion"></label></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-6"><label class="control-label">Ciclo de Facturación:</label></td>
+                                    <td class="col-sm-6"><label id="lblCicloFact"></label> </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-6"><label class="control-label">Límite Crédito:</label></td>
+                                    <td class="col-sm-6"><label id="lblLimiteCred"></label> </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="addressDataHead" role="tab" class="panel-heading">
+                        <span class="glyphicon glyphicon-home"></span>
+                        <a data-toggle="collapse" href="#addressDataCollapse" aria-expanded="false" data-parent="#DataCustomer" aria-controls="addressDataCollapse" class="collapsed transaction-ref-color"> Dirección de Facturación</a>
+                    </div>
+                    <div class="panel-body panel-collapse collapse" id="addressDataCollapse" role="tabpanel" aria-labelledby="addressDataHead">
+                        <table class="table table-condensed">
+                            <tr>
+                                <td class="col-sm-6"><label class="control-label">Dirección:</label></td>
+                                <td class="col-sm-6"><label id="lblDireccion"></label></td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-6"><label class="control-label">Referencia:</label></td>
+                                <td class="col-sm-6"><label id="lblNotasDirec"></label></td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-6"><label class="control-label">Pais:</label></td>
+                                <td class="col-sm-6"><label id="lblPais"></label></td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-6"><label class="control-label">Departamento:</label></td>
+                                <td class="col-sm-6"><label id="lblDepartamento"></label></td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-6"><label class="control-label">Provincia:</label></td>
+                                <td class="col-sm-6"><label id="lblProvincia"></label></td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-6"><label class="control-label">Distrito:</label></td>
+                                <td class="col-sm-6"><label id="lblDistrito"></label></td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-6"><label class="control-label">Código de Plano:</label></td>
+                                <td class="col-sm-6"><label id="lblCodPlano"></label></td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-6"><label class="control-label">Código Ubigeo</label></td>
+                                <td class="col-sm-6"><label id="lblCodUbigeo"></label></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="businessRulesHead" role="tab" class="panel-heading">
+                        <span class="glyphicon glyphicon-th-list"></span>
+                        <a data-toggle="collapse" href="#businessRulesCollapse" aria-expanded="false" data-parent="#DataCustomer" aria-controls="businessRulesCollapse" class="collapsed transaction-ref-color"> Reglas de Atención</a>
+                    </div>
+                    <div class="panel-body panel-collapse collapse" id="businessRulesCollapse" role="tabpanel" aria-labelledby="businessRulesHead">
+                        <div id="divReglas">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-9">
+        <div class="row">
+            <div class="panel-tabs">
+                <ul class="nav nav-tabs" role="tablist" data-tabs="tabs">
+                    <li role="presentation" class="active">
+                        <div style="padding: 10px 15px; background-color: white; border-radius: 4px 4px 0 0;">
+                            <span class="glyphicon glyphicon-list-alt"></span>
+                            Transacciones por Servicio / Compra de Paquetes
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="tab-content">
+                    <div class="panel-body">
+                        <form id="tbDatoTransaccion" class="form-horizontal">
+                            <!--<div class="panel panel-default ">-->
+
+                            <div class="form-group">
+                                <div class="col-sm-3">
+                                    <label class="control-label">Plan Velocidad Degradada:</label>
+                                </div>
+                                <div class="col-sm-1">
+                                    <input type="text" id="txtPlanVelocidadDegradada" class="form-control input-sm text-center" disabled />
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-3">
+                                    <label class="control-label">Motivo de Degradación:</label>
+                                </div>
+                                <div class="col-sm-3">
+                                    <input type="text" id="txtMotivoDegradacion" class="form-control input-sm text-left"/>
+                                </div>
+                            </div>
+
+                            <div id="divPqtVelocidad" class="form-group">
+                                <div class="col-sm-3 input-sm text-left">
+                                    <label class="control-label">Paquete Velocidad Degradada:</label>
+                                </div>
+                                <div class="col-sm-1">
+                                    <input type="text" id="txtPqtVelocidad" class="form-control input-sm text-center" disabled />
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-3">
+                                    <label class="control-label">Tipo de Venta:</label>
+                                </div>
+                                <div class="col-sm-1" style="width:auto;">
+                                    <select id="cboTipoVenta" class="form-control input-sm">
+                                    </select>
+                                </div>
+                                <div id="IdShowHideSaldoPuntos">
+                                    <label class="col-sm-2 control-label input-sm text-left">Saldo Puntos:</label>
+                                    <div class="col-sm-1">
+                                        <input type="text" id="txtSaldoPuntos" class="form-control input-sm text-center" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group" id="divTblPackageRV">
+
+                                <div id="divPackagePurchaseServices" class="panel-group col-sm-7" role="tablist" aria-multiselectable="true">
+                                    <div class="panel claro-panel-primary">
+                                        <div role="tab" class="panel-heading">
+                                            <a data-toggle="collapse" class="collapsed transaction-ref-color">Paquetes Disponibles</a>
+                                        </div>
+                                        <table id="tblPackagePurchaseServices" class="table table-striped table-hover">
+                                            <thead class="claro-bg-primary">
+                                                <tr>
+                                                    <th></th>
+                                                    <th>PAQUETE</th>
+                                                    <th>VIGENCIA</th>
+                                                    <th>PRECIO</th>
+                                                    <th>MBINCLUIDOS</th>
+                                                </tr>
+                                            </thead>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-2">
+                                    <label class="control-label">Envío por E-mail:</label>
+                                    <label><input id="chkEmail" type="checkbox" value="" /></label>
+                                </div>
+                                <div class="col-sm-5">
+                                    <input type="text" id="txtEmail" class="form-control input-sm" placeholder="Correo Electrónico" />
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-2"><label class="control-label">Punto de atención:</label></div>
+
+                                <div class="col-sm-2">
+                                    <select id="cboPuntoAtencion" class="form-control input-sm"></select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-2">
+                                    <label class="control-label">Notas:</label>
+                                </div>
+                                <div class="col-sm-5">
+                                    <textarea style="height: 150px;" id="txtNote" class="form-control" placeholder="Agregar Notas"></textarea>
+                                </div>
+                            </div>
+                            <!--</div>-->
+                        </form>
+                        <center>
+                            <button id="btnGuardar" type="button" class="btn transaction-button"><span class="glyphicon glyphicon-floppy-disk"></span> Grabar</button>
+                            <button id="btnCerrar" type="button" class="btn transaction-button"><span class="glyphicon glyphicon-home"></span> Cerrar</button>
+                            <button id="btnConstancia" type="button" class="btn transaction-button"><span class="glyphicon glyphicon-list-alt"></span> Constancia</button>
+                        </center>
+                        <br />
+
+                    </div>
+                </div>
+
+            </div>
+            <div id="myModalLoad" style="display:none;">
+                <span>
+                    <img src="~/Images/loading2.gif" width="25" height="25" />  Cargando ....
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    var strTipoVentaReinicia  = "@ViewData["strTipoVentaReinicia"]";
+    var strMotivoDegradacion = "@ViewData["strMotivoDegradacion"]";
+    var strTopeConsumo = "@ViewData["strTopeConsumo"]";
+    var strTopeConsumoMax = "@ViewData["strTopeConsumoMax"]";
+    var strFacturada = "@ViewData["strFacturada"]";
+    var strClaroPuntos = "@ViewData["strClaroPuntos"]";
+    var strMsjClaroPuntos = "@ViewData["strMsjClaroPuntos"]";
+    var strCodTransPackagePurchaseFixedServLTE = "@ViewData["strCodTransPackagePurchaseFixedServLTE"]";
+    var strNoPresentaVelocidadDegradada = "@ViewData["strNoPresentaVelocidadDegradada"]";
+    var strMsjNoPaquetesDisponibles = "@ViewData["strMsjNoPaquetesDisponibles"]"; 
+</script>
+
+@*@section scripts{
+    @Scripts.Render("~/bundles/Transactions/LTEPackagePurchaseServices")
+}*@
+<script src="~/Areas/Transactions/Scripts/PackagePurchaseServices/LTEPackagePurchaseServices.js"></script>
+<script src="~/Areas/Transactions/Scripts/ReadRecordPdf/ReadRecord.js"></script>

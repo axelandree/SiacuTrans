@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:enevcrv1="http://claro.com.pe/eai/ws/postventa/instalacionDesinstalacionDecosws/types" targetNamespace="http://claro.com.pe/eai/ws/postventa/instalacionDesinstalacionDecosws/types" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="instalarDesinstalarDecoAdicionalRequestMessage" type="enevcrv1:instalarDesinstalarDecoAdicionalRequest" />
+  <xsd:element name="instalarDesinstalarDecoAdicionalResponseMessage" type="enevcrv1:instalarDesinstalarDecoAdicionalResponse" />
+  <xsd:element name="registarInstaDecoAdiHFCRequestMessage" type="enevcrv1:registarInstaDecoAdiHFCRequest" />
+  <xsd:element name="registarInstaDecoAdiHFCResponseMessage" type="enevcrv1:registarInstaDecoAdiHFCResponse" />
+  <xsd:element name="headerRequest" type="enevcrv1:HeaderRequest" />
+  <xsd:element name="headerResponse" type="enevcrv1:HeaderResponse" />
+  <xsd:element name="claroFault" type="enevcrv1:ClaroFault" />
+  <xsd:complexType name="registarInstaDecoAdiHFCRequest">
+    <xsd:sequence>
+      <xsd:element name="auditRequest" type="enevcrv1:auditRequestType" />
+      <xsd:element name="codigoSistema" type="xsd:string" />
+      <xsd:element name="codigoEmpleado" type="xsd:string" />
+      <xsd:element name="contratoId" type="xsd:string" />
+      <xsd:element name="customerId" type="xsd:string" />
+      <xsd:element name="apellidoCliente" type="xsd:string" />
+      <xsd:element name="nombreCliente" type="xsd:string" />
+      <xsd:element name="nombreCompletoCliente" type="xsd:string" />
+      <xsd:element name="paisCliente" type="xsd:string" />
+      <xsd:element name="departamentoCliente" type="xsd:string" />
+      <xsd:element name="provinciaCliente" type="xsd:string" />
+      <xsd:element name="distritoCliente" type="xsd:string" />
+      <xsd:element name="direccionCliente" type="xsd:string" />
+      <xsd:element name="telefonoReferencia" type="xsd:string" />
+      <xsd:element name="emailCliente" type="xsd:string" />
+      <xsd:element name="tipoDocumento" type="xsd:string" />
+      <xsd:element name="nroDocumento" type="xsd:string" />
+      <xsd:element name="planActual" type="xsd:string" />
+      <xsd:element name="telefono" type="xsd:string" />
+      <xsd:element name="numeroClaro" type="xsd:string" />
+      <xsd:element name="cicloFacturacion" type="xsd:string" />
+      <xsd:element name="razonSocial" type="xsd:string" />
+      <xsd:element name="representanteLegal" type="xsd:string" />
+      <xsd:element name="fechaActivacion" type="xsd:date" />
+      <xsd:element name="objId" type="xsd:string" />
+      <xsd:element name="objIdSite" type="xsd:string" />
+      <xsd:element name="estadoLinea" type="xsd:string" />
+      <xsd:element name="canalAtencion" type="xsd:string" />
+      <xsd:element name="idServicio" type="xsd:string" />
+      <xsd:element name="descripcionGrupoServicio" type="xsd:string" />
+      <xsd:element name="descripcionServicio" type="xsd:string" />
+      <xsd:element name="tipoServicio" type="xsd:string" />
+      <xsd:element name="sNCode" type="xsd:string" />
+      <xsd:element name="sPCode" type="xsd:string" />
+      <xsd:element name="cantidadEquipo" type="xsd:string" />
+      <xsd:element name="idEquipo" type="xsd:string" />
+      <xsd:element name="codTipEquipo" type="xsd:string" />
+      <xsd:element name="cargoFijoCIGV" type="xsd:string" />
+      <xsd:element name="cargoFijoSIGV" type="xsd:string" />
+      <xsd:element name="montoIGV" type="xsd:string" />
+      <xsd:element name="campanaId" type="xsd:string" />
+      <xsd:element name="periodoBono" type="xsd:string" />
+      <xsd:element name="cargoBono" type="xsd:string" />
+      <xsd:element name="costoInstalacion" type="xsd:string" />
+      <xsd:element name="flagTBono" type="xsd:string" />
+      <xsd:element name="fidelizar" type="xsd:string" />
+      <xsd:element name="aplicaBono" type="xsd:string" />
+      <xsd:element name="codigoTipoTrabajo" type="xsd:string" />
+      <xsd:element name="fechaProgramacion" type="xsd:date" />
+      <xsd:element name="franjaHoraria" type="xsd:string" />
+      <xsd:element name="codigoPlano" type="xsd:string" />
+      <xsd:element name="codigoUbigeo" type="xsd:string" />
+      <xsd:element name="codigoZona" type="xsd:string" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="listaRequestOpcional" type="enevcrv1:ListaRequestOpcional" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="registarInstaDecoAdiHFCResponse">
+    <xsd:sequence>
+      <xsd:element name="auditResponse" type="enevcrv1:auditResponseType" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="listaResponseOpcional" type="enevcrv1:ListaResponseOpcional" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="instalarDesinstalarDecoAdicionalRequest">
+    <xsd:sequence>
+      <xsd:element name="flagContingInteracion" type="xsd:string" />
+      <xsd:element name="hdnValidaEta" type="xsd:string" />
+      <xsd:element name="validarSotPendiente" type="enevcrv1:validarSotPendienteType" />
+      <xsd:element name="obtenerCliente" type="enevcrv1:obtenerClienteType" />
+      <xsd:element name="parametroPrincipal" type="enevcrv1:parametroPrincipalType" />
+      <xsd:element name="parametroPlus" type="enevcrv1:parametroPlusType" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="listaDetalleDeco" type="enevcrv1:ListaDetalleDecoRequestType" />
+      <xsd:element name="registrarProcesoPostventa" type="enevcrv1:registrarProcesoPostventaType" />
+      <xsd:element name="generarConstancia" type="enevcrv1:generarConstanciaType" />
+      <xsd:element name="registrarEtaSeleccion" type="enevcrv1:registrarEtaSeleccionType" />
+      <xsd:element name="registrarEta" type="enevcrv1:registrarEtaType" />
+      <xsd:element name="registroAuditoria" type="enevcrv1:registroAuditoriaType" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="listaRequestOpcional" type="enevcrv1:ListaRequestOpcional" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="instalarDesinstalarDecoAdicionalResponse">
+    <xsd:sequence>
+      <xsd:element name="responseStatus" type="enevcrv1:ResponseStatus" />
+      <xsd:element name="responseData" type="enevcrv1:ResponseData" />
+      <xsd:element name="listaResponseOpcional" type="enevcrv1:ListaResponseOpcional" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ResponseData">
+    <xsd:sequence>
+      <xsd:element name="sotGenerada" type="xsd:string" />
+      <xsd:element name="idTransaccion" type="xsd:string" />
+      <xsd:element name="constancia" type="xsd:string" />
+      <xsd:element name="sotPendiente" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="validarSotPendienteType">
+    <xsd:sequence>
+      <xsd:element name="codId" type="xsd:string" />
+      <xsd:element name="tipTra" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="obtenerClienteType">
+    <xsd:sequence>
+      <xsd:element name="phone" type="xsd:string" />
+      <xsd:element name="account" type="xsd:string" />
+      <xsd:element name="contactobjid1" type="xsd:string" />
+      <xsd:element name="flagReg" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="parametroPrincipalType">
+    <xsd:sequence>
+      <xsd:element name="pnContactobjid1" type="xsd:string" />
+      <xsd:element name="pnSiteobjid1" type="xsd:string" />
+      <xsd:element name="pvAccount" type="xsd:string" />
+      <xsd:element name="pvPhone" type="xsd:string" />
+      <xsd:element name="pvTipo" type="xsd:string" />
+      <xsd:element name="pvClase" type="xsd:string" />
+      <xsd:element name="pvSubclase" type="xsd:string" />
+      <xsd:element name="pvMetodoContacto" type="xsd:string" />
+      <xsd:element name="pvTipoInter" type="xsd:string" />
+      <xsd:element name="pvAgente" type="xsd:string" />
+      <xsd:element name="pvUsrProceso" type="xsd:string" />
+      <xsd:element name="pnHechoEnUno" type="xsd:string" />
+      <xsd:element name="pvNotas" type="xsd:string" />
+      <xsd:element name="pvFlagCaso" type="xsd:string" />
+      <xsd:element name="pvResultado" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="parametroPlusType">
+    <xsd:sequence>
+      <xsd:element name="pnInter1" type="xsd:string" />
+      <xsd:element name="pnInter2" type="xsd:string" />
+      <xsd:element name="pnInter3" type="xsd:string" />
+      <xsd:element name="pnInter4" type="xsd:string" />
+      <xsd:element name="pnInter5" type="xsd:string" />
+      <xsd:element name="pnInter6" type="xsd:string" />
+      <xsd:element name="pnInter7" type="xsd:string" />
+      <xsd:element name="pnInter8" type="xsd:string" />
+      <xsd:element name="pnInter9" type="xsd:string" />
+      <xsd:element name="pnInter10" type="xsd:string" />
+      <xsd:element name="pnInter11" type="xsd:string" />
+      <xsd:element name="pnInter12" type="xsd:string" />
+      <xsd:element name="pnInter13" type="xsd:string" />
+      <xsd:element name="pnInter14" type="xsd:string" />
+      <xsd:element name="pnInter15" type="xsd:string" />
+      <xsd:element name="pnInter16" type="xsd:string" />
+      <xsd:element name="pnInter17" type="xsd:string" />
+      <xsd:element name="pnInter18" type="xsd:string" />
+      <xsd:element name="pnInter19" type="xsd:string" />
+      <xsd:element name="pnInter20" type="xsd:string" />
+      <xsd:element name="pnInter21" type="xsd:string" />
+      <xsd:element name="pnInter22" type="xsd:string" />
+      <xsd:element name="pnInter23" type="xsd:string" />
+      <xsd:element name="pnInter24" type="xsd:string" />
+      <xsd:element name="pnInter25" type="xsd:string" />
+      <xsd:element name="pnInter26" type="xsd:string" />
+      <xsd:element name="pnInter27" type="xsd:string" />
+      <xsd:element name="pnInter28" type="xsd:string" />
+      <xsd:element name="pnInter29" type="xsd:string" />
+      <xsd:element name="pnInter30" type="xsd:string" />
+      <xsd:element name="pnPlusInter2interact" type="xsd:string" />
+      <xsd:element name="pnAdjustmentAmount" type="xsd:string" />
+      <xsd:element name="pvAdjustmentReason" type="xsd:string" />
+      <xsd:element name="pvAddress" type="xsd:string" />
+      <xsd:element name="pvAmountUnit" type="xsd:string" />
+      <xsd:element name="pdBirthday" type="xsd:string" />
+      <xsd:element name="pvClarifyInteraction" type="xsd:string" />
+      <xsd:element name="pvClaroLdn1" type="xsd:string" />
+      <xsd:element name="pvClaroLdn2" type="xsd:string" />
+      <xsd:element name="pvClaroLdn3" type="xsd:string" />
+      <xsd:element name="pvClaroLdn4" type="xsd:string" />
+      <xsd:element name="pvClarolocal1" type="xsd:string" />
+      <xsd:element name="pvClarolocal2" type="xsd:string" />
+      <xsd:element name="pvClarolocal3" type="xsd:string" />
+      <xsd:element name="pvClarolocal4" type="xsd:string" />
+      <xsd:element name="pvClarolocal5" type="xsd:string" />
+      <xsd:element name="pvClarolocal6" type="xsd:string" />
+      <xsd:element name="pvContactPhone" type="xsd:string" />
+      <xsd:element name="pvDniLegalRep" type="xsd:string" />
+      <xsd:element name="pvDocumentNumber" type="xsd:string" />
+      <xsd:element name="pvEmail" type="xsd:string" />
+      <xsd:element name="pvFirstName" type="xsd:string" />
+      <xsd:element name="pvFixedNumber" type="xsd:string" />
+      <xsd:element name="pvFlagChangeUser" type="xsd:string" />
+      <xsd:element name="pvFlagLegalRep" type="xsd:string" />
+      <xsd:element name="pvFlagOther" type="xsd:string" />
+      <xsd:element name="pvFlagTitular" type="xsd:string" />
+      <xsd:element name="pvImei" type="xsd:string" />
+      <xsd:element name="pvLastName" type="xsd:string" />
+      <xsd:element name="pvLastnameRep" type="xsd:string" />
+      <xsd:element name="pvLdiNumber" type="xsd:string" />
+      <xsd:element name="pvNameLegalRep" type="xsd:string" />
+      <xsd:element name="pvOldClaroLdn1" type="xsd:string" />
+      <xsd:element name="pvOldClaroLdn2" type="xsd:string" />
+      <xsd:element name="pvOldClaroLdn3" type="xsd:string" />
+      <xsd:element name="pvOldClaroLdn4" type="xsd:string" />
+      <xsd:element name="pvOldClarolocal1" type="xsd:string" />
+      <xsd:element name="pvOldClarolocal2" type="xsd:string" />
+      <xsd:element name="pvOldClarolocal3" type="xsd:string" />
+      <xsd:element name="pvOldClarolocal4" type="xsd:string" />
+      <xsd:element name="pvOldClarolocal5" type="xsd:string" />
+      <xsd:element name="pvOldClarolocal6" type="xsd:string" />
+      <xsd:element name="pvOldDocNumber" type="xsd:string" />
+      <xsd:element name="pvOldFirstName" type="xsd:string" />
+      <xsd:element name="pvOldFixedPhone" type="xsd:string" />
+      <xsd:element name="pvOldLastName" type="xsd:string" />
+      <xsd:element name="pvOldLdiNumber" type="xsd:string" />
+      <xsd:element name="pvOldFixedNumber" type="xsd:string" />
+      <xsd:element name="pvOperationType" type="xsd:string" />
+      <xsd:element name="pvOtherDocNumber" type="xsd:string" />
+      <xsd:element name="pvOtherFirstName" type="xsd:string" />
+      <xsd:element name="pvOtherLastName" type="xsd:string" />
+      <xsd:element name="pvOtherPhone" type="xsd:string" />
+      <xsd:element name="pvPhoneLegalRep" type="xsd:string" />
+      <xsd:element name="pvReferencePhone" type="xsd:string" />
+      <xsd:element name="pvReason" type="xsd:string" />
+      <xsd:element name="pvModel" type="xsd:string" />
+      <xsd:element name="pvLotCode" type="xsd:string" />
+      <xsd:element name="pvFlagRegistered" type="xsd:string" />
+      <xsd:element name="pvRegistrationReason" type="xsd:string" />
+      <xsd:element name="pvClaroNumber" type="xsd:string" />
+      <xsd:element name="pvMonth" type="xsd:string" />
+      <xsd:element name="pvOstNumber" type="xsd:string" />
+      <xsd:element name="pvBasket" type="xsd:string" />
+      <xsd:element name="pdExpireDate" type="xsd:string" />
+      <xsd:element name="pvAddress5" type="xsd:string" />
+      <xsd:element name="pnChargeAmount" type="xsd:string" />
+      <xsd:element name="pvCity" type="xsd:string" />
+      <xsd:element name="pvContactSex" type="xsd:string" />
+      <xsd:element name="pvDepartment" type="xsd:string" />
+      <xsd:element name="pvDistrict" type="xsd:string" />
+      <xsd:element name="pvEmailConfirmation" type="xsd:string" />
+      <xsd:element name="pvFax" type="xsd:string" />
+      <xsd:element name="pvFlagCharge" type="xsd:string" />
+      <xsd:element name="pvMaritalStatus" type="xsd:string" />
+      <xsd:element name="pvOccupation" type="xsd:string" />
+      <xsd:element name="pvPosition" type="xsd:string" />
+      <xsd:element name="pvReferenceAddress" type="xsd:string" />
+      <xsd:element name="pvTypeDocument" type="xsd:string" />
+      <xsd:element name="pvZipcode" type="xsd:string" />
+      <xsd:element name="pvIccid" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ListaDetalleDecoRequestType">
+    <xsd:sequence>
+      <xsd:element name="codeService" type="xsd:string" />
+      <xsd:element name="snCode" type="xsd:string" />
+      <xsd:element name="cf" type="xsd:string" />
+      <xsd:element name="spCode" type="xsd:string" />
+      <xsd:element name="serviceName" type="xsd:string" />
+      <xsd:element name="serviceType" type="xsd:string" />
+      <xsd:element name="serviceGroup" type="xsd:string" />
+      <xsd:element name="equipment" type="xsd:string" />
+      <xsd:element name="quantity" type="xsd:string" />
+      <xsd:element name="associated" type="xsd:string" />
+      <xsd:element name="typeEquipmentCode" type="xsd:string" />
+      <xsd:element name="serialNumber" type="xsd:string" />
+      <xsd:element name="flag" type="xsd:string" />
+      <xsd:element name="dateUser" type="xsd:string" />
+      <xsd:element name="codUser" type="xsd:string" />
+      <xsd:element name="codInssrv" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="registrarProcesoPostventaType">
+    <xsd:sequence>
+      <xsd:element name="piTramaCab" type="xsd:string" />
+      <xsd:element name="piCodId" type="xsd:string" />
+      <xsd:element name="piCodplano" type="xsd:string" />
+      <xsd:element name="piFecProg" type="xsd:string" />
+      <xsd:element name="piFecreg" type="xsd:string" />
+      <xsd:element name="piLstTipequ" type="xsd:string" />
+      <xsd:element name="piLstCoser" type="xsd:string" />
+      <xsd:element name="piLstSncode" type="xsd:string" />
+      <xsd:element name="piLstSpcode" type="xsd:string" />
+      <xsd:element name="piCustomerId" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="generarConstanciaType">
+    <xsd:sequence>
+      <xsd:element name="driver" type="xsd:string" />
+      <xsd:element name="directory" type="xsd:string" />
+      <xsd:element name="fileName" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="registrarEtaSeleccionType">
+    <xsd:sequence>
+      <xsd:element name="idconsulta" type="xsd:string" />
+      <xsd:element name="idInteraccion" type="xsd:string" />
+      <xsd:element name="fechaCompromiso" type="xsd:string" />
+      <xsd:element name="franja" type="xsd:string" />
+      <xsd:element name="idBucket" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="registrarEtaType">
+    <xsd:sequence>
+      <xsd:element name="inIdPoblado" type="xsd:string" />
+      <xsd:element name="inSubTipoOrden" type="xsd:string" />
+      <xsd:element name="inFechaProgra" type="xsd:string" />
+      <xsd:element name="inFranja" type="xsd:string" />
+      <xsd:element name="inIdbucket" type="xsd:string" />
+      <xsd:element name="infechaCrea" type="xsd:string" />
+      <xsd:element name="inUsrcrea" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="registroAuditoriaType">
+    <xsd:sequence>
+      <xsd:element name="ipCliente" type="xsd:string" />
+      <xsd:element name="nombreCliente" type="xsd:string" />
+      <xsd:element name="ipServidor" type="xsd:string" />
+      <xsd:element name="nombreServidor" type="xsd:string" />
+      <xsd:element name="cuentaUsuario" type="xsd:string" />
+      <xsd:element name="telefono" type="xsd:string" />
+      <xsd:element name="texto" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ResponseStatus">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="1" name="status" type="xsd:int" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="codeResponse" type="xsd:string" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="descriptionResponse" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="errorLocation" type="xsd:string" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="date" type="xsd:dateTime" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="origin" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="errorDetails" type="enevcrv1:errorDetailType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="errorDetailType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="1" name="errorCode" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="errorDescription" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="HeaderRequest">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="1" name="channel" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="idApplication" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="userApplication" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="userSession" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="idESBTransaction" type="xsd:string" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="idBusinessTransaction" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="startDate" type="xsd:dateTime" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="additionalNode" type="xsd:anyType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="HeaderResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="1" name="idESBTransaction" type="xsd:string" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="idBusinessTransaction" type="xsd:string" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="startDate" type="xsd:dateTime" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="endDate" type="xsd:dateTime" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="additionalNode" type="xsd:anyType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ClaroFault">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="1" name="idAudit" type="xsd:string" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="codeError" type="xsd:string" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="descriptionError" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="locationError" type="xsd:string" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="date" type="xsd:dateTime" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="originError" type="xsd:anyType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ListaRequestOpcional">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="objetoRequestOpcional">
+        <xsd:complexType>
+          <xsd:attribute name="campo" type="xsd:string" />
+          <xsd:attribute name="valor" type="xsd:string" />
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ListaResponseOpcional">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="objetoResponseOpcional">
+        <xsd:complexType>
+          <xsd:attribute name="campo" type="xsd:string" />
+          <xsd:attribute name="valor" type="xsd:string" />
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="auditRequestType">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="1" name="idTransaccion" type="xsd:string" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="ipAplicacion" type="xsd:string" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="nombreAplicacion" type="xsd:string" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="usuarioAplicacion" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="auditResponseType">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="1" name="idTransaccion" type="xsd:string" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="codigoRespuesta" type="xsd:string" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="mensajeRespuesta" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

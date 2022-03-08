@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="Claro" elementFormDefault="qualified" targetNamespace="Claro" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Request">
+    <xs:sequence>
+      <xs:element name="audit" nillable="true" type="tns:AuditRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Request" nillable="true" type="tns:Request" />
+  <xs:complexType name="AuditRequest">
+    <xs:sequence>
+      <xs:element name="transaction" nillable="true" type="xs:string" />
+      <xs:element name="ipAddress" nillable="true" type="xs:string" />
+      <xs:element name="applicationName" nillable="true" type="xs:string" />
+      <xs:element name="userName" nillable="true" type="xs:string" />
+      <xs:element name="Session" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AuditRequest" nillable="true" type="tns:AuditRequest" />
+</xs:schema>

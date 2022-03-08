@@ -1,0 +1,406 @@
+﻿@{
+  //  ViewBag.Title = "Activar o Desactivar Servicios Adicionales";
+   // Layout = "~/Areas/Transactions/Views/Shared/_Layout.cshtml";
+    //  ViewBag.TitleHtml = "ACTIVAR O DESACTIVAR SERVICIOS ADICIONALES POSTPAGO";
+
+    Layout = null;
+}
+ 
+<style>
+    .TablaTitulos {
+        color: white;
+        background-color: brown;
+    }
+    /*.table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
+        padding: 8px;
+        line-height: 1.4285;
+    }*/
+</style>
+<script type="text/javascript" src="~/Areas/Transactions/Content/Lib/BloqueoF12.js"></script>
+<div id="PostPaidAdditionalServices" class="container-fluid">
+<div class="scrollbudy">
+<div class="col-sm-3">
+    @Html.Partial("~/Areas/Transactions/Views/Shared/ViewPartial/LeftPanelCustomer.cshtml")
+</div>
+<div id="content" class="col-md-9 transaction-content">
+<div class="transaction-container-step">
+    <div class="process">
+        <div class="process-row nav nav-tabs">
+            <div class="process-step process-step-4-left">
+                <button type="button" class="btn btn-circle transaction-button" data-toggle="tab" role="tab" href="#tabPlanYServiciosAdicionales" percent="0%"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                <p>Contrato</p>
+            </div>
+            <div class="process-step process-step-4">
+                <button type="button" class="btn btn-circle transaction-button" data-toggle="tab" role="tab" href="#tabServiciosComplementarios" percent="50%" disabled><i class="fa fa-cogs" aria-hidden="true"></i></button>
+                <p>Servicios de Contrato</p>
+            </div>
+            <div class="process-step process-step-4-right">
+                <button type="button" class="btn btn-circle transaction-button" data-toggle="tab" role="tab" href="#tabPenalidades" percent="99%" disabled><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                <p>Fechas Programada</p>
+            </div>
+        </div>
+    </div>
+    <div class="transaction-progress">
+        <div class="progress transaction-bar">
+            <div id="prog" class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width:0%">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="tab-content">
+<div id="tabPlanYServiciosAdicionales" class="step tab-pane active" role="tabpanel" percent="0%">
+    <div class="panel claro-panel-primary">
+        <div class="panel-heading">
+            Contratos
+        </div>
+        <div id="HFCAdditionalServicesContratac" class="panel-body">
+            <div class="row">
+                <div class="col-sm-12">
+                    <input type="button" id="btnConsultEquipment" class="btn transaction-button list-group-item-heading" value="Consulta Equipo" />
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-sm-12">
+                    <table id="tblContracts" class="table table-bordered table-striped">
+                        <thead class="btn-danger">
+                        <tr>
+                            <th>Sel</th>
+                            <th>CustCode</th>
+                            <th>Contrato</th>
+                            <th>Nombre</th>
+                            <th>Estado</th>
+                            <th>Fecha de Activación</th>
+                            <th>Motivo</th>
+                        </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+            <br />
+        </div>
+        <center>
+            <button type="button" class="btn transaction-button next-step">Siguiente <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>
+        </center>
+        <br /><br />
+    </div>
+</div>
+<div id="tabServiciosComplementarios" class="step tab-pane fade" role="tabpanel" percent="50%">
+    <div class="panel claro-panel-primary" id="divCompTopConsume">
+        <div class="panel-heading">
+            Servicios Contratado
+        </div>
+        <div id="divAdditionalServicesCollapse" class="panel-body panel-collapse collapse in" role="tabpanel" aria-labelledby="divAdditionalServicesHead">
+            <div class="row">
+                <div class="col-sm-6">
+                    <ul class="list-group" style="position: relative; margin-right: 15px; bottom: -15px; margin-left: 15px;">
+                        <li class="list-group-item list-group-item-heading"><span class="badge" style="background-color: brown !important;">&nbsp;&nbsp;</span>Grupo de Servicios</li>
+                        <li class="list-group-item list-group-item-heading"><span class="badge" style="background-color: red !important;">&nbsp;&nbsp;</span>Desactivo</li>
+                        <li class="list-group-item list-group-item-heading"><span class="badge" style="background-color: Silver !important;">&nbsp;&nbsp;</span>No vigente</li>
+                    </ul>
+                </div>
+                <div class="col-sm-6">
+                    <ul class="list-group" style="position: relative; margin-right: 15px; bottom: -15px; margin-left: 15px;">
+                        <li class="list-group-item list-group-item-heading"><span class="badge" style="background-color: forestgreen !important;">&nbsp;&nbsp;</span>Activo</li>
+                        <li class="list-group-item list-group-item-heading"><span class="badge" style="background-color: NavajoWhite !important;">&nbsp;&nbsp;</span>Permanente</li>
+                        @*<li class="list-group-item list-group-item-heading"><span class="badge" style="background-color: #FAFAB1 !important;">&nbsp;&nbsp;</span>No se puede activar ni desactivar</li>*@
+                    </ul>
+                </div>
+
+            </div>
+            <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                <tr>
+                    <td align="right">
+                        <table>
+                            <tr>
+                                <td>
+                                    <input id="chkModifyQuota" name="chkModifyQuota" type="checkbox">&nbsp; Modificar Cuota &nbsp;
+                                </td>
+                                <td>
+                                    <button id="btnModifyQuota" class="btn transaction-button" value="Modificar" type="button"><span class="glyphicon glyphicon-floppy-save" aria-hidden="true"></span>Modificar</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+
+            @*<div class="row">
+                <div class="col-sm-12">
+                    <div class="">*@  
+                        <table id="tblServicesAdd" class="table table-bordered" >
+                            <thead class="btn-danger">
+                                <tr>
+                                    <th></th>
+                                    <th style="vertical-align:middle; font-size:9.5px; width:180px; text-align:center;">cod_serv</th>
+                                    <th style="vertical-align:middle; font-size:9.5px; width:180px; text-align:center;"><p>Grupo/Servicio Comercial</p></th>
+                                    <th style="vertical-align:middle; font-size:9.5px; width:180px; text-align:center;">pos_serv</th>
+                                    <th style="vertical-align:middle; font-size:9.5px; width:180px; text-align:center;">cod_excluyente</th>
+                                    <th style="vertical-align:middle; font-size:9.5px; width:180px; text-align:center;">Motivo por el que los servicios son excluyentes</th>
+                                    <th style="vertical-align:middle; font-size:9.5px; width:180px; text-align:center;">Estado</th>
+                                    <th style="vertical-align:middle; font-size:9.5px; width:180px; text-align:center;">Válido desde</th>
+                                    <th style="vertical-align:middle; font-size:9.5px; width:180px; text-align:center;">Cargo por suscripción al servicio según plan(sin IGV)</th>
+                                    <th style="vertical-align:middle; font-size:9.5px; width:180px; text-align:center;">Cargo fijo mensual al servicio según plan(sin IGV)</th>
+                                    <th style="vertical-align:middle; font-size:9.5px; width:180px; text-align:center;">Cuota modificada (S/.) sin IGV</th>
+                                    <th style="vertical-align:middle; font-size:9.5px; width:180px; text-align:center;">monto_final</th>
+                                    <th style="vertical-align:middle; font-size:9.5px; width:180px; text-align:center;">Número de periodos válidos</th>
+                                    <th style="vertical-align:middle; font-size:9.5px; width:180px; text-align:center;">_bloqueo_desact</th>
+                                    <th style="vertical-align:middle; font-size:9.5px; width:180px; text-align:center;">_bloqueo_act</th>
+                                    <th style="vertical-align:middle; font-size:9.5px; width:180px; text-align:center;">_des_grupo</th>
+                                    <th style="vertical-align:middle; font-size:9.5px; width:180px; text-align:center;">_post_grupo</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    @*</div>
+                </div>
+            </div>*@
+            @*<div class="row">
+                <div class="panel-body">
+                    <table class="table table-bordered">
+                        <tr>
+                            <td>
+                                <strong>Cargo Fijo Total (Sin IGV): </strong>
+                                <label id="lblBuyWithoutIGV">S/.</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h6><strong>Cargo Fijo Total (Con IGV): </strong></h6>
+                                <label id="lblBuyWithIGV">S/.</label>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>*@
+        </div>
+        <center>
+            <button type="button" class="btn transaction-button prev-step"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Anterior</button>
+            <button type="button" class="btn transaction-button next-step">Siguiente <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>
+        </center>
+        <br /><br />
+    </div>
+</div>
+<div id="tabPenalidades" class="step tab-pane fade" role="tabpanel" percent="99%">
+    <div class="panel claro-panel-primary" id="DivPenalidad">
+        <div class="panel-heading">
+            Fecha Programada
+        </div>
+        <div class="panel-body">
+            @*<div class="row">
+                
+                <form class="form-horizontal">
+                    <div class="form-group col-sm-12">
+                            
+                        <div class="col-sm-5">
+                            <label class="control-label col-md-8">
+                                Enviar por E-mail:
+                                <input class="checkbox-inline" type="checkbox" id="chkSendMail">
+                            </label>
+                                
+                            <div id="divContenedorEmail" class="col-md-8">
+                                <input type="email" id="txtEmail" class="form-control" placeholder="Correo Electrónico">
+                            </div>
+                        </div>
+
+
+                            
+
+                        <div class="col-sm-4 control-label">
+                            Programar:
+                            <input class="checkbox-inline" type="checkbox" id="chkProgram">
+                        </div>
+                        <div id="DivFechApli" class="col-sm-4">
+                            <label class="control-label">Fecha de Aplicacion: </label>
+
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="txtDateApp" placeholder="DD/MM/AAAA">
+                                <label class="btn transaction-button input-group-addon" for="txtDateApp">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </label>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </form>
+               
+            </div>*@
+            
+            <div class="row">
+                <div class="form-group">
+                    <form class="form-horizontal">
+                        <div class="col-md-4">
+                            <div class="col-md-4">
+                                <strong>Enviar por E-mail: </strong>
+                                <input type="checkbox" id="chkSendMail">
+                            </div>
+
+                            <div class="col-md-8" id="divContenedorEmail">
+                                <input type="email" id="txtEmail" class="form-control" placeholder="Correo Electrónico">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <strong>
+                                Programar:
+                            </strong>
+                                <input type="checkbox" id="chkProgram">
+                        </div>
+                        <div id="DivFechApli" class="col-md-5">
+                            <div class="col-md-4">
+                                <strong>
+                                    Fecha de Aplicacion:
+                                </strong>
+                            </div>
+                            <div class="col-md-6 input-group">
+                                <input type="text" class="form-control" id="txtDateApp" placeholder="DD/MM/AAAA">
+                                <label class="btn transaction-button input-group-addon" for="txtDateApp">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </label>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+
+            <div id="DivIdServRoaming" class="row">
+                <div class="col-sm-12">
+                    <div class="panel panel-danger">
+                        <div class="panel-body">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <div class="col-sm-3"></div>
+                                    <div class="col-sm-6"><label id="lblLegendProg">Programar Activación/Desactivacion Roamming</label></div>
+                                    <div class="col-sm-3"></div>
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <div class="col-sm-2">
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <strong>
+                                            Determinado
+                                        </strong>
+                                                <input class="col-sm-1" type="radio" id="rdbDetermined" name="activ">
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <strong>
+                                            Indeterminado
+                                        </strong>
+                                                <input class="col-sm-1" type="radio" id="rdbIndeterminate" name="activ">
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    @*<div class="col-sm-2"></div>*@
+                                    <div class="col-sm-6">
+                                        <label id="lblCldFI" class="col-sm-4">
+                                            Fecha Activación:
+                                        </label>
+                                        <div class="col-sm-7">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" id="txtDateAct" placeholder="DD/MM/AAAA">
+                                                <label class="btn transaction-button input-group-addon" for="txtDateAct">
+                                                    <span class="glyphicon glyphicon-calendar"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6" id="divDateDesact">
+                                        <label id="lblCldFF" class="col-sm-4">
+                                            Fecha Desactivación:
+                                        </label>
+                                        <div class="col-sm-7">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" id="txtDateDeact" placeholder="DD/MM/AAAA">
+                                                <label class="btn transaction-button input-group-addon" for="txtDateDeact">
+                                                    <span class="glyphicon glyphicon-calendar"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="panel claro-panel-primary">
+                        <div class="panel-body">
+                            <form class="form-horizontal">
+                                <div id="divCareChannel" class="form-group">
+                                    <label for="cboCareChannel" class="col-sm-2 control-label">Canal de Atención: </label>
+                                    <div class="col-sm-3">
+                                        <select class="form-control" id="cboCareChannel"></select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cboCACDAC" class="col-sm-2 control-label">Punto de Atención: </label>
+                                    <div class="col-sm-3">
+                                        <select class="form-control" id="ddlCACDAC"></select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="txtNotes" class="col-sm-2 control-label">Notas: </label>
+                                    <div class="col-sm-8">
+                                        <textarea class="form-control" rows="4" id="txtNotes"></textarea>
+                                    </div>
+                                </div>
+                                <div id="divShowMessage" class="alert alert-transaction alert-danger" role="alert">
+                                    <button id="btnCloseError" type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <strong><span id="lblErrorMessage"></span></strong>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                              
+            </div>
+                          
+            <center>
+                <button type="button" class="btn transaction-button prev-step"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Anterior</button>
+                
+                <button id="btnProRoamming" class="btn transaction-button" style="z-index: 0; width: 145px; display: none;"><span class="glyphicon glyphicon-floppy-disk"></span> Programar</button>
+                <button id="btnProActive" class="btn transaction-button"><span class="glyphicon glyphicon-floppy-disk"></span> Programar Activación</button>
+                <button id="btnProDesactive" class="btn transaction-button" data-toggle="modal"><span class="glyphicon glyphicon-print"></span> Programar Desactivación</button>
+                <button id="btnActive" class="btn transaction-button"><span class="glyphicon glyphicon-floppy-save"></span> Activar</button>
+                <button id="btnDesactive" class="btn transaction-button"><span class="glyphicon glyphicon-save"></span> Desactivar</button>
+                <button id="btnKeepActive" name="btnKeepActive" type="button" class="btn transaction-button">
+                    <span class="glyphicon glyphicon-save"></span>
+                    Mantener Activación
+                </button>
+                <button id="btnConstancy" class="btn transaction-button"><span class="glyphicon glyphicon-list-alt"></span> Constancia</button>
+                <a id="btnClose" class="btn transaction-button"><span class="glyphicon glyphicon-home"></span> Cerrar</a>
+
+
+            </center>
+            <br /><br />
+                         
+            <div id="ModalLoading" style="display: none;">
+                <span>
+                    <img src="~/Images/loading2.gif" width="25" height="25" /> Cargando ....
+                </span>
+            </div>
+
+                         
+
+        </div>
+                       
+        <br /><br />
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<script src="~/Areas/Transactions/Scripts/ReadRecordPdf/ReadRecord.js"></script>
+<script src="~/Areas/Transactions/Scripts/AdditionalServices/PostpaidAdditionalServices.js"></script>
+<script src="~/Areas/Transactions/ContentTransac/lib/steps.js"></script>

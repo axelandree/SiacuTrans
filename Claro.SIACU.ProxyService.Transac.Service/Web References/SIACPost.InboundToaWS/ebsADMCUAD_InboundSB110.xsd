@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:ns1="http://claro.com.pe/ebsADMCUAD/Inbound/base" xmlns:ns0="http://claro.com.pe/ebsADMCUAD/Inbound/types" elementFormDefault="qualified" targetNamespace="http://claro.com.pe/ebsADMCUAD/Inbound/types" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import schemaLocation="http://limdeseaiv28.tim.com.pe:8909/ebsADMCUAD_InboundWS/ebsADMCUAD_InboundSB11?xsd=2" namespace="http://claro.com.pe/ebsADMCUAD/Inbound/base" />
+  <xsd:complexType name="Command">
+    <xsd:sequence>
+      <xsd:element name="fechaAsignacion" type="xsd:string" />
+      <xsd:element name="tipoComando" type="xsd:string" />
+      <xsd:element name="idContrata" type="xsd:string" />
+      <xsd:element name="idContrataError" type="xsd:string" />
+      <xsd:element name="idTecnico" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="AppointmentSettings">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="camposClave" nillable="true" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="RequiredInventory">
+    <xsd:sequence>
+      <xsd:element name="tipo" type="xsd:string" />
+      <xsd:element name="cantidad" type="xsd:int" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Head">
+    <xsd:sequence>
+      <xsd:element name="modoCargaPropiedades" type="xsd:string" />
+      <xsd:element name="modoProcesamiento" type="xsd:string" />
+      <xsd:element name="tipoCarga" type="xsd:string" />
+      <xsd:element name="fechaTransaccion" type="xsd:string" />
+      <xsd:element name="configuracionSOT" type="ns0:AppointmentSettings" />
+      <xsd:element name="configuracionInventario" type="ns0:InventorySettings" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Message">
+    <xsd:sequence>
+      <xsd:element name="resultadoOperacion" type="xsd:string" />
+      <xsd:element name="tipoMensaje" type="xsd:string" />
+      <xsd:element name="codigoError" type="xsd:string" />
+      <xsd:element name="descripcionError" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Property">
+    <xsd:sequence>
+      <xsd:element name="clave" type="xsd:string" />
+      <xsd:element name="valor" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Inventory">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="propiedades" nillable="true" type="ns0:Property" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ProvideryResponse">
+    <xsd:sequence>
+      <xsd:element name="idTecnico" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="respuestaInventario" nillable="true" type="ns0:InventoryResponse" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="mensajes" nillable="true" type="ns0:Message" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Appointment">
+    <xsd:sequence>
+      <xsd:element name="idAgenda" type="xsd:string" />
+      <xsd:element name="nroUsuario" type="xsd:string" />
+      <xsd:element name="tipoTrabajo" type="xsd:string" />
+      <xsd:element name="franjasHorariasOrdenTrabajo" type="xsd:string" />
+      <xsd:element name="nombreCompleto" type="xsd:string" />
+      <xsd:element name="telefonoCliente" type="xsd:string" />
+      <xsd:element name="correoCliente" type="xsd:string" />
+      <xsd:element name="direccion" type="xsd:string" />
+      <xsd:element name="ciudad" type="xsd:string" />
+      <xsd:element name="coordenadaX" type="xsd:string" />
+      <xsd:element name="coordenadaY" type="xsd:string" />
+      <xsd:element name="prioridad" type="xsd:string" />
+      <xsd:element name="fechaInicioSLA" type="xsd:string" />
+      <xsd:element name="fechaFinSLA" type="xsd:string" />
+      <xsd:element name="codigoPostal" type="xsd:string" />
+      <xsd:element name="duracion" type="xsd:string" />
+      <xsd:element name="distrito" type="xsd:string" />
+      <xsd:element name="tiempoRecordatorioMinutos" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="propiedades" nillable="true" type="ns0:Property" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="inventarios" nillable="true" type="ns0:Inventory" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="inventariosRequeridos" nillable="true" type="ns0:RequiredInventory" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="InventorySettings">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="camposClave" nillable="true" type="xsd:string" />
+      <xsd:element name="tipoCarga" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="AppointmentResponse">
+    <xsd:sequence>
+      <xsd:element name="idAgenda" type="xsd:string" />
+      <xsd:element name="idETA" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="mensajes" nillable="true" type="ns0:Message" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Provider">
+    <xsd:sequence>
+      <xsd:element name="idTecnico" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="inventarios" nillable="true" type="ns0:Inventory" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="InventoryResponse">
+    <xsd:sequence>
+      <xsd:element name="serie" type="xsd:string" />
+      <xsd:element name="tipo" type="xsd:string" />
+      <xsd:element name="idETA" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="mensajes" nillable="true" type="ns0:Message" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="cargarInventarioTotalSGARequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="cadenaRequest" type="xsd:string" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="cargarInventarioIncrementalRequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditRequest" type="ns1:parametrosAuditRequest" />
+        <xsd:element name="cabecera" type="ns0:Head" />
+        <xsd:element name="comando" type="ns0:Command" />
+        <xsd:element minOccurs="0" maxOccurs="unbounded" name="inventarios" nillable="true" type="ns0:Inventory" />
+        <xsd:element name="listaRequestOpcional" type="ns1:objetoRequestOpcional" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="cargarInventarioTotalResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditResponse" type="ns1:parametrosAuditResponse" />
+        <xsd:element minOccurs="0" maxOccurs="unbounded" name="respuestaTecnico" nillable="true" type="ns0:ProvideryResponse" />
+        <xsd:element name="listaResponseOpcional" type="ns1:objetoResponseOpcional" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="gestionarOrdenRequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditRequest" type="ns1:parametrosAuditRequest" />
+        <xsd:element name="cabecera" type="ns0:Head" />
+        <xsd:element name="comando" type="ns0:Command" />
+        <xsd:element name="ordenTrabajo" type="ns0:Appointment" />
+        <xsd:element name="listaRequestOpcional" type="ns1:objetoRequestOpcional" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="cancelarOrdenSGARequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="cadenaRequest" type="xsd:string" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="cancelarOrdenResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditResponse" type="ns1:parametrosAuditResponse" />
+        <xsd:element name="respuestaOrdenTrabajo" type="ns0:AppointmentResponse" />
+        <xsd:element minOccurs="0" maxOccurs="unbounded" name="respuestaInventario" nillable="true" type="ns0:InventoryResponse" />
+        <xsd:element name="listaResponseOpcional" type="ns1:objetoResponseOpcional" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="cargarInventarioTotalRequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditRequest" type="ns1:parametrosAuditRequest" />
+        <xsd:element name="cabecera" type="ns0:Head" />
+        <xsd:element minOccurs="0" maxOccurs="unbounded" name="tecnicos" nillable="true" type="ns0:Provider" />
+        <xsd:element name="listaRequestOpcional" type="ns1:objetoRequestOpcional" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="cargarInventarioIncrementalSGARequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="cadenaRequest" type="xsd:string" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="cargarInventarioIncrementalResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditResponse" type="ns1:parametrosAuditResponse" />
+        <xsd:element minOccurs="0" maxOccurs="unbounded" name="respuestaInventario" nillable="true" type="ns0:InventoryResponse" />
+        <xsd:element name="listaResponseOpcional" type="ns1:objetoResponseOpcional" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="gestionarOrdenSGARequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="cadenaRequest" type="xsd:string" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="gestionarOrdenResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditResponse" type="ns1:parametrosAuditResponse" />
+        <xsd:element name="respuestaOrdenTrabajo" type="ns0:AppointmentResponse" />
+        <xsd:element minOccurs="0" maxOccurs="unbounded" name="respuestaInventario" nillable="true" type="ns0:InventoryResponse" />
+        <xsd:element name="listaResponseOpcional" type="ns1:objetoResponseOpcional" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="cancelarOrdenRequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditRequest" type="ns1:parametrosAuditRequest" />
+        <xsd:element name="tipoCarga" type="xsd:string" />
+        <xsd:element name="configuracionSOT" type="ns0:AppointmentSettings" />
+        <xsd:element name="configuracionInventario" type="ns0:InventorySettings" />
+        <xsd:element name="tipoComando" type="xsd:string" />
+        <xsd:element name="idAgenda" type="xsd:string" />
+        <xsd:element name="listaRequestOpcional" type="ns1:objetoRequestOpcional" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

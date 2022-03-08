@@ -1,0 +1,21 @@
+﻿@using System.Web.Optimization;
+
+@*@{
+    ViewBag.Title = "ChangeNumber";
+    Layout = "~/Areas/Transactions/Views/Shared/_Layout.cshtml";
+}*@
+
+@{
+    Layout = null;
+}
+<script type="text/javascript" src="~/Areas/Transactions/Content/Lib/BloqueoF12.js"></script>
+<div id="divContenidoRedirect2">
+    Transacción Final
+</div>
+
+
+
+@Scripts.Render("~/bundles/Transactions/Redirect/PruebaCambioNumero")
+<script type="text/javascript" src="~/Areas/Transactions/Scripts/ChangePhoneNumber/PostpaidChangePhoneNumber.js"></script>
+
+

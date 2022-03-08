@@ -1,0 +1,1225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetReceipt" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetConsumeLimit" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetFixedCharge" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetHLR" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetBillingCycle" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetParameterBusinnes" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd11" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetNewPlan" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd12" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetTarifePlan" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd13" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetElementMigration" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd14" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetCodeChangeCustomer" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd15" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetArea" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd16" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetMotiveByArea" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd17" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetSubMotive" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd18" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetConsumptionStop" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd19" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetChangePhoneNumber" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd20" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetPortability" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd21" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetTriations" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd22" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetMigrationPlans" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd23" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetFixedCostBasePlan" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd24" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetQueryAssociatedLines" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd25" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetValidationProgDeudaBloqSusp" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd26" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetBillData" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd27" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetDataLine" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd29" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetAmountIncomingCall" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd30" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetCallDetailNBDB1" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd31" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetCallDetailNBDB1BSCS" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd32" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetAgreement" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd33" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetServByTransCodeProduct" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd34" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetMaintenancePlan" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd35" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetValidateBagShare" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd36" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetValidateProgByProduct" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd37" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetRegisterPlanService" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd38" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetProgramerMigration" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd39" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetDataByContract" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd40" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetDataByCount" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd41" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetUpdateInteraction" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd42" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetAdjustForClaims" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd43" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetExecuteMigrationPlan" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd44" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetBillPostDetail" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd45" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetListInvoice_PDI" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd46" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetListInvoice" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd47" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetListCallDetail" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd48" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetListCallDetailPDI" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd49" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetRechargeList" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd50" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetApprovalBusinessCreditLimit" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd51" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetUserExistsBSCS" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd52" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetConsultService" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd53" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetModifyServiceQuotAmount" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd54" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetTypeTransactionBRMS" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd55" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetActDesServProg" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd56" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetServiceByContract" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd57" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetServicesDTH" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd58" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetValidateActDesServProg" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd59" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetServiceBSCS" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd60" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetInsertTraceability" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd61" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetBiometricConfiguration" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd62" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetSignDocument" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd63" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetDataCustomer" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd28" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd64" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.PostUpdateChangeData" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd65" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed" />
+  <xs:element name="GetDataInvoice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetReceipt" minOccurs="0" name="request" nillable="true" type="q1:ReceiptRequestTransactions" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataInvoiceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetReceipt" minOccurs="0" name="GetDataInvoiceResult" nillable="true" type="q2:ReceiptResponseTransactions" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GETConsumeLimit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetConsumeLimit" minOccurs="0" name="objConsumeLimitRequest" nillable="true" type="q3:ConsumeLimitRequestTransactions" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GETConsumeLimitResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetConsumeLimit" minOccurs="0" name="GETConsumeLimitResult" nillable="true" type="q4:ConsumeLimitResponseTransactions" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultFixedCharge">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetFixedCharge" minOccurs="0" name="objRequest" nillable="true" type="q5:FixedChargeRequestTransactions" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultFixedChargeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetFixedCharge" minOccurs="0" name="ConsultFixedChargeResult" nillable="true" type="q6:FixedChargeResponseTransactions" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStatusPhone">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strIdSession" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTransactionID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strApplicationID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strApplicationName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strApplicationUser" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strPhoneNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStatusPhoneResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid" minOccurs="0" name="GetStatusPhoneResult" nillable="true" type="q7:SimCardPhone" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHLRLocation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetHLR" minOccurs="0" name="objHLRRequest" nillable="true" type="q8:HLRRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHLRLocationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetHLR" minOccurs="0" name="GetHLRLocationResult" nillable="true" type="q9:HLRResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBillingCycle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetBillingCycle" minOccurs="0" name="objRequest" nillable="true" type="q10:BillingCycleRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBillingCycleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetBillingCycle" minOccurs="0" name="GetBillingCycleResult" nillable="true" type="q11:BillingCycleResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlanModel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetParameterBusinnes" minOccurs="0" name="objRequest" nillable="true" type="q12:ParameterBusinnesRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlanModelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetParameterBusinnes" minOccurs="0" name="GetPlanModelResult" nillable="true" type="q13:ParameterBusinnesResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewPlan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetNewPlan" minOccurs="0" name="objRequest" nillable="true" type="q14:NewPlanRequestTransactions" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewPlanResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetNewPlan" minOccurs="0" name="GetNewPlanResult" nillable="true" type="q15:NewPlanResponseTransactions" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTarifePlan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetTarifePlan" minOccurs="0" name="objRequest" nillable="true" type="q16:TarifePlanRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTarifePlanResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetTarifePlan" minOccurs="0" name="GetTarifePlanResult" nillable="true" type="q17:TarifePlanResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetElementMigration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetElementMigration" minOccurs="0" name="objRequest" nillable="true" type="q18:ElementMigrationRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetElementMigrationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetElementMigration" minOccurs="0" name="GetElementMigrationResult" nillable="true" type="q19:ElementMigrationResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCodeChangeCustomer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetCodeChangeCustomer" minOccurs="0" name="objRequest" nillable="true" type="q20:CodeChangeCustomerRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCodeChangeCustomerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetCodeChangeCustomer" minOccurs="0" name="GetCodeChangeCustomerResult" nillable="true" type="q21:CodeChangeCustomerResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetArea">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetArea" minOccurs="0" name="objRequest" nillable="true" type="q22:AreaRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAreaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetArea" minOccurs="0" name="GetAreaResult" nillable="true" type="q23:AreaResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMotiveByArea">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetMotiveByArea" minOccurs="0" name="objRequest" nillable="true" type="q24:MotiveByAreaRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMotiveByAreaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetMotiveByArea" minOccurs="0" name="GetMotiveByAreaResult" nillable="true" type="q25:MotiveByAreaResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSubMotive">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetSubMotive" minOccurs="0" name="objRequest" nillable="true" type="q26:SubMotiveRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSubMotiveResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetSubMotive" minOccurs="0" name="GetSubMotiveResult" nillable="true" type="q27:SubMotiveResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConsumptionStop">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetConsumptionStop" minOccurs="0" name="objRequest" nillable="true" type="q28:ConsumptionStopRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConsumptionStopResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetConsumptionStop" minOccurs="0" name="GetConsumptionStopResult" nillable="true" type="q29:ConsumptionStopResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateChangeNumberTransaction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strIdSession" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTransactionID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strContract" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strFlagFidelize" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateChangeNumberTransactionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid" minOccurs="0" name="ValidateChangeNumberTransactionResult" nillable="true" type="q30:ChangePhoneNumber" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAvailableLines">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetChangePhoneNumber" minOccurs="0" name="objChangePhoneNumberRequest" nillable="true" type="q31:ChangePhoneNumberRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAvailableLinesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetChangePhoneNumber" minOccurs="0" name="GetAvailableLinesResult" nillable="true" type="q32:ChangePhoneNumberResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateChangeNumberBSCS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strIdSession" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTransactionID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strSerialNum" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strDnNum" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intEstado" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateChangeNumberBSCSResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ValidateChangeNumberBSCSResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExecuteChangeNumber">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetChangePhoneNumber" minOccurs="0" name="objChangePhoneNumberRequest" nillable="true" type="q33:ChangePhoneNumberRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExecuteChangeNumberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetChangePhoneNumber" minOccurs="0" name="ExecuteChangeNumberResult" nillable="true" type="q34:ChangePhoneNumberResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RollbackChangeNumber">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetChangePhoneNumber" minOccurs="0" name="objChangePhoneNumberRequest" nillable="true" type="q35:ChangePhoneNumberRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RollbackChangeNumberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetChangePhoneNumber" minOccurs="0" name="RollbackChangeNumberResult" nillable="true" type="q36:ChangePhoneNumberResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteUserHistory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strIdSession" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTransactionID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strPhone" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strMotive" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteUserHistoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteUserHistoryResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePhoneNumber">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetChangePhoneNumber" minOccurs="0" name="objChangePhoneNumberRequest" nillable="true" type="q37:ChangePhoneNumberRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePhoneNumberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetChangePhoneNumber" minOccurs="0" name="UpdatePhoneNumberResult" nillable="true" type="q38:ChangePhoneNumberResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPortability">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetPortability" minOccurs="0" name="objPortabilityRequest" nillable="true" type="q39:PortabilityRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPortabilityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetPortability" minOccurs="0" name="GetPortabilityResult" nillable="true" type="q40:PortabilityResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTriaciones">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetTriations" minOccurs="0" name="objTriacionRequest" nillable="true" type="q41:StriationsRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTriacionesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetTriations" minOccurs="0" name="GetTriacionesResult" nillable="true" type="q42:StriationsResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlansMigrations">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetMigrationPlans" minOccurs="0" name="objRequest" nillable="true" type="q43:MigrationPlanRequestTransactions" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlansMigrationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetMigrationPlans" minOccurs="0" name="GetPlansMigrationsResult" nillable="true" type="q44:MigrationPlanResponseTransactions" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFixedCostBasePlan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetFixedCostBasePlan" minOccurs="0" name="objRequest" nillable="true" type="q45:FixedCostBasePlanRequestTransactions" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFixedCostBasePlanResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetFixedCostBasePlan" minOccurs="0" name="GetFixedCostBasePlanResult" nillable="true" type="q46:FixedCostBasePlanResponseTransactions" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListQueryAssociatedLines">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetQueryAssociatedLines" minOccurs="0" name="objQueryAssociatedLinesRequest" nillable="true" type="q47:QueryAssociatedLinesRequestPostPaid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListQueryAssociatedLinesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetQueryAssociatedLines" minOccurs="0" name="GetListQueryAssociatedLinesResult" nillable="true" type="q48:QueryAssociatedLinesResponsePostPaid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetValidationProgDeudaBloqSuspResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetValidationProgDeudaBloqSusp" minOccurs="0" name="objRequest" nillable="true" type="q49:ValidationProgDeudaBloqSuspRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetValidationProgDeudaBloqSuspResponseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetValidationProgDeudaBloqSusp" minOccurs="0" name="GetValidationProgDeudaBloqSuspResponseResult" nillable="true" type="q50:ValidationProgDeudaBloqSuspResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetValidationMigration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetValidationProgDeudaBloqSusp" minOccurs="0" name="objRequest" nillable="true" type="q51:ValidationProgDeudaBloqSuspRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetValidationMigrationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetValidationProgDeudaBloqSusp" minOccurs="0" name="GetValidationMigrationResult" nillable="true" type="q52:ValidationProgDeudaBloqSuspResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListBillSummary">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetBillData" minOccurs="0" name="request" nillable="true" type="q53:BillDataRequestPostPaid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListBillSummaryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetBillData" minOccurs="0" name="GetListBillSummaryResult" nillable="true" type="q54:BillDataResponsePostPaid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataLine">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetDataLine" minOccurs="0" name="objRequest" nillable="true" type="q55:DataLineRequestPostPaid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataLineResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q56="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetDataLine" minOccurs="0" name="GetDataLineResult" nillable="true" type="q56:DataLineResponsePostPaid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAmountIncomingCall">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q57="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetAmountIncomingCall" minOccurs="0" name="objRequest" nillable="true" type="q57:AmountIncomingCallRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAmountIncomingCallResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q58="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetAmountIncomingCall" minOccurs="0" name="GetAmountIncomingCallResult" nillable="true" type="q58:AmountIncomingCallResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocumentType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strIdSession" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTransaction" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strCodCargaDdl" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocumentTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q59="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid" minOccurs="0" name="GetDocumentTypeResult" nillable="true" type="q59:ArrayOfListItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCallDetailNB_DB1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q60="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetCallDetailNBDB1" minOccurs="0" name="request" nillable="true" type="q60:CallDetailNBDB1RequestPostPaid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCallDetailNB_DB1Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q61="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetCallDetailNBDB1" minOccurs="0" name="GetCallDetailNB_DB1Result" nillable="true" type="q61:CallDetailNBDB1ResponsePostPaid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCallDetailNB_DB1_BSCS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q62="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetCallDetailNBDB1BSCS" minOccurs="0" name="request" nillable="true" type="q62:CallDetailNBDB1BSCSRequestPostPaid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCallDetailNB_DB1_BSCSResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q63="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetCallDetailNBDB1BSCS" minOccurs="0" name="GetCallDetailNB_DB1_BSCSResult" nillable="true" type="q63:CallDetailNBDB1BSCSResponsePostPaid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReinstatementEquipment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q64="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetAgreement" minOccurs="0" name="objRequest" nillable="true" type="q64:AgreementResquest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReinstatementEquipmentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q65="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetAgreement" minOccurs="0" name="GetReinstatementEquipmentResult" nillable="true" type="q65:AgreementResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServByTransCodeProductResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q66="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetServByTransCodeProduct" minOccurs="0" name="objRequest" nillable="true" type="q66:ServByTransCodeProductRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServByTransCodeProductResponseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q67="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetServByTransCodeProduct" minOccurs="0" name="GetServByTransCodeProductResponseResult" nillable="true" type="q67:ServByTransCodeProductResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlansServices">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q68="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetMaintenancePlan" minOccurs="0" name="objRequest" nillable="true" type="q68:MaintenancePlanRequestTransactions" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlansServicesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q69="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetMaintenancePlan" minOccurs="0" name="GetPlansServicesResult" nillable="true" type="q69:MaintenancePlanResponseTransactions" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetValidateBagShare">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q70="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetValidateBagShare" minOccurs="0" name="objRequest" nillable="true" type="q70:ValidateBagShareRequestTransactions" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetValidateBagShareResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q71="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetValidateBagShare" minOccurs="0" name="GetValidateBagShareResult" nillable="true" type="q71:ValidateBagShareResponseTransactions" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetValidateProgByProduct">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q72="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetValidateProgByProduct" minOccurs="0" name="objRequest" nillable="true" type="q72:ValidateProgByProductRequestTransactions" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetValidateProgByProductResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q73="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetValidateProgByProduct" minOccurs="0" name="GetValidateProgByProductResult" nillable="true" type="q73:ValidateProgByProductResponseTransactions" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegisterPlanService">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q74="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetRegisterPlanService" minOccurs="0" name="objRequest" nillable="true" type="q74:RegisterPlanRequestTransactions" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegisterPlanServiceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q75="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetRegisterPlanService" minOccurs="0" name="RegisterPlanServiceResult" nillable="true" type="q75:RegisterPlanResponseTransactions" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProgramerMigrationControlPostPago">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q76="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetProgramerMigration" minOccurs="0" name="objRequest" nillable="true" type="q76:ProgramerMigrationRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProgramerMigrationControlPostPagoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q77="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetProgramerMigration" minOccurs="0" name="ProgramerMigrationControlPostPagoResult" nillable="true" type="q77:ProgramerMigrationResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataByContract">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q78="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetDataByContract" minOccurs="0" name="objRequest" nillable="true" type="q78:DataByContractRequestPostPaid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataByContractResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q79="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetDataByContract" minOccurs="0" name="GetDataByContractResult" nillable="true" type="q79:DataByContractResponsePostPaid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataByCount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q80="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetDataByCount" minOccurs="0" name="objRequest" nillable="true" type="q80:DataByCountRequestPostPaid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataByCountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q81="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetDataByCount" minOccurs="0" name="GetDataByCountResult" nillable="true" type="q81:DataByCountResponsePostPaid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AlignTransactionService">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strIdSession" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTransaction" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strContractID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AlignTransactionServiceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AlignTransactionServiceResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUpdateInteraction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q82="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetUpdateInteraction" minOccurs="0" name="objRequest" nillable="true" type="q82:UpdateInteractionRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUpdateInteractionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q83="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetUpdateInteraction" minOccurs="0" name="GetUpdateInteractionResult" nillable="true" type="q83:UpdateInteractionResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAdjustForClaims">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q84="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetAdjustForClaims" minOccurs="0" name="objRequest" nillable="true" type="q84:AdjustForClaimsRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAdjustForClaimsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q85="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetAdjustForClaims" minOccurs="0" name="GetAdjustForClaimsResult" nillable="true" type="q85:AdjustForClaimsResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AlignCodID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strIdSession" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTransaction" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strContractID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AlignCodIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AlignCodIDResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MigrationPlans">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q86="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetExecuteMigrationPlan" minOccurs="0" name="objRequest" nillable="true" type="q86:ExecuteMigrationPlanRequestTransactions" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MigrationPlansResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q87="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetExecuteMigrationPlan" minOccurs="0" name="MigrationPlansResult" nillable="true" type="q87:ExecuteMigrationPlanResponseTransactions" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBillPostDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q88="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetBillPostDetail" minOccurs="0" name="objBillPostRequest" nillable="true" type="q88:BillPostDetailRequestTransactions" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBillPostDetailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q89="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetBillPostDetail" minOccurs="0" name="GetBillPostDetailResult" nillable="true" type="q89:BillPostDetailResponseTransactions" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListInvoicePDI">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q90="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetListInvoice_PDI" minOccurs="0" name="objListInvoicePdiRequest" nillable="true" type="q90:ListInvoice_PDIRequestTransactions" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListInvoicePDIResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q91="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetListInvoice_PDI" minOccurs="0" name="GetListInvoicePDIResult" nillable="true" type="q91:ListInvoice_PDIResponseTransactions" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListInvoice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q92="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetListInvoice" minOccurs="0" name="objListInvoiceRequest" nillable="true" type="q92:ListInvoiceRequestTransactions" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListInvoiceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q93="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetListInvoice" minOccurs="0" name="GetListInvoiceResult" nillable="true" type="q93:ListInvoiceResponseTransactions" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListCallDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q94="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetListCallDetail" minOccurs="0" name="objListCallDetailRequest" nillable="true" type="q94:ListCallDetailRequestTransactions" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListCallDetailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q95="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetListCallDetail" minOccurs="0" name="GetListCallDetailResult" nillable="true" type="q95:ListCallDetailResponseTransactions" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListCallDetailPDI">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q96="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetListCallDetailPDI" minOccurs="0" name="objListCallDetailPDIRequest" nillable="true" type="q96:ListCallDetailPDIRequestTransactions" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListCallDetailPDIResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q97="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetListCallDetailPDI" minOccurs="0" name="GetListCallDetailPDIResult" nillable="true" type="q97:ListCallDetailPDIResponseTransactions" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRechargeList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q98="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetRechargeList" minOccurs="0" name="objRechargeListRequest" nillable="true" type="q98:RechargeListRequestTransactions" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRechargeListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q99="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetRechargeList" minOccurs="0" name="GetRechargeListResult" nillable="true" type="q99:RechargeListResponseTransactions" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetApprovalBusinessCreditLimitBusinessAccount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q100="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetApprovalBusinessCreditLimit" minOccurs="0" name="objRequest" nillable="true" type="q100:ApprovalBusinessCreditLimitRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetApprovalBusinessCreditLimitBusinessAccountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q101="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetApprovalBusinessCreditLimit" minOccurs="0" name="GetApprovalBusinessCreditLimitBusinessAccountResult" nillable="true" type="q101:ApprovalBusinessCreditLimitResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserExistsBSCS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q102="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetUserExistsBSCS" minOccurs="0" name="objRequest" nillable="true" type="q102:UserExistsBSCSRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserExistsBSCSResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q103="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetUserExistsBSCS" minOccurs="0" name="GetUserExistsBSCSResult" nillable="true" type="q103:UserExistsBSCSResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConsultService">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q104="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetConsultService" minOccurs="0" name="objRequest" nillable="true" type="q104:ConsultServiceRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConsultServiceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q105="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetConsultService" minOccurs="0" name="GetConsultServiceResult" nillable="true" type="q105:ConsultServiceResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetModifyServiceQuotAmount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q106="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetModifyServiceQuotAmount" minOccurs="0" name="objRequest" nillable="true" type="q106:ModifyServiceQuotAmountRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetModifyServiceQuotAmountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q107="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetModifyServiceQuotAmount" minOccurs="0" name="GetModifyServiceQuotAmountResult" nillable="true" type="q107:ModifyServiceQuotAmountResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTypeTransactionBRMS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q108="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetTypeTransactionBRMS" minOccurs="0" name="objRequest" nillable="true" type="q108:TypeTransactionBRMSRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTypeTransactionBRMSResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q109="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetTypeTransactionBRMS" minOccurs="0" name="GetTypeTransactionBRMSResult" nillable="true" type="q109:TypeTransactionBRMSResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetActDesServProg">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q110="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetActDesServProg" minOccurs="0" name="objRequest" nillable="true" type="q110:ActDesServProgRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetActDesServProgResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q111="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetActDesServProg" minOccurs="0" name="GetActDesServProgResult" nillable="true" type="q111:ActDesServProgResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServiceByContract">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q112="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetServiceByContract" minOccurs="0" name="objRequest" nillable="true" type="q112:ServiceByContractRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServiceByContractResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q113="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetServiceByContract" minOccurs="0" name="GetServiceByContractResult" nillable="true" type="q113:ServiceByContractResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServicesDTH">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q114="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetServicesDTH" minOccurs="0" name="objRequest" nillable="true" type="q114:ServicesDTHRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServicesDTHResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q115="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetServicesDTH" minOccurs="0" name="GetServicesDTHResult" nillable="true" type="q115:ServicesDTHResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetValidateActDesServProg">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q116="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetValidateActDesServProg" minOccurs="0" name="objRequest" nillable="true" type="q116:ValidateActDesServProgRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetValidateActDesServProgResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q117="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetValidateActDesServProg" minOccurs="0" name="GetValidateActDesServProgResult" nillable="true" type="q117:ValidateActDesServProgResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServiceBSCS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q118="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetServiceBSCS" minOccurs="0" name="objRequest" nillable="true" type="q118:ServiceBSCSRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServiceBSCSResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q119="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetServiceBSCS" minOccurs="0" name="GetServiceBSCSResult" nillable="true" type="q119:ServiceBSCSResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataAccord">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q120="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid" minOccurs="0" name="oRequest" nillable="true" type="q120:RetentionCancel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataAccordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q121="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid" minOccurs="0" name="GetDataAccordResult" nillable="true" type="q121:RetentionCancel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLoadStaidTotal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q122="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid" minOccurs="0" name="oRequest" nillable="true" type="q122:RetentionCancel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLoadStaidTotalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q123="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid" minOccurs="0" name="GetLoadStaidTotalResult" nillable="true" type="q123:RetentionCancel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInsertTraceability">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q124="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetInsertTraceability" minOccurs="0" name="objRequest" nillable="true" type="q124:InsertTraceabilityRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInsertTraceabilityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q125="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetInsertTraceability" minOccurs="0" name="GetInsertTraceabilityResult" nillable="true" type="q125:InsertTraceabilityResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBiometricConfiguration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q126="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetBiometricConfiguration" minOccurs="0" name="objRequest" nillable="true" type="q126:BiometricConfigurationRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBiometricConfigurationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q127="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetBiometricConfiguration" minOccurs="0" name="GetBiometricConfigurationResult" nillable="true" type="q127:BiometricConfigurationResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSignDocument">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q128="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetSignDocument" minOccurs="0" name="objRequest" nillable="true" type="q128:SignDocumentRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSignDocumentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q129="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetSignDocument" minOccurs="0" name="GetSignDocumentResult" nillable="true" type="q129:SignDocumentResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataCustomer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q130="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetDataCustomer" minOccurs="0" name="objRequest" nillable="true" type="q130:DataCustomerRequestPostPaid" />
+        <xs:element minOccurs="0" name="flag" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataCustomerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q131="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetDataCustomer" minOccurs="0" name="GetDataCustomerResult" nillable="true" type="q131:DataCustomerResponsePostPaid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMotivoCambio">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strIdSession" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTransaction" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pid_parametro" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="rMsgText" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMotivoCambioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q132="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid" minOccurs="0" name="GetMotivoCambioResult" nillable="true" type="q132:ArrayOfListItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateEnvioxMail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strIdSession" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTransaction" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strCustomerID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateEnvioxMailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ValidateEnvioxMailResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateNameCustomer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strIdTransaccion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strIpAplicacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAplicacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strUsrApp" nillable="true" type="xs:string" />
+        <xs:element xmlns:q133="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common" minOccurs="0" name="oCliente" nillable="true" type="q133:Client" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateNameCustomerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q134="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.PostUpdateChangeData" minOccurs="0" name="UpdateNameCustomerResult" nillable="true" type="q134:UpdateChangeDataResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDataMinorCustomer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strIdTransaccion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strIpAplicacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAplicacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strUsrApp" nillable="true" type="xs:string" />
+        <xs:element xmlns:q135="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common" minOccurs="0" name="oCliente" nillable="true" type="q135:Client" />
+        <xs:element minOccurs="0" name="intSeq_in" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDataMinorCustomerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q136="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.PostUpdateChangeData" minOccurs="0" name="UpdateDataMinorCustomerResult" nillable="true" type="q136:UpdateChangeDataResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDataCustomerCLF">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strIdTransaccion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strIpAplicacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAplicacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strUsrApp" nillable="true" type="xs:string" />
+        <xs:element xmlns:q137="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common" minOccurs="0" name="oCliente" nillable="true" type="q137:Client" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDataCustomerCLFResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateDataCustomerCLFResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateAddressCustomer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strIdTransaccion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strIpAplicacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAplicacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strUsrApp" nillable="true" type="xs:string" />
+        <xs:element xmlns:q138="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common" minOccurs="0" name="oCliente" nillable="true" type="q138:Client" />
+        <xs:element minOccurs="0" name="tipoDireccion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intSeq_in" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateAddressCustomerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q139="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.PostUpdateChangeData" minOccurs="0" name="UpdateAddressCustomerResult" nillable="true" type="q139:UpdateChangeDataResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDataCustomerPClub">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strIdTransaccion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strIpAplicacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAplicacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strUsrApp" nillable="true" type="xs:string" />
+        <xs:element xmlns:q140="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common" minOccurs="0" name="oCliente" nillable="true" type="q140:Client" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDataCustomerPClubResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateDataCustomerPClubResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="registrarTransaccionSiga">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strIdTransaccion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strIpAplicacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAplicacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strUsrApp" nillable="true" type="xs:string" />
+        <xs:element xmlns:q141="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed" minOccurs="0" name="oTransaction" nillable="true" type="q141:TransactionSiga" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="registrarTransaccionSigaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="registrarTransaccionSigaResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

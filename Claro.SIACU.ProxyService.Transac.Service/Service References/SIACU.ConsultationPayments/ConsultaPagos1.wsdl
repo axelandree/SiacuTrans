@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WL5G3N0:definitions xmlns:WL5G3N2="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:WL5G3N1="http://claro.com.pe/eai/oac/consultapagos/" name="ConsultaPagos" targetNamespace="http://claro.com.pe/eai/oac/consultapagos/" xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/">
+  <WL5G3N0:types>
+    <xsd:schema xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:Q1="http://claro.com.pe/eai/servicecommons/" xmlns:tns="http://claro.com.pe/eai/oac/consultapagos/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" elementFormDefault="qualified" targetNamespace="http://claro.com.pe/eai/oac/consultapagos/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="consultaDeuda">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="txId" type="xsd:string" />
+            <xsd:element name="pCodAplicacion" type="xsd:string" />
+            <xsd:element name="pCodBanco" type="xsd:string" />
+            <xsd:element name="pCodReenvia" type="xsd:string" />
+            <xsd:element name="pCodMoneda" type="xsd:string" />
+            <xsd:element name="pCodTipoServicio" type="xsd:string" />
+            <xsd:element name="pPosUltDocumento" type="xsd:decimal" />
+            <xsd:element name="pTipoIdentific" type="xsd:string" />
+            <xsd:element name="pDatoIdentific" type="xsd:string" />
+            <xsd:element name="pNombreComercio" type="xsd:string" />
+            <xsd:element name="pNumeroComercio" type="xsd:string" />
+            <xsd:element name="pCodAgencia" type="xsd:string" />
+            <xsd:element name="pCodCanal" type="xsd:string" />
+            <xsd:element name="pCodCiudad" type="xsd:string" />
+            <xsd:element name="pNroTerminal" type="xsd:string" />
+            <xsd:element name="pPlaza" type="xsd:string" />
+            <xsd:element name="pNroReferencia" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="consultaDeudaDocId">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="txId" type="xsd:string" />
+            <xsd:element name="pCodAplicacion" type="xsd:string" />
+            <xsd:element name="pCodBanco" type="xsd:string" />
+            <xsd:element name="pCodReenvia" type="xsd:string" />
+            <xsd:element name="pCodMoneda" type="xsd:string" />
+            <xsd:element name="pCodTipoServicio" type="xsd:string" />
+            <xsd:element name="pPosUltDocumento" type="xsd:decimal" />
+            <xsd:element name="pTipoIdentific" type="xsd:string" />
+            <xsd:element name="pNroDocId" type="xsd:string" />
+            <xsd:element name="pNombreComercio" type="xsd:string" />
+            <xsd:element name="pNumeroComercio" type="xsd:string" />
+            <xsd:element name="pCodAgencia" type="xsd:string" />
+            <xsd:element name="pCodCanal" type="xsd:string" />
+            <xsd:element name="pCodCiudad" type="xsd:string" />
+            <xsd:element name="pNroTerminal" type="xsd:string" />
+            <xsd:element name="pPlaza" type="xsd:string" />
+            <xsd:element name="pNroReferencia" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="consultaDeudaResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="audit" type="tns:AuditType" />
+            <xsd:element name="xIdentificacion" type="xsd:string" />
+            <xsd:element name="xNombreCliente" type="xsd:string" />
+            <xsd:element name="xMasDocumentosFlag" type="xsd:string" />
+            <xsd:element name="xPosUltDocumento" type="xsd:decimal" />
+            <xsd:element name="xNroReferencia" type="xsd:string" />
+            <xsd:element name="xNroIdentifCliente" type="xsd:string" />
+            <xsd:element name="xNroServDevueltos" type="xsd:decimal" />
+            <xsd:element name="xNroDocsDeuda" type="xsd:decimal" />
+            <xsd:element name="xDatoTransaccion" type="xsd:string" />
+            <xsd:element name="xDeudaCliente" type="tns:DeudaServiciosType">
+              <xsd:annotation>
+                <xsd:documentation>Estructura XML con los servicios y documentos que adeuda. Ver Tipo="DeudaServiciosType"</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="xErrStatus" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>Codigo de Mensaje</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="xErrMessage" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>Descripcion de Mensaje</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="AuditType">
+        <xsd:sequence>
+          <xsd:element name="txId" type="xsd:string" />
+          <xsd:element name="errorCode" type="xsd:string" />
+          <xsd:element name="errorMsg" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="DeudaServiciosType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="xDeudaServicio" type="tns:DeudaServicioType" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="DeudaServicioType">
+        <xsd:sequence>
+          <xsd:element name="xEstadoDeudor" type="xsd:string" />
+          <xsd:element name="xCodTipoServicio" type="xsd:string" />
+          <xsd:element name="xFlagCronologPago" type="xsd:string" />
+          <xsd:element name="xFlagPagoParcial" type="xsd:string" />
+          <xsd:element name="xFlagPagoVencido" type="xsd:string" />
+          <xsd:element name="xFlagRestricPago" type="xsd:string" />
+          <xsd:element name="xOpcionRecaudacion" type="xsd:string" />
+          <xsd:element name="xCodMoneda" type="xsd:string" />
+          <xsd:element name="xNroDocs" type="xsd:decimal" />
+          <xsd:element name="xMontoDeudaTotal" type="xsd:decimal" />
+          <xsd:element name="xMensaje1" type="xsd:string" />
+          <xsd:element name="xMensaje2" type="xsd:string" />
+          <xsd:element name="xDatoServicio" type="xsd:string" />
+          <xsd:element name="xDeudaDocs" type="tns:DeudaDocumentosType" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="DeudaDocumentosType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="xDeudaDocumento" type="tns:DeudaDocumentoType" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="DeudaDocumentoType">
+        <xsd:sequence>
+          <xsd:element name="xTipoServicio" type="xsd:string" />
+          <xsd:element name="xDescripServ" type="xsd:string" />
+          <xsd:element name="xNumeroDoc" type="xsd:string" />
+          <xsd:element name="xFechaEmision" type="xsd:dateTime" />
+          <xsd:element name="xFechaVenc" type="xsd:dateTime" />
+          <xsd:element name="xMontoDebe" type="xsd:decimal" />
+          <xsd:element name="xMontoFact" type="xsd:decimal" />
+          <xsd:element name="xImportePagoMin" type="xsd:decimal" />
+          <xsd:element name="xCodConcepto1" type="xsd:string" />
+          <xsd:element name="xCodConcepto2" type="xsd:string" />
+          <xsd:element name="xCodConcepto3" type="xsd:string" />
+          <xsd:element name="xCodConcepto4" type="xsd:string" />
+          <xsd:element name="xCodConcepto5" type="xsd:string" />
+          <xsd:element name="xImporteConcepto1" type="xsd:decimal" />
+          <xsd:element name="xImporteConcepto2" type="xsd:decimal" />
+          <xsd:element name="xImporteConcepto3" type="xsd:decimal" />
+          <xsd:element name="xImporteConcepto4" type="xsd:decimal" />
+          <xsd:element name="xImporteConcepto5" type="xsd:decimal" />
+          <xsd:element name="xReferenciaDeuda" type="xsd:string" />
+          <xsd:element name="xDatoDocumento" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="consultaDeudaDocIdResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="audit" type="tns:AuditType" />
+            <xsd:element name="xIdentificacion" type="xsd:string" />
+            <xsd:element name="xNombreCliente" type="xsd:string" />
+            <xsd:element name="xMasDocumentosFlag" type="xsd:string" />
+            <xsd:element name="xPosUltDocumento" type="xsd:string" />
+            <xsd:element name="xNroReferencia" type="xsd:string" />
+            <xsd:element name="xNroIdentifCliente" type="xsd:string" />
+            <xsd:element name="xNroServDevueltos" type="xsd:decimal" />
+            <xsd:element name="xNroDocsDeuda" type="xsd:decimal" />
+            <xsd:element name="xDatoTransaccion" type="xsd:string" />
+            <xsd:element name="xDeudaCliente" type="tns:DeudaDocIdServiciosType">
+              <xsd:annotation>
+                <xsd:documentation>Estructura XML con los servicios y documentos que adeuda. Ver Tipo="DeudaServiciosType"</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="xErrStatus" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>Codigo de Mensaje</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="xErrMessage" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>Descripcion de Mensaje</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="DeudaDocIdServiciosType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="xDeudaDocIdServicio" type="tns:DeudaDocIdServicioType" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="DeudaDocIdServicioType">
+        <xsd:sequence>
+          <xsd:element name="xEstadoDeudor" type="xsd:string" />
+          <xsd:element name="xCodTipoServicio" type="xsd:string" />
+          <xsd:element name="xFlagCronologPago" type="xsd:string" />
+          <xsd:element name="xFlagPagoParcial" type="xsd:string" />
+          <xsd:element name="xFlagPagoVencido" type="xsd:string" />
+          <xsd:element name="xFlagRestricPago" type="xsd:string" />
+          <xsd:element name="xOpcionRecaudacion" type="xsd:string" />
+          <xsd:element name="xCodMoneda" type="xsd:string" />
+          <xsd:element name="xNroDocs" type="xsd:decimal" />
+          <xsd:element name="xNroDocPag" type="xsd:decimal" />
+          <xsd:element name="xNro_DocAnula" type="xsd:decimal" />
+          <xsd:element name="xMontoAnulado" type="xsd:decimal" />
+          <xsd:element name="xMontoPagado" type="xsd:decimal" />
+          <xsd:element name="xMontoDeudaTotal" type="xsd:decimal" />
+          <xsd:element name="xMensaje1" type="xsd:string" />
+          <xsd:element name="xMensaje2" type="xsd:string" />
+          <xsd:element name="xDatoServicio" type="xsd:string" />
+          <xsd:element name="xDeudaDocs" type="tns:DeudaDocIdDocumentosType" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="DeudaDocIdDocumentosType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="xDeudaDocIdDocumento" type="tns:DeudaDocIdDocumentoType" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="DeudaDocIdDocumentoType">
+        <xsd:sequence>
+          <xsd:element name="xTipoServicio" type="xsd:string" />
+          <xsd:element name="xDescripServ" type="xsd:string" />
+          <xsd:element name="xNumeroDoc" type="xsd:string" />
+          <xsd:element name="xFechaEmision" type="xsd:dateTime" />
+          <xsd:element name="xFechaVenc" type="xsd:dateTime" />
+          <xsd:element name="xMontoDebe" type="xsd:decimal" />
+          <xsd:element name="xMontoFact" type="xsd:decimal" />
+          <xsd:element name="xImportePagoMin" type="xsd:decimal" />
+          <xsd:element name="xMontoOriginal" type="xsd:decimal" />
+          <xsd:element name="xMontoPagado" type="xsd:decimal" />
+          <xsd:element name="xMontoAnulado" type="xsd:decimal" />
+          <xsd:element name="xPeriodoCotizacion" type="xsd:string" />
+          <xsd:element name="xFlagCodIndicCompr" type="xsd:string" />
+          <xsd:element name="xFlagCodIndicFact" type="xsd:string" />
+          <xsd:element name="xNroFactura" type="xsd:string" />
+          <xsd:element name="xNroFacturaAnulada" type="xsd:string" />
+          <xsd:element name="xTipoDocDeudor" type="xsd:string" />
+          <xsd:element name="xNroDocumentoDeudor" type="xsd:string" />
+          <xsd:element name="xCodConcepto1" type="xsd:string" />
+          <xsd:element name="xCodConcepto2" type="xsd:string" />
+          <xsd:element name="xCodConcepto3" type="xsd:string" />
+          <xsd:element name="xCodConcepto4" type="xsd:string" />
+          <xsd:element name="xCodConcepto5" type="xsd:string" />
+          <xsd:element name="xImporteConcepto1" type="xsd:decimal" />
+          <xsd:element name="xImporteConcepto2" type="xsd:decimal" />
+          <xsd:element name="xImporteConcepto3" type="xsd:decimal" />
+          <xsd:element name="xImporteConcepto4" type="xsd:decimal" />
+          <xsd:element name="xImporteConcepto5" type="xsd:decimal" />
+          <xsd:element name="xReferenciaDeuda" type="xsd:string" />
+          <xsd:element name="xDatoDocumento" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </WL5G3N0:types>
+  <WL5G3N0:message name="consultaDeudaRequest">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:consultaDeuda" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="consultaDeudaResponse">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:consultaDeudaResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="consultaDeudaDocIdRequest">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:consultaDeudaDocId" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="consultaDeudaDocIdResponse">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:consultaDeudaDocIdResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:portType name="ConsultaPagos">
+    <WL5G3N0:operation name="consultaDeuda">
+      <WL5G3N0:input message="WL5G3N1:consultaDeudaRequest" />
+      <WL5G3N0:output message="WL5G3N1:consultaDeudaResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="consultaDeudaDocId">
+      <WL5G3N0:input message="WL5G3N1:consultaDeudaDocIdRequest" />
+      <WL5G3N0:output message="WL5G3N1:consultaDeudaDocIdResponse" />
+    </WL5G3N0:operation>
+  </WL5G3N0:portType>
+  <WL5G3N0:binding name="ConsultaPagosSOAP" type="WL5G3N1:ConsultaPagos">
+    <WL5G3N2:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <WL5G3N0:operation name="consultaDeuda">
+      <WL5G3N2:operation soapAction="http://claro.com.pe/eai/oac/consultapagos/consultaDeuda" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="consultaDeudaDocId">
+      <WL5G3N2:operation soapAction="http://claro.com.pe/eai/oac/consultapagos/consultaDeudaDocId" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+  </WL5G3N0:binding>
+  <WL5G3N0:service name="ConsultaPagos">
+    <WL5G3N0:port name="ConsultaPagosSOAP" binding="WL5G3N1:ConsultaPagosSOAP">
+      <WL5G3N2:address location="http://172.19.74.141:8901/OAC_Services/Inquiry/ConsultaPagos" />
+    </WL5G3N0:port>
+  </WL5G3N0:service>
+</WL5G3N0:definitions>

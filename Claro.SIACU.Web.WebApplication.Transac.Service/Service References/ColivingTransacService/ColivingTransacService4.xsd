@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Coliving.PutDataClient" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Coliving.PutDataClient" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:40204/ColivingTransacService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Coliving.PutBillingAddress" />
+  <xs:import schemaLocation="http://localhost:40204/ColivingTransacService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Coliving.GetUpdateDataClient" />
+  <xs:import schemaLocation="http://localhost:40204/ColivingTransacService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Coliving.PostHistoryClient" />
+  <xs:import schemaLocation="http://localhost:40204/ColivingTransacService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Coliving" />
+  <xs:complexType name="DataClientRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Coliving" base="q1:HeaderToBe">
+        <xs:sequence>
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Coliving.PutBillingAddress" minOccurs="0" name="BillingAddressRequest" nillable="true" type="q2:BillingAddressRequest" />
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Coliving.GetUpdateDataClient" minOccurs="0" name="GetDataClientRequest" nillable="true" type="q3:GetUpdateDataClientRequest" />
+          <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Coliving.PostHistoryClient" minOccurs="0" name="HistoryClientDataRequest" nillable="true" type="q4:HistoryClientRequest" />
+          <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Coliving.PostHistoryClient" minOccurs="0" name="HistoryClientFactRequest" nillable="true" type="q5:HistoryClientRequest" />
+          <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Coliving.PostHistoryClient" minOccurs="0" name="HistoryClientLegalRequest" nillable="true" type="q6:HistoryClientRequest" />
+          <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Coliving.PostHistoryClient" minOccurs="0" name="HistoryClientRequest" nillable="true" type="q7:HistoryClientRequest" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DataClientRequest" nillable="true" type="tns:DataClientRequest" />
+</xs:schema>

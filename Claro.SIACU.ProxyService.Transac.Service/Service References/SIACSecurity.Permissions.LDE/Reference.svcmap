@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="0d7fd27d-abdd-4cde-95d0-7a69ebb39e0c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="C:\PROY-32650\DP_Auditoria\contratos\leerDatosEmpleado.wsdl" Protocol="file" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="auditoria.xsd" MetadataType="Schema" ID="04aa8338-2f35-47f8-9728-dd558edc151c" SourceId="1" SourceUrl="file:///C:/PROY-32650/DP_Auditoria/esquemas/auditoria.xsd" />
+    <MetadataFile FileName="HeaderGeneric_v1.xsd" MetadataType="Schema" ID="69375702-07f6-4ed7-a2af-2510cc58438c" SourceId="1" SourceUrl="file:///C:/PROY-32650/DP_Auditoria/esquemas/HeaderGeneric_v1.0.xsd" />
+    <MetadataFile FileName="leerDatosEmpleado.xsd" MetadataType="Schema" ID="d5ffd517-4b90-4247-93b7-13710729ec0a" SourceId="1" SourceUrl="file:///C:/PROY-32650/DP_Auditoria/esquemas/leerDatosEmpleado.xsd" />
+    <MetadataFile FileName="ConsultaOpcionesAuditoriaService.wsdl" MetadataType="Wsdl" ID="58a0226a-4e54-4366-9f32-5827b77849d0" SourceId="1" SourceUrl="file:///C:/PROY-32650/DP_Auditoria/contratos/leerDatosEmpleado.wsdl" />
+    <MetadataFile FileName="CommonsException.xsd" MetadataType="Schema" ID="04b1e4fc-9050-42aa-b055-115e45f53e67" SourceId="1" SourceUrl="file:///C:/PROY-32650/DP_Auditoria/esquemas/CommonsException.xsd" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

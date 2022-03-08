@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetFixedCharge" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetFixedCharge" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd3" namespace="Claro" />
+  <xs:complexType name="FixedChargeRequestTransactions">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="Claro" base="q1:Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Flag" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Valor" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FixedChargeRequestTransactions" nillable="true" type="tns:FixedChargeRequestTransactions" />
+  <xs:complexType name="FixedChargeResponseTransactions">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CargoFijo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DescError" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Error" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FixedChargeResponseTransactions" nillable="true" type="tns:FixedChargeResponseTransactions" />
+</xs:schema>

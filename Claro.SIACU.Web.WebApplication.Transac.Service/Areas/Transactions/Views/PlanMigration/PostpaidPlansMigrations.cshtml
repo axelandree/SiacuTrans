@@ -1,0 +1,111 @@
+﻿<script type="text/javascript" src="~/Areas/Transactions/Content/Lib/BloqueoF12.js"></script>
+<div id="dvPlanesNuevosMigracion">
+    @*datos cabecera*@
+    <div class="col-sm-12">
+        <div class="panel panel-default">
+
+            <table id="tbdatosNuevoPlanesMigracion" class="table table-condensed ">
+                <tr>
+                    <td>
+                        <label class="control-label">Nro Te&eacute;fono:</label>
+                    </td>
+                    <td>
+
+                        <span id="lblPost_NuevoPlanTelefono">5748632</span>
+                    </td>
+                    <td>
+                        <label class="control-label">|&ensp; Categor&iacute;a:</label>
+                    </td>
+                    <td> <span id="lblPost_NuevoPlanCategoria">Prepago</span></td>
+                    </tr>
+            </table>
+        </div>
+    </div>    
+    @*Seleccion*@
+    <div class="col-sm-12">
+
+        <center>
+            <div id="tbSeleccionarNuevosPlanesMigracion" class="panel panel-default">
+
+                <form class="form-inline">
+                    <div class="form-group">
+                        <div class="radio">
+                            <label>
+                                <input id="drPlanBasico" type="radio" name="rdSeleccionPlan"> PLANES B&Aacute;SICOS&ensp;
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="radio">
+                            <label>
+                                <input id="drPlanCombos" type="radio" name="rdSeleccionPlan"> PLANES COMBOS&ensp;
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="radio">
+                            <label>
+                                <input id="drPlanArmaPostPago" type="radio" name="rdSeleccionPlan"> PLANES "ARMA TU POSTPAGO"
+                            </label>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+            </center>
+            @*combo y grilas de nuevos planes*@
+            <div class="panel panel-default" id="dvModFamilia">
+                <form class="form-inline">
+                    <div class="col-sm-6 form-group">
+                        <label class="col-sm-2  control-label">Modalidad:</label>
+                        <div class="col-sm-3">
+                            <select class="form-control" id="ddlMigracionModalidad"></select>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        <label class="col-sm-3  control-label">Familia:</label>
+                        <div class="col-sm-3">
+                            <select class="form-control" id="ddlMigracionFamilia"></select>
+                        </div>
+                    </div>
+                </form>
+
+                @*grilla*@
+                </div>
+            <br />
+        <div>
+            <div class="col-sm-12">
+                <div id="ContenedorServiciosPlanes" class="table">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="table-responsive">
+                                <table id="tblServiciosNuevoMigracionPlan_Post" class="table  table-striped table-hover table-responsive claro-modal-tabla table-bordered " width="100%">
+                                    <thead>
+                                        <tr class="claro-bg-primary">
+                                            <th class="col-md-2">Sel</th>
+                                            <th class="col-md-10">COD_PROD</th>
+                                            <th class="col-md-10">Nombre</th>
+                                            <th class="col-md-10">TMCODE</th>
+                                            <th class="col-md-10">VERSION</th>
+                                            <th class="col-md-10">CAT_PROD</th>
+                                            <th class="col-md-10">COD_CARTA_INFO</th>
+                                            <th class="col-md-10">FECHA_INI_VIG</th>
+                                            <th class="col-md-10">FECHA_FIN_VIG</th>
+                                            <th class="col-md-10">ID_TIPO_PROD</th>
+                                            <th class="col-md-10">USUARIO</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+</div>
+</div>
+<script src="~/Areas/Transactions/Scripts/PostpaidPlanMigration/PostpaidPlansMigrations.js"></script>

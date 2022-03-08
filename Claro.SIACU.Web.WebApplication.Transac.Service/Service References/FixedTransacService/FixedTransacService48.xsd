@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.ClaroVideo.GetPersonalizaMensajeOTT" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.ClaroVideo.GetPersonalizaMensajeOTT" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd38" namespace="Tools.Entity" />
+  <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd50" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.ClaroVideo" />
+  <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd40" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.GetDataPower" />
+  <xs:complexType name="PersonalizaMensajeOTTRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="Tools.Entity" base="q1:Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="MessageRequest" nillable="true" type="tns:PersonalizaMensajeOTTMessageRequest" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PersonalizaMensajeOTTRequest" nillable="true" type="tns:PersonalizaMensajeOTTRequest" />
+  <xs:complexType name="PersonalizaMensajeOTTMessageRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Body" nillable="true" type="tns:PersonalizaMensajeOTTBodyRequest" />
+      <xs:element minOccurs="0" name="Header" nillable="true" type="tns:PersonalizaMensajeOTTHeaderRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PersonalizaMensajeOTTMessageRequest" nillable="true" type="tns:PersonalizaMensajeOTTMessageRequest" />
+  <xs:complexType name="PersonalizaMensajeOTTBodyRequest">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.ClaroVideo" minOccurs="0" name="personalizarMensajeRequest" nillable="true" type="q2:PersonalizarMensajeRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PersonalizaMensajeOTTBodyRequest" nillable="true" type="tns:PersonalizaMensajeOTTBodyRequest" />
+  <xs:complexType name="PersonalizaMensajeOTTHeaderRequest">
+    <xs:sequence>
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.GetDataPower" minOccurs="0" name="HeaderRequest" nillable="true" type="q3:HeaderRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PersonalizaMensajeOTTHeaderRequest" nillable="true" type="tns:PersonalizaMensajeOTTHeaderRequest" />
+  <xs:complexType name="PersonalizaMensajeOTTResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MessageResponse" nillable="true" type="tns:PersonalizaMensajeOTTMessageResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PersonalizaMensajeOTTResponse" nillable="true" type="tns:PersonalizaMensajeOTTResponse" />
+  <xs:complexType name="PersonalizaMensajeOTTMessageResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Body" nillable="true" type="tns:PersonalizaMensajeOTTBodyResponse" />
+      <xs:element minOccurs="0" name="Header" nillable="true" type="tns:PersonalizaMensajeOTTHeaderResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PersonalizaMensajeOTTMessageResponse" nillable="true" type="tns:PersonalizaMensajeOTTMessageResponse" />
+  <xs:complexType name="PersonalizaMensajeOTTBodyResponse">
+    <xs:sequence>
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.ClaroVideo" minOccurs="0" name="personalizarMensajeResponse" nillable="true" type="q4:PersonalizarMensajeResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PersonalizaMensajeOTTBodyResponse" nillable="true" type="tns:PersonalizaMensajeOTTBodyResponse" />
+  <xs:complexType name="PersonalizaMensajeOTTHeaderResponse">
+    <xs:sequence>
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.GetDataPower" minOccurs="0" name="HeaderResponse" nillable="true" type="q5:HeaderResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PersonalizaMensajeOTTHeaderResponse" nillable="true" type="tns:PersonalizaMensajeOTTHeaderResponse" />
+</xs:schema>

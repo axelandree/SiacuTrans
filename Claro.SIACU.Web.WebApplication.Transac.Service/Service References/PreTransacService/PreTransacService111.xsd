@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Prepaid.GetPlanesTFI" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Prepaid.GetPlanesTFI" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:40204/PreTransacService.svc?xsd=xsd13" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetDataPower" />
+  <xs:import schemaLocation="http://localhost:40204/PreTransacService.svc?xsd=xsd3" namespace="Claro" />
+  <xs:complexType name="PlanesTFIRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="Claro" base="q1:Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Body" nillable="true" type="tns:PlanesTFIRequest" />
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetDataPower" minOccurs="0" name="Header" nillable="true" type="q2:HeaderRequest" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PlanesTFIRequest" nillable="true" type="tns:PlanesTFIRequest" />
+  <xs:complexType name="ArrayOfPlanesTFIResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PlanesTFIResponse" nillable="true" type="tns:PlanesTFIResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlanesTFIResponse" nillable="true" type="tns:ArrayOfPlanesTFIResponse" />
+  <xs:complexType name="PlanesTFIResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Body" nillable="true" type="tns:BodyResponse" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetDataPower" minOccurs="0" name="Header" nillable="true" type="q3:HeaderResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PlanesTFIResponse" nillable="true" type="tns:PlanesTFIResponse" />
+  <xs:complexType name="BodyResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="TabCambioPlanTFIPostResponse" nillable="true" type="tns:obtenerTabCambioPlanTFI" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BodyResponse" nillable="true" type="tns:BodyResponse" />
+  <xs:complexType name="obtenerTabCambioPlanTFI">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="responseData" nillable="true" type="tns:responseDataObtenerTabCambioPlanTFIPost" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetDataPower" minOccurs="0" name="responseStatus" nillable="true" type="q4:ResponseStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="obtenerTabCambioPlanTFI" nillable="true" type="tns:obtenerTabCambioPlanTFI" />
+  <xs:complexType name="responseDataObtenerTabCambioPlanTFIPost">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="responseDataObtenerTabCambioPlanTFIPost" nillable="true" type="tns:responseDataObtenerTabCambioPlanTFIPost" />
+</xs:schema>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetBranchCustomer" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetBranchCustomer" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd3" namespace="Claro" />
+  <xs:complexType name="BranchCustomerResquest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="Claro" base="q1:Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="an_customer_id" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BranchCustomerResquest" nillable="true" type="tns:BranchCustomerResquest" />
+  <xs:complexType name="ArrayOfBranchCustomerResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BranchCustomerResponse" nillable="true" type="tns:BranchCustomerResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBranchCustomerResponse" nillable="true" type="tns:ArrayOfBranchCustomerResponse" />
+  <xs:complexType name="BranchCustomerResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CODCLIENTE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CODSOLOT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CONTRATO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DESCRIPCION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SUCURSAL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TIPTRA" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BranchCustomerResponse" nillable="true" type="tns:BranchCustomerResponse" />
+</xs:schema>

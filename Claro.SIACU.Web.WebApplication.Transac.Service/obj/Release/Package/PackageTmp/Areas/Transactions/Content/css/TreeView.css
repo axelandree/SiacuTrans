@@ -1,0 +1,97 @@
+﻿/*Formato del Tree List*/
+
+.treeView,
+.treeView ul {
+    margin: 0 0 0 1em;
+    padding: 0;
+    list-style: none;
+    position: relative;
+}
+
+    .treeView ul {
+        margin-left: .5em;
+    }
+
+        .treeView:before,
+        .treeView ul:before {
+            content: "";
+            display: block;
+            width: 0;
+            position: absolute;
+            top: 0;
+            height: 1em;
+            left: 0;
+            border-left: 1px solid;
+        }
+
+    .treeView li {
+        margin: 0;
+        padding: 0 1.5em;
+        line-height: 2em;
+        font-weight: bold;
+        position: relative;
+    }
+
+        .treeView li:after {
+            content: "";
+            display: block;
+            width: 10px;
+            border-left: 1px solid;
+            border-top: 1px solid;
+            position: absolute;
+            top: 1em;
+            left: 0;
+            bottom: -1em;
+        }
+
+        .treeView li:last-child:after {
+            border-left: none;
+        }
+
+/* Checkbox como folder */
+input[type='checkbox'].folder-checkbox + label:before,
+input[type='checkbox'].folder-checkbox + label:after {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+
+input[type='checkbox'].folder-checkbox + label:before {
+    content: "\e117";
+}
+
+input[type='checkbox'].folder-checkbox:checked + label:before {
+    content: "\e118";
+}
+
+/* Ocultar - mostrar ul */
+.treeView input + label + ul {
+    margin: 0 0 0 5px;
+}
+
+.treeView input ~ ul {
+    display: none;
+}
+
+.treeView label {
+    margin: 0;
+}
+
+    .treeView label,
+    .treeView label::before {
+        cursor: pointer;
+    }
+
+.treeView input:disabled + label {
+    cursor: default;
+    opacity: .6;
+}
+
+.treeView input:checked:not(:disabled) ~ ul {
+    display: block;
+}

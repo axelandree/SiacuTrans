@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetCaseInsert" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetCaseInsert" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd3" namespace="Claro" />
+  <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed" />
+  <xs:complexType name="RetentionCancelServicesRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="Claro" base="q1:Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CargoFijoActual" type="xs:double" />
+          <xs:element minOccurs="0" name="CargoFijoNuevoPlan" type="xs:double" />
+          <xs:element minOccurs="0" name="CodId" type="xs:int" />
+          <xs:element minOccurs="0" name="CodMessage" type="xs:double" />
+          <xs:element minOccurs="0" name="CodNuevoPlan" type="xs:double" />
+          <xs:element minOccurs="0" name="CustumerId" type="xs:int" />
+          <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DiasxMes" type="xs:double" />
+          <xs:element minOccurs="0" name="FechaPenalidad" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NroFacturas" type="xs:double" />
+          <xs:element minOccurs="0" name="NroTelefono" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ParameterID" type="xs:int" />
+          <xs:element minOccurs="0" name="Phone" type="xs:int" />
+          <xs:element minOccurs="0" name="SnCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Tipo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TmCodeCom" type="xs:int" />
+          <xs:element minOccurs="0" name="Valor" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ValorApadece" type="xs:double" />
+          <xs:element minOccurs="0" name="vBonoID" type="xs:int" />
+          <xs:element minOccurs="0" name="vEstado" type="xs:int" />
+          <xs:element minOccurs="0" name="vIdMotive" type="xs:int" />
+          <xs:element minOccurs="0" name="vIdTypeWork" type="xs:int" />
+          <xs:element minOccurs="0" name="vNivel" type="xs:int" />
+          <xs:element minOccurs="0" name="vTipoLista" type="xs:int" />
+          <xs:element minOccurs="0" name="vtransaction" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetentionCancelServicesRequest" nillable="true" type="tns:RetentionCancelServicesRequest" />
+  <xs:complexType name="RetentionCancelServicesResponse">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed" minOccurs="0" name="AccionTypes" nillable="true" type="q2:ArrayOfGenericItem" />
+      <xs:element minOccurs="0" name="AcuerdoIdSalida" type="xs:double" />
+      <xs:element minOccurs="0" name="CargoFijoActual" type="xs:double" />
+      <xs:element minOccurs="0" name="CargoFijoDiario" type="xs:double" />
+      <xs:element minOccurs="0" name="CargoFijoNuevoPlan" type="xs:double" />
+      <xs:element minOccurs="0" name="CodId" type="xs:int" />
+      <xs:element minOccurs="0" name="CodMessage" nillable="true" type="xs:string" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed" minOccurs="0" name="CurrentDiscounts" nillable="true" type="q3:ArrayOfCurrentDiscountFixedCharge" />
+      <xs:element minOccurs="0" name="DiasPendientes" type="xs:double" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NroFacturas" type="xs:double" />
+      <xs:element minOccurs="0" name="PenalidaAPADECE" type="xs:double" />
+      <xs:element minOccurs="0" name="PenalidadPCS" type="xs:double" />
+      <xs:element minOccurs="0" name="Phone" type="xs:int" />
+      <xs:element minOccurs="0" name="PrecioLista" type="xs:double" />
+      <xs:element minOccurs="0" name="PrecioVenta" type="xs:double" />
+      <xs:element minOccurs="0" name="Resultado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ValorApadece" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RetentionCancelServicesResponse" nillable="true" type="tns:RetentionCancelServicesResponse" />
+  <xs:complexType name="AddDayWorkRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="Claro" base="q4:Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CodError" type="xs:int" />
+          <xs:element minOccurs="0" name="DesError" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FechaInicio" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FechaResultado" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NumeroDias" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AddDayWorkRequest" nillable="true" type="tns:AddDayWorkRequest" />
+  <xs:complexType name="AddDayWorkResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodError" type="xs:int" />
+      <xs:element minOccurs="0" name="DescError" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaResultado" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AddDayWorkResponse" nillable="true" type="tns:AddDayWorkResponse" />
+  <xs:complexType name="CaseInsertRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="Claro" base="q5:Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ACCOUNT" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="APELLIDO_AGENTE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CASO_ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CASO_PADRE_ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CLASE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CLASE_CODE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="COD_CASO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="COLA" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CONDICION" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CONTRATO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CUENTA" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DUMMY_ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ESTADO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FASE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FECHA_CREACION" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FLAG_CREACION" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FLAG_INTERACCION" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FLAG_WORKGROUP" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FLAT_INTERACCION" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ID_CASO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ID_INTERACCION" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="INCIDENCIA_SD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="INCONVENIENTE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="INCONVENIENTE_CODE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MESSAGE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="METODO_CONTACTO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NOMBRE_AGENTE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NOTAS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NRO_RECLAMO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NRO_REPORTE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OBJID_CASO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OBJID_CONTACTO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OBJID_SITE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ORIGEN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PAGINA_CASO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PHONE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PLANO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PRIORIDAD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PROPIETARIO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RESOLUCION" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RESULTADO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SERVICIO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SERVICIO_CODE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SEVERIDAD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SITIO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SUBCLASE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SUBCLASE_CODE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TELEFONO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TIPIFICACION" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TIPO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TIPO_CODE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TIPO_INTERACCION" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="USUARIO_ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="USUARIO_PROCESO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VALOR_1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VALOR_2" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CaseInsertRequest" nillable="true" type="tns:CaseInsertRequest" />
+  <xs:complexType name="CaseInsertResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="rCasoId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="rFlagInsercion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="rMsgText" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CaseInsertResponse" nillable="true" type="tns:CaseInsertResponse" />
+</xs:schema>

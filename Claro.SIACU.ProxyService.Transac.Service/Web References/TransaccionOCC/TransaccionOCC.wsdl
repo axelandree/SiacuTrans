@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WL5G3N0:definitions xmlns:WL5G3N2="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:WL5G3N1="http://claro.com.pe/eai/billingservices/bscs/transaccionocc/" name="TransaccionOCC" targetNamespace="http://claro.com.pe/eai/billingservices/bscs/transaccionocc/" xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/">
+  <WL5G3N0:types>
+    <xsd:schema xmlns:tns="http://claro.com.pe/eai/billingservices/bscs/transaccionocc/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:Q1="http://claro.com.pe/eai/servicecommons/" xmlns:Q2="http://claro.com.pe/eai/billingservices/bscs/transaccionocc/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" elementFormDefault="qualified" targetNamespace="http://claro.com.pe/eai/billingservices/bscs/transaccionocc/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import schemaLocation="http://limdesosbv05.tim.com.pe:8909/Billing_Services/BSCS/Transaction/TransaccionOCC?SCHEMA%2FUtilities%2Fxsd%2FAudit" namespace="http://claro.com.pe/eai/servicecommons/" />
+      <xsd:element name="generaOCCReq">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="txId" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="ipApp" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="usrApp" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="customerId" type="xsd:decimal" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="codigoOcc" type="xsd:decimal" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="nroCuotas" type="xsd:decimal" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="montoOcc" type="xsd:float" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="recDate" type="xsd:dateTime" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="remark" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="anularOCCReq">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="txId" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="ipApp" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="usrApp" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="cuenta" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="numOcc" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="motivo" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="generaOCCResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="audit" type="Q1:AuditType" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="registraOcc" type="xsd:decimal" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="anularOCCResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="audit" type="Q1:AuditType" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GeneraOCCDetalleRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="txId" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="ipApp" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="usrApp" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="customerId" type="xsd:decimal" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="codigoOcc" type="xsd:decimal" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="nroCuotas" type="xsd:decimal" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="montoOcc" type="xsd:float" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="recDate" type="xsd:dateTime" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="remark" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GeneraOCCDetalleResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="audit" type="Q1:AuditType" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="numeroOcc" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="EliminarOCCRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="txId" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="ipApp" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="usrApp" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="customerId" type="xsd:decimal" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="numSeq" type="xsd:decimal" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="EliminarOCCResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="audit" type="Q1:AuditType" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </WL5G3N0:types>
+  <WL5G3N0:message name="generaOCCRequestMessage">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:generaOCCReq" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="generaOCCResponseMessage">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:generaOCCResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="anularOCCRequestMessage">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:anularOCCReq" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="anularOCCResponseMessage">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:anularOCCResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="GeneraOCCDetalleRequest">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:GeneraOCCDetalleRequest" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="GeneraOCCDetalleResponse">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:GeneraOCCDetalleResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="EliminarOCCRequest">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:EliminarOCCRequest" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="EliminarOCCResponse">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:EliminarOCCResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:portType name="TransaccionOCCPort">
+    <WL5G3N0:operation name="GeneraOCC">
+      <WL5G3N0:input message="WL5G3N1:generaOCCRequestMessage" />
+      <WL5G3N0:output message="WL5G3N1:generaOCCResponseMessage" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="AnularOCC">
+      <WL5G3N0:input message="WL5G3N1:anularOCCRequestMessage" />
+      <WL5G3N0:output message="WL5G3N1:anularOCCResponseMessage" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="GeneraOCCDetalle">
+      <WL5G3N0:input message="WL5G3N1:GeneraOCCDetalleRequest" />
+      <WL5G3N0:output message="WL5G3N1:GeneraOCCDetalleResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="EliminarOCC">
+      <WL5G3N0:input message="WL5G3N1:EliminarOCCRequest" />
+      <WL5G3N0:output message="WL5G3N1:EliminarOCCResponse" />
+    </WL5G3N0:operation>
+  </WL5G3N0:portType>
+  <WL5G3N0:binding name="TransaccionOCCSOAP" type="WL5G3N1:TransaccionOCCPort">
+    <WL5G3N2:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <WL5G3N0:operation name="GeneraOCC">
+      <WL5G3N2:operation soapAction="http://claro.com.pe/eai/billingservices/bscs/transaccionocc/GeneraOCC" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="AnularOCC">
+      <WL5G3N2:operation soapAction="http://claro.com.pe/eai/billingservices/bscs/transaccionocc/AnularOCC" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="GeneraOCCDetalle">
+      <WL5G3N2:operation soapAction="http://claro.com.pe/eai/billingservices/bscs/transaccionocc/GeneraOCCDetalle" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="EliminarOCC">
+      <WL5G3N2:operation soapAction="http://claro.com.pe/eai/billingservices/bscs/transaccionocc/EliminarOCC" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+  </WL5G3N0:binding>
+  <WL5G3N0:service name="TransaccionOCC">
+    <WL5G3N0:port name="TransaccionOCCSOAP" binding="WL5G3N1:TransaccionOCCSOAP">
+      <WL5G3N2:address location="http://limdesosbv05.tim.com.pe:8909/Billing_Services/BSCS/Transaction/TransaccionOCC" />
+    </WL5G3N0:port>
+  </WL5G3N0:service>
+</WL5G3N0:definitions>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WL5G3N0:definitions xmlns:WL5G3N2="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:WL5G3N1="http://claro.com.pe/eai/crmservices/clarify/transaccioninteraccionesasync/" name="TransaccionInteraccionesAsync" targetNamespace="http://claro.com.pe/eai/crmservices/clarify/transaccioninteraccionesasync/" xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/">
+  <WL5G3N0:types>
+    <xsd:schema xmlns:aud="http://claro.com.pe/eai/servicecommons/" xmlns:tns="http://claro.com.pe/eai/crmservices/clarify/transaccioninteraccionesasync/" xmlns:cla="http://claro.com.pe/eai/crm/clarify/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://claro.com.pe/eai/crmservices/clarify/transaccioninteraccionesasync/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import schemaLocation="http://limdesosbv05.tim.com.pe:8909/CRM_Services/Clarify/Transaction/TransaccionInteraccionesAsync?SCHEMA%2FCRM+Services%2FClarify%2FCommons%2Fxsd%2FClarify" namespace="http://claro.com.pe/eai/crm/clarify/" />
+      <xsd:import schemaLocation="http://limdesosbv05.tim.com.pe:8909/CRM_Services/Clarify/Transaction/TransaccionInteraccionesAsync?SCHEMA%2FUtilities%2Fxsd%2FAudit" namespace="http://claro.com.pe/eai/servicecommons/" />
+      <xsd:element name="crearInteraccion">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="txId" type="xsd:string" />
+            <xsd:element name="interaccion" type="cla:InteraccionType" />
+            <xsd:element name="interaccionPlus" type="cla:InteraccionPlusType" />
+            <xsd:element name="detalleInteraccion" type="tns:detalleInteraccionType" />
+            <xsd:element name="flagProceso" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="detalleInteraccionType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="detalle" type="cla:DetInteraccionType" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="crearInteraccionResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="audit" type="aud:AuditType" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </WL5G3N0:types>
+  <WL5G3N0:message name="crearInteraccionRequest">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:crearInteraccion" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="crearInteraccionResponse">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:crearInteraccionResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:portType name="TransaccionInteraccionesAsync">
+    <WL5G3N0:operation name="crearInteraccion">
+      <WL5G3N0:input message="WL5G3N1:crearInteraccionRequest" />
+      <WL5G3N0:output message="WL5G3N1:crearInteraccionResponse" />
+    </WL5G3N0:operation>
+  </WL5G3N0:portType>
+  <WL5G3N0:binding name="TransaccionInteraccionesAsyncSOAP" type="WL5G3N1:TransaccionInteraccionesAsync">
+    <WL5G3N2:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <WL5G3N0:operation name="crearInteraccion">
+      <WL5G3N2:operation soapAction="http://claro.com.pe/eai/crmservices/clarify/transaccioninteraccionesasync/crearInteraccion" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+  </WL5G3N0:binding>
+  <WL5G3N0:service name="TransaccionInteraccionesAsync">
+    <WL5G3N0:port name="TransaccionInteraccionesAsyncSOAP" binding="WL5G3N1:TransaccionInteraccionesAsyncSOAP">
+      <WL5G3N2:address location="http://limdesosbv05.tim.com.pe:8909/CRM_Services/Clarify/Transaction/TransaccionInteraccionesAsync" />
+    </WL5G3N0:port>
+  </WL5G3N0:service>
+</WL5G3N0:definitions>

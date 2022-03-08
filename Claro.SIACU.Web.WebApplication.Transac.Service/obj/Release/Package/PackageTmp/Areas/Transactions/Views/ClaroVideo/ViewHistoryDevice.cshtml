@@ -1,0 +1,42 @@
+﻿<script type="text/javascript" src="~/Areas/Transactions/Content/Lib/BloqueoF12.js"></script>
+<div id="ContentSuscripcionClaroVideoViewHistoryDevice">
+    <div class="panel panel-default" style="margin-left:15px; margin-right:15px">
+        <div class="panel">
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-2"><label for="FechaDesde" class="">Fecha desde: <span class="glyphicon glyphicon-calendar"></span></label> </div>
+                <div class="col-md-2"><input type="text" class="form-control" id="txtFechaDesde" value="" placeholder="dd/mm/yyyy" /></div>
+                <div class="col-md-2"><label for="FechaHasta" class="">Fecha Hasta: <span class="glyphicon glyphicon-calendar"></span></label> </div>
+                <div class="col-md-2"><input type="text" class="form-control" id="txtFechaHasta" value="" placeholder="dd/mm/yyyy" /></div>
+                <div class="col-md-2">
+                    <button style="padding-left: 35px; padding-right: 35px; margin: 5px; " class="btn btn-danger btn-sm" id="btnSearchDevice" type="button">Buscar</button>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+        </div>
+        <div class="panel-body">
+            <div class="row" style="margin-left:1px; margin-right:1px">
+                <div class="well">
+                    <div class="table-responsive">
+                        <table id="tblDatadevice" class="table  table-striped table-hover table-responsive claro-modal-tabla table-bordered">
+                            <thead class="claro-bg-primary">
+                                <tr>
+                                    <th style="text-align:center">Dispositivo</th>
+                                    <th style="text-align:center">Nombre</th>
+                                    <th style="text-align:center">Product: ID/Serial</th>
+                                    <th style="text-align:center">Fecha de Activacion</th>
+                                    <th style="text-align:center">Fecha de Expiracion</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <input type="hidden" id="hdSession" value="@ViewBag.Session" />
+            <input type="hidden" id="hdTelefono" value="@ViewBag.Telefono" />
+            <input type="hidden" id="hdType" value="@ViewBag.Type" />
+        </div>
+    </div>
+</div>
+@Scripts.Render("~/bundles/Transactions/ViewHistoryDevice")

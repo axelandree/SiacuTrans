@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s0:definitions xmlns:s2="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s1="http://pe/com/claro/esb/services/serviciospostpago/ws" xmlns="" name="ServiciosPostPagoWSServiceDefinitions" targetNamespace="http://pe/com/claro/esb/services/serviciospostpago/ws" xmlns:s0="http://schemas.xmlsoap.org/wsdl/">
+  <s0:types>
+    <xsd:schema xmlns="http://pe/com/claro/serviciosPostPago/schemas/serviciosPostPago" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://pe/com/claro/serviciosPostPago/schemas/serviciosPostPago" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:annotation>
+        <xsd:documentation xml:lang="es">
+			XML Schema Servicios PostPago
+		</xsd:documentation>
+      </xsd:annotation>
+      <xsd:element name="contratosTelefonoRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="login" type="xsd:string" />
+            <xsd:element name="sistema" type="xsd:string" />
+            <xsd:element name="msisdn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="contratosTelefonoResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" name="contrato" type="contrato" />
+            <xsd:element name="errNum" type="xsd:string" />
+            <xsd:element name="errMsj" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="contrato">
+        <xsd:sequence>
+          <xsd:element name="custCode" type="xsd:string" />
+          <xsd:element name="nombre" type="xsd:string" />
+          <xsd:element name="coId" type="xsd:string" />
+          <xsd:element name="estado" type="xsd:string" />
+          <xsd:element name="fecha" type="xsd:string" />
+          <xsd:element name="razon" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="serviciosContratoRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="login" type="xsd:string" />
+            <xsd:element name="sistema" type="xsd:string" />
+            <xsd:element name="coId" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="serviciosContratoResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="timDes" type="xsd:string" />
+            <xsd:element maxOccurs="unbounded" name="servicio" type="servicio" />
+            <xsd:element name="errNum" type="xsd:string" />
+            <xsd:element name="errMsj" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="servicio">
+        <xsd:sequence>
+          <xsd:element name="coGrp" type="xsd:string" />
+          <xsd:element name="deGrp" type="xsd:string" />
+          <xsd:element name="noGrp" type="xsd:string" />
+          <xsd:element name="coSer" type="xsd:string" />
+          <xsd:element name="deSer" type="xsd:string" />
+          <xsd:element name="noSer" type="xsd:string" />
+          <xsd:element name="coExcl" type="xsd:string" />
+          <xsd:element name="deExcl" type="xsd:string" />
+          <xsd:element name="estado" type="xsd:string" />
+          <xsd:element name="valido" type="xsd:string" />
+          <xsd:element name="suscrip" type="xsd:string" />
+          <xsd:element name="cargoFijo" type="xsd:string" />
+          <xsd:element name="cuota" type="xsd:string" />
+          <xsd:element name="final" type="xsd:string" />
+          <xsd:element name="period" type="xsd:string" />
+          <xsd:element name="BloqAct" type="xsd:string" />
+          <xsd:element name="BloqDes" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="serviciosBSCSServComercialRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="login" type="xsd:string" />
+            <xsd:element name="sistema" type="xsd:string" />
+            <xsd:element name="coSer" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="serviciosBSCSServComercialResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="deSer" type="xsd:string" />
+            <xsd:element maxOccurs="unbounded" name="servicioBscs" type="servicioBscs" />
+            <xsd:element name="errNum" type="xsd:string" />
+            <xsd:element name="errMsj" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="servicioBscs">
+        <xsd:sequence>
+          <xsd:element name="servicio" type="xsd:string" />
+          <xsd:element name="paquete" type="xsd:string" />
+          <xsd:element name="estado" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="registraServicioComercialRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="login" type="xsd:string" />
+            <xsd:element name="sistema" type="xsd:string" />
+            <xsd:element name="idTransaccion" type="xsd:string" />
+            <xsd:element name="coId" type="xsd:string" />
+            <xsd:element name="coSer" type="xsd:string" />
+            <xsd:element name="tipReg" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="registraServicioComercialResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="errNum" type="xsd:string" />
+            <xsd:element name="errMsj" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="consultaServicioEstadoRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="login" type="xsd:string" />
+            <xsd:element name="sistema" type="xsd:string" />
+            <xsd:element name="coId" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="consultaServicioEstadoResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="tmDes" type="xsd:string" />
+            <xsd:element maxOccurs="unbounded" name="servicioEstado" type="servicio" />
+            <xsd:element name="errNum" type="xsd:string" />
+            <xsd:element name="errMsj" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://pe/com/claro/esb/services/serviciospostpago/ws" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://pe/com/claro/serviciosPostPago/schemas/serviciosPostPago" />
+      <xs:element name="consultaServicioEstado">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:ser="http://pe/com/claro/serviciosPostPago/schemas/serviciosPostPago" ref="ser:consultaServicioEstadoRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="consultaServicioEstadoResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:ser="http://pe/com/claro/serviciosPostPago/schemas/serviciosPostPago" ref="ser:consultaServicioEstadoResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="serviciosContrato">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:ser="http://pe/com/claro/serviciosPostPago/schemas/serviciosPostPago" ref="ser:serviciosContratoRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="serviciosContratoResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:ser="http://pe/com/claro/serviciosPostPago/schemas/serviciosPostPago" ref="ser:serviciosContratoResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="contratosTelefono">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:ser="http://pe/com/claro/serviciosPostPago/schemas/serviciosPostPago" ref="ser:contratosTelefonoRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="contratosTelefonoResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:ser="http://pe/com/claro/serviciosPostPago/schemas/serviciosPostPago" ref="ser:contratosTelefonoResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="registraServicioComercial">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:ser="http://pe/com/claro/serviciosPostPago/schemas/serviciosPostPago" ref="ser:registraServicioComercialRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="registraServicioComercialResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:ser="http://pe/com/claro/serviciosPostPago/schemas/serviciosPostPago" ref="ser:registraServicioComercialResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="serviciosBSCSServComercial">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:ser="http://pe/com/claro/serviciosPostPago/schemas/serviciosPostPago" ref="ser:serviciosBSCSServComercialRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="serviciosBSCSServComercialResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:ser="http://pe/com/claro/serviciosPostPago/schemas/serviciosPostPago" ref="ser:serviciosBSCSServComercialResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </s0:types>
+  <s0:message name="consultaServicioEstado">
+    <s0:part name="parameters" element="s1:consultaServicioEstado" />
+  </s0:message>
+  <s0:message name="consultaServicioEstadoResponse">
+    <s0:part name="parameters" element="s1:consultaServicioEstadoResponse" />
+  </s0:message>
+  <s0:message name="serviciosContrato">
+    <s0:part name="parameters" element="s1:serviciosContrato" />
+  </s0:message>
+  <s0:message name="serviciosContratoResponse">
+    <s0:part name="parameters" element="s1:serviciosContratoResponse" />
+  </s0:message>
+  <s0:message name="contratosTelefono">
+    <s0:part name="parameters" element="s1:contratosTelefono" />
+  </s0:message>
+  <s0:message name="contratosTelefonoResponse">
+    <s0:part name="parameters" element="s1:contratosTelefonoResponse" />
+  </s0:message>
+  <s0:message name="registraServicioComercial">
+    <s0:part name="parameters" element="s1:registraServicioComercial" />
+  </s0:message>
+  <s0:message name="registraServicioComercialResponse">
+    <s0:part name="parameters" element="s1:registraServicioComercialResponse" />
+  </s0:message>
+  <s0:message name="serviciosBSCSServComercial">
+    <s0:part name="parameters" element="s1:serviciosBSCSServComercial" />
+  </s0:message>
+  <s0:message name="serviciosBSCSServComercialResponse">
+    <s0:part name="parameters" element="s1:serviciosBSCSServComercialResponse" />
+  </s0:message>
+  <s0:portType name="ServiciosPostPagoWS">
+    <s0:operation name="consultaServicioEstado" parameterOrder="parameters">
+      <s0:input message="s1:consultaServicioEstado" />
+      <s0:output message="s1:consultaServicioEstadoResponse" />
+    </s0:operation>
+    <s0:operation name="serviciosContrato" parameterOrder="parameters">
+      <s0:input message="s1:serviciosContrato" />
+      <s0:output message="s1:serviciosContratoResponse" />
+    </s0:operation>
+    <s0:operation name="contratosTelefono" parameterOrder="parameters">
+      <s0:input message="s1:contratosTelefono" />
+      <s0:output message="s1:contratosTelefonoResponse" />
+    </s0:operation>
+    <s0:operation name="registraServicioComercial" parameterOrder="parameters">
+      <s0:input message="s1:registraServicioComercial" />
+      <s0:output message="s1:registraServicioComercialResponse" />
+    </s0:operation>
+    <s0:operation name="serviciosBSCSServComercial" parameterOrder="parameters">
+      <s0:input message="s1:serviciosBSCSServComercial" />
+      <s0:output message="s1:serviciosBSCSServComercialResponse" />
+    </s0:operation>
+  </s0:portType>
+  <s0:binding name="ServiciosPostPagoWSServiceSoapBinding" type="s1:ServiciosPostPagoWS">
+    <s2:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <s0:operation name="consultaServicioEstado">
+      <s2:operation soapAction="" style="document" />
+      <s0:input>
+        <s2:body use="literal" parts="parameters" />
+      </s0:input>
+      <s0:output>
+        <s2:body use="literal" parts="parameters" />
+      </s0:output>
+    </s0:operation>
+    <s0:operation name="serviciosContrato">
+      <s2:operation soapAction="" style="document" />
+      <s0:input>
+        <s2:body use="literal" parts="parameters" />
+      </s0:input>
+      <s0:output>
+        <s2:body use="literal" parts="parameters" />
+      </s0:output>
+    </s0:operation>
+    <s0:operation name="contratosTelefono">
+      <s2:operation soapAction="" style="document" />
+      <s0:input>
+        <s2:body use="literal" parts="parameters" />
+      </s0:input>
+      <s0:output>
+        <s2:body use="literal" parts="parameters" />
+      </s0:output>
+    </s0:operation>
+    <s0:operation name="registraServicioComercial">
+      <s2:operation soapAction="" style="document" />
+      <s0:input>
+        <s2:body use="literal" parts="parameters" />
+      </s0:input>
+      <s0:output>
+        <s2:body use="literal" parts="parameters" />
+      </s0:output>
+    </s0:operation>
+    <s0:operation name="serviciosBSCSServComercial">
+      <s2:operation soapAction="" style="document" />
+      <s0:input>
+        <s2:body use="literal" parts="parameters" />
+      </s0:input>
+      <s0:output>
+        <s2:body use="literal" parts="parameters" />
+      </s0:output>
+    </s0:operation>
+  </s0:binding>
+  <s0:service name="ServiciosPostPagoWSService">
+    <s0:port name="ServiciosPostPagoWSSoapPort" binding="s1:ServiciosPostPagoWSServiceSoapBinding">
+      <s2:address location="http://limdeseaiv24.tim.com.pe:8909/ServiciosPostPagoWS/ServiciosPostPagoWS" />
+    </s0:port>
+  </s0:service>
+</s0:definitions>

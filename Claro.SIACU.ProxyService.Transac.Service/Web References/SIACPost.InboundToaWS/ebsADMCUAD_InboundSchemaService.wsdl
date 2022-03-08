@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://claro.com.pe/ebsADMCUAD/Inbound" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="ebsADMCUAD_InboundSchemaService" targetNamespace="http://claro.com.pe/ebsADMCUAD/Inbound" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://limdeseaiv28.tim.com.pe:8909/ebsADMCUAD_InboundWS/ebsADMCUAD_InboundSB11?xsd=1" namespace="http://claro.com.pe/ebsADMCUAD/Inbound/types" />
+    </xsd:schema>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://limdeseaiv28.tim.com.pe:8909/ebsADMCUAD_InboundWS/ebsADMCUAD_InboundSB11?xsd=2" namespace="http://claro.com.pe/ebsADMCUAD/Inbound/base" />
+    </xsd:schema>
+  </types>
+  <message name="gestionarOrdenSGA">
+    <part xmlns:ns1="http://claro.com.pe/ebsADMCUAD/Inbound/types" name="gestionarOrdenSGARequest" element="ns1:gestionarOrdenSGARequest" />
+  </message>
+  <message name="gestionarOrdenSGAResponse">
+    <part xmlns:ns2="http://claro.com.pe/ebsADMCUAD/Inbound/types" name="gestionarOrdenResponse" element="ns2:gestionarOrdenResponse" />
+  </message>
+  <message name="cancelarOrdenSGA">
+    <part xmlns:ns3="http://claro.com.pe/ebsADMCUAD/Inbound/types" name="cancelarOrdenSGARequest" element="ns3:cancelarOrdenSGARequest" />
+  </message>
+  <message name="cancelarOrdenSGAResponse">
+    <part xmlns:ns4="http://claro.com.pe/ebsADMCUAD/Inbound/types" name="cancelarOrdenResponse" element="ns4:cancelarOrdenResponse" />
+  </message>
+  <message name="cargarInventarioTotal">
+    <part xmlns:ns5="http://claro.com.pe/ebsADMCUAD/Inbound/types" name="cargarInventarioTotalRequest" element="ns5:cargarInventarioTotalRequest" />
+  </message>
+  <message name="cargarInventarioTotalResponse">
+    <part xmlns:ns6="http://claro.com.pe/ebsADMCUAD/Inbound/types" name="cargarInventarioTotalResponse" element="ns6:cargarInventarioTotalResponse" />
+  </message>
+  <message name="cargarInventarioTotalSGA">
+    <part xmlns:ns7="http://claro.com.pe/ebsADMCUAD/Inbound/types" name="cargarInventarioTotalSGARequest" element="ns7:cargarInventarioTotalSGARequest" />
+  </message>
+  <message name="cargarInventarioTotalSGAResponse">
+    <part xmlns:ns8="http://claro.com.pe/ebsADMCUAD/Inbound/types" name="cargarInventarioTotalResponse" element="ns8:cargarInventarioTotalResponse" />
+  </message>
+  <message name="cargarInventarioIncremental">
+    <part xmlns:ns9="http://claro.com.pe/ebsADMCUAD/Inbound/types" name="cargarInventarioIncrementalRequest" element="ns9:cargarInventarioIncrementalRequest" />
+  </message>
+  <message name="cargarInventarioIncrementalResponse">
+    <part xmlns:ns10="http://claro.com.pe/ebsADMCUAD/Inbound/types" name="cargarInventarioIncrementalResponse" element="ns10:cargarInventarioIncrementalResponse" />
+  </message>
+  <message name="cargarInventarioIncrementalSGA">
+    <part xmlns:ns11="http://claro.com.pe/ebsADMCUAD/Inbound/types" name="cargarInventarioIncrementalSGARequest" element="ns11:cargarInventarioIncrementalSGARequest" />
+  </message>
+  <message name="cargarInventarioIncrementalSGAResponse">
+    <part xmlns:ns12="http://claro.com.pe/ebsADMCUAD/Inbound/types" name="cargarInventarioIncrementalResponse" element="ns12:cargarInventarioIncrementalResponse" />
+  </message>
+  <message name="gestionarOrden">
+    <part xmlns:ns13="http://claro.com.pe/ebsADMCUAD/Inbound/types" name="gestionarOrdenRequest" element="ns13:gestionarOrdenRequest" />
+  </message>
+  <message name="gestionarOrdenResponse">
+    <part xmlns:ns14="http://claro.com.pe/ebsADMCUAD/Inbound/types" name="gestionarOrdenResponse" element="ns14:gestionarOrdenResponse" />
+  </message>
+  <message name="cancelarOrden">
+    <part xmlns:ns15="http://claro.com.pe/ebsADMCUAD/Inbound/types" name="cancelarOrdenRequest" element="ns15:cancelarOrdenRequest" />
+  </message>
+  <message name="cancelarOrdenResponse">
+    <part xmlns:ns16="http://claro.com.pe/ebsADMCUAD/Inbound/types" name="cancelarOrdenResponse" element="ns16:cancelarOrdenResponse" />
+  </message>
+  <portType name="ebsADMCUADInboundSchemaPortype">
+    <operation name="gestionarOrdenSGA">
+      <input wsam:Action="http://claro.com.pe/ebsADMCUAD/Inbound/gestionarOrdenSGA" message="tns:gestionarOrdenSGA" />
+      <output wsam:Action="http://claro.com.pe/ebsADMCUAD/Inbound/ebsADMCUADInboundSchemaPortype/gestionarOrdenSGAResponse" message="tns:gestionarOrdenSGAResponse" />
+    </operation>
+    <operation name="cancelarOrdenSGA">
+      <input wsam:Action="http://claro.com.pe/ebsADMCUAD/Inbound/cancelarOrdenSGA" message="tns:cancelarOrdenSGA" />
+      <output wsam:Action="http://claro.com.pe/ebsADMCUAD/Inbound/ebsADMCUADInboundSchemaPortype/cancelarOrdenSGAResponse" message="tns:cancelarOrdenSGAResponse" />
+    </operation>
+    <operation name="cargarInventarioTotal">
+      <input wsam:Action="http://claro.com.pe/ebsADMCUAD/Inbound/cargarInventarioTotal" message="tns:cargarInventarioTotal" />
+      <output wsam:Action="http://claro.com.pe/ebsADMCUAD/Inbound/ebsADMCUADInboundSchemaPortype/cargarInventarioTotalResponse" message="tns:cargarInventarioTotalResponse" />
+    </operation>
+    <operation name="cargarInventarioTotalSGA">
+      <input wsam:Action="http://claro.com.pe/ebsADMCUAD/Inbound/cargarInventarioTotalSGA" message="tns:cargarInventarioTotalSGA" />
+      <output wsam:Action="http://claro.com.pe/ebsADMCUAD/Inbound/ebsADMCUADInboundSchemaPortype/cargarInventarioTotalSGAResponse" message="tns:cargarInventarioTotalSGAResponse" />
+    </operation>
+    <operation name="cargarInventarioIncremental">
+      <input wsam:Action="http://claro.com.pe/ebsADMCUAD/Inbound/cargarInventarioIncremental" message="tns:cargarInventarioIncremental" />
+      <output wsam:Action="http://claro.com.pe/ebsADMCUAD/Inbound/ebsADMCUADInboundSchemaPortype/cargarInventarioIncrementalResponse" message="tns:cargarInventarioIncrementalResponse" />
+    </operation>
+    <operation name="cargarInventarioIncrementalSGA">
+      <input wsam:Action="http://claro.com.pe/ebsADMCUAD/Inbound/cargarInventarioIncrementalSGA" message="tns:cargarInventarioIncrementalSGA" />
+      <output wsam:Action="http://claro.com.pe/ebsADMCUAD/Inbound/ebsADMCUADInboundSchemaPortype/cargarInventarioIncrementalSGAResponse" message="tns:cargarInventarioIncrementalSGAResponse" />
+    </operation>
+    <operation name="gestionarOrden">
+      <input wsam:Action="http://claro.com.pe/ebsADMCUAD/Inbound/gestionarOrden" message="tns:gestionarOrden" />
+      <output wsam:Action="http://claro.com.pe/ebsADMCUAD/Inbound/ebsADMCUADInboundSchemaPortype/gestionarOrdenResponse" message="tns:gestionarOrdenResponse" />
+    </operation>
+    <operation name="cancelarOrden">
+      <input wsam:Action="http://claro.com.pe/ebsADMCUAD/Inbound/cancelarOrden" message="tns:cancelarOrden" />
+      <output wsam:Action="http://claro.com.pe/ebsADMCUAD/Inbound/ebsADMCUADInboundSchemaPortype/cancelarOrdenResponse" message="tns:cancelarOrdenResponse" />
+    </operation>
+  </portType>
+  <binding name="ebsADMCUAD_InboundSchemaPortSB11Binding" type="tns:ebsADMCUADInboundSchemaPortype">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="gestionarOrdenSGA">
+      <soap:operation soapAction="http://claro.com.pe/ebsADMCUAD/Inbound/gestionarOrdenSGA" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="cancelarOrdenSGA">
+      <soap:operation soapAction="http://claro.com.pe/ebsADMCUAD/Inbound/cancelarOrdenSGA" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="cargarInventarioTotal">
+      <soap:operation soapAction="http://claro.com.pe/ebsADMCUAD/Inbound/cargarInventarioTotal" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="cargarInventarioTotalSGA">
+      <soap:operation soapAction="http://claro.com.pe/ebsADMCUAD/Inbound/cargarInventarioTotalSGA" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="cargarInventarioIncremental">
+      <soap:operation soapAction="http://claro.com.pe/ebsADMCUAD/Inbound/cargarInventarioIncremental" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="cargarInventarioIncrementalSGA">
+      <soap:operation soapAction="http://claro.com.pe/ebsADMCUAD/Inbound/cargarInventarioIncrementalSGA" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="gestionarOrden">
+      <soap:operation soapAction="http://claro.com.pe/ebsADMCUAD/Inbound/gestionarOrden" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="cancelarOrden">
+      <soap:operation soapAction="http://claro.com.pe/ebsADMCUAD/Inbound/cancelarOrden" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="ebsADMCUAD_InboundSchemaService">
+    <port name="ebsADMCUAD_InboundSchemaPortSB11" binding="tns:ebsADMCUAD_InboundSchemaPortSB11Binding">
+      <soap:address location="http://limdeseaiv28.tim.com.pe:8909/ebsADMCUAD_InboundWS/ebsADMCUAD_InboundSB11" />
+    </port>
+  </service>
+</definitions>

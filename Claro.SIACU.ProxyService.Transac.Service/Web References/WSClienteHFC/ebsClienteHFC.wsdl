@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://claro.com.pe/eai/ebs/services/clienteHFC/ws" xmlns:xsde="http://claro.com.pe/eai/ebs/services/clienteHFC/bean" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://claro.com.pe/eai/ebs/services/clienteHFC/ws" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema elementFormDefault="qualified" targetNamespace="http://claro.com.pe/eai/ebs/services/clienteHFC/ws">
+      <xsd:import schemaLocation="http://172.19.74.68:8909/ClienteHFC/ebsClienteHFC?xsd=1" namespace="http://claro.com.pe/eai/ebs/services/clienteHFC/bean" />
+      <xsd:element name="consultarDatosPorCodigoClienteEAIRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="consultarDatosPorCodigoClienteEaiRequest" type="xsde:ConsultarDatosPorCodigoClienteEAIInput" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="consultarDatosPorCodigoClienteEAIResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="consultarDatosPorCodigoClienteEaiResponse" type="xsde:ConsultarDatosPorCodigoClienteEAIOutput" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="consultarDatosPorCodigoContratoEAIRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="consultarDatosPorCodigoContratoEaiRequest" type="xsde:ConsultarDatosPorCodigoContratoEAIInput" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="consultarDatosPorCodigoContratoEAIResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="consultarDatosPorCodigoContratoEaiResponse" type="xsde:ConsultarDatosPorCodigoContratoEAIOutput" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="consultarServicioPorCodigoContratoEAIRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="consultarServicioPorCodigoContratoEaiRequest" type="xsde:ConsultarServicioPorCodigoContratoEAIInput" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="consultarServicioPorCodigoContratoEAIResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="consultarServicioPorCodigoContratoEaiResponse" type="xsde:ConsultarServicioPorCodigoContratoEAIOutput" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="consultarLineasDesactivasPorCodigoContratoEAIRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="consultarLineasDesactivasPorCodigoContratoEaiRequest" type="xsde:ConsultarLineasDesactivasPorCodigoContratoEAIInput" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="consultarLineasDesactivasPorCodigoContratoEAIResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="consultarLineasDesactivasPorCodigoContratoEaiResponse" type="xsde:ConsultarLineasDesactivasPorCodigoContratoEAIOutput" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="consultarServicioPorCodigoClienteEAIRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="consultarServicioPorCodigoClienteEaiRequest" type="xsde:ConsultarServicioPorCodigoClienteEAIInput" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="consultarServicioPorCodigoClienteEAIResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="consultarServicioPorCodigoClienteEaiResponse" type="xsde:ConsultarServicioPorCodigoClienteEAIOutput" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="consultarCodigoClientePorLineaCuentaEAIRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="consultarCodigoClientePorLineaCuentaEaiRequest" type="xsde:ConsultarCodigoClientePorLineaCuentaEAIInput" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="consultarCodigoClientePorLineaCuentaEAIResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="consultarCodigoClientePorLineaCuentaEaiResponse" type="xsde:ConsultarCodigoClientePorLineaCuentaEAIOutput" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="obtenerCuentasPorFiltroEAIRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="obtenerCuentasPorFiltroEaiRequest" type="xsde:ObtenerCuentasPorFiltroEAIInput" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="obtenerCuentasPorFiltroEAIResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="obtenerCuentasPorFiltroEaiResponse" type="xsde:ObtenerCuentasPorFiltroEAIOutput" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="consultarListaTelefonoPorCodigoContratoEAIRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="consultarListaTelefonoPorCodigoContratoEaiRequest" type="xsde:ConsultarListaTelefonoPorCodigoContratoEAIInput" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="consultarListaTelefonoPorCodigoContratoEAIResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="consultarListaTelefonoPorCodigoContratoEaiResponse" type="xsde:ConsultarListaTelefonoPorCodigoContratoEAIOutput" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="desactivarContratoEAIRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="desactivarContratoEaiRequest" type="xsde:DesactivarContratoEAIInput" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="desactivarContratoEAIResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="desactivarContratoEaiResponse" type="xsde:DesactivarContratoEAIOutput" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="actualizarDireccionInstalacionEAIRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="actualizarDireccionInstalacionEaiRequest" type="xsde:ActualizarDireccionInstalacionEAIInput" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="actualizarDireccionInstalacionEAIResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="actualizarDireccionInstalacionEaiResponse" type="xsde:ActualizarDireccionInstalacionEAIOutput" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </types>
+  <message name="consultarDatosPorCodigoContratoRequestMsg">
+    <part name="input" element="tns:consultarDatosPorCodigoContratoEAIRequest" />
+  </message>
+  <message name="consultarDatosPorCodigoContratoResponseMsg">
+    <part name="output" element="tns:consultarDatosPorCodigoContratoEAIResponse" />
+  </message>
+  <message name="consultarDatosPorCodigoClienteRequestMsg">
+    <part name="input" element="tns:consultarDatosPorCodigoClienteEAIRequest" />
+  </message>
+  <message name="consultarDatosPorCodigoClienteResponseMsg">
+    <part name="output" element="tns:consultarDatosPorCodigoClienteEAIResponse" />
+  </message>
+  <message name="consultarServicioPorCodigoContratoRequestMsg">
+    <part name="input" element="tns:consultarServicioPorCodigoContratoEAIRequest" />
+  </message>
+  <message name="consultarServicioPorCodigoContratoResponseMsg">
+    <part name="output" element="tns:consultarServicioPorCodigoContratoEAIResponse" />
+  </message>
+  <message name="consultarLineasDesactivasPorCodigoContratoRequestMsg">
+    <part name="input" element="tns:consultarLineasDesactivasPorCodigoContratoEAIRequest" />
+  </message>
+  <message name="consultarLineasDesactivasPorCodigoContratoResponseMsg">
+    <part name="output" element="tns:consultarLineasDesactivasPorCodigoContratoEAIResponse" />
+  </message>
+  <message name="consultarServicioPorCodigoClienteRequestMsg">
+    <part name="input" element="tns:consultarServicioPorCodigoClienteEAIRequest" />
+  </message>
+  <message name="consultarServicioPorCodigoClienteResponseMsg">
+    <part name="output" element="tns:consultarServicioPorCodigoClienteEAIResponse" />
+  </message>
+  <message name="consultarCodigoClientePorLineaCuentaRequestMsg">
+    <part name="input" element="tns:consultarCodigoClientePorLineaCuentaEAIRequest" />
+  </message>
+  <message name="consultarCodigoClientePorLineaCuentaResponseMsg">
+    <part name="output" element="tns:consultarCodigoClientePorLineaCuentaEAIResponse" />
+  </message>
+  <message name="obtenerCuentasPorFiltroRequestMsg">
+    <part name="input" element="tns:obtenerCuentasPorFiltroEAIRequest" />
+  </message>
+  <message name="obtenerCuentasPorFiltroResponseMsg">
+    <part name="output" element="tns:obtenerCuentasPorFiltroEAIResponse" />
+  </message>
+  <message name="consultarListaTelefonoPorCodigoContratoRequestMsg">
+    <part name="input" element="tns:consultarListaTelefonoPorCodigoContratoEAIRequest" />
+  </message>
+  <message name="consultarListaTelefonoPorCodigoContratoResponseMsg">
+    <part name="output" element="tns:consultarListaTelefonoPorCodigoContratoEAIResponse" />
+  </message>
+  <message name="desactivarContratoRequestMsg">
+    <part name="input" element="tns:desactivarContratoEAIRequest" />
+  </message>
+  <message name="desactivarContratoResponseMsg">
+    <part name="output" element="tns:desactivarContratoEAIResponse" />
+  </message>
+  <message name="actualizarDireccionInstalacionRequestMsg">
+    <part name="input" element="tns:actualizarDireccionInstalacionEAIRequest" />
+  </message>
+  <message name="actualizarDireccionInstalacionResponseMsg">
+    <part name="output" element="tns:actualizarDireccionInstalacionEAIResponse" />
+  </message>
+  <portType name="clienteHFCPortType">
+    <operation name="consultarDatosPorCodigoContrato">
+      <input message="tns:consultarDatosPorCodigoContratoRequestMsg" />
+      <output message="tns:consultarDatosPorCodigoContratoResponseMsg" />
+    </operation>
+    <operation name="consultarDatosPorCodigoCliente">
+      <input message="tns:consultarDatosPorCodigoClienteRequestMsg" />
+      <output message="tns:consultarDatosPorCodigoClienteResponseMsg" />
+    </operation>
+    <operation name="consultarServicioPorCodigoContrato">
+      <input message="tns:consultarServicioPorCodigoContratoRequestMsg" />
+      <output message="tns:consultarServicioPorCodigoContratoResponseMsg" />
+    </operation>
+    <operation name="consultarLineasDesactivasPorCodigoContrato">
+      <input message="tns:consultarLineasDesactivasPorCodigoContratoRequestMsg" />
+      <output message="tns:consultarLineasDesactivasPorCodigoContratoResponseMsg" />
+    </operation>
+    <operation name="consultarServicioPorCodigoCliente">
+      <input message="tns:consultarServicioPorCodigoClienteRequestMsg" />
+      <output message="tns:consultarServicioPorCodigoClienteResponseMsg" />
+    </operation>
+    <operation name="consultarCodigoClientePorLineaCuenta">
+      <input message="tns:consultarCodigoClientePorLineaCuentaRequestMsg" />
+      <output message="tns:consultarCodigoClientePorLineaCuentaResponseMsg" />
+    </operation>
+    <operation name="obtenerCuentasPorFiltro">
+      <input message="tns:obtenerCuentasPorFiltroRequestMsg" />
+      <output message="tns:obtenerCuentasPorFiltroResponseMsg" />
+    </operation>
+    <operation name="consultarListaTelefonoPorCodigoContrato">
+      <input message="tns:consultarListaTelefonoPorCodigoContratoRequestMsg" />
+      <output message="tns:consultarListaTelefonoPorCodigoContratoResponseMsg" />
+    </operation>
+    <operation name="desactivarContrato">
+      <input message="tns:desactivarContratoRequestMsg" />
+      <output message="tns:desactivarContratoResponseMsg" />
+    </operation>
+    <operation name="actualizarDireccionInstalacion">
+      <input message="tns:actualizarDireccionInstalacionRequestMsg" />
+      <output message="tns:actualizarDireccionInstalacionResponseMsg" />
+    </operation>
+  </portType>
+  <binding name="clienteHFCPortTypeSOAP11Binding" type="tns:clienteHFCPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="consultarDatosPorCodigoContrato">
+      <soap:operation soapAction="http://claro.com.pe/eai/ebs/services/consultaDatosHFC/ws/consultarDatosPorCodigoContrato" style="document" />
+      <input>
+        <soap:body use="literal" parts="input" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="output" />
+      </output>
+    </operation>
+    <operation name="consultarDatosPorCodigoCliente">
+      <soap:operation soapAction="http://claro.com.pe/eai/ebs/services/consultaDatosHFC/ws/consultarDatosPorCodigoCliente" style="document" />
+      <input>
+        <soap:body use="literal" parts="input" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="output" />
+      </output>
+    </operation>
+    <operation name="consultarServicioPorCodigoContrato">
+      <soap:operation soapAction="http://claro.com.pe/eai/ebs/services/consultaDatosHFC/ws/consultarServicioPorCodigoContrato" style="document" />
+      <input>
+        <soap:body use="literal" parts="input" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="output" />
+      </output>
+    </operation>
+    <operation name="consultarLineasDesactivasPorCodigoContrato">
+      <soap:operation soapAction="http://claro.com.pe/eai/ebs/services/consultaDatosHFC/ws/consultarLineasDesactivasPorCodigoContrato" style="document" />
+      <input>
+        <soap:body use="literal" parts="input" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="output" />
+      </output>
+    </operation>
+    <operation name="consultarServicioPorCodigoCliente">
+      <soap:operation soapAction="http://claro.com.pe/eai/ebs/services/consultaDatosHFC/ws/consultarServicioPorCodigoCliente" style="document" />
+      <input>
+        <soap:body use="literal" parts="input" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="output" />
+      </output>
+    </operation>
+    <operation name="consultarCodigoClientePorLineaCuenta">
+      <soap:operation soapAction="http://claro.com.pe/eai/ebs/services/consultaDatosHFC/ws/consultarCodigoClientePorLineaCuenta" style="document" />
+      <input>
+        <soap:body use="literal" parts="input" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="output" />
+      </output>
+    </operation>
+    <operation name="obtenerCuentasPorFiltro">
+      <soap:operation soapAction="http://claro.com.pe/eai/ebs/services/consultaDatosHFC/ws/obtenerCuentasPorFiltro" style="document" />
+      <input>
+        <soap:body use="literal" parts="input" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="output" />
+      </output>
+    </operation>
+    <operation name="consultarListaTelefonoPorCodigoContrato">
+      <soap:operation soapAction="http://claro.com.pe/eai/ebs/services/consultaDatosHFC/ws/consultarListaTelefonoPorCodigoContrato" style="document" />
+      <input>
+        <soap:body use="literal" parts="input" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="output" />
+      </output>
+    </operation>
+    <operation name="desactivarContrato">
+      <soap:operation soapAction="http://claro.com.pe/eai/ebs/services/consultaDatosHFC/ws/desactivarContrato" style="document" />
+      <input>
+        <soap:body use="literal" parts="input" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="output" />
+      </output>
+    </operation>
+    <operation name="actualizarDireccionInstalacion">
+      <soap:operation soapAction="http://claro.com.pe/eai/ebs/services/consultaDatosHFC/ws/actualizarDireccionInstalacion" style="document" />
+      <input>
+        <soap:body use="literal" parts="input" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="output" />
+      </output>
+    </operation>
+  </binding>
+  <service name="clienteHFCService">
+    <port name="ebsClienteHFC" binding="tns:clienteHFCPortTypeSOAP11Binding">
+      <soap:address location="http://172.19.74.68:8909/ClienteHFC/ebsClienteHFC" />
+    </port>
+  </service>
+</definitions>

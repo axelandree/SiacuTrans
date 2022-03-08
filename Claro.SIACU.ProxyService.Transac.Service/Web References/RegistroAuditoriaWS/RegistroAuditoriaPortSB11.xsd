@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:ns0="http://service.eai.auditoria.claro.com.pe/RegistroAuditoriaWS" elementFormDefault="qualified" targetNamespace="http://service.eai.auditoria.claro.com.pe/RegistroAuditoriaWS" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType name="ListaResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="ResponseOpcional" type="ns0:ResponseOpcionalComplexType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ResponseOpcionalComplexType">
+    <xsd:sequence>
+      <xsd:element name="clave" type="xsd:string" />
+      <xsd:element name="valor" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="RegistroRequest">
+    <xsd:sequence>
+      <xsd:element name="transaccion" type="xsd:string" />
+      <xsd:element name="servicio" type="xsd:string" />
+      <xsd:element name="ipCliente" type="xsd:string" />
+      <xsd:element name="nombreCliente" type="xsd:string" />
+      <xsd:element name="ipServidor" type="xsd:string" />
+      <xsd:element name="nombreServidor" type="xsd:string" />
+      <xsd:element name="cuentaUsuario" type="xsd:string" />
+      <xsd:element name="telefono" type="xsd:string" />
+      <xsd:element name="monto" type="xsd:string" />
+      <xsd:element name="texto" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ListaRequest">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="RequestOpcional" type="ns0:RequestOpcionalComplexType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="AuditResponse">
+    <xsd:sequence>
+      <xsd:element name="idTransaccion" type="xsd:string" />
+      <xsd:element name="codigoRespuesta" type="xsd:string" />
+      <xsd:element name="mensajeRespuesta" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="AuditRequest">
+    <xsd:sequence>
+      <xsd:element name="idTransaccion" type="xsd:string" />
+      <xsd:element name="ipAplicacion" type="xsd:string" />
+      <xsd:element name="aplicacion" type="xsd:string" />
+      <xsd:element name="usrAplicacion" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="RequestOpcionalComplexType">
+    <xsd:sequence>
+      <xsd:element name="clave" type="xsd:string" />
+      <xsd:element name="valor" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="registroAuditoria">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="Audit" type="ns0:AuditRequest" />
+        <xsd:element name="RegistroRequest" type="ns0:RegistroRequest" />
+        <xsd:element name="ListaOpcionalRequest" type="ns0:ListaRequest" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="registroAuditoriaResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="AuditResponse" type="ns0:AuditResponse" />
+        <xsd:element name="listaOpcionalResponse" type="ns0:ListaResponse" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

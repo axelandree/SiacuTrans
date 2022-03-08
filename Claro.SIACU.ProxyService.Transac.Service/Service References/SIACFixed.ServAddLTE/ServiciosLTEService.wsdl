@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://claro.com.pe/eai/ebs/postventa/lte/servicioslte/ws" xmlns:types="http://claro.com.pe/eai/ebs/postventa/lte/servicioslte/ws/types" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServiciosLTEService" targetNamespace="http://claro.com.pe/eai/ebs/postventa/lte/servicioslte/ws" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema elementFormDefault="qualified" targetNamespace="http://claro.com.pe/eai/ebs/postventa/lte/servicioslte/ws" />
+    <xsd:schema>
+      <xsd:import schemaLocation="http://limdeseaiv28.tim.com.pe:8909/ServiciosLTE/ServiciosLTEWSSB11?xsd=1" namespace="http://claro.com.pe/eai/ebs/postventa/lte/servicioslte/ws/types" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ejecutarReconexionServicioRequestMsg">
+    <wsdl:part name="request" element="types:ejecutarReconexionServicioRequest" />
+  </wsdl:message>
+  <wsdl:message name="ejecutarReconexionServicioResponseMsg">
+    <wsdl:part name="response" element="types:ejecutarReconexionServicioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ejecutarSuspencionServicioRequestMsg">
+    <wsdl:part name="request" element="types:ejecutarSuspencionServicioRequest" />
+  </wsdl:message>
+  <wsdl:message name="ejecutarSuspencionServicioResponseMsg">
+    <wsdl:part name="response" element="types:ejecutarSuspencionServicioResponse" />
+  </wsdl:message>
+  <wsdl:message name="tareasProgramadasEditarRequestMsg">
+    <wsdl:part name="request" element="types:tareasProgramadasEditarRequest" />
+  </wsdl:message>
+  <wsdl:message name="tareasProgramadasEditarResponseMsg">
+    <wsdl:part name="response" element="types:tareasProgramadasEditarResponse" />
+  </wsdl:message>
+  <wsdl:message name="tareasProgramadasEliminarRequestMsg">
+    <wsdl:part name="request" element="types:tareasProgramadasEliminarRequest" />
+  </wsdl:message>
+  <wsdl:message name="tareasProgramadasEliminarResponseMsg">
+    <wsdl:part name="response" element="types:tareasProgramadasEliminarResponse" />
+  </wsdl:message>
+  <wsdl:message name="tareasProgramadasConsultarRequestMsg">
+    <wsdl:part name="request" element="types:tareasProgramadasConsultarRequest" />
+  </wsdl:message>
+  <wsdl:message name="tareasProgramadasConsultarResponseMsg">
+    <wsdl:part name="response" element="types:tareasProgramadasConsultarResponse" />
+  </wsdl:message>
+  <wsdl:message name="tareasProgramadasRegistrarRequestMsg">
+    <wsdl:part name="request" element="types:tareasProgramadasRegistrarRequest" />
+  </wsdl:message>
+  <wsdl:message name="tareasProgramadasRegistrarResponseMsg">
+    <wsdl:part name="response" element="types:tareasProgramadasRegistrarResponse" />
+  </wsdl:message>
+  <wsdl:message name="activDesactivServicioComercialRequestMsg">
+    <wsdl:part name="request" element="types:activDesactivServicioComercialRequest" />
+  </wsdl:message>
+  <wsdl:message name="activDesactivServicioComercialResponseMsg">
+    <wsdl:part name="response" element="types:activDesactivServicioComercialResponse" />
+  </wsdl:message>
+  <wsdl:message name="validarActivaDesactivaServiciosRequestMsg">
+    <wsdl:part name="request" element="types:validarActivaDesactivaServiciosRequest" />
+  </wsdl:message>
+  <wsdl:message name="validarActivaDesactivaServiciosResponseMsg">
+    <wsdl:part name="response" element="types:validarActivaDesactivaServiciosResponse" />
+  </wsdl:message>
+  <wsdl:message name="activaDesactivaServiciosProgRequestMsg">
+    <wsdl:part name="request" element="types:activaDesactivaServiciosProgRequest" />
+  </wsdl:message>
+  <wsdl:message name="activaDesactivaServiciosProgResponseMsg">
+    <wsdl:part name="response" element="types:activaDesactivaServiciosProgResponse" />
+  </wsdl:message>
+  <wsdl:message name="ejecutaActivaDesactivaServiciosProgramadoRequestMsg">
+    <wsdl:part name="request" element="types:ejecutaActivaDesactivaServiciosProgramadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ejecutaActivaDesactivaServiciosProgramadoResponseMsg">
+    <wsdl:part name="response" element="types:ejecutaActivaDesactivaServiciosProgramadoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiciosLTEPortType">
+    <wsdl:operation name="ejecutarReconexionServicio">
+      <wsdl:input message="tns:ejecutarReconexionServicioRequestMsg" />
+      <wsdl:output message="tns:ejecutarReconexionServicioResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="ejecutarSuspencionServicio">
+      <wsdl:input message="tns:ejecutarSuspencionServicioRequestMsg" />
+      <wsdl:output message="tns:ejecutarSuspencionServicioResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="tareasProgramadasEditar">
+      <wsdl:input message="tns:tareasProgramadasEditarRequestMsg" />
+      <wsdl:output message="tns:tareasProgramadasEditarResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="tareasProgramadasEliminar">
+      <wsdl:input message="tns:tareasProgramadasEliminarRequestMsg" />
+      <wsdl:output message="tns:tareasProgramadasEliminarResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="tareasProgramadasConsultar">
+      <wsdl:input message="tns:tareasProgramadasConsultarRequestMsg" />
+      <wsdl:output message="tns:tareasProgramadasConsultarResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="tareasProgramadasRegistrar">
+      <wsdl:input message="tns:tareasProgramadasRegistrarRequestMsg" />
+      <wsdl:output message="tns:tareasProgramadasRegistrarResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="activDesactivServicioComercial">
+      <wsdl:input message="tns:activDesactivServicioComercialRequestMsg" />
+      <wsdl:output message="tns:activDesactivServicioComercialResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="validarActivaDesactivaServicios">
+      <wsdl:input message="tns:validarActivaDesactivaServiciosRequestMsg" />
+      <wsdl:output message="tns:validarActivaDesactivaServiciosResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="activaDesactivaServiciosProg">
+      <wsdl:input message="tns:activaDesactivaServiciosProgRequestMsg" />
+      <wsdl:output message="tns:activaDesactivaServiciosProgResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="ejecutaActivaDesactivaServiciosProgramado">
+      <wsdl:input message="tns:ejecutaActivaDesactivaServiciosProgramadoRequestMsg" />
+      <wsdl:output message="tns:ejecutaActivaDesactivaServiciosProgramadoResponseMsg" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiciosLTEPortTypeSOAP11Binding" type="tns:ServiciosLTEPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ejecutarReconexionServicio">
+      <soap:operation soapAction="http://claro.com.pe/eai/ebs/postventa/lte/servicioslte/ejecutarReconexionServicio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ejecutarSuspencionServicio">
+      <soap:operation soapAction="http://claro.com.pe/eai/ebs/postventa/lte/servicioslte/ejecutarSuspencionServicio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="tareasProgramadasEditar">
+      <soap:operation soapAction="http://claro.com.pe/eai/ebs/postventa/lte/servicioslte/tareasProgramadasEditar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="tareasProgramadasEliminar">
+      <soap:operation soapAction="http://claro.com.pe/eai/ebs/postventa/lte/servicioslte/tareasProgramadasEliminar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="tareasProgramadasConsultar">
+      <soap:operation soapAction="http://claro.com.pe/eai/ebs/postventa/lte/servicioslte/tareasProgramadasConsultar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="tareasProgramadasRegistrar">
+      <soap:operation soapAction="http://claro.com.pe/eai/ebs/postventa/lte/servicioslte/tareasProgramadasRegistrar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="activDesactivServicioComercial">
+      <soap:operation soapAction="http://claro.com.pe/eai/ebs/postventa/lte/servicioslte/activDesactivServicioComercial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validarActivaDesactivaServicios">
+      <soap:operation soapAction="http://claro.com.pe/eai/ebs/postventa/lte/servicioslte/validarActivaDesactivaServicios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="activaDesactivaServiciosProg">
+      <soap:operation soapAction="http://claro.com.pe/eai/ebs/postventa/lte/servicioslte/activaDesactivaServiciosProg" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ejecutaActivaDesactivaServiciosProgramado">
+      <soap:operation soapAction="http://claro.com.pe/eai/ebs/postventa/lte/servicioslte/ejecutaActivaDesactivaServiciosProgramado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiciosLTEPortTypeSOAP12Binding" type="tns:ServiciosLTEPortType">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ejecutarReconexionServicio">
+      <soap:operation soapAction="http://claro.com.pe/eai/ebs/postventa/lte/servicioslte/ejecutarReconexionServicio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ejecutarSuspencionServicio">
+      <soap:operation soapAction="http://claro.com.pe/eai/ebs/postventa/lte/servicioslte/ejecutarSuspencionServicio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="tareasProgramadasEditar">
+      <soap:operation soapAction="http://claro.com.pe/eai/ebs/postventa/lte/servicioslte/tareasProgramadasEditar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="tareasProgramadasEliminar">
+      <soap:operation soapAction="http://claro.com.pe/eai/ebs/postventa/lte/servicioslte/tareasProgramadasEliminar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="tareasProgramadasConsultar">
+      <soap:operation soapAction="http://claro.com.pe/eai/ebs/postventa/lte/servicioslte/tareasProgramadasConsultar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="tareasProgramadasRegistrar">
+      <soap:operation soapAction="http://claro.com.pe/eai/ebs/postventa/lte/servicioslte/tareasProgramadasRegistrar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="activDesactivServicioComercial">
+      <soap:operation soapAction="http://claro.com.pe/eai/ebs/postventa/lte/servicioslte/activDesactivServicioComercial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validarActivaDesactivaServicios">
+      <soap:operation soapAction="http://claro.com.pe/eai/ebs/postventa/lte/servicioslte/validarActivaDesactivaServicios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="activaDesactivaServiciosProg">
+      <soap:operation soapAction="http://claro.com.pe/eai/ebs/postventa/lte/servicioslte/activaDesactivaServiciosProg" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ejecutaActivaDesactivaServiciosProgramado">
+      <soap:operation soapAction="http://claro.com.pe/eai/ebs/postventa/lte/servicioslte/ejecutaActivaDesactivaServiciosProgramado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiciosLTEService">
+    <wsdl:port name="ebsServiciosLTESB11" binding="tns:ServiciosLTEPortTypeSOAP11Binding">
+      <soap:address location="http://limdeseaiv28.tim.com.pe:8909/ServiciosLTE/ServiciosLTEWSSB11" />
+    </wsdl:port>
+    <wsdl:port name="ebsServiciosLTESB12" binding="tns:ServiciosLTEPortTypeSOAP12Binding">
+      <soap12:address location="http://limdeseaiv28.tim.com.pe:8909/ServiciosLTE/ServiciosLTEWSSB12" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

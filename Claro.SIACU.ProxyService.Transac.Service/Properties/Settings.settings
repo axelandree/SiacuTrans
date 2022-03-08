@@ -1,0 +1,92 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Claro.SIACU.ProxyService.Transac.Service.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Claro_SIACU_ProxyService_Transac_Service_SIACPost_ValidationQueryBscsEai_EbsConsultaValidacionBscsTimEaiService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://limdeseaiv22.tim.com.pe:8909/ConsultaValidacionBSCSTIMEAIWS/EbsConsultaValidacionBscsTimEai</Value>
+    </Setting>
+    <Setting Name="Claro_SIACU_ProxyService_Transac_Service_SIACPost_GestionAcuerdoWS_GestionAcuerdoWSService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://limdeseaiv28.tim.com.pe:8909/GestionAcuerdoWS/ebsGestionAcuerdoSB11</Value>
+    </Setting>
+    <Setting Name="Claro_SIACU_ProxyService_Transac_Service_SIACPost_SimCard_ebsSimcards" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://172.19.74.68:8909/SimcardsWS/ebsSimcards</Value>
+    </Setting>
+    <Setting Name="Claro_SIACU_ProxyService_Transac_Service_SIACPre_BondTFI_ebsOperacionesINService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://limdeseaiv13.tim.com.pe:7909/OperacionesINWS/ebsOperacionesIN</Value>
+    </Setting>
+    <Setting Name="Claro_SIACU_ProxyService_Transac_Service_AuditoriaWS_EbsAuditoriaService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://limdeseaiv22.tim.com.pe:8909/AuditoriaWS/EbsAuditoria</Value>
+    </Setting>
+    <Setting Name="Claro_SIACU_ProxyService_Transac_Service_RegistroAuditoriaWS_RegistroAuditoriaService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://limdeseaiv26.tim.com.pe:8909/RegistroAuditoria/RegistroAuditoriaPortSB11</Value>
+    </Setting>
+    <Setting Name="Claro_SIACU_ProxyService_Transac_Service_ConsultaOpcionesAuditoriaWS_ConsultaOpcionesAuditoriaService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://limdeseaiv26.tim.com.pe:8909/ConsultaOpcionesAuditoria/ConsultaOpcionesAuditoriaPortSB11</Value>
+    </Setting>
+    <Setting Name="Claro_SIACU_ProxyService_Transac_Service_WSGeneratePDF_EngineService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://limqasgtv03.tim.com.pe:8909/EngineService/EngineService</Value>
+    </Setting>
+    <Setting Name="Claro_SIACU_ProxyService_Transac_Service_SIACPre_Service_EbsDatosPrepagoService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://limdeseaiv22.tim.com.pe:8909/ConsultaDatosPrepagoWS/EbsDatosPrepago</Value>
+    </Setting>
+    <Setting Name="Claro_SIACU_ProxyService_Transac_Service_SIACPre_ContingencyService_EbsDatosPrepagoService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://limdeseaiv22.tim.com.pe:8909/ConsultaDatosPrepagoWS/EbsDatosPrepago</Value>
+    </Setting>
+    <Setting Name="Claro_SIACU_ProxyService_Transac_Service_SIACPost_MigracionControlPostpagoWS_ebsMigracionControlPostpagoService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://172.19.67.173:7903/MigracionControlPostpago/ebsMigracionControlPostpagoSB11</Value>
+    </Setting>
+    <Setting Name="Claro_SIACU_ProxyService_Transac_Service_SIACPost_MigracionPlanPostpagoWS_ebsMigracionPlanPostpago_ep" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://limjandesv02.tim.com.pe:6909/soa-infra/services/default/MigracionPlanPostpago/ebsMigracionPlanPostpago_ep</Value>
+    </Setting>
+    <Setting Name="Claro_SIACU_ProxyService_Transac_Service_WSClienteHFC_clienteHFCService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://172.19.74.68:8909/ClienteHFC/ebsClienteHFC</Value>
+    </Setting>
+    <Setting Name="Claro_SIACU_ProxyService_Transac_Service_SIACFIXED_PlanMigrationServices_cambioPlanFija" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://10.172.139.63:7003/BSS_CambioPlanFija/SRV_CambioPlanFija/Service/Mediation/MED_CambioPlanFija_v1</Value>
+    </Setting>
+    <Setting Name="Claro_SIACU_ProxyService_Transac_Service_TransaccionOCC_TransaccionOCC" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://limdesosbv05.tim.com.pe:8909/Billing_Services/BSCS/Transaction/TransaccionOCC</Value>
+    </Setting>
+    <Setting Name="Claro_SIACU_ProxyService_Transac_Service_ServiciosPostpagoWS_ServiciosPostPagoWSService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://limdeseaiv24.tim.com.pe:8909/ServiciosPostPagoWS/ServiciosPostPagoWS</Value>
+    </Setting>
+    <Setting Name="Claro_SIACU_ProxyService_Transac_Service_SIACPre_ConsultPrePostData_ConsultaDatosPrePostWSService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://limdeseaiv28.tim.com.pe:8909/ConsultaDatosPrePostWS/ebsConsultaDatosPrePostSB11</Value>
+    </Setting>
+    <Setting Name="Claro_SIACU_ProxyService_Transac_Service_SIACFixed_CrewManagement_ebsADMCUAD_CapacityService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://limdeseaiv28.tim.com.pe:8909/ebsADMCUAD_Capacity/ebsADMCUAD_CapacitySB11</Value>
+    </Setting>
+    <Setting Name="Claro_SIACU_ProxyService_Transac_Service_SIACU_EnvioCorreoSB_EnvioCorreoSBPortTypeSOAP11BindingQSService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://172.19.74.189:8901/EnvioCorreoSB/proxy_services/EnvioCorreoSB</Value>
+    </Setting>
+    <Setting Name="Claro_SIACU_ProxyService_Transac_Service_ConfigurationServices_BPEL_ConfiguracionIP_v1" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://127.0.0.1:7001/BPEL_ConfiguracionIP/BPEL_ConfiguracionIPSB11</Value>
+    </Setting>
+    <Setting Name="Claro_SIACU_ProxyService_Transac_Service_WSBRMS_REGLASAUTOMATIZACIONDEDOCUMENTOSDecisionService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://172.19.112.46/DecisionService/ws/RULEAPPAUTOM/REGLASAUTOMATIZACIONDEDOCUMENTOS/v75</Value>
+    </Setting>
+    <Setting Name="Claro_SIACU_ProxyService_Transac_Service_ActivaDesactivaServicioComercialWS_EbsActivaDesactivaServicioComercial" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://limdeseaiv22.tim.com.pe:8909/ActivDesactivServicioComercialWS/EbsActivaDesactivaServicioComercial</Value>
+    </Setting>
+    <Setting Name="Claro_SIACU_ProxyService_Transac_Service_SIACPostpagoTxWS_SIACPostpagoTxWSService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://limdeseaiv22.tim.com.pe:8909/SIACPostpagoWS/SIACPostpagoTxWS</Value>
+    </Setting>
+    <Setting Name="Claro_SIACU_ProxyService_Transac_Service_WSDwh_EsbDwhService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://limdeseaiv24.tim.com.pe:8909/DwhWS/EsbDwh</Value>
+    </Setting>
+    <Setting Name="Claro_SIACU_ProxyService_Transac_Service_SIACU_Interacciones_TransaccionInteraccionesAsync" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://limdesosbv05.tim.com.pe:8909/CRM_Services/Clarify/Transaction/TransaccionInteraccionesAsync</Value>
+    </Setting>
+    <Setting Name="Claro_SIACU_ProxyService_Transac_Service_WSValidaIdentidad_PRS_ValidaIdentidad_WS" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://172.17.26.53:21000/PRS_ValidaIdentidad/SRV_PRS_ValidaIdentidad/Service/Exposition/EXP_ValidaIdentidad</Value>
+    </Setting>
+    <Setting Name="Claro_SIACU_ProxyService_Transac_Service_SIACU_WSDigitalSignature2_PRS_FirmaDigital_WS" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://172.17.26.61:24000/PRS_FirmaDigital/SRV_PRS_FirmaDigital/Service/Exposition/EXP_FirmaDigital</Value>
+    </Setting>
+    <Setting Name="Claro_SIACU_ProxyService_Transac_Service_SIACPost_InboundToaWS_ebsADMCUAD_InboundSchemaService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://limdeseaiv28.tim.com.pe:8909/ebsADMCUAD_InboundWS/ebsADMCUAD_InboundSB11</Value>
+    </Setting>
+<Setting Name="Claro_SIACU_ProxyService_Transac_Service_SIACU_StateAccount_ConsultaEstadoCuenta" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://172.19.74.141:8901/OAC_Services/Inquiry/ConsultaEstadoCuenta</Value>
+  </Settings>
+</SettingsFile>

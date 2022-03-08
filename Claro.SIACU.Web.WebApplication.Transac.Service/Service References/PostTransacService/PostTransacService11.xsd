@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetAgreement" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetAgreement" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd3" namespace="Claro" />
+  <xs:complexType name="AgreementResquest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="Claro" base="q1:Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CargoFijoNuevo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CoId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FechaTransaccion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FlagEquipo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MontoApadece" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="msisdn" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AgreementResquest" nillable="true" type="tns:AgreementResquest" />
+  <xs:complexType name="AgreementResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ACUERDO_CADUCADO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ACUERDO_ESTADO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ACUERDO_FECHA_FIN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ACUERDO_FECHA_INICIO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ACUERDO_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ACUERDO_MONTO_APADECE_TOTAL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ACUERDO_ORIGEN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ACUERDO_VIGENCIA_MES" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CARGO_FIJO_DIARIO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CODIGO_PLAZO_ACUERDO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CO_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CUSTOMER_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodRespuesta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DESCRIPCION_ESTADO_ACUERDO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DESCRIPCION_PLAZO_ACUERDO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DIAS_BLOQUEO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DIAS_PENDIENTES" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DIAS_VIGENCIA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FIN_VIGENCIA_REAL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MESES_ANTIGUEDAD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MESES_PENDIENTES" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MONTO_APADECE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MesajeRespuesta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PENALIDAD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PRECIO_LISTA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PRECIO_VENTA" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AgreementResponse" nillable="true" type="tns:AgreementResponse" />
+</xs:schema>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetConsultationServiceByContract" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetConsultationServiceByContract" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd3" namespace="Claro" />
+  <xs:complexType name="ConsultationServiceByContractRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="Claro" base="q1:Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="strCodContrato" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="typeProduct" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ConsultationServiceByContractRequest" nillable="true" type="tns:ConsultationServiceByContractRequest" />
+  <xs:complexType name="ConsultationServiceByContractResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bResultado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="msisdn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strMsgSalida" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConsultationServiceByContractResponse" nillable="true" type="tns:ConsultationServiceByContractResponse" />
+</xs:schema>

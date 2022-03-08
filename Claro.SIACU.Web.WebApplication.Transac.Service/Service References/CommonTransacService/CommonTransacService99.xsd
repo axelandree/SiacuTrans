@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetBlackList" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetBlackList" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd3" namespace="Claro" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd95" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetDataPower" />
+  <xs:complexType name="BlackListRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="Claro" base="q1:Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="MessageRequest" nillable="true" type="tns:BlackListMessageRequest" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BlackListRequest" nillable="true" type="tns:BlackListRequest" />
+  <xs:complexType name="BlackListMessageRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Body" nillable="true" type="tns:BlackListBodyRequest" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetDataPower" minOccurs="0" name="Header" nillable="true" type="q2:HeadersRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BlackListMessageRequest" nillable="true" type="tns:BlackListMessageRequest" />
+  <xs:complexType name="BlackListBodyRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="pi_imei" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BlackListBodyRequest" nillable="true" type="tns:BlackListBodyRequest" />
+  <xs:complexType name="BlackListResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MessageResponse" nillable="true" type="tns:BlackListMessageResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BlackListResponse" nillable="true" type="tns:BlackListResponse" />
+  <xs:complexType name="BlackListMessageResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Body" nillable="true" type="tns:BlackListBodyResponse" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetDataPower" minOccurs="0" name="Header" nillable="true" type="q3:HeadersResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BlackListMessageResponse" nillable="true" type="tns:BlackListMessageResponse" />
+  <xs:complexType name="BlackListBodyResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="detalleValidaEstadoIMEI" nillable="true" type="tns:BlackListDetalleValidaEstadoIMEIResponse" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetDataPower" minOccurs="0" name="responseStatus" nillable="true" type="q4:ResponseStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BlackListBodyResponse" nillable="true" type="tns:BlackListBodyResponse" />
+  <xs:complexType name="BlackListDetalleValidaEstadoIMEIResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="po_code_result" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="po_estado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="po_message_result" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BlackListDetalleValidaEstadoIMEIResponse" nillable="true" type="tns:BlackListDetalleValidaEstadoIMEIResponse" />
+</xs:schema>

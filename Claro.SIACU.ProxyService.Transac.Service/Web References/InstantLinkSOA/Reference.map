@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://172.19.32.88:44006/ilws/InstantLinkSOA?xsd=1" filename="InstantLinkSOA.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://172.19.32.88:44006/ilws/InstantLinkSOA?WSDL" filename="InstantLinkWebServices.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://172.19.32.88:44006/ilws/InstantLinkSOA?wsdl=1" filename="InstantLinkWebServices0.wsdl" />
+  </Results>
+</DiscoveryClientResultsFile>

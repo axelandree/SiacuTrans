@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2cf64ab0-778b-44e2-8ea3-ecb2826527c5" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.172.139.45:7004/soa-infra/services/default/CambioNumeroFijaSOA/CambioNumeroFijaSOAP?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CambioNumeroFija1.xsd" MetadataType="Schema" ID="9ee8c73d-a378-47fa-965e-2dabbcdcdf0c" SourceId="1" SourceUrl="http://10.172.139.45:7004/soa-infra/services/default/CambioNumeroFijaSOA/CambioNumeroFijaSOAP?XSD=../Schemas/CambioNumeroFija.xsd" />
+    <MetadataFile FileName="claroFault1.xsd" MetadataType="Schema" ID="4265cb2b-b3ac-45a3-adc9-6ea777f07e57" SourceId="1" SourceUrl="http://10.172.139.45:7004/soa-infra/services/default/CambioNumeroFijaSOA/CambioNumeroFijaSOAP?XSD=../Schemas/claroFault.xsd" />
+    <MetadataFile FileName="CambioNumeroFija2.wsdl" MetadataType="Wsdl" ID="e312e9b7-41ce-408a-96d6-42548dfba765" SourceId="1" SourceUrl="http://10.172.139.45:7004/soa-infra/services/default/CambioNumeroFijaSOA/CambioNumeroFijaSOAP?wsdl" />
+    <MetadataFile FileName="headers1.xsd" MetadataType="Schema" ID="d81edfa8-72ad-4d56-b0c8-41ae1ae6cce4" SourceId="1" SourceUrl="http://10.172.139.45:7004/soa-infra/services/default/CambioNumeroFijaSOA/CambioNumeroFijaSOAP?XSD=../Schemas/headers.xsd" />
+    <MetadataFile FileName="CambioNumeroFija21.wsdl" MetadataType="Wsdl" ID="0f58ccc4-b8c5-42f6-ba61-2e6fabd267a0" SourceId="1" SourceUrl="http://10.172.139.45:7004/soa-infra/services/default/CambioNumeroFijaSOA/CambioNumeroFijaSOAP?WSDL=CambioNumeroFija.wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

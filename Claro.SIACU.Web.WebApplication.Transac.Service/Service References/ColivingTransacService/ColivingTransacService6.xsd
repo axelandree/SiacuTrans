@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Coliving.PostHistoryClient" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Coliving.PostHistoryClient" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:40204/ColivingTransacService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Coliving" />
+  <xs:complexType name="HistoryClientRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="HistoryClient" nillable="true" type="tns:HistoryClient" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HistoryClientRequest" nillable="true" type="tns:HistoryClientRequest" />
+  <xs:complexType name="HistoryClient">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="addressFact" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="addressLegal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="addressNoteFact" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="addressNoteLegal" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Coliving" minOccurs="0" name="auditRequest" nillable="true" type="q1:AuditRequest" />
+      <xs:element minOccurs="0" name="birthdate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="businessName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ccAddrL2New" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ccNameNew" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ccStreetLNew" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ccStreetNew" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="changeMot" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="contact" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="countryFact" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="countryLNew" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="countryLegal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="csCompRegNoNew" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="csEmployerNew" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="customerId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="departmentFact" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="departmentLegal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="districtFact" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="districtLegal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="docRep" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="doctype" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="doctypeDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fax" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fecReg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="firstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="jobDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="lastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="legalRep" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="maritalStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="movil" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nationality" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nationalityDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nroDoc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="passPortNoNewc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="provinceFact" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="provinceLegal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sex" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="telf" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tradeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="updateGrupo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="zipFact" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="zipLegal" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HistoryClient" nillable="true" type="tns:HistoryClient" />
+  <xs:complexType name="Response">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Coliving" minOccurs="0" name="AuditResponse" nillable="true" type="q2:AuditResponse" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Coliving" minOccurs="0" name="listaOpcional" nillable="true" type="q3:ArrayOfListOptional" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Response" nillable="true" type="tns:Response" />
+</xs:schema>

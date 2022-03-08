@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:ns0="http://service.eai.claro.com.pe/ValidarCredencialesSUWS" elementFormDefault="qualified" targetNamespace="http://service.eai.claro.com.pe/ValidarCredencialesSUWS" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType name="objetoResponseOpcional">
+    <xsd:sequence>
+      <xsd:element name="campo" type="xsd:string" />
+      <xsd:element name="valor" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ListaResponseOpcional">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="parametrosResponse" nillable="true" type="ns0:objetoResponseOpcional" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="parametrosAuditRequest">
+    <xsd:sequence>
+      <xsd:element name="idTransaccion" type="xsd:string" />
+      <xsd:element name="ipAplicacion" type="xsd:string" />
+      <xsd:element name="nombreAplicacion" type="xsd:string" />
+      <xsd:element name="usuarioAplicacion" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="objetoRequestOpcional">
+    <xsd:sequence>
+      <xsd:element name="campo" type="xsd:string" />
+      <xsd:element name="valor" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="sesionesResponseLista">
+    <xsd:sequence>
+      <xsd:element name="opcionParametroId" type="xsd:string" />
+      <xsd:element name="nombreSesion" type="xsd:string" />
+      <xsd:element name="tipoOpcion" nillable="true" type="xsd:string" />
+      <xsd:element name="propSession" nillable="true" type="xsd:string" />
+      <xsd:element name="valorSession" nillable="true" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ListaSesionesObtenidas">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="sesionesResponse" nillable="true" type="ns0:sesionesResponseLista" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="parametrosAuditResponse">
+    <xsd:sequence>
+      <xsd:element name="idTransaccion" type="xsd:string" />
+      <xsd:element name="codigoRespuesta" type="xsd:string" />
+      <xsd:element name="mensajeRespuesta" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ListaRequestOpcional">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="parametrosRequest" nillable="true" type="ns0:objetoRequestOpcional" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="obtenerSesionesRequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditRequest" type="ns0:parametrosAuditRequest" />
+        <xsd:element name="opcion" type="xsd:string" />
+        <xsd:element name="aplicacion" type="xsd:string" />
+        <xsd:element name="listaAdicionalRequest" type="ns0:ListaRequestOpcional" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="registrarComunicacionResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditResponse" type="ns0:parametrosAuditResponse" />
+        <xsd:element name="secuencia" type="xsd:string" />
+        <xsd:element name="urlAuth" type="xsd:string" />
+        <xsd:element name="listaAdicionalResponse" type="ns0:ListaResponseOpcional" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="obtenerSesionesResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditResponse" type="ns0:parametrosAuditResponse" />
+        <xsd:element name="listaSesionesObtenidas" type="ns0:ListaSesionesObtenidas" />
+        <xsd:element name="listaAdicionalResponse" type="ns0:ListaResponseOpcional" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="registrarComunicacionRequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditRequest" type="ns0:parametrosAuditRequest" />
+        <xsd:element name="opcion" type="xsd:string" />
+        <xsd:element name="aplicacion" type="xsd:string" />
+        <xsd:element name="ipCliente" type="xsd:string" />
+        <xsd:element name="ipServOrigen" type="xsd:string" />
+        <xsd:element name="jsonParametros" type="xsd:string" />
+        <xsd:element name="listaAdicionalRequest" type="ns0:ListaRequestOpcional" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="validarComunicacionResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditResponse" type="ns0:parametrosAuditResponse" />
+        <xsd:element name="urlDestino" type="xsd:string" />
+        <xsd:element name="disponibilidad" type="xsd:string" />
+        <xsd:element name="jsonParametros" type="xsd:string" />
+        <xsd:element name="listaAdicionalResponse" type="ns0:ListaResponseOpcional" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="validarComunicacionRequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditRequest" type="ns0:parametrosAuditRequest" />
+        <xsd:element name="secuencia" type="xsd:string" />
+        <xsd:element name="ipServDestino" type="xsd:string" />
+        <xsd:element name="listaAdicionalRequest" type="ns0:ListaRequestOpcional" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

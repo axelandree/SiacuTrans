@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://claro.com.pe/eai/ws/vas/consultadatosprepostv2" xmlns:types="http://claro.com.pe/eai/ws/vas/consultadatosprepostv2/types" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/wsdl/" name="ConsultaDatosPrePostWS" targetNamespace="http://claro.com.pe/eai/ws/vas/consultadatosprepostv2" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema elementFormDefault="qualified" targetNamespace="http://claro.com.pe/eai/ws/vas/consultadatosprepostv2" />
+    <xsd:schema>
+      <xsd:import schemaLocation="http://limdeseaiv28.tim.com.pe:8909/ConsultaDatosPrePostWS_V2/ebsConsultaDatosPrePostSB11?xsd=2" namespace="http://claro.com.pe/eai/ws/vas/consultadatosprepostv2/types" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="consultarDatosLineaRequestMsg">
+    <wsdl:part name="request" element="types:consultarDatosLineaRequest" />
+  </wsdl:message>
+  <wsdl:message name="consultarDatosLineaResponseMsg">
+    <wsdl:part name="response" element="types:consultarDatosLineaResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultarDatosPrepagoRequestMsg">
+    <wsdl:part name="request" element="types:consultarDatosPrepagoRequest" />
+  </wsdl:message>
+  <wsdl:message name="consultarDatosPrepagoResponseMsg">
+    <wsdl:part name="response" element="types:consultarDatosPrepagoResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultarDatosPostpagoRequestMsg">
+    <wsdl:part name="request" element="types:consultarDatosPostpagoRequest" />
+  </wsdl:message>
+  <wsdl:message name="consultarDatosPostpagoResponseMsg">
+    <wsdl:part name="response" element="types:consultarDatosPostpagoResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultarDatosInOdcsRequestMsg">
+    <wsdl:part name="request" element="types:consultarDatosInOdcsRequest" />
+  </wsdl:message>
+  <wsdl:message name="consultarDatosInOdcsResponseMsg">
+    <wsdl:part name="response" element="types:consultarDatosInOdcsResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultarDatosPrepagoSiacRequestMsg">
+    <wsdl:part name="request" element="types:consultarDatosPrepagoRequest" />
+  </wsdl:message>
+  <wsdl:message name="consultarDatosPrepagoSiacResponseMsg">
+    <wsdl:part name="response" element="types:consultarDatosPrepagoResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultarFnFPrepagoRequestMsg">
+    <wsdl:part name="request" element="types:consultarFnFPrepagoRequest" />
+  </wsdl:message>
+  <wsdl:message name="consultarFnFPrepagoResponseMsg">
+    <wsdl:part name="response" element="types:consultarFnFPrepagoResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultarDetalleLlamadasRequestMsg">
+    <wsdl:part name="request" element="types:ConsultarDetalleLlamadasRequest" />
+  </wsdl:message>
+  <wsdl:message name="consultarDetalleLlamadasResponseMsg">
+    <wsdl:part name="response" element="types:ConsultarDetalleLlamadasResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultarDetalleRecargasRequestMsg">
+    <wsdl:part name="request" element="types:ConsultarDetalleRecargasRequest" />
+  </wsdl:message>
+  <wsdl:message name="consultarDetalleRecargasResponseMsg">
+    <wsdl:part name="response" element="types:ConsultarDetalleRecargasResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultarHistorialComprasRequestMsg">
+    <wsdl:part name="request" element="types:ConsultarHistorialComprasRequest" />
+  </wsdl:message>
+  <wsdl:message name="consultarHistorialComprasResponseMsg">
+    <wsdl:part name="response" element="types:ConsultarHistorialComprasResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultarSaldosPrepagoRequestMsg">
+    <wsdl:part name="request" element="types:ConsultarSaldosPrepagoRequest" />
+  </wsdl:message>
+  <wsdl:message name="consultarSaldosPrepagoResponseMsg">
+    <wsdl:part name="response" element="types:ConsultarSaldosPrepagoResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultarSaldosPostpagoRequestMsg">
+    <wsdl:part name="request" element="types:ConsultarSaldosPostpagoRequest" />
+  </wsdl:message>
+  <wsdl:message name="consultarSaldosPostpagoResponseMsg">
+    <wsdl:part name="response" element="types:ConsultarSaldosPostpagoResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultarHistoricoPaquetesRequestMsg">
+    <wsdl:part name="request" element="types:consultarHistoricoPaquetesRequest" />
+  </wsdl:message>
+  <wsdl:message name="consultarHistoricoPaquetesResponseMsg">
+    <wsdl:part name="response" element="types:consultarHistoricoPaquetesResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultarHistoricoRecargasRequestMsg">
+    <wsdl:part name="request" element="types:consultarHistoricoRecargasRequest" />
+  </wsdl:message>
+  <wsdl:message name="consultarHistoricoRecargasResponseMsg">
+    <wsdl:part name="response" element="types:consultarHistoricoRecargasResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultarConsumoRecargasRequestMsg">
+    <wsdl:part name="request" element="types:consultarConsumoRecargasRequest" />
+  </wsdl:message>
+  <wsdl:message name="consultarConsumoRecargasResponseMsg">
+    <wsdl:part name="response" element="types:consultarConsumoRecargasResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultarSaldoMASRequestMsg">
+    <wsdl:part name="request" element="types:ConsultarSaldoMASRequest" />
+  </wsdl:message>
+  <wsdl:message name="consultarSaldoMASResponseMsg">
+    <wsdl:part name="response" element="types:ConsultarSaldoMASResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ConsultaDatosPrePostWSPortType">
+    <wsdl:operation name="consultarDatosLinea">
+      <wsdl:input message="tns:consultarDatosLineaRequestMsg" />
+      <wsdl:output message="tns:consultarDatosLineaResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarDatosPrepago">
+      <wsdl:input message="tns:consultarDatosPrepagoRequestMsg" />
+      <wsdl:output message="tns:consultarDatosPrepagoResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarDatosPostpago">
+      <wsdl:input message="tns:consultarDatosPostpagoRequestMsg" />
+      <wsdl:output message="tns:consultarDatosPostpagoResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarDatosInOdcs">
+      <wsdl:input message="tns:consultarDatosInOdcsRequestMsg" />
+      <wsdl:output message="tns:consultarDatosInOdcsResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarDatosPrepagoSiac">
+      <wsdl:input message="tns:consultarDatosPrepagoSiacRequestMsg" />
+      <wsdl:output message="tns:consultarDatosPrepagoSiacResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarDetalleLlamadas">
+      <wsdl:input message="tns:consultarDetalleLlamadasRequestMsg" />
+      <wsdl:output message="tns:consultarDetalleLlamadasResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarDetalleRecargas">
+      <wsdl:input message="tns:consultarDetalleRecargasRequestMsg" />
+      <wsdl:output message="tns:consultarDetalleRecargasResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarHistorialCompras">
+      <wsdl:input message="tns:consultarHistorialComprasRequestMsg" />
+      <wsdl:output message="tns:consultarHistorialComprasResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarSaldosPrepago">
+      <wsdl:input message="tns:consultarSaldosPrepagoRequestMsg" />
+      <wsdl:output message="tns:consultarSaldosPrepagoResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarFnFPrepago">
+      <wsdl:input message="tns:consultarFnFPrepagoRequestMsg" />
+      <wsdl:output message="tns:consultarFnFPrepagoResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarHistoricoPaquetes">
+      <wsdl:input message="tns:consultarHistoricoPaquetesRequestMsg" />
+      <wsdl:output message="tns:consultarHistoricoPaquetesResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarHistoricoRecargas">
+      <wsdl:input message="tns:consultarHistoricoRecargasRequestMsg" />
+      <wsdl:output message="tns:consultarHistoricoRecargasResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarConsumoRecargas">
+      <wsdl:input message="tns:consultarConsumoRecargasRequestMsg" />
+      <wsdl:output message="tns:consultarConsumoRecargasResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarSaldoMAS">
+      <wsdl:input message="tns:consultarSaldoMASRequestMsg" />
+      <wsdl:output message="tns:consultarSaldoMASResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarSaldosPostpago">
+      <wsdl:input message="tns:consultarSaldosPostpagoRequestMsg" />
+      <wsdl:output message="tns:consultarSaldosPostpagoResponseMsg" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ConsultaDatosPrePostWSPortTypeSOAP11Binding" type="tns:ConsultaDatosPrePostWSPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="consultarDatosLinea">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/vas/consultadatosprepostv2/consultarDatosLinea" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarDatosPrepago">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/vas/consultadatosprepostv2/consultarDatosPrepago" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarDatosPostpago">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/vas/consultadatosprepostv2/consultarDatosPostpago" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarDatosInOdcs">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/vas/consultadatosprepostv2/consultarDatosInOdcs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarDatosPrepagoSiac">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/vas/consultadatosprepostv2/consultarDatosPrepagoSiac" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarDetalleLlamadas">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/vas/consultadatosprepostv2/consultarDetalleLlamadas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarDetalleRecargas">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/vas/consultadatosprepostv2/consultarDetalleRecargas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarHistorialCompras">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/vas/consultadatosprepostv2/consultarHistorialCompras" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarSaldosPrepago">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/vas/consultadatosprepostv2/consultarSaldosPrepago" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarFnFPrepago">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/vas/consultadatosprepostv2/consultarFnFPrepago" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarHistoricoPaquetes">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/vas/consultadatosprepostv2/consultarHistoricoPaquetes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarHistoricoRecargas">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/vas/consultadatosprepostv2/consultarHistoricoRecargas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarConsumoRecargas">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/vas/consultadatosprepostv2/consultarConsumoRecargas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarSaldoMAS">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/vas/consultadatosprepostv2/consultarSaldoMAS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarSaldosPostpago">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/vas/consultadatosprepostv2/consultarSaldosPostpago" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ConsultaDatosPrePostWSPortTypeSOAP12Binding" type="tns:ConsultaDatosPrePostWSPortType">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="consultarDatosLinea">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/vas/consultadatosprepostv2/consultarDatosLinea" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarDatosPrepago">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/vas/consultadatosprepostv2/consultarDatosPrepago" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarDatosPostpago">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/vas/consultadatosprepostv2/consultarDatosPostpago" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarDatosInOdcs">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/vas/consultadatosprepostv2/consultarDatosInOdcs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarDatosPrepagoSiac">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/vas/consultadatosprepostv2/consultarDatosPrepagoSiac" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarFnFPrepago">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/vas/consultadatosprepostv2/consultarFnFPrepago" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarDetalleLlamadas">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/vas/consultadatosprepostv2/consultarDetalleLlamadas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarDetalleRecargas">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/vas/consultadatosprepostv2/consultarDetalleRecargas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarHistorialCompras">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/vas/consultadatosprepostv2/consultarHistorialCompras" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarSaldosPrepago">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/vas/consultadatosprepostv2/consultarSaldosPrepago" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarHistoricoPaquetes">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/vas/consultadatosprepostv2/consultarHistoricoPaquetes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarHistoricoRecargas">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/vas/consultadatosprepostv2/consultarHistoricoRecargas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarConsumoRecargas">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/vas/consultadatosprepostv2/consultarConsumoRecargas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarSaldoMAS">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/vas/consultadatosprepostv2/consultarSaldoMAS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarSaldosPostpago">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/vas/consultadatosprepostv2/consultarSaldosPostpago" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ConsultaDatosPrePostWSService">
+    <wsdl:port name="ebsConsultaDatosPrePostSB11" binding="tns:ConsultaDatosPrePostWSPortTypeSOAP11Binding">
+      <soap:address location="http://limdeseaiv28.tim.com.pe:8909/ConsultaDatosPrePostWS_V2/ebsConsultaDatosPrePostSB11" />
+    </wsdl:port>
+    <wsdl:port name="ebsConsultaDatosPrePostSB12" binding="tns:ConsultaDatosPrePostWSPortTypeSOAP12Binding">
+      <soap:address location="http://limdeseaiv28.tim.com.pe:8909/ConsultaDatosPrePostWS_V2/ebsConsultaDatosPrePostSB12" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

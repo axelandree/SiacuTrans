@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:ns0="http://service.eai.auditoria.claro.com.pe/consultaopcionesauditoriaws" elementFormDefault="qualified" targetNamespace="http://service.eai.auditoria.claro.com.pe/consultaopcionesauditoriaws" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType name="ResponseOpcionalComplexType">
+    <xsd:sequence>
+      <xsd:element name="clave" type="xsd:string" />
+      <xsd:element name="valor" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="UsuariosType">
+    <xsd:sequence>
+      <xsd:element name="codUsuario" type="xsd:string" />
+      <xsd:element name="loginUsuario" type="xsd:string" />
+      <xsd:element name="estadoUsuario" type="xsd:string" />
+      <xsd:element name="codPerfil" type="xsd:string" />
+      <xsd:element name="codEstado" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="EmpleadoType">
+    <xsd:sequence>
+      <xsd:element name="codigo" type="xsd:string" />
+      <xsd:element name="codigoSap" type="xsd:string" />
+      <xsd:element name="login" type="xsd:string" />
+      <xsd:element name="nombres" type="xsd:string" />
+      <xsd:element name="paterno" type="xsd:string" />
+      <xsd:element name="materno" type="xsd:string" />
+      <xsd:element name="nombreCompleto" type="xsd:string" />
+      <xsd:element name="correo" type="xsd:string" />
+      <xsd:element name="codigoArea" type="xsd:string" />
+      <xsd:element name="descripcionArea" type="xsd:string" />
+      <xsd:element name="codigoCargo" type="xsd:string" />
+      <xsd:element name="descripcionCargo" type="xsd:string" />
+      <xsd:element name="codigoDireccion" type="xsd:string" />
+      <xsd:element name="descripcionDireccion" type="xsd:string" />
+      <xsd:element name="codigoJefe" type="xsd:string" />
+      <xsd:element name="descripcionJefe" type="xsd:string" />
+      <xsd:element name="telefono" type="xsd:string" />
+      <xsd:element name="dni" type="xsd:string" />
+      <xsd:element name="codModalidad" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="AuditResponse">
+    <xsd:sequence>
+      <xsd:element name="idTransaccion" type="xsd:string" />
+      <xsd:element name="codigoRespuesta" type="xsd:string" />
+      <xsd:element name="mensajeRespuesta" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="AuditoriaType">
+    <xsd:sequence>
+      <xsd:element name="codigo" type="xsd:string" />
+      <xsd:element name="perfil" type="xsd:string" />
+      <xsd:element name="codigoVendedor" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="AuditRequest">
+    <xsd:sequence>
+      <xsd:element name="idTransaccion" type="xsd:string" />
+      <xsd:element name="ipAplicacion" type="xsd:string" />
+      <xsd:element name="aplicacion" type="xsd:string" />
+      <xsd:element name="usrAplicacion" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="HijoType">
+    <xsd:sequence>
+      <xsd:element name="datosHijos" nillable="true" type="ns0:OpcionType" />
+      <xsd:element name="nietos" nillable="true" type="ns0:HijoTypeNietos" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="OpcionesUsuarioRequest">
+    <xsd:sequence>
+      <xsd:element name="aplicacion" nillable="true" type="xsd:string" />
+      <xsd:element name="usuario" nillable="true" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ListaResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="ResponseOpcional" type="ns0:ResponseOpcionalComplexType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="PadreTypeHijos">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" name="hijoItem" nillable="true" type="ns0:HijoType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Empleados">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" name="item" type="ns0:EmpleadoType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="PaginaOpcionType">
+    <xsd:sequence>
+      <xsd:element name="opcicCod" type="xsd:string" />
+      <xsd:element name="clave" type="xsd:string" />
+      <xsd:element name="opcicDes" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="NietoType">
+    <xsd:sequence>
+      <xsd:element name="nieto" nillable="true" type="ns0:OpcionType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ListaPaginaOpcionesType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="listaOpciones" nillable="true" type="ns0:PaginaOpcionType" />
+      <xsd:element name="codigoVendedor" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="MenuType">
+    <xsd:sequence>
+      <xsd:element name="datosMenu" nillable="true" type="ns0:OpcionType" />
+      <xsd:element name="padres" nillable="true" type="ns0:MenuTypePadres" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="EmpleadoRequest">
+    <xsd:sequence>
+      <xsd:element name="direccion" type="xsd:string" />
+      <xsd:element name="gerencia" type="xsd:string" />
+      <xsd:element name="jefatura" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="MenuResponseType">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" name="menuItem" nillable="true" type="ns0:MenuType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="AccesoRequest">
+    <xsd:sequence>
+      <xsd:element name="usuario" type="xsd:string" />
+      <xsd:element name="aplicacion" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ListaRequest">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="RequestOpcional" type="ns0:RequestOpcionalComplexType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="AuditoriaLista">
+    <xsd:sequence>
+      <xsd:element name="AuditoriaItem">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" name="item" type="ns0:AuditoriaType" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="AccesoResponse">
+    <xsd:sequence>
+      <xsd:element name="auditoria" type="ns0:AuditoriaLista" />
+      <xsd:element name="empleado" type="ns0:EmpleadoType" />
+      <xsd:element name="codigoVendedor" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="EmpleadoResponse">
+    <xsd:sequence>
+      <xsd:element name="empleados" type="ns0:Empleados" />
+      <xsd:element name="codigoVendedor" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="OpcionType">
+    <xsd:sequence>
+      <xsd:element name="abreviatura" nillable="true" type="xsd:string" />
+      <xsd:element name="aplicacion" nillable="true" type="xsd:string" />
+      <xsd:element name="descripcion" nillable="true" type="xsd:string" />
+      <xsd:element name="flag" nillable="true" type="xsd:string" />
+      <xsd:element name="nivel" nillable="true" type="xsd:string" />
+      <xsd:element name="nivelPadre" nillable="true" type="xsd:string" />
+      <xsd:element name="observacion" nillable="true" type="xsd:string" />
+      <xsd:element name="opcion" nillable="true" type="xsd:string" />
+      <xsd:element name="orden" nillable="true" type="xsd:string" />
+      <xsd:element name="otro" nillable="true" type="xsd:string" />
+      <xsd:element name="padre" nillable="true" type="xsd:string" />
+      <xsd:element name="pagina" nillable="true" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="MenuTypePadres">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" name="padreItem" nillable="true" type="ns0:PadreType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="PaginaOpcionesUsuarioRequest">
+    <xsd:sequence>
+      <xsd:element name="user" type="xsd:int" />
+      <xsd:element name="aplicCod" type="xsd:int" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="PadreType">
+    <xsd:sequence>
+      <xsd:element name="datosPadre" nillable="true" type="ns0:OpcionType" />
+      <xsd:element name="hijos" nillable="true" type="ns0:PadreTypeHijos" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="OpcionesUsuarioResponse">
+    <xsd:sequence>
+      <xsd:element name="menues" nillable="true" type="ns0:MenuResponseType" />
+      <xsd:element name="codigoVendedor" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="HijoTypeNietos">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" name="nietoItem" nillable="true" type="ns0:NietoType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="RequestOpcionalComplexType">
+    <xsd:sequence>
+      <xsd:element name="clave" type="xsd:string" />
+      <xsd:element name="valor" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="UsuariosAppPerfilRequest">
+    <xsd:sequence>
+      <xsd:element name="codAplicacion" type="xsd:string" />
+      <xsd:element name="codPerfil" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="UsuariosAppPerfilResponse">
+    <xsd:sequence>
+      <xsd:element name="usuariosLista">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" name="DatosUsuario" type="ns0:UsuariosType" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="codigoVendedor" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="DatosEmpleadoRequest">
+    <xsd:sequence>
+      <xsd:element name="login" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="leerDatosEmpleadoResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="audit" type="ns0:AuditResponse" />
+        <xsd:element name="EmpleadoResponse" type="ns0:EmpleadoResponse" />
+        <xsd:element name="listaOpcionalResponse" type="ns0:ListaResponse" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="leerPaginaOpcionesPorUsuarioResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="audit" type="ns0:AuditResponse" />
+        <xsd:element name="PaginaOpcionesUsuarioResponse" type="ns0:ListaPaginaOpcionesType" />
+        <xsd:element name="listaOpcionalResponse" type="ns0:ListaResponse" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="leerOpcionesPorUsuarioResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="audit" type="ns0:AuditResponse" />
+        <xsd:element name="OpcionesUsuarioResponse" nillable="true" type="ns0:OpcionesUsuarioResponse" />
+        <xsd:element name="listaOpcionalResponse" type="ns0:ListaResponse" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="leerDatosUsuarioResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="audit" type="ns0:AuditResponse" />
+        <xsd:element name="AccesoResponse" type="ns0:AccesoResponse" />
+        <xsd:element name="listaOpcionalResponse" type="ns0:ListaResponse" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="leerUsuariosPorAppPerfil">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="audit" type="ns0:AuditRequest" />
+        <xsd:element name="UsuariosAppPerfilRequest" type="ns0:UsuariosAppPerfilRequest" />
+        <xsd:element name="listaOpcionalRequest" type="ns0:ListaRequest" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="leerDatosUsuario">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="audit" type="ns0:AuditRequest" />
+        <xsd:element name="AccesoRequest" type="ns0:AccesoRequest" />
+        <xsd:element name="listaOpcionalRequest" type="ns0:ListaRequest" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="leerUsuariosPorAppPerfilResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="audit" type="ns0:AuditResponse" />
+        <xsd:element name="UsuariosAppPerfilResponse" type="ns0:UsuariosAppPerfilResponse" />
+        <xsd:element name="listaOpcionalResponse" type="ns0:ListaResponse" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="leerPaginaOpcionesPorUsuario">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="audit" type="ns0:AuditRequest" />
+        <xsd:element name="PaginaOpcionesUsuarioRequest" type="ns0:PaginaOpcionesUsuarioRequest" />
+        <xsd:element name="listaOpcionalRequest" type="ns0:ListaRequest" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="leerOpcionesPorUsuario">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="audit" type="ns0:AuditRequest" />
+        <xsd:element name="OpcionesUsuarioRequest" nillable="true" type="ns0:OpcionesUsuarioRequest" />
+        <xsd:element name="listaOpcionalRequest" type="ns0:ListaRequest" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="leerDatosEmpleado">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="audit" type="ns0:AuditRequest" />
+        <xsd:element name="DatosEmpleadoRequest" type="ns0:DatosEmpleadoRequest" />
+        <xsd:element name="listaOpcionalRequest" type="ns0:ListaRequest" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

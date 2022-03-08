@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:header="http://claro.com.pe/generic/messageFormat/v1.0/" xmlns:tns="http://claro.com.pe/esb/postventa/consultaPlanTFI/v1/" xmlns:fault="http://claro.com.pe/esb/data/generico/claroFault/v1/" xmlns:ns1="http://claro.com.pe/esb/message/consultaPlanTFI/obtenerTabConsultaPlanTFIPost/v1/" xmlns:header2="http://claro.com.pe/esb/data/generico/claroGenericHeader/v1/" xmlns:soap11="http://schemas.xmlsoap.org/wsdl/soap/" name="BSS_ConsultaPlanTFI" targetNamespace="http://claro.com.pe/esb/postventa/consultaPlanTFI/v1/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema">
+      <import schemaLocation="../esquemas/obtenerTabConsultaPlanTFIPost_v1.xsd" namespace="http://claro.com.pe/esb/message/consultaPlanTFI/obtenerTabConsultaPlanTFIPost/v1/" />
+    </schema>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema">
+      <import schemaLocation="../esquemas/claroGenericHeaders_v1.xsd" namespace="http://claro.com.pe/esb/data/generico/claroGenericHeader/v1/" />
+    </schema>
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import schemaLocation="../esquemas/claroFault_v1.xsd" namespace="http://claro.com.pe/esb/data/generico/claroFault/v1/" />
+    </xsd:schema>
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import schemaLocation="../esquemas/HeaderGeneric_v1.0.xsd" namespace="http://claro.com.pe/generic/messageFormat/v1.0/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="obtenerTabConsultaPlanTFIPostRequestMessage">
+    <wsdl:part name="obtenerTabConsultaPlanTFIPostRequest" element="ns1:obtenerTabConsultaPlanTFIPostRequest" />
+  </wsdl:message>
+  <wsdl:message name="obtenerTabConsultaPlanTFIPostResponseMessage">
+    <wsdl:part name="obtenerTabConsultaPlanTFIPostResponse" element="ns1:obtenerTabConsultaPlanTFIPostResponse" />
+  </wsdl:message>
+  <wsdl:message name="claroFault">
+    <wsdl:part name="claroFault" element="fault:claroFault" />
+  </wsdl:message>
+  <wsdl:message name="requestHeaderMessage">
+    <wsdl:part name="header" element="header:HeaderRequest" />
+    <wsdl:part name="header2" element="header2:headerRequest" />
+  </wsdl:message>
+  <wsdl:message name="responseHeaderMessage">
+    <wsdl:part name="header" element="header:HeaderResponse" />
+    <wsdl:part name="header2" element="header2:headerResponse" />
+  </wsdl:message>
+  <wsdl:portType name="relacionConsultaPlanTFIPort">
+    <wsdl:operation name="obtenerTabConsultaPlanTFIPost">
+      <wsdl:input message="tns:obtenerTabConsultaPlanTFIPostRequestMessage" />
+      <wsdl:output message="tns:obtenerTabConsultaPlanTFIPostResponseMessage" />
+      <wsdl:fault name="fault" message="tns:claroFault" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="relacionConsultaPlanTFISOAP11Binding" type="tns:relacionConsultaPlanTFIPort">
+    <soap11:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="obtenerTabConsultaPlanTFIPost">
+      <soap11:operation soapAction="http://claro.com.pe/esb/postventa/relacionConsultaPlanTFI/v1/obtenerTabConsultaPlanTFIPost" style="document" />
+      <wsdl:input>
+        <soap11:header message="tns:requestHeaderMessage" part="header" use="literal" />
+        <soap11:header message="tns:requestHeaderMessage" part="header2" use="literal" />
+        <soap11:body use="literal" parts="obtenerTabConsultaPlanTFIPostRequest" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap11:header message="tns:responseHeaderMessage" part="header" use="literal" />
+        <soap11:header message="tns:responseHeaderMessage" part="header2" use="literal" />
+        <soap11:body use="literal" parts="obtenerTabConsultaPlanTFIPostResponse" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap11:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="relacionConsultaPlanTFISOAP12Binding" type="tns:relacionConsultaPlanTFIPort">
+    <soap12:binding transport="http://www.w3.org/2003/05/soap/bindings/HTTP/" />
+    <wsdl:operation name="obtenerTabConsultaPlanTFIPost">
+      <soap12:operation soapAction="http://claro.com.pe/esb/postventa/relacionConsultaPlanTFI/v1/obtenerTabConsultaPlanTFIPost" style="document" />
+      <wsdl:input>
+        <soap12:header message="tns:requestHeaderMessage" part="header" use="literal" />
+        <soap12:header message="tns:requestHeaderMessage" part="header2" use="literal" />
+        <soap12:body use="literal" parts="obtenerTabConsultaPlanTFIPostRequest" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:header message="tns:responseHeaderMessage" part="header" use="literal" />
+        <soap12:header message="tns:responseHeaderMessage" part="header2" use="literal" />
+        <soap12:body use="literal" parts="obtenerTabConsultaPlanTFIPostResponse" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap12:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BSS_ConsultaPlanTFI">
+    <wsdl:port name="BSS_ConsultaPlanTFI_SOAP12" binding="tns:relacionConsultaPlanTFISOAP12Binding">
+      <soap12:address location="http://127.0.0.1:7001/BSS_ConsultaPlanTFI/BSS_ConsultaPlanTFISB12" />
+    </wsdl:port>
+    <wsdl:port name="BSS_ConsultaPlanTFI_SOAP11" binding="tns:relacionConsultaPlanTFISOAP11Binding">
+      <soap11:address location="http://127.0.0.1:7001/BSS_ConsultaPlanTFI/BSS_ConsultaPlanTFISB11" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

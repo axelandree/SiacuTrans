@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Coliving.PutBillingAddress" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Coliving.PutBillingAddress" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="BillingAddressRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BillingAddress" nillable="true" type="tns:UpdateBillingAddress" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BillingAddressRequest" nillable="true" type="tns:BillingAddressRequest" />
+  <xs:complexType name="UpdateBillingAddress">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="actualizarDireccionFacturacionRequest" nillable="true" type="tns:UpdateBillingAddressRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UpdateBillingAddress" nillable="true" type="tns:UpdateBillingAddress" />
+  <xs:complexType name="UpdateBillingAddressRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="adrBirthdt" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="adrCheck" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="adrCity" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="adrCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="adrCompno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="adrCounty" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="adrCusttype" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="adrDeleted" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="adrDrivelicence" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="adrEmail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="adrEmployee" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="adrEmployer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="adrFax" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="adrFaxarea" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="adrFname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="adrForward" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="adrIdno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="adrInccode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="adrJbdes" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="adrLname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="adrLocation1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="adrLocation2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="adrMname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="adrName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="adrNationality" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="adrNationalitypub" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="adrNote1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="adrNote2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="adrNote3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="adrPhn1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="adrPhn1Area" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="adrPhn2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="adrPhn2Area" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="adrRemark" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="adrRoles" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="adrSeq" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="adrSex" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="adrSmsno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="adrSocialSeno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="adrState" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="adrStreet" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="adrStreetNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="adrTaxno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="adrUrgent" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="adrValidDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="adrWriteOnReq" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="adrYears" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="adrzIp" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="billingAccountId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bmId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="countryId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="countryIdPub" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="csId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="csIdPub" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="idTypeCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="listaOpcional" nillable="true" type="tns:ArrayOfOpcional" />
+      <xs:element minOccurs="0" name="lngCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="lngCodePub" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="masCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="masCodePub" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ttlId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ttlidpub" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UpdateBillingAddressRequest" nillable="true" type="tns:UpdateBillingAddressRequest" />
+  <xs:complexType name="ArrayOfOpcional">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Opcional" nillable="true" type="tns:Opcional" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOpcional" nillable="true" type="tns:ArrayOfOpcional" />
+  <xs:complexType name="Opcional">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="clave" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="valor" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Opcional" nillable="true" type="tns:Opcional" />
+</xs:schema>

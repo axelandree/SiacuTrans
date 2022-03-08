@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetConsultarClaroPuntos" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetConsultarClaroPuntos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd3" namespace="Claro" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd95" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetDataPower" />
+  <xs:complexType name="ConsultarClaroPuntosRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="Claro" base="q1:Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="MessageRequest" nillable="true" type="tns:ConsultarClaroPuntosMessageRequest" />
+          <xs:element minOccurs="0" name="bolsa" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="numeroDocumento" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="tipoConsulta" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="tipoDocumento" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="tipoPuntos" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ConsultarClaroPuntosRequest" nillable="true" type="tns:ConsultarClaroPuntosRequest" />
+  <xs:complexType name="ConsultarClaroPuntosMessageRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Body" nillable="true" type="tns:ConsultarClaroPuntosBodyRequest" />
+      <xs:element minOccurs="0" name="Header" nillable="true" type="tns:ConsultarClaroPuntosHeaderRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConsultarClaroPuntosMessageRequest" nillable="true" type="tns:ConsultarClaroPuntosMessageRequest" />
+  <xs:complexType name="ConsultarClaroPuntosBodyRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bolsa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="numeroDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoConsulta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoPuntos" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConsultarClaroPuntosBodyRequest" nillable="true" type="tns:ConsultarClaroPuntosBodyRequest" />
+  <xs:complexType name="ConsultarClaroPuntosHeaderRequest">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetDataPower" minOccurs="0" name="HeaderRequest" nillable="true" type="q2:HeaderRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConsultarClaroPuntosHeaderRequest" nillable="true" type="tns:ConsultarClaroPuntosHeaderRequest" />
+  <xs:complexType name="ConsultarClaroPuntosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MessageResponse" nillable="true" type="tns:ConsultarClaroPuntosMessageResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConsultarClaroPuntosResponse" nillable="true" type="tns:ConsultarClaroPuntosResponse" />
+  <xs:complexType name="ConsultarClaroPuntosMessageResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Body" nillable="true" type="tns:ConsultarClaroPuntosBodyResponse" />
+      <xs:element minOccurs="0" name="Header" nillable="true" type="tns:ConsultarClaroPuntosHeaderResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConsultarClaroPuntosMessageResponse" nillable="true" type="tns:ConsultarClaroPuntosMessageResponse" />
+  <xs:complexType name="ConsultarClaroPuntosBodyResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigoRespuesta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="mensajeError" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="mensajeRespuesta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="saldo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConsultarClaroPuntosBodyResponse" nillable="true" type="tns:ConsultarClaroPuntosBodyResponse" />
+  <xs:complexType name="ConsultarClaroPuntosHeaderResponse">
+    <xs:sequence>
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetDataPower" minOccurs="0" name="HeaderResponse" nillable="true" type="q3:HeaderResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConsultarClaroPuntosHeaderResponse" nillable="true" type="tns:ConsultarClaroPuntosHeaderResponse" />
+</xs:schema>

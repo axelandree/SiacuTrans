@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.ClaroVideo.GetDeleteClientSN" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.ClaroVideo.GetDeleteClientSN" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd38" namespace="Tools.Entity" />
+  <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd50" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.ClaroVideo" />
+  <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd40" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.GetDataPower" />
+  <xs:complexType name="DeleteClientSNRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="Tools.Entity" base="q1:Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="MessageRequest" nillable="true" type="tns:DeleteClientSNMessageRequest" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeleteClientSNRequest" nillable="true" type="tns:DeleteClientSNRequest" />
+  <xs:complexType name="DeleteClientSNMessageRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Body" nillable="true" type="tns:DeleteClientSNBodyRequest" />
+      <xs:element minOccurs="0" name="Header" nillable="true" type="tns:DeleteClientSNHeaderRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DeleteClientSNMessageRequest" nillable="true" type="tns:DeleteClientSNMessageRequest" />
+  <xs:complexType name="DeleteClientSNBodyRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="deleteUserOttRequest" nillable="true" type="tns:deleteUserOttRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DeleteClientSNBodyRequest" nillable="true" type="tns:DeleteClientSNBodyRequest" />
+  <xs:complexType name="deleteUserOttRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="account" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="correlatorId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="countryId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="employeeId" nillable="true" type="xs:string" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.ClaroVideo" minOccurs="0" name="extensionInfo" nillable="true" type="q2:ArrayOfextensionInfo" />
+      <xs:element minOccurs="0" name="iccidManager" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="invokeMethod" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="origin" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="paymentMethod" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="providerId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="serviceName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="deleteUserOttRequest" nillable="true" type="tns:deleteUserOttRequest" />
+  <xs:complexType name="DeleteClientSNHeaderRequest">
+    <xs:sequence>
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.GetDataPower" minOccurs="0" name="HeaderRequest" nillable="true" type="q3:HeaderRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DeleteClientSNHeaderRequest" nillable="true" type="tns:DeleteClientSNHeaderRequest" />
+  <xs:complexType name="DeleteClientSNResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MessageResponse" nillable="true" type="tns:DeleteClientSNMessageResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DeleteClientSNResponse" nillable="true" type="tns:DeleteClientSNResponse" />
+  <xs:complexType name="DeleteClientSNMessageResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Body" nillable="true" type="tns:DeleteClientSNBodyResponse" />
+      <xs:element minOccurs="0" name="Header" nillable="true" type="tns:DeleteClientSNHeaderResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DeleteClientSNMessageResponse" nillable="true" type="tns:DeleteClientSNMessageResponse" />
+  <xs:complexType name="DeleteClientSNBodyResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="deleteUserOttResponse" nillable="true" type="tns:deleteUserOttResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DeleteClientSNBodyResponse" nillable="true" type="tns:DeleteClientSNBodyResponse" />
+  <xs:complexType name="deleteUserOttResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="correlatorId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="countryId" nillable="true" type="xs:string" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.ClaroVideo" minOccurs="0" name="extensionInfo" nillable="true" type="q4:ArrayOfextensionInfo" />
+      <xs:element minOccurs="0" name="providerId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="resultCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="resultMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="serviceName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="deleteUserOttResponse" nillable="true" type="tns:deleteUserOttResponse" />
+  <xs:complexType name="DeleteClientSNHeaderResponse">
+    <xs:sequence>
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.GetDataPower" minOccurs="0" name="HeaderResponse" nillable="true" type="q5:HeaderResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DeleteClientSNHeaderResponse" nillable="true" type="tns:DeleteClientSNHeaderResponse" />
+</xs:schema>

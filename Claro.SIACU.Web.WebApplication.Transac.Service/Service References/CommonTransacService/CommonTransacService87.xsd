@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetPuntosAtencion" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetPuntosAtencion" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd95" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetDataPower" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd3" namespace="Claro" />
+  <xs:complexType name="PuntosAtencionRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="Claro" base="q1:Request">
+        <xs:sequence>
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetDataPower" minOccurs="0" name="Header" nillable="true" type="q2:HeaderRequest" />
+          <xs:element minOccurs="0" name="TabPuntosAtencion" nillable="true" type="tns:obtenerTabPuntosAtencionPostRequest" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PuntosAtencionRequest" nillable="true" type="tns:PuntosAtencionRequest" />
+  <xs:complexType name="obtenerTabPuntosAtencionPostRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="Claro" base="q3:Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="title" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="obtenerTabPuntosAtencionPostRequest" nillable="true" type="tns:obtenerTabPuntosAtencionPostRequest" />
+  <xs:complexType name="responseDataObtenerTabPuntosAtencionPost">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="listaTabPuntosAtencionPost" nillable="true" type="tns:ArrayOftabPuntosAtencionPost" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="responseDataObtenerTabPuntosAtencionPost" nillable="true" type="tns:responseDataObtenerTabPuntosAtencionPost" />
+  <xs:complexType name="ArrayOftabPuntosAtencionPost">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="tabPuntosAtencionPost" nillable="true" type="tns:tabPuntosAtencionPost" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftabPuntosAtencionPost" nillable="true" type="tns:ArrayOftabPuntosAtencionPost" />
+  <xs:complexType name="tabPuntosAtencionPost">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cacTypeCodele" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cacTypeTitle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="codele" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="rank" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tipo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="tabPuntosAtencionPost" nillable="true" type="tns:tabPuntosAtencionPost" />
+</xs:schema>

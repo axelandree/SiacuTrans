@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://claro.com.pe/bpel/postventa/detallellamadas/v1/" xmlns:he="http://claro.com.pe/bpel/data/generico/claroGenericHeader/v1/" xmlns:types="http://claro.com.pe/BPEL_DetalleLlamadas/DetalleLlamadas/types" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ef="http://claro.com.pe/bpel/data/generico/claroFault/v1/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/wsdl/" name="DetalleLlamadasBPEL" targetNamespace="http://claro.com.pe/bpel/postventa/detallellamadas/v1/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://10.172.139.35:7004/soa-infra/services/default/DetalleLlamadasFijaSOA/DetalleLlamadasFijaSOAP?XSD=../Schemas/DetalleLlamada_v1.xsd" namespace="http://claro.com.pe/BPEL_DetalleLlamadas/DetalleLlamadas/types" />
+      <xsd:import schemaLocation="http://10.172.139.35:7004/soa-infra/services/default/DetalleLlamadasFijaSOA/DetalleLlamadasFijaSOAP?XSD=../Schemas/ClaroFault_v1.xsd" namespace="http://claro.com.pe/bpel/data/generico/claroFault/v1/" />
+      <xsd:import schemaLocation="http://10.172.139.35:7004/soa-infra/services/default/DetalleLlamadasFijaSOA/DetalleLlamadasFijaSOAP?XSD=../Schemas/ClaroGenericHeaders_v1.xsd" namespace="http://claro.com.pe/bpel/data/generico/claroGenericHeader/v1/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="detalleLlamadasRequestMessage">
+    <wsdl:part name="request" element="types:detalleLlamadasRequest" />
+  </wsdl:message>
+  <wsdl:message name="detalleLlamadasResponseMessage">
+    <wsdl:part name="response" element="types:detalleLlamadasResponse" />
+  </wsdl:message>
+  <wsdl:message name="claroFault">
+    <wsdl:part name="claroFault" element="ef:claroFault" />
+  </wsdl:message>
+  <wsdl:message name="headerRequest">
+    <wsdl:part name="headerRequest" element="he:headerRequest" />
+  </wsdl:message>
+  <wsdl:message name="headerResponse">
+    <wsdl:part name="headerResponse" element="he:headerResponse" />
+  </wsdl:message>
+  <wsdl:portType name="detalleLlamadasPort">
+    <wsdl:operation name="consultarDetalleLlamadas">
+      <wsdl:input message="tns:detalleLlamadasRequestMessage" />
+      <wsdl:output message="tns:detalleLlamadasResponseMessage" />
+      <wsdl:fault name="claroFault" message="tns:claroFault" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BPEL_DetalleLlamadasPortSOAP11Binding" type="tns:detalleLlamadasPort">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="consultarDetalleLlamadas">
+      <soap:operation soapAction="http://claro.com.pe/bpel/postventa/detallellamadas/v1/consultarDetalleLlamadas" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:headerRequest" part="headerRequest" use="literal" />
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:header message="tns:headerResponse" part="headerResponse" use="literal" />
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+      <wsdl:fault name="claroFault">
+        <soap:fault use="literal" name="claroFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BPEL_DetalleLlamadasPortSOAP12Binding" type="tns:detalleLlamadasPort">
+    <soap12:binding transport="http://www.w3.org/2003/05/soap/bindings/HTTP/" />
+    <wsdl:operation name="consultarDetalleLlamadas">
+      <soap12:operation soapAction="http://claro.com.pe/bpel/postventa/detallellamadas/v1/consultarDetalleLlamadas" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:headerRequest" part="headerRequest" use="literal" />
+        <soap12:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:header message="tns:headerResponse" part="headerResponse" use="literal" />
+        <soap12:body use="literal" parts="response" />
+      </wsdl:output>
+      <wsdl:fault name="claroFault">
+        <soap12:fault use="literal" name="claroFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BPEL_DetalleLlamadas_v1">
+    <wsdl:port name="BPEL_DetalleLlamadasSB11" binding="tns:BPEL_DetalleLlamadasPortSOAP11Binding">
+      <soap:address location="http://127.0.0.1:7001/BPEL_DetalleLlamadas/BPEL_DetalleLlamadasSB11" />
+    </wsdl:port>
+    <wsdl:port name="BPEL_DetalleLlamadasSB12" binding="tns:BPEL_DetalleLlamadasPortSOAP12Binding">
+      <soap12:address location="http://127.0.0.1:7001/BPEL_DetalleLlamadas/BPEL_DetalleLlamadasSB12" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

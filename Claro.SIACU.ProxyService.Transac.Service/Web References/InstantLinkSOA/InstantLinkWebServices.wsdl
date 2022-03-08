@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://soa.comptel.com/2011/02/instantlink" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" name="InstantLinkWebServices" targetNamespace="http://soa.comptel.com/2011/02/instantlink" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <import namespace="http://soa.comptel.com/2011/02/instantlink" location="http://172.19.32.88:44006/ilws/InstantLinkSOA?wsdl=1" />
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://172.19.32.88:44006/ilws/InstantLinkSOA?xsd=1" namespace="http://soa.comptel.com/2011/02/instantlink" />
+    </xsd:schema>
+  </types>
+  <message name="delete">
+    <part name="deleteRequest" element="tns:DeleteRequest" />
+  </message>
+  <message name="create">
+    <part name="createRequest" element="tns:CreateRequest" />
+  </message>
+  <message name="modify">
+    <part name="modifyRequest" element="tns:ModifyRequest" />
+  </message>
+  <message name="display">
+    <part name="displayRequest" element="tns:DisplayRequest" />
+  </message>
+  <message name="response">
+    <part name="response" element="tns:Response" />
+  </message>
+  <message name="getInstantLinkAvailability" />
+  <message name="getInstantLinkAvailabilityResponse">
+    <part name="getInstantLinkAvailabilityResponse" element="tns:InstantLinkAvailabilityInfo" />
+  </message>
+  <portType name="InstantLinkSOA">
+    <documentation>This is a service to send requests to InstantLink</documentation>
+    <operation name="delete">
+      <documentation>Operation to delete activated service(s) from the network</documentation>
+      <input message="tns:delete" />
+      <output message="tns:response" />
+    </operation>
+    <operation name="create">
+      <documentation>Operation to create (activate) service(s) in the network</documentation>
+      <input message="tns:create" />
+      <output message="tns:response" />
+    </operation>
+    <operation name="modify">
+      <documentation>Operation to modify already activated service(s) in the network</documentation>
+      <input message="tns:modify" />
+      <output message="tns:response" />
+    </operation>
+    <operation name="display">
+      <documentation>Operation to fetch parameters from the network</documentation>
+      <input message="tns:display" />
+      <output message="tns:response" />
+    </operation>
+    <operation name="getInstantLinkAvailability">
+      <documentation>Operation to get the current InstantLink status information</documentation>
+      <input message="tns:getInstantLinkAvailability" />
+      <output message="tns:getInstantLinkAvailabilityResponse" />
+    </operation>
+  </portType>
+  <binding name="InstantLinkWebServicesPortBinding" type="tns:InstantLinkSOA">
+    <wsp:PolicyReference URI="http://soa.comptel.com/2011/02/instantlink/InstantLinkWebServices_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="delete">
+      <soap12:operation soapAction="" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="create">
+      <soap12:operation soapAction="" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modify">
+      <soap12:operation soapAction="" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="display">
+      <soap12:operation soapAction="" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getInstantLinkAvailability">
+      <soap12:operation soapAction="" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="InstantLinkWebServices">
+    <documentation>Service to send requests to InstantLink</documentation>
+    <port name="InstantLinkWebServicesPort" binding="tns:InstantLinkWebServicesPortBinding">
+      <documentation>A SOAP 1.2 port</documentation>
+      <soap12:address location="http://172.19.32.88:44006/ilws/InstantLinkSOA" />
+    </port>
+  </service>
+</definitions>

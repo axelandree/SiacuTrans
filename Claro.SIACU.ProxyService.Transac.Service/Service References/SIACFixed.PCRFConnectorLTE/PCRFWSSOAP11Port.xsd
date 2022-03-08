@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="http://claro.com.pe/eai/ConnectorPcrf/ws/types" elementFormDefault="qualified" targetNamespace="http://claro.com.pe/eai/ConnectorPcrf/ws/types" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType name="accionType">
+    <xsd:sequence>
+      <xsd:element name="idAccion" type="xsd:string" />
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="listaParametros" type="listaParametros" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="parametrosAuditRequest">
+    <xsd:sequence>
+      <xsd:element name="idTransaccion" type="xsd:string" />
+      <xsd:element name="ipAplicacion" type="xsd:string" />
+      <xsd:element name="nombreAplicacion" type="xsd:string" />
+      <xsd:element name="usuarioAplicacion" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="parametrosAuditResponse">
+    <xsd:sequence>
+      <xsd:element name="idTransaccion" type="xsd:string" />
+      <xsd:element name="codRespuesta" type="xsd:string" />
+      <xsd:element name="msjRespuesta" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="listaParametros">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="parametro">
+        <xsd:complexType>
+          <xsd:attribute name="campo" type="xsd:string" />
+          <xsd:attribute name="valor" type="xsd:string" />
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="subListaParametros" type="subListaParametros" />
+    </xsd:sequence>
+    <xsd:attribute name="nombreLista" type="xsd:string" />
+  </xsd:complexType>
+  <xsd:complexType name="subListaParametros">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="parametro">
+        <xsd:complexType>
+          <xsd:attribute name="campo" type="xsd:string" />
+          <xsd:attribute name="valor" type="xsd:string" />
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+    <xsd:attribute name="nombreLista" type="xsd:string" />
+  </xsd:complexType>
+</xsd:schema>

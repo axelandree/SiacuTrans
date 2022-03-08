@@ -1,0 +1,68 @@
+﻿<style type="text/css">
+    fieldset.scheduler-border {
+        border: solid 2px #DDD !important;
+        padding: 0 10px 10px 10px;
+        border-bottom: none;
+    }
+
+    legend.scheduler-border {
+        width: auto !important;
+        border: none;
+        font-size: 16px;
+    }
+</style>
+<script type="text/javascript" src="~/Areas/Transactions/Content/Lib/BloqueoF12.js"></script>
+<div id="ContentHistoryVisualizationClient">
+    <div class="panel panel-default" style="margin-left:15px; margin-right:15px">
+        <div class="panel">
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-2"> <label for="FechaDesde" class="col-form-label">Fecha desde:</label> <span class="glyphicon glyphicon-calendar"></span> </div>
+                <div class="col-md-2"><input type="text" class="form-control" id="FechaDesde" value="" placeholder="(dd/mm/yyyy)" name="start" /></div>
+                <div class="col-md-2"> <label for="FechaHasta" class="col-form-label">Fecha Hasta:</label> <span class="glyphicon glyphicon-calendar"></span></div>
+                <div class="col-md-2"><input type="text" class="form-control" id="FechaHasta" placeholder="(dd/mm/yyyy)" name="start" value="" /></div>
+                <div class="col-md-2">
+                    <button style="padding-left: 35px; padding-right: 35px; margin: 5px; " class="btn btn-danger btn-sm" id="btnSearchHistory" type="button">Buscar</button>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+        </div>
+        <div class="panel-body">
+         
+
+                <div class="row" style="margin-left:1px; margin-right:1px">
+                    <div class="well">
+                        <div class="row" id="divtbTreeNodes">
+                            <table id="tbVisualizationsList" class="table table-bordered table-striped table-hover">
+                                <thead class="claro-bg-primary">
+                                    <tr class="RowGridVisualizationsList">
+                                        <th style="text-align:center">Id</th>
+                                        <th style="text-align: center">Titulo de la pelicula</th>
+                                        <th style="text-align: center">Ip Usuario</th>
+                                        <th style="text-align: center">Fecha de Tiempo de Visualización</th>
+                                        <th style="text-align: center">Último Tiempo de Visualización</th>
+                                        <th style="text-align: center">Fecha Máxima de Visualización</th>
+                                        <th style="text-align: center">Tiempo Máximo de Visualización</th>
+                                        <th style="text-align: center; width: inherit; display:none">order</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tbVisualizationListBody"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+            </div>
+        </div>
+    <input type="hidden" id="hdidRefSuscripcionHistory" value="@ViewBag.idRefSuscripcionHistory" />
+    <input type="hidden" id="hdCustomerIDClaroVideo" value="@ViewBag.CustomerID" />
+    </div>
+
+    @* wbc - inicio *@
+
+
+    @* wbc - fin *@
+
+@Scripts.Render("~/bundles/Transactions/HistoryVisualizationClient")

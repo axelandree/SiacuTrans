@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.getConsultaLineaCuenta" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.getConsultaLineaCuenta" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd38" namespace="Tools.Entity" />
+  <xs:complexType name="ConsultaLineaRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="Tools.Entity" base="q1:Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ConsultaLineaRequest" nillable="true" type="tns:ConsultaLineaRequest" />
+  <xs:complexType name="ConsultaLineaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ResponseDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResponseValue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="itm" nillable="true" type="tns:Itm" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConsultaLineaResponse" nillable="true" type="tns:ConsultaLineaResponse" />
+  <xs:complexType name="Itm">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="actCuentaProd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="coId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="codCuenta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="custCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="estado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fchCreacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fchModif" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="identificacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="migCuentaProd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="origenCuenta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="origenRegistro" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="usrCrea" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="usrModif" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Itm" nillable="true" type="tns:Itm" />
+</xs:schema>

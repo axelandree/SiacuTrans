@@ -1,0 +1,19 @@
+﻿#binTree {
+    height: 400px;
+    overflow: auto;
+}
+
+#binTreeData {
+    height: 400px;
+    overflow: auto;
+}
+
+#searchCases {
+    height: 400px;
+    overflow: auto;
+}
+
+#queueTreeData {
+    height: 400px;
+    overflow: auto;
+}

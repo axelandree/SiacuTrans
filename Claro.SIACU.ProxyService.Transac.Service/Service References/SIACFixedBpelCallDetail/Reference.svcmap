@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="0c7716e7-5d6c-41d3-bee3-d7d99a71d24b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.172.139.35:7004/soa-infra/services/default/DetalleLlamadasFijaSOA/DetalleLlamadasFijaSOAP?WSDL" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ResponseStatus_v1.xsd" MetadataType="Schema" ID="18f1a427-ad97-4c74-8081-6f097e1fec05" SourceId="1" SourceUrl="http://10.172.139.35:7004/soa-infra/services/default/DetalleLlamadasFijaSOA/DetalleLlamadasFijaSOAP?XSD=../Schemas/ResponseStatus_v1.xsd" />
+    <MetadataFile FileName="ClaroGenericHeaders_v1.xsd" MetadataType="Schema" ID="7f835d7e-1af9-43f9-a306-f23c25162645" SourceId="1" SourceUrl="http://10.172.139.35:7004/soa-infra/services/default/DetalleLlamadasFijaSOA/DetalleLlamadasFijaSOAP?XSD=../Schemas/ClaroGenericHeaders_v1.xsd" />
+    <MetadataFile FileName="obtenerDetLlamadasSalNoFactV2_sp.xsd" MetadataType="Schema" ID="ef9f6152-94dc-46a4-85e3-41f8c27ee729" SourceId="1" SourceUrl="http://10.172.139.35:7004/soa-infra/services/default/DetalleLlamadasFijaSOA/DetalleLlamadasFijaSOAP?XSD=../Schemas/obtenerDetLlamadasSalNoFactV2_sp.xsd" />
+    <MetadataFile FileName="ClaroFault_v1.xsd" MetadataType="Schema" ID="e4a44901-6896-489b-b73e-877b1e91e496" SourceId="1" SourceUrl="http://10.172.139.35:7004/soa-infra/services/default/DetalleLlamadasFijaSOA/DetalleLlamadasFijaSOAP?XSD=../Schemas/ClaroFault_v1.xsd" />
+    <MetadataFile FileName="DetalleLlamadasBPEL.wsdl" MetadataType="Wsdl" ID="65ac1383-7958-476f-b562-ff5690505c1f" SourceId="1" SourceUrl="http://10.172.139.35:7004/soa-infra/services/default/DetalleLlamadasFijaSOA/DetalleLlamadasFijaSOAP?WSDL" />
+    <MetadataFile FileName="DetalleLlamadasBPEL1.wsdl" MetadataType="Wsdl" ID="0c90fe7f-2e45-4f44-8ac7-32da6d38f65c" SourceId="1" SourceUrl="http://10.172.139.35:7004/soa-infra/services/default/DetalleLlamadasFijaSOA/DetalleLlamadasFijaSOAP?WSDL=DetalleLlamadasBPEL.wsdl" />
+    <MetadataFile FileName="DetalleLlamada_v1.xsd" MetadataType="Schema" ID="31d597e8-2725-41d8-a54a-4fa3a3a4e4e1" SourceId="1" SourceUrl="http://10.172.139.35:7004/soa-infra/services/default/DetalleLlamadasFijaSOA/DetalleLlamadasFijaSOAP?XSD=../Schemas/DetalleLlamada_v1.xsd" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

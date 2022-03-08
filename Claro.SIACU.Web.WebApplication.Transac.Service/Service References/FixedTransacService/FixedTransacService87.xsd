@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.Discard.ProcesarContinue" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.Discard.ProcesarContinue" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="MessageRequestRegistrarProcesoContinue">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="registrarProcesoContinueRequest" nillable="true" type="tns:registrarProcesoContinueRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MessageRequestRegistrarProcesoContinue" nillable="true" type="tns:MessageRequestRegistrarProcesoContinue" />
+  <xs:complexType name="registrarProcesoContinueRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="accion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="codigoILink" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="imsi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ip" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="motivo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="msisdn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="plataforma" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="registrarProcesoContinueRequest" nillable="true" type="tns:registrarProcesoContinueRequest" />
+  <xs:complexType name="MessageResponseRegistrarProcesoContinue">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="registrarProcesoContinueResponse" nillable="true" type="tns:registrarProcesoContinueResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MessageResponseRegistrarProcesoContinue" nillable="true" type="tns:MessageResponseRegistrarProcesoContinue" />
+  <xs:complexType name="registrarProcesoContinueResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="responseAudit" nillable="true" type="tns:responseAudit" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="registrarProcesoContinueResponse" nillable="true" type="tns:registrarProcesoContinueResponse" />
+  <xs:complexType name="responseAudit">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigoRespuesta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="idTransaccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="mensajeRespuesta" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="responseAudit" nillable="true" type="tns:responseAudit" />
+</xs:schema>

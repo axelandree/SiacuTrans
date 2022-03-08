@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="TransactionSiga">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="COD_TIPO_OPERACION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DIRECCION_CLIENTE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ESTADO_ACUERDO" type="xs:int" />
+      <xs:element minOccurs="0" name="ESTADO_APADECE" type="xs:int" />
+      <xs:element minOccurs="0" name="FLAG_EQUIPO" type="xs:int" />
+      <xs:element minOccurs="0" name="FUENTE_ACTUALIZACI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MONTO_FIDELIZA" type="xs:double" />
+      <xs:element minOccurs="0" name="MOTIVO_APADECE" type="xs:int" />
+      <xs:element minOccurs="0" name="MSISDN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NOMBRE_CLIENTE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NRO_DOC_CLIENTE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NRO_DOC_PAGO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RAZON_SOCIAL" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TransactionSiga" nillable="true" type="tns:TransactionSiga" />
+</xs:schema>

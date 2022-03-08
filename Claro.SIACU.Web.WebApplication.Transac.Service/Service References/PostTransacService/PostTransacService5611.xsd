@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetInsertTraceability" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetInsertTraceability" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd3" namespace="Claro" />
+  <xs:complexType name="InsertTraceabilityRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="Claro" base="q1:Request">
+        <xs:sequence>
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid" minOccurs="0" name="item" nillable="true" type="q2:RegisterTraceability" />
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid" minOccurs="0" name="lstRegisterTraceabilityOptionalList" nillable="true" type="q3:ArrayOfRegisterTraceabilityOptionalList" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InsertTraceabilityRequest" nillable="true" type="tns:InsertTraceabilityRequest" />
+  <xs:complexType name="InsertTraceabilityResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodRespuesta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdTransaccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MsjRespuesta" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InsertTraceabilityResponse" nillable="true" type="tns:InsertTraceabilityResponse" />
+</xs:schema>

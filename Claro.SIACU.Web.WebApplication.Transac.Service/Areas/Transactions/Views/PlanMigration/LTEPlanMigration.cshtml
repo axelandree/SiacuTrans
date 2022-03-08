@@ -1,0 +1,924 @@
+﻿@model Claro.SIACU.Web.WebApplication.Transac.Service.Areas.Transactions.Models.HFC.MigrationModel
+@{
+    Layout = null;
+}
+<script type="text/javascript" src="~/Areas/Transactions/Content/Lib/BloqueoF12.js"></script>
+<script type="text/javascript">
+    var CURRENTSERVERDATE = "@Model.ServerDate";
+    var SERVERDATEDEFAULT = "@ViewData["SERVERDATEDEFAULT"]";
+</script>
+<link href="~/Areas/Transactions/ContentTransac/css/MigrationPlan.css" rel="stylesheet" />
+<div id="LtePlanMigration" class="container-fluid">
+    <div class="scrollbudy">
+        <div class="col-md-3">
+            @*<div class="panel-heading transaction-title nice-header">
+                <span class="label label-danger pull-right" id="lblNodeNew"></span>
+                <h1>Cambio de Plan</h1>
+            </div>*@
+            <div id="DataCustomer" class="panel claro-panel-primary panel-group" role="tablist" aria-multiselectable="true">
+                <div id="customerDataHead" role="tab" class="panel-heading">
+                    <span class="glyphicon glyphicon-user"></span>
+                    <a data-toggle="collapse" href="#customerDataCollapse" aria-expanded="true" data-parent="#DataCustomer" aria-controls="customerDataCollapse" class="collapsed transaction-ref-color"> Datos del Cliente</a>
+                </div>
+                <div class="panel-body panel-collapse collapse in" id="customerDataCollapse" role="tabpanel" aria-labelledby="customerDataHead">
+                    <table class="table table-condensed">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-3">
+                                    Contrato
+                                </td>
+                                <td class="col-md-3">
+                                    <label id="lblContract"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-3">
+                                    Customer ID
+                                </td>
+                                <td class="col-md-3">
+                                    <label id="lblCustomerId"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-3">
+                                    Tipo de Cliente
+                                </td>
+                                <td class="col-md-3">
+                                    <label id="lblCustomerType"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-3">
+                                    Cliente
+                                </td>
+                                <td class="col-md-3">
+                                    <label id="lblCustomer"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-3">
+                                    Contacto
+                                </td>
+                                <td class="col-md-3">
+                                    <label id="lblContact"></label>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="col-md-3">
+                                    DNI/RUC
+                                </td>
+                                <td class="col-md-3">
+                                    <label id="lblDocNum"></label>
+                                </td>
+                            </tr>
+                        <tr>
+                            <td class="col-md-3">
+                                Representante Legal
+                            </td>
+                            <td class="col-md-3">
+                                <label id="lblLegalRep"></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-3">Doc Repres. Legal:</td>
+                            <td><label id="lblIdentDocLegalRepresent"></label></td>
+                        </tr>
+                            <tr>
+                                <td class="col-md-3">
+                                    Plan Actual
+                                </td>
+                                <td class="col-md-3">
+                                    <label id="lblCurrentPlan"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-3">
+                                    Fecha de Activación
+                                </td>
+                                <td class="col-md-3">
+                                    <label id="lblCurrentDate"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-3">
+                                    Ciclo de Facturación
+                                </td>
+                                <td class="col-md-3">
+                                    <label id="lblBillingCycle"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-3">
+                                    Límite de Crédito <br />(S/ inc. IGV)
+                                </td>
+                                <td class="col-md-3">
+                                    <label id="lblCreditLimit"></label>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="addressDataHead" role="tab" class="panel-heading">
+                    <span class="glyphicon glyphicon-home"></span>
+                    <a data-toggle="collapse" href="#addressDataCollapse" aria-expanded="false" data-parent="#DataCustomer" aria-controls="addressDataCollapse" class="collapsed transaction-ref-color"> Dirección de Facturación</a>
+                </div>
+                <div class="panel-body panel-collapse collapse in" id="addressDataCollapse" role="tabpanel" aria-labelledby="addressDataHead">
+                    <table class="table table-condensed">
+                        <tr>
+                            <td>Dirección</td>
+                            <td>
+                                <label id="lblAddress"></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Referencia</td>
+                            <td>
+                                <label id="lblReference"></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>País</td>
+                            <td>
+                                <label id="lblCountry"></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Departamento</td>
+                            <td>
+                                <label id="lblDepartment"></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Provincia</td>
+                            <td>
+                                <label id="lblProvince"></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Distrito</td>
+                            <td>
+                                <label id="lblDistrict"></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Código de Ubigeo</td>
+                            <td>
+                                <label id="lblUbigeoCode"></label>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="businessRulesHead" role="tab" class="panel-heading">
+                    <span class="glyphicon glyphicon-th-list"></span>
+                    <a data-toggle="collapse" href="#businessRulesCollapse" aria-expanded="false" data-parent="#DataCustomer" aria-controls="businessRulesCollapse" class="collapsed transaction-ref-color"> Reglas de Atención</a>
+                </div>
+                <div class="panel-body panel-collapse collapse in" id="businessRulesCollapse" role="tabpanel" aria-labelledby="businessRulesHead">
+                    <div id="divRules">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="content" class="col-md-9 transaction-content" style="height: auto !important;">
+            <div class="transaction-container-step">
+                <div class="process">
+                    <div class="process-row nav nav-tabs">
+                        <div class="process-step process-step-3-left">
+                            <button type="button" class="btn btn-circle transaction-button transac-validate" data-toggle="tab" role="tab" href="#tabPlanYServiciosAdicionales" percent="0%" index="1"><i class="fa fa-cogs" aria-hidden="true"></i></button>
+                            <p>Nuevo Plan</p>
+                        </div>
+                        @*<div class="process-step process-step-5">
+                            <button type="button" class="btn btn-circle disabled transac-validate" data-toggle="tab" role="tab" href="#tabServiciosComplementarios" percent="30%" index="2" disabled><i class="fa fa-phone-square" aria-hidden="true"></i></button>
+                            <p>Complementarios</p>
+                        </div>*@
+                        @*<div class="process-step process-step-2">
+                            <button type="button" class="btn btn-circle disabled transac-validate" data-toggle="tab" role="tab" href="#tabPenalidades" percent="43.33333334%" index="3" disabled><i class="fa fa-legal" aria-hidden="true"></i></button>
+                            <p>Penalidades</p>
+                        </div>*@
+                        <div class="process-step process-step-3">
+                            <button type="button" class="btn btn-circle disabled transac-validate" data-toggle="tab" role="tab" href="#tabAgendamiento" percent="37.5%" index="3" disabled><i class="fa fa-calendar" aria-hidden="true"></i></button>
+                            <p>Agendamiento</p>
+                        </div>
+                        <div class="process-step process-step-3">
+                            <button type="button" class="btn btn-circle disabled transac-validate" data-toggle="tab" role="tab" href="#tabDatosTecnicos" percent="62.5%" index="4" disabled><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                            <p>Datos Técnicos</p>
+                        </div>
+                        <div class="process-step process-step-3-right">
+                            <button type="button" class="btn btn-circle disabled transac-validate" data-toggle="tab" role="tab" href="#tabSummary" percent="99%" index="5" disabled>
+                                <i class="fa fa-list-ul" aria-hidden="true"></i>
+                            </button>
+                            <p>Resumen</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="transaction-progress">
+                    <div class="progress transaction-bar">
+                        <div id="prog" class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width:0%">
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="tab-content">
+                <div id="tabPlanYServiciosAdicionales" class="step tab-pane active" role="tabpanel" percent="0%">
+                    <div class="panel claro-panel-primary">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="card">
+                                        <div class="card-block">
+                                            <h3 class="card-title">Nuevo Plan</h3>
+                                            <table class="table table-condensed">
+                                                <tr>
+                                                    <td><span id="spnNewPlan" class="transac-message-red">Seleccione un plan</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span id="spnNewSolution" class="transac-message-red"></span>&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span id="spnValidateVelPlan" class="transac-message-red"></span>&nbsp;</td>
+                                                </tr>
+                                            </table>
+                                            <br />
+                                            <button id="btnAddPlan" type="button" class="btn transaction-button btn-sm"><span class="glyphicon glyphicon-plus-sign"></span> Seleccionar Plan</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="card">
+                                        <div class="card-block">
+                                            <h3 class="card-title">Servicios Adicionales</h3>
+                                            <table class="table table-condensed">
+                                                <tr>
+                                                    <td>Cable</td>
+                                                    <td><span id="spnCableAditionalServiceQty" class="badge">0</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Internet</td>
+                                                    <td><span id="spnInternetAditionalServiceQty" class="badge">0</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Telefonía</td>
+                                                    <td><span id="spnPhoneAditionalServiceQty" class="badge">0</span></td>
+                                                </tr>
+                                            </table>
+                                            <br />
+                                            <button id="btnAddServ" type="button" class="btn transaction-button btn-sm" disabled><span class="glyphicon glyphicon-plus-sign"></span> Seleccionar Servicios</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="card">
+                                        <div class="card-block">
+                                            <h3 class="card-title">Puntos Adicionales</h3>
+                                            <table class="table table-condensed">
+                                                <tr>
+                                                    <td>Puntos</td>
+                                                    <td><span id="spnDecoAditionalServiceQty" class="badge">0</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><br /></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><br /></td>
+                                                    <td></td>
+                                                </tr>
+                                            </table>
+                                            <br />
+                                            <button id="btnAddEquip" type="button" class="btn transaction-button btn-sm" disabled><span class="glyphicon glyphicon-plus-sign"></span> Seleccionar Equipos</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="divServices" class="panel-group" role="tablist">
+                        <div class="panel claro-panel-primary">
+                            <div id="servicesDataHead" role="tab" class="panel-heading">
+                                <span class="glyphicon glyphicon-cog"></span>
+                                <a data-toggle="collapse" href="#servicesDataCollapsed" aria-expanded="true" data-parent="#divServices" aria-controls="servicesDataCollapsed" class="collapsed transaction-ref-color"> Servicios</a>
+                            </div>
+                            <div id="servicesDataCollapsed" class="panel-body panel-collapse collapse in" role="tabpanel" aria-labelledby="servicesDataHead">
+                                <div id="divSelectServices" class="panel-group" role="tablist">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="panel claro-panel-primary">
+                                                <div class="transac-panel-heading">
+                                                    <i class="fa fa-television" aria-hidden="true"></i> Cable <div class="badge pull-right transac-heading-badge">Actual</div>
+                                                </div>
+                                                <ul id="lstCurrentPlanCable" class="list-group"></ul>
+                                            </div>
+                                            <br />
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="panel claro-panel-primary">
+                                                <div class="transac-panel-heading">
+                                                    <i class="fa fa-television" aria-hidden="true"></i></span> Cable <div class="badge pull-right transac-heading-badge" data-toggle="tooltip" title="(S/.) Incluido IGV">Nuevo</div>
+                                                </div>
+                                                <ul id="lstSelectPlanCable" class="list-group">
+                                                    <li class="transac-list-group-item">
+                                                        Seleccionar un plan
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <br />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="panel claro-panel-primary">
+                                                <div class="transac-panel-heading">
+                                                    <span class="glyphicon glyphicon-globe" aria-hidden="true"></span> Internet <div class="badge pull-right transac-heading-badge">Actual</div>
+                                                </div>
+                                                <ul id="lstCurrentPlanInternet" class="list-group"></ul>
+
+                                            </div>
+                                            <br />
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="panel claro-panel-primary">
+                                                <div class="transac-panel-heading">
+                                                    <span class="glyphicon glyphicon-globe" aria-hidden="true"></span> Internet <div class="badge pull-right transac-heading-badge" data-toggle="tooltip" title="(S/.) Incluido IGV">Nuevo</div>
+                                                </div>
+                                                <ul id="lstSelectPlanInternet" class="list-group">
+                                                    <li class="transac-list-group-item">
+                                                        Seleccionar un plan
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <br />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="panel claro-panel-primary">
+                                                <div class="transac-panel-heading">
+                                                    <i class="fa fa-volume-control-phone" aria-hidden="true"></i> Telefonía <div class="badge pull-right transac-heading-badge">Actual</div>
+                                                </div>
+                                                <ul id="lstCurrentPlanTelephony" class="list-group"></ul>
+                                            </div>
+                                            <br />
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="panel claro-panel-primary">
+                                                <div class="transac-panel-heading">
+                                                    <i class="fa fa-volume-control-phone" aria-hidden="true"></i> Telefonía <div class="badge pull-right transac-heading-badge" data-toggle="tooltip" title="(S/.) Incluido IGV">Nuevo</div>
+                                                </div>
+                                                <ul id="lstSelectPlanTelephony" class="list-group">
+                                                    <li class="transac-list-group-item">
+                                                        Seleccionar un plan
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <br />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="divAdditionalEquipHead" role="tab" class="panel-heading">
+                                <span class="glyphicon glyphicon-hdd"></span>
+                                <a data-toggle="collapse" href="#divAdditionalEquipCollapse" aria-expanded="true" data-parent="#divSelectServices" aria-controls="divAdditionalEquipCollapse" class="collapsed transaction-ref-color"> Equipos</a>
+                            </div>
+                            <div id="divAdditionalEquipCollapse" class="panel-body panel-collapse collapse in" role="tabpanel" aria-labelledby="divAdditionalEquipHead">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="panel claro-panel-primary">
+                                            <div class="transac-panel-heading">
+                                                <i class="fa fa-television" aria-hidden="true"></i> Cable <div class="badge pull-right transac-heading-badge">Actual</div>
+                                            </div>
+                                            <ul id="lstCurrentEquipCable" class="list-group"></ul>
+                                        </div>
+                                        <br />
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="panel claro-panel-primary">
+                                            <div class="transac-panel-heading">
+                                                <i class="fa fa-television" aria-hidden="true"></i> Cable <div class="badge pull-right transac-heading-badge">Nuevo</div>
+                                            </div>
+                                            <ul id="lstSelectEquipCable" class="list-group">
+                                                <li class="transac-list-group-item">
+                                                    Seleccionar un plan
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <br />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="panel claro-panel-primary">
+                                            <div class="transac-panel-heading">
+                                                <span class="glyphicon glyphicon-globe" aria-hidden="true"></span> Internet <div class="badge pull-right transac-heading-badge">Actual</div>
+                                            </div>
+                                            <ul id="lstCurrentEquipInternet" class="list-group"></ul>
+                                        </div>
+                                        <br />
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="panel claro-panel-primary">
+                                            <div class="transac-panel-heading">
+                                                <span class="glyphicon glyphicon-globe" aria-hidden="true"></span> Internet <div class="badge pull-right transac-heading-badge">Nuevo</div>
+                                            </div>
+                                            <ul id="lstSelectEquipInternet" class="list-group">
+                                                <li class="transac-list-group-item">
+                                                    Seleccionar un plan
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <br />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="panel claro-panel-primary">
+                                            <div class="transac-panel-heading">
+                                                <i class="fa fa-volume-control-phone" aria-hidden="true"></i> Telefonía <div class="badge pull-right transac-heading-badge">Actual</div>
+                                            </div>
+                                            <ul id="lstCurrentEquipTelephony" class="list-group"></ul>
+                                        </div>
+                                        <br />
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="panel claro-panel-primary">
+                                            <div class="transac-panel-heading">
+                                                <i class="fa fa-volume-control-phone" aria-hidden="true"></i> Telefonía <div class="badge pull-right transac-heading-badge">Nuevo</div>
+                                            </div>
+                                            <ul id="lstSelectEquipTelephony" class="list-group">
+                                                <li class="transac-list-group-item">
+                                                    Seleccionar un plan
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <br />
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="panel claro-panel-primary">
+                                <div class="panel-heading">
+                                    Cargos Actuales
+                                </div>
+                                <ul class="list-group">
+                                    <li class="list-group-item paint" id="BaseAmountDescription" style="display: none;">
+                                        <span id="spnCurrentBaseAmount" class="badge">S/.0</span>Cargo fijo del plan base (Sin IGV)
+                                    </li>
+                                    <li class="list-group-item paint" id="QuantityServicesDescription">
+                                        <span id="spnQuantityCurrentServices" class="badge">0</span>Cantidad de servicios agregados
+                                    </li>
+                                    <li class="list-group-item paint" id="QuantityEquipmentDescription">
+                                        <span id="spnQuantityCurrentEquipment" class="badge">0</span>Cantidad de equipos agregados
+                                    </li>
+                                    <li class="list-group-item paint" id="AdditionalAmountDescription">
+                                        <span id="spnAdditionalCurrentAmount" class="badge">S/.0</span>
+                                        Cargo adicional del plan base (Con IGV)
+                                    </li>
+                                    <li class="list-group-item paint" id="TotalFixedChargeSIGVDescription" style="display: none;">
+                                        <span id="spnCurrentTotalFixedChargeSIGV" class="badge">S/.0</span>
+                                        <span id="TotalFixedChargeSIGVDescription" class="paint">Cargo Fijo Total del Plan (Sin IGV)</span>
+                                    </li>
+                                    <li class="list-group-item paint" id="TotalFixedChargeCIGVDescription">
+                                        <span id="spnCurrentTotalFixedChargeCIGV" class="badge">S/.0</span>
+                                        Cargo total del plan (Con IGV)
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="panel claro-panel-primary">
+                                <div class="panel-heading">
+                                    Nuevos Cargos
+                                </div>
+                                <ul class="list-group">
+                                    <li class="list-group-item paint" id="BaseAmountDescriptionN" style="display: none;">
+                                        <span id="spnNewBaseAmount" class="badge">S/.0</span>Cargo fijo del nuevo plan base (Sin IGV)
+                                    </li>
+                                    <li class="list-group-item paint" id="QuantityServicesDescriptionN">
+                                        <span id="spnQuantityNewServices" class="badge">0</span>
+                                        Cantidad de servicios agregados
+                                    </li>
+                                    <li class="list-group-item paint" id="QuantityEquipmentDescriptionN">
+                                        <span id="spnQuantityNewEquipment" class="badge">0</span>
+                                        Cantidad de equipos agregado
+
+                                    </li>
+                                    <li class="list-group-item paint" id="AdditionalAmountDescriptionN">
+                                        <span id="spnAdditionalNewAmount" class="badge">S/.0</span>Cargo adicional del nuevo plan base (Con IGV)
+                                    </li>
+                                    <li class="list-group-item paint" id="TotalFixedChargeSIGVDescriptionN" style="display: none;">
+                                        <span id="spnNewTotalFixedChargeSIGV" class="badge">S/.0</span>
+                                        Cargo Fijo Total del Plan (Sin IGV)
+                                    </li>
+                                    <li class="list-group-item paint" id="TotalFixedChargeCIGVDescriptionN">
+                                        <span id="spnNewTotalFixedChargeCIGV" class="badge">S/.0</span>
+                                        Cargo total del plan (Con IGV)
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <center>
+                        <button id="btn1stClose" type="button" class="btn transaction-button closeWind"><span class="glyphicon glyphicon-home"></span> Cerrar</button>
+                        <button id="btnNextFirstStep" type="button" class="btn transaction-button next-trans" disabled>Siguiente <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>
+                    </center>
+                    <br />
+                </div>
+               
+                    @*<div id="tabPenalidades" class="step tab-pane fade" role="tabpanel" percent="43.33333334%">
+                <div class="panel claro-panel-primary" id="DivPenalidad">
+                    <div class="panel-heading">
+                        Datos de Penalidades
+                    </div>
+                    <div class="panel-body">
+                        <form class="form-horizontal">
+                            <div class="form-group">
+                                <label for="chkOCC" class="col-sm-4 control-label"> Generar OCC</label>
+                                <div class="col-sm-6">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input id="chkOCC" type="checkbox">
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="txtRefound" class="col-sm-4 control-label"> Reintegro Penalidad</label>
+                                <div class="col-sm-3">
+                                    <input type="text" id="txtRefound" class="form-control input-sm" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="chkLoyalty" class="col-sm-4 control-label"> Fideliza Penalidad</label>
+                                <div class="col-sm-6">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input id="chkLoyalty" type="checkbox">
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="txtLoyaltyAmount" class="col-sm-4 control-label"> Monto Fidelización Penalidad</label>
+                                <div class="col-sm-3">
+                                    <input type="text" id="txtLoyaltyAmount" class="form-control input-sm" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="txtTotalPenality" class="col-sm-4 control-label"> Total Penalidad a Cobrar</label>
+                                <div class="col-sm-3">
+                                    <input type="text" id="txtTotalPenality" class="form-control input-sm" />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <center>
+                    <button type="button" class="btn transaction-button prev-step"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Anterior</button>
+                    <button id="btn3rdClose" type="button" class="btn transaction-button closeWind"><span class="glyphicon glyphicon-home"></span> Cerrar</button>
+                    <button type="button" class="btn transaction-button next-step next-trans">Siguiente <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>
+                </center>
+                <br />
+            </div>*@
+
+                    <div id="tabAgendamiento" class="step tab-pane fade" role="tabpanel" percent="37.5%">
+                        <div class="panel claro-panel-primary">
+                            <div class="panel-heading">
+                                Datos de Agendamiento
+                            </div>
+                            <div class="panel-body">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-10">
+                                    <div class="form-horizontal">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label for="ddlTipoTrabajo" class="col-sm-2 control-label"> Tipo de Trabajo</label>
+                                                <div class="col-sm-4">
+                                                    <select id="ddlTipoTrabajo" class="form-control input-sm" tabindex="30" disabled></select>
+                                                </div>
+                                                <label for="ddlSubTipoTrabajo" class="col-sm-2 control-label"> Sub Tipo de Trabajo</label>
+                                                <div class="col-sm-4">
+                                                    <select id="ddlSubTipoTrabajo" class="form-control input-sm" tabindex="31" disabled>
+                                                        <option value="1">-- Seleccionar --</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        @Html.Partial("~/Areas/Transactions/Views/Shared/ViewPartial/Schedule.cshtml",
+                            new ViewDataDictionary {
+                                { "Text_Id", "txtFProgramacion" },
+                                { "Select_Id", "ddlFranjaHoraria" },
+                                { "Button_Id", "btnValidarHorario" },
+                                { "Combo_JobTypes" , "ddlTipoTrabajo"},
+                                { "Combo_SubJobType" , "ddlSubTipoTrabajo"},
+                                { "Input_Size" , "input-ms"},
+                                { "strDateServer", @Model.ServerDate },
+                                { "strDateNew", @DateTime.Now.AddDays(18).ToString("yyyy/MM/dd") },
+                                { "Button_Save", "btn_saveTransaction"}
+                            })
+
+
+                                    </div>
+                                </div>
+                                <div class="col-md-1"></div>
+                            </div>
+                        </div>
+
+                        <div id="divConsultaEquipos" style="overflow:scroll;display:none;">
+                            <table id="tblConsultaEquipos" class="table table-condensed ">
+                                <thead>
+                                    <tr>
+                                        <th style="text-align:center">Equipo Asociado</th>
+                                        <th style="text-align:center">Cantidad</th>
+                                        <th style="text-align:center">Desc. de Equipo</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+
+                        <center>
+                            <button type="button" class="btn transaction-button prev-step"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Anterior</button>
+                            <button id="btn4thClose" type="button" class="btn transaction-button closeWind"><span class="glyphicon glyphicon-home"></span> Cerrar</button>
+                            <button type="button" class="btn transaction-button next-step btn_saveTransaction">Siguiente <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>
+                        </center>
+                        <br />
+                    </div>
+                    <div id="tabDatosTecnicos" class="step tab-pane fade" role="tabpanel" percent="62.5%">
+                        <div class="panel claro-panel-primary">
+                            <div class="panel-heading">
+                                <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                                Datos Adicionales y Técnicos
+                            </div>
+                            <div class="panel-body">
+                                <div class="form-horizontal">
+                                    <div class="form-group">
+                                        <label for="chkEmail" class="col-sm-4 control-label">Envío por e-mail</label>
+                                        <div class="col-sm-1">
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input id="chkEmail" type="checkbox" tabindex="30">
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div id="divEmailSend" class="col-sm-3" style="display:none">
+                                            <input type="email" id="txtEmail" class="form-control input-sm" tabindex="31" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="sltCacDac" class="col-sm-4 control-label"> Punto de Atención</label>
+                                        <div class="col-sm-3">
+                                            <select id="sltCacDac" class="form-control input-sm" tabindex="32"></select><span id="ErrorMessageCacDac" class="alert-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtNotes" class="col-sm-4 control-label"> Notas</label>
+                                        <div class="col-sm-7">
+                                            <textarea id="txtNotes" class="form-control" rows="8" tabindex="33"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <center>
+                            <button type="button" class="btn transaction-button prev-step"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Anterior</button>
+                            <button id="btn4thClose" type="button" class="btn transaction-button closeWind"><span class="glyphicon glyphicon-home"></span> Cerrar</button>
+                            <button type="button" class="btn transaction-button next-trans">Siguiente <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>
+                        </center>
+                        <br />
+                    </div>
+                    <div id="tabSummary" class="step tab-pane fade" role="tabpanel" percent="99%">
+                        <div class="panel claro-panel-primary">
+                            <div id="tabSummary" role="tab" class="panel-heading">
+                                <span class="glyphicon glyphicon-user"></span>
+                                <label data-toggle="collapse" aria-expanded="true" data-parent="#DataCustomer" aria-controls="customerDataCollapse" class="collapsed transaction-ref-color"> Resumen</label>
+                            </div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="panel claro-panel-primary">
+                                            <div class="transac-panel-heading">
+                                                <span class="fa fa-cog" aria-hidden="true"></span>&nbsp; Plan Actual
+                                            </div>
+                                            <ul id="lstCurrentPlanSummary" class="list-group"></ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="panel claro-panel-primary">
+                                            <div class="transac-panel-heading">
+                                                <span class="fa fa-cogs" aria-hidden="true"></span>&nbsp; Plan Nuevo
+                                            </div>
+                                            <ul id="lstNewPlanSummary" class="list-group">
+                                                <li class="transac-list-group-item"></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel claro-panel-primary">
+                                    <div role="tab" class="panel-heading"><span class="fa fa-briefcase" aria-hidden="true"></span> Datos de Cambio de Plan</div>
+                                    <div id="DataCambioPlan" class="panel-body " role="tabpanel">
+                                        <div class="panel claro-panel-primary" style="display:none;">
+                                            <div class="panel-heading"><span class="fa fa-phone-square"></span> Complementarios</div>
+                                            <table class="table table-condensed">
+                                                <tr>
+                                                    <td class="row">
+                                                        <div class="col-sm-2">Tope de Consumo</div>
+                                                        <div class="col-sm-4"><label data-bind-transfer="topeconsumo"></label></div>
+                                                        <div class="col-sm-2">Presuscrito</div>
+                                                        <div class="col-sm-4"><label data-bind-transfer="presuscrito"></label></div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="row">
+                                                        <div class="col-sm-2">Número de Carta</div>
+                                                        <div class="col-sm-4"><label data-bind-transfer="numerocarta"></label></div>
+                                                        <div class="col-sm-2">Operador</div>
+                                                        <div class="col-sm-4"><label data-bind-transfer="operador"></label></div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="row">
+                                                        <div class="col-sm-6">Publicar número telefónico en paginas blancas</div>
+                                                        <div class="col-sm-6"><label data-bind-transfer="publicarnumero"></label></div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <div class="panel claro-panel-primary" style="display:none;">
+                                            <div class="panel-heading"><span class="fa fa-legal"></span> Penalidades</div>
+                                            <table class="table table-condensed">
+                                                <tr>
+                                                    <td class="row">
+                                                        <div class="col-sm-2">Reintegro penalidad</div>
+                                                        <div class="col-sm-4"><label data-bind-transfer="Reintegropenalidad"></label></div>
+                                                        <div class="col-sm-2">Fidelización</div>
+                                                        <div class="col-sm-4"><label data-bind-transfer="ckhFidelizacion"></label></div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="row">
+                                                        <div class="col-sm-2">Monto de fidelización penalidad</div>
+                                                        <div class="col-sm-4"><label data-bind-transfer="Montofidelizacionpenalidad"></label></div>
+                                                        <div class="col-sm-2">Total de penalidad a cobrar</div>
+                                                        <div class="col-sm-4"><label data-bind-transfer="Total-penalidad"></label></div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <div class="panel claro-panel-primary">
+                                            <div class="panel-heading"><span class="fa fa-pencil-square-o"></span> Datos Técnicos</div>
+                                            <table class="table table-condensed">
+                                                <tr>
+                                                    <td class="row">
+                                                        <div class="col-sm-2">Punto de atención</div>
+                                                        <div class="col-sm-4"><label data-bind-transfer="PuntoAtencion"></label></div>
+                                                        <div class="col-sm-2">Generar OCC</div>
+                                                        <div class="col-sm-4"><label data-bind-transfer="chkOcc"></label></div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="row">
+                                                        <div class="col-sm-2">Envio de Email</div>
+                                                        <div class="col-sm-4"><label data-bind-transfer="chkemail"></label></div>
+                                                        <div class="col-sm-2">Email</div>
+                                                        <div class="col-sm-4"><label data-bind-transfer="email"></label></div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="row">
+                                                        <div class="col-sm-2">Notas</div>
+                                                        <div class="col-sm-10"><label data-bind-transfer="Notas"></label></div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <center>
+                            <button type="button" class="btn transaction-button prev-step"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Anterior</button>
+                            <button id="btnSave" type="button" class="btn transaction-button btn_saveTransaction"><span class="glyphicon glyphicon-floppy-disk"></span> Guardar</button>
+                            <button id="btnConstancy" type="button" class="btn transaction-button" data-toggle="modal" data-target="_blank"><span class="glyphicon glyphicon-list-alt"></span> Constancia</button>
+                            <button id="btn5thClose" type="button" class="btn transaction-button closeWind"><span class="glyphicon glyphicon-home"></span> Cerrar</button>
+                        </center>
+                        <br />
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div id="tabServiciosComplementarios" style="display:none">
+        @*<div id="tabServiciosComplementarios" class="step tab-pane fade" role="tabpanel" percent="30%" style="display:none">*@
+        <div class="panel claro-panel-primary" id="divCompTopConsume">
+            <div class="panel-heading">
+                <span class="glyphicon glyphicon-equalizer" aria-hidden="true"></span>
+                Topes de Consumo
+            </div>
+            <div class="panel-body">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label for="sltAction" class="col-sm-4 control-label"> Acción</label>
+                        <div class="col-sm-3">
+                            <select id="sltAction" class="form-control input-sm"></select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="sltOption" class="col-sm-4 control-label"> Opción Tope de Consumo</label>
+                        <div class="col-sm-3">
+                            <select id="sltOption" class="form-control input-sm"></select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="chkFreeOfCharge" class="col-sm-4 control-label"> Sin Costo</label>
+                        <div class="col-sm-3">
+                            <div class="checkbox">
+                                <label>
+                                    <input id="chkFreeOfCharge" type="checkbox">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="chkaditional" class="col-sm-4 control-label"> Control de Consumo Adicional</label>
+                        <div class="col-sm-3">
+                            <div class="checkbox">
+                                <label>
+                                    <input id="chkaditional" type="checkbox">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div id="divNewLimit" style="display:none">
+                            <label for="txtNewLimit" class="col-sm-4 control-label"> Nuevo Tope Adicional</label>
+                            <div class="col-sm-3">
+                                <input type="text" id="txtNewLimit" class="form-control input-sm" value="0" />
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="panel claro-panel-primary" id="DivDetalleServicioTelefonia" style="display: none">
+            <div class="panel-heading">
+                <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                Detalle del Servicio de Telefonía
+            </div>
+            <div class="panel-body">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label for="chkPreSuscribed" class="col-sm-4 control-label"> Presuscrito</label>
+                        <div class="col-sm-6">
+                            <div class="checkbox">
+                                <label>
+                                    <input id="chkPreSuscribed" type="checkbox" tabindex="10">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="txtLetterNumber" class="col-sm-4 control-label"> Número de Carta</label>
+                        <div class="col-sm-3">
+                            <input type="text" id="txtLetterNumber" class="form-control input-sm" tabindex="11" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="sltOperator" class="col-sm-4 control-label"> Operador</label>
+                        <div class="col-sm-3">
+                            <select id="sltOperator" class="form-control input-sm" tabindex="12"></select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="chkPublish" class="col-sm-4 control-label"> Publicar número telefónico en paginas blancas</label>
+                        <div class="col-sm-6">
+                            <div class="checkbox">
+                                <label>
+                                    <input id="chkPublish" type="checkbox" tabindex="13">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <center>
+            <button type="button" class="btn transaction-button prev-step"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Anterior</button>
+            <button id="btn2ndClose" type="button" class="btn transaction-button closeWind"><span class="glyphicon glyphicon-home"></span> Cerrar</button>
+            <button type="button" class="btn transaction-button next-trans">Siguiente <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>
+        </center>
+        <br />
+    </div>
+
+</div>
+
+<script src="~/Areas/Transactions/ContentTransac/lib/steps.js"></script>
+<script src="~/Areas/Transactions/Content/Lib/jquery.validate.min.js"></script>
+@Scripts.Render("~/bundles/Transactions/Auth/AuthUser")
+@Scripts.Render("~/bundles/Transactions/ReadRecordPDF/ReadRecord")
+<script src="~/Areas/Transactions/Scripts/PlanMigration/LTEPlanMigration.js"></script>
+

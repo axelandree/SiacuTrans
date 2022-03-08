@@ -1,0 +1,58 @@
+﻿@model Claro.SIACU.Web.WebApplication.Transac.Service.Areas.Transactions.Models.Postpaid.PlanViewModel
+<script type="text/javascript" src="~/Areas/Transactions/Content/Lib/BloqueoF12.js"></script>
+<div id="modal-content">
+    <div class="panel panel-danger">
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <tr>
+                    <td><strong>Nro de Teléfono</strong></td>
+                    <td>975614721</td>
+                    <td><strong>Categoria</strong></td>
+                    <td>Movil Consume</td>
+                </tr>
+                <tr>
+                 
+                    <td><strong><input type="radio" id="rdbSinTopeConsumo222" name="groupMig" value="" />Planes Basico</strong></td>
+                    <td><strong><input type="radio" id="rdbConTopeConsumo" name="groupMig" value="" />Planes Combos</strong></td>
+                    <td><strong><input type="radio" id="rdbArmaTuPostpago" name="groupMig" value="" />Planes Arma tu PostPago</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>Modalidad</strong></td>
+                    <td>
+                        <select id="ddlCiclo" class="form-control input-sm">
+                            <option>Chip</option>
+                            <option>otros</option>
+                        </select>
+                    </td>
+                    <td><strong>Familia</strong></td>
+                    <td>
+                        <select id="ddlCiclo" class="form-control input-sm">
+                            <option>Sin Frontera</option>
+                            <option>otro</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <br />
+
+    <div id="divPlanesV">
+        <div class="panel panel-default">
+
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" href="#collapse2"><span class="glyphicon glyphicon-th-list"></span>&nbsp;Servicios POST PAGO</a>
+                </h4>
+            </div>
+
+            <div id="collapse2" class="panel-collapse collapse in">
+                <div class="table-responsive ">
+                   @Html.Partial("~/Areas/Transactions/Views/ChangeTypeCustomer/PostpaidPartialConsultPlan.cshtml", Model.ListPlan)
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
