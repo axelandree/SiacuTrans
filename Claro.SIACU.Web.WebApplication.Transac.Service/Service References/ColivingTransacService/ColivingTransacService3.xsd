@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:40204/ColivingTransacService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Coliving.GetDataBilling" />
+  <xs:import schemaLocation="http://localhost:40204/ColivingTransacService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Coliving.PutDataClient" />
+  <xs:import schemaLocation="http://localhost:40204/ColivingTransacService.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Coliving.GetParameter" />
+  <xs:import schemaLocation="http://localhost:40204/ColivingTransacService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Coliving" />
+  <xs:import schemaLocation="http://localhost:40204/ColivingTransacService.svc?xsd=xsd9" namespace="Claro" />
+  <xs:import schemaLocation="http://localhost:40204/ColivingTransacService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Coliving.PostHistoryClient" />
+  <xs:import schemaLocation="http://localhost:40204/ColivingTransacService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Coliving.GetUpdateDataClient" />
+  <xs:element name="GetDataBilling">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Coliving.GetDataBilling" minOccurs="0" name="objRequest" nillable="true" type="q1:DataBillingRequest" />
+        <xs:element minOccurs="0" name="strIdSession" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strIdTransaccion" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataBillingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Coliving.GetDataBilling" minOccurs="0" name="GetDataBillingResult" nillable="true" type="q2:GetDataBillingResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDatosClienteMigrado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Coliving.PutDataClient" minOccurs="0" name="objRequest" nillable="true" type="q3:DataClientRequest" />
+        <xs:element minOccurs="0" name="strIdSession" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strIdTransaccion" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDatosClienteMigradoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateDatosClienteMigradoResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetParameter">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strIdSession" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTransaction" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetParameterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Coliving.GetParameter" minOccurs="0" name="GetParameterResult" nillable="true" type="q4:GetParameterResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocumentTypeTOBE">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strIdSession" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTransaction" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strCodCargaDdl" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocumentTypeTOBEResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Coliving" minOccurs="0" name="GetDocumentTypeTOBEResult" nillable="true" type="q5:ArrayOfListItems" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HistoryDataClientTobe">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="Claro" minOccurs="0" name="audit" nillable="true" type="q6:AuditRequest" />
+        <xs:element minOccurs="0" name="strIdSession" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTransaction" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strIpAplicacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAplicacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strUsrApp" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strCustomerID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="flagconvivencia" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HistoryDataClientTobeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Coliving" minOccurs="0" name="HistoryDataClientTobeResult" nillable="true" type="q7:ArrayOfDataHistorical" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PostDataHistoryClientResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Coliving.PutDataClient" minOccurs="0" name="objRequest" nillable="true" type="q8:DataClientRequest" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Coliving.PostHistoryClient" minOccurs="0" name="objRequestType" nillable="true" type="q9:HistoryClient" />
+        <xs:element minOccurs="0" name="strIdSession" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strIdTransaccion" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PostDataHistoryClientResponseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Coliving.PostHistoryClient" minOccurs="0" name="PostDataHistoryClientResponseResult" nillable="true" type="q10:Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCuParticipante">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Coliving.GetUpdateDataClient" minOccurs="0" name="objRequest" nillable="true" type="q11:RequestCUParticipante" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Coliving" minOccurs="0" name="objAudit" nillable="true" type="q12:HeaderToBe" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCuParticipanteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Coliving.GetUpdateDataClient" minOccurs="0" name="GetCuParticipanteResult" nillable="true" type="q13:ResponseCUParticipante" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

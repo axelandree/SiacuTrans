@@ -1,0 +1,5 @@
+C:\NET\Framework\Claro\bin\Release\Claro.dll
+C:\NET\Framework\Claro\bin\Release\Claro.pdb
+C:\NET\Framework\Claro\obj\Release\Claro.dll
+C:\NET\Framework\Claro\obj\Release\Claro.pdb
+C:\NET\Framework\Claro\obj\Release\Claro.csprojResolveAssemblyReference.cache

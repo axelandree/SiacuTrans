@@ -1,0 +1,6 @@
+C:\NET\Framework\Claro.Helpers\bin\Release\Claro.Helpers.dll
+C:\NET\Framework\Claro.Helpers\bin\Release\Claro.Helpers.pdb
+C:\NET\Framework\Claro.Helpers\bin\Release\EPPlus.dll
+C:\NET\Framework\Claro.Helpers\obj\Release\Claro.Helpers.dll
+C:\NET\Framework\Claro.Helpers\obj\Release\Claro.Helpers.pdb
+C:\NET\Framework\Claro.Helpers\obj\Release\Claro.Helpers.csprojResolveAssemblyReference.cache

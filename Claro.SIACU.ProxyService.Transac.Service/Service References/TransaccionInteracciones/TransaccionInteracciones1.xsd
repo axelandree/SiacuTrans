@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schema xmlns:cla="http://claro.com.pe/eai/crm/clarify/" elementFormDefault="qualified" targetNamespace="http://claro.com.pe/eai/crm/clarify/" xmlns="http://www.w3.org/2001/XMLSchema">
+  <complexType name="ClienteType">
+    <sequence>
+      <element name="nombres" type="string" />
+      <element name="apellidos" type="string" />
+      <element name="sexo" type="string" />
+      <element name="estadoCivil" type="string" />
+      <element name="fechaNacimiento" type="string" />
+      <element name="lugarNacimiento" type="string" />
+      <element name="tipoDocumento" type="string" />
+      <element name="nroDocumento" type="string" />
+      <element name="telefono" type="string" />
+      <element name="telefonoReferencia" type="string" />
+      <element name="motivoRegistro" type="string" />
+    </sequence>
+  </complexType>
+  <complexType name="DireccionType">
+    <sequence>
+      <element name="departamento" type="string" />
+      <element name="cuidad" type="string" />
+      <element name="distrito" type="string" />
+      <element name="urbanizacion" type="string" />
+      <element name="direccion" type="string" />
+      <element name="referencia" type="string" />
+      <element name="codigoPostal" type="string" />
+    </sequence>
+  </complexType>
+  <complexType name="InteraccionType">
+    <sequence>
+      <element name="clase" type="string" />
+      <element name="codigoEmpleado" type="string" />
+      <element name="codigoSistema" type="string" />
+      <element name="cuenta" type="string" />
+      <element name="flagCaso" type="string" />
+      <element name="hechoEnUno" type="string" />
+      <element name="metodoContacto" type="string" />
+      <element name="notas" type="string" />
+      <element name="objId" type="string" />
+      <element name="siteObjId" type="string" />
+      <element name="subClase" type="string" />
+      <element name="telefono" type="string" />
+      <element name="textResultado" type="string" />
+      <element name="tipo" type="string" />
+      <element name="tipoInteraccion" type="string" />
+    </sequence>
+  </complexType>
+  <complexType name="EquipoType">
+    <sequence>
+      <element name="fechaMovimiento" type="string" />
+      <element name="fechaRegistro" type="string" />
+      <element name="idTerMovimiento" type="string" />
+      <element name="imei" type="string" />
+      <element name="terDescripcion" type="string" />
+      <element name="terEstado" type="string" />
+    </sequence>
+  </complexType>
+  <complexType name="InteraccionPlusType">
+    <sequence>
+      <element name="p_nro_interaccion" type="string" />
+      <element name="p_inter_1" type="string" />
+      <element name="p_inter_2" type="string" />
+      <element name="p_inter_3" type="string" />
+      <element name="p_inter_4" type="string" />
+      <element name="p_inter_5" type="string" />
+      <element name="p_inter_6" type="string" />
+      <element name="p_inter_7" type="string" />
+      <element name="p_inter_8" type="string" />
+      <element name="p_inter_9" type="string" />
+      <element name="p_inter_10" type="string" />
+      <element name="p_inter_11" type="string" />
+      <element name="p_inter_12" type="string" />
+      <element name="p_inter_13" type="string" />
+      <element name="p_inter_14" type="string" />
+      <element name="p_inter_15" type="string" />
+      <element name="p_inter_16" type="string" />
+      <element name="p_inter_17" type="string" />
+      <element name="p_inter_18" type="string" />
+      <element name="p_inter_19" type="string" />
+      <element name="p_inter_20" type="string" />
+      <element name="p_inter_21" type="string" />
+      <element name="p_inter_22" type="string" />
+      <element name="p_inter_23" type="string" />
+      <element name="p_inter_24" type="string" />
+      <element name="p_inter_25" type="string" />
+      <element name="p_inter_26" type="string" />
+      <element name="p_inter_27" type="string" />
+      <element name="p_inter_28" type="string" />
+      <element name="p_inter_29" type="string" />
+      <element name="p_inter_30" type="string" />
+      <element name="p_plus_inter2interact" type="string" />
+      <element name="p_adjustment_amount" type="string" />
+      <element name="p_adjustment_reason" type="string" />
+      <element name="p_address" type="string" />
+      <element name="p_amount_unit" type="string" />
+      <element name="p_birthday" type="string" />
+      <element name="p_clarify_interaction" type="string" />
+      <element name="p_claro_ldn1" type="string" />
+      <element name="p_claro_ldn2" type="string" />
+      <element name="p_claro_ldn3" type="string" />
+      <element name="p_claro_ldn4" type="string" />
+      <element name="p_clarolocal1" type="string" />
+      <element name="p_clarolocal2" type="string" />
+      <element name="p_clarolocal3" type="string" />
+      <element name="p_clarolocal4" type="string" />
+      <element name="p_clarolocal5" type="string" />
+      <element name="p_clarolocal6" type="string" />
+      <element name="p_contact_phone" type="string" />
+      <element name="p_dni_legal_rep" type="string" />
+      <element name="p_document_number" type="string" />
+      <element name="p_email" type="string" />
+      <element name="p_first_name" type="string" />
+      <element name="p_fixed_number" type="string" />
+      <element name="p_flag_change_user" type="string" />
+      <element name="p_flag_legal_rep" type="string" />
+      <element name="p_flag_other" type="string" />
+      <element name="p_flag_titular" type="string" />
+      <element name="p_imei" type="string" />
+      <element name="p_last_name" type="string" />
+      <element name="p_lastname_rep" type="string" />
+      <element name="p_ldi_number" type="string" />
+      <element name="p_name_legal_rep" type="string" />
+      <element name="p_old_claro_ldn1" type="string" />
+      <element name="p_old_claro_ldn2" type="string" />
+      <element name="p_old_claro_ldn3" type="string" />
+      <element name="p_old_claro_ldn4" type="string" />
+      <element name="p_old_clarolocal1" type="string" />
+      <element name="p_old_clarolocal2" type="string" />
+      <element name="p_old_clarolocal3" type="string" />
+      <element name="p_old_clarolocal4" type="string" />
+      <element name="p_old_clarolocal5" type="string" />
+      <element name="p_old_clarolocal6" type="string" />
+      <element name="p_old_doc_number" type="string" />
+      <element name="p_old_first_name" type="string" />
+      <element name="p_old_fixed_phone" type="string" />
+      <element name="p_old_last_name" type="string" />
+      <element name="p_old_ldi_number" type="string" />
+      <element name="p_old_fixed_number" type="string" />
+      <element name="p_operation_type" type="string" />
+      <element name="p_other_doc_number" type="string" />
+      <element name="p_other_first_name" type="string" />
+      <element name="p_other_last_name" type="string" />
+      <element name="p_other_phone" type="string" />
+      <element name="p_phone_legal_rep" type="string" />
+      <element name="p_reference_phone" type="string" />
+      <element name="p_reason" type="string" />
+      <element name="p_model" type="string" />
+      <element name="p_lot_code" type="string" />
+      <element name="p_flag_registered" type="string" />
+      <element name="p_registration_reason" type="string" />
+      <element name="p_claro_number" type="string" />
+      <element name="p_month" type="string" />
+      <element name="p_ost_number" type="string" />
+      <element name="p_basket" type="string" />
+      <element name="p_expire_date" type="string" />
+      <element name="p_ADDRESS5" type="string" />
+      <element name="p_CHARGE_AMOUNT" type="string" />
+      <element name="p_CITY" type="string" />
+      <element name="p_CONTACT_SEX" type="string" />
+      <element name="p_DEPARTMENT" type="string" />
+      <element name="p_DISTRICT" type="string" />
+      <element name="p_EMAIL_CONFIRMATION" type="string" />
+      <element name="p_FAX" type="string" />
+      <element name="p_FLAG_CHARGE" type="string" />
+      <element name="p_MARITAL_STATUS" type="string" />
+      <element name="p_OCCUPATION" type="string" />
+      <element name="p_POSITION" type="string" />
+      <element name="p_REFERENCE_ADDRESS" type="string" />
+      <element name="p_TYPE_DOCUMENT" type="string" />
+      <element name="p_ZIPCODE" type="string" />
+      <element name="p_iccid" type="string" />
+    </sequence>
+  </complexType>
+  <complexType name="DetInteraccionType">
+    <sequence>
+      <element minOccurs="0" name="objectId" type="decimal" />
+      <element minOccurs="0" name="productId" type="string" />
+      <element minOccurs="0" name="productType" type="string" />
+      <element minOccurs="0" name="productName" type="string" />
+      <element minOccurs="0" name="campaign" type="string" />
+      <element minOccurs="0" name="points" type="decimal" />
+      <element minOccurs="0" name="amount" type="decimal" />
+      <element minOccurs="0" name="flgresidue" type="string" />
+      <element minOccurs="0" name="recharge" type="decimal" />
+      <element minOccurs="0" name="aplicationId" type="string" />
+    </sequence>
+  </complexType>
+</schema>

@@ -1,0 +1,14 @@
+C:\NET\Framework\Claro.Data\bin\Release\Claro.Data.dll
+C:\NET\Framework\Claro.Data\bin\Release\Claro.Data.pdb
+C:\NET\Framework\Claro.Data\bin\Release\Claro.Entity.dll
+C:\NET\Framework\Claro.Data\bin\Release\Claro.Security.dll
+C:\NET\Framework\Claro.Data\bin\Release\Claro.Web.dll
+C:\NET\Framework\Claro.Data\bin\Release\Newtonsoft.Json.dll
+C:\NET\Framework\Claro.Data\bin\Release\Oracle.DataAccess.dll
+C:\NET\Framework\Claro.Data\bin\Release\log4net.dll
+C:\NET\Framework\Claro.Data\bin\Release\Claro.Entity.pdb
+C:\NET\Framework\Claro.Data\bin\Release\Claro.Security.pdb
+C:\NET\Framework\Claro.Data\bin\Release\Claro.Web.pdb
+C:\NET\Framework\Claro.Data\obj\Release\Claro.Data.csprojResolveAssemblyReference.cache
+C:\NET\Framework\Claro.Data\obj\Release\Claro.Data.dll
+C:\NET\Framework\Claro.Data\obj\Release\Claro.Data.pdb

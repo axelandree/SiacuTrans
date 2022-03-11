@@ -1,0 +1,12 @@
+C:\NET\Framework\Claro.SAP.Transac.Service\bin\Release\Claro.SAP.Transac.Service.dll
+C:\NET\Framework\Claro.SAP.Transac.Service\bin\Release\Claro.SAP.Transac.Service.pdb
+C:\NET\Framework\Claro.SAP.Transac.Service\bin\Release\Claro.Security.dll
+C:\NET\Framework\Claro.SAP.Transac.Service\bin\Release\Claro.Web.dll
+C:\NET\Framework\Claro.SAP.Transac.Service\bin\Release\sapnco.dll
+C:\NET\Framework\Claro.SAP.Transac.Service\bin\Release\sapnco_utils.dll
+C:\NET\Framework\Claro.SAP.Transac.Service\bin\Release\log4net.dll
+C:\NET\Framework\Claro.SAP.Transac.Service\bin\Release\Claro.Security.pdb
+C:\NET\Framework\Claro.SAP.Transac.Service\bin\Release\Claro.Web.pdb
+C:\NET\Framework\Claro.SAP.Transac.Service\obj\Release\Claro.SAP.Transac.Service.csprojResolveAssemblyReference.cache
+C:\NET\Framework\Claro.SAP.Transac.Service\obj\Release\Claro.SAP.Transac.Service.dll
+C:\NET\Framework\Claro.SAP.Transac.Service\obj\Release\Claro.SAP.Transac.Service.pdb

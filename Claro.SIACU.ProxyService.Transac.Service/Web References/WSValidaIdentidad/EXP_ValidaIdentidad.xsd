@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="http://claro.com.pe/esb/data/ventas/prsvalidadidentidad/types3" xmlns:base="http://claro.com.pe/esb/data/generico/baseschema/v1/" xmlns:types3="http://claro.com.pe/esb/data/ventas/prsvalidadidentidad/types3" elementFormDefault="qualified" targetNamespace="http://claro.com.pe/esb/data/ventas/prsvalidadidentidad/types3" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import schemaLocation="http://172.17.26.53:21000/PRS_ValidaIdentidad/SRV_PRS_ValidaIdentidad/Service/Exposition/EXP_ValidaIdentidad?SCHEMA%2FPRS_ValidaIdentidad%2FSRV_PRS_ValidaIdentidad%2FResources%2FXSD%2FBaseSchema" namespace="http://claro.com.pe/esb/data/generico/baseschema/v1/" />
+  <xsd:complexType name="DatosMejorHuellaRequest">
+    <xsd:sequence>
+      <xsd:element name="numeroDocumentoPersona" type="xsd:string" />
+      <xsd:element name="numeroRuc" type="xsd:string" />
+      <xsd:element name="tipoDocumentoPersona" type="xsd:string" />
+      <xsd:element name="tipoVerificacion" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="DatosMejorHuellaResponse">
+    <xsd:sequence>
+      <xsd:element name="codigoHuellaDerecha" type="xsd:string" />
+      <xsd:element name="codigoHuellaIzquierda" type="xsd:string" />
+      <xsd:element name="descripcionHuellaDerecha" type="xsd:string" />
+      <xsd:element name="descripcionHuellaIzquierda" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="HeaderReniecRequest">
+    <xsd:sequence>
+      <xsd:element name="agenteSolicitanteServicio" type="xsd:string" />
+      <xsd:element name="autenticacionMensaje" type="xsd:string" />
+      <xsd:element name="codigoAdquirente" type="xsd:string" />
+      <xsd:element name="codigoAplicativo" type="xsd:string" />
+      <xsd:element name="codigoGrupo" type="xsd:string" />
+      <xsd:element name="codigoIdentificacionDispositivo" type="xsd:string" />
+      <xsd:element name="codigoIdentificacionEstacion" type="xsd:string" />
+      <xsd:element name="codigoProcesadorAdquirente" type="xsd:string" />
+      <xsd:element name="codigoSistemaLocalizacion" type="xsd:string" />
+      <xsd:element name="codigoSubGrupo" type="xsd:string" />
+      <xsd:element name="codigoTransaccion" type="xsd:string" />
+      <xsd:element name="fechaTransaccion" type="xsd:string" />
+      <xsd:element name="horaTransaccion" type="xsd:string" />
+      <xsd:element name="institucionCanalizaServicio" type="xsd:string" />
+      <xsd:element name="institucionProveedorServicio" type="xsd:string" />
+      <xsd:element name="institucionSolicitanteServicio" type="xsd:string" />
+      <xsd:element name="latitudLocalizacion" type="xsd:string" />
+      <xsd:element name="longitudLocalizacion" type="xsd:string" />
+      <xsd:element name="marcaDispositivo" type="xsd:string" />
+      <xsd:element name="modeloDispositivo" type="xsd:string" />
+      <xsd:element name="modeloEstacion" type="xsd:string" />
+      <xsd:element name="numeroIdentificadorCliente" type="xsd:string" />
+      <xsd:element name="numeroOrden" type="xsd:string" />
+      <xsd:element name="numeroTransaccion" type="xsd:string" />
+      <xsd:element name="puntoVentaSolicitanteServicio" type="xsd:string" />
+      <xsd:element name="reservado" type="xsd:string" />
+      <xsd:element name="sistemaOperativoEstacion" type="xsd:string" />
+      <xsd:element name="tipoDispositivo" type="xsd:string" />
+      <xsd:element name="tipoEstacion" type="xsd:string" />
+      <xsd:element name="tipoFormato" type="xsd:string" />
+      <xsd:element name="tipoIdentificacionDispositivo" type="xsd:string" />
+      <xsd:element name="tipoIdentificacionEstacion" type="xsd:string" />
+      <xsd:element name="tipoIdentificadorCliente" type="xsd:string" />
+      <xsd:element name="tipoMensaje" type="xsd:string" />
+      <xsd:element name="versionAplicativo" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="consultarMejorHuellaRequest">
+    <xsd:complexType>
+      <xsd:sequence maxOccurs="1">
+        <xsd:element name="headerReniecRequest" type="types3:HeaderReniecRequest" />
+        <xsd:element name="datosMejorHuellaRequest" type="types3:DatosMejorHuellaRequest" />
+        <xsd:element maxOccurs="1" name="listaRequestOpcional" type="base:RequestOpcionalType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="consultarMejorHuellaResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="responseStatus" type="base:responseStatus" />
+        <xsd:element name="responseData" type="types3:ResponseDataConsultaMejorHuella" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="RequestOpcional">
+    <xsd:sequence>
+      <xsd:element name="campo" type="xsd:string" />
+      <xsd:element name="valor" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ResponseDataConsultaMejorHuella">
+    <xsd:sequence>
+      <xsd:element name="headerReniecResponse" type="types3:HeaderReniecResponse" />
+      <xsd:element name="datosMejorHuellaResponse" type="types3:DatosMejorHuellaResponse" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="listaResponseOpcional" type="base:ResponseOpcionalType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="HeaderReniecResponse">
+    <xsd:sequence>
+      <xsd:element name="agenteSolicitanteServicio" type="xsd:string" />
+      <xsd:element name="autenticacionMensaje" type="xsd:string" />
+      <xsd:element name="codigoAdquirente" type="xsd:string" />
+      <xsd:element name="codigoAplicativo" type="xsd:string" />
+      <xsd:element name="codigoAutorizador" type="xsd:string" />
+      <xsd:element name="codigoGrupo" type="xsd:string" />
+      <xsd:element name="codigoIdentificacionDispositivo" type="xsd:string" />
+      <xsd:element name="codigoIdentificacionEstacion" type="xsd:string" />
+      <xsd:element name="codigoProcesadorAdquirente" type="xsd:string" />
+      <xsd:element name="codigoRespuesta" type="xsd:string" />
+      <xsd:element name="codigoSistemaLocalizacion" type="xsd:string" />
+      <xsd:element name="codigoSubGrupo" type="xsd:string" />
+      <xsd:element name="codigoTransaccion" type="xsd:string" />
+      <xsd:element name="fechaProceso" type="xsd:string" />
+      <xsd:element name="fechaTransaccion" type="xsd:string" />
+      <xsd:element name="horaProceso" type="xsd:string" />
+      <xsd:element name="horaTransaccion" type="xsd:string" />
+      <xsd:element name="institucionCanalizaServicio" type="xsd:string" />
+      <xsd:element name="institucionProveedorServicio" type="xsd:string" />
+      <xsd:element name="institucionSolicitanteServicio" type="xsd:string" />
+      <xsd:element name="latitudLocalizacion" type="xsd:string" />
+      <xsd:element name="longitudLocalizacion" type="xsd:string" />
+      <xsd:element name="marcaDispositivo" type="xsd:string" />
+      <xsd:element name="mensajeRespuesta" type="xsd:string" />
+      <xsd:element name="modeloDispositivo" type="xsd:string" />
+      <xsd:element name="modeloEstacion" type="xsd:string" />
+      <xsd:element name="numeroIdentificadorCliente" type="xsd:string" />
+      <xsd:element name="numeroOrden" type="xsd:string" />
+      <xsd:element name="numeroProceso" type="xsd:string" />
+      <xsd:element name="numeroTransaccion" type="xsd:string" />
+      <xsd:element name="origenRespuesta" type="xsd:string" />
+      <xsd:element name="puntoVentaSolicitanteServicio" type="xsd:string" />
+      <xsd:element name="reservado" type="xsd:string" />
+      <xsd:element name="sistemaOperativoEstacion" type="xsd:string" />
+      <xsd:element name="tipoDispositivo" type="xsd:string" />
+      <xsd:element name="tipoEstacion" type="xsd:string" />
+      <xsd:element name="tipoFormato" type="xsd:string" />
+      <xsd:element name="tipoIdentificacionDispositivo" type="xsd:string" />
+      <xsd:element name="tipoIdentificacionEstacion" type="xsd:string" />
+      <xsd:element name="tipoIdentificadorCliente" type="xsd:string" />
+      <xsd:element name="tipoMensaje" type="xsd:string" />
+      <xsd:element name="tipoRespuesta" type="xsd:string" />
+      <xsd:element name="versionAplicativo" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

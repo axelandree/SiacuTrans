@@ -1,0 +1,13 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace Claro.SIACU.Web.WebApplication.Transac.Service.Areas.Transactions.Helpers.Fixed.ClaroVideoHelper
+{
+    public class RegistrarcontrolescvResponseHelper
+    {
+        public string codRpta { get; set; }
+        public string msjRpta { get; set; }
+    }
+}

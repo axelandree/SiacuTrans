@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetValidateProgByProduct" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetValidateProgByProduct" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd3" namespace="Claro" />
+  <xs:complexType name="ValidateProgByProductRequestTransactions">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="Claro" base="q1:Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ArrayCodProd" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Cuenta" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ValidateProgByProductRequestTransactions" nillable="true" type="tns:ValidateProgByProductRequestTransactions" />
+  <xs:complexType name="ValidateProgByProductResponseTransactions">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ErrorMensagge" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Result" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ValidateProgByProductResponseTransactions" nillable="true" type="tns:ValidateProgByProductResponseTransactions" />
+</xs:schema>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schema xmlns:aud="http://claro.com.pe/esb/data/generico/responseStatus/v1/" elementFormDefault="qualified" targetNamespace="http://claro.com.pe/esb/data/generico/responseStatus/v1/" xmlns="http://www.w3.org/2001/XMLSchema">
+  <complexType name="ResponseStatus">
+    <sequence>
+      <element name="estado" type="int" />
+      <element name="codigoRespuesta" type="string" />
+      <element name="descripcionRespuesta" type="string" />
+      <element name="ubicacionError" type="string" />
+      <element name="fecha" type="dateTime" />
+      <element name="origen" type="string" />
+    </sequence>
+  </complexType>
+</schema>

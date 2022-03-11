@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetValidateLine" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetValidateLine" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd3" namespace="Claro" />
+  <xs:complexType name="contarLineasRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="Claro" base="q1:Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="nombreCampo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="numeroDocumento" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="straplicativo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="valor" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="contarLineasRequest" nillable="true" type="tns:contarLineasRequest" />
+  <xs:complexType name="contarLineasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cantidadLineasActivas" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cantidadLineasActivasPorDia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="codRespuesta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="listaLineasConsolidadasType" nillable="true" type="tns:listaLineasConsolidadasType" />
+      <xs:element minOccurs="0" name="msjRespuesta" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="contarLineasResponse" nillable="true" type="tns:contarLineasResponse" />
+  <xs:complexType name="listaLineasConsolidadasType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="lineaConsolidada" nillable="true" type="tns:ArrayOflineaConsolidada" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="listaLineasConsolidadasType" nillable="true" type="tns:listaLineasConsolidadasType" />
+  <xs:complexType name="ArrayOflineaConsolidada">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="lineaConsolidada" nillable="true" type="tns:lineaConsolidada" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOflineaConsolidada" nillable="true" type="tns:ArrayOflineaConsolidada" />
+  <xs:complexType name="lineaConsolidada">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="msisdn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="segmento" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="lineaConsolidada" nillable="true" type="tns:lineaConsolidada" />
+</xs:schema>

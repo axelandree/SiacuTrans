@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetRechargeList" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetRechargeList" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd3" namespace="Claro" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid" />
+  <xs:complexType name="RechargeListRequestTransactions">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="Claro" base="q1:Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="vFECHFIN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="vFECHINI" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="vFlag" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="vMSISDN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="vNroRegistros" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RechargeListRequestTransactions" nillable="true" type="tns:RechargeListRequestTransactions" />
+  <xs:complexType name="RechargeListResponseTransactions">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid" minOccurs="0" name="GetRechargeList" nillable="true" type="q2:ArrayOfRechargeList" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RechargeListResponseTransactions" nillable="true" type="tns:RechargeListResponseTransactions" />
+</xs:schema>

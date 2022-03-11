@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInsertTemplateGeneral" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInsertTemplateGeneral" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd3" namespace="Claro" />
+  <xs:complexType name="InsertTemplateGeneralRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="Claro" base="q1:Request">
+        <xs:sequence>
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common" minOccurs="0" name="InteractionTemplate" nillable="true" type="q2:InsertTemplateInteraction" />
+          <xs:element minOccurs="0" name="vEjecutarTransaccion" type="xs:boolean" />
+          <xs:element minOccurs="0" name="vInteraccionId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="vNroTelefono" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="vPASSWORD_USUARIO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="vUSUARIO_APLICACION" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="vUSUARIO_SISTEMA" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InsertTemplateGeneralRequest" nillable="true" type="tns:InsertTemplateGeneralRequest" />
+  <xs:complexType name="InsertTemplateGeneralResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="rCodigoRetornoTransaccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="rFlagInsercion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="rMensajeErrorTransaccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="rMsgText" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="rResult" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InsertTemplateGeneralResponse" nillable="true" type="tns:InsertTemplateGeneralResponse" />
+</xs:schema>

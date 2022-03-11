@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WL5G3N0:definitions xmlns:WL5G3N2="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:WL5G3N1="http://claro.com.pe/eai/crmservices/clarify/transaccioninteracciones/" name="TransaccionInteracciones" targetNamespace="http://claro.com.pe/eai/crmservices/clarify/transaccioninteracciones/" xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/">
+  <WL5G3N0:types>
+    <xsd:schema xmlns:tns="http://claro.com.pe/eai/crmservices/clarify/transaccioninteracciones/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:Q1="http://claro.com.pe/eai/crm/clarify/" xmlns:Q2="http://claro.com.pe/eai/servicecommons/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" elementFormDefault="qualified" targetNamespace="http://claro.com.pe/eai/crmservices/clarify/transaccioninteracciones/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import schemaLocation="http://limdesosbv05.tim.com.pe:8909/CRM_Services/Clarify/Transaction/TransaccionInteracciones?SCHEMA%2FUtilities%2Fxsd%2FAudit" namespace="http://claro.com.pe/eai/servicecommons/" />
+      <xsd:import schemaLocation="http://limdesosbv05.tim.com.pe:8909/CRM_Services/Clarify/Transaction/TransaccionInteracciones?SCHEMA%2FCRM+Services%2FClarify%2FCommons%2Fxsd%2FClarify" namespace="http://claro.com.pe/eai/crm/clarify/" />
+      <xsd:element name="nuevaInteraccion">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="txId" type="xsd:string" />
+            <xsd:element name="interaccion" type="Q1:InteraccionType" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="nuevaInteraccionResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="audit" type="Q2:AuditType" />
+            <xsd:element name="interaccionId" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="nuevaInteraccionTFI">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="txId" type="xsd:string" />
+            <xsd:element name="telefono" type="xsd:string" />
+            <xsd:element name="texto" type="xsd:string" />
+            <xsd:element name="tipo" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="nuevaInteraccionTFIResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="audit" type="Q2:AuditType" />
+            <xsd:element name="interaccionId" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="nuevaInteraccionPlus">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="txId" type="xsd:string" />
+            <xsd:element name="interaccionPlus" type="Q1:InteraccionPlusType" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="nuevaInteraccionPlusResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="audit" type="Q2:AuditType" />
+            <xsd:element name="interaccionPlusId" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="nuevaInteraccionDetalle">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="txId" type="xsd:string" />
+            <xsd:element name="detalleInteraccion" type="tns:detalleInteraccionType" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="nuevaInteraccionDetalleResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="audit" type="Q2:AuditType" />
+            <xsd:element name="flgregis" type="xsd:decimal" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="detalleInteraccionType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="detalle" type="Q1:DetInteraccionType" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="crearInteraccionConNivel">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="audit" type="tns:auditRequest" />
+            <xsd:element name="contactObjId" type="xsd:int" />
+            <xsd:element name="siteObjId" type="xsd:int" />
+            <xsd:element name="account" type="xsd:string" />
+            <xsd:element name="phone" type="xsd:string" />
+            <xsd:element name="tipo" type="xsd:string" />
+            <xsd:element name="clase" type="xsd:string" />
+            <xsd:element name="subclase" type="xsd:string" />
+            <xsd:element name="metodoContacto" type="xsd:string" />
+            <xsd:element name="tipoInter" type="xsd:string" />
+            <xsd:element name="agente" type="xsd:string" />
+            <xsd:element name="usrProceso" type="xsd:string" />
+            <xsd:element name="hechoEnUno" type="xsd:int" />
+            <xsd:element name="notas" type="xsd:string" />
+            <xsd:element name="flagCaso" type="xsd:string" />
+            <xsd:element name="resultado" type="xsd:string" />
+            <xsd:element name="servafect" type="xsd:string" />
+            <xsd:element name="inconven" type="xsd:string" />
+            <xsd:element name="servafectCode" type="xsd:string" />
+            <xsd:element name="inconvenCode" type="xsd:string" />
+            <xsd:element name="coId" type="xsd:string" />
+            <xsd:element name="codPlano" type="xsd:string" />
+            <xsd:element name="valor1" type="xsd:string" />
+            <xsd:element name="valor2" type="xsd:string" />
+            <xsd:element name="listaOpcionalRequest" type="tns:ListaRequestOpcional" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="ListaRequestOpcional">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="RequestOpcional" type="tns:RequestOpcionalComplexType" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ListaResponseOpcional">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="ResponseOpcional" type="tns:ResponseOpcionalComplexType" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="RequestOpcionalComplexType">
+        <xsd:sequence>
+          <xsd:element name="clave" type="xsd:string" />
+          <xsd:element name="valor" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ResponseOpcionalComplexType">
+        <xsd:sequence>
+          <xsd:element name="clave" type="xsd:string" />
+          <xsd:element name="valor" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="auditRequest">
+        <xsd:sequence>
+          <xsd:element name="idTransaccion" type="xsd:string" />
+          <xsd:element name="ipAplicacion" type="xsd:string" />
+          <xsd:element name="aplicacion" type="xsd:string" />
+          <xsd:element name="usrAplicacion" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="auditResponse">
+        <xsd:sequence>
+          <xsd:element name="idTransaccion" type="xsd:string" />
+          <xsd:element name="codigoRespuesta" type="xsd:string" />
+          <xsd:element name="mensajeRespuesta" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="crearInteraccionConNivelResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="audit" type="tns:auditResponse" />
+            <xsd:element name="idInteraccion" type="xsd:string" />
+            <xsd:element name="flagCreacion" type="xsd:string" />
+            <xsd:element name="MsgText" type="xsd:string" />
+            <xsd:element name="listaOpcionalResponse" type="tns:ListaResponseOpcional" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </WL5G3N0:types>
+  <WL5G3N0:message name="nuevaInteraccionRequest">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:nuevaInteraccion" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="nuevaInteraccionResponse">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:nuevaInteraccionResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="nuevaInteraccionTFIRequest">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:nuevaInteraccionTFI" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="nuevaInteraccionTFIResponse">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:nuevaInteraccionTFIResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="nuevaInteraccionPlusRequest">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:nuevaInteraccionPlus" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="nuevaInteraccionPlusResponse">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:nuevaInteraccionPlusResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="nuevaInteraccionDetalleRequest">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:nuevaInteraccionDetalle" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="nuevaInteraccionDetalleResponse">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:nuevaInteraccionDetalleResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="crearInteraccionConNivelRequest">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:crearInteraccionConNivel" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="crearInteraccionConNivelResponse">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:crearInteraccionConNivelResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:portType name="TransaccionInteracciones">
+    <WL5G3N0:operation name="nuevaInteraccion">
+      <WL5G3N0:input message="WL5G3N1:nuevaInteraccionRequest" />
+      <WL5G3N0:output message="WL5G3N1:nuevaInteraccionResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="nuevaInteraccionTFI">
+      <WL5G3N0:input message="WL5G3N1:nuevaInteraccionTFIRequest" />
+      <WL5G3N0:output message="WL5G3N1:nuevaInteraccionTFIResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="nuevaInteraccionPlus">
+      <WL5G3N0:input message="WL5G3N1:nuevaInteraccionPlusRequest" />
+      <WL5G3N0:output message="WL5G3N1:nuevaInteraccionPlusResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="nuevaInteraccionDetalle">
+      <WL5G3N0:input message="WL5G3N1:nuevaInteraccionDetalleRequest" />
+      <WL5G3N0:output message="WL5G3N1:nuevaInteraccionDetalleResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="crearInteraccionConNivel">
+      <WL5G3N0:input message="WL5G3N1:crearInteraccionConNivelRequest" />
+      <WL5G3N0:output message="WL5G3N1:crearInteraccionConNivelResponse" />
+    </WL5G3N0:operation>
+  </WL5G3N0:portType>
+  <WL5G3N0:binding name="TransaccionInteraccionesSOAP" type="WL5G3N1:TransaccionInteracciones">
+    <WL5G3N2:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <WL5G3N0:operation name="nuevaInteraccion">
+      <WL5G3N2:operation soapAction="http://claro.com.pe/eai/crmservices/clarify/transaccioninteracciones/nuevaInteraccion" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="nuevaInteraccionTFI">
+      <WL5G3N2:operation soapAction="http://claro.com.pe/eai/crmservices/clarify/transaccioninteracciones/nuevaInteraccionTFI" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="nuevaInteraccionPlus">
+      <WL5G3N2:operation soapAction="http://claro.com.pe/eai/crmservices/clarify/transaccioninteracciones/nuevaInteraccionPlus" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="nuevaInteraccionDetalle">
+      <WL5G3N2:operation soapAction="http://claro.com.pe/eai/crmservices/clarify/transaccioninteracciones/nuevaInteraccionDetalle" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="crearInteraccionConNivel">
+      <WL5G3N2:operation soapAction="http://claro.com.pe/eai/crmservices/clarify/transaccioninteracciones/crearInteraccionConNivel" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+  </WL5G3N0:binding>
+  <WL5G3N0:service name="TransaccionInteracciones">
+    <WL5G3N0:port name="TransaccionInteraccionesSOAP" binding="WL5G3N1:TransaccionInteraccionesSOAP">
+      <WL5G3N2:address location="http://limdesosbv05.tim.com.pe:8909/CRM_Services/Clarify/Transaction/TransaccionInteracciones" />
+    </WL5G3N0:port>
+  </WL5G3N0:service>
+</WL5G3N0:definitions>

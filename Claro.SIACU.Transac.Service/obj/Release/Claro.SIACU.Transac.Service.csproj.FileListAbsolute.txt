@@ -1,0 +1,10 @@
+C:\NET\Claro.SIACU.Transac.Service\bin\Release\Claro.SIACU.Transac.Service.dll
+C:\NET\Claro.SIACU.Transac.Service\bin\Release\Claro.SIACU.Transac.Service.pdb
+C:\NET\Claro.SIACU.Transac.Service\bin\Release\Claro.Security.dll
+C:\NET\Claro.SIACU.Transac.Service\bin\Release\Claro.Web.dll
+C:\NET\Claro.SIACU.Transac.Service\bin\Release\log4net.dll
+C:\NET\Claro.SIACU.Transac.Service\bin\Release\Claro.Security.pdb
+C:\NET\Claro.SIACU.Transac.Service\bin\Release\Claro.Web.pdb
+C:\NET\Claro.SIACU.Transac.Service\obj\Release\Claro.SIACU.Transac.Service.csprojResolveAssemblyReference.cache
+C:\NET\Claro.SIACU.Transac.Service\obj\Release\Claro.SIACU.Transac.Service.dll
+C:\NET\Claro.SIACU.Transac.Service\obj\Release\Claro.SIACU.Transac.Service.pdb

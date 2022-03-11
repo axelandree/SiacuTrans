@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WL5G3N0:definitions xmlns:WL5G3N2="http://claro.com.pe/eai/ws/consultaigv/consultaigvws" xmlns:WL5G3N1="http://claro.com.pe/eai/ws/consultaigv/consultaigvws/types" xmlns:WL5G3N3="http://schemas.xmlsoap.org/wsdl/soap/" name="ConsultaIGVWS" targetNamespace="http://claro.com.pe/eai/ws/consultaigv/consultaigvws" xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/">
+  <WL5G3N0:types>
+    <xsd:schema xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://claro.com.pe/eai/ws/consultaigv/consultaigvws" xmlns:types="http://claro.com.pe/eai/ws/consultaigv/consultaigvws/types" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:WL5G3N4="http://schemas.xmlsoap.org/wsdl/soap12/" elementFormDefault="qualified" targetNamespace="http://claro.com.pe/eai/ws/consultaigv/consultaigvws" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+    <xsd:schema xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://claro.com.pe/eai/ws/consultaigv/consultaigvws" xmlns:types="http://claro.com.pe/eai/ws/consultaigv/consultaigvws/types" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:WL5G3N4="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import schemaLocation="http://172.19.74.189:8901/PRS_ConsultaIGV/proxy_services/ConsultaIGV?SCHEMA%2FPRS_ConsultaIGV%2Fexternal%2Fxsd%2FConsultaIGV" namespace="http://claro.com.pe/eai/ws/consultaigv/consultaigvws/types" />
+    </xsd:schema>
+  </WL5G3N0:types>
+  <WL5G3N0:message name="consultarIGVRequestMsg">
+    <WL5G3N0:part name="request" element="WL5G3N1:consultarIGVRequest" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="consultarIGVResponseMsg">
+    <WL5G3N0:part name="response" element="WL5G3N1:consultarIGVResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:portType name="ConsultaIGVWSPortType">
+    <WL5G3N0:operation name="consultarIGV">
+      <WL5G3N0:input message="WL5G3N2:consultarIGVRequestMsg" />
+      <WL5G3N0:output message="WL5G3N2:consultarIGVResponseMsg" />
+    </WL5G3N0:operation>
+  </WL5G3N0:portType>
+  <WL5G3N0:binding name="ConsultaIGVWSPortTypeSOAP11Binding" type="WL5G3N2:ConsultaIGVWSPortType">
+    <WL5G3N3:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <WL5G3N0:operation name="consultarIGV">
+      <WL5G3N3:operation soapAction="http://claro.com.pe/eai/ws/consultaigv/consultaigvws/consultarIGV" style="document" />
+      <WL5G3N0:input>
+        <WL5G3N3:body use="literal" parts="request" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:body use="literal" parts="response" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+  </WL5G3N0:binding>
+  <WL5G3N0:service name="ConsultaIGVWSService">
+    <WL5G3N0:documentation>OSB Service</WL5G3N0:documentation>
+    <WL5G3N0:port name="ebsConsultaIGVSB11" binding="WL5G3N2:ConsultaIGVWSPortTypeSOAP11Binding">
+      <WL5G3N3:address location="http://172.19.74.189:8901/PRS_ConsultaIGV/proxy_services/ConsultaIGV" />
+    </WL5G3N0:port>
+  </WL5G3N0:service>
+</WL5G3N0:definitions>

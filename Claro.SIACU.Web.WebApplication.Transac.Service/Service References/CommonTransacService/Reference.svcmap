@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2933eabb-673b-4673-acc2-97f4f20a9fab" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:40204/CommonTransacService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CommonTransacService.xsd" MetadataType="Schema" ID="f4534985-d6c8-4fe9-a9a7-f15ee6cd7d88" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd77" />
+    <MetadataFile FileName="CommonTransacService1.xsd" MetadataType="Schema" ID="9246550f-caab-4e3f-a48f-c5390d65284e" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd74" />
+    <MetadataFile FileName="CommonTransacService2.xsd" MetadataType="Schema" ID="c172dd0a-38ba-40d4-864c-5249b5ff0570" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd75" />
+    <MetadataFile FileName="CommonTransacService3.xsd" MetadataType="Schema" ID="a7eb5ad7-e2d6-4100-ad22-d78034404dcb" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd8" />
+    <MetadataFile FileName="CommonTransacService4.xsd" MetadataType="Schema" ID="15ddc443-1fed-4036-8356-51cefdd2ed67" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd2" />
+    <MetadataFile FileName="CommonTransacService5.xsd" MetadataType="Schema" ID="8fed0d54-fd07-4bba-a2dd-03672a68de59" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd32" />
+    <MetadataFile FileName="CommonTransacService6.xsd" MetadataType="Schema" ID="9c4b7e5f-1760-456b-aff5-bcef6ed83e52" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd33" />
+    <MetadataFile FileName="CommonTransacService7.xsd" MetadataType="Schema" ID="deffc8f7-fed7-4027-9eb0-f020cfbbdddd" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd30" />
+    <MetadataFile FileName="CommonTransacService8.xsd" MetadataType="Schema" ID="a2ae22c1-dfed-4515-9f72-0d35b4a88037" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd31" />
+    <MetadataFile FileName="CommonTransacService9.xsd" MetadataType="Schema" ID="63774797-8e35-43e2-a748-5f42306ca44a" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd51" />
+    <MetadataFile FileName="CommonTransacService10.xsd" MetadataType="Schema" ID="6ca44b9e-39cd-49b0-b7f0-3f5fe33ac4c1" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd56" />
+    <MetadataFile FileName="CommonTransacService11.xsd" MetadataType="Schema" ID="405e9320-bc08-4c84-8138-2d2f0c266d30" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd57" />
+    <MetadataFile FileName="CommonTransacService12.xsd" MetadataType="Schema" ID="15b36271-9a35-453b-baeb-52aa1accd776" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd35" />
+    <MetadataFile FileName="CommonTransacService13.xsd" MetadataType="Schema" ID="f574a338-5bce-4c3a-ac32-edb4fbd22d55" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd55" />
+    <MetadataFile FileName="CommonTransacService14.xsd" MetadataType="Schema" ID="6b237bb3-de1a-4616-924e-a7ed22eee744" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd38" />
+    <MetadataFile FileName="CommonTransacService15.xsd" MetadataType="Schema" ID="07f837d3-2ed6-4cf4-9533-fe48b002c712" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd39" />
+    <MetadataFile FileName="CommonTransacService16.xsd" MetadataType="Schema" ID="9d640e34-6417-4f50-ba0d-3320d94657b6" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd59" />
+    <MetadataFile FileName="CommonTransacService17.xsd" MetadataType="Schema" ID="ba97068b-8c21-4731-934a-058b690e420d" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd107" />
+    <MetadataFile FileName="CommonTransacService18.xsd" MetadataType="Schema" ID="6fc800a4-5448-4691-963f-b57955a1f9f9" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd78" />
+    <MetadataFile FileName="CommonTransacService19.xsd" MetadataType="Schema" ID="9c466240-c167-42fb-bf43-0a6c362636cf" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd115" />
+    <MetadataFile FileName="CommonTransacService20.xsd" MetadataType="Schema" ID="2b73b6e1-c97a-46ca-bdc4-f2ff3d49393b" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd15" />
+    <MetadataFile FileName="CommonTransacService21.xsd" MetadataType="Schema" ID="d60bb1e7-fa9b-4634-8b4f-fd65279e78ed" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd80" />
+    <MetadataFile FileName="CommonTransacService22.xsd" MetadataType="Schema" ID="f87e315e-f8ea-4f8e-82f5-20c706e1ce93" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd10" />
+    <MetadataFile FileName="CommonTransacService23.xsd" MetadataType="Schema" ID="95d7c531-b3dc-4aed-847d-c21ceac03481" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd90" />
+    <MetadataFile FileName="CommonTransacService24.xsd" MetadataType="Schema" ID="692dbd83-3f6f-413e-85ce-4092fb17a030" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd6" />
+    <MetadataFile FileName="CommonTransacService25.xsd" MetadataType="Schema" ID="0b768aa9-f82d-41ed-a91f-d0423a83d8ce" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd22" />
+    <MetadataFile FileName="CommonTransacService26.xsd" MetadataType="Schema" ID="9e69ebc7-0ebd-47b4-bd66-3132d3f89766" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd108" />
+    <MetadataFile FileName="CommonTransacService27.xsd" MetadataType="Schema" ID="3603e81b-b092-47de-9ca4-e28cc88e07a9" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd50" />
+    <MetadataFile FileName="CommonTransacService28.xsd" MetadataType="Schema" ID="6e7bb5a6-8913-4e0e-97c7-031b6b5a2876" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd111" />
+    <MetadataFile FileName="CommonTransacService29.xsd" MetadataType="Schema" ID="d3126324-b9b0-4547-ba2e-dd3836072cf4" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd36" />
+    <MetadataFile FileName="CommonTransacService.disco" MetadataType="Disco" ID="6a43af92-3aea-4cc1-a6b7-f2b629391113" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?disco" />
+    <MetadataFile FileName="CommonTransacService30.xsd" MetadataType="Schema" ID="b542ae6e-f6c3-4102-996a-5aa366f7865f" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd110" />
+    <MetadataFile FileName="CommonTransacService31.xsd" MetadataType="Schema" ID="1981418f-e13c-45dd-a4a8-fa37ea09feea" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd118" />
+    <MetadataFile FileName="CommonTransacService32.xsd" MetadataType="Schema" ID="a3ad0921-cf47-4a8c-a935-a56d8b9bd756" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd4" />
+    <MetadataFile FileName="CommonTransacService33.xsd" MetadataType="Schema" ID="0876cdf4-6169-4be1-9f49-e5de2998ff90" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd87" />
+    <MetadataFile FileName="CommonTransacService34.xsd" MetadataType="Schema" ID="82c53979-da70-43b5-9feb-10c570d7c847" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd34" />
+    <MetadataFile FileName="CommonTransacService35.xsd" MetadataType="Schema" ID="3224d432-c899-4bf6-86ce-04961a39020f" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd83" />
+    <MetadataFile FileName="CommonTransacService36.xsd" MetadataType="Schema" ID="20c83a76-1b60-4195-8833-362e4699601f" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd26" />
+    <MetadataFile FileName="CommonTransacService37.xsd" MetadataType="Schema" ID="9d88da49-044e-4793-bd53-11abfa1d8f7e" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd81" />
+    <MetadataFile FileName="CommonTransacService38.xsd" MetadataType="Schema" ID="577b09b9-3509-4765-9374-65f2f27546c3" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd86" />
+    <MetadataFile FileName="CommonTransacService39.xsd" MetadataType="Schema" ID="aa1b6e4a-f412-43a4-9f9e-8d940d4e8611" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd43" />
+    <MetadataFile FileName="CommonTransacService40.xsd" MetadataType="Schema" ID="dc3ff3c1-f1e3-420a-ac24-a79c1c5c9fc0" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd84" />
+    <MetadataFile FileName="CommonTransacService41.xsd" MetadataType="Schema" ID="3506acef-fb5c-4e01-87d5-bf46180674b2" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd52" />
+    <MetadataFile FileName="CommonTransacService42.xsd" MetadataType="Schema" ID="8e4b697d-1aed-4116-8c4d-f1da745e9ebb" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd24" />
+    <MetadataFile FileName="CommonTransacService43.xsd" MetadataType="Schema" ID="d792f7cc-21f7-4fcb-a612-e5a897815de9" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd42" />
+    <MetadataFile FileName="CommonTransacService44.xsd" MetadataType="Schema" ID="6fbe647b-f2fa-4f36-87a6-1a507fd75861" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd109" />
+    <MetadataFile FileName="CommonTransacService45.xsd" MetadataType="Schema" ID="2970354d-e1f7-46ae-8627-8879f4e701b9" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd58" />
+    <MetadataFile FileName="CommonTransacService46.xsd" MetadataType="Schema" ID="8f0b3617-e397-47e1-bb5b-9841c7bb491e" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd88" />
+    <MetadataFile FileName="CommonTransacService47.xsd" MetadataType="Schema" ID="7eac2c7c-dbb7-4954-a065-03e23ce53266" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd105" />
+    <MetadataFile FileName="CommonTransacService48.xsd" MetadataType="Schema" ID="9c825ac4-937b-44e0-b5a4-e41edbf68d32" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd71" />
+    <MetadataFile FileName="CommonTransacService49.xsd" MetadataType="Schema" ID="7b235bc2-f191-4d7e-88c6-22cf55f9d186" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd102" />
+    <MetadataFile FileName="CommonTransacService50.xsd" MetadataType="Schema" ID="51d381ab-037a-42d2-9950-d3f18851b97d" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd112" />
+    <MetadataFile FileName="CommonTransacService51.xsd" MetadataType="Schema" ID="25c29fc8-9369-4844-85e7-99ea9cdefda6" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd62" />
+    <MetadataFile FileName="CommonTransacService52.xsd" MetadataType="Schema" ID="8a05d642-cfc3-47d6-b856-49b738f5992b" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd63" />
+    <MetadataFile FileName="CommonTransacService53.xsd" MetadataType="Schema" ID="b1cf5c0f-1276-4a14-a389-78ca741a9342" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd60" />
+    <MetadataFile FileName="CommonTransacService54.xsd" MetadataType="Schema" ID="621e0f81-d4d9-49f1-b0c1-4451ab0ec9d4" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd61" />
+    <MetadataFile FileName="CommonTransacService55.xsd" MetadataType="Schema" ID="46b12688-50bd-499e-983e-d35a57429628" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd66" />
+    <MetadataFile FileName="CommonTransacService56.xsd" MetadataType="Schema" ID="52037373-df75-45dd-ad85-d3a6a444965f" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd67" />
+    <MetadataFile FileName="CommonTransacService57.xsd" MetadataType="Schema" ID="bb1276bb-35ae-4a0b-86f3-d542167a44e1" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd64" />
+    <MetadataFile FileName="CommonTransacService58.xsd" MetadataType="Schema" ID="3cff93ba-0d05-47e3-937f-3eaca5cd613f" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd65" />
+    <MetadataFile FileName="CommonTransacService59.xsd" MetadataType="Schema" ID="4c27ace4-5b6d-491d-879c-162e8d8fdbbe" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd89" />
+    <MetadataFile FileName="CommonTransacService60.xsd" MetadataType="Schema" ID="65f2c430-2cf3-491c-a8f0-c2ff0b93c4eb" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd68" />
+    <MetadataFile FileName="CommonTransacService61.xsd" MetadataType="Schema" ID="29e32d25-4504-4840-85c7-a951953ea087" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd69" />
+    <MetadataFile FileName="CommonTransacService62.xsd" MetadataType="Schema" ID="2386aae7-da50-40fc-92c6-a70b33947ee3" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd49" />
+    <MetadataFile FileName="CommonTransacService63.xsd" MetadataType="Schema" ID="056c8856-7014-43e5-b1e0-9f1b7ab74731" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd23" />
+    <MetadataFile FileName="CommonTransacService64.xsd" MetadataType="Schema" ID="6b348704-af13-4fe6-8ef8-d5eb9f783c84" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd20" />
+    <MetadataFile FileName="CommonTransacService65.xsd" MetadataType="Schema" ID="db5709dd-6649-4ffd-9816-397e5f1fea76" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd40" />
+    <MetadataFile FileName="CommonTransacService66.xsd" MetadataType="Schema" ID="a8848616-118b-4002-93bd-29b2d357b81b" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd41" />
+    <MetadataFile FileName="CommonTransacService67.xsd" MetadataType="Schema" ID="fe6ccb52-616e-4bb7-8938-abb89a8851c7" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd27" />
+    <MetadataFile FileName="CommonTransacService68.xsd" MetadataType="Schema" ID="ac4c0600-5ed7-463c-adc6-5d553b642e68" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd47" />
+    <MetadataFile FileName="CommonTransacService69.xsd" MetadataType="Schema" ID="f200251a-1241-42ff-abd1-c1e2692a3151" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd44" />
+    <MetadataFile FileName="CommonTransacService70.xsd" MetadataType="Schema" ID="762d91e8-176a-4e89-99b7-3d15c8ec7aae" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd45" />
+    <MetadataFile FileName="CommonTransacService71.xsd" MetadataType="Schema" ID="104a4454-4f1f-49b1-89e9-e4e446e79e23" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd28" />
+    <MetadataFile FileName="CommonTransacService72.xsd" MetadataType="Schema" ID="185b32ce-b200-47fd-aeec-f0c2ee7b12c1" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd9" />
+    <MetadataFile FileName="CommonTransacService73.xsd" MetadataType="Schema" ID="8f6313e6-e866-4441-8b3f-e2c619dc8b5e" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd3" />
+    <MetadataFile FileName="CommonTransacService74.xsd" MetadataType="Schema" ID="6c590f68-75cb-4bcf-bd32-178a13feed5b" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd114" />
+    <MetadataFile FileName="CommonTransacService75.xsd" MetadataType="Schema" ID="bafedd61-3fea-4b25-b4bc-b165c4d3cbdd" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd117" />
+    <MetadataFile FileName="CommonTransacService76.xsd" MetadataType="Schema" ID="ac84c832-130d-46a1-ba62-fb512a2c2993" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd79" />
+    <MetadataFile FileName="CommonTransacService77.xsd" MetadataType="Schema" ID="51236951-6da1-45dc-a729-c26590fe0688" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd1" />
+    <MetadataFile FileName="CommonTransacService78.xsd" MetadataType="Schema" ID="a99d334b-61a6-47c3-b947-c6714689b3a9" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd95" />
+    <MetadataFile FileName="CommonTransacService79.xsd" MetadataType="Schema" ID="78496b1e-4265-4c39-bff5-7f5c68274089" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd53" />
+    <MetadataFile FileName="CommonTransacService80.xsd" MetadataType="Schema" ID="5d47bff0-20d4-4ed5-a3ba-0314feaf17d0" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd101" />
+    <MetadataFile FileName="CommonTransacService81.xsd" MetadataType="Schema" ID="8c2da6c0-2b73-4c13-83df-5e14be3cfdec" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd104" />
+    <MetadataFile FileName="CommonTransacService82.xsd" MetadataType="Schema" ID="b90d49b5-5d15-4d45-a5b7-2759a01f3359" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd7" />
+    <MetadataFile FileName="CommonTransacService83.xsd" MetadataType="Schema" ID="767c62f2-f024-4184-a0bd-9b87feb17cf2" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd106" />
+    <MetadataFile FileName="CommonTransacService84.xsd" MetadataType="Schema" ID="d70c216f-1da0-4a77-884b-3eb300151054" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd116" />
+    <MetadataFile FileName="CommonTransacService85.xsd" MetadataType="Schema" ID="a69c9874-37e9-4749-badd-67268e7a7797" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd103" />
+    <MetadataFile FileName="CommonTransacService86.xsd" MetadataType="Schema" ID="31ef370a-843f-4035-9e17-dc42c1d0dadc" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd113" />
+    <MetadataFile FileName="CommonTransacService87.xsd" MetadataType="Schema" ID="e47a4f97-c563-406c-9fe5-0e430113a128" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd100" />
+    <MetadataFile FileName="CommonTransacService88.xsd" MetadataType="Schema" ID="9eea794c-fd80-4bbb-9df6-746cc492bded" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd54" />
+    <MetadataFile FileName="CommonTransacService89.xsd" MetadataType="Schema" ID="2441e469-cb5f-4a4b-87e1-adc6b599b645" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd37" />
+    <MetadataFile FileName="CommonTransacService90.xsd" MetadataType="Schema" ID="03ca5b35-eb53-4f99-bc76-5115b2305ea0" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd21" />
+    <MetadataFile FileName="CommonTransacService.wsdl" MetadataType="Wsdl" ID="7744e071-e2b5-4b13-bcc0-e7284f22d933" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?wsdl" />
+    <MetadataFile FileName="CommonTransacService91.xsd" MetadataType="Schema" ID="e5705780-bb71-4b84-b9cb-23ba01e6554e" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd5" />
+    <MetadataFile FileName="CommonTransacService92.xsd" MetadataType="Schema" ID="2ca711c9-9308-488c-9c0c-e92e96af6b76" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd98" />
+    <MetadataFile FileName="CommonTransacService93.xsd" MetadataType="Schema" ID="ed9214d3-f9ec-4070-8487-415f89cfe541" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd92" />
+    <MetadataFile FileName="CommonTransacService94.xsd" MetadataType="Schema" ID="a80179c4-0725-45b8-b061-38c0d6a92047" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd93" />
+    <MetadataFile FileName="CommonTransacService95.xsd" MetadataType="Schema" ID="73457c8e-ba40-4ee7-8243-a54a9ebcab93" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd85" />
+    <MetadataFile FileName="CommonTransacService96.xsd" MetadataType="Schema" ID="43d040ec-d796-4716-9822-123693b19016" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd91" />
+    <MetadataFile FileName="CommonTransacService97.xsd" MetadataType="Schema" ID="5de9c051-f1a3-4ae5-8eea-cf2aa122714a" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd96" />
+    <MetadataFile FileName="CommonTransacService98.xsd" MetadataType="Schema" ID="943b7aa4-333d-42d4-b728-828f947f352b" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd97" />
+    <MetadataFile FileName="CommonTransacService99.xsd" MetadataType="Schema" ID="6b5a5333-1683-44ae-9cc8-c5691fd6fca5" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd94" />
+    <MetadataFile FileName="CommonTransacService100.xsd" MetadataType="Schema" ID="5372ec39-422e-4af6-adb6-7072b8718091" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd25" />
+    <MetadataFile FileName="CommonTransacService101.xsd" MetadataType="Schema" ID="6a91dcff-8b17-4946-b535-2c4f869e7473" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd46" />
+    <MetadataFile FileName="CommonTransacService102.xsd" MetadataType="Schema" ID="e12c45c6-cdd5-4042-b657-3752e87743f3" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd99" />
+    <MetadataFile FileName="CommonTransacService103.xsd" MetadataType="Schema" ID="933ff0d9-c063-47bb-bb74-81f49e2b4885" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd82" />
+    <MetadataFile FileName="CommonTransacService104.xsd" MetadataType="Schema" ID="6f85e9d8-1ecd-44eb-b914-825147ec78e3" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd12" />
+    <MetadataFile FileName="CommonTransacService105.xsd" MetadataType="Schema" ID="c043e172-d60f-4f14-b90d-786d0a9182d6" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd13" />
+    <MetadataFile FileName="CommonTransacService106.xsd" MetadataType="Schema" ID="dd453cca-33c4-4524-a65a-449381caa453" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd0" />
+    <MetadataFile FileName="CommonTransacService107.xsd" MetadataType="Schema" ID="9dc481ba-84b9-41d8-a410-4edb1d68cbe1" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd11" />
+    <MetadataFile FileName="CommonTransacService108.xsd" MetadataType="Schema" ID="0a358093-6353-4954-9170-7d485283722c" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd16" />
+    <MetadataFile FileName="CommonTransacService109.xsd" MetadataType="Schema" ID="0977b418-b5ff-4df0-ad99-64cfd3d28af4" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd17" />
+    <MetadataFile FileName="CommonTransacService110.xsd" MetadataType="Schema" ID="9ce8a0c6-f44b-4932-89b2-017b83cfbef9" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd14" />
+    <MetadataFile FileName="CommonTransacService111.xsd" MetadataType="Schema" ID="0f2f1272-26f1-4996-8b91-fd0fa9abe21b" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd29" />
+    <MetadataFile FileName="CommonTransacService112.xsd" MetadataType="Schema" ID="c3db772c-97a5-4e27-9f39-28506fdf3541" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd18" />
+    <MetadataFile FileName="CommonTransacService113.xsd" MetadataType="Schema" ID="d529efac-4304-4dda-8adb-31176a51f654" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd19" />
+    <MetadataFile FileName="CommonTransacService114.xsd" MetadataType="Schema" ID="06f95010-5b94-4e55-bf89-9bd8c818e8a9" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd72" />
+    <MetadataFile FileName="CommonTransacService115.xsd" MetadataType="Schema" ID="8f32415f-5cd1-4bfd-8f2b-06edc6155154" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd73" />
+    <MetadataFile FileName="CommonTransacService116.xsd" MetadataType="Schema" ID="42da64ad-9706-46ec-9784-46e68ad28efd" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd70" />
+    <MetadataFile FileName="CommonTransacService117.xsd" MetadataType="Schema" ID="89d4b57a-86dd-41e5-922c-85b2c523a97a" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd48" />
+    <MetadataFile FileName="CommonTransacService118.xsd" MetadataType="Schema" ID="9f4a8cbb-176f-426b-966a-c95954986144" SourceId="1" SourceUrl="http://localhost:40204/CommonTransacService.svc?xsd=xsd76" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

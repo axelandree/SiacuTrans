@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://claro.com.pe/eai/ConnectorPcrf/ws/Consulta" xmlns:types="http://claro.com.pe/eai/ConnectorPcrf/ws/types" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://claro.com.pe/eai/ConnectorPcrf/ws/Consulta" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://claro.com.pe/eai/ConnectorPcrf/ws/Consulta">
+      <xsd:import schemaLocation="http://limdeseaiv25.tim.com.pe:8903/PCRFConnectorWS/PCRFWSSOAP11Port?xsd=1" namespace="http://claro.com.pe/eai/ConnectorPcrf/ws/types" />
+      <xsd:complexType name="consultarRequest">
+        <xsd:sequence>
+          <xsd:element name="auditRequest" type="types:parametrosAuditRequest" />
+          <xsd:element name="accionRequest" type="types:accionType" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="consultarResponse">
+        <xsd:sequence>
+          <xsd:element name="auditResponse" type="types:parametrosAuditResponse" />
+          <xsd:element name="accionResponse" type="types:accionType" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="consultarRequest" type="tns:consultarRequest" />
+      <xsd:element name="consultarResponse" type="tns:consultarResponse" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="BaseInput">
+    <wsdl:part name="consultarRequest" element="tns:consultarRequest" />
+  </wsdl:message>
+  <wsdl:message name="BaseOutput">
+    <wsdl:part name="consultarResponse" element="tns:consultarResponse" />
+  </wsdl:message>
+</wsdl:definitions>

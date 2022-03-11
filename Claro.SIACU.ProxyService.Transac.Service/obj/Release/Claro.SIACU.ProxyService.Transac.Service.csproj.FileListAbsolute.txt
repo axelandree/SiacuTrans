@@ -1,0 +1,10 @@
+C:\NET\Claro.SIACU.ProxyService.Transac.Service\bin\Release\Claro.SIACU.ProxyService.Transac.Service.dll.config
+C:\NET\Claro.SIACU.ProxyService.Transac.Service\bin\Release\Claro.SIACU.ProxyService.Transac.Service.dll
+C:\NET\Claro.SIACU.ProxyService.Transac.Service\bin\Release\Claro.SIACU.ProxyService.Transac.Service.XmlSerializers.dll
+C:\NET\Claro.SIACU.ProxyService.Transac.Service\bin\Release\Claro.SIACU.ProxyService.Transac.Service.pdb
+C:\NET\Claro.SIACU.ProxyService.Transac.Service\bin\Release\Claro.Entity.dll
+C:\NET\Claro.SIACU.ProxyService.Transac.Service\bin\Release\Claro.Entity.pdb
+C:\NET\Claro.SIACU.ProxyService.Transac.Service\obj\Release\Claro.SIACU.ProxyService.Transac.Service.csprojResolveAssemblyReference.cache
+C:\NET\Claro.SIACU.ProxyService.Transac.Service\obj\Release\Claro.SIACU.ProxyService.Transac.Service.dll
+C:\NET\Claro.SIACU.ProxyService.Transac.Service\obj\Release\Claro.SIACU.ProxyService.Transac.Service.pdb
+C:\NET\Claro.SIACU.ProxyService.Transac.Service\obj\Release\Claro.SIACU.ProxyService.Transac.Service.XmlSerializers.dll

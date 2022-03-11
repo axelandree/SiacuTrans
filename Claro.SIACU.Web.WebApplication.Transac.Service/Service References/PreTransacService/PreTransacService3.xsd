@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ConsultLine">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Application" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DateTransaction" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IPApplication" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdTransaction" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Msisdn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Traces" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="User" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConsultLine" nillable="true" type="tns:ConsultLine" />
+  <xs:complexType name="Line">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActivationDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Bell" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CNTNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodPlanTariff" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContractID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DateStatus" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DolDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExpDate_Line" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExpDate_Select" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExpirationDateBalance" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FlagLoadDataLine" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FlagPlatform" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsCNTPossible" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsDTH" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsSelect" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsTFI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LineStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MainBalance" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MinuteBalance_Select" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumFamFriends" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumICCID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumIMSI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OutstandingBalance" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PIN1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PIN2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PUK1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PUK2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PhoneNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Plan" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProviderID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Reason" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sale" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StatusIMSI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SubscriberStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TariffChangesFree" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TariffPlan" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TermContract" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TriacionType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TriosChanguesFree" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Line" nillable="true" type="tns:Line" />
+  <xs:complexType name="ArrayOfAccount">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Account" nillable="true" type="tns:Account" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAccount" nillable="true" type="tns:ArrayOfAccount" />
+  <xs:complexType name="Account">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Balance" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExpirationDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Order" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Account" nillable="true" type="tns:Account" />
+  <xs:complexType name="ArrayOfListItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ListItem" nillable="true" type="tns:ListItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfListItem" nillable="true" type="tns:ArrayOfListItem" />
+  <xs:complexType name="ListItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Code2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodeTypeService" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Condition" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Date" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Group" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdMotive" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Number" type="xs:int" />
+      <xs:element minOccurs="0" name="ParameterId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ValueC" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ListItem" nillable="true" type="tns:ListItem" />
+</xs:schema>

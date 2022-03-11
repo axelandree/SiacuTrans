@@ -1,0 +1,6 @@
+C:\NET\Framework\Claro.Transversal.ProxyService\bin\Release\Claro.Transversal.ProxyService.dll.config
+C:\NET\Framework\Claro.Transversal.ProxyService\bin\Release\Claro.Transversal.ProxyService.dll
+C:\NET\Framework\Claro.Transversal.ProxyService\bin\Release\Claro.Transversal.ProxyService.pdb
+C:\NET\Framework\Claro.Transversal.ProxyService\obj\Release\Claro.Transversal.ProxyService.dll
+C:\NET\Framework\Claro.Transversal.ProxyService\obj\Release\Claro.Transversal.ProxyService.pdb
+C:\NET\Framework\Claro.Transversal.ProxyService\obj\Release\Claro.Transversal.ProxyService.csprojResolveAssemblyReference.cache

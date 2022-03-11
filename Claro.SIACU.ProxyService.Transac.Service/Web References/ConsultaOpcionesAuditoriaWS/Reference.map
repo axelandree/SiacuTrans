@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://limdeseaiv26.tim.com.pe:8909/ConsultaOpcionesAuditoria/ConsultaOpcionesAuditoriaPortSB11?xsd=1" filename="ConsultaOpcionesAuditoriaPortSB11.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://172.19.74.206:8909/ConsultaOpcionesAuditoria/ConsultaOpcionesAuditoriaPortSB11?WSDL" filename="ConsultaOpcionesAuditoriaService.wsdl" />
+  </Results>
+</DiscoveryClientResultsFile>

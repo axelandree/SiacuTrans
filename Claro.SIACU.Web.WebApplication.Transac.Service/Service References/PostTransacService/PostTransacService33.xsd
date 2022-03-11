@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetHLR" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid.GetHLR" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd3" namespace="Claro" />
+  <xs:import schemaLocation="http://localhost:40204/PostTransacService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid" />
+  <xs:complexType name="HLRRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="Claro" base="q1:Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="PHONE_NUMBER" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RANGE_TYPE" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="HLRRequest" nillable="true" type="tns:HLRRequest" />
+  <xs:complexType name="HLRResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LOCATION" type="xs:int" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid" minOccurs="0" name="ListHLR" nillable="true" type="q2:ArrayOfHLR" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid" minOccurs="0" name="ObjHLR" nillable="true" type="q3:HLR" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HLRResponse" nillable="true" type="tns:HLRResponse" />
+</xs:schema>

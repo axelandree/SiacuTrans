@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:dstns="http://www.ibm.com/rules/decisionservice/RULEAPPAUTOM/REGLASAUTOMATIZACIONDEDOCUMENTOS" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="REGLASAUTOMATIZACIONDEDOCUMENTOSDecisionService" targetNamespace="http://www.ibm.com/rules/decisionservice/RULEAPPAUTOM/REGLASAUTOMATIZACIONDEDOCUMENTOS" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns:xom1="http://www.ibm.com/rules/decisionservice/RULEAPPAUTOM/REGLASAUTOMATIZACIONDEDOCUMENTOS" targetNamespace="http://www.ibm.com/rules/decisionservice/RULEAPPAUTOM/REGLASAUTOMATIZACIONDEDOCUMENTOS/param">
+      <xsd:import namespace="http://www.ibm.com/rules/decisionservice/RULEAPPAUTOM/REGLASAUTOMATIZACIONDEDOCUMENTOS" />
+      <xsd:element name="pedidoGeneral">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="pedidoGeneral" type="xom1:pedidoGeneral" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="pedidoEspecifico">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="pedidoEspecifico" type="xom1:pedidoEspecifico" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="listaGeneral">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="listaGeneral" type="xom1:listaGeneral" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="listaEspecifica">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="listaEspecifica" type="xom1:listaEspecifica" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xs:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="http://www.ibm.com/rules/decisionservice/RULEAPPAUTOM/REGLASAUTOMATIZACIONDEDOCUMENTOS" xmlns:param="http://www.ibm.com/rules/decisionservice/RULEAPPAUTOM/REGLASAUTOMATIZACIONDEDOCUMENTOS/param" targetNamespace="http://www.ibm.com/rules/decisionservice/RULEAPPAUTOM/REGLASAUTOMATIZACIONDEDOCUMENTOS" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://www.ibm.com/rules/decisionservice/RULEAPPAUTOM/REGLASAUTOMATIZACIONDEDOCUMENTOS/param" />
+      <xs:complexType name="listaGeneral">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="documento" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="listaEspecifica">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="resultado" nillable="true" type="tns:resultado" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="resultado">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="archivo" type="xs:string" />
+          <xs:element minOccurs="0" name="identificador" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="pedidoGeneral">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cliente" type="tns:cliente" />
+          <xs:element minOccurs="0" name="proceso" type="tns:proceso" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="cliente">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="documento" type="xs:string" />
+          <xs:element minOccurs="0" name="permanencia" type="xs:int" />
+          <xs:element minOccurs="0" name="planCarta" type="tns:tipoSiNo" />
+          <xs:element minOccurs="0" name="reciboElectronico" type="tns:tipoSiNo" />
+          <xs:element minOccurs="0" name="rentaAdelantada" type="tns:tipoSiNo" />
+          <xs:element minOccurs="0" name="segmento" type="xs:string" />
+          <xs:element minOccurs="0" name="tipoDeCliente" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="proceso">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="canal" type="xs:string" />
+          <xs:element minOccurs="0" name="despacho" type="xs:string" />
+          <xs:element minOccurs="0" name="fechaEjecucion" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="horaEjecucion" type="xs:int" />
+          <xs:element minOccurs="0" name="operacion" type="xs:string" />
+          <xs:element minOccurs="0" name="sistema" type="xs:string" />
+          <xs:element minOccurs="0" name="tipoDeOperacion" type="xs:string" />
+          <xs:element minOccurs="0" name="transaccion" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="pedidoEspecifico">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="consulta" nillable="true" type="tns:consulta" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="consulta">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="acuerdo" type="tns:acuerdo" />
+          <xs:element minOccurs="0" name="identificador" type="xs:string" />
+          <xs:element minOccurs="0" name="producto" type="tns:producto" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="acuerdo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="antiguedad" type="xs:int" />
+          <xs:element minOccurs="0" name="cuotas" type="xs:int" />
+          <xs:element minOccurs="0" name="equipo" type="xs:string" />
+          <xs:element minOccurs="0" name="flagEquipo" type="xs:string" />
+          <xs:element minOccurs="0" name="plazo" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="producto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="campana" type="xs:string" />
+          <xs:element minOccurs="0" name="estadoDelServicio" type="xs:string" />
+          <xs:element minOccurs="0" name="fase" type="xs:string" />
+          <xs:element minOccurs="0" name="grupoDelPlan" type="xs:string" />
+          <xs:element minOccurs="0" name="paquete" type="xs:string" />
+          <xs:element minOccurs="0" name="plan" type="xs:string" />
+          <xs:element minOccurs="0" name="proteccionMovil" type="tns:tipoSiNo" />
+          <xs:element minOccurs="0" name="retencion" type="xs:string" />
+          <xs:element minOccurs="0" name="servicio" type="xs:string" />
+          <xs:element minOccurs="0" name="tipoDeProducto" type="xs:string" />
+          <xs:element minOccurs="0" name="topeDeConsumo" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:simpleType name="tipoSiNo">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="SI" />
+          <xs:enumeration value="NO" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="REGLASAUTOMATIZACIONDEDOCUMENTOSRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" form="qualified" name="DecisionID" type="xs:string" />
+            <xs:element ref="param:pedidoEspecifico" />
+            <xs:element ref="param:pedidoGeneral" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="REGLASAUTOMATIZACIONDEDOCUMENTOSResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element form="qualified" name="DecisionID" type="xs:string" />
+            <xs:element ref="param:listaEspecifica" />
+            <xs:element ref="param:listaGeneral" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="REGLASAUTOMATIZACIONDEDOCUMENTOSException">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="exception" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="REGLASAUTOMATIZACIONDEDOCUMENTOSSoapFault">
+    <wsdl:part name="fault" element="dstns:REGLASAUTOMATIZACIONDEDOCUMENTOSException" />
+  </wsdl:message>
+  <wsdl:message name="REGLASAUTOMATIZACIONDEDOCUMENTOSRequest">
+    <wsdl:part name="REGLASAUTOMATIZACIONDEDOCUMENTOSRequest" element="dstns:REGLASAUTOMATIZACIONDEDOCUMENTOSRequest" />
+  </wsdl:message>
+  <wsdl:message name="REGLASAUTOMATIZACIONDEDOCUMENTOSResponse">
+    <wsdl:part name="REGLASAUTOMATIZACIONDEDOCUMENTOSResponse" element="dstns:REGLASAUTOMATIZACIONDEDOCUMENTOSResponse" />
+  </wsdl:message>
+  <wsdl:portType name="REGLASAUTOMATIZACIONDEDOCUMENTOSDecisionService">
+    <wsdl:operation name="REGLASAUTOMATIZACIONDEDOCUMENTOS">
+      <wsdl:input name="REGLASAUTOMATIZACIONDEDOCUMENTOSRequest" message="dstns:REGLASAUTOMATIZACIONDEDOCUMENTOSRequest" />
+      <wsdl:output name="REGLASAUTOMATIZACIONDEDOCUMENTOSResponse" message="dstns:REGLASAUTOMATIZACIONDEDOCUMENTOSResponse" />
+      <wsdl:fault name="REGLASAUTOMATIZACIONDEDOCUMENTOSSoapFault" message="dstns:REGLASAUTOMATIZACIONDEDOCUMENTOSSoapFault" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="RULEAPPAUTOMREGLASAUTOMATIZACIONDEDOCUMENTOSBinding" type="dstns:REGLASAUTOMATIZACIONDEDOCUMENTOSDecisionService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="REGLASAUTOMATIZACIONDEDOCUMENTOS">
+      <soap:operation soapAction="REGLASAUTOMATIZACIONDEDOCUMENTOS" style="document" />
+      <wsdl:input name="REGLASAUTOMATIZACIONDEDOCUMENTOSRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="REGLASAUTOMATIZACIONDEDOCUMENTOSResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="REGLASAUTOMATIZACIONDEDOCUMENTOSSoapFault">
+        <soap:fault use="literal" name="REGLASAUTOMATIZACIONDEDOCUMENTOSSoapFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="REGLASAUTOMATIZACIONDEDOCUMENTOSDecisionService">
+    <wsdl:port name="RULEAPPAUTOMREGLASAUTOMATIZACIONDEDOCUMENTOSPort" binding="dstns:RULEAPPAUTOMREGLASAUTOMATIZACIONDEDOCUMENTOSBinding">
+      <soap:address location="http://172.19.112.46/DecisionService/ws/RULEAPPAUTOM/REGLASAUTOMATIZACIONDEDOCUMENTOS/v75" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

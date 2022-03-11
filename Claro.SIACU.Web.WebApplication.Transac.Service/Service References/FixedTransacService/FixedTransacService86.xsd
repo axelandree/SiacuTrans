@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetCurrentPlan" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetCurrentPlan" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd3" namespace="Claro" />
+  <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed" />
+  <xs:complexType name="CurrentPlanRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="Claro" base="q1:Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CoId" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CurrentPlanRequest" nillable="true" type="tns:CurrentPlanRequest" />
+  <xs:complexType name="CurrentPlanResponse">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed" minOccurs="0" name="Plan" nillable="true" type="q2:CurrentPlan" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CurrentPlanResponse" nillable="true" type="tns:CurrentPlanResponse" />
+</xs:schema>

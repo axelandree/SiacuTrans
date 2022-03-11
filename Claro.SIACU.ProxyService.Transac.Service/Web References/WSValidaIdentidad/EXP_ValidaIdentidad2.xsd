@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="http://claro.com.pe/esb/data/ventas/prsvalidadidentidad/types2" xmlns:base="http://claro.com.pe/esb/data/generico/baseschema/v1/" xmlns:tns="http://claro.com.pe/esb/data/ventas/prsvalidadidentidad/types2" elementFormDefault="qualified" targetNamespace="http://claro.com.pe/esb/data/ventas/prsvalidadidentidad/types2" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import schemaLocation="http://172.17.26.53:21000/PRS_ValidaIdentidad/SRV_PRS_ValidaIdentidad/Service/Exposition/EXP_ValidaIdentidad?SCHEMA%2FPRS_ValidaIdentidad%2FSRV_PRS_ValidaIdentidad%2FResources%2FXSD%2FBaseSchema" namespace="http://claro.com.pe/esb/data/generico/baseschema/v1/" />
+  <xsd:complexType name="listaObtenerConfiguracionType">
+    <xsd:sequence>
+      <xsd:element name="ovencCodigo" type="xsd:string" />
+      <xsd:element name="ovenvDescripcion" type="xsd:string" />
+      <xsd:element name="gpdvvCodigo" type="xsd:string" />
+      <xsd:element name="toficCodigo" type="xsd:string" />
+      <xsd:element name="ovencEstado" type="xsd:string" />
+      <xsd:element name="canacCodigo" type="xsd:string" />
+      <xsd:element name="canavDescripcion" type="xsd:string" />
+      <xsd:element name="tprocCodigo" type="xsd:string" />
+      <xsd:element name="soxsvCodOperacion" type="xsd:string" />
+      <xsd:element name="soxsvDescOperacion" type="xsd:string" />
+      <xsd:element name="soxsvSistema" type="xsd:string" />
+      <xsd:element name="soxpnFlagHuellero" type="xsd:integer" />
+      <xsd:element name="soxpnFlagBiometria" type="xsd:integer" />
+      <xsd:element name="soxpnFlagIncapacidad" type="xsd:integer" />
+      <xsd:element name="soxpnTipoVerificacionBio" type="xsd:integer" />
+      <xsd:element name="soxpnFlagNoBiometriaReniec" type="xsd:integer" />
+      <xsd:element name="soxpnFlagNoBiometriaDc" type="xsd:integer" />
+      <xsd:element name="soxpvMensaje" type="xsd:string" />
+      <xsd:element name="soxpnTipoError" type="xsd:integer" />
+      <xsd:element name="soxpnFlagFinVenta" type="xsd:integer" />
+      <xsd:element name="soxpnFlagIdValidator" type="xsd:integer" />
+      <xsd:element name="soxpnFlagFirmaDigital" type="xsd:integer" />
+      <xsd:element name="soxpnTipoVerificacionFirma" type="xsd:integer" />
+      <xsd:element name="soxpnFlagEmail" type="xsd:integer" />
+      <xsd:element name="ovencSupervisorHuellaBc" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ResponseDataObtenerConfiguracion">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="listaObtenerConfigResponse" type="tns:listaObtenerConfiguracionType" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="listaResponseOpcional" type="base:ResponseOpcionalType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="obtenerConfiguracionRequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="codigoPDV" type="xsd:string" />
+        <xsd:element name="sistema" type="xsd:string" />
+        <xsd:element minOccurs="0" maxOccurs="1" name="codOperacion" type="xsd:string" />
+        <xsd:element name="idPadre" type="xsd:string" />
+        <xsd:element name="codCanal" type="xsd:string" />
+        <xsd:element name="codModalVenta" type="xsd:string" />
+        <xsd:element name="tipoDocumento" type="xsd:string" />
+        <xsd:element name="numeroDocumento" type="xsd:string" />
+        <xsd:element name="usuarioCtaRed" type="xsd:string" />
+        <xsd:element name="idHijo" type="xsd:string" />
+        <xsd:element name="estado" type="xsd:string" />
+        <xsd:element minOccurs="1" maxOccurs="1" name="listaRequestOpcional" type="base:RequestOpcionalType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="obtenerConfiguracionResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="responseStatus" type="base:responseStatus" />
+        <xsd:element name="responseData" type="tns:ResponseDataObtenerConfiguracion" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

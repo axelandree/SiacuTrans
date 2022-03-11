@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="http://claro.com.pe/eai/ws/postventa/cambioplanprepagotfi/types" xmlns:base="http://claro.com.pe/eai/ws/baseschema" xmlns:tns="http://claro.com.pe/eai/ws/postventa/cambioplanprepagotfi/types" elementFormDefault="qualified" targetNamespace="http://claro.com.pe/eai/ws/postventa/cambioplanprepagotfi/types" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import schemaLocation="http://172.17.26.46:20000/CambioPlanPrepagoTFIWS/ebsCambioPlanPrepagoTFISB11Port?xsd=1" namespace="http://claro.com.pe/eai/ws/baseschema" />
+  <xsd:element name="ejecutarCambioPlanPrepagoRequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditRequest" type="base:auditRequestType" />
+        <xsd:element name="telefono" type="xsd:string" />
+        <xsd:element name="offer" type="xsd:string" />
+        <xsd:element name="subscriberStatus" type="xsd:string" />
+        <xsd:element minOccurs="1" maxOccurs="1" name="listaRequestOpcional" type="base:parametrosType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="ejecutarCambioPlanPrepagoResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditResponse" type="base:auditResponseType" />
+        <xsd:element name="offerAntiguo" type="xsd:string" />
+        <xsd:element name="offerNuevo" type="xsd:string" />
+        <xsd:element name="defaultServiceResponse" type="base:DefaultServiceResponse" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

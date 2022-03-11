@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://service.eai.claro.com.pe/ValidarCredencialesSUWS" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="ValidarCredencialesSUService" targetNamespace="http://service.eai.claro.com.pe/ValidarCredencialesSUWS" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://limdeseaiv35.tim.com.pe:8909/ValidarCredencialesSUWS/ValidarCredencialesSUWSSB11?xsd=1" namespace="http://service.eai.claro.com.pe/ValidarCredencialesSUWS" />
+    </xsd:schema>
+  </types>
+  <message name="obtenerSesiones">
+    <part name="parameters" element="tns:obtenerSesionesRequest" />
+  </message>
+  <message name="obtenerSesionesResponse">
+    <part name="parameters" element="tns:obtenerSesionesResponse" />
+  </message>
+  <message name="registrarComunicacion">
+    <part name="parameters" element="tns:registrarComunicacionRequest" />
+  </message>
+  <message name="registrarComunicacionResponse">
+    <part name="parameters" element="tns:registrarComunicacionResponse" />
+  </message>
+  <message name="validarComunicacion">
+    <part name="parameters" element="tns:validarComunicacionRequest" />
+  </message>
+  <message name="validarComunicacionResponse">
+    <part name="parameters" element="tns:validarComunicacionResponse" />
+  </message>
+  <portType name="ValidarCredencialesSUWSPortType">
+    <operation name="obtenerSesiones">
+      <input wsam:Action="http://service.eai.claro.com.pe/ValidarCredencialesSUWS/obtenerSesiones" message="tns:obtenerSesiones" />
+      <output wsam:Action="http://service.eai.claro.com.pe/ValidarCredencialesSUWS/ValidarCredencialesSUWSPortType/obtenerSesionesResponse" message="tns:obtenerSesionesResponse" />
+    </operation>
+    <operation name="registrarComunicacion">
+      <input wsam:Action="http://service.eai.claro.com.pe/ValidarCredencialesSUWS/registrarComunicacion" message="tns:registrarComunicacion" />
+      <output wsam:Action="http://service.eai.claro.com.pe/ValidarCredencialesSUWS/ValidarCredencialesSUWSPortType/registrarComunicacionResponse" message="tns:registrarComunicacionResponse" />
+    </operation>
+    <operation name="validarComunicacion">
+      <input wsam:Action="http://service.eai.claro.com.pe/ValidarCredencialesSUWS/validarComunicacion" message="tns:validarComunicacion" />
+      <output wsam:Action="http://service.eai.claro.com.pe/ValidarCredencialesSUWS/ValidarCredencialesSUWSPortType/validarComunicacionResponse" message="tns:validarComunicacionResponse" />
+    </operation>
+  </portType>
+  <binding name="ValidarCredencialesSUWSSB11Binding" type="tns:ValidarCredencialesSUWSPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="obtenerSesiones">
+      <soap:operation soapAction="http://service.eai.claro.com.pe/ValidarCredencialesSUWS/obtenerSesiones" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="registrarComunicacion">
+      <soap:operation soapAction="http://service.eai.claro.com.pe/ValidarCredencialesSUWS/registrarComunicacion" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="validarComunicacion">
+      <soap:operation soapAction="http://service.eai.claro.com.pe/ValidarCredencialesSUWS/validarComunicacion" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="ValidarCredencialesSUService">
+    <port name="ValidarCredencialesSUWSSB11" binding="tns:ValidarCredencialesSUWSSB11Binding">
+      <soap:address location="http://limdeseaiv35.tim.com.pe:8909/ValidarCredencialesSUWS/ValidarCredencialesSUWSSB11" />
+    </port>
+  </service>
+</definitions>

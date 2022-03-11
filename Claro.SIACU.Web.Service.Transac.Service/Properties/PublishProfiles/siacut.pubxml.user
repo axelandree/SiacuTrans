@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+Este archivo es utilizado por el proceso de paquete/publicación de nuestro proyecto Web. Puede personalizar el comportamiento de este proceso
+editando este archivo MSBuild. Para conocer más acerca de esto, visite http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\PUBLICADO\EntregaRTC_ST_100322\siacu-backend</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Claro.Data.dll">
+      <publishTime>03/10/2022 11:15:39</publishTime>
+    </File>
+    <File Include="bin/Claro.dll">
+      <publishTime>03/10/2022 11:15:29</publishTime>
+    </File>
+    <File Include="bin/Claro.Entity.dll">
+      <publishTime>03/10/2022 11:15:29</publishTime>
+    </File>
+    <File Include="bin/Claro.SAP.Transac.Service.dll">
+      <publishTime>03/10/2022 11:15:38</publishTime>
+    </File>
+    <File Include="bin/Claro.Security.dll">
+      <publishTime>03/10/2022 11:15:38</publishTime>
+    </File>
+    <File Include="bin/Claro.SIACU.Business.Transac.Service.dll">
+      <publishTime>03/10/2022 11:15:47</publishTime>
+    </File>
+    <File Include="bin/Claro.SIACU.Data.Transac.Service.dll">
+      <publishTime>03/10/2022 11:15:43</publishTime>
+    </File>
+    <File Include="bin/Claro.SIACU.dll">
+      <publishTime>03/10/2022 11:15:38</publishTime>
+    </File>
+    <File Include="bin/Claro.SIACU.Entity.Transac.Service.dll">
+      <publishTime>03/10/2022 11:15:40</publishTime>
+    </File>
+    <File Include="bin/Claro.SIACU.ProxyService.Transac.Service.dll">
+      <publishTime>03/10/2022 11:15:31</publishTime>
+    </File>
+    <File Include="bin/Claro.SIACU.ProxyService.Transac.Service.XmlSerializers.dll">
+      <publishTime>03/10/2022 11:15:36</publishTime>
+    </File>
+    <File Include="bin/Claro.SIACU.Transac.Service.dll">
+      <publishTime>03/10/2022 11:15:38</publishTime>
+    </File>
+    <File Include="bin/Claro.SIACU.Web.Service.Transac.Service.dll">
+      <publishTime>03/10/2022 11:15:52</publishTime>
+    </File>
+    <File Include="bin/Claro.Transversal.ProxyService.dll">
+      <publishTime>03/10/2022 11:15:29</publishTime>
+    </File>
+    <File Include="bin/Claro.Web.dll">
+      <publishTime>03/10/2022 11:15:29</publishTime>
+    </File>
+    <File Include="bin/log4net.dll">
+      <publishTime>03/10/2022 10:30:07</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>03/10/2022 10:30:08</publishTime>
+    </File>
+    <File Include="bin/Oracle.DataAccess.dll">
+      <publishTime>03/10/2022 10:30:09</publishTime>
+    </File>
+    <File Include="bin/Renci.SshNet.dll">
+      <publishTime>03/10/2022 10:30:07</publishTime>
+    </File>
+    <File Include="bin/sapnco.dll">
+      <publishTime>03/10/2022 10:30:07</publishTime>
+    </File>
+    <File Include="bin/sapnco_utils.dll">
+      <publishTime>03/10/2022 10:30:14</publishTime>
+    </File>
+    <File Include="bin/Tools.Connections.dll">
+      <publishTime>03/10/2022 10:30:06</publishTime>
+    </File>
+    <File Include="bin/Tools.Entity.dll">
+      <publishTime>03/10/2022 10:30:06</publishTime>
+    </File>
+    <File Include="bin/Tools.Traces.dll">
+      <publishTime>03/10/2022 10:30:06</publishTime>
+    </File>
+    <File Include="bin/Tools.Transversal.ProxyService.dll">
+      <publishTime>03/10/2022 10:30:06</publishTime>
+    </File>
+    <File Include="ColivingTransacService.svc">
+      <publishTime>03/10/2022 10:29:43</publishTime>
+    </File>
+    <File Include="CommonTransacService.svc">
+      <publishTime>03/10/2022 10:29:43</publishTime>
+    </File>
+    <File Include="DataTransac/SiacutDataPrepaidWS.xml">
+      <publishTime>03/10/2022 10:30:03</publishTime>
+    </File>
+    <File Include="FixedTransacService.svc">
+      <publishTime>03/10/2022 10:29:43</publishTime>
+    </File>
+    <File Include="PostTransacService.svc">
+      <publishTime>03/10/2022 10:29:43</publishTime>
+    </File>
+    <File Include="PreTransacService.svc">
+      <publishTime>03/10/2022 10:29:43</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>03/10/2022 11:17:07</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

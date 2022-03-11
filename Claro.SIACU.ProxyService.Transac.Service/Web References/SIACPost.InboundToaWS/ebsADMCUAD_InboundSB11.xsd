@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:ns0="http://claro.com.pe/ebsADMCUAD/Inbound/base" elementFormDefault="qualified" targetNamespace="http://claro.com.pe/ebsADMCUAD/Inbound/base" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType name="objetoResponseOpcional">
+    <xsd:sequence>
+      <xsd:element name="campo" type="xsd:string" />
+      <xsd:element name="valor" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="parametrosAuditRequest">
+    <xsd:sequence>
+      <xsd:element name="idTransaccion" type="xsd:string" />
+      <xsd:element name="ipAplicacion" type="xsd:string" />
+      <xsd:element name="nombreAplicacion" type="xsd:string" />
+      <xsd:element name="usuarioAplicacion" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="objetoRequestOpcional">
+    <xsd:sequence>
+      <xsd:element name="campo" type="xsd:string" />
+      <xsd:element name="valor" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="parametrosAuditResponse">
+    <xsd:sequence>
+      <xsd:element name="idTransaccion" type="xsd:string" />
+      <xsd:element name="codigoRespuesta" type="xsd:string" />
+      <xsd:element name="mensajeRespuesta" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

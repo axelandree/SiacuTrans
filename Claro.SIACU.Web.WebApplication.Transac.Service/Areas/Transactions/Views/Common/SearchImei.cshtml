@@ -1,0 +1,50 @@
+﻿@{
+    Layout = null;
+}
+<style>
+    .tblListadoV {
+        font-size:10px;
+    }
+</style>
+<script type="text/javascript" src="~/Areas/Transactions/Content/Lib/BloqueoF12.js"></script>
+<div id="SearchImeiContainer" class="container">
+    <div class="panel panel-default ">
+        <!-- Default panel contents -->
+        <div class="panel-body">
+            <div class="form-group col-md-6 text-center col-md-offset-3" style="margin-bottom:0px">
+                <div class="form-inline">
+                    <label for="usr">Número Teléfonico :&nbsp;&nbsp;</label>
+                    <input type="text" readonly class="form-control text-center" id="txtnumber" value='@ViewData["Number"]'>
+                </div>
+            </div>
+        </div>
+        <table class="table table-bordered table-responsive claro-modal-tabla" id="tblListadoV" style="width:100%">
+            <thead>
+                <tr>
+                    <th class="text-center">SEL</th>
+                    <th class="text-center">Fecha y Hora Inicio</th>
+                    <th class="text-center">Fecha y Hora Fin</th>
+                    <th class="text-center">Teléfono</th>
+                    <th class="text-center">Número IMEI</th>
+                    <th class="text-center">Marca - Modelo</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <div class="form-group col-md-4 text-center col-md-offset-4" style="margin-top:15px;">
+            <div class="panel panel-default" style="padding:2% !important">
+                <button class="btn claro-btn-info btn-sm" id="btnSelectionImei" type="button">Seleccionar</button>
+            </div>
+        </div>
+    </div>
+
+    <input id="hid_NRO_IMEI" type="hidden" name="hid_NRO_IMEI">
+    <input id="hid_MARCA_MODELO" type="hidden" name="hid_MARCA_MODELO">
+</div>
+@System.Web.Optimization.Scripts.Render("~/bundles/Transactions/SearchIMEI/SearchIMEI")
+
+@*<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="/Areas/Transactions/Scripts/SearchIMEI/SearchIMEI.js"></script>*@
+
+

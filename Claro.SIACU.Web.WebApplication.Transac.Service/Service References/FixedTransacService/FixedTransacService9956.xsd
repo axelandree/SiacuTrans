@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetSaveOCC" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetSaveOCC" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd3" namespace="Claro" />
+  <xs:complexType name="SaveOCCRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="Claro" base="q1:Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="vAplicacion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="vCodId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="vCodSot" type="xs:int" />
+          <xs:element minOccurs="0" name="vComentario" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="vCustomerId" type="xs:int" />
+          <xs:element minOccurs="0" name="vFechaAct" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="vFechaVig" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="vMonto" type="xs:double" />
+          <xs:element minOccurs="0" name="vUsuarioAct" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="vflag" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SaveOCCRequest" nillable="true" type="tns:SaveOCCRequest" />
+  <xs:complexType name="SaveOCCResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="rCodResult" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="rResultado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="rSalida" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SaveOCCResponse" nillable="true" type="tns:SaveOCCResponse" />
+</xs:schema>

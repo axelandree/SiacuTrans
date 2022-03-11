@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://claro.com.pe/eai/esb/services/postventa/operacionesin" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://claro.com.pe/eai/esb/services/postventa/operacionesin" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema elementFormDefault="qualified" targetNamespace="http://claro.com.pe/eai/esb/services/postventa/operacionesin">
+      <xsd:complexType name="ListaParametrosSimpleType">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" name="parametro" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ListaParametrosObjectType">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" name="parametrosObject" type="tns:ParametrosObjectType" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ParametrosObjectType">
+        <xsd:sequence>
+          <xsd:element name="parametro" type="xsd:string" />
+          <xsd:element name="valor" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="consultarLineaINRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="idTransaccion" type="xsd:string" />
+            <xsd:element name="nombreAplicacion" type="xsd:string" />
+            <xsd:element name="ipAplicacion" type="xsd:string" />
+            <xsd:element name="msisdn" type="xsd:string" />
+            <xsd:element name="in" type="xsd:string" />
+            <xsd:element name="listaParametrosRequest" type="tns:ListaParametrosSimpleType" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="consultarLineaINResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="idTransaccion" type="xsd:string" />
+            <xsd:element name="codigoRespuesta" type="xsd:string" />
+            <xsd:element name="mensajeRespuesta" type="xsd:string" />
+            <xsd:element name="customerid" type="xsd:string" />
+            <xsd:element name="listaParametrosResponse" type="tns:ListaParametrosObjectType" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ejecutarOperacionINRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="idTransaccion" type="xsd:string" />
+            <xsd:element name="nombreAplicacion" type="xsd:string" />
+            <xsd:element name="ipAplicacion" type="xsd:string" />
+            <xsd:element name="msisdn" type="xsd:string" />
+            <xsd:element name="operacion" type="xsd:string" />
+            <xsd:element name="in" type="xsd:string" />
+            <xsd:element name="listaParametrosRequest" type="tns:ListaParametrosObjectType" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ejecutarOperacionINResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="idTransaccion" type="xsd:string" />
+            <xsd:element name="codigoRespuesta" type="xsd:string" />
+            <xsd:element name="mensajeRespuesta" type="xsd:string" />
+            <xsd:element name="listaParametrosResponse" type="tns:ListaParametrosObjectType" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </types>
+  <message name="consultarLineaINRequestMsg">
+    <part name="input" element="tns:consultarLineaINRequest" />
+  </message>
+  <message name="consultarLineaINResponseMsg">
+    <part name="output" element="tns:consultarLineaINResponse" />
+  </message>
+  <message name="ejecutarOperacionINRequestMsg">
+    <part name="input" element="tns:ejecutarOperacionINRequest" />
+  </message>
+  <message name="ejecutarOperacionINResponseMsg">
+    <part name="output" element="tns:ejecutarOperacionINResponse" />
+  </message>
+  <portType name="ebsOperacionesINPortType">
+    <operation name="consultarLineaIN">
+      <input message="tns:consultarLineaINRequestMsg" />
+      <output message="tns:consultarLineaINResponseMsg" />
+    </operation>
+    <operation name="ejecutarOperacionIN">
+      <input message="tns:ejecutarOperacionINRequestMsg" />
+      <output message="tns:ejecutarOperacionINResponseMsg" />
+    </operation>
+  </portType>
+  <binding name="ebsOperacionesINPortTypeSOAP11Binding" type="tns:ebsOperacionesINPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="consultarLineaIN">
+      <soap:operation soapAction="http://claro.com.pe/eai/esb/services/postventa/operacionesin/consultarLineaIN" style="document" />
+      <input>
+        <soap:body use="literal" parts="input" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="output" />
+      </output>
+    </operation>
+    <operation name="ejecutarOperacionIN">
+      <soap:operation soapAction="http://claro.com.pe/eai/esb/services/postventa/operacionesin/ejecutarOperacionIN" style="document" />
+      <input>
+        <soap:body use="literal" parts="input" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="output" />
+      </output>
+    </operation>
+  </binding>
+  <service name="ebsOperacionesINService">
+    <port name="ebsOperacionesIN" binding="tns:ebsOperacionesINPortTypeSOAP11Binding">
+      <soap:address location="http://limdeseaiv13.tim.com.pe:7909/OperacionesINWS/ebsOperacionesIN" />
+    </port>
+  </service>
+</definitions>

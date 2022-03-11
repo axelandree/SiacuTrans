@@ -1,0 +1,1776 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s0:definitions xmlns:s2="java:pe.com.claro.esb.services.swsap.exceptions" xmlns:s1="http://pe/com/claro/esb/services/swsap/ws" xmlns:s3="http://schemas.xmlsoap.org/wsdl/soap/" xmlns="" name="EbsSWSAPServiceDefinitions" targetNamespace="http://pe/com/claro/esb/services/swsap/ws" xmlns:s0="http://schemas.xmlsoap.org/wsdl/">
+  <s0:types>
+    <xsd:schema xmlns:rfc="sap/ZSIAC_RFC_CON_FEC_VENTA_X_SERI" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="sap/ZSIAC_RFC_CON_FEC_VENTA_X_SERI" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="ZSIAC_RFC_CON_FEC_VENTA_X_SERIResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="idTransaccion" type="xsd:string" />
+            <xsd:element name="resultado" type="xsd:string" />
+            <xsd:element name="mensaje" type="xsd:string" />
+            <xsd:element minOccurs="0" name="AUDAT">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="10" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="TI_RETURN">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" ref="rfc:BAPIRET2" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="BAPIRET2">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="TYPE">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="1" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="ID">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="20" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="NUMBER">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="3" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="MESSAGE">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="220" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="LOG_NO">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="20" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="LOG_MSG_NO">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="6" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="MESSAGE_V1">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="50" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="MESSAGE_V2">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="50" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="MESSAGE_V3">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="50" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="MESSAGE_V4">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="50" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="PARAMETER">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="32" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="ROW">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:int" />
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="FIELD">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="30" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="SYSTEM">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="10" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema xmlns:rfc="sap/ZEIA_RFC_STOCK_MATERIAL_OCS" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="sap/ZEIA_RFC_STOCK_MATERIAL_OCS" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="ZEIA_RFC_STOCK_MATERIAL_OCSResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="idTransaccion" type="xsd:string" />
+            <xsd:element name="resultado" type="xsd:string" />
+            <xsd:element name="mensaje" type="xsd:string" />
+            <xsd:element name="TI_STOCKMAT">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" ref="rfc:ZSTOCKMAT" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZSTOCKMAT">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="MATNR">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="18" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="LGORT">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="4" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="LGOBE">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="16" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="LABST">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="13" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema xmlns:rfc="sap/ZGVN_RFC_CON_DEUDA_DEALER" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="sap/ZGVN_RFC_CON_DEUDA_DEALER" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="ZGVN_RFC_CON_DEUDA_DEALERResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="idTransaccion" type="xsd:string" />
+            <xsd:element name="resultado" type="xsd:string" />
+            <xsd:element name="mensaje" type="xsd:string" />
+            <xsd:element name="TI_DEUDA_DEALER">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" ref="rfc:ZDEUDA_DEALER" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="TI_RETURN">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" ref="rfc:BAPIRET2_DEUDA" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZDEUDA_DEALER">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="KUNNR">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="10" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="NAME1">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="30" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="KLIMK">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="15" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="TOTAL">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="13" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="TOTVEN">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="13" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="ANTIG">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:int" />
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="TOTPV">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="13" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="BAPIRET2_DEUDA">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="TYPE">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="1" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="ID">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="20" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="NUMBER">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="3" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="MESSAGE">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="220" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="LOG_NO">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="20" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="LOG_MSG_NO">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="6" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="MESSAGE_V1">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="50" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="MESSAGE_V2">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="50" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="MESSAGE_V3">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="50" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="MESSAGE_V4">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="50" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="PARAMETER">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="32" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="ROW">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:int" />
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="FIELD">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="30" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="SYSTEM">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="10" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema xmlns:rfc="sap/ZSD_RFC_CON_NUM_TELF" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="sap/ZSD_RFC_CON_NUM_TELF" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="ZSD_RFC_CON_NUMTELFResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="idTransaccion" type="xsd:string" />
+            <xsd:element name="resultado" type="xsd:string" />
+            <xsd:element name="mensaje" type="xsd:string" />
+            <xsd:element name="TI_NUM_TELF">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" ref="rfc:ZST_NUMEROS_TELEF" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="TI_RETURN">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" ref="rfc:BAPIRET2_ZSANS" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZST_NUMEROS_TELEF">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="NRO_TELEF">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="15" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="CODIG_HLR">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="5" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="DESCR_RED">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="30" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="BEZEI">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="20" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="PNI_ABIERTO">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="5" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="EMPRESA">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="55" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="MARC_CORTA">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="10" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="DESCR_STATUS">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="30" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="BAPIRET2_ZSANS">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="TYPE">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="1" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="ID">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="20" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="NUMBER">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="3" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="MESSAGE">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="220" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="LOG_NO">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="20" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="LOG_MSG_NO">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="6" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="MESSAGE_V1">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="50" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="MESSAGE_V2">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="50" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="MESSAGE_V3">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="50" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="MESSAGE_V4">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="50" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="PARAMETER">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="32" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="ROW">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:int" />
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="FIELD">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="30" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="SYSTEM">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="10" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema xmlns:rfc="sap/ZEIA_RFC_PROD_CLTE_IMEI_OCS" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="sap/ZEIA_RFC_PROD_CLTE_IMEI_OCS" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="ZEIA_RFC_PROD_CLTE_IMEI_OCSResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="idTransaccion" type="xsd:string" />
+            <xsd:element name="resultado" type="xsd:string" />
+            <xsd:element name="mensaje" type="xsd:string" />
+            <xsd:element name="TI_ENTREGAS">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" ref="rfc:ZENTREGAS_IMEI" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZENTREGAS_IMEI">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="MATNR">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="18" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="MAKTG">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="40" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="SERNR">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="18" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="CLPED">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="40" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="MTPED">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="40" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="OTRO_MTPED">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="20" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="LFDAT">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="10" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="VBELN">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="10" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="NETPR">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="11" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="XBLNR">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="18" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="RSOC">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="40" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="RUC">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="16" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="DIREC">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="100" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="ZDES_MODALIDAD">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="30" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="ZZCLARIF">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="10" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="VBELN_I">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="10" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="KUNAG">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="10" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema xmlns:rfc="sap/ZSIAC_RFC_CON_DEV_GARAN" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="sap/ZSIAC_RFC_CON_DEV_GARAN" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="ZSIAC_RFC_CON_DEV_GARANResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="idTransaccion" type="xsd:string" />
+            <xsd:element name="resultado" type="xsd:string" />
+            <xsd:element name="mensaje" type="xsd:string" />
+            <xsd:element name="TI_DEPOSITOS">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" ref="rfc:ZDEPOSITOS" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="TI_RETURN">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" ref="rfc:BAPIRET2_GARAN" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZDEPOSITOS">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="NRO_DEP_GARANTIA">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="10" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="XBLNR">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="16" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="MONTO_DEPOSITO">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="13" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="OFICINA_VENTA">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="4" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="FECHA_DEPOSITO">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="10" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="BAPIRET2_GARAN">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="TYPE">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="1" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="ID">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="20" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="NUMBER">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="3" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="MESSAGE">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="220" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="LOG_NO">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="20" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="LOG_MSG_NO">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="6" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="MESSAGE_V1">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="50" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="MESSAGE_V2">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="50" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="MESSAGE_V3">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="50" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="MESSAGE_V4">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="50" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="PARAMETER">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="32" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="ROW">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:int" />
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="FIELD">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="30" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="SYSTEM">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="10" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema xmlns:rfc="sap/ZEIA_RFC_PRODUCTOS_CLIENTE_OCS" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="sap/ZEIA_RFC_PRODUCTOS_CLIENTE_OCS" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="ZEIA_RFC_PRODUCTOS_CLIENTE_OCSResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="idTransaccion" type="xsd:string" />
+            <xsd:element name="resultado" type="xsd:string" />
+            <xsd:element name="mensaje" type="xsd:string" />
+            <xsd:element name="TI_ENTREGAS">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" ref="rfc:ZENTREGAS_OCS" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZENTREGAS_OCS">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="MATNR">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="18" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="MAKTG">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="40" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="SERNR">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="18" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="CLPED">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="40" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="MTPED">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="40" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="OTRO_MTPED">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="20" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="LFDAT">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="10" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="VBELN">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="10" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="NETPR">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="11" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="XBLNR">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="18" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="RSOC">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="40" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="RUC">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="16" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="DIREC">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="100" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="ZDES_MODALIDAD">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="30" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="ZZCLARIF">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="10" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="VBELN_I">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="10" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="KUNAG">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="10" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema xmlns:rfc="sap/ZSD_RFC_CON_FACT_SAP" elementFormDefault="qualified" targetNamespace="sap/ZSD_RFC_CON_FACT_SAP" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="ZSD_RFC_CON_FACT_SAPResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="idTransaccion" type="xsd:string" />
+            <xsd:element name="resultado" type="xsd:string" />
+            <xsd:element name="mensaje" type="xsd:string" />
+            <xsd:element name="TI_FACTURAS">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" ref="rfc:ZST_FACTURAS_SD" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZST_FACTURAS_SD">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="VBELN">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="10" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="POSNR">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="6" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="FKDAT">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="10" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="KUNAG">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="10" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="NAME1">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="30" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="NETWR">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="15" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="MATNR">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="18" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="MAKTX">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="40" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="VTEXT">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="20" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="FKIMG">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="13" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema xmlns:rfc="sap/ZSIAC_RFC_CON_DESC_EQUI_X_IMEI" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="sap/ZSIAC_RFC_CON_DESC_EQUI_X_IMEI" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="ZSIAC_RFC_CON_DESC_EQUI_X_IMEIResponse">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="idTransaccion" type="xsd:string" />
+            <xsd:element name="resultado" type="xsd:string" />
+            <xsd:element name="mensaje" type="xsd:string" />
+            <xsd:element minOccurs="0" name="MAKTX">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="40" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema xmlns:rfc="sap/ZEIA_RFC_PROD_CLTE_ICCID_OCS" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="sap/ZEIA_RFC_PROD_CLTE_ICCID_OCS" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="ZEIA_RFC_PROD_CLTE_ICCID_OCSResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="idTransaccion" type="xsd:string" />
+            <xsd:element name="resultado" type="xsd:string" />
+            <xsd:element name="mensaje" type="xsd:string" />
+            <xsd:element name="TI_ENTREGAS">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" ref="rfc:ZENTREGAS_ICCID" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZENTREGAS_ICCID">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="MATNR">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="18" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="MAKTG">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="40" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="SERNR">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="18" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="CLPED">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="40" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="MTPED">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="40" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="OTRO_MTPED">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="20" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="LFDAT">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="10" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="VBELN">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="10" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="NETPR">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="11" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="XBLNR">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="18" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="RSOC">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="40" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="RUC">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="16" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="DIREC">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="100" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="ZDES_MODALIDAD">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="30" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="ZZCLARIF">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="10" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="VBELN_I">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="10" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="KUNAG">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="10" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema xmlns="sap/ZEIA_PACKS_HANDSETS_OCS" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="sap/ZEIA_PACKS_HANDSETS_OCS" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="ZEIA_PACKS_HANDSETS_OCSResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="idTransaccion" type="xsd:string" />
+            <xsd:element name="resultado" type="xsd:string" />
+            <xsd:element name="mensaje" type="xsd:string" />
+            <xsd:element name="ARTICULOS">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" ref="ZST_PV_ARTICULO" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZST_PV_ARTICULO">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="MATNR">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="18" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="MAKTX">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="40" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="SERNP">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="4" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="MATKL">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="9" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://pe/com/claro/esb/services/swsap/ws" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="sap/ZSIAC_RFC_CON_FEC_VENTA_X_SERI" />
+      <xs:import namespace="sap/ZSIAC_RFC_CON_DEV_GARAN" />
+      <xs:import namespace="sap/ZEIA_RFC_PROD_CLTE_IMEI_OCS" />
+      <xs:import namespace="sap/ZSD_RFC_CON_FACT_SAP" />
+      <xs:import namespace="sap/ZEIA_RFC_STOCK_MATERIAL_OCS" />
+      <xs:import namespace="sap/ZEIA_RFC_PRODUCTOS_CLIENTE_OCS" />
+      <xs:import namespace="sap/ZEIA_RFC_PROD_CLTE_ICCID_OCS" />
+      <xs:import namespace="sap/ZEIA_PACKS_HANDSETS_OCS" />
+      <xs:import namespace="sap/ZSD_RFC_CON_NUM_TELF" />
+      <xs:import namespace="sap/ZGVN_RFC_CON_DEUDA_DEALER" />
+      <xs:import namespace="sap/ZSIAC_RFC_CON_DESC_EQUI_X_IMEI" />
+      <xs:element name="listaMateriales">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="listaMaterialesResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:zeia="sap/ZEIA_PACKS_HANDSETS_OCS" ref="zeia:ZEIA_PACKS_HANDSETS_OCSResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="consultaProductosClienteICCID">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="fecini" type="xs:string" />
+            <xs:element name="fecfin" type="xs:string" />
+            <xs:element name="nrodoc" type="xs:string" />
+            <xs:element name="iccid" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="consultaProductosClienteICCIDResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:zeia="sap/ZEIA_RFC_PROD_CLTE_ICCID_OCS" ref="zeia:ZEIA_RFC_PROD_CLTE_ICCID_OCSResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="consultaProductosCliente">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="fecini" type="xs:string" />
+            <xs:element name="fecfin" type="xs:string" />
+            <xs:element name="nrodoc" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="consultaProductosClienteResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:zeia="sap/ZEIA_RFC_PRODUCTOS_CLIENTE_OCS" ref="zeia:ZEIA_RFC_PRODUCTOS_CLIENTE_OCSResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="consultaEquipoXIMEI">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="imei" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="consultaEquipoXIMEIResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:zsi="sap/ZSIAC_RFC_CON_DESC_EQUI_X_IMEI" ref="zsi:ZSIAC_RFC_CON_DESC_EQUI_X_IMEIResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="consultaFchaVentaPorSerie">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="imei" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="consultaFchaVentaPorSerieResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:zsi="sap/ZSIAC_RFC_CON_FEC_VENTA_X_SERI" ref="zsi:ZSIAC_RFC_CON_FEC_VENTA_X_SERIResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="consultaDEPORenta">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="fecini" type="xs:string" />
+            <xs:element name="fecfin" type="xs:string" />
+            <xs:element name="clasedoc" type="xs:string" />
+            <xs:element name="tipodoc" type="xs:string" />
+            <xs:element name="nrodoc" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="consultaDEPORentaResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:zsi="sap/ZSIAC_RFC_CON_DEV_GARAN" ref="zsi:ZSIAC_RFC_CON_DEV_GARANResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="consultaStockMateriales">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ejercicio" type="xs:string" />
+            <xs:element name="material" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="consultaStockMaterialesResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:zeia="sap/ZEIA_RFC_STOCK_MATERIAL_OCS" ref="zeia:ZEIA_RFC_STOCK_MATERIAL_OCSResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="consultaProductosClienteIMEI">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="fecini" type="xs:string" />
+            <xs:element name="fecfin" type="xs:string" />
+            <xs:element name="nrodoc" type="xs:string" />
+            <xs:element name="imei" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="consultaProductosClienteIMEIResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:zeia="sap/ZEIA_RFC_PROD_CLTE_IMEI_OCS" ref="zeia:ZEIA_RFC_PROD_CLTE_IMEI_OCSResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="consultaDeudaDealer">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="codDealer" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="consultaDeudaDealerResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:zgvn="sap/ZGVN_RFC_CON_DEUDA_DEALER" ref="zgvn:ZGVN_RFC_CON_DEUDA_DEALERResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="consultaNumerosZsans">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="numeroTelefono" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="consultaNumerosZsansResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:zsd="sap/ZSD_RFC_CON_NUM_TELF" ref="zsd:ZSD_RFC_CON_NUMTELFResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="consultaFacturaSAP">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="numeroFactura" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="consultaFacturaSAPResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:zsd="sap/ZSD_RFC_CON_FACT_SAP" ref="zsd:ZSD_RFC_CON_FACT_SAPResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="java:java.lang" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:complexType name="Exception">
+        <xs:complexContent mixed="false">
+          <xs:extension xmlns:java="java:java.lang" base="java:Throwable" />
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="Throwable" />
+    </xs:schema>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="java:pe.com.claro.esb.services.swsap.exceptions" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="java:java.lang" />
+      <xs:complexType name="SAPException">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="Message" nillable="true" type="xs:string" />
+          <xs:element xmlns:java="java:java.lang" minOccurs="1" name="Exception" nillable="true" type="java:Exception" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element xmlns:java="java:pe.com.claro.esb.services.swsap.exceptions" name="SAPException" type="java:SAPException" />
+    </xs:schema>
+  </s0:types>
+  <s0:message name="listaMateriales">
+    <s0:part name="parameters" element="s1:listaMateriales" />
+  </s0:message>
+  <s0:message name="listaMaterialesResponse">
+    <s0:part name="parameters" element="s1:listaMaterialesResponse" />
+  </s0:message>
+  <s0:message name="SAPException">
+    <s0:part name="SAPException" element="s2:SAPException" />
+  </s0:message>
+  <s0:message name="consultaProductosClienteICCID">
+    <s0:part name="parameters" element="s1:consultaProductosClienteICCID" />
+  </s0:message>
+  <s0:message name="consultaProductosClienteICCIDResponse">
+    <s0:part name="parameters" element="s1:consultaProductosClienteICCIDResponse" />
+  </s0:message>
+  <s0:message name="consultaProductosCliente">
+    <s0:part name="parameters" element="s1:consultaProductosCliente" />
+  </s0:message>
+  <s0:message name="consultaProductosClienteResponse">
+    <s0:part name="parameters" element="s1:consultaProductosClienteResponse" />
+  </s0:message>
+  <s0:message name="consultaEquipoXIMEI">
+    <s0:part name="parameters" element="s1:consultaEquipoXIMEI" />
+  </s0:message>
+  <s0:message name="consultaEquipoXIMEIResponse">
+    <s0:part name="parameters" element="s1:consultaEquipoXIMEIResponse" />
+  </s0:message>
+  <s0:message name="consultaFchaVentaPorSerie">
+    <s0:part name="parameters" element="s1:consultaFchaVentaPorSerie" />
+  </s0:message>
+  <s0:message name="consultaFchaVentaPorSerieResponse">
+    <s0:part name="parameters" element="s1:consultaFchaVentaPorSerieResponse" />
+  </s0:message>
+  <s0:message name="consultaDEPORenta">
+    <s0:part name="parameters" element="s1:consultaDEPORenta" />
+  </s0:message>
+  <s0:message name="consultaDEPORentaResponse">
+    <s0:part name="parameters" element="s1:consultaDEPORentaResponse" />
+  </s0:message>
+  <s0:message name="consultaStockMateriales">
+    <s0:part name="parameters" element="s1:consultaStockMateriales" />
+  </s0:message>
+  <s0:message name="consultaStockMaterialesResponse">
+    <s0:part name="parameters" element="s1:consultaStockMaterialesResponse" />
+  </s0:message>
+  <s0:message name="consultaProductosClienteIMEI">
+    <s0:part name="parameters" element="s1:consultaProductosClienteIMEI" />
+  </s0:message>
+  <s0:message name="consultaProductosClienteIMEIResponse">
+    <s0:part name="parameters" element="s1:consultaProductosClienteIMEIResponse" />
+  </s0:message>
+  <s0:message name="consultaDeudaDealer">
+    <s0:part name="parameters" element="s1:consultaDeudaDealer" />
+  </s0:message>
+  <s0:message name="consultaDeudaDealerResponse">
+    <s0:part name="parameters" element="s1:consultaDeudaDealerResponse" />
+  </s0:message>
+  <s0:message name="consultaNumerosZsans">
+    <s0:part name="parameters" element="s1:consultaNumerosZsans" />
+  </s0:message>
+  <s0:message name="consultaNumerosZsansResponse">
+    <s0:part name="parameters" element="s1:consultaNumerosZsansResponse" />
+  </s0:message>
+  <s0:message name="consultaFacturaSAP">
+    <s0:part name="parameters" element="s1:consultaFacturaSAP" />
+  </s0:message>
+  <s0:message name="consultaFacturaSAPResponse">
+    <s0:part name="parameters" element="s1:consultaFacturaSAPResponse" />
+  </s0:message>
+  <s0:portType name="EbsSWSAP">
+    <s0:operation name="listaMateriales" parameterOrder="parameters">
+      <s0:input message="s1:listaMateriales" />
+      <s0:output message="s1:listaMaterialesResponse" />
+      <s0:fault name="SAPException" message="s1:SAPException" />
+    </s0:operation>
+    <s0:operation name="consultaProductosClienteICCID" parameterOrder="parameters">
+      <s0:input message="s1:consultaProductosClienteICCID" />
+      <s0:output message="s1:consultaProductosClienteICCIDResponse" />
+      <s0:fault name="SAPException" message="s1:SAPException" />
+    </s0:operation>
+    <s0:operation name="consultaProductosCliente" parameterOrder="parameters">
+      <s0:input message="s1:consultaProductosCliente" />
+      <s0:output message="s1:consultaProductosClienteResponse" />
+      <s0:fault name="SAPException" message="s1:SAPException" />
+    </s0:operation>
+    <s0:operation name="consultaEquipoXIMEI" parameterOrder="parameters">
+      <s0:input message="s1:consultaEquipoXIMEI" />
+      <s0:output message="s1:consultaEquipoXIMEIResponse" />
+      <s0:fault name="SAPException" message="s1:SAPException" />
+    </s0:operation>
+    <s0:operation name="consultaFchaVentaPorSerie" parameterOrder="parameters">
+      <s0:input message="s1:consultaFchaVentaPorSerie" />
+      <s0:output message="s1:consultaFchaVentaPorSerieResponse" />
+      <s0:fault name="SAPException" message="s1:SAPException" />
+    </s0:operation>
+    <s0:operation name="consultaDEPORenta" parameterOrder="parameters">
+      <s0:input message="s1:consultaDEPORenta" />
+      <s0:output message="s1:consultaDEPORentaResponse" />
+      <s0:fault name="SAPException" message="s1:SAPException" />
+    </s0:operation>
+    <s0:operation name="consultaStockMateriales" parameterOrder="parameters">
+      <s0:input message="s1:consultaStockMateriales" />
+      <s0:output message="s1:consultaStockMaterialesResponse" />
+      <s0:fault name="SAPException" message="s1:SAPException" />
+    </s0:operation>
+    <s0:operation name="consultaProductosClienteIMEI" parameterOrder="parameters">
+      <s0:input message="s1:consultaProductosClienteIMEI" />
+      <s0:output message="s1:consultaProductosClienteIMEIResponse" />
+      <s0:fault name="SAPException" message="s1:SAPException" />
+    </s0:operation>
+    <s0:operation name="consultaDeudaDealer" parameterOrder="parameters">
+      <s0:input message="s1:consultaDeudaDealer" />
+      <s0:output message="s1:consultaDeudaDealerResponse" />
+      <s0:fault name="SAPException" message="s1:SAPException" />
+    </s0:operation>
+    <s0:operation name="consultaNumerosZsans" parameterOrder="parameters">
+      <s0:input message="s1:consultaNumerosZsans" />
+      <s0:output message="s1:consultaNumerosZsansResponse" />
+      <s0:fault name="SAPException" message="s1:SAPException" />
+    </s0:operation>
+    <s0:operation name="consultaFacturaSAP" parameterOrder="parameters">
+      <s0:input message="s1:consultaFacturaSAP" />
+      <s0:output message="s1:consultaFacturaSAPResponse" />
+      <s0:fault name="SAPException" message="s1:SAPException" />
+    </s0:operation>
+  </s0:portType>
+  <s0:binding name="EbsSWSAPServiceSoapBinding" type="s1:EbsSWSAP">
+    <s3:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <s0:operation name="listaMateriales">
+      <s3:operation soapAction="" style="document" />
+      <s0:input>
+        <s3:body use="literal" parts="parameters" />
+      </s0:input>
+      <s0:output>
+        <s3:body use="literal" parts="parameters" />
+      </s0:output>
+      <s0:fault name="SAPException">
+        <s3:fault use="literal" name="SAPException" namespace="" />
+      </s0:fault>
+    </s0:operation>
+    <s0:operation name="consultaProductosClienteICCID">
+      <s3:operation soapAction="" style="document" />
+      <s0:input>
+        <s3:body use="literal" parts="parameters" />
+      </s0:input>
+      <s0:output>
+        <s3:body use="literal" parts="parameters" />
+      </s0:output>
+      <s0:fault name="SAPException">
+        <s3:fault use="literal" name="SAPException" namespace="" />
+      </s0:fault>
+    </s0:operation>
+    <s0:operation name="consultaProductosCliente">
+      <s3:operation soapAction="" style="document" />
+      <s0:input>
+        <s3:body use="literal" parts="parameters" />
+      </s0:input>
+      <s0:output>
+        <s3:body use="literal" parts="parameters" />
+      </s0:output>
+      <s0:fault name="SAPException">
+        <s3:fault use="literal" name="SAPException" namespace="" />
+      </s0:fault>
+    </s0:operation>
+    <s0:operation name="consultaEquipoXIMEI">
+      <s3:operation soapAction="" style="document" />
+      <s0:input>
+        <s3:body use="literal" parts="parameters" />
+      </s0:input>
+      <s0:output>
+        <s3:body use="literal" parts="parameters" />
+      </s0:output>
+      <s0:fault name="SAPException">
+        <s3:fault use="literal" name="SAPException" namespace="" />
+      </s0:fault>
+    </s0:operation>
+    <s0:operation name="consultaFchaVentaPorSerie">
+      <s3:operation soapAction="" style="document" />
+      <s0:input>
+        <s3:body use="literal" parts="parameters" />
+      </s0:input>
+      <s0:output>
+        <s3:body use="literal" parts="parameters" />
+      </s0:output>
+      <s0:fault name="SAPException">
+        <s3:fault use="literal" name="SAPException" namespace="" />
+      </s0:fault>
+    </s0:operation>
+    <s0:operation name="consultaDEPORenta">
+      <s3:operation soapAction="" style="document" />
+      <s0:input>
+        <s3:body use="literal" parts="parameters" />
+      </s0:input>
+      <s0:output>
+        <s3:body use="literal" parts="parameters" />
+      </s0:output>
+      <s0:fault name="SAPException">
+        <s3:fault use="literal" name="SAPException" namespace="" />
+      </s0:fault>
+    </s0:operation>
+    <s0:operation name="consultaStockMateriales">
+      <s3:operation soapAction="" style="document" />
+      <s0:input>
+        <s3:body use="literal" parts="parameters" />
+      </s0:input>
+      <s0:output>
+        <s3:body use="literal" parts="parameters" />
+      </s0:output>
+      <s0:fault name="SAPException">
+        <s3:fault use="literal" name="SAPException" namespace="" />
+      </s0:fault>
+    </s0:operation>
+    <s0:operation name="consultaProductosClienteIMEI">
+      <s3:operation soapAction="" style="document" />
+      <s0:input>
+        <s3:body use="literal" parts="parameters" />
+      </s0:input>
+      <s0:output>
+        <s3:body use="literal" parts="parameters" />
+      </s0:output>
+      <s0:fault name="SAPException">
+        <s3:fault use="literal" name="SAPException" namespace="" />
+      </s0:fault>
+    </s0:operation>
+    <s0:operation name="consultaDeudaDealer">
+      <s3:operation soapAction="" style="document" />
+      <s0:input>
+        <s3:body use="literal" parts="parameters" />
+      </s0:input>
+      <s0:output>
+        <s3:body use="literal" parts="parameters" />
+      </s0:output>
+      <s0:fault name="SAPException">
+        <s3:fault use="literal" name="SAPException" namespace="" />
+      </s0:fault>
+    </s0:operation>
+    <s0:operation name="consultaNumerosZsans">
+      <s3:operation soapAction="" style="document" />
+      <s0:input>
+        <s3:body use="literal" parts="parameters" />
+      </s0:input>
+      <s0:output>
+        <s3:body use="literal" parts="parameters" />
+      </s0:output>
+      <s0:fault name="SAPException">
+        <s3:fault use="literal" name="SAPException" namespace="" />
+      </s0:fault>
+    </s0:operation>
+    <s0:operation name="consultaFacturaSAP">
+      <s3:operation soapAction="" style="document" />
+      <s0:input>
+        <s3:body use="literal" parts="parameters" />
+      </s0:input>
+      <s0:output>
+        <s3:body use="literal" parts="parameters" />
+      </s0:output>
+      <s0:fault name="SAPException">
+        <s3:fault use="literal" name="SAPException" namespace="" />
+      </s0:fault>
+    </s0:operation>
+  </s0:binding>
+  <s0:service name="EbsSWSAPService">
+    <s0:port name="EbsSWSAPSoapPort" binding="s1:EbsSWSAPServiceSoapBinding">
+      <s3:address location="http://limdeseaiv22.tim.com.pe:8909/WSSAP/EbsSWSAP" />
+    </s0:port>
+  </s0:service>
+</s0:definitions>

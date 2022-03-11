@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:bpws="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://claro.com.pe/SOA/postventa/cambioNumeroFija/v1/" xmlns:ns19="http://claro.com.pe/SOA/data/generico/claroGenericHeader/v1/" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns20="http://claro.com.pe/SOA/data/generico/claroFault/v1/" xmlns:ns1="http://xmlns.oracle.com/pcbpel/adapter/db/BSS_CambioNumeroFija/CambioNumeroFijaSOA/dbContingencia" name="CambioNumeroFija" targetNamespace="http://claro.com.pe/SOA/postventa/cambioNumeroFija/v1/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation>
+    <abstractWSDL>http://HPERLAPGARCIAL:7004/soa-infra/services/default/CambioNumeroFijaSOA!1.0/WSDLs/CambioNumeroFijaWrapper.wsdl</abstractWSDL>
+  </wsdl:documentation>
+  <plnk:partnerLinkType name="CambioNumeroFijaProcess">
+    <plnk:role name="cambioNumeroFijaPort" portType="tns:cambioNumeroFijaPort" />
+  </plnk:partnerLinkType>
+  <wsdl:import namespace="http://claro.com.pe/SOA/postventa/cambioNumeroFija/v1/" location="http://10.172.139.45:7004/soa-infra/services/default/CambioNumeroFijaSOA/CambioNumeroFijaSOAP?WSDL=CambioNumeroFija.wsdl" />
+  <wsdl:types />
+  <wsdl:service name="CambioNumeroFija_ep">
+    <wsdl:port name="cambioNumeroFijaPort_pt" binding="tns:cambioNumeroFijaSOAP11Binding">
+      <soap:address location="http://10.172.139.45:7004/soa-infra/services/default/CambioNumeroFijaSOA/CambioNumeroFijaSOAP" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

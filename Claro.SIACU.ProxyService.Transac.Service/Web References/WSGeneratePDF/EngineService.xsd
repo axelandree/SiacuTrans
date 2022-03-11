@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:ns0="urn:hpexstream-services/Engine" targetNamespace="urn:hpexstream-services/Engine" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType name="ewsComposeResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="engineMessage" type="xsd:base64Binary" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="files" nillable="true" type="ns0:engineOutput" />
+      <xsd:element minOccurs="0" name="statusMessage" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="pubFiles">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="pubFile" nillable="true" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="driverFile">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="driver" type="xsd:base64Binary" />
+      <xsd:element name="driverLength" type="xsd:int" />
+      <xsd:element minOccurs="0" name="fileName" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ComposeResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="return" type="ns0:ewsComposeResponse" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="engineOutput">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="fileHeader" type="ns0:header" />
+      <xsd:element minOccurs="0" name="fileName" type="xsd:string" />
+      <xsd:element minOccurs="0" name="fileOutput" type="xsd:base64Binary" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="engineOption">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="name" type="xsd:string" />
+      <xsd:element minOccurs="0" name="value" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ewsComposeRequest">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="driver" type="ns0:driverFile" />
+      <xsd:element minOccurs="0" name="driverEncoding" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="engineOptions" nillable="true" type="ns0:engineOption" />
+      <xsd:element minOccurs="0" name="fileReturnRegEx" type="xsd:string" />
+      <xsd:element name="includeHeader" type="xsd:boolean" />
+      <xsd:element name="includeMessageFile" type="xsd:boolean" />
+      <xsd:element minOccurs="0" name="outputFile" type="ns0:output" />
+      <xsd:element minOccurs="0" name="pubFile" type="xsd:string" />
+      <xsd:element minOccurs="0" name="pubFiles" type="ns0:pubFiles" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="output">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="directory" type="xsd:string" />
+      <xsd:element minOccurs="0" name="fileName" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Compose">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="EWSComposeRequest" type="ns0:ewsComposeRequest" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="header">
+    <xsd:sequence>
+      <xsd:element name="DDAOutputFile" type="xsd:boolean" />
+      <xsd:element name="PDL" type="xsd:int" />
+      <xsd:element minOccurs="0" name="defaultExtension" type="xsd:string" />
+      <xsd:element minOccurs="0" name="fileType" type="xsd:string" />
+      <xsd:element name="messageLength" type="xsd:int" />
+      <xsd:element name="outputLength" type="xsd:int" />
+      <xsd:element name="pageCount" type="xsd:int" />
+      <xsd:element name="returnCode" type="xsd:int" />
+      <xsd:element minOccurs="0" name="userData" type="xsd:string" />
+      <xsd:element name="userDataLength" type="xsd:int" />
+      <xsd:element name="version" type="xsd:int" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="ComposeResponse" type="ns0:ComposeResponse" />
+  <xsd:element name="EngineServiceException" type="xsd:string" />
+  <xsd:element name="Compose" type="ns0:Compose" />
+</xsd:schema>

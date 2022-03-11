@@ -1,0 +1,14 @@
+C:\NET\Framework\Claro.Security\bin\Release\Claro.Security.dll
+C:\NET\Framework\Claro.Security\bin\Release\Claro.Security.pdb
+C:\NET\Framework\Claro.Security\bin\Release\Claro.dll
+C:\NET\Framework\Claro.Security\bin\Release\Claro.Entity.dll
+C:\NET\Framework\Claro.Security\bin\Release\Claro.Transversal.ProxyService.dll
+C:\NET\Framework\Claro.Security\bin\Release\Claro.Web.dll
+C:\NET\Framework\Claro.Security\bin\Release\log4net.dll
+C:\NET\Framework\Claro.Security\bin\Release\Claro.Entity.pdb
+C:\NET\Framework\Claro.Security\bin\Release\Claro.Transversal.ProxyService.pdb
+C:\NET\Framework\Claro.Security\bin\Release\Claro.Web.pdb
+C:\NET\Framework\Claro.Security\bin\Release\Claro.pdb
+C:\NET\Framework\Claro.Security\obj\Release\Claro.Security.csprojResolveAssemblyReference.cache
+C:\NET\Framework\Claro.Security\obj\Release\Claro.Security.dll
+C:\NET\Framework\Claro.Security\obj\Release\Claro.Security.pdb

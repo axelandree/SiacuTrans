@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetRegisterTransaction" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetRegisterTransaction" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed" />
+  <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd3" namespace="Claro" />
+  <xs:complexType name="RegisterTransactionLTEFixedRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="Claro" base="q1:Request">
+        <xs:sequence>
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed" minOccurs="0" name="objRegisterTransaction" nillable="true" type="q2:RegisterTransaction" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RegisterTransactionLTEFixedRequest" nillable="true" type="tns:RegisterTransactionLTEFixedRequest" />
+  <xs:complexType name="RegisterTransactionLTEFixedResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="intNumSot" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="intResCod" type="xs:int" />
+      <xs:element minOccurs="0" name="strResDes" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RegisterTransactionLTEFixedResponse" nillable="true" type="tns:RegisterTransactionLTEFixedResponse" />
+</xs:schema>

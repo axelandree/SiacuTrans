@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://claro.com.pe/eai/ws/ventas/servicioshfc" targetNamespace="http://claro.com.pe/eai/ws/ventas/servicioshfc" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="activarServiciosAdicionalesRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="idTransaccion" type="xs:string" />
+        <xs:element name="codigoAplicacion" type="xs:string" />
+        <xs:element name="ipAplicacion" type="xs:string" />
+        <xs:element name="fechaProgramacion" type="xs:date" />
+        <xs:element name="fechaRegistro" type="xs:date" />
+        <xs:element name="flagBusqueda" type="xs:int" />
+        <xs:element name="coId" type="xs:string" />
+        <xs:element name="codCliente" type="xs:string" />
+        <xs:element name="proIds" type="xs:string" />
+        <xs:element name="datosReg" type="xs:string" />
+        <xs:element name="usuario" type="xs:string" />
+        <xs:element name="telefono" type="xs:string" />
+        <xs:element name="tipoServicio" type="xs:string" />
+        <xs:element name="coSer" type="xs:string" />
+        <xs:element name="tipoRegistro" type="xs:string" />
+        <xs:element name="usuarioSistema" type="xs:string" />
+        <xs:element name="usuarioApp" type="xs:string" />
+        <xs:element name="emailUsuarioApp" type="xs:string" />
+        <xs:element name="desCoSer" type="xs:string" />
+        <xs:element name="codigoInteraccion" type="xs:string" />
+        <xs:element name="nroCuenta" type="xs:string" />
+        <xs:element name="costo" type="xs:string" />
+        <xs:element name="listaOpcionalRequest" type="tns:ListaParametrosType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="activarServiciosAdicionalesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="idTransaccion" type="xs:string" />
+        <xs:element name="codigoRespuesta" type="xs:string" />
+        <xs:element name="mensajeRespuesta" type="xs:string" />
+        <xs:element name="listaOpcionalResponse" type="tns:ListaParametrosType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="desactivarServiciosAdicionalesRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="idTransaccion" type="xs:string" />
+        <xs:element name="codigoAplicacion" type="xs:string" />
+        <xs:element name="ipAplicacion" type="xs:string" />
+        <xs:element name="fechaProgramacion" type="xs:date" />
+        <xs:element name="fechaRegistro" type="xs:date" />
+        <xs:element name="flagBusqueda" type="xs:int" />
+        <xs:element name="flagOccPenalidad" type="xs:int" />
+        <xs:element name="penalidad" type="xs:double" />
+        <xs:element name="montoFidPenalidad" type="xs:double" />
+        <xs:element name="nuevoCF" type="xs:double" />
+        <xs:element name="cicloFac" type="xs:string" />
+        <xs:element name="ticklerCode" type="xs:string" />
+        <xs:element name="coId" type="xs:string" />
+        <xs:element name="codCliente" type="xs:string" />
+        <xs:element name="proIds" type="xs:string" />
+        <xs:element name="datosReg" type="xs:string" />
+        <xs:element name="usuario" type="xs:string" />
+        <xs:element name="interaccion" type="xs:string" />
+        <xs:element name="telefono" type="xs:string" />
+        <xs:element name="tipoServicio" type="xs:string" />
+        <xs:element name="coSer" type="xs:string" />
+        <xs:element name="tipoRegistro" type="xs:string" />
+        <xs:element name="usuarioSistema" type="xs:string" />
+        <xs:element name="usuarioApp" type="xs:string" />
+        <xs:element name="emailUsuarioApp" type="xs:string" />
+        <xs:element name="desCoSer" type="xs:string" />
+        <xs:element name="codigoInteraccion" type="xs:string" />
+        <xs:element name="nroCuenta" type="xs:string" />
+        <xs:element name="listaOpcionalRequest" type="tns:ListaParametrosType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="desactivarServiciosAdicionalesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="idTransaccion" type="xs:string" />
+        <xs:element name="codigoRespuesta" type="xs:string" />
+        <xs:element name="mensajeRespuesta" type="xs:string" />
+        <xs:element name="listaOpcionalResponse" type="tns:ListaParametrosType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ejecutarReconexionServicioRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="idTransaccion" type="xs:string" />
+        <xs:element name="codigoAplicacion" type="xs:string" />
+        <xs:element name="ipAplicacion" type="xs:string" />
+        <xs:element name="flagAccion" type="xs:int" />
+        <xs:element name="fechaProgramacion" type="xs:date" />
+        <xs:element name="coId" type="xs:string" />
+        <xs:element name="ticklerCode" type="xs:string" />
+        <xs:element name="usuario" type="xs:string" />
+        <xs:element name="coState" type="xs:string" />
+        <xs:element name="reason" type="xs:string" />
+        <xs:element name="codCliente" type="xs:string" />
+        <xs:element name="montoOcc" type="xs:double" />
+        <xs:element name="interaccion" type="xs:string" />
+        <xs:element name="telefono" type="xs:string" />
+        <xs:element name="tipoServicio" type="xs:string" />
+        <xs:element name="coSer" type="xs:string" />
+        <xs:element name="tipoRegistro" type="xs:string" />
+        <xs:element name="usuarioSistema" type="xs:string" />
+        <xs:element name="usuarioApp" type="xs:string" />
+        <xs:element name="emailUsuarioApp" type="xs:string" />
+        <xs:element name="desCoSer" type="xs:string" />
+        <xs:element name="codigoInteraccion" type="xs:string" />
+        <xs:element name="nroCuenta" type="xs:string" />
+        <xs:element name="listaOpcionalRequest" type="tns:ListaParametrosType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ejecutarReconexionServicioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="idTransaccion" type="xs:string" />
+        <xs:element name="codigoRespuesta" type="xs:string" />
+        <xs:element name="mensajeRespuesta" type="xs:string" />
+        <xs:element name="listaOpcionalResponse" type="tns:ListaParametrosType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ejecutarSuspencionServicioRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="idTransaccion" type="xs:string" />
+        <xs:element name="codigoAplicacion" type="xs:string" />
+        <xs:element name="ipAplicacion" type="xs:string" />
+        <xs:element name="flagAccion" type="xs:int" />
+        <xs:element name="fechaProgramacion" type="xs:date" />
+        <xs:element name="coId" type="xs:string" />
+        <xs:element name="nroDias" type="xs:int" />
+        <xs:element name="fideliza" type="xs:int" />
+        <xs:element name="fechaSuspension" type="xs:date" />
+        <xs:element name="ticklerCode" type="xs:string" />
+        <xs:element name="desTickler" type="xs:string" />
+        <xs:element name="usuario" type="xs:string" />
+        <xs:element name="codCliente" type="xs:string" />
+        <xs:element name="coState" type="xs:string" />
+        <xs:element name="reason" type="xs:string" />
+        <xs:element name="telefono" type="xs:string" />
+        <xs:element name="tipoServicio" type="xs:string" />
+        <xs:element name="coSer" type="xs:string" />
+        <xs:element name="tipoRegistro" type="xs:string" />
+        <xs:element name="usuarioSistema" type="xs:string" />
+        <xs:element name="usuarioApp" type="xs:string" />
+        <xs:element name="emailUsuarioApp" type="xs:string" />
+        <xs:element name="desCoSer" type="xs:string" />
+        <xs:element name="codigoInteraccion" type="xs:string" />
+        <xs:element name="nroCuenta" type="xs:string" />
+        <xs:element name="listaOpcionalRequest" type="tns:ListaParametrosType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ejecutarSuspencionServicioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="idTransaccion" type="xs:string" />
+        <xs:element name="codigoRespuesta" type="xs:string" />
+        <xs:element name="mensajeRespuesta" type="xs:string" />
+        <xs:element name="listaOpcionalResponse" type="tns:ListaParametrosType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ListaParametrosType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="request" nillable="true" type="tns:ParametroType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ParametroType">
+    <xs:sequence>
+      <xs:element name="nombre" type="xs:string" />
+      <xs:element name="valor" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

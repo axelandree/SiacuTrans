@@ -1,0 +1,235 @@
+﻿@{
+    ViewBag.Title = "DETALLE DE LLAMADAS SALIENTE NO FACTURADAS";
+    Layout = null;//"~/Areas/Transactions/Views/Shared/_Layout.cshtml";
+}
+<script type="text/javascript" src="~/Areas/Transactions/Content/Lib/BloqueoF12.js"></script>
+
+<!-- FIN HIDDENS  -->
+<div id="UnbilledCallDetail" class="container-fluid">
+<div class="row">
+
+<div class="col-md-3">
+    <div id="PostpaidDataCustomer" class="panel claro-panel-primary ">
+        <div class="panel-heading">
+            <span class="glyphicon glyphicon-user"></span>
+            <a data-toggle="collapse" role="tab" href="#DatosClientecollapse" class="collapsed transaction-ref-color">
+                Datos del Cliente
+            </a>
+        </div>
+        <div id="DatosClientecollapse" class="">
+            <table class="table table-striped table-responsive table-condensed">
+                <tbody>
+                <tr>
+                    <td><strong>Contrato</strong></td>
+                    <td><span id="lblContract"></span></td>
+                </tr>
+                <tr>
+                    <td><strong>Customer ID</strong></td>
+                    <td><label id="lblCustomerId" class="text-message-info"></label></td>
+                </tr>
+                <tr>
+                    <td><strong>Tipo Cliente</strong></td>
+                    <td><span id="lblHeaderTypeCustomer"></span></td>
+                </tr>
+                <tr>
+                    <td><strong>Cliente</strong></td>
+                    <td><span id="lblCustomer"></span></td>
+                </tr>
+                <tr>
+                    <td><strong>DNI/RUC</strong></td>
+                    <td><span id="lblDocument"></span></td>
+                </tr>
+                <tr>
+                    <td><strong>Contacto</strong></td>
+                    <td><label id="lblContact" class="text-message-info"></label></td>
+                </tr>       
+                <tr>
+                    <td><strong>Representante Legal</strong></td>
+                    <td><span id="lblRepreLegal"></span> </td>
+                </tr>
+                <tr>
+                    <td><strong>Plan Actual</strong></td>
+                    <td><span id="lblPlan"></span></td>
+
+                </tr>                        
+                <tr>
+                    <td><strong>Fecha de Activación</strong></td>
+                    <td><span id="lblDateActivation"></span></td>
+                </tr>
+                <tr>
+                    <td><strong>Ciclo de Facturación</strong></td>
+                    <td><span id="lblCycleFacture"></span></td>
+                </tr>
+                <tr>
+                    <td><strong>Límite de Crédito</strong></td>
+                    <td><span id="lblLimitCredit"></span></td>
+                </tr>                        
+                @*<tr>
+                            <td><strong>Codigo de Cliente</strong></td>
+                            <td><span id="lblHeaderContact"></span> </td>
+                        </tr>*@
+                @*<tr>
+                            <td><strong>Doc Repres. Legal</strong></td>
+                            <td><span id="lblDocRepresLegal"></span></td>
+                        </tr>*@
+                </tbody>
+
+            </table>
+        </div>
+        <div id="addressDataHead" role="tab" class="panel-heading">
+            <span class="glyphicon glyphicon-home"></span>
+            <a data-toggle="collapse" href="#addressDataCollapse" aria-expanded="false" data-parent="#DataCustomer" aria-controls="addressDataCollapse" class="collapsed transaction-ref-color"> Dirección de Facturación</a>
+        </div>
+        <div class="panel-body panel-collapse collapse" id="addressDataCollapse" role="tabpanel" aria-labelledby="addressDataHead">
+            <table class="table table-striped table-responsive table-condensed">
+                <tr>
+                    <td><strong>Dirección</strong></td>
+                    <td><span id="txtDireccion"></span></td>
+                </tr>
+                <tr>
+                    <td><strong>Referencia</strong></td>
+                    <td><span id="txtNotaDireccion"></span></td>
+                </tr>
+                <tr>
+                    <td><strong>País</strong></td>
+                    <td><span id="txtPais"></span></td>
+                </tr>
+                <tr>
+                    <td><strong>Departamento</strong></td>
+                    <td><span id="txtDepartamento"></span></td>
+                </tr>
+                <tr>
+                    <td><strong>Provincia</strong></td>
+                    <td><span id="txtProvincia"></span></td>
+                </tr>                        
+                <tr>
+                    <td><strong>Distrito</strong></td>
+                    <td><span id="txtDistrito"></span></td>
+                </tr>                        
+                <tr id="IdlblCodPlano">
+                    <td><strong>Código de Plano</strong></td>
+                    <td><span id="txtCodigoPlano"></span></td>
+                </tr>
+                <tr id="IdlblCodUbigeo">
+                    <td><strong>Código de Ubigeo</strong></td>
+                    <td>
+                        <span id="txtCodigoUbigeo"></span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        @*<div id="businessRulesHead" role="tab" class="panel-heading">
+                    <span class="glyphicon glyphicon-th-list"></span>
+                    <a data-toggle="collapse" href="#businessRulesCollapse" aria-expanded="false" data-parent="#DataCustomer" aria-controls="businessRulesCollapse" class="collapsed transaction-ref-color"> Reglas de Atención</a>
+                </div>
+                <div class="panel-body panel-collapse collapse" id="businessRulesCollapse" role="tabpanel" aria-labelledby="businessRulesHead">
+                    <div id="divRules">
+                    </div>
+                </div>*@
+    </div>
+</div>
+    <div id="content" class="col-md-9 transaction-content">
+    <div class="panel claro-panel-primary">
+        <div class="panel-heading">
+            <a id="header-text" class="collapsed transaction-ref-color"></a>
+        </div>
+        <div class="panel-body">
+            <div id="tbDatoBusqueda" class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Desde</label>
+                    <div class="col-sm-3">
+                        <div class="input-daterange input-group">
+                            <input type="text" id="txtDateStart" class="input-sm form-control" name="end" />
+                            <label class="input-group-addon btn transaction-button" for="txtDateStart">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <label class="col-sm-2 control-label">Hasta</label>
+                    <div class="col-sm-3">
+                        <div class="input-daterange input-group">
+                            <input type="text" id="txtDateEnd" class="input-sm form-control" name="end" />
+                            <label class="input-group-addon btn transaction-button" for="txtDateEnd">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <br />
+                    <br />
+                    <br />
+                    <div>
+                        <label class="col-sm-3 control-label">Mostrar todos los registros</label>
+                        <div class="col-sm-1 checkbox">
+                            <label>
+                                <input type="checkbox" id="chkAllRecords" style="position: relative; top: 3px;" checked="checked">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">
+                        <button id="btnSearch" type="button" class="btn transaction-button btn-sm" accesskey="btnBuscar"><span class="glyphicon glyphicon-search">&nbsp;</span>Consultar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @*</div>*@
+
+        <div>
+            @*<div class="panel claro-panel-primary">*@
+            <div id="ContainerUnbilledCallDetail" class="table">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table id="tblUnbilledCallDetail" class="table table-bordered">
+                                <thead>
+                                <tr class="btn-danger">
+                                    <th>Nro</th>
+                                    <th>Fecha (dd/mm/aaaa)</th>
+                                    <th>Hora (hh:mm)</th>
+                                    <th>Teléfono Origen</th>
+                                    <th>Teléfono Destino</th>
+                                    <th>Consumo</th>
+                                    <th>Costo (S/.)</th>
+                                    <th>Plan</th>
+                                    <th>Tarifa</th>
+                                    <th>Tipo</th>
+                                    <th>Destino</th>
+                                    <th>Operador</th>
+                                    <th>Horario</th>
+                                    <th>Tipo Llamada</th>
+                                    <th>Consumo (S/.)</th>
+                                </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="myModalLoad" style="display:none;">
+            <span>
+                <img src="~/Images/loading2.gif" width="25" height="25" />  Cargando ....
+            </span>
+        </div>
+
+        <div>
+            <center>
+                <div class="form-inline ">
+                    <div class="form-group">
+                        <button class="btn transaction-button btn-sm" id="btnExport"><span class="glyphicon glyphicon-export">&nbsp;</span>Exportar</button>
+                        <button class="btn transaction-button btn-sm" id="btnClose"><span class="glyphicon glyphicon-remove">&nbsp;</span>Cerrar</button>
+                    </div>
+                </div>
+            </center>
+            <br />
+        </div>
+    </div>
+    <br />
+    <br />
+</div>
+</div>
+</div>
+
+
+@Scripts.Render("~/bundles/Transactions/Auth/AuthUser")
+@Scripts.Render("~/bundles/Transactions/HFC/HFCUnbilledCallDetail")

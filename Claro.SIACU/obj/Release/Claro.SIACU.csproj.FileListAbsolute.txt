@@ -1,0 +1,11 @@
+C:\NET\Claro.SIACU\bin\Release\Claro.SIACU.dll
+C:\NET\Claro.SIACU\bin\Release\Claro.SIACU.pdb
+C:\NET\Claro.SIACU\bin\Release\Claro.dll
+C:\NET\Claro.SIACU\bin\Release\Claro.Entity.dll
+C:\NET\Claro.SIACU\bin\Release\Claro.Security.dll
+C:\NET\Claro.SIACU\bin\Release\Claro.Entity.pdb
+C:\NET\Claro.SIACU\bin\Release\Claro.Security.pdb
+C:\NET\Claro.SIACU\bin\Release\Claro.pdb
+C:\NET\Claro.SIACU\obj\Release\Claro.SIACU.csprojResolveAssemblyReference.cache
+C:\NET\Claro.SIACU\obj\Release\Claro.SIACU.dll
+C:\NET\Claro.SIACU\obj\Release\Claro.SIACU.pdb

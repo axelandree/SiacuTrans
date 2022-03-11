@@ -1,0 +1,1862 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ListaValores>
+  <ListaTipoBusqueda>
+    <item>
+      <codigo>T</codigo>
+      <descripcion>Teléfono</descripcion>
+    </item>
+    <item>
+      <codigo>N</codigo>
+      <descripcion>Nombre</descripcion>
+    </item>
+    <item>
+      <codigo>R</codigo>
+      <descripcion>Razón Social</descripcion>
+    </item>
+    <item>
+      <codigo>I</codigo>
+      <descripcion>Nro. Doc. Identidad</descripcion>
+    </item>
+  </ListaTipoBusqueda>
+  <ListaTipoBusquedaDTH>
+    <item>
+      <codigo>D</codigo>
+      <descripcion>Cod. Recarga</descripcion>
+    </item>
+    <item>
+      <codigo>N</codigo>
+      <descripcion>Nombre</descripcion>
+    </item>
+    <item>
+      <codigo>R</codigo>
+      <descripcion>Razón Social</descripcion>
+    </item>
+    <item>
+      <codigo>I</codigo>
+      <descripcion>Nro. Doc. Identidad</descripcion>
+    </item>
+  </ListaTipoBusquedaDTH>
+  <ListaSexo>
+    <item>
+      <codigo>0</codigo>
+      <descripcion>No Precisado</descripcion>
+    </item>
+    <item>
+      <codigo>1</codigo>
+      <descripcion>Masculino</descripcion>
+    </item>
+    <item>
+      <codigo>2</codigo>
+      <descripcion>Femenino</descripcion>
+    </item>
+  </ListaSexo>
+  <ListarMailConfirmar>
+    <item>
+      <codigo>-1</codigo>
+      <descripcion>---</descripcion>
+    </item>
+    <item>
+      <codigo>S</codigo>
+      <descripcion>SI</descripcion>
+    </item>
+    <item>
+      <codigo>N</codigo>
+      <descripcion>NO</descripcion>
+    </item>
+  </ListarMailConfirmar>
+  <ListaCasoInteraccion>
+    <item>
+      <codigo>1</codigo>
+      <descripcion>Caso</descripcion>
+    </item>
+    <item>
+      <codigo>2</codigo>
+      <descripcion>Interacción</descripcion>
+    </item>
+  </ListaCasoInteraccion>
+  <ListaInteraccion>
+    <item>
+      <codigo>3</codigo>
+      <descripcion>Información</descripcion>
+    </item>
+    <item>
+      <codigo>2</codigo>
+      <descripcion>Variación</descripcion>
+    </item>
+    <item>
+      <codigo>1</codigo>
+      <descripcion>Problema</descripcion>
+    </item>
+  </ListaInteraccion>
+
+  <ListaInteraccionReclamo>
+    <item>
+      <codigo>3</codigo>
+      <descripcion>Información</descripcion>
+    </item>
+    <item>
+      <codigo>2</codigo>
+      <descripcion>Variación</descripcion>
+    </item>
+    <!--<item> 
+			<codigo>1</codigo> 
+			<descripcion>Problema</descripcion> 
+		</item>-->
+  </ListaInteraccionReclamo>
+
+  <ListaTipoMarcacion>
+    <item>
+      <codigo>-1</codigo>
+      <descripcion>----</descripcion>
+    </item>
+    <item>
+      <codigo>4</codigo>
+      <descripcion>4</descripcion>
+    </item>
+    <item>
+      <codigo>6</codigo>
+      <descripcion>6</descripcion>
+    </item>
+    <item>
+      <codigo>8</codigo>
+      <descripcion>8</descripcion>
+    </item>
+  </ListaTipoMarcacion>
+  <ListaSegmentoCliente>
+    <item>
+      <codigo>-1</codigo>
+      <descripcion>-- Seleccionar --</descripcion>
+    </item>
+    <item>
+      <codigo>Basico</codigo>
+      <descripcion>Basico</descripcion>
+    </item>
+    <item>
+      <codigo>Medio</codigo>
+      <descripcion>Medio</descripcion>
+    </item>
+    <item>
+      <codigo>Alto</codigo>
+      <descripcion>Alto</descripcion>
+    </item>
+  </ListaSegmentoCliente>
+  <ListaSiNo>
+    <item>
+      <codigo>-1</codigo>
+      <descripcion>----</descripcion>
+    </item>
+    <item>
+      <codigo>S</codigo>
+      <descripcion>SI</descripcion>
+    </item>
+    <item>
+      <codigo>N</codigo>
+      <descripcion>NO</descripcion>
+    </item>
+  </ListaSiNo>
+  <ListaResultadoInteraccion>
+    <item>
+      <codigo>Ninguno</codigo>
+      <descripcion>Ninguno</descripcion>
+    </item>
+    <item>
+      <codigo>Pregunta contestada</codigo>
+      <descripcion>Pregunta contestada</descripcion>
+    </item>
+    <item>
+      <codigo>Información enviada</codigo>
+      <descripcion>Información enviada</descripcion>
+    </item>
+    <item>
+      <codigo>Pedido ubicado</codigo>
+      <descripcion>Pedido ubicado</descripcion>
+    </item>
+    <item>
+      <codigo>Otro</codigo>
+      <descripcion>Otro</descripcion>
+    </item>
+  </ListaResultadoInteraccion>
+  <ListaMotivoBonificacion>
+    <item>
+      <codigo>-1</codigo>
+      <descripcion>-- Seleccionar --</descripcion>
+    </item>
+    <item>
+      <codigo>CREDITO</codigo>
+      <descripcion>Crédito</descripcion>
+    </item>
+    <item>
+      <codigo>DEBITO</codigo>
+      <descripcion>Débito</descripcion>
+    </item>
+  </ListaMotivoBonificacion>
+  <ListaMotivoDevolucion>
+    <item>
+      <codigo>-1</codigo>
+      <descripcion>-- Seleccionar --</descripcion>
+    </item>
+    <item>
+      <codigo>CREDITO</codigo>
+      <descripcion>Crédito</descripcion>
+    </item>
+    <item>
+      <codigo>DEBITO</codigo>
+      <descripcion>Débito</descripcion>
+    </item>
+  </ListaMotivoDevolucion>
+  <ListaMotivoCambioClaroChip>
+    <item>
+      <codigo>-1</codigo>
+      <descripcion>-- Seleccionar --</descripcion>
+    </item>
+    <item>
+      <codigo>R01</codigo>
+      <descripcion>Por perdida</descripcion>
+    </item>
+    <item>
+      <codigo>R02</codigo>
+      <descripcion>Por robo</descripcion>
+    </item>
+    <item>
+      <codigo>R03</codigo>
+      <descripcion>Daño irreparable</descripcion>
+    </item>
+    <item>
+      <codigo>R04</codigo>
+      <descripcion>Upgrade de Sim</descripcion>
+    </item>
+    <item>
+      <codigo>R05</codigo>
+      <descripcion>Bloqueo de Pin y Puk</descripcion>
+    </item>
+    <item>
+      <codigo>R06</codigo>
+      <descripcion>Transferencia de Saldos</descripcion>
+    </item>
+    <item>
+      <codigo>R07</codigo>
+      <descripcion>TG–CHIP–Falla Técnica</descripcion>
+    </item>
+    <item>
+      <codigo>R08</codigo>
+      <descripcion>TG–CHIP–Error HLR</descripcion>
+    </item>
+    <item>
+      <codigo>R09</codigo>
+      <descripcion>TG–CHIP–Fono Claro</descripcion>
+    </item>
+    <item>
+      <codigo>R10</codigo>
+      <descripcion>TG–CHIP–ST</descripcion>
+    </item>
+    <item>
+      <codigo>R11</codigo>
+      <descripcion>TG–CHIP–SC</descripcion>
+    </item>
+  </ListaMotivoCambioClaroChip>
+  <ListaUnidadMedida>
+    <item>
+      <codigo>-1</codigo>
+      <descripcion>-- Seleccionar --</descripcion>
+    </item>
+    <item>
+      <codigo>Soles</codigo>
+      <descripcion>Soles</descripcion>
+    </item>
+    <item>
+      <codigo>Minutos</codigo>
+      <descripcion>Minutos</descripcion>
+    </item>
+    <item>
+      <codigo>SMS</codigo>
+      <descripcion>SMS</descripcion>
+    </item>
+    <item>
+      <codigo>MMS</codigo>
+      <descripcion>MMS</descripcion>
+    </item>
+    <item>
+      <codigo>KB</codigo>
+      <descripcion>KB</descripcion>
+    </item>
+  </ListaUnidadMedida>
+  <ListaTipoDataInicial>
+    <item>
+      <codigo>1</codigo>
+      <descripcion>1</descripcion>
+    </item>
+    <item>
+      <codigo>2</codigo>
+      <descripcion>2</descripcion>
+    </item>
+  </ListaTipoDataInicial>
+  <ListaTransaccion>
+    <item>
+      <codigo>TRIACION_ACTIVAR_DESACTIVAR</codigo>
+      <descripcion>TRIACION ACTIVAR DESACTIVAR</descripcion>
+    </item>
+    <item>
+      <codigo>VARIACION_AJUSTE_DEVOLUCION_DINERO</codigo>
+      <descripcion>VARIACION_AJUSTE_DEVOLUCION_DINERO</descripcion>
+    </item>
+    <item>
+      <codigo>VARIACION_AJUSTE_DEVOLUCION_RECARGA</codigo>
+      <descripcion>VARIACION_AJUSTE_DEVOLUCION_RECARGA</descripcion>
+    </item>
+    <item>
+      <codigo>VARIACION_BLOQUEO_ROBO_PERDIDA</codigo>
+      <descripcion>VARIACION_BLOQUEO_ROBO_PERDIDA</descripcion>
+    </item>
+    <item>
+      <codigo>TRANSACCION_DESBLOQUEO_CODIGO_RED_HLR</codigo>
+      <descripcion>Desbloqueo Código Seguridad de Red</descripcion>
+    </item>
+    <item>
+      <codigo>TRANSACCION_DESACTIVACION_LOCUCION_DOL_HLR</codigo>
+      <descripcion>Desactivación Locución Solic. Datos</descripcion>
+    </item>
+  </ListaTransaccion>
+  <ListaBolsa>
+    <item>
+      <codigo>-1</codigo>
+      <descripcion>-- Seleccionar --</descripcion>
+      <codigo2>0</codigo2>
+    </item>
+    <item>
+      <codigo>OnPeakAccountID</codigo>
+      <descripcion>Saldo Principal</descripcion>
+      <codigo2>100</codigo2>
+    </item>
+    <item>
+      <codigo>Bonus1PromoAccountID</codigo>
+      <descripcion>Bono Multiplica tu saldo Recupero prepago (S/.)</descripcion>
+      <codigo2>100</codigo2>
+    </item>
+    <item>
+      <codigo>Bonus2PromoAccountID</codigo>
+      <descripcion>Bono Inicial para Llamadas Nacionales (S/.)</descripcion>
+      <codigo2>100</codigo2>
+    </item>
+    <item>
+      <codigo>BonusCounterAccount58</codigo>
+      <descripcion>Bono a Numero Frecuentes (mm:ss)</descripcion>
+      <codigo2>1</codigo2>
+    </item>
+
+    <item>
+      <codigo>Voice2PromoAccountID</codigo>
+      <descripcion>Bono Recurrente a Claro (mm:ss)</descripcion>
+      <codigo2>1</codigo2>
+    </item>
+
+    <item>
+      <codigo>SMSPromoAccountID</codigo>
+      <descripcion>Bono por Recarga SMS (und)</descripcion>
+      <codigo2>1</codigo2>
+    </item>
+    <item>
+      <codigo>BonusCounterAccount57</codigo>
+      <descripcion>Bono Recurrente SMS a Nros Frecuentes (und)</descripcion>
+      <codigo2>1</codigo2>
+    </item>
+    <item>
+      <codigo>BonusPromoAccountID</codigo>
+      <descripcion>Soles para llamadas nacionales (S/.)</descripcion>
+      <codigo2>100</codigo2>
+    </item>
+    <item>
+      <codigo>BonusCounter_Account52</codigo>
+      <descripcion>Cargamonton Nros Frecuentes (mm:ss)</descripcion>
+      <codigo2>1</codigo2>
+    </item>
+    <item>
+      <codigo>VoiceLoyaltyAccountID</codigo>
+      <descripcion>Cargamonton Noche Ilimitado</descripcion>
+      <codigo2>1</codigo2>
+    </item>
+    <item>
+      <codigo>Voice1PromoAccountID</codigo>
+      <descripcion>Cargamonton Noche (mm:ss)</descripcion>
+      <codigo2>1</codigo2>
+    </item>
+    <item>
+      <codigo>BonusCounterAccount54</codigo>
+      <descripcion>Llama Nomas (mm:ss)</descripcion>
+      <codigo2>1</codigo2>
+    </item>
+    <item>
+      <codigo>SMSLoyaltyAccountID</codigo>
+      <descripcion>Paquete de SMS (und)</descripcion>
+      <codigo2>1</codigo2>
+    </item>
+    <item>
+      <codigo>MMSPromoAccountID</codigo>
+      <descripcion>MMS</descripcion>
+      <codigo2>1</codigo2>
+    </item>
+    <item>
+      <codigo>GPRSPromoAccountID</codigo>
+      <descripcion>GPRS</descripcion>
+      <codigo2>1</codigo2>
+    </item>
+  </ListaBolsa>
+  <ListaUnidades>
+    <item>
+      <codigo>1</codigo>
+      <codigo2>SMS</codigo2>
+      <descripcion>Mensajes</descripcion>
+    </item>
+    <item>
+      <codigo>2</codigo>
+      <codigo2>SEG</codigo2>
+      <descripcion>Llamadas</descripcion>
+    </item>
+    <item>
+      <codigo>3</codigo>
+      <codigo2>SOL</codigo2>
+      <descripcion>Soles</descripcion>
+    </item>
+    <item>
+      <codigo>4</codigo>
+      <codigo2>MMS</codigo2>
+      <descripcion>Multimedia</descripcion>
+    </item>
+  </ListaUnidades>
+  <ListaTipoTriacion>
+    <item>
+      <codigo>-1</codigo>
+      <codigo2>01/01/2001-01/01/2050</codigo2>
+      <descripcion>-- Seleccionar --</descripcion>
+    </item>
+    <item>
+      <codigo>1</codigo>
+      <codigo2>01/01/2001-01/01/2050</codigo2>
+      <descripcion>Opción 1</descripcion>
+    </item>
+    <item>
+      <codigo>3</codigo>
+      <codigo2>01/01/2001-01/01/2050</codigo2>
+      <descripcion>Opción 2</descripcion>
+    </item>
+    <item>
+      <codigo>4</codigo>
+      <codigo2>01/01/2001-30/12/2008</codigo2>
+      <descripcion>Opción 4</descripcion>
+    </item>
+  </ListaTipoTriacion>
+  <ListaTipoTriacionDescripcion>
+    <item>
+      <codigo>1</codigo>
+      <codigo2>10</codigo2>
+      <descripcion>6 Claro locales para voz a tarifa de S/.{0} x minuto</descripcion>
+    </item>
+    <item>
+      <codigo>3</codigo>
+      <codigo2>10</codigo2>
+      <descripcion>4 Claro Nacionales + 1 Fijo Nacional + 1 Internacional para voz a tarifa de S/.{0} x minuto</descripcion>
+    </item>
+    <item>
+      <codigo>4</codigo>
+      <codigo2>20</codigo2>
+      <descripcion>1 Claro nacional ilimitado para voz + 1 Claro nacional ilimitado para SMS</descripcion>
+    </item>
+  </ListaTipoTriacionDescripcion>
+  <ListaCobroMinutoTriado>
+    <item>
+      <codigo>1</codigo>
+      <codigo2>6</codigo2>
+      <descripcion>0.69</descripcion>
+    </item>
+    <item>
+      <codigo>1</codigo>
+      <codigo2>7</codigo2>
+      <descripcion>0.40</descripcion>
+    </item>
+    <item>
+      <codigo>1</codigo>
+      <codigo2>8</codigo2>
+      <descripcion>0.40</descripcion>
+    </item>
+    <item>
+      <codigo>1</codigo>
+      <codigo2>9</codigo2>
+      <descripcion>0.40</descripcion>
+    </item>
+    <item>
+      <codigo>3</codigo>
+      <codigo2>6</codigo2>
+      <descripcion>0.89</descripcion>
+    </item>
+    <item>
+      <codigo>3</codigo>
+      <codigo2>7</codigo2>
+      <descripcion>0.55</descripcion>
+    </item>
+    <item>
+      <codigo>3</codigo>
+      <codigo2>8</codigo2>
+      <descripcion>0.55</descripcion>
+    </item>
+    <item>
+      <codigo>3</codigo>
+      <codigo2>9</codigo2>
+      <descripcion>0.55</descripcion>
+    </item>
+  </ListaCobroMinutoTriado>
+  <ListaMotivoRegistroDOL>
+    <item>
+      <codigo>-1</codigo>
+      <descripcion>-- Seleccionar --</descripcion>
+    </item>
+    <item>
+      <codigo>Registro Manual</codigo>
+      <descripcion>Registro Manual</descripcion>
+    </item>
+  </ListaMotivoRegistroDOL>
+  <ListaTipoCambio>
+    <item>
+      <codigo>-1</codigo>
+      <descripcion>-- Seleccionar --</descripcion>
+    </item>
+    <item>
+      <codigo>Cambio</codigo>
+      <descripcion>Cambio</descripcion>
+    </item>
+    <item>
+      <codigo>Traslado</codigo>
+      <descripcion>Traslado</descripcion>
+    </item>
+  </ListaTipoCambio>
+  <ListaLocucion>
+    <item>
+      <codigo>-1</codigo>
+      <descripcion>-- Seleccionar --</descripcion>
+    </item>
+    <item>
+      <codigo>Sin locución</codigo>
+      <descripcion>Sin locución</descripcion>
+    </item>
+    <item>
+      <codigo>Con locución</codigo>
+      <descripcion>Con locución</descripcion>
+    </item>
+  </ListaLocucion>
+  <ListaAccionResetear>
+    <item>
+      <codigo>-1</codigo>
+      <descripcion>-- Seleccionar --</descripcion>
+    </item>
+    <item>
+      <codigo>Resetear número</codigo>
+      <descripcion>Resetear número</descripcion>
+    </item>
+    <item>
+      <codigo>Resetear clave</codigo>
+      <descripcion>Resetear clave</descripcion>
+    </item>
+    <item>
+      <codigo>Dar de baja</codigo>
+      <descripcion>Dar de baja</descripcion>
+    </item>
+  </ListaAccionResetear>
+  <ListaBloqueoChip>
+    <item>
+      <codigo>-1</codigo>
+      <descripcion>-- Seleccionar --</descripcion>
+    </item>
+    <item>
+      <codigo>R01</codigo>
+      <descripcion>Pérdida</descripcion>
+    </item>
+    <item>
+      <codigo>R02</codigo>
+      <descripcion>Robo</descripcion>
+    </item>
+  </ListaBloqueoChip>
+  <ListaMotivoActivacion>
+    <item>
+      <codigo>Activar</codigo>
+      <descripcion>Activar</descripcion>
+    </item>
+  </ListaMotivoActivacion>
+  <ListaFaseFinal>
+    <item>
+      <codigo>-1</codigo>
+      <descripcion>-- Seleccionar --</descripcion>
+    </item>
+    <item>
+      <codigo>No Precisado</codigo>
+      <descripcion>No Precisado</descripcion>
+    </item>
+    <item>
+      <codigo>Reporte</codigo>
+      <descripcion>Reporte</descripcion>
+    </item>
+    <item>
+      <codigo>Reclamo en primera instancia</codigo>
+      <descripcion>Reclamo en primera instancia</descripcion>
+    </item>
+    <item>
+      <codigo>Recurso de reconsideración</codigo>
+      <descripcion>Recurso de reconsideración</descripcion>
+    </item>
+    <item>
+      <codigo>Recurso de apelación</codigo>
+      <descripcion>Recurso de apelación</descripcion>
+    </item>
+  </ListaFaseFinal>
+
+  <ListaEstadoLinea>
+    <item>
+      <codigo>0</codigo>
+      <descripcion>Preactivo</descripcion>
+    </item>
+    <item>
+      <codigo>1</codigo>
+      <descripcion>Activo</descripcion>
+    </item>
+    <item>
+      <codigo>2</codigo>
+      <descripcion>Periodo de Gracia</descripcion>
+    </item>
+    <item>
+      <codigo>4</codigo>
+      <descripcion>Desactivo</descripcion>
+    </item>
+    <item>
+      <codigo>5</codigo>
+      <descripcion>Bloqueado</descripcion>
+    </item>
+    <item>
+      <codigo>10</codigo>
+      <descripcion>Por Verificar</descripcion>
+    </item>
+    <item>
+      <codigo>Recycle</codigo>
+      <descripcion>Reciclado</descripcion>
+    </item>
+  </ListaEstadoLinea>
+  <ListaCasillaVoz>
+    <item>
+      <codigo>-1</codigo>
+      <descripcion>-- Seleccionar --</descripcion>
+    </item>
+    <item>
+      <codigo>SIACA_ACTV</codigo>
+      <descripcion>Activación</descripcion>
+    </item>
+    <item>
+      <codigo>SIACA_DESV</codigo>
+      <descripcion>Des activación</descripcion>
+    </item>
+  </ListaCasillaVoz>
+  <ListaPlanesTarifarios>
+    <item>
+      <codigo>10</codigo>
+      <codigo2>5</codigo2>
+      <descripcion>Prepago Juerga HG4800</descripcion>
+    </item>
+    <item>
+      <codigo>10</codigo>
+      <codigo2>5C</codigo2>
+      <descripcion>Prepago Juerga RFA6000</descripcion>
+    </item>
+    <item>
+      <codigo>10</codigo>
+      <codigo2>6</codigo2>
+      <descripcion>Destino</descripcion>
+    </item>
+    <item>
+      <codigo>10</codigo>
+      <codigo2>7</codigo2>
+      <descripcion>Destino</descripcion>
+    </item>
+    <item>
+      <codigo>10</codigo>
+      <codigo2>8</codigo2>
+      <descripcion>Prepago Juerga</descripcion>
+    </item>
+    <item>
+      <codigo>10</codigo>
+      <codigo2>9</codigo2>
+      <descripcion>Promocion Prepago Juerga</descripcion>
+    </item>
+    <item>
+      <codigo>11</codigo>
+      <codigo2>5</codigo2>
+      <descripcion>Prepago Juerga MTS HG4800</descripcion>
+    </item>
+    <item>
+      <codigo>11</codigo>
+      <codigo2>5C</codigo2>
+      <descripcion>Prepago Juerga MTS RFA6000</descripcion>
+    </item>
+    <item>
+      <codigo>11</codigo>
+      <codigo2>6</codigo2>
+      <descripcion>Destino</descripcion>
+    </item>
+    <item>
+      <codigo>11</codigo>
+      <codigo2>7</codigo2>
+      <descripcion>Destino</descripcion>
+    </item>
+    <item>
+      <codigo>11</codigo>
+      <codigo2>8</codigo2>
+      <descripcion>Prepago Juerga - Triplica CD</descripcion>
+    </item>
+    <item>
+      <codigo>11</codigo>
+      <codigo2>9</codigo2>
+      <descripcion>Promocion Prepago Juerga</descripcion>
+    </item>
+    <item>
+      <codigo>19</codigo>
+      <codigo2>5</codigo2>
+      <descripcion>Prepago Juerga TUN HG4800</descripcion>
+    </item>
+    <item>
+      <codigo>19</codigo>
+      <codigo2>5C</codigo2>
+      <descripcion>Prepago Juerga TUN RFA6000</descripcion>
+    </item>
+    <item>
+      <codigo>19</codigo>
+      <codigo2>6</codigo2>
+      <descripcion>Destino Normal - TSR</descripcion>
+    </item>
+    <item>
+      <codigo>19</codigo>
+      <codigo2>7</codigo2>
+      <descripcion>Destino Triado - TSR</descripcion>
+    </item>
+    <item>
+      <codigo>19</codigo>
+      <codigo2>8</codigo2>
+      <descripcion>Prepago Juerga - TSR</descripcion>
+    </item>
+    <item>
+      <codigo>19</codigo>
+      <codigo2>9</codigo2>
+      <descripcion>Promocion Prepago Juerga - TSR</descripcion>
+    </item>
+    <item>
+      <codigo>20</codigo>
+      <codigo2>1</codigo2>
+      <descripcion>Max Control 45</descripcion>
+    </item>
+    <item>
+      <codigo>20</codigo>
+      <codigo2>2</codigo2>
+      <descripcion>Max Control 45</descripcion>
+    </item>
+    <item>
+      <codigo>20</codigo>
+      <codigo2>3</codigo2>
+      <descripcion>Max Control 50</descripcion>
+    </item>
+    <item>
+      <codigo>20</codigo>
+      <codigo2>4</codigo2>
+      <descripcion>Max Control 50</descripcion>
+    </item>
+    <item>
+      <codigo>20</codigo>
+      <codigo2>5</codigo2>
+      <descripcion>Max Control 50</descripcion>
+    </item>
+    <item>
+      <codigo>20</codigo>
+      <codigo2>6</codigo2>
+      <descripcion>Max Control 60</descripcion>
+    </item>
+    <item>
+      <codigo>20</codigo>
+      <codigo2>7</codigo2>
+      <descripcion>Max Control 60</descripcion>
+    </item>
+    <item>
+      <codigo>20</codigo>
+      <codigo2>8</codigo2>
+      <descripcion>Max Control 70</descripcion>
+    </item>
+    <item>
+      <codigo>20</codigo>
+      <codigo2>9</codigo2>
+      <descripcion>Max Control 70</descripcion>
+    </item>
+    <item>
+      <codigo>20</codigo>
+      <codigo2>10</codigo2>
+      <descripcion>Max Control 70</descripcion>
+    </item>
+    <item>
+      <codigo>21</codigo>
+      <codigo2>1</codigo2>
+      <descripcion>Max Control 55</descripcion>
+    </item>
+    <item>
+      <codigo>21</codigo>
+      <codigo2>2</codigo2>
+      <descripcion>Max Control 55</descripcion>
+    </item>
+    <item>
+      <codigo>21</codigo>
+      <codigo2>3</codigo2>
+      <descripcion>Max Control 55</descripcion>
+    </item>
+    <item>
+      <codigo>21</codigo>
+      <codigo2>4</codigo2>
+      <descripcion>Max Control Increible 55</descripcion>
+    </item>
+    <item>
+      <codigo>21</codigo>
+      <codigo2>5</codigo2>
+      <descripcion>Max Control Increible 70</descripcion>
+    </item>
+    <item>
+      <codigo>30</codigo>
+      <codigo2>1</codigo2>
+      <descripcion>Max Control EG</descripcion>
+    </item>
+    <item>
+      <codigo>30</codigo>
+      <codigo2>2</codigo2>
+      <descripcion>Max Control RTPE PoC</descripcion>
+    </item>
+    <item>
+      <codigo>30</codigo>
+      <codigo2>3</codigo2>
+      <descripcion>Max ControlRTP</descripcion>
+    </item>
+    <item>
+      <codigo>14</codigo>
+      <codigo2>1</codigo2>
+      <descripcion>Paquetón Prepago</descripcion>
+    </item>
+    <item>
+      <codigo>15</codigo>
+      <codigo2>1</codigo2>
+      <descripcion>Paquetón Prepago</descripcion>
+    </item>
+    <item>
+      <codigo>13</codigo>
+      <codigo2>7</codigo2>
+      <descripcion>Blackberry anualizado</descripcion>
+    </item>
+    <item>
+      <codigo>10</codigo>
+      <codigo2>10</codigo2>
+      <descripcion>Blackberry Prepago</descripcion>
+    </item>
+    <item>
+      <codigo>13</codigo>
+      <codigo2>8</codigo2>
+      <descripcion>iPhone Anualizado</descripcion>
+    </item>
+    <item>
+      <codigo>13</codigo>
+      <codigo2>8C</codigo2>
+      <descripcion>Prepago Anualizado</descripcion>
+    </item>
+    <item>
+      <codigo>13</codigo>
+      <codigo2>8;2</codigo2>
+      <descripcion>iPhone Anualizado</descripcion>
+    </item>
+    <item>
+      <codigo>13</codigo>
+      <codigo2>8;3</codigo2>
+      <descripcion>Prepago Anualizado</descripcion>
+    </item>
+    <item>
+      <codigo>50</codigo>
+      <codigo2>10010000000</codigo2>
+      <descripcion>FonoClaro 1</descripcion>
+    </item>
+    <item>
+      <codigo>50</codigo>
+      <codigo2>10020000000</codigo2>
+      <descripcion>FonoClaro 2</descripcion>
+    </item>
+    <item>
+      <codigo>50</codigo>
+      <codigo2>10030000000</codigo2>
+      <descripcion>FonoClaro 3</descripcion>
+    </item>
+    <item>
+      <codigo>50</codigo>
+      <codigo2>10040000000</codigo2>
+      <descripcion>FonoClaro 4</descripcion>
+    </item>
+    <item>
+      <codigo>50</codigo>
+      <codigo2>10050000000</codigo2>
+      <descripcion>FonoClaro 5</descripcion>
+    </item>
+    <item>
+      <codigo>50</codigo>
+      <codigo2>10060000000</codigo2>
+      <descripcion>FonoClaro 20</descripcion>
+    </item>
+  </ListaPlanesTarifarios>
+  <ListarMarcaOTA>
+    <item>
+      <codigo>-1</codigo>
+      <descripcion>--Seleccionar--</descripcion>
+    </item>
+    <item>
+      <codigo>1</codigo>
+      <descripcion>Ericcson</descripcion>
+    </item>
+    <item>
+      <codigo>2</codigo>
+      <descripcion>Nokia</descripcion>
+    </item>
+  </ListarMarcaOTA>
+  <ListarModelosOTA>
+    <item>
+      <codigo>1</codigo>
+      <codigo2>1</codigo2>
+      <descripcion>T200</descripcion>
+    </item>
+    <item>
+      <codigo>2</codigo>
+      <codigo2>1</codigo2>
+      <descripcion>T300</descripcion>
+    </item>
+    <item>
+      <codigo>3</codigo>
+      <codigo2>1</codigo2>
+      <descripcion>T39m</descripcion>
+    </item>
+    <item>
+      <codigo>4</codigo>
+      <codigo2>1</codigo2>
+      <descripcion>T68i</descripcion>
+    </item>
+    <item>
+      <codigo>5</codigo>
+      <codigo2>1</codigo2>
+      <descripcion>P800</descripcion>
+    </item>
+    <item>
+      <codigo>6</codigo>
+      <codigo2>2</codigo2>
+      <descripcion>6590</descripcion>
+    </item>
+    <item>
+      <codigo>7</codigo>
+      <codigo2>2</codigo2>
+      <descripcion>7210</descripcion>
+    </item>
+    <item>
+      <codigo>8</codigo>
+      <codigo2>2</codigo2>
+      <descripcion>8390</descripcion>
+    </item>
+  </ListarModelosOTA>
+  <ListarPlanesOTA>
+    <item>
+      <codigo>-1</codigo>
+      <descripcion>--Seleccionar--</descripcion>
+    </item>
+    <item>
+      <codigo>1</codigo>
+      <descripcion>Postpago</descripcion>
+    </item>
+    <item>
+      <codigo>2</codigo>
+      <descripcion>Prepago</descripcion>
+    </item>
+  </ListarPlanesOTA>
+  <ListarServiciosOTA>
+    <item>
+      <codigo>1</codigo>
+      <codigo2>1</codigo2>
+      <descripcion>WAP GPRS</descripcion>
+    </item>
+    <item>
+      <codigo>2</codigo>
+      <codigo2>3</codigo2>
+      <descripcion>MMS GPRS</descripcion>
+    </item>
+    <item>
+      <codigo>3</codigo>
+      <codigo2>2</codigo2>
+      <descripcion>WAP GSM/CSD (Aut)</descripcion>
+    </item>
+  </ListarServiciosOTA>
+  <ListaDepartamento>
+    <item>
+      <codigo>Lima</codigo>
+      <descripcion>Lima</descripcion>
+    </item>
+    <item>
+      <codigo>Amazonas</codigo>
+      <descripcion>Amazonas</descripcion>
+    </item>
+    <item>
+      <codigo>Ancash</codigo>
+      <descripcion>Ancash</descripcion>
+    </item>
+    <item>
+      <codigo>Apurimac</codigo>
+      <descripcion>Apurimac</descripcion>
+    </item>
+    <item>
+      <codigo>Arequipa</codigo>
+      <descripcion>Arequipa</descripcion>
+    </item>
+    <item>
+      <codigo>Ayacucho</codigo>
+      <descripcion>Ayacucho</descripcion>
+    </item>
+    <item>
+      <codigo>Callao</codigo>
+      <descripcion>Callao</descripcion>
+    </item>
+    <item>
+      <codigo>Cajamarca</codigo>
+      <descripcion>Cajamarca</descripcion>
+    </item>
+    <item>
+      <codigo>Cusco</codigo>
+      <descripcion>Cusco</descripcion>
+    </item>
+    <item>
+      <codigo>Huancavelica</codigo>
+      <descripcion>Huancavelica</descripcion>
+    </item>
+    <item>
+      <codigo>Huanuco</codigo>
+      <descripcion>Huanuco</descripcion>
+    </item>
+    <item>
+      <codigo>Ica</codigo>
+      <descripcion>Ica</descripcion>
+    </item>
+    <item>
+      <codigo>Junin</codigo>
+      <descripcion>Junin</descripcion>
+    </item>
+    <item>
+      <codigo>La Libertad</codigo>
+      <descripcion>La Libertad</descripcion>
+    </item>
+    <item>
+      <codigo>Lambayeque</codigo>
+      <descripcion>Lambayeque</descripcion>
+    </item>
+    <item>
+      <codigo>Loreto</codigo>
+      <descripcion>Loreto</descripcion>
+    </item>
+    <item>
+      <codigo>Madre de Dios</codigo>
+      <descripcion>Madre de Dios</descripcion>
+    </item>
+    <item>
+      <codigo>Moquegua</codigo>
+      <descripcion>Moquegua</descripcion>
+    </item>
+    <item>
+      <codigo>Pasco</codigo>
+      <descripcion>Pasco</descripcion>
+    </item>
+    <item>
+      <codigo>Piura</codigo>
+      <descripcion>Piura</descripcion>
+    </item>
+    <item>
+      <codigo>Puno</codigo>
+      <descripcion>Puno</descripcion>
+    </item>
+    <item>
+      <codigo>San Martin</codigo>
+      <descripcion>San Martin</descripcion>
+    </item>
+    <item>
+      <codigo>Tacna</codigo>
+      <descripcion>Tacna</descripcion>
+    </item>
+    <item>
+      <codigo>Tumbes</codigo>
+      <descripcion>Tumbes</descripcion>
+    </item>
+    <item>
+      <codigo>Ucayali</codigo>
+      <descripcion>Ucayali</descripcion>
+    </item>
+  </ListaDepartamento>
+
+  <ListaPlanDisponible>
+    <item>
+      <codigo>-1</codigo>
+      <codigo2>01/01/2007-01/01/2050</codigo2>
+      <descripcion>-- Seleccionar --</descripcion>
+    </item>
+    <item>
+      <codigo>60|1|0000000700</codigo>
+      <codigo2>01/01/2007-01/01/2050</codigo2>
+      <descripcion>Prepago Juerga</descripcion>
+    </item>
+  </ListaPlanDisponible>
+  <ListaPromocionDisponible>
+    <item>
+      <codigo>-1</codigo>
+      <codigo2>R0</codigo2>
+      <descripcion>-- Seleccionar --</descripcion>
+    </item>
+    <item>
+      <codigo>1</codigo>
+      <codigo2>R1</codigo2>
+      <descripcion>Paquetón Prepago</descripcion>
+    </item>
+    <item>
+      <codigo>1</codigo>
+      <codigo2>R2</codigo2>
+      <descripcion>Paquetón Prepago</descripcion>
+    </item>
+    <item>
+      <codigo>8</codigo>
+      <codigo2>R3</codigo2>
+      <descripcion>Prepago Juerga</descripcion>
+    </item>
+    <item>
+      <codigo>9</codigo>
+      <codigo2>R4</codigo2>
+      <descripcion>Prepago Juerga</descripcion>
+    </item>
+  </ListaPromocionDisponible>
+  <ListaEstadoTerminal>
+    <item>
+      <codigo>
+        DESBLOQUEADO
+      </codigo>
+      <descripcion>
+        DESBLOQUEADO
+      </descripcion>
+    </item>
+    <item>
+      <codigo>
+        BLOQUEADO
+      </codigo>
+      <descripcion>
+        BLOQUEADO
+      </descripcion>
+    </item>
+  </ListaEstadoTerminal>
+  <ListaOperadores>
+    <item>
+      <codigo>
+        CLARO
+      </codigo>
+      <descripcion>
+        CLARO
+      </descripcion>
+    </item>
+    <item>
+      <codigo>
+        TELEFÓNICA MÓVILES
+      </codigo>
+      <descripcion>
+        TELEFÓNICA MÓVILES
+      </descripcion>
+    </item>
+  </ListaOperadores>
+  <ListaMotivoBloqueo>
+    <item>
+      <codigo>1</codigo>
+      <descripcion>HURTO</descripcion>
+    </item>
+    <item>
+      <codigo>2</codigo>
+      <descripcion>PERDIDA</descripcion>
+    </item>
+    <item>
+      <codigo>3</codigo>
+      <descripcion>ROBO</descripcion>
+    </item>
+  </ListaMotivoBloqueo>
+  <ListaTriacionSubClase>
+    <item>
+      <codigo>109213</codigo>
+      <descripcion>ACTIVACION / DESACTIVACION</descripcion>
+    </item>
+    <item>
+      <codigo>109214</codigo>
+      <descripcion>CAMBIO</descripcion>
+    </item>
+  </ListaTriacionSubClase>
+  <ListaEstadosTarjeta>
+    <item>
+      <codigo>DISABLED</codigo>
+      <value>0</value>
+      <descripcion>Deshabilitada</descripcion>
+    </item>
+    <item>
+      <codigo>DELIVERED</codigo>
+      <value>1</value>
+      <descripcion>Enviada</descripcion>
+    </item>
+    <item>
+      <codigo>ENABLED</codigo>
+      <value>2</value>
+      <descripcion>Habilitada</descripcion>
+    </item>
+    <item>
+      <codigo>USAGE_REQUESTED</codigo>
+      <value>3</value>
+      <descripcion>Uso Solicitado</descripcion>
+    </item>
+    <item>
+      <codigo>USED</codigo>
+      <value>4</value>
+      <descripcion>Usada</descripcion>
+    </item>
+    <item>
+      <codigo>BLOCKED</codigo>
+      <value>5</value>
+      <descripcion>Bloqueada</descripcion>
+    </item>
+    <item>
+      <codigo>DELETED</codigo>
+      <value>6</value>
+      <descripcion>Eliminada</descripcion>
+    </item>
+  </ListaEstadosTarjeta>
+  <ListaComentariosTarjeta>
+    <item>
+      <codigo>0</codigo>
+      <descripcion>Se cambió de Uso Solicitado a Habilitado</descripcion>
+    </item>
+    <item>
+      <codigo>1</codigo>
+      <descripcion>Se cambió de Habilitado a Bloqueado</descripcion>
+    </item>
+  </ListaComentariosTarjeta>
+  <listaBonosComprados>
+    <item>
+      <codigo>0</codigo>
+      <descripcion>- Seleccionar -</descripcion>
+    </item>
+    <item>
+      <codigo>1</codigo>
+      <descripcion>Saldo Voz Fidelización</descripcion>
+    </item>
+    <item>
+      <codigo>2</codigo>
+      <descripcion>Voice 1 Promo Account</descripcion>
+    </item>
+    <item>
+      <codigo>3</codigo>
+      <descripcion>Saldo SMS Fidelización</descripcion>
+    </item>
+    <item>
+      <codigo>4</codigo>
+      <descripcion>Saldo MMS</descripcion>
+    </item>
+    <item>
+      <codigo>5</codigo>
+      <descripcion>Vigencia Claro Directo</descripcion>
+    </item>
+    <item>
+      <codigo>6</codigo>
+      <descripcion>Saldo S/. Promo</descripcion>
+    </item>
+  </listaBonosComprados>
+  <listaBonosRegalados>
+    <item>
+      <codigo>0</codigo>
+      <descripcion>- Seleccionar -</descripcion>
+    </item>
+    <item>
+      <codigo>1</codigo>
+      <descripcion>Saldo SMS</descripcion>
+    </item>
+    <item>
+      <codigo>2</codigo>
+      <descripcion>Voice 2 Promo Account</descripcion>
+    </item>
+    <item>
+      <codigo>3</codigo>
+      <descripcion>Promo 1</descripcion>
+    </item>
+    <item>
+      <codigo>4</codigo>
+      <descripcion>Promo 2</descripcion>
+    </item>
+  </listaBonosRegalados>
+  <listaGrupoBolsas>
+    <item>
+      <codigo>0</codigo>
+      <descripcion>- Seleccionar -</descripcion>
+    </item>
+    <item>
+      <codigo>1</codigo>
+      <descripcion>Bonos Comprados</descripcion>
+    </item>
+    <item>
+      <codigo>2</codigo>
+      <descripcion>GPA</descripcion>
+    </item>
+    <item>
+      <codigo>3</codigo>
+      <descripcion>Bonos Regalados</descripcion>
+    </item>
+  </listaGrupoBolsas>
+  <ListaTipoCambioPackTG>
+    <item>
+      <codigo>Pack por Pack</codigo>
+      <descripcion>Pack por Pack</descripcion>
+    </item>
+    <item>
+      <codigo>TG</codigo>
+      <descripcion>TG</descripcion>
+    </item>
+    <item>
+      <codigo>DOA</codigo>
+      <descripcion>DOA</descripcion>
+    </item>
+
+  </ListaTipoCambioPackTG>
+  <ListaMotivoCambioPackTG>
+    <item>
+      <codigo>Reincidencia de Fallas</codigo>
+      <descripcion>Reincidencia de Fallas</descripcion>
+    </item>
+    <item>
+      <codigo>Falta de Seedstock</codigo>
+      <descripcion>Falta de Seedstock</descripcion>
+    </item>
+    <item>
+      <codigo>Demora en la Reparación</codigo>
+      <descripcion>Demora en la Reparación</descripcion>
+    </item>
+    <item>
+      <codigo>Tratamiento BB, HTC, QTEK, PC Card</codigo>
+      <descripcion>Tratamiento BB, HTC, QTEK, PC Card</descripcion>
+    </item>
+  </ListaMotivoCambioPackTG>
+  <ListaProblemas>
+    <item>
+      <codigo>-1</codigo>
+      <descripcion>-------Seleccionar Problema--------</descripcion>
+    </item>
+    <item>
+      <codigo>LNMNI</codigo>
+      <descripcion>Locución "Número marcado no existe" o "número inválido"</descripcion>
+    </item>
+    <item>
+      <codigo>SOS</codigo>
+      <descripcion>Aparece "S.0.S" o "Solo emergencia" en la pantalla</descripcion>
+    </item>
+    <item>
+      <codigo>RPRL</codigo>
+      <descripcion>Reitentos para realizar llamadas</descripcion>
+    </item>
+    <item>
+      <codigo>MPRE</codigo>
+      <descripcion>Se muestra en pantalla "Red no disponible", "error de red", etc.</descripcion>
+    </item>
+    <item>
+      <codigo>EIAR</codigo>
+      <descripcion>Escalamiento interno a RED</descripcion>
+    </item>
+    <item>
+      <codigo>EIAT</codigo>
+      <descripcion>Escalamiento interno a TI</descripcion>
+    </item>
+  </ListaProblemas>
+  <ListaProblemasMovil>
+    <item>
+      <codigo>-1</codigo>
+      <descripcion>-------Seleccionar Problema--------</descripcion>
+    </item>
+    <item>
+      <codigo>AEUE</codigo>
+      <descripcion>Asistencia en el uso del Equipo</descripcion>
+    </item>
+    <item>
+      <codigo>AUFA</codigo>
+      <descripcion>Asistencia en el uso de funciones adicionales</descripcion>
+    </item>
+    <item>
+      <codigo>EIAR</codigo>
+      <descripcion>Escalamiento interno a RED</descripcion>
+    </item>
+    <item>
+      <codigo>EIAT</codigo>
+      <descripcion>Escalamiento interno a TI</descripcion>
+    </item>
+    <item>
+      <codigo>ESAF</codigo>
+      <descripcion>Escalamiento al Fabricante</descripcion>
+    </item>
+  </ListaProblemasMovil>
+  <ListaProblemasVAS>
+    <item>
+      <codigo>-1</codigo>
+      <descripcion>-------Seleccionar Problema--------</descripcion>
+    </item>
+    <item>
+      <codigo>AEUS</codigo>
+      <descripcion>Asistencia en el uso del servicio</descripcion>
+    </item>
+    <item>
+      <codigo>AUFA</codigo>
+      <descripcion>Asistencia en el uso de funciones adicionales</descripcion>
+    </item>
+    <item>
+      <codigo>EIAR</codigo>
+      <descripcion>Escalamiento interno a RED</descripcion>
+    </item>
+    <item>
+      <codigo>EAPC</codigo>
+      <descripcion>Escalamiento al Proveedor de Contenidos</descripcion>
+    </item>
+  </ListaProblemasVAS>
+  <ListaProblemasClaro>
+    <item>
+      <codigo>-1</codigo>
+      <descripcion>-------Seleccionar Problema--------</descripcion>
+    </item>
+    <item>
+      <codigo>AEUS</codigo>
+      <descripcion>Asistencia en el uso del servicio</descripcion>
+    </item>
+    <item>
+      <codigo>AUFA</codigo>
+      <descripcion>Asistencia en el uso de funciones adicionales</descripcion>
+    </item>
+    <item>
+      <codigo>EIAR</codigo>
+      <descripcion>Escalamiento interno a RED</descripcion>
+    </item>
+  </ListaProblemasClaro>
+  <ListaProblemasEmpresa>
+    <item>
+      <codigo>-1</codigo>
+      <descripcion>-------Seleccionar Problema--------</descripcion>
+    </item>
+    <item>
+      <codigo>AEUS</codigo>
+      <descripcion>Asistencia en el uso del servicio</descripcion>
+    </item>
+    <item>
+      <codigo>EIAR</codigo>
+      <descripcion>Escalamiento interno a RED</descripcion>
+    </item>
+  </ListaProblemasEmpresa>
+  <ListaOperador>
+    <item>
+      <codigo>-1</codigo>
+      <descripcion>-------Seleccionar--------</descripcion>
+    </item>
+    <item>
+      <codigo>MO</codigo>
+      <descripcion>Movistar</descripcion>
+    </item>
+    <item>
+      <codigo>NE</codigo>
+      <descripcion>Nextel</descripcion>
+    </item>
+    <item>
+      <codigo>VI</codigo>
+      <descripcion>Viettel</descripcion>
+    </item>
+    <item>
+      <codigo>EN</codigo>
+      <descripcion>Entel</descripcion>
+    </item>
+    <item>
+      <codigo>OP</codigo>
+      <descripcion>Operador Extranjero</descripcion>
+    </item>
+  </ListaOperador>
+  <ListaCobertura>
+    <item>
+      <codigo>-1</codigo>
+      <descripcion>-------Seleccionar--------</descripcion>
+    </item>
+    <item>
+      <codigo>Indoor (Ambiente Interno)</codigo>
+      <descripcion>Indoor (Ambiente Interno)</descripcion>
+    </item>
+    <item>
+      <codigo>Outdoor (Ambiente Externo)</codigo>
+      <descripcion>Outdoor (Ambiente Externo)</descripcion>
+    </item>
+  </ListaCobertura>
+  <ListaContactabilidad>
+    <item>
+      <codigo>-1</codigo>
+      <descripcion>-------Seleccionar--------</descripcion>
+    </item>
+    <item>
+      <codigo>Se logró contacto</codigo>
+      <descripcion>Se logró contacto</descripcion>
+    </item>
+    <item>
+      <codigo>No se logró contacto</codigo>
+      <descripcion>No se logró contacto</descripcion>
+    </item>
+  </ListaContactabilidad>
+  <ListaResponsabilidad>
+    <item>
+      <codigo>-1</codigo>
+      <descripcion>-------Seleccionar--------</descripcion>
+    </item>
+    <item>
+      <codigo>Cliente</codigo>
+      <descripcion>Cliente</descripcion>
+    </item>
+    <item>
+      <codigo>Empresa</codigo>
+      <descripcion>Empresa</descripcion>
+    </item>
+  </ListaResponsabilidad>
+  <ListaSolucion>
+    <item>
+      <codigo>-1</codigo>
+      <descripcion>-------Seleccionar--------</descripcion>
+    </item>
+    <item>
+      <codigo>Solucionado</codigo>
+      <descripcion>Solucionado</descripcion>
+    </item>
+    <item>
+      <codigo>No solucionado</codigo>
+      <descripcion>No solucionado</descripcion>
+    </item>
+  </ListaSolucion>
+  <ListaConclusion>
+    <item>
+      <codigo>-1</codigo>
+      <descripcion>-------Seleccionar--------</descripcion>
+    </item>
+    <item>
+      <codigo>Pendiente de verificación interna</codigo>
+      <descripcion>Pendiente de verificación interna</descripcion>
+    </item>
+    <item>
+      <codigo>Se comprobaron los parámetros de la línea.</codigo>
+      <descripcion>Se comprobaron los parámetros de la línea.</descripcion>
+    </item>
+    <item>
+      <codigo>Se comprobaron los parámetros de RED.</codigo>
+      <descripcion>Se comprobaron los parámetros de RED.</descripcion>
+    </item>
+    <item>
+      <codigo>Se han programado medidas correctivas en los siguientes meses.</codigo>
+      <descripcion>Se han programado medidas correctivas en los siguientes meses.</descripcion>
+    </item>
+  </ListaConclusion>
+  <ListaAdicionales>
+    <item>
+      <codigo>-1</codigo>
+      <descripcion>---Seleccionar---</descripcion>
+    </item>
+    <item>
+      <codigo>1</codigo>
+      <descripcion>Casilla de voz</descripcion>
+    </item>
+    <item>
+      <codigo>2</codigo>
+      <descripcion>SMS</descripcion>
+    </item>
+    <item>
+      <codigo>3</codigo>
+      <descripcion>MMS</descripcion>
+    </item>
+    <item>
+      <codigo>4</codigo>
+      <descripcion>Mira quien es</descripcion>
+    </item>
+    <item>
+      <codigo>5</codigo>
+      <descripcion>Donde está</descripcion>
+    </item>
+    <item>
+      <codigo>6</codigo>
+      <descripcion>Quieren HABLARTE</descripcion>
+    </item>
+  </ListaAdicionales>
+  <ListaRed>
+    <item>
+      <codigo>-1</codigo>
+      <descripcion>-------Seleccionar--------</descripcion>
+    </item>
+    <item>
+      <codigo>1</codigo>
+      <descripcion>2G (GPRS, EDGE)</descripcion>
+    </item>
+    <item>
+      <codigo>2</codigo>
+      <descripcion>3G (UMTS, HSDPA)</descripcion>
+    </item>
+    <item>
+      <codigo>3</codigo>
+      <descripcion>4G (LTE)</descripcion>
+    </item>
+    <item>
+      <codigo>4</codigo>
+      <descripcion>Ninguna</descripcion>
+    </item>
+  </ListaRed>
+  <ListaRBT>
+    <item>
+      <codigo>-1</codigo>
+      <descripcion>--- Seleccionar ---</descripcion>
+    </item>
+    <item>
+      <codigo>ACT</codigo>
+      <descripcion>Activar</descripcion>
+    </item>
+    <item>
+      <codigo>DESACT</codigo>
+      <descripcion>Desactivar</descripcion>
+    </item>
+  </ListaRBT>
+  <ListaBloqueoLinea>
+    <item>
+      <codigo>BLOQ_ROB1</codigo>
+      <codigo2>ACP_BROB</codigo2>
+      <descripcion>Robo</descripcion>
+    </item>
+    <item>
+      <codigo>BLOQ_ROB2</codigo>
+      <codigo2>ACP_BROB</codigo2>
+      <descripcion>Hurto</descripcion>
+    </item>
+    <item>
+      <codigo>BLOQ_PER</codigo>
+      <codigo2>ACP_BROB</codigo2>
+      <descripcion>Pérdida</descripcion>
+    </item>
+    <item>
+      <codigo>BLOQ_FRA</codigo>
+      <codigo2>ACP_BFRA</codigo2>
+      <descripcion>Fraude</descripcion>
+    </item>
+    <item>
+      <codigo>BLOQ_PRO</codigo>
+      <codigo2>ACP_BPRO</codigo2>
+      <descripcion>Uso Prohibido</descripcion>
+    </item>
+    <item>
+      <codigo>BLOQ_DSC</codigo>
+      <codigo2>ACP_BDSC</codigo2>
+      <descripcion>Desconocimiento</descripcion>
+    </item>
+  </ListaBloqueoLinea>
+  <ListaEstadoPQD>
+    <item>
+      <codigo>NEST</codigo>
+      <descripcion>Anidado</descripcion>
+    </item>
+    <item>
+      <codigo>EXP</codigo>
+      <descripcion>Expirado</descripcion>
+    </item>
+    <item>
+      <codigo>ACT</codigo>
+      <descripcion>Activo</descripcion>
+    </item>
+    <item>
+      <codigo>ERR</codigo>
+      <descripcion>Error</descripcion>
+    </item>
+  </ListaEstadoPQD>
+  <ListaMsgBusqueda>
+    <item>
+      <codigo>1</codigo>
+      <descripcion>Consulta Teléfono/Servicio con Éxito.</descripcion>
+    </item>
+    <item>
+      <codigo>2</codigo>
+      <descripcion>Consulta Cod. Recarga con Éxito.</descripcion>
+    </item>
+    <item>
+      <codigo>3</codigo>
+      <descripcion>Consulta Nombre con Éxito.</descripcion>
+    </item>
+    <item>
+      <codigo>4</codigo>
+      <descripcion>Consulta Razón Social con Éxito.</descripcion>
+    </item>
+    <item>
+      <codigo>5</codigo>
+      <descripcion>Consulta Documento Identidad con Éxito.</descripcion>
+    </item>
+  </ListaMsgBusqueda>
+  <ListaConsCambioSIM>
+    <item>
+      <codigo>-1</codigo>
+      <descripcion>--- Seleccionar ---</descripcion>
+    </item>
+    <item>
+      <codigo>0</codigo>
+      <descripcion>Telefono</descripcion>
+    </item>
+    <item>
+      <codigo>1</codigo>
+      <descripcion>ICCID</descripcion>
+    </item>
+  </ListaConsCambioSIM>
+  <ListaEstadosServiciosProg>
+    <item>
+      <codigo>0</codigo>
+      <descripcion>-- Seleccionar --</descripcion>
+    </item>
+    <item>
+      <codigo>1</codigo>
+      <descripcion>PENDIENTE</descripcion>
+    </item>
+    <item>
+      <codigo>2</codigo>
+      <descripcion>EN PROCESO</descripcion>
+    </item>
+    <item>
+      <codigo>3</codigo>
+      <descripcion>EXITOSO</descripcion>
+    </item>
+    <item>
+      <codigo>4</codigo>
+      <descripcion>ERROR</descripcion>
+    </item>
+  </ListaEstadosServiciosProg>
+  <ListaAccionRoamingPrepago>
+    <item>
+      <codigo>-1</codigo>
+      <descripcion>-- Seleccionar --</descripcion>
+    </item>
+    <item>
+      <codigo>A</codigo>
+      <descripcion>Activar</descripcion>
+    </item>
+    <item>
+      <codigo>D</codigo>
+      <descripcion>Desactivar</descripcion>
+    </item>
+    <item>
+      <codigo>M</codigo>
+      <descripcion>Mantener Activación</descripcion>
+    </item>
+  </ListaAccionRoamingPrepago>
+  <ListarPlazoRoamingPrepago>
+    <item>
+      <codigo>-1</codigo>
+      <descripcion>--- Seleccionar ---</descripcion>
+    </item>
+    <item>
+      <codigo>D</codigo>
+      <descripcion>Determinado</descripcion>
+    </item>
+    <item>
+      <codigo>I</codigo>
+      <descripcion>Indeterminado</descripcion>
+    </item>
+  </ListarPlazoRoamingPrepago>
+  <ListarTipoSolRoamingPrepago>
+    <item>
+      <codigo>-1</codigo>
+      <descripcion>--- Seleccionar ---</descripcion>
+    </item>
+    <item>
+      <codigo>Ninguno</codigo>
+      <descripcion>Ninguno</descripcion>
+    </item>
+    <item>
+      <codigo>Presencial</codigo>
+      <descripcion>Presencial</descripcion>
+    </item>
+    <item>
+      <codigo>Telefónico</codigo>
+      <descripcion>Telefónico</descripcion>
+    </item>
+  </ListarTipoSolRoamingPrepago>
+  <ListaDesplegable>
+    <item>
+      <codigo>pac_Cap_Lima</codigo>
+      <descripcion>Lima</descripcion>
+    </item>
+    <item>
+      <codigo>pac_Cap_Norte</codigo>
+      <descripcion>Norte</descripcion>
+    </item>
+    <item>
+      <codigo>pac_Cap_Centro</codigo>
+      <descripcion>Centro</descripcion>
+    </item>
+    <item>
+      <codigo>pac_Cap_Sur</codigo>
+      <descripcion>Sur</descripcion>
+    </item>
+  </ListaDesplegable>
+  <ListaMotivoActivacionHG>
+    <item>
+      <codigo>-1</codigo>
+      <descripcion>--- Seleccionar ---</descripcion>
+    </item>
+    <item>
+      <codigo>1</codigo>
+      <descripcion>Fundado</descripcion>
+    </item>
+    <item>
+      <codigo>0</codigo>
+      <descripcion>Fidelización</descripcion>
+    </item>
+  </ListaMotivoActivacionHG>
+  <ListaTarjetas1533>
+    <item>
+      <codigo>TPC</codigo>
+      <descripcion>Teléfono Público Claro</descripcion>
+    </item>
+    <item>
+      <codigo>TPO</codigo>
+      <descripcion>Teléfono Público Otro Operador</descripcion>
+    </item>
+    <item>
+      <codigo>TFC</codigo>
+      <descripcion>Teléfono Fijo Claro</descripcion>
+    </item>
+    <item>
+      <codigo>TFO</codigo>
+      <descripcion>Teléfono Fijo Otro Operador</descripcion>
+    </item>
+  </ListaTarjetas1533>
+  <ListaRelacionTitular>
+    <item>
+      <codigo>Amigo</codigo>
+      <descripcion>Amigo</descripcion>
+    </item>
+    <item>
+      <codigo>Trabajador</codigo>
+      <descripcion>Trabajador</descripcion>
+    </item>
+    <item>
+      <codigo>Cuñado</codigo>
+      <descripcion>Cuñado</descripcion>
+    </item>
+    <item>
+      <codigo>Conviviente</codigo>
+      <descripcion>Conviviente</descripcion>
+    </item>
+    <item>
+      <codigo>Familiar</codigo>
+      <descripcion>Familiar</descripcion>
+    </item>
+    <item>
+      <codigo>Contacto Autorizado</codigo>
+      <descripcion>Contacto Autorizado</descripcion>
+    </item>
+    <item>
+      <codigo>Otros</codigo>
+      <descripcion>Otros</descripcion>
+    </item>
+  </ListaRelacionTitular>
+</ListaValores>

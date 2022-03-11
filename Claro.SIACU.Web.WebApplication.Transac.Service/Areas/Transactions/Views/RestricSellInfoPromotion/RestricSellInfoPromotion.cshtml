@@ -1,0 +1,239 @@
+﻿@using System.Web.Optimization;
+@model Claro.SIACU.Web.WebApplication.Transac.Service.Areas.Transactions.Models.Fixed.InfoPromotionModel
+@using Claro.SIACU.Web.WebApplication.Transac.Service.Areas.Transactions.Helpers.Fixed.InfoPromotionPrePostHelper
+<script type="text/javascript" src="~/Areas/Transactions/Content/Lib/BloqueoF12.js"></script>
+<div id="ContentRestricSellInfoPromotion">
+    <div class="panel panel-default" style="margin-left:15px; margin-right:15px">
+        <div class="panel-body">
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <label for="ddlSearchType" class="col-sm-4 control-label">Tipo de Búsqueda: </label>
+                    <div class="col-sm-2">
+                        <select class="form-control input-sm" id="ddlSearchType">
+                            <option value="0">--- Seleccionar ---</option>
+                            <option value="1">Línea móvil</option>
+                            <option value="2">Línea fija</option>
+                            <option value="3">Email</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <input id="txtCriteriaValue" type="text" class="input-sm form-control" placeholder="-- Ingresar Información --" />
+                    </div>
+                    <div class="col-sm-2">
+                        <button style="width: 100%" class="btn claro-btn-info btn-sm" id="btnBuscar" type="button">Buscar</button>
+                    </div>
+                </div>
+                <div id="tr_SearchType" class="form-group">
+                    <div class="col-md-6">
+                    </div>
+                    <div id="divCheckMasivo" class="col-sm-6">
+                        <div>
+                            <input id="chkUploadMassive" name="chkUploadMassive" type="checkbox" onclick="var div = document.getElementById('forCargaMasiva'); if (this.checked) { div.style.display = 'block'; } else { div.style.display = 'none' }">&nbsp;
+                            <label for="chkUploadMassive">Carga Masiva</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel ">
+                    <ul id="divDashboardTabs" class="nav nav-tabs" role="tablist" data-tabs="tabs">
+                        <li id="PrePostClientInfo" class="active text-center"><a>   Datos del Cliente   </a> </li>
+                        <li id="PrePostTitular" class="active text-center"><a href="#divpreposttitular" role="tab" data-toggle="tab" data-parent="divDashboardTabs"><span class="glyphicon glyphicon-th-large"></span> Titular</a></li>
+                        <li id="PrePostContacto" class="text-center hide"><a href="#divPrePostContacto" role="tab" data-toggle="tab" data-parent="divDashboardTabs"><span class="glyphicon glyphicon-tasks"></span> Contacto</a></li>
+
+                    </ul>
+                    <div class="tab-content">
+                        <div id="divpreposttitular" class="tab-pane fade active in" @*class="tab-pane active"*@>
+
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <label class="control-label label-red"> (*) Campos obligatorios</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label class="control-label">Nombres y Apellidos:</label>
+                                            <label class="control-label label-red">*</label>
+                                        </td>
+                                        <td><input id="txtClientNameTitular" type="text" class="form-control" /></td>
+                                        <td></td>
+                                        <td>
+                                            <label class="control-label">Nro de Teléfono:</label>
+                                        </td>
+                                        <td><input id="txtNumberPhoneTitular" type="text" class="input-sm form-control" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label class="control-label">Tipo de Documento:</label>
+                                            <label class="control-label label-red">*</label>
+                                        </td>
+                                        <td>
+                                            <select id="txtTypeDocTitular" class="input-sm form-control" ></select>
+                                        </td>
+                                        <td></td>
+                                        <td>
+                                            <label class="control-label">Correo:</label>
+                                        </td>
+                                        <td><input id="txtEmailTitular" type="text" class="input-sm form-control" /></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label class="control-label">Nro de Documento:</label>
+                                            <label class="control-label label-red">*</label>
+                                        </td>
+                                        <td><input id="txtNumberDocTitular" type="text" class="input-sm form-control" /></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                        <div id="divPrePostContacto" class="tab-pane fade " @*class="tab-pane active"*@>
+                            <table class="table table-condensed">
+                                <tbody>
+                                    <tr>
+                                        <td style="width:200px">
+                                            <label class="control-label label-red"> (*) Campos obligatorios</label>
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width:200px"></td>
+                                        <td>
+                                            <input type="radio" id='rb_RRLL' name="radio_contacto" />
+                                            <label class="control-label" for="rb_RRLL">RRLL</label>
+                                            <input type="radio" id='rb_CA' name="radio_contacto" />
+                                            <label class="control-label" for="rb_CA">ContactoAutorizado</label>
+                                            <input type="radio" id='rb_CP' name="radio_contacto" />
+                                            <label class="control-label" for="rb_CP">CartaPoderLegalizada</label>
+                                        </td>
+                                    </tr>
+                                 </tbody>
+                            </table>
+                            <table class="table table-condensed">
+                                <tbody>
+                                    <tr>
+                                        <td style="width:200px">
+                                            <label class="control-label">Nombres y Apellidos:</label>
+                                            <label class="control-label label-red">*</label>
+                                        </td>
+                                        <td><input id="txtContactName" type="text" class="input-sm form-control" /></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width:200px">
+                                            <label class="control-label">Tipo de Documento:</label>
+                                            <label class="control-label label-red">*</label>
+                                        </td>
+                                        <td>
+                                            <select id="txtTypeDocContacto" class="input-sm form-control"></select>
+                                        </td>
+                                        <td></td>
+                                        <td>
+                                            <label class="control-label">N° Documento:</label>
+                                            <label class="control-label label-red">*</label>
+                                        </td>
+                                        <td><input id="txtContactNumberDoc" type="text" class="input-sm form-control" /></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p id="spanMensajeNoCliente" class="bg-danger" style="color: #903535; padding: 10px 10px 10px 10px;"></p>
+                        <div class="table">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="table-responsive">
+                                        <label><b>Lista de estado de envío de promociones por canal:</b></label>
+                                        <table id="tblDataInfoPro" class="table  table-striped table-hover table-responsive claro-modal-tabla table-bordered">
+                                            <thead class="claro-bg-primary">
+                                                <tr>
+                                                    <th style="text-align:center">Medio</th>
+                                                    <th style="text-align: center">Permitido</th>
+                                                    <th style="text-align: center">No Permitido</th>
+                                                    <th id="columPendiente" style="text-align: center">Pendiente</th>
+                                                    <th style="text-align: center">Fecha</th>
+                                                    <th style="text-align: center">Canal</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr id="RowVoz">
+                                                    <th style="align-content:center">Voz</th>
+                                                    <th style="text-align: center; "><input type="radio" id='rb_voz_permitido' name="voz" /></th>
+                                                    <th style="text-align: center"><input type="radio" id='rb_voz_no_permitido' name="voz" /></th>
+                                                    <th id="columPendientevoz" style="text-align: center"><input type="radio" id='rb_voz_pendiente' name="voz" /></th>
+                                                    <th style="text-align: center"><label class="control-label" id="lblFechaVoz"></label></th>
+                                                    <th style="text-align: center"><label class="control-label" id="lblCanalVoz"></label></th>
+                                                </tr>
+                                                <tr id="RowSMS">
+                                                    <th style="align-content:center">SMS</th>
+                                                    <th style="text-align: center"><input type="radio" id='rb_sms_permitido' name="SMS" /></th>
+                                                    <th style="text-align: center"><input type="radio" id='rb_sms_no_permitido' name="SMS" /></th>
+                                                    <th id="columPendientesms" style="text-align: center"><input type="radio" id='rb_sms_pendiente' name="SMS" /></th>
+                                                    <th style="text-align: center"><label class="control-label" id="lblFechaSMS"></label></th>
+                                                    <th style="text-align: center"><label class="control-label" id="lblCanalSMS"></label></th>
+                                                </tr>
+                                                <tr id="RowCorreo">
+                                                    <th style="align-content:center">Correo</th>
+                                                    <th style="text-align: center"><input type="radio" id='rb_correo_permitido' name="Correo" /></th>
+                                                    <th style="text-align: center"><input type="radio" id='rb_correo_no_permitido' name="Correo" /></th>
+                                                    <th id="columPendientecorreo" style="text-align: center"><input type="radio" id='rb_correo_pendiente' name="Correo" /></th>
+                                                    <th style="text-align: center"><label class="control-label" id="lblFechaCorreo"></label></th>
+                                                    <th style="text-align: center"><label class="control-label" id="lblCanalCorreo"></label></th>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="content" class="panel-body">
+                    <div class="form-group" id="idHdnSendEmail">
+                        <label class="col-sm-2 control-label input-sm">Enviar Correo: <input class="" type="checkbox" id="chkSentEmail" value="Marcado"></label>
+                        <div class="col-sm-3">
+                            <input id="txtSendforEmail" type="text" class="form-control" placeholder="Email" name="txtSendforEmail" disabled>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Notas:</label>
+                        <div class="col-sm-8">
+                            <textarea id="txtNote" class="form-control" rows="5"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="container">
+                            <center>
+                                <button style="padding-left: 35px; padding-right: 35px; margin: 5px; " class="btn claro-btn-info btn-sm" id="btnSave" type="button">Guardar</button>
+                                <button style="padding-left: 35px; padding-right: 35px; margin: 5px; " class="btn claro-btn-info btn-sm" id="btnConstancia" type="button" disabled="disabled">Constancia</button>
+                                <button style="padding-left: 35px; padding-right: 35px; margin: 5px; " class="btn claro-btn-info btn-sm" id="btnClose" type="button">Cerrar</button>
+
+                            </center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @* wbc - inicio *@
+
+    <input type="hidden" id="hdidTipoDocumentoTitular" value="0" />
+    <input type="hidden" id="hdidTipoDocumentoContacto" value="0" />
+    <input type="hidden" id="hdidTipoCliente" value="" />
+    <input type="hidden" id="hdidTipoLinea" value="" />
+    <input type="hidden" id="hdidTipoOrigen" value="" />
+    <input type="hidden" id="hdCAC" value="" />
+    <input type="hidden" id="hdidCliente" value="0" />
+    <input type="hidden" id="hdidContacto" value="0" />
+    @* wbc - fin *@
+</div>
+
+@Scripts.Render("~/bundles/Transactions/RestricSellInfoPromotionLib")
+@Scripts.Render("~/bundles/Transactions/RestricSellInfoPromotion")
+

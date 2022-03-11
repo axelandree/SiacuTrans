@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:mes="http://claro.com.pe/SOA/message/consultalineacuentaws" xmlns:tns="http://claro.com.pe/SOA/service/ConsultaLineaCuentaWS" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ConsultaLineaCuentaWS" targetNamespace="http://claro.com.pe/SOA/service/ConsultaLineaCuentaWS" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema elementFormDefault="qualified">
+      <xsd:import schemaLocation="http://localhost:2121/ConsultaLineaCuentaCBIOWS/ebsConsultaLineaCuentaWSSB11?xsd=1" namespace="http://claro.com.pe/SOA/message/consultalineacuentaws" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="consultarLineaCuentaRequestMessage">
+    <wsdl:part name="consultarLineaCuentaRequest" element="mes:consultarLineaCuentaRequest" />
+  </wsdl:message>
+  <wsdl:message name="consultarLineaCuentaResponseMessage">
+    <wsdl:part name="consultarLineaCuentaResponse" element="mes:consultarLineaCuentaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ConsultaLineaCuentaWSPortType">
+    <wsdl:operation name="consultarLineaCuenta">
+      <wsdl:input message="tns:consultarLineaCuentaRequestMessage" />
+      <wsdl:output message="tns:consultarLineaCuentaResponseMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ConsultaLineaCuentaWSPortTypeSOAP11Binding" type="tns:ConsultaLineaCuentaWSPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="consultarLineaCuenta">
+      <soap:operation soapAction="http://claro.com.pe/SOA/service/ConsultaLineaCuentaWS/consultarLineaCuenta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="consultarLineaCuentaRequest" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="consultarLineaCuentaResponse" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ConsultaLineaCuentaWSService">
+    <wsdl:port name="ebsConsultaLineaCuentaWSSB11" binding="tns:ConsultaLineaCuentaWSPortTypeSOAP11Binding">
+      <soap:address location="http://localhost:2121/ConsultaLineaCuentaCBIOWS/ebsConsultaLineaCuentaWSSB11" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

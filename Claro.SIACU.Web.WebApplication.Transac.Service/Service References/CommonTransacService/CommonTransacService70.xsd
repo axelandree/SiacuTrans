@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetSaveAuditM" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetSaveAuditM" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd3" namespace="Claro" />
+  <xs:complexType name="SaveAuditMRequestCommon">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="Claro" base="q1:Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="vCuentaUsuario" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="vIpCliente" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="vIpServidor" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="vMonto" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="vNombreCliente" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="vNombreServidor" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="vServicio" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="vTelefono" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="vTexto" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="vTransaccion" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SaveAuditMRequestCommon" nillable="true" type="tns:SaveAuditMRequestCommon" />
+  <xs:complexType name="SaveAuditMResponseCommon">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="respuesta" type="xs:boolean" />
+      <xs:element minOccurs="0" name="vResultado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="vTransaccionResp" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SaveAuditMResponseCommon" nillable="true" type="tns:SaveAuditMResponseCommon" />
+</xs:schema>

@@ -1,0 +1,125 @@
+﻿.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 48px;
+    background-color: white;
+    box-shadow: 0 -1px 3px grey;
+}
+
+.footer-toolBar {
+    height: 100%;
+    display: inline-block;
+    width: 60%;
+}
+
+.footer-sidebar {
+    float: right;
+    height: 100%;
+    width: 40%;
+    display: inline-block;
+}
+
+.footer-sidebar-clock {
+    float: right;
+    height: 100%;
+    width: 90px;
+    text-align: center;
+    display: inline-block;
+    color: #757575;
+    padding: 7.2px;
+}
+
+    .footer-sidebar-clock > p {
+        padding: 0;
+        margin: 0;
+    }
+
+.footer-sidebar-mintray {
+    display: inline-block;
+    width: calc(100% - 90px);
+    height: 100%;
+    overflow: hidden;
+    left: 0;
+    top: 0;
+}
+
+    .footer-sidebar-mintray > ul {
+        text-align: center;
+        padding: 0px 2px;
+        height: 100%;
+    }
+
+        .footer-sidebar-mintray > ul > li {
+            display: inline-block;
+            height: 100%;
+        }
+
+            .footer-sidebar-mintray > ul > li > a {
+                display: block;
+                height: 100%;
+                padding: 15px 5px;
+                color: #757575;
+            }
+
+                .footer-sidebar-mintray > ul > li > a:hover {
+                    background-color: #757575;
+                    color: white;
+                }
+
+#carousel_container {
+    height: 100%;
+}
+
+.carousel-ul {
+    height: 100%;
+    padding: 0 10px;
+    position: relative;
+    left: -10px;
+    width: 9999px;
+}
+
+    .carousel-ul > li {
+        list-style: none;
+        display: inline-block;
+        height: 100%;
+    }
+
+        .carousel-ul > li > a {
+            display: block;
+            height: 100%;
+            padding: 15px 10px;
+            color: #757575;
+            margin-bottom: -4px;
+            cursor: pointer;
+            border: 0;
+        }
+
+            .carousel-ul > li > a:hover {
+                background-color: #757575;
+                color: white;
+                text-decoration: none;
+            }
+
+.carousel-inner {
+    height: 100%;
+    float: left;
+    width: 90%;
+    overflow: hidden;
+}
+
+.carousel-scroll {
+    color: #757575;
+    float: left;
+    padding: 15px 0;
+}
+
+    .carousel-scroll:hover {
+        background-color: #757575;
+        color: white;
+    }
+
+    .carousel-scroll > span {
+        cursor: pointer;     
+    }

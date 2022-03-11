@@ -1,0 +1,12 @@
+C:\NET\Framework\Claro.SAP\bin\Release\Claro.SAP.dll
+C:\NET\Framework\Claro.SAP\bin\Release\Claro.SAP.pdb
+C:\NET\Framework\Claro.SAP\bin\Release\Claro.Security.dll
+C:\NET\Framework\Claro.SAP\bin\Release\Claro.Web.dll
+C:\NET\Framework\Claro.SAP\bin\Release\sapnco.dll
+C:\NET\Framework\Claro.SAP\bin\Release\sapnco_utils.dll
+C:\NET\Framework\Claro.SAP\bin\Release\log4net.dll
+C:\NET\Framework\Claro.SAP\bin\Release\Claro.Security.pdb
+C:\NET\Framework\Claro.SAP\bin\Release\Claro.Web.pdb
+C:\NET\Framework\Claro.SAP\obj\Release\Claro.SAP.csprojResolveAssemblyReference.cache
+C:\NET\Framework\Claro.SAP\obj\Release\Claro.SAP.dll
+C:\NET\Framework\Claro.SAP\obj\Release\Claro.SAP.pdb

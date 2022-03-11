@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Prepaid" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Prepaid" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfRecharge">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Recharge" nillable="true" type="tns:Recharge" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRecharge" nillable="true" type="tns:ArrayOfRecharge" />
+  <xs:complexType name="Recharge">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BOLSA_RECARGA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CREDITO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DES_TIPO_RECARGA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DETALLE_RECARGA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FECHA_RECARGA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MONTO_EFECTIVO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MONTO_NOMINAL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SALDO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TIPO_RECARGA" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Recharge" nillable="true" type="tns:Recharge" />
+  <xs:complexType name="ArrayOfIncomingCallDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IncomingCallDetail" nillable="true" type="tns:IncomingCallDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIncomingCallDetail" nillable="true" type="tns:ArrayOfIncomingCallDetail" />
+  <xs:complexType name="IncomingCallDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Date" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Duration" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NroOrd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumberA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumberB" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StartHour" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IncomingCallDetail" nillable="true" type="tns:IncomingCallDetail" />
+  <xs:complexType name="ArrayOfCall">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Call" nillable="true" type="tns:Call" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCall" nillable="true" type="tns:ArrayOfCall" />
+  <xs:complexType name="Call">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BOLSA_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="COMPRADO_REGALADO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CONSUMO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DESCRIPCION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DESTINO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DURACION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FECHA_HORA" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="GRUPO_DE_COBRO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IMEI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OPERADOR" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PLAN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PROMOCION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ROAMING" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SALDO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TELEFONO_DESTINO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TIPO_DE_RED" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TIPO_DE_TRAFICO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TIPO_EVENTO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ZONA_TARIFARIA" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Call" nillable="true" type="tns:Call" />
+</xs:schema>

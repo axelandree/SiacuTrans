@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://email.soap.ngage.comviva.com/" xmlns:sheader="http://claro.com.pe/generic/messageFormat/v1.0/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="EmailServiceImplService" targetNamespace="http://email.soap.ngage.comviva.com/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="../esquemas/enviarNotificacionEmail.xsd" namespace="http://email.soap.ngage.comviva.com/" />
+      <xsd:import schemaLocation="../esquemas/HeaderGeneric_v1.0.xsd" namespace="http://claro.com.pe/generic/messageFormat/v1.0/" />
+      <xsd:import schemaLocation="../esquemas/CommonsException.xsd" namespace="http://claro.com.pe/eai/ebs/xsd/CommonsException" />
+    </xsd:schema>
+  </types>
+  <message name="emailSubmitRequest">
+    <part name="emailSubmitRequest" element="tns:EmailSubmitRequest" />
+    <part name="TransactionID_Header" element="tns:TransactionID" />
+  </message>
+  <message name="emailSubmitRequestResponse">
+    <part name="emailSubmitResponse" element="tns:EmailSubmitResponse" />
+    <part name="TransactionID_Header" element="tns:TransactionID" />
+  </message>
+  <message name="emailSubmitResponse">
+    <part name="emailSubmitResponse" element="tns:EmailSubmitResponse" />
+  </message>
+  <message name="HeaderRequest">
+    <part name="HeaderRequest" element="sheader:HeaderRequest" />
+  </message>
+  <message name="HeaderResponse">
+    <part name="HeaderResponse" element="sheader:HeaderResponse" />
+  </message>
+  <portType name="EmailService">
+    <operation name="emailSubmitRequest" parameterOrder="emailSubmitRequest TransactionID_Header">
+      <input wsam:Action="http://email.soap.ngage.comviva.com/EmailService/emailSubmitRequestRequest" message="tns:emailSubmitRequest" />
+      <output wsam:Action="http://email.soap.ngage.comviva.com/EmailService/emailSubmitRequestResponse" message="tns:emailSubmitRequestResponse" />
+    </operation>
+    <operation name="emailSubmitResponse">
+      <input wsam:Action="http://email.soap.ngage.comviva.com/EmailService/emailSubmitResponse" message="tns:emailSubmitResponse" />
+    </operation>
+  </portType>
+  <binding name="EmailServiceImplPortBinding" type="tns:EmailService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="emailSubmitRequest">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="emailSubmitRequest" />
+        <soap:header message="tns:emailSubmitRequest" part="TransactionID_Header" use="literal" />
+        <soap:header message="tns:HeaderRequest" part="HeaderRequest" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="emailSubmitResponse" />
+        <soap:header message="tns:emailSubmitRequestResponse" part="TransactionID_Header" use="literal" />
+        <soap:header message="tns:HeaderResponse" part="HeaderResponse" use="literal" />
+      </output>
+    </operation>
+    <operation name="emailSubmitResponse">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+    </operation>
+  </binding>
+  <service name="EmailServiceImplService">
+    <port name="EmailServiceImplPort" binding="tns:EmailServiceImplPortBinding">
+      <soap:address location="http://172.17.51.132:9097/ws/email" />
+    </port>
+  </service>
+</definitions>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetUploadDocumentOnBase" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetUploadDocumentOnBase" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd3" namespace="Claro" />
+  <xs:complexType name="UploadDocumentOnBaseRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="Claro" base="q1:Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="fecha" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="hora" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="idInterfazTCRM" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="idTransaccion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ipAplicacion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="listaDocumentos" nillable="true" type="tns:E_DocumentRequest" />
+          <xs:element minOccurs="0" name="nombreAplicacion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="parametrosRequest" nillable="true" type="tns:ParametersRequest" />
+          <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="usuarioAplicacion" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UploadDocumentOnBaseRequest" nillable="true" type="tns:UploadDocumentOnBaseRequest" />
+  <xs:complexType name="E_DocumentRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodigoOnBase" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodigoTCRM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ListOnBase" nillable="true" type="tns:ArrayOfE_KeywordRequest" />
+      <xs:element minOccurs="0" name="ListaMetadatos" nillable="true" type="tns:ArrayOfE_KeywordRequest" />
+      <xs:element minOccurs="0" name="Seq" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoDocumentoOnBase" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="abytArchivo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strExtension" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="E_DocumentRequest" nillable="true" type="tns:E_DocumentRequest" />
+  <xs:complexType name="ArrayOfE_KeywordRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="E_KeywordRequest" nillable="true" type="tns:E_KeywordRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfE_KeywordRequest" nillable="true" type="tns:ArrayOfE_KeywordRequest" />
+  <xs:complexType name="E_KeywordRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Campo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Valor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="codigoCampo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="longitud" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="E_KeywordRequest" nillable="true" type="tns:E_KeywordRequest" />
+  <xs:complexType name="ParametersRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ListaRequestOpcional" nillable="true" type="tns:ListOptionalRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ParametersRequest" nillable="true" type="tns:ParametersRequest" />
+  <xs:complexType name="ListOptionalRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="objetoRequestOpcional" nillable="true" type="tns:ArrayOfObjetOptionalRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ListOptionalRequest" nillable="true" type="tns:ListOptionalRequest" />
+  <xs:complexType name="ArrayOfObjetOptionalRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ObjetOptionalRequest" nillable="true" type="tns:ObjetOptionalRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfObjetOptionalRequest" nillable="true" type="tns:ArrayOfObjetOptionalRequest" />
+  <xs:complexType name="ObjetOptionalRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="campo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="valor" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ObjetOptionalRequest" nillable="true" type="tns:ObjetOptionalRequest" />
+  <xs:complexType name="UploadDocumentOnBaseResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="E_Document" nillable="true" type="tns:E_DocumentResponse" />
+      <xs:element minOccurs="0" name="fecha" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hora" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="idInterfazTCRM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="idTransaccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ipServerResponse" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UploadDocumentOnBaseResponse" nillable="true" type="tns:UploadDocumentOnBaseResponse" />
+  <xs:complexType name="E_DocumentResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodigoOnBase" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodigoTCRM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fecha" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Hora" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Seq" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="E_DocumentResponse" nillable="true" type="tns:E_DocumentResponse" />
+</xs:schema>

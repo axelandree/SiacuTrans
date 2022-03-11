@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="http://claro.com.pe/eai/ws/postventa/gestionservadidescuentows/types" xmlns:base="http://claro.com.pe/eai/ws/baseschema" elementFormDefault="qualified" targetNamespace="http://claro.com.pe/eai/ws/postventa/gestionservadidescuentows/types" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import schemaLocation="BaseSchema.xsd" namespace="http://claro.com.pe/eai/ws/baseschema" />
+  <xsd:element name="registrarDescHFCRequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditRequest" type="base:auditRequestType" />
+        <xsd:element name="codigoAplicacion" type="xsd:string" />
+        <xsd:element name="fechaProgramacion" type="xsd:date" />
+        <xsd:element name="coId" type="xsd:string" />
+        <xsd:element name="codCliente" type="xsd:string" />
+        <xsd:element name="DesServicioPVU" type="xsd:string" />
+        <xsd:element name="telefono" type="xsd:string" />
+        <xsd:element name="coSer" type="xsd:string" />
+        <xsd:element name="emailUsuarioApp" type="xsd:string" />
+        <xsd:element name="desCoSer" type="xsd:string" />
+        <xsd:element name="nroCuenta" type="xsd:string" />
+        <xsd:element name="cicloFac" type="xsd:string" />
+        <xsd:element name="aplicaDesc" type="xsd:string" />
+        <xsd:element name="objId" type="xsd:string" />
+        <xsd:element name="siteObjId" type="xsd:string" />
+        <xsd:element name="idCampana" type="xsd:int" />
+        <xsd:element name="MontoDesc" type="xsd:double" />
+        <xsd:element name="PeriodoDesc" type="xsd:int" />
+        <xsd:element name="FlagDesc" type="xsd:int" />
+        <xsd:element name="SnCode" type="xsd:int" />
+        <xsd:element name="notas" type="xsd:string" />
+        <xsd:element name="destinatarioCorreo" type="xsd:string" />
+        <xsd:element name="codigoEmpleado" type="xsd:string" />
+        <xsd:element name="codigoSistema" type="xsd:string" />
+        <xsd:element name="NroDocumento" type="xsd:string" />
+        <xsd:element name="PlanCliente" type="xsd:string" />
+        <xsd:element name="NomCliente" type="xsd:string" />
+        <xsd:element name="ApeCliente" type="xsd:string" />
+        <xsd:element name="DescDAC" type="xsd:string" />
+        <xsd:element name="DescTipoDoc" type="xsd:string" />
+        <xsd:element name="TipoCliente" type="xsd:string" />
+        <xsd:element name="NomClienteCompleto" type="xsd:string" />
+        <xsd:element name="NroCliente" type="xsd:string" />
+        <xsd:element name="NomResponsableLegal" type="xsd:string" />
+        <xsd:element name="CostoServiciosinIGV" type="xsd:string" />
+        <xsd:element name="CostoServicioconIGV" type="xsd:string" />
+        <xsd:element minOccurs="1" maxOccurs="1" name="listaRequestOpcional" type="base:parametrosType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="registrarDescHFCResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditResponse" type="base:auditResponseType" />
+        <xsd:element minOccurs="1" maxOccurs="1" name="listaResponseOpcional" type="base:parametrosType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="registrarDescLTERequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditRequest" type="base:auditRequestType" />
+        <xsd:element name="fechaProgramacion" type="xsd:date" />
+        <xsd:element name="customerId" type="xsd:string" />
+        <xsd:element name="coId" type="xsd:string" />
+        <xsd:element name="msisdn" type="xsd:string" />
+        <xsd:element name="coSer" type="xsd:string" />
+        <xsd:element name="desCoSer" type="xsd:string" />
+        <xsd:element name="nroCuenta" type="xsd:string" />
+        <xsd:element name="cicloFac" type="xsd:string" />
+        <xsd:element name="aplicaDesc" type="xsd:string" />
+        <xsd:element name="objId" type="xsd:string" />
+        <xsd:element name="siteObjId" type="xsd:string" />
+        <xsd:element name="idCampana" type="xsd:int" />
+        <xsd:element name="MontoDesc" type="xsd:double" />
+        <xsd:element name="PeriodoDesc" type="xsd:int" />
+        <xsd:element name="FlagDesc" type="xsd:int" />
+        <xsd:element name="SnCode" type="xsd:int" />
+        <xsd:element name="notas" type="xsd:string" />
+        <xsd:element name="destinatarioCorreo" type="xsd:string" />
+        <xsd:element name="codigoEmpleado" type="xsd:string" />
+        <xsd:element name="codigoSistema" type="xsd:string" />
+        <xsd:element name="NroDocumento" type="xsd:string" />
+        <xsd:element name="PlanCliente" type="xsd:string" />
+        <xsd:element name="NomCliente" type="xsd:string" />
+        <xsd:element name="ApeCliente" type="xsd:string" />
+        <xsd:element name="DescDAC" type="xsd:string" />
+        <xsd:element name="DescTipoDoc" type="xsd:string" />
+        <xsd:element name="TipoCliente" type="xsd:string" />
+        <xsd:element name="NomClienteCompleto" type="xsd:string" />
+        <xsd:element name="NroCliente" type="xsd:string" />
+        <xsd:element name="NomResponsableLegal" type="xsd:string" />
+        <xsd:element name="CostoServiciosinIGV" type="xsd:string" />
+        <xsd:element name="CostoServicioconIGV" type="xsd:string" />
+        <xsd:element minOccurs="1" maxOccurs="1" name="listaRequestOpcional" type="base:parametrosType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="registrarDescLTEResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditResponse" type="base:auditResponseType" />
+        <xsd:element minOccurs="1" maxOccurs="1" name="listaResponseOpcional" type="base:parametrosType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s0:definitions xmlns:s2="java:pe.com.claro.siacpostpago.exceptions" xmlns:s1="http://pe/com/claro/siacpostpago/ws" xmlns:s3="http://schemas.xmlsoap.org/wsdl/soap/" xmlns="" name="SIACPostpagoTxWSServiceDefinitions" targetNamespace="http://pe/com/claro/siacpostpago/ws" xmlns:s0="http://schemas.xmlsoap.org/wsdl/">
+  <s0:types>
+    <schema xmlns:tns="http://claro.com/SIACPostpago/DesbloqueaContrato.xsd" elementFormDefault="qualified" targetNamespace="http://claro.com/SIACPostpago/DesbloqueaContrato.xsd" xmlns="http://www.w3.org/2001/XMLSchema">
+      <element name="bscs_DesbloqueaContratoRequest">
+        <annotation>
+          <documentation>tim111_pkg_acciones.sp_contract_unblock</documentation>
+        </annotation>
+        <complexType>
+          <sequence>
+            <element name="p_coid" type="int" />
+            <element name="p_tickler_code" type="string" />
+            <element name="p_username" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+    </schema>
+    <schema xmlns:tns="http://claro.com/SIACPostpago/bscs_cambioNombreRequest.xsd" elementFormDefault="qualified" targetNamespace="http://claro.com/SIACPostpago/bscs_cambioNombreRequest.xsd" xmlns="http://www.w3.org/2001/XMLSchema">
+      <element name="bscs_cambioNombreRequest">
+        <annotation>
+          <documentation>pp005_siac_trx.sp_cambio_nombre</documentation>
+        </annotation>
+        <complexType>
+          <sequence>
+            <element name="p_CustomerID" type="int" />
+            <element minOccurs="0" name="p_Email" type="string" />
+            <element minOccurs="0" name="p_RazonSocial" type="string" />
+            <element minOccurs="0" name="p_Nombres" type="string" />
+            <element minOccurs="0" name="p_Apellido" type="string" />
+            <element minOccurs="0" name="p_dniruc" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+    </schema>
+    <schema xmlns:tns="http://claro.com/SIACPostpago/bscs_cambioDireccionPostal_response.xsd" elementFormDefault="qualified" targetNamespace="http://claro.com/SIACPostpago/bscs_cambioDireccionPostal_response.xsd" xmlns="http://www.w3.org/2001/XMLSchema">
+      <element name="bscs_cambioDireccionPostal_response">
+        <annotation>
+          <documentation>pp005_siac_trx.sp_cambio_direccion_postal</documentation>
+        </annotation>
+        <complexType>
+          <sequence>
+            <element name="p_result" type="int" />
+          </sequence>
+        </complexType>
+      </element>
+    </schema>
+    <schema xmlns:tns="http://claro.com/SIACPostpago/activaTriacion" elementFormDefault="qualified" targetNamespace="http://claro.com/SIACPostpago/activaTriacion" xmlns="http://www.w3.org/2001/XMLSchema">
+      <element name="activaTriacionResponse">
+        <annotation>
+          <documentation>pp005_siac_trx.sp_activa_triacion</documentation>
+        </annotation>
+        <complexType>
+          <sequence>
+            <element name="respuesta" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+    </schema>
+    <schema xmlns:tns="http://claro.com/SIACPostpago/bscs_cambioDatosMenoresResponse.xsd" elementFormDefault="qualified" targetNamespace="http://claro.com/SIACPostpago/bscs_cambioDatosMenoresResponse.xsd" xmlns="http://www.w3.org/2001/XMLSchema">
+      <element name="bscs_cambioDatosMenoresResponse">
+        <annotation>
+          <documentation>pp005_siac_trx.sp_cambio_nombre</documentation>
+        </annotation>
+        <complexType>
+          <sequence>
+            <element name="P_Result" type="int" />
+          </sequence>
+        </complexType>
+      </element>
+    </schema>
+    <schema xmlns:tns="http://claro.com/SIACPostpago/bscs_cambioDireccionPostal_request.xsd" elementFormDefault="qualified" targetNamespace="http://claro.com/SIACPostpago/bscs_cambioDireccionPostal_request.xsd" xmlns="http://www.w3.org/2001/XMLSchema">
+      <element name="bscs_cambioDireccionPostal_request">
+        <annotation>
+          <documentation>pp005_siac_trx.sp_cambio_direccion_postal</documentation>
+        </annotation>
+        <complexType>
+          <sequence>
+            <element name="p_CustomerID" type="int" />
+            <element minOccurs="0" name="p_Direccion" type="string" />
+            <element minOccurs="0" name="p_NotasDireccion" type="string" />
+            <element minOccurs="0" name="p_Distrito" type="string" />
+            <element minOccurs="0" name="p_Provincia" type="string" />
+            <element minOccurs="0" name="p_CodigoPostal" type="string" />
+            <element minOccurs="0" name="p_Departamento" type="string" />
+            <element minOccurs="0" name="p_Pais" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+    </schema>
+    <schema xmlns:tns="http://claro.com/SIACPostpago/BloqueaContratoResponse" elementFormDefault="qualified" targetNamespace="http://claro.com/SIACPostpago/BloqueaContratoResponse" xmlns="http://www.w3.org/2001/XMLSchema">
+      <element name="BloqueaContratoResponse">
+        <annotation>
+          <documentation>tim111_pkg_acciones.sp_contract_block</documentation>
+        </annotation>
+        <complexType>
+          <sequence>
+            <element name="respuesta" type="int" />
+          </sequence>
+        </complexType>
+      </element>
+    </schema>
+    <schema xmlns:tns="http://claro.com/SIACPostpago/BloqueaContratoRequest" elementFormDefault="qualified" targetNamespace="http://claro.com/SIACPostpago/BloqueaContratoRequest" xmlns="http://www.w3.org/2001/XMLSchema">
+      <element name="BloqueaContratoRequest">
+        <annotation>
+          <documentation>tim111_pkg_acciones.sp_contract_block</documentation>
+        </annotation>
+        <complexType>
+          <sequence>
+            <element name="p_co_id" type="int" />
+            <element name="p_tickler_code" type="string" />
+            <element name="p_tickler_des" type="string" />
+            <element name="p_username" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+    </schema>
+    <schema xmlns:tns="http://claro.com/SIACPostpago/listarTriaciones" elementFormDefault="qualified" targetNamespace="http://claro.com/SIACPostpago/listarTriaciones" xmlns="http://www.w3.org/2001/XMLSchema">
+      <element name="listarTriacionesResponse">
+        <annotation>
+          <documentation>pp005_siac_trx.sp_listar_triaciones</documentation>
+        </annotation>
+        <complexType>
+          <sequence>
+            <element name="error" type="string" />
+            <element minOccurs="0" maxOccurs="unbounded" name="listarTriaciones" type="tns:listarTriaciones" />
+          </sequence>
+        </complexType>
+      </element>
+      <complexType name="listarTriaciones">
+        <sequence>
+          <element name="flag_campania" type="int" />
+          <element name="tipo_triacion" type="string" />
+          <element name="trios_on" type="int" />
+          <element name="porcentaje_on" type="int" />
+          <element name="trios_off" type="int" />
+          <element name="porcentaje_off" type="int" />
+          <element name="flag" type="string" />
+          <element name="Cod_Tipo_Triacion" type="string" />
+        </sequence>
+      </complexType>
+    </schema>
+    <schema xmlns:tns="http://claro.com/SIACPostpago/DesbloqueaContratoResponse.xsd" elementFormDefault="qualified" targetNamespace="http://claro.com/SIACPostpago/DesbloqueaContratoResponse.xsd" xmlns="http://www.w3.org/2001/XMLSchema">
+      <element name="bscs_DesbloqueaContratoResponse">
+        <annotation>
+          <documentation>tim111_pkg_acciones.sp_contract_unblock</documentation>
+        </annotation>
+        <complexType>
+          <sequence>
+            <element name="p_request_id" type="int" />
+          </sequence>
+        </complexType>
+      </element>
+    </schema>
+    <schema xmlns:tns="http://claro.com/SIACPostpago/bscs_cambioDatosMenoresRequest.xsd" elementFormDefault="qualified" targetNamespace="http://claro.com/SIACPostpago/bscs_cambioDatosMenoresRequest.xsd" xmlns="http://www.w3.org/2001/XMLSchema">
+      <element name="bscs_cambioDatosMenoresRequest">
+        <annotation>
+          <documentation>pp005_siac_trx.sp_cambio_nombre</documentation>
+        </annotation>
+        <complexType>
+          <sequence>
+            <element name="p_CustomerID" type="int" />
+            <element minOccurs="0" name="p_cargo" type="string" />
+            <element minOccurs="0" name="p_telefono" type="string" />
+            <element minOccurs="0" name="p_celular" type="string" />
+            <element minOccurs="0" name="p_fax" type="string" />
+            <element minOccurs="0" name="p_email" type="string" />
+            <element minOccurs="0" name="p_nombrecomercial" type="string" />
+            <element minOccurs="0" name="p_contactocliente" type="string" />
+            <element minOccurs="0" name="p_fechanacimiento" type="dateTime" />
+            <element minOccurs="0" name="p_nacionalidad" nillable="true" type="int" />
+            <element minOccurs="0" name="p_sexo" type="string" />
+            <element minOccurs="0" default="-1" name="p_estadocivil" nillable="true" type="int" />
+          </sequence>
+        </complexType>
+      </element>
+    </schema>
+    <schema xmlns:tns="http://claro.com/SIACPostpago/listarTicklers" elementFormDefault="qualified" targetNamespace="http://claro.com/SIACPostpago/listarTicklers" xmlns="http://www.w3.org/2001/XMLSchema">
+      <element name="listarTicklersResponse">
+        <annotation>
+          <documentation>pp005_siac_trx.sp_listar_ticklers</documentation>
+        </annotation>
+        <complexType>
+          <sequence>
+            <element name="resultado" type="string" />
+            <element minOccurs="0" maxOccurs="unbounded" name="listarTicklers" type="tns:listarTicklers" />
+          </sequence>
+        </complexType>
+      </element>
+      <complexType name="listarTicklers">
+        <sequence>
+          <element name="tickler_number" type="int" />
+          <element name="created_date" type="dateTime" />
+          <element name="created_by" type="string" />
+          <element name="tickler_code" type="string" />
+          <element name="tickler_status" type="string" />
+          <element name="long_description" type="string" />
+        </sequence>
+      </complexType>
+    </schema>
+    <schema xmlns:tns="http://claro.com/SIACPostpago/bscs_cambioNombreResponse.xsd" elementFormDefault="qualified" targetNamespace="http://claro.com/SIACPostpago/bscs_cambioNombreResponse.xsd" xmlns="http://www.w3.org/2001/XMLSchema">
+      <element name="bscs_cambioNombreResponse">
+        <annotation>
+          <documentation>pp005_siac_trx.sp_cambio_nombre</documentation>
+        </annotation>
+        <complexType>
+          <sequence>
+            <element name="p_return" type="int" />
+          </sequence>
+        </complexType>
+      </element>
+    </schema>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="java:pe.com.claro.siacpostpago.exceptions" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="java:java.lang" />
+      <xs:complexType name="SIACPoException" />
+      <xs:element xmlns:java="java:pe.com.claro.siacpostpago.exceptions" name="SIACPoException" type="java:SIACPoException" />
+    </xs:schema>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="java:java.lang" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:complexType name="Throwable" />
+    </xs:schema>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://pe/com/claro/siacpostpago/ws" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://claro.com/SIACPostpago/activaTriacion" />
+      <xs:import namespace="http://claro.com/SIACPostpago/bscs_cambioDireccionPostal_response.xsd" />
+      <xs:import namespace="http://claro.com/SIACPostpago/DesbloqueaContrato.xsd" />
+      <xs:import namespace="http://claro.com/SIACPostpago/BloqueaContratoResponse" />
+      <xs:import namespace="http://claro.com/SIACPostpago/bscs_cambioNombreResponse.xsd" />
+      <xs:import namespace="http://claro.com/SIACPostpago/BloqueaContratoRequest" />
+      <xs:import namespace="http://claro.com/SIACPostpago/listarTicklers" />
+      <xs:import namespace="http://claro.com/SIACPostpago/bscs_cambioDatosMenoresRequest.xsd" />
+      <xs:import namespace="http://claro.com/SIACPostpago/DesbloqueaContratoResponse.xsd" />
+      <xs:import namespace="http://claro.com/SIACPostpago/listarTriaciones" />
+      <xs:import namespace="http://claro.com/SIACPostpago/bscs_cambioDireccionPostal_request.xsd" />
+      <xs:import namespace="http://claro.com/SIACPostpago/bscs_cambioDatosMenoresResponse.xsd" />
+      <xs:import namespace="http://claro.com/SIACPostpago/bscs_cambioNombreRequest.xsd" />
+      <xs:element name="DesbloquearContrato">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:des="http://claro.com/SIACPostpago/DesbloqueaContrato.xsd" ref="des:bscs_DesbloqueaContratoRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DesbloquearContratoResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:des="http://claro.com/SIACPostpago/DesbloqueaContratoResponse.xsd" ref="des:bscs_DesbloqueaContratoResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="listarTriaciones">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="p_coid" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="listarTriacionesResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:lis="http://claro.com/SIACPostpago/listarTriaciones" ref="lis:listarTriacionesResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="cambioNombre">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:bscs="http://claro.com/SIACPostpago/bscs_cambioNombreRequest.xsd" ref="bscs:bscs_cambioNombreRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="cambioNombreResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:bscs="http://claro.com/SIACPostpago/bscs_cambioNombreResponse.xsd" ref="bscs:bscs_cambioNombreResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="BloquearContrato">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:bloq="http://claro.com/SIACPostpago/BloqueaContratoRequest" ref="bloq:BloqueaContratoRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="BloquearContratoResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:bloq="http://claro.com/SIACPostpago/BloqueaContratoResponse" ref="bloq:BloqueaContratoResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ActivaTriacion">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="p_coid" type="xs:string" />
+            <xs:element name="p_trama" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ActivaTriacionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:act="http://claro.com/SIACPostpago/activaTriacion" ref="act:activaTriacionResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="actualizaDatosMenores">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:bscs="http://claro.com/SIACPostpago/bscs_cambioDatosMenoresRequest.xsd" ref="bscs:bscs_cambioDatosMenoresRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="actualizaDatosMenoresResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:bscs="http://claro.com/SIACPostpago/bscs_cambioDatosMenoresResponse.xsd" ref="bscs:bscs_cambioDatosMenoresResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="EjecutaTriacion">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="p_dn_num" type="xs:string" />
+            <xs:element name="p_fideliza" type="xs:int" />
+            <xs:element name="p_cod_trim" type="xs:string" />
+            <xs:element name="p_trama" type="xs:string" />
+            <xs:element name="p_accion" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="EjecutaTriacionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:act="http://claro.com/SIACPostpago/activaTriacion" ref="act:activaTriacionResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="listarTicklers">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="p_coid" type="xs:string" />
+            <xs:element name="p_trama" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="listarTicklersResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:lis="http://claro.com/SIACPostpago/listarTicklers" ref="lis:listarTicklersResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="cambioDireccionPostal">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:bscs="http://claro.com/SIACPostpago/bscs_cambioDireccionPostal_request.xsd" ref="bscs:bscs_cambioDireccionPostal_request" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="cambioDireccionPostalResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:bscs="http://claro.com/SIACPostpago/bscs_cambioDireccionPostal_response.xsd" ref="bscs:bscs_cambioDireccionPostal_response" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </s0:types>
+  <s0:message name="DesbloquearContrato">
+    <s0:part name="parameters" element="s1:DesbloquearContrato" />
+  </s0:message>
+  <s0:message name="DesbloquearContratoResponse">
+    <s0:part name="parameters" element="s1:DesbloquearContratoResponse" />
+  </s0:message>
+  <s0:message name="SIACPoException">
+    <s0:part name="SIACPoException" element="s2:SIACPoException" />
+  </s0:message>
+  <s0:message name="listarTriaciones">
+    <s0:part name="parameters" element="s1:listarTriaciones" />
+  </s0:message>
+  <s0:message name="listarTriacionesResponse">
+    <s0:part name="parameters" element="s1:listarTriacionesResponse" />
+  </s0:message>
+  <s0:message name="cambioNombre">
+    <s0:part name="parameters" element="s1:cambioNombre" />
+  </s0:message>
+  <s0:message name="cambioNombreResponse">
+    <s0:part name="parameters" element="s1:cambioNombreResponse" />
+  </s0:message>
+  <s0:message name="BloquearContrato">
+    <s0:part name="parameters" element="s1:BloquearContrato" />
+  </s0:message>
+  <s0:message name="BloquearContratoResponse">
+    <s0:part name="parameters" element="s1:BloquearContratoResponse" />
+  </s0:message>
+  <s0:message name="ActivaTriacion">
+    <s0:part name="parameters" element="s1:ActivaTriacion" />
+  </s0:message>
+  <s0:message name="ActivaTriacionResponse">
+    <s0:part name="parameters" element="s1:ActivaTriacionResponse" />
+  </s0:message>
+  <s0:message name="actualizaDatosMenores">
+    <s0:part name="parameters" element="s1:actualizaDatosMenores" />
+  </s0:message>
+  <s0:message name="actualizaDatosMenoresResponse">
+    <s0:part name="parameters" element="s1:actualizaDatosMenoresResponse" />
+  </s0:message>
+  <s0:message name="EjecutaTriacion">
+    <s0:part name="parameters" element="s1:EjecutaTriacion" />
+  </s0:message>
+  <s0:message name="EjecutaTriacionResponse">
+    <s0:part name="parameters" element="s1:EjecutaTriacionResponse" />
+  </s0:message>
+  <s0:message name="listarTicklers">
+    <s0:part name="parameters" element="s1:listarTicklers" />
+  </s0:message>
+  <s0:message name="listarTicklersResponse">
+    <s0:part name="parameters" element="s1:listarTicklersResponse" />
+  </s0:message>
+  <s0:message name="cambioDireccionPostal">
+    <s0:part name="parameters" element="s1:cambioDireccionPostal" />
+  </s0:message>
+  <s0:message name="cambioDireccionPostalResponse">
+    <s0:part name="parameters" element="s1:cambioDireccionPostalResponse" />
+  </s0:message>
+  <s0:portType name="SIACPostpagoTxWS">
+    <s0:operation name="DesbloquearContrato" parameterOrder="parameters">
+      <s0:input message="s1:DesbloquearContrato" />
+      <s0:output message="s1:DesbloquearContratoResponse" />
+      <s0:fault name="SIACPoException" message="s1:SIACPoException" />
+    </s0:operation>
+    <s0:operation name="listarTriaciones" parameterOrder="parameters">
+      <s0:input message="s1:listarTriaciones" />
+      <s0:output message="s1:listarTriacionesResponse" />
+      <s0:fault name="SIACPoException" message="s1:SIACPoException" />
+    </s0:operation>
+    <s0:operation name="cambioNombre" parameterOrder="parameters">
+      <s0:input message="s1:cambioNombre" />
+      <s0:output message="s1:cambioNombreResponse" />
+      <s0:fault name="SIACPoException" message="s1:SIACPoException" />
+    </s0:operation>
+    <s0:operation name="BloquearContrato" parameterOrder="parameters">
+      <s0:input message="s1:BloquearContrato" />
+      <s0:output message="s1:BloquearContratoResponse" />
+      <s0:fault name="SIACPoException" message="s1:SIACPoException" />
+    </s0:operation>
+    <s0:operation name="ActivaTriacion" parameterOrder="parameters">
+      <s0:input message="s1:ActivaTriacion" />
+      <s0:output message="s1:ActivaTriacionResponse" />
+      <s0:fault name="SIACPoException" message="s1:SIACPoException" />
+    </s0:operation>
+    <s0:operation name="actualizaDatosMenores" parameterOrder="parameters">
+      <s0:input message="s1:actualizaDatosMenores" />
+      <s0:output message="s1:actualizaDatosMenoresResponse" />
+      <s0:fault name="SIACPoException" message="s1:SIACPoException" />
+    </s0:operation>
+    <s0:operation name="EjecutaTriacion" parameterOrder="parameters">
+      <s0:input message="s1:EjecutaTriacion" />
+      <s0:output message="s1:EjecutaTriacionResponse" />
+      <s0:fault name="SIACPoException" message="s1:SIACPoException" />
+    </s0:operation>
+    <s0:operation name="listarTicklers" parameterOrder="parameters">
+      <s0:input message="s1:listarTicklers" />
+      <s0:output message="s1:listarTicklersResponse" />
+      <s0:fault name="SIACPoException" message="s1:SIACPoException" />
+    </s0:operation>
+    <s0:operation name="cambioDireccionPostal" parameterOrder="parameters">
+      <s0:input message="s1:cambioDireccionPostal" />
+      <s0:output message="s1:cambioDireccionPostalResponse" />
+      <s0:fault name="SIACPoException" message="s1:SIACPoException" />
+    </s0:operation>
+  </s0:portType>
+  <s0:binding name="SIACPostpagoTxWSServiceSoapBinding" type="s1:SIACPostpagoTxWS">
+    <s3:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <s0:operation name="DesbloquearContrato">
+      <s3:operation soapAction="" style="document" />
+      <s0:input>
+        <s3:body use="literal" parts="parameters" />
+      </s0:input>
+      <s0:output>
+        <s3:body use="literal" parts="parameters" />
+      </s0:output>
+      <s0:fault name="SIACPoException">
+        <s3:fault use="literal" name="SIACPoException" namespace="" />
+      </s0:fault>
+    </s0:operation>
+    <s0:operation name="listarTriaciones">
+      <s3:operation soapAction="" style="document" />
+      <s0:input>
+        <s3:body use="literal" parts="parameters" />
+      </s0:input>
+      <s0:output>
+        <s3:body use="literal" parts="parameters" />
+      </s0:output>
+      <s0:fault name="SIACPoException">
+        <s3:fault use="literal" name="SIACPoException" namespace="" />
+      </s0:fault>
+    </s0:operation>
+    <s0:operation name="cambioNombre">
+      <s3:operation soapAction="" style="document" />
+      <s0:input>
+        <s3:body use="literal" parts="parameters" />
+      </s0:input>
+      <s0:output>
+        <s3:body use="literal" parts="parameters" />
+      </s0:output>
+      <s0:fault name="SIACPoException">
+        <s3:fault use="literal" name="SIACPoException" namespace="" />
+      </s0:fault>
+    </s0:operation>
+    <s0:operation name="BloquearContrato">
+      <s3:operation soapAction="" style="document" />
+      <s0:input>
+        <s3:body use="literal" parts="parameters" />
+      </s0:input>
+      <s0:output>
+        <s3:body use="literal" parts="parameters" />
+      </s0:output>
+      <s0:fault name="SIACPoException">
+        <s3:fault use="literal" name="SIACPoException" namespace="" />
+      </s0:fault>
+    </s0:operation>
+    <s0:operation name="ActivaTriacion">
+      <s3:operation soapAction="" style="document" />
+      <s0:input>
+        <s3:body use="literal" parts="parameters" />
+      </s0:input>
+      <s0:output>
+        <s3:body use="literal" parts="parameters" />
+      </s0:output>
+      <s0:fault name="SIACPoException">
+        <s3:fault use="literal" name="SIACPoException" namespace="" />
+      </s0:fault>
+    </s0:operation>
+    <s0:operation name="actualizaDatosMenores">
+      <s3:operation soapAction="" style="document" />
+      <s0:input>
+        <s3:body use="literal" parts="parameters" />
+      </s0:input>
+      <s0:output>
+        <s3:body use="literal" parts="parameters" />
+      </s0:output>
+      <s0:fault name="SIACPoException">
+        <s3:fault use="literal" name="SIACPoException" namespace="" />
+      </s0:fault>
+    </s0:operation>
+    <s0:operation name="EjecutaTriacion">
+      <s3:operation soapAction="" style="document" />
+      <s0:input>
+        <s3:body use="literal" parts="parameters" />
+      </s0:input>
+      <s0:output>
+        <s3:body use="literal" parts="parameters" />
+      </s0:output>
+      <s0:fault name="SIACPoException">
+        <s3:fault use="literal" name="SIACPoException" namespace="" />
+      </s0:fault>
+    </s0:operation>
+    <s0:operation name="listarTicklers">
+      <s3:operation soapAction="" style="document" />
+      <s0:input>
+        <s3:body use="literal" parts="parameters" />
+      </s0:input>
+      <s0:output>
+        <s3:body use="literal" parts="parameters" />
+      </s0:output>
+      <s0:fault name="SIACPoException">
+        <s3:fault use="literal" name="SIACPoException" namespace="" />
+      </s0:fault>
+    </s0:operation>
+    <s0:operation name="cambioDireccionPostal">
+      <s3:operation soapAction="" style="document" />
+      <s0:input>
+        <s3:body use="literal" parts="parameters" />
+      </s0:input>
+      <s0:output>
+        <s3:body use="literal" parts="parameters" />
+      </s0:output>
+      <s0:fault name="SIACPoException">
+        <s3:fault use="literal" name="SIACPoException" namespace="" />
+      </s0:fault>
+    </s0:operation>
+  </s0:binding>
+  <s0:service name="SIACPostpagoTxWSService">
+    <s0:port name="SIACPostpagoTxWSSoapPort" binding="s1:SIACPostpagoTxWSServiceSoapBinding">
+      <s3:address location="http://limdeseaiv22.tim.com.pe:8909/SIACPostpagoWS/SIACPostpagoTxWS" />
+    </s0:port>
+  </s0:service>
+</s0:definitions>

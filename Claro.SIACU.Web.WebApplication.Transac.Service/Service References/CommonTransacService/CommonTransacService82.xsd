@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetGenerateConstancy" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetGenerateConstancy" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd3" namespace="Claro" />
+  <xs:complexType name="GenerateConstancyRequestCommon">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="Claro" base="q1:Request">
+        <xs:sequence>
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common" minOccurs="0" name="ParametersGeneratePDFGeneric" nillable="true" type="q2:ParametersGeneratePDF" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GenerateConstancyRequestCommon" nillable="true" type="tns:GenerateConstancyRequestCommon" />
+  <xs:complexType name="GenerateConstancyResponseCommon">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Document" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Drive" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="EngineMessage" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FullPathPDF" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Generated" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Path" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bytesConstancy" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GenerateConstancyResponseCommon" nillable="true" type="tns:GenerateConstancyResponseCommon" />
+</xs:schema>

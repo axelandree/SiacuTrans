@@ -1,0 +1,22 @@
+﻿@using Claro.SIACU.Web.WebApplication.Transac.Service.Areas.Transactions.Models;
+@{
+    Layout = "~/Areas/Transactions/Views/Shared/_Layout.cshtml";
+}
+<script type="text/javascript" src="~/Areas/Transactions/Content/Lib/BloqueoF12.js"></script>
+<div id="divRepreLegal">
+    <div class="container-fluid">
+        <input type="hidden" value="" id="hdnTipoDocumentValidation" />
+        <div class="row">
+            <div class="col-md-12" style="margin:0;padding:0;">
+                <iframe id="ifrmBiometria" src="" style="width:100%;height:600px;margin:0;padding:0;">
+                    <label>Oucrrio un Error</label>
+                </iframe>
+            </div>
+        </div>
+        @*<div class="row" style="text-align:center;">
+            <button id="btnGrabar" type="button" class="btn transaction-button btn-sm" accesskey="btnAceptar">Aceptar</button>
+            <button id="btnCerrar" type="button" class="btn transaction-button btn-sm" accesskey="btnCancelar">Cancelar</button>
+        </div>*@
+    </div>
+</div>
+<script src="~/Areas/Transactions/Scripts/Common/ValidationBiometria.js"></script>

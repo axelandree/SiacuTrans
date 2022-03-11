@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="fdf25953-21fb-4777-8eb5-08e1728357b4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://172.19.91.123:10512/BSS_ConsultaDatosSIM/SRV_BSS_ConsultaDatosSIM/Service/Exposition/BSS_ConsultaDatosSIMPipelineProxyService?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="BSS_ConsultaDatosSIMPipelineProxyService.xsd" MetadataType="Schema" ID="3f7fceee-29f0-4bef-8f94-9943ca960593" SourceId="1" SourceUrl="http://172.19.91.123:10512/BSS_ConsultaDatosSIM/SRV_BSS_ConsultaDatosSIM/Service/Exposition/BSS_ConsultaDatosSIMPipelineProxyService?SCHEMA%2FBSS_ConsultaDatosSIM%2FSRV_BSS_ConsultaDatosSIM%2FResources%2FXSD%2FBaseSchema" />
+    <MetadataFile FileName="BSS_ConsultaDatosSIMPipelineProxyService1.xsd" MetadataType="Schema" ID="a62120e9-8912-4272-bd5f-c617026a3927" SourceId="1" SourceUrl="http://172.19.91.123:10512/BSS_ConsultaDatosSIM/SRV_BSS_ConsultaDatosSIM/Service/Exposition/BSS_ConsultaDatosSIMPipelineProxyService?SCHEMA%2FBSS_ConsultaDatosSIM%2FSRV_BSS_ConsultaDatosSIM%2FResources%2FDP%2FCommonsException" />
+    <MetadataFile FileName="BSS_ConsultaDatosSIMPipelineProxyService2.xsd" MetadataType="Schema" ID="54864804-104e-43fc-8db4-3ec4b4ed9573" SourceId="1" SourceUrl="http://172.19.91.123:10512/BSS_ConsultaDatosSIM/SRV_BSS_ConsultaDatosSIM/Service/Exposition/BSS_ConsultaDatosSIMPipelineProxyService?SCHEMA%2FBSS_ConsultaDatosSIM%2FSRV_BSS_ConsultaDatosSIM%2FResources%2FXSD%2FClaroFault_v1" />
+    <MetadataFile FileName="BSS_ConsultaDatosSIMPipelineProxyService3.xsd" MetadataType="Schema" ID="e35f630d-1fbd-4ad2-8b31-7e474cd63bf6" SourceId="1" SourceUrl="http://172.19.91.123:10512/BSS_ConsultaDatosSIM/SRV_BSS_ConsultaDatosSIM/Service/Exposition/BSS_ConsultaDatosSIMPipelineProxyService?SCHEMA%2FBSS_ConsultaDatosSIM%2FSRV_BSS_ConsultaDatosSIM%2FResources%2FDP%2FHeaderGeneric_v1.0" />
+    <MetadataFile FileName="BSS_ConsultaDatosSIM_v1.wsdl" MetadataType="Wsdl" ID="42544b7a-72fd-4596-b6b6-dc1ecb315e85" SourceId="1" SourceUrl="http://172.19.91.123:10512/BSS_ConsultaDatosSIM/SRV_BSS_ConsultaDatosSIM/Service/Exposition/BSS_ConsultaDatosSIMPipelineProxyService?wsdl" />
+    <MetadataFile FileName="BSS_ConsultaDatosSIMPipelineProxyService4.xsd" MetadataType="Schema" ID="ee9064e4-e680-45c4-ab6b-af428511b6fd" SourceId="1" SourceUrl="http://172.19.91.123:10512/BSS_ConsultaDatosSIM/SRV_BSS_ConsultaDatosSIM/Service/Exposition/BSS_ConsultaDatosSIMPipelineProxyService?SCHEMA%2FBSS_ConsultaDatosSIM%2FSRV_BSS_ConsultaDatosSIM%2FResources%2FXSD%2FconsultarDatosSIM" />
+    <MetadataFile FileName="BSS_ConsultaDatosSIMPipelineProxyService5.xsd" MetadataType="Schema" ID="c84802c3-4ad0-4c98-bf0e-cc0fe2ce3a33" SourceId="1" SourceUrl="http://172.19.91.123:10512/BSS_ConsultaDatosSIM/SRV_BSS_ConsultaDatosSIM/Service/Exposition/BSS_ConsultaDatosSIMPipelineProxyService?SCHEMA%2FBSS_ConsultaDatosSIM%2FSRV_BSS_ConsultaDatosSIM%2FResources%2FXSD%2FClaroGenericHeaders_v1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

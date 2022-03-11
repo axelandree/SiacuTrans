@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.PostValidateDeliveryBAV" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.PostValidateDeliveryBAV" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd3" namespace="Claro" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd95" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetDataPower" />
+  <xs:complexType name="PostValidateDeliveryBAVRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="Claro" base="q1:Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="MessageRequest" nillable="true" type="tns:PostValidateDeliveryBAVMessageRequest" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PostValidateDeliveryBAVRequest" nillable="true" type="tns:PostValidateDeliveryBAVRequest" />
+  <xs:complexType name="PostValidateDeliveryBAVMessageRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Body" nillable="true" type="tns:PostValidateDeliveryBAVBodyRequest" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetDataPower" minOccurs="0" name="Header" nillable="true" type="q2:HeadersRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PostValidateDeliveryBAVMessageRequest" nillable="true" type="tns:PostValidateDeliveryBAVMessageRequest" />
+  <xs:complexType name="PostValidateDeliveryBAVBodyRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="coId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="codSubClase" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="meses" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PostValidateDeliveryBAVBodyRequest" nillable="true" type="tns:PostValidateDeliveryBAVBodyRequest" />
+  <xs:complexType name="PostValidateDeliveryBAVResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MessageResponse" nillable="true" type="tns:PostValidateDeliveryBAVMessageResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PostValidateDeliveryBAVResponse" nillable="true" type="tns:PostValidateDeliveryBAVResponse" />
+  <xs:complexType name="PostValidateDeliveryBAVMessageResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Body" nillable="true" type="tns:PostValidateDeliveryBAVBodyResponse" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetDataPower" minOccurs="0" name="Header" nillable="true" type="q3:HeadersResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PostValidateDeliveryBAVMessageResponse" nillable="true" type="tns:PostValidateDeliveryBAVMessageResponse" />
+  <xs:complexType name="PostValidateDeliveryBAVBodyResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigoRespuesta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="flagAplica" type="xs:int" />
+      <xs:element minOccurs="0" name="mensajeError" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="mensajeRespuesta" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PostValidateDeliveryBAVBodyResponse" nillable="true" type="tns:PostValidateDeliveryBAVBodyResponse" />
+</xs:schema>

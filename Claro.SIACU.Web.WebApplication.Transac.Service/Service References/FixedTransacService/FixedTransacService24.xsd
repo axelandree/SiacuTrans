@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.PostEtaInboundToa" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.PostEtaInboundToa" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed" />
+  <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd3" namespace="Claro" />
+  <xs:complexType name="EtaInboundToaRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="Claro" base="q1:Request">
+        <xs:sequence>
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed" minOccurs="0" name="comando" nillable="true" type="q2:InboundEtaComandos" />
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed" minOccurs="0" name="ordenTrabajo" nillable="true" type="q3:InboundEtaOrdenTrabajo" />
+          <xs:element minOccurs="0" name="pAPP" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="pIP_APP" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="pIdTrasaccion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="pUsuario" nillable="true" type="xs:string" />
+          <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed" minOccurs="0" name="propiedades" nillable="true" type="q4:InboundEtaPropiedades" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EtaInboundToaRequest" nillable="true" type="tns:EtaInboundToaRequest" />
+  <xs:complexType name="EtaInboundToaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigoError" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="descripcionError" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="idAgenda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="idETA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="resultadoOperacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoMensaje" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EtaInboundToaResponse" nillable="true" type="tns:EtaInboundToaResponse" />
+</xs:schema>

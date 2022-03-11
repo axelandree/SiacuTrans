@@ -1,0 +1,807 @@
+﻿@*<div id="UC_HFCPOST_Agendar">
+        <div class="">
+            <div class="panel-body">
+                <div class="form-horizontal">
+
+                </div>
+            </div>
+        </div>
+    </div>*@
+<script type="text/javascript" src="~/Areas/Transactions/Content/Lib/BloqueoF12.js"></script>
+<div class="form-group">
+    <label class="col-sm-2 control-label">Fecha de visita(*)</label>
+    <div class="col-sm-3">
+        <div class="input-daterange input-group input-group-sm" id="Div_@ViewData["Text_Id"]">
+            <input type="text" class="form-control @ViewData["Input_Size"] @ViewData["Text_Id"]" id="@ViewData["Text_Id"]" name="@ViewData["Text_Id"]" autocomplete="off" placeholder="DD/MM/YYYY" />
+            <label class="input-group-addon btn transaction-button" for="@ViewData["Text_Id"]" style="padding: 3px 12px;">
+                <span class="glyphicon glyphicon-calendar"></span>
+            </label>
+        </div>
+    </div>
+    <label class="col-sm-2 control-label">Horario(*)</label>
+    <div class="col-sm-3">
+        <select id="@ViewData["Select_Id"]" name="@ViewData["Select_Id"]" class="form-control input-sm  @ViewData["Input_Size"]">
+            <option value="-1">Seleccionar</option>
+        </select>
+    </div>
+    <div class="col-sm-2 text-right" style="display:none">
+        <button type="button" id="@ViewData["Button_Id"]" class="btn transaction-button btn-sm" disabled>
+            <span class="glyphicon glyphicon-cog">&nbsp;</span>Validar
+        </button>
+    </div>
+</div>
+
+<div id="ModalLoadingSchedule" style="display: none;">
+    <span>
+        <img src="~/Images/loading2.gif" width="25" height="25" /> Cargando ....
+    </span>
+</div>
+
+<script>
+
+    var MESSAGE_SELECT_JOB_TYPES = "";
+    var MESSAGE_SELECT_DATE = "";
+    var MESSAGE_ERROR_UBIGEO = "";
+    var MESSAGE_VALIDATE = "";
+    var MESSAGE_NO_VALIDATE = "";
+    var MESSAGE_NS_TIME_ZONE = "";
+    var MESSAGE_SELECT_SUB_JOB_TYPES = "";
+    var MESSAGE_SELECCT_FRANJA = "";
+    var STR_QUINTA_FRANJA = "";
+    var STR_TIMER_FRANJA = 0;
+    var x;
+    Session.flagReservation = "0";
+
+
+    var SessionTransacAux = JSON.parse(sessionStorage.getItem("SessionTransac"));
+    Session.CodUbigeo = (SessionTransacAux.SessionParams.DATACUSTOMER.InstallUbigeo == null) ? "" : SessionTransacAux.SessionParams.DATACUSTOMER.InstallUbigeo;
+    var CodUbigeoAux = (SessionTransacAux.SessionParams.DATACUSTOMER.InstallUbigeo == null) ? "" : SessionTransacAux.SessionParams.DATACUSTOMER.InstallUbigeo;
+    function LoadingSchedule() {
+
+        $.blockUI({
+            message: $("#ModalLoadingSchedule"),
+            css: {
+                border: 'none',
+                padding: '15px',
+                backgroundColor: '#000000',
+                '-webkit-border-radius': '50px',
+                '-moz-border-radius': '50px',
+                opacity: .7,
+                color: '#fff'
+            }
+        });
+
+    }
+
+    function MessagePartialView() {
+
+        var model = {};
+        model.strIdSession = Session.IDSESSION;
+
+        var myUrl = window.location.protocol + '//' + window.location.host + "/Transactions/HFC/AdditionalPoints/MessagePartialView";
+        $.ajax({
+            url: myUrl,
+            data: JSON.stringify(model),
+            type: 'POST',
+            contentType: "application/json charset=utf-8;",
+            dataType: "json",
+            success: function (response) {
+
+                MESSAGE_SELECT_JOB_TYPES = response[0];
+                MESSAGE_SELECT_DATE = response[1];
+                MESSAGE_ERROR_UBIGEO = response[2];
+                MESSAGE_VALIDATE = response[3];
+                MESSAGE_NO_VALIDATE = response[4];
+                MESSAGE_NS_TIME_ZONE = response[5];
+                MESSAGE_SELECT_SUB_JOB_TYPES = response[6];
+                MESSAGE_SELECCT_FRANJA = response[7];
+                STR_QUINTA_FRANJA = response[8];
+                STR_TIMER_FRANJA = response[9];
+            },
+            error: function (XError) {
+                //console.log(XError);
+            }
+        });
+
+    }
+
+    function ValidateReservation() {
+        var that = this, model = {};
+        model.IdSession = Session.IDSESSION;
+        model.strJobTypes = $('#ddlTypeWork').val();
+
+        $.app.ajax({
+            type: 'POST',
+            contentType: "application/json; charset=utf-8",
+            dataType: 'json',
+            data: JSON.stringify(model),
+            url: '/Transactions/SchedulingToa/GetValidateEtaReservation',
+            success: function (response) {
+                var oItem = response.data;
+                Session.flagReservation = oItem.Codigo;                
+            }
+        });
+    }
+
+    function setControls(value) {
+        this.m_controls = value;
+    }
+
+    function getControls() {
+        return this.m_controls || {};
+    }
+
+    function f_VentanaAutorizacion() {
+        var that = this;
+        var controls = that.getControls();
+        var param = {
+            "strIdSession": Session.userId,
+            'pag': '1',
+            'opcion': Session.codOpcion,
+            'co': '1000000000000'
+        };
+        ValidateAccessSchedule(that, controls, 'IMP', 'gConstEvtSeleccionarQuintaFranja', '1', param, 'Fixed');
+
+    }
+
+    function InitFranjasHorario() {
+
+        var ValidaETA = Session.ValidateETA;
+        var model = {};
+        model.strIdSession = Session.IDSESSION;
+        model.vUbigeo = CodUbigeoAux;
+        var strCodigoTipoTrabajo = $("#@ViewData["Combo_JobTypes"]").val();
+        model.vJobTypes = strCodigoTipoTrabajo;
+
+        if ($("#@ViewData["Text_Id"]") != null) {
+            model.vCommitmentDate = $("#@ViewData["Text_Id"]").val();
+        }
+
+        $.each(Session.vValidationRuleList, function (index, value) {
+            if (strCodigoTipoTrabajo == value.CODIGONPAGE) {
+                Session.vValidationAbbreviation = value.ABREVIATURA_DET;
+            }
+        });
+
+
+        if (Session.vValidationAbbreviation == "DIA_SIGUIENTE") {
+            if (!f_FechaEsMayorQueHoy($("#@ViewData["Text_Id"]").val())) {
+                alert("La fecha debe ser mayor al día de hoy");
+                $("#@ViewData["Select_Id"]").html("");
+                $("#@ViewData["Select_Id"]").append($('<option>', { value: '-1', html: 'Seleccionar' }));
+                $.unblockUI();
+                return false;
+            }
+        }
+
+        model.vSubJobTypes = $("#@ViewData["Combo_SubJobType"]").val();
+        model.vValidateETA = ValidaETA;
+        model.vHistoryETA = Session.History;
+        model.vTimeZone = $("#@ViewData["Select_Id"]").val();
+        model.vValidationAbbreviation = Session.vValidationAbbreviation;
+        model.vIdTipoServicio = $("#@ViewData["Combo_SubJobType"] option:selected").attr("typeservice");
+        model.vContractID = Session.contractID;
+        //console.log("INICIO CARGAR FRANJA HORARIA");
+        //console.log("strIdSession: " + Session.IDSESSION);
+        //console.log("vUbigeo : " + model.vUbigeo);
+        //console.log("vJobTypes : " + model.vJobTypes);
+        //console.log("vCommitmentDate : " +  model.vCommitmentDate);
+        //console.log("vSubJobTypes : " + model.vSubJobTypes);
+        //console.log("vValidateETA :" + model.vValidateETA);
+        //console.log("vHistoryETA : " + model.vHistoryETA);
+        //console.log("vTimeZone : " + model.vTimeZone);
+
+        var myUrl = window.location.protocol + '//' + window.location.host + "/Transactions/SchedulingToa/GetTimeZone";
+        $(".@ViewData["Button_Save"]").prop('disabled', false);
+        $.ajax({
+            url: myUrl,
+            data: JSON.stringify(model),
+            type: 'POST',
+            contentType: "application/json charset=utf-8;",
+            dataType: "json",
+            success: function (response) {
+                $.unblockUI();
+                $("#@ViewData["Select_Id"]").html("");
+                $("#@ViewData["Select_Id"]").append($('<option>', { value: '-1', html: 'Seleccionar' }));
+
+                var intIndex = 0;
+                if (response.data != null) {
+                    if (response.data.length == 1 && parseInt(response.data[0].Codigo) < 0) {
+                        if (response.data[0].Codigo == "-2") {
+                            $.each(Session.vMessageValidationList, function (index, value) {
+                                if (value.ABREVIATURA_DET == "MSJ_DISP_ETA") {
+                                    alert(value.CODIGOC, "Alerta");
+                                    if (Session.ValidateETA == "2") {
+                                        $(".@ViewData["Button_Save"]").prop('disabled', true);
+                                    }
+                                }
+                            });
+                        }
+                        else if (response.data[0].Codigo == "-3") {
+                            $.each(Session.vMessageValidationList, function (index, value) {
+                                if (value.ABREVIATURA_DET == "MSJ_CONF_BKT") {
+                                    alert(value.CODIGOC, "Alerta");
+                                    if (Session.ValidateETA == "2") {
+                                        $(".@ViewData["Button_Save"]").prop('disabled', true);
+                                    }
+                                }
+                            });
+                        } else {
+                            alert(response.data[0].Descripcion, "Alerta");
+                        }
+                        return;
+                    }
+                    $.each(response.data, function (index, value) {
+                        intIndex++;
+                        if (ValidaETA != "0") {
+                            if (value.Estado == "RED") {
+
+                                $("#@ViewData["Select_Id"]").append('<option idHorario="' + value.Descripcion + '" style="background-color: #E60000; color:#ffffff" value="' + value.Codigo + '" Disabled>' + value.Descripcion + '</option>');
+                            }
+                            else {
+                                $("#@ViewData["Select_Id"]").append('<option idHorario="' + value.Valor_C + '" style="background-color: #FFFFFF;" value="' + value.Codigo + '+' + value.Codigo3 + '">' + value.Descripcion + '</option>');
+
+
+
+                            }
+                            if (value.Codigo2 != null) {
+                                try {
+
+                                    Session.RequestActId = value.Codigo2;
+                                    // $("#hdnRequestActId").val(value.Codigo2);
+                                    //SessionTransf.COD_RESQUEST_ACT = value.Codigo2;
+                                    //HFCPOST_Session.CodigoRequestAct = value.Codigo2;
+                                } catch (e) {
+
+                                }
+
+                            }
+                            else {
+                                try {
+                                    Session.RequestActId = "";
+                                    //$("#hdnRequestActId").val("");
+                                    //SessionTransf.COD_RESQUEST_ACT = "";
+                                    //HFCPOST_Session.CodigoRequestAct = "";
+                                } catch (e) {
+
+                                }
+
+                            }
+                        }
+                        else {
+
+                            $("#@ViewData["Select_Id"]").append($('<option>', { value: value.Codigo, html: value.Descripcion }));
+                        }
+                    });
+                }
+            },
+            error: function (XError) {
+                $.unblockUI();
+                //console.log(XError);
+            }
+        });
+    }
+
+    function InitReservaTOA(value) {
+        var model = {};
+        model.strIdSession = Session.IDSESSION;
+        model.StrJobTypes = Session.History;
+        model.StrTypeService = $("#@ViewData["Combo_SubJobType"]").val();
+        model.StrFranjaHoraria = value;
+        model.StrDate = $("#@ViewData["Text_Id"]").val();
+        model.StrNroOrden = Session.NroOrdenToa;
+        if (Session.NroOrdenToa == "" || Session.NroOrdenToa == null)
+        {
+            model.StrNroOrden = "0";
+        }
+        model.StrIdConsulta = Session.RequestActId;
+        $(".@ViewData["Button_Save"]").prop('disabled', false);
+        LoadingSchedule();
+        var myUrl = window.location.protocol + '//' + window.location.host + "/Transactions/SchedulingToa/GenerarReservaToa";
+        $.ajax({
+            url: myUrl,
+            data: JSON.stringify(model),
+            type: 'POST',
+            contentType: "application/json charset=utf-8;",
+            dataType: "json",
+            success: function (response) {
+                if(response.codResult == "0")
+                {
+                    alert(response.mjsResult + " Su Nro de Orden es: " + response.nroOrden);
+                    countdown();
+                    Session.NroOrdenToa = response.nroOrden;
+                }
+                else
+                {
+                    alert(response.mjsResult);
+                }
+                
+            },
+            error: function (XError) {
+                //console.log(XError);
+            }
+        });
+    }
+
+    function InitCancelTOA() {
+        var model = {};
+        model.strIdSession = Session.IDSESSION;
+        model.StrNroOrden = Session.NroOrdenToa;
+        LoadingSchedule();
+        var myUrl = window.location.protocol + '//' + window.location.host + "/Transactions/SchedulingToa/CancelaReservaToaGenerada";
+        $.ajax({
+            url: myUrl,
+            data: JSON.stringify(model),
+            type: 'POST',
+            contentType: "application/json charset=utf-8;",
+            dataType: "json",
+            success: function (response) {
+                if(response.codResult == "0")
+                {
+                    alert(response.mjsResult);
+                    Session.NroOrdenToa = "";
+                    $(".@ViewData["Button_Save"]").prop('disabled', true);
+                    $("#@ViewData["Select_Id"]").html("");
+                    $("#@ViewData["Text_Id"]").val("");
+                    
+                }
+                else
+                {
+                    alert(response.mjsResult);
+                }
+                
+            },
+            error: function (XError) {
+                //console.log(XError);
+            }
+        });
+    }
+
+    function f_ValidateRescheduling() {
+        LoadingSchedule();
+        var model = {};
+        model.strIdSession = Session.IDSESSION;
+        model.vJobTypes = $("#@ViewData["Combo_JobTypes"]").val();
+        model.vUbigeo = CodUbigeoAux;
+        model.vCommitmentDate = $("#@ViewData["Text_Id"]").val();
+        model.vTimeZona = $("#@ViewData["Select_Id"]").val();
+
+        var myUrl = window.location.protocol + '//' + window.location.host + "/Transactions/SchedulingToa/ValidateSchedule";
+        $.ajax({
+            url: myUrl,
+            data: JSON.stringify(model),
+            type: 'POST',
+            contentType: "application/json charset=utf-8;",
+            dataType: "json",
+            success: function (response) {
+
+                if (response.data.Description == "1") {
+                    alert(MESSAGE_VALIDATE);
+                } else {
+                    alert(MESSAGE_NO_VALIDATE);
+                }
+                Session.VALIDATE = response.Description;
+
+            },
+            error: function (XError) {
+                //console.log(XError);
+            }
+        });
+
+    }
+
+    function GetSchedulingRule() {
+        LoadingSchedule();
+        var model = {};
+        model.strIdSession = Session.IDSESSION;
+        model.vJobTypes = $("#@ViewData["Combo_JobTypes"]").val();
+        var myUrl = window.location.protocol + '//' + window.location.host + "/Transactions/SchedulingToa/GetSchedulingRule";
+        $.ajax({
+            url: myUrl,
+            data: JSON.stringify(model),
+            type: 'POST',
+            contentType: "application/json charset=utf-8;",
+            dataType: "json",
+            success: function (response) {
+                Session.vValidationRuleList = response.data;
+            },
+            error: function (XError) {
+                //console.log(XError);
+            }
+        });
+
+    }
+
+    function MessageScheduling() {
+        LoadingSchedule();
+        var model = {};
+        model.strIdSession = Session.IDSESSION;
+        model.vJobTypes = $("#@ViewData["Combo_JobTypes"]").val();
+        var myUrl = window.location.protocol + '//' + window.location.host + "/Transactions/SchedulingToa/MessageScheduling";
+        $.ajax({
+            url: myUrl,
+            data: JSON.stringify(model),
+            type: 'POST',
+            contentType: "application/json charset=utf-8;",
+            dataType: "json",
+            success: function (response) {
+                Session.vMessageValidationList = response.data;
+            },
+            error: function (XError) {
+                //console.log(XError);
+            }
+        });
+
+    }
+
+    function f_FechaEsMayorIgualQueHoy(fechaString) {
+
+        var ano = fechaString.substr(6, 4);
+        var mes = fechaString.substr(3, 2);
+        var dia = fechaString.substr(0, 2);
+
+        var fechaHoy = new Date("@ViewData["strDateServer"]");
+        var str = ano + "/" + mes + "/" + dia;
+        var fechaSeleccionada = new Date(str);
+
+        if (fechaSeleccionada >= fechaHoy) {
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
+    function f_FechaEsMayorQueHoy(fechaString) {
+
+        var ano = fechaString.substr(6, 4);
+        var mes = fechaString.substr(3, 2);
+        var dia = fechaString.substr(0, 2);
+
+        var fechaHoy = new Date("@ViewData["strDateServer"]");
+        var str = ano + "/" + mes + "/" + dia;
+        var fechaSeleccionada = new Date(str);
+
+        if (fechaSeleccionada > fechaHoy) {
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
+    var HiddenPageAuth = {};
+
+    function ValidateAccessSchedule(pag, controls, action, opcion, pagina, param, product) {
+        HiddenPageAuth.hidOpcion = action;
+        Session.tipoAutorizacion = 1;
+        //document.getElementById("hidOpcion").value = action;
+        var strUrlModal = location.protocol + '//' + location.host + '/Transactions/AuthUser/Auth/AuthUserHtml';
+        confirm('Se requiere autorización del Jefe/Supervisor.', 'Confirmar', function () {
+            $.window.open({
+                modal: true,
+                type: 'post',
+                title: "SIACUNICO - Autenticación",
+                url: strUrlModal,
+                data: {},
+                width: 360,
+                height: 310,
+                buttons: {
+                    Validar: {
+                        id: 'btnSigInAuth',
+                        click: function () {
+                            if (AuthenticationUser(pag, controls, product)) {
+                                this.close();
+                            };
+                        }
+                    },
+                    Cancelar: {
+                        id: 'btnCancelAuth',
+                        click: function (sender, args) {
+                            $('#@ViewData["Select_Id"] option[value="-1"]').prop('selected', true);
+                            this.close();
+                        }
+                    }
+                },
+                complete: function () {
+                    var strUrlController = '/Transactions/CommonServices/UserValidate_PageLoad';
+                    //strIdSession, transaction, pag, paginadcm, monto, opcion, modalidad, tipo, motivo, telefono, loginS, co, migracion, descripcion, transaccion, detEntAccion, tipotx, unidad, hidOpcion, hidAccion
+
+                    $.ajax({
+                        type: 'POST',
+                        cache: false,
+                        contentType: "application/json; charset=utf-8",
+                        dataType: 'JSON',
+                        url: strUrlController,
+                        data: JSON.stringify(param),
+                        success: function (response) {
+                            //$('#hidPagina_Validar').val(response.hidPagina);
+                            HiddenPageAuth.hidPagina_Validar = response.hidPagina;
+
+                            //$('#hidPagDCM_Validar').val(response.hidPagDCM);
+                            HiddenPageAuth.hidPagDCM_Validar = response.hidPagDCM;
+
+                            //$('#hidMonto_Validar').val(response.hidMonto);
+                            HiddenPageAuth.hidMonto_Validar = response.hidMonto;
+
+                            //$('#hidUnidad_Validar').val(response.hidUnidad);
+                            HiddenPageAuth.hidUnidad_Validar = response.hidUnidad;
+
+                            //$('#hidOpcion_Validar').val(response.hidOpcion);
+                            HiddenPageAuth.hidOpcion_Validar = response.hidOpcion;
+
+                            //$('#hidModalidad_Validar').val(response.hidModalidad);
+                            HiddenPageAuth.hidModalidad_Validar = response.hidModalidad;
+
+                            //$('#hidLogin_Validar').val(response.hidLogin);
+                            HiddenPageAuth.hidLogin_Validar = response.hidLogin;
+
+                            //$('#hidCO_Validar').val(response.hidCO);
+                            HiddenPageAuth.hidCO_Validar = response.hidCO;
+
+                            //$('#hidMigracion_Validar').val(response.hidMigracion);
+                            HiddenPageAuth.hidMigracion_Validar = response.hidMigracion;
+
+                            //$('#hidDescripcionProceso_Validar').val(response.hidDescripcionProceso);
+                            HiddenPageAuth.hidDescripcionProceso_Validar = response.hidDescripcionProceso;
+
+                            //$('#hidConcepto_Validar').val(response.hidConcepto);
+                            HiddenPageAuth.hidConcepto_Validar = response.hidConcepto;
+
+                            //$('#hidAccionDetEnt_Validar').val(response.hidAccionDetEnt);
+                            HiddenPageAuth.hidAccionDetEnt_Validar = response.hidAccionDetEnt;
+
+                            //$('#lblTitulo_Validar').val(response.lblTitulo);
+                            HiddenPageAuth.lblTitulo_Validar = response.lblTitulo;
+
+                            //$('#hidAccion_Validar').val(response.hidAccion);
+                            HiddenPageAuth.hidAccion_Validar = response.hidAccion;
+
+                            //$('#hidTelefono_Validar').val(response.hidTelefono);
+                            HiddenPageAuth.hidTelefono_Validar = response.hidTelefono;
+
+                            //$('#hidMotivoA_Validar').val(response.hidMotivoA);
+                            HiddenPageAuth.hidMotivoA_Validar = response.hidMotivoA;
+
+                            //$('#hidTipoA_Validar').val(response.hidTipoA);
+                            HiddenPageAuth.hidTipoA_Validar = response.hidTipoA;
+
+                            if (response.ReseteoLinea) {
+                                alert("Reseteo de Linea.", "Informativo");
+                                return;
+                            }
+                        },
+                        error: function (error) {
+                            alert('Error: ' + error + ".", "Alerta");
+                        }
+                    });
+                }
+            });
+            return;
+        }, function () { $('#@ViewData["Select_Id"] option[value="-1"]').prop('selected', true); return; });
+    }
+
+    function countdown() {
+        $("#@ViewData["countdown"]").show();
+        var momentOfTime = new Date(); 
+        var myTimeSpan = STR_TIMER_FRANJA * 60 * 1000;
+        momentOfTime.setTime(momentOfTime.getTime() + myTimeSpan);
+        var countDownDate = momentOfTime;
+
+        clearInterval(x);
+        x = setInterval(function () {
+            var now = new Date().getTime();
+            var distance = countDownDate - now;
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);            
+            $("#@ViewData["countdown"] p").html(minutes + "m " + seconds + "s ");
+            if (distance < 0) {
+                clearInterval(x);
+                $("#@ViewData["countdown"] p").html("Tiempo expirado");
+                alert("Su tiempo ah expirado, Seleccione una nueva fecha y franja");
+                if (Session.ValidateETA != 0) {
+                    if (Session.flagReservation == "1") {
+                        InitCancelTOA();
+                    }                
+                }
+            }
+        }, 1000);
+    }    
+
+    function dropCountdown() {
+        clearInterval(x);
+    }
+
+    $(document).ready(function () {
+
+        $("#@ViewData["Text_Id"]").datepicker({
+            format: 'dd/mm/yyyy'
+        });
+        $("#@ViewData["Button_Id"]").prop("disabled", true);
+
+        Session.ServerDate = "";
+        Session.DateNew = "@ViewData["strDateNew"]";
+
+
+
+        var dateServer;
+
+        if (Session.ServerDate !== "") {
+            dateServer = Session.ServerDate;
+
+            var dFechaServidor = "";
+            if (dateServer != null || dateServer != "") {
+
+                dFechaServidor = new Date(dateServer);
+                $("#@ViewData["Text_Id"]").datepicker('setDate', dFechaServidor);
+            }
+        }
+
+        if (Session.DateNew !== "") {
+            dateServer = Session.DateNew;
+
+            var dFechaServidor = "";
+            if (dateServer != null || dateServer != "") {
+                dFechaServidor = new Date(dateServer);
+                $("#@ViewData["Text_Id"]").datepicker('setDate', dFechaServidor);
+            }
+        }
+
+        Session.ServerDate = "@ViewData["strDateServer"]";
+        /* FIN */
+
+        GetSchedulingRule();
+        MessageScheduling();
+        Session.ServerDate = "@ViewData["strDateServer"]";
+        Session.DateNew = "@ViewData["strDateNew"]";
+        MessagePartialView();
+        $("#@ViewData["Button_Id"]").click(function () {
+
+            f_VentanaAutorizacion();
+            if ($("#@ViewData["Combo_JobTypes"]").val() == "" || $("#@ViewData["Combo_JobTypes"]").val() == "-1") {
+                alert(MESSAGE_SELECT_JOB_TYPES);
+                return false;
+            }
+            if ($("#@ViewData["Text_Id"]").val() == "") {
+                alert(MESSAGE_SELECT_DATE);
+                return false;
+            }
+            if (CodUbigeoAux == "") {
+                alert(MESSAGE_ERROR_UBIGEO);
+                return false;
+            }
+
+            if ($("#@ViewData["Select_Id"]").val() == "" || $("#@ViewData["Select_Id"]").val() == "-1") {
+                alert(MESSAGE_NS_TIME_ZONE);
+                return false;
+            }
+
+            f_ValidateRescheduling();
+        });
+
+
+        $("#@ViewData["Select_Id"]").change(function () {
+            var vCod = $(this).val();
+            var id_codeFranja = vCod.split('+')[0];
+            if (vCod == "-1") {
+                alert("Seleccione una franja horaria");
+                $(this).val("-1");
+                return false;
+            }
+            if (vCod.indexOf("|") != -1) {
+                alert(MESSAGE_SELECCT_FRANJA);
+                $(this).val("-1");
+                return false;
+            }
+            if (id_codeFranja == STR_QUINTA_FRANJA) {
+                f_VentanaAutorizacion();
+            }
+            if ($("#@ViewData["Combo_JobTypes"]").val().indexOf(".|") == -1 && Session.ValidateETA != 0) {
+                
+                var id_bucket = vCod.split('+')[1];
+                if (id_bucket == "" || id_bucket == "null" || id_bucket == null) {
+                    $.each(Session.vMessageValidationList, function (index, value) {
+                        if (value.ABREVIATURA_DET == "MSJ_TIM_OUT") {
+                            alert(value.CODIGOC, "Alerta");
+                            $('#@ViewData["Select_Id"] option[value="-1"]').prop('selected', true);
+                        }
+                    });
+                    Session.VALIDATE = "0";
+                }
+                else {
+                    Session.VALIDATE = "1";
+                    if (Session.flagReservation == "1") {
+                        var valueFranja = $(this).val();
+                        InitReservaTOA(valueFranja);
+                    }                    
+                }
+            }
+            else {
+                Session.VALIDATE = "0";
+            }
+
+
+        });
+
+        $("#@ViewData["Text_Id"]").change(function () {
+
+            //console.log("Change Date");
+            var ValidaETA = Session.ValidateETA;
+            var vJobType = $("#@ViewData["Combo_JobTypes"]");
+            var dDateProgramming = $(this);
+            var cboSchedule = $("#@ViewData["Select_Id"]");
+            var vSubJobType = $("#@ViewData["Combo_SubJobType"]");
+
+
+
+            if (dDateProgramming.val() == "") {
+                return false;
+            }
+            if (!f_FechaEsMayorIgualQueHoy(dDateProgramming.val())) {
+                alert("La fecha debe ser mayor o igual al día de hoy");
+                dDateProgramming.val("");
+                $("#@ViewData["Select_Id"]").html("");
+                $("#@ViewData["Select_Id"]").append($('<option>', { value: '-1', html: 'Seleccionar' }));
+                return false;
+            }
+
+            Session.VALIDATE = "0";
+
+            if (vJobType.val() == "-1") {
+                alert(MESSAGE_SELECT_JOB_TYPES);
+                return false;
+            }
+            if (CodUbigeoAux == "") {
+                alert(MESSAGE_ERROR_UBIGEO);
+                return false;
+            }
+
+
+            if (ValidaETA == '1') {
+                if (vSubJobType.val() == "" || vSubJobType.val() == "-1" || vSubJobType.val() == "-- Seleccionar --") {
+                    alert(MESSAGE_SELECT_SUB_JOB_TYPES);
+                    dDateProgramming.val("");
+
+                    return false;
+                }
+            }
+
+            LoadingSchedule();
+            //console.log("==============================");
+            //console.log("ValidaETA: " + ValidaETA);
+            //console.log("vJobType: " + vJobType.val());
+            //console.log("dDateProgramming : " + dDateProgramming.val());
+            //console.log("cboSchedule : " + cboSchedule.val());
+            //console.log("vSubJobType : " + vSubJobType.val());
+
+            if (ValidaETA != '0') {
+                if ((vJobType.val() != "-1" || vJobType.val() != "") && dDateProgramming.val() != "" && (vSubJobType.val() != "-1" || vSubJobType.val() != "")) {
+                    //console.log("InitFranjasHorario");
+                    InitFranjasHorario();
+                }
+                else {
+                    //console.log("Cerrar Loading");
+                    $.unblockUI();
+                }
+            }
+            else {
+                //console.log("InitFranjasHorario");
+                InitFranjasHorario();
+
+            }
+        });
+
+        
+    });
+
+    window.onbeforeunload = function () {
+        if (Session.ValidateETA != 0) {
+            if (Session.flagReservation == "1") {
+                if (Session.NroOrdenToa != "") {
+                    InitCancelTOA();
+                }
+            }
+        }
+
+    };
+</script>

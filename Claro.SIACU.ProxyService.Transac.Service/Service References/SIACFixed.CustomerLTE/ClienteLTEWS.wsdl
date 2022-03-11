@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:base="http://claro.com.pe/eai/services/clienteLTE/ws/types/schema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://claro.com.pe/eai/services/clienteLTE/ws" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap11="http://schemas.xmlsoap.org/wsdl/soap/" name="ClienteLTEWS" targetNamespace="http://claro.com.pe/eai/services/clienteLTE/ws" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema elementFormDefault="qualified" targetNamespace="http://claro.com.pe/eai/ebs/services/clienteLTE/ws">
+      <xsd:import schemaLocation="http://limdeseaiv26.tim.com.pe:8909/ClienteLTEWS/ebsClientesLTESB11?xsd=1" namespace="http://claro.com.pe/eai/services/clienteLTE/ws/types/schema" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="consultarDatosPorCodigoContratoRequestMsg">
+    <wsdl:part name="input" element="base:consultarDatosPorCodigoContratoEAIRequest" />
+  </wsdl:message>
+  <wsdl:message name="consultarDatosPorCodigoContratoResponseMsg">
+    <wsdl:part name="output" element="base:consultarDatosPorCodigoContratoEAIResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultarDatosPorCodigoClienteRequestMsg">
+    <wsdl:part name="input" element="base:consultarDatosPorCodigoClienteEAIRequest" />
+  </wsdl:message>
+  <wsdl:message name="consultarDatosPorCodigoClienteResponseMsg">
+    <wsdl:part name="output" element="base:consultarDatosPorCodigoClienteEAIResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultarServicioPorCodigoContratoRequestMsg">
+    <wsdl:part name="input" element="base:consultarServicioPorCodigoContratoEAIRequest" />
+  </wsdl:message>
+  <wsdl:message name="consultarServicioPorCodigoContratoResponseMsg">
+    <wsdl:part name="output" element="base:consultarServicioPorCodigoContratoEAIResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultarLineasDesactivasPorCodigoContratoRequestMsg">
+    <wsdl:part name="input" element="base:consultarLineasDesactivasPorCodigoContratoEAIRequest" />
+  </wsdl:message>
+  <wsdl:message name="consultarLineasDesactivasPorCodigoContratoResponseMsg">
+    <wsdl:part name="output" element="base:consultarLineasDesactivasPorCodigoContratoEAIResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultarServicioPorCodigoClienteRequestMsg">
+    <wsdl:part name="input" element="base:consultarServicioPorCodigoClienteEAIRequest" />
+  </wsdl:message>
+  <wsdl:message name="consultarServicioPorCodigoClienteResponseMsg">
+    <wsdl:part name="output" element="base:consultarServicioPorCodigoClienteEAIResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultarCodigoClientePorLineaCuentaRequestMsg">
+    <wsdl:part name="input" element="base:consultarCodigoClientePorLineaCuentaEAIRequest" />
+  </wsdl:message>
+  <wsdl:message name="consultarCodigoClientePorLineaCuentaResponseMsg">
+    <wsdl:part name="output" element="base:consultarCodigoClientePorLineaCuentaEAIResponse" />
+  </wsdl:message>
+  <wsdl:message name="obtenerCuentasPorFiltroRequestMsg">
+    <wsdl:part name="input" element="base:obtenerCuentasPorFiltroEAIRequest" />
+  </wsdl:message>
+  <wsdl:message name="obtenerCuentasPorFiltroResponseMsg">
+    <wsdl:part name="output" element="base:obtenerCuentasPorFiltroEAIResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultarListaTelefonoPorCodigoContratoRequestMsg">
+    <wsdl:part name="input" element="base:consultarListaTelefonoPorCodigoContratoEAIRequest" />
+  </wsdl:message>
+  <wsdl:message name="consultarListaTelefonoPorCodigoContratoResponseMsg">
+    <wsdl:part name="output" element="base:consultarListaTelefonoPorCodigoContratoEAIResponse" />
+  </wsdl:message>
+  <wsdl:message name="desactivarContratoRequestMsg">
+    <wsdl:part name="input" element="base:desactivarContratoEAIRequest" />
+  </wsdl:message>
+  <wsdl:message name="desactivarContratoResponseMsg">
+    <wsdl:part name="output" element="base:desactivarContratoEAIResponse" />
+  </wsdl:message>
+  <wsdl:message name="actualizarDireccionInstalacionRequestMsg">
+    <wsdl:part name="input" element="base:actualizarDireccionInstalacionEAIRequest" />
+  </wsdl:message>
+  <wsdl:message name="actualizarDireccionInstalacionResponseMsg">
+    <wsdl:part name="output" element="base:actualizarDireccionInstalacionEAIResponse" />
+  </wsdl:message>
+  <wsdl:message name="buscarPorNumeroServicioRequestMsg">
+    <wsdl:part name="input" element="base:buscarPorNumeroServicioEAIRequest" />
+  </wsdl:message>
+  <wsdl:message name="buscarPorNumeroServicioResponseMsg">
+    <wsdl:part name="output" element="base:buscarPorNumeroServicioEAIResponse" />
+  </wsdl:message>
+  <wsdl:portType name="clienteLTEPortType">
+    <wsdl:operation name="consultarDatosPorCodigoContrato">
+      <wsdl:input message="tns:consultarDatosPorCodigoContratoRequestMsg" />
+      <wsdl:output message="tns:consultarDatosPorCodigoContratoResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarDatosPorCodigoCliente">
+      <wsdl:input message="tns:consultarDatosPorCodigoClienteRequestMsg" />
+      <wsdl:output message="tns:consultarDatosPorCodigoClienteResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarServicioPorCodigoContrato">
+      <wsdl:input message="tns:consultarServicioPorCodigoContratoRequestMsg" />
+      <wsdl:output message="tns:consultarServicioPorCodigoContratoResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarLineasDesactivasPorCodigoContrato">
+      <wsdl:input message="tns:consultarLineasDesactivasPorCodigoContratoRequestMsg" />
+      <wsdl:output message="tns:consultarLineasDesactivasPorCodigoContratoResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarServicioPorCodigoCliente">
+      <wsdl:input message="tns:consultarServicioPorCodigoClienteRequestMsg" />
+      <wsdl:output message="tns:consultarServicioPorCodigoClienteResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarCodigoClientePorLineaCuenta">
+      <wsdl:input message="tns:consultarCodigoClientePorLineaCuentaRequestMsg" />
+      <wsdl:output message="tns:consultarCodigoClientePorLineaCuentaResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="obtenerCuentasPorFiltro">
+      <wsdl:input message="tns:obtenerCuentasPorFiltroRequestMsg" />
+      <wsdl:output message="tns:obtenerCuentasPorFiltroResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarListaTelefonoPorCodigoContrato">
+      <wsdl:input message="tns:consultarListaTelefonoPorCodigoContratoRequestMsg" />
+      <wsdl:output message="tns:consultarListaTelefonoPorCodigoContratoResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="desactivarContrato">
+      <wsdl:input message="tns:desactivarContratoRequestMsg" />
+      <wsdl:output message="tns:desactivarContratoResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="actualizarDireccionInstalacion">
+      <wsdl:input message="tns:actualizarDireccionInstalacionRequestMsg" />
+      <wsdl:output message="tns:actualizarDireccionInstalacionResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="buscarPorNumeroServicio">
+      <wsdl:input message="tns:buscarPorNumeroServicioRequestMsg" />
+      <wsdl:output message="tns:buscarPorNumeroServicioResponseMsg" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="clienteLTEPortTypeSOAP11Binding" type="tns:clienteLTEPortType">
+    <soap11:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="consultarDatosPorCodigoContrato">
+      <soap11:operation soapAction="http://claro.com.pe/eai/ebs/services/consultaDatosLTE/ws/consultarDatosPorCodigoContrato" style="document" />
+      <wsdl:input>
+        <soap11:body use="literal" parts="input" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap11:body use="literal" parts="output" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarDatosPorCodigoCliente">
+      <soap11:operation soapAction="http://claro.com.pe/eai/ebs/services/consultaDatosLTE/ws/consultarDatosPorCodigoCliente" style="document" />
+      <wsdl:input>
+        <soap11:body use="literal" parts="input" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap11:body use="literal" parts="output" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarServicioPorCodigoContrato">
+      <soap11:operation soapAction="http://claro.com.pe/eai/ebs/services/consultaDatosLTE/ws/consultarServicioPorCodigoContrato" style="document" />
+      <wsdl:input>
+        <soap11:body use="literal" parts="input" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap11:body use="literal" parts="output" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarLineasDesactivasPorCodigoContrato">
+      <soap11:operation soapAction="http://claro.com.pe/eai/ebs/services/consultaDatosLTE/ws/consultarLineasDesactivasPorCodigoContrato" style="document" />
+      <wsdl:input>
+        <soap11:body use="literal" parts="input" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap11:body use="literal" parts="output" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarServicioPorCodigoCliente">
+      <soap11:operation soapAction="http://claro.com.pe/eai/ebs/services/consultaDatosLTE/ws/consultarServicioPorCodigoCliente" style="document" />
+      <wsdl:input>
+        <soap11:body use="literal" parts="input" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap11:body use="literal" parts="output" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarCodigoClientePorLineaCuenta">
+      <soap11:operation soapAction="http://claro.com.pe/eai/ebs/services/consultaDatosLTE/ws/consultarCodigoClientePorLineaCuenta" style="document" />
+      <wsdl:input>
+        <soap11:body use="literal" parts="input" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap11:body use="literal" parts="output" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerCuentasPorFiltro">
+      <soap11:operation soapAction="http://claro.com.pe/eai/ebs/services/consultaDatosLTE/ws/obtenerCuentasPorFiltro" style="document" />
+      <wsdl:input>
+        <soap11:body use="literal" parts="input" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap11:body use="literal" parts="output" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarListaTelefonoPorCodigoContrato">
+      <soap11:operation soapAction="http://claro.com.pe/eai/ebs/services/consultaDatosLTE/ws/consultarListaTelefonoPorCodigoContrato" style="document" />
+      <wsdl:input>
+        <soap11:body use="literal" parts="input" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap11:body use="literal" parts="output" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="desactivarContrato">
+      <soap11:operation soapAction="http://claro.com.pe/eai/ebs/services/consultaDatosLTE/ws/desactivarContrato" style="document" />
+      <wsdl:input>
+        <soap11:body use="literal" parts="input" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap11:body use="literal" parts="output" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarDireccionInstalacion">
+      <soap11:operation soapAction="http://claro.com.pe/eai/ebs/services/consultaDatosLTE/ws/actualizarDireccionInstalacion" style="document" />
+      <wsdl:input>
+        <soap11:body use="literal" parts="input" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap11:body use="literal" parts="output" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="buscarPorNumeroServicio">
+      <soap11:operation soapAction="http://claro.com.pe/eai/ebs/services/consultaDatosLTE/ws/buscarPorNumeroServicio" style="document" />
+      <wsdl:input>
+        <soap11:body use="literal" parts="input" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap11:body use="literal" parts="output" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="clienteLTEPortTypeSOAP12Binding" type="tns:clienteLTEPortType">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="consultarDatosPorCodigoContrato">
+      <soap12:operation soapAction="http://claro.com.pe/eai/ebs/services/consultaDatosLTE/ws/consultarDatosPorCodigoContrato" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="input" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" parts="output" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarDatosPorCodigoCliente">
+      <soap12:operation soapAction="http://claro.com.pe/eai/ebs/services/consultaDatosLTE/ws/consultarDatosPorCodigoCliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="input" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" parts="output" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarServicioPorCodigoContrato">
+      <soap12:operation soapAction="http://claro.com.pe/eai/ebs/services/consultaDatosLTE/ws/consultarServicioPorCodigoContrato" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="input" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" parts="output" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarLineasDesactivasPorCodigoContrato">
+      <soap12:operation soapAction="http://claro.com.pe/eai/ebs/services/consultaDatosLTE/ws/consultarLineasDesactivasPorCodigoContrato" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="input" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" parts="output" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarServicioPorCodigoCliente">
+      <soap12:operation soapAction="http://claro.com.pe/eai/ebs/services/consultaDatosLTE/ws/consultarServicioPorCodigoCliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="input" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" parts="output" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarCodigoClientePorLineaCuenta">
+      <soap12:operation soapAction="http://claro.com.pe/eai/ebs/services/consultaDatosLTE/ws/consultarCodigoClientePorLineaCuenta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="input" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" parts="output" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerCuentasPorFiltro">
+      <soap12:operation soapAction="http://claro.com.pe/eai/ebs/services/consultaDatosLTE/ws/obtenerCuentasPorFiltro" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="input" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" parts="output" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarListaTelefonoPorCodigoContrato">
+      <soap12:operation soapAction="http://claro.com.pe/eai/ebs/services/consultaDatosLTE/ws/consultarListaTelefonoPorCodigoContrato" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="input" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" parts="output" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="desactivarContrato">
+      <soap12:operation soapAction="http://claro.com.pe/eai/ebs/services/consultaDatosLTE/ws/desactivarContrato" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="input" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" parts="output" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarDireccionInstalacion">
+      <soap12:operation soapAction="http://claro.com.pe/eai/ebs/services/consultaDatosLTE/ws/actualizarDireccionInstalacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="input" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" parts="output" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="buscarPorNumeroServicio">
+      <soap12:operation soapAction="http://claro.com.pe/eai/ebs/services/consultaDatosLTE/ws/buscarPorNumeroServicio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="input" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" parts="output" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ebsClienteLTE">
+    <wsdl:port name="ebsClienteLTESOAP11Port" binding="tns:clienteLTEPortTypeSOAP11Binding">
+      <soap11:address location="http://limdeseaiv26.tim.com.pe:8909/ClienteLTEWS/ebsClientesLTESB11" />
+    </wsdl:port>
+    <wsdl:port name="ebsClienteLTESOAP12Port" binding="tns:clienteLTEPortTypeSOAP12Binding">
+      <soap11:address location="http://limdeseaiv26.tim.com.pe:8909/ClienteLTEWS/ebsClientesLTESB12" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.ClaroVideo.GetRegisterClientSN" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.ClaroVideo.GetRegisterClientSN" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd38" namespace="Tools.Entity" />
+  <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd50" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.ClaroVideo" />
+  <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd40" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.GetDataPower" />
+  <xs:complexType name="RegisterClientSNRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="Tools.Entity" base="q1:Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="MessageRequest" nillable="true" type="tns:RegisterClientSNMessageRequest" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RegisterClientSNRequest" nillable="true" type="tns:RegisterClientSNRequest" />
+  <xs:complexType name="RegisterClientSNMessageRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Body" nillable="true" type="tns:RegisterClientSNBodyRequest" />
+      <xs:element minOccurs="0" name="Header" nillable="true" type="tns:RegisterClientSNHeaderRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RegisterClientSNMessageRequest" nillable="true" type="tns:RegisterClientSNMessageRequest" />
+  <xs:complexType name="RegisterClientSNBodyRequest">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.ClaroVideo" minOccurs="0" name="createUserOttRequest" nillable="true" type="q2:CreateUserOttRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RegisterClientSNBodyRequest" nillable="true" type="tns:RegisterClientSNBodyRequest" />
+  <xs:complexType name="RegisterClientSNHeaderRequest">
+    <xs:sequence>
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.GetDataPower" minOccurs="0" name="HeaderRequest" nillable="true" type="q3:HeaderRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RegisterClientSNHeaderRequest" nillable="true" type="tns:RegisterClientSNHeaderRequest" />
+  <xs:complexType name="RegisterClientSNResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="Tools.Entity" base="q4:Response">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="MessageResponse" nillable="true" type="tns:RegisterClientSNMessageResponse" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RegisterClientSNResponse" nillable="true" type="tns:RegisterClientSNResponse" />
+  <xs:complexType name="RegisterClientSNMessageResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Body" nillable="true" type="tns:RegisterClientSNBodyResponse" />
+      <xs:element minOccurs="0" name="Header" nillable="true" type="tns:RegisterClientSNHeaderResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RegisterClientSNMessageResponse" nillable="true" type="tns:RegisterClientSNMessageResponse" />
+  <xs:complexType name="RegisterClientSNBodyResponse">
+    <xs:sequence>
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.ClaroVideo" minOccurs="0" name="createUserOttResponse" nillable="true" type="q5:createUserOttResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RegisterClientSNBodyResponse" nillable="true" type="tns:RegisterClientSNBodyResponse" />
+  <xs:complexType name="RegisterClientSNHeaderResponse">
+    <xs:sequence>
+      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.GetDataPower" minOccurs="0" name="HeaderResponse" nillable="true" type="q6:HeaderResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RegisterClientSNHeaderResponse" nillable="true" type="tns:RegisterClientSNHeaderResponse" />
+</xs:schema>

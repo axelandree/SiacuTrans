@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetNetflixServices" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetNetflixServices" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd40" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.GetDataPower" />
+  <xs:complexType name="ServicesNXRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MessageRequest" nillable="true" type="tns:ServicesNXMessageRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServicesNXRequest" nillable="true" type="tns:ServicesNXRequest" />
+  <xs:complexType name="ServicesNXMessageRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Body" nillable="true" type="tns:ServicesNXBodyRequest" />
+      <xs:element minOccurs="0" name="Header" nillable="true" type="tns:ServicesNXHeaderRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServicesNXMessageRequest" nillable="true" type="tns:ServicesNXMessageRequest" />
+  <xs:complexType name="ServicesNXBodyRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="correlatorId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="correo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="enviaCorreo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="enviaSMS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="listaOpcional" nillable="true" type="tns:ArrayOflistaOpcional" />
+      <xs:element minOccurs="0" name="tipoProducto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoUsuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="usuarioId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="usuarioReg" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServicesNXBodyRequest" nillable="true" type="tns:ServicesNXBodyRequest" />
+  <xs:complexType name="ArrayOflistaOpcional">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="listaOpcional" nillable="true" type="tns:listaOpcional" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOflistaOpcional" nillable="true" type="tns:ArrayOflistaOpcional" />
+  <xs:complexType name="listaOpcional">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="clave" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="valor" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="listaOpcional" nillable="true" type="tns:listaOpcional" />
+  <xs:complexType name="ServicesNXHeaderRequest">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.GetDataPower" minOccurs="0" name="HeaderRequest" nillable="true" type="q1:HeaderRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServicesNXHeaderRequest" nillable="true" type="tns:ServicesNXHeaderRequest" />
+  <xs:complexType name="ServicesNXResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MessageResponse" nillable="true" type="tns:ServicesNXMessageResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServicesNXResponse" nillable="true" type="tns:ServicesNXResponse" />
+  <xs:complexType name="ServicesNXMessageResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Body" nillable="true" type="tns:ServicesNXBodyResponse" />
+      <xs:element minOccurs="0" name="Header" nillable="true" type="tns:ServicesNXHeaderResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServicesNXMessageResponse" nillable="true" type="tns:ServicesNXMessageResponse" />
+  <xs:complexType name="ServicesNXBodyResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="listaOpcional" nillable="true" type="tns:ArrayOflistaOpcional" />
+      <xs:element minOccurs="0" name="responseAudit" nillable="true" type="tns:responseAudit" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServicesNXBodyResponse" nillable="true" type="tns:ServicesNXBodyResponse" />
+  <xs:complexType name="responseAudit">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigoRespuesta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="idTransaccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="itemId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="mensajeRespuesta" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="responseAudit" nillable="true" type="tns:responseAudit" />
+  <xs:complexType name="ServicesNXHeaderResponse">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.GetDataPower" minOccurs="0" name="HeaderResponse" nillable="true" type="q2:HeaderResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServicesNXHeaderResponse" nillable="true" type="tns:ServicesNXHeaderResponse" />
+</xs:schema>

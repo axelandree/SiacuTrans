@@ -1,0 +1,83 @@
+﻿@model Claro.SIACU.Web.WebApplication.Transac.Service.Areas.Transactions.Helpers.Postpaid.PostpaidIncomingCall.PostIncomingCallDetail
+@{
+    ViewBag.Title = "DETALLE DE LLAMADAS ENTRANTES POSTPAGO";  
+    Layout = "~/Areas/Transactions/Views/Shared/_Layout.cshtml";
+}
+<script type="text/javascript" src="~/Areas/Transactions/Content/Lib/BloqueoF12.js"></script>
+<script type="text/javascript">
+    function printDiv() {
+        window.print();
+    }
+    function closeDiv() {
+        parent.window.close();
+    }
+</script>
+<div id="IncomingCallDetailPrint">
+    <div class="col-sm-12">
+        <div class="col-sm-3">
+            <img src="~/Images/hm_tim.gif" class="img-responsive img-rounded" alt="Responsive image">
+        </div>
+        <center>
+
+            <div class="col-sm-6">
+                <label><b><u>DETALLE LLAMADAS ENTRANTES POSTPAGO</u></b></label>
+                <br />
+                <label>@Model.telephone</label>
+                <br />
+                <label>@Model.NameClient</label>
+                <br />
+                <label>@Model.DateInConsult</label>
+                <br />
+                <label>@Model.ddlCACDACSelected</label>
+
+            </div>
+            <div class="col-sm-3">
+
+            </div>
+        </center>
+
+
+    </div>
+    <div id="contenedorDetailVisualizeCall">
+        <div class="row">
+            <div class="col-sm-12">
+                <table id="tblDetailVisualizeCall" class="table table-bordered table-hover table-striped">
+                    <thead class="btn-danger">
+                    <tr>
+                        <th class="col-sm-2">N°</th>
+                        <th class="col-sm-2">Número</th>
+                        <th class="col-sm-2">Fecha</th>
+                        <th class="col-sm-2">Hora</th>
+                        <th class="col-sm-2">Número Entrante</th>
+                        <th class="col-sm-2">Duración</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @if (Model.lstQueryAssociatedLines != null)
+                    {
+                        foreach (var item in Model.lstQueryAssociatedLines)
+                        {
+                            <tr>
+                                <td class="">@item.NroOrd</td>
+                                <td class="">@item.MSISDN</td>
+                                <td class="">@item.CallDate</td>
+                                <td class="">@item.CallTime</td>
+                                <td class="">@item.CallNumber</td>                                   
+                                <td class="">@item.CallDuration</td>                                   
+                            </tr>                               
+                        }
+                    }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <center>
+        @*<button id="btnPrint" type="button" class="btn btn-danger"><span class="glyphicon glyphicon-print"></span> Imprimir</button>*@
+        <button id="btnPrint" type="button" class="btn transaction-button" onclick="printDiv()"><span class="glyphicon glyphicon-print"></span> Imprimir</button>
+        <button id="btnClose" type="button" class="btn transaction-button" onclick="closeDiv()"><span class=" glyphicon glyphicon-home"></span> Cerrar</button>
+    </center>
+</div>
+@*@Scripts.Render("~/bundles/Transactions/CommonServices/IncomingCallDetailPrint")*@

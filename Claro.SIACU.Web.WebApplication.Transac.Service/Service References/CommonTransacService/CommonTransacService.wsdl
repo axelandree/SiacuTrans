@@ -1,0 +1,2549 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CommonTransacService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetMotiveSot" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd3" namespace="Claro" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd4" namespace="AuditService" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetSchedule" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetGenerateConstancy" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInsertLogTrx" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetListClientDocumentType" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetParameterData" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd11" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetUpdateNotes" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd12" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetBusinessRules" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd13" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetRegion" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd14" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetCacDacType" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd15" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetValueXml" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd16" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetListItem" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd17" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetTypification" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd18" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetReceipts" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd19" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd20" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInteractionClient" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd21" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInteractionSubClasDetail" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd22" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInsertInt" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd23" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetClient" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd24" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInsertTemplateInteraction" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd25" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInsTemplateInteraction" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd26" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInsertInteract" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd27" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetBusinessInteraction2" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd28" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInsertGeneral" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd29" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInsertTemplateGeneral" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd30" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInsertDetail" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd31" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd32" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetUpdateXInter29" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd33" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetCivilStatus" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd34" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetOccupationClient" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd35" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetReasonRegistry" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd36" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetBrand" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd37" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetConsultDepartment" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd38" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetBrandModel" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd39" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetConsultProvince" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd40" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetConsultDistrict" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd41" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetConsultNationality" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd42" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetServicesVAS" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd43" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetMigratedElements" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd44" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetSaveAudit" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd45" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetSaveAuditM" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd46" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GeneratePDF" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd47" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInsertInteractHFC" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd48" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetSendEmail" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd49" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd50" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetFileDefaultImpersonation" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd51" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetDatTempInteraction" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd52" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetNumberGWP" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd53" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetNumberEAI" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd54" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetVerifyUser" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd55" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetEvaluateAmount" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd56" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetMzBloEdiType" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd57" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetTipDptInt" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd58" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetDepartmentsPVU" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd59" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetProvincesPVU" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd60" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetDistrictsPVU" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd61" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetCenterPopulatPVU" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd62" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetZoneTypeCOBS" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd63" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetBuildingsPVU" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd64" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetWorkType" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd65" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetWorkSubType" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd66" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetValidateCommunication" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd67" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.InsertRedirectCommunication" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd68" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetRedirectSession" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd69" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetPagOptionXuserNV" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd70" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetPagOptionXuser" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd71" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetUser" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd72" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetPenaltyChangePlans" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd73" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetEmployerDate" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd74" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetConsultIGV" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd75" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetContractByPhoneNumber" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd76" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetSendEmailSB" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd77" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetNoteInteraction" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd78" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetDynamicCaseTemplateData" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd79" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetRegisterServiceCommercial" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd80" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetUpdateInter30" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd81" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetProgramTask" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd82" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetTypeTransaction" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd83" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetParameterTerminalTPI" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd84" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInsertEvidence" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd85" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetConsultImei" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd86" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetSot" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd87" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetQuestionsAnswerSecurity" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd88" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetConsultMarkModel" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd89" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetEquipmentForeign" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd90" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInsertEquipmentForeign" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd91" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetListEquipmentRegistered" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd92" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetConsultByGroupParameter" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd93" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInteraction" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd94" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetBlackList" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd95" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetDataPower" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd96" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetTransactionScheduled" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd97" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetETAAuditRequestCapacity" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd98" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetRegisterEta" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd99" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetTimeZones" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd100" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetPuntosAtencion" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd101" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetOffice" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd102" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetValidateCollaborator" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd103" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetConsultCampaign" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd104" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetConsultServiceBono" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd105" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetRegisterBonoSpeed" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd106" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.PostValidateDeliveryBAV" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd107" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetRegisterCampaign" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd108" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetReadDataUser" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd109" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetValidateQuantityCampaign" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd110" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetSubmitNotificationEmail" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd111" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.CheckingUser" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd112" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetEmployeByUser" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd113" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.ReadOptionsByUser" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd114" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetConsultarClaroPuntos" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd115" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetConsultarPaqDisponibles" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd116" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetComprarPaquetes" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd117" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetPCRFConsultation" />
+      <xsd:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd118" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetUploadDocumentOnBase" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICommonTransacService_GetMotiveSot_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMotiveSot" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetMotiveSot_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMotiveSotResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_ValidateSchedule_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateSchedule" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_ValidateSchedule_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateScheduleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetGenerateContancyPDF_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGenerateContancyPDF" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetGenerateContancyPDF_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGenerateContancyPDFResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_InsertLogTrx_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertLogTrx" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_InsertLogTrx_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertLogTrxResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetListClientDocumentType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetListClientDocumentType" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetListClientDocumentType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListClientDocumentTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetParameterData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetParameterData" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetParameterData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetParameterDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_UpdateNotes_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateNotes" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_UpdateNotes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateNotesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetBusinessRules_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBusinessRules" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetBusinessRules_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBusinessRulesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetRegions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRegions" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetRegions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRegionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetCacDacType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCacDacType" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetCacDacType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCacDacTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetValueXml_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetValueXml" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetValueXml_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetValueXmlResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetListValueXML_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetListValueXML" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetListValueXML_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListValueXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetTypification_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTypification" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetTypification_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTypificationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetReceipts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReceipts" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetReceipts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReceiptsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetInteractionClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInteractionClient" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetInteractionClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInteractionClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_InsertRecordSubClaseDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRecordSubClaseDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_InsertRecordSubClaseDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRecordSubClaseDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_InsertInt_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertInt" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_InsertInt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertIntResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetObClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetObClient" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetObClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetObClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetInsertInteractionTemplate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInsertInteractionTemplate" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetInsertInteractionTemplate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInsertInteractionTemplateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetInsInteractionTemplate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInsInteractionTemplate" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetInsInteractionTemplate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInsInteractionTemplateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_InsertInteract_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertInteract" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_InsertInteract_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertInteractResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetInsertBusinnesInteraction2_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInsertBusinnesInteraction2" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetInsertBusinnesInteraction2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInsertBusinnesInteraction2Response" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetinsertInteractionGeneral_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetinsertInteractionGeneral" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetinsertInteractionGeneral_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetinsertInteractionGeneralResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetinsertInteractionTemplateGeneral_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetinsertInteractionTemplateGeneral" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetinsertInteractionTemplateGeneral_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetinsertInteractionTemplateGeneralResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetInsertDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInsertDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetInsertDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInsertDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_UpdateXInter29_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateXInter29" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_UpdateXInter29_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateXInter29Response" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetCivilStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCivilStatus" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetCivilStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCivilStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetOccupationClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOccupationClient" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetOccupationClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOccupationClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetReasonRegistry_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReasonRegistry" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetReasonRegistry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReasonRegistryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetBrandList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBrandList" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetBrandList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBrandListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetConsultDepartment_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConsultDepartment" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetConsultDepartment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConsultDepartmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetBrandModel_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBrandModel" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetBrandModel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBrandModelResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetConsultProvince_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConsultProvince" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetConsultProvince_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConsultProvinceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetConsultDistrict_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConsultDistrict" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetConsultDistrict_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConsultDistrictResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetConsultNationality_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConsultNationality" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetConsultNationality_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConsultNationalityResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetServicesVAS_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetServicesVAS" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetServicesVAS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetServicesVASResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetMigratedElements_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMigratedElements" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetMigratedElements_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMigratedElementsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetMigratedElements2_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMigratedElements2" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetMigratedElements2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMigratedElements2Response" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_SaveAudit_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAudit" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_SaveAudit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAuditResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_SaveAuditM_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAuditM" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_SaveAuditM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAuditMResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GeneratePDF_InputMessage">
+    <wsdl:part name="parameters" element="tns:GeneratePDF" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GeneratePDF_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GeneratePDFResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetInsertInteractHFC_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInsertInteractHFC" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetInsertInteractHFC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInsertInteractHFCResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetInsertInteract_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInsertInteract" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetInsertInteract_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInsertInteractResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetSendEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSendEmail" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetSendEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSendEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetSendEmailAttach_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSendEmailAttach" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetSendEmailAttach_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSendEmailAttachResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetSendEmailAlt_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSendEmailAlt" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetSendEmailAlt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSendEmailAltResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetfileDefaultImpersonation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetfileDefaultImpersonation" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetfileDefaultImpersonation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetfileDefaultImpersonationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetInfoInteractionTemplate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInfoInteractionTemplate" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetInfoInteractionTemplate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInfoInteractionTemplateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetNumberGWP_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNumberGWP" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetNumberGWP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNumberGWPResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetNumberEAI_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNumberEAI" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetNumberEAI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNumberEAIResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetVerifyUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVerifyUser" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetVerifyUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVerifyUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetEvaluateAmount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEvaluateAmount" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetEvaluateAmount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEvaluateAmountResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetEvaluateAmount_DCM_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEvaluateAmount_DCM" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetEvaluateAmount_DCM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEvaluateAmount_DCMResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetIdTrazabilidad_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIdTrazabilidad" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetIdTrazabilidad_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIdTrazabilidadResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetMzBloEdiTypePVU_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMzBloEdiTypePVU" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetMzBloEdiTypePVU_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMzBloEdiTypePVUResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetTipDptInt_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTipDptInt" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetTipDptInt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTipDptIntResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetDepartmentsPVU_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDepartmentsPVU" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetDepartmentsPVU_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDepartmentsPVUResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetProvincesPVU_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProvincesPVU" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetProvincesPVU_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProvincesPVUResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetDistrictsPVU_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDistrictsPVU" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetDistrictsPVU_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDistrictsPVUResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetCenterPopulatPVU_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCenterPopulatPVU" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetCenterPopulatPVU_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCenterPopulatPVUResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetZoneTypeCOBS_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetZoneTypeCOBS" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetZoneTypeCOBS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetZoneTypeCOBSResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetBuildingsPVU_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBuildingsPVU" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetBuildingsPVU_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBuildingsPVUResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetWorkType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkType" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetWorkType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetWorkSubType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkSubType" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetWorkSubType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkSubTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetDocumentTypeCOBS_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentTypeCOBS" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetDocumentTypeCOBS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentTypeCOBSResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_ValidateRedirectCommunication_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateRedirectCommunication" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_ValidateRedirectCommunication_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateRedirectCommunicationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_InsertRedirectCommunication_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRedirectCommunication" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_InsertRedirectCommunication_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRedirectCommunicationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetRedirectSession_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRedirectSession" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetRedirectSession_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRedirectSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetPagOptionXuserVn_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPagOptionXuserVn" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetPagOptionXuserVn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPagOptionXuserVnResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetPagOptionXuser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPagOptionXuser" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetPagOptionXuser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPagOptionXuserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUser" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetPenaltyChangePlan_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPenaltyChangePlan" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetPenaltyChangePlan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPenaltyChangePlanResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetEmployerDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployerDate" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetEmployerDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployerDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetConsultIGV_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConsultIGV" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetConsultIGV_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConsultIGVResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetContractByPhoneNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContractByPhoneNumber" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetContractByPhoneNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContractByPhoneNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetSendEmailSB_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSendEmailSB" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetSendEmailSB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSendEmailSBResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetNoteInteraction_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNoteInteraction" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetNoteInteraction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNoteInteractionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetDynamicCaseTemplateData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDynamicCaseTemplateData" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetDynamicCaseTemplateData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDynamicCaseTemplateDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetRegisterServiceCommercial_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRegisterServiceCommercial" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetRegisterServiceCommercial_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRegisterServiceCommercialResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetUpdatexInter30_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUpdatexInter30" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetUpdatexInter30_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUpdatexInter30Response" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetProgramTask_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProgramTask" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetProgramTask_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProgramTaskResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetTypeTransaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTypeTransaction" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetTypeTransaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTypeTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetParameterTerminalTPI_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetParameterTerminalTPI" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetParameterTerminalTPI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetParameterTerminalTPIResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetInsertEvidence_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInsertEvidence" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetInsertEvidence_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInsertEvidenceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetSendEmailFixed_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSendEmailFixed" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetSendEmailFixed_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSendEmailFixedResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetConsultImei_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConsultImei" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetConsultImei_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConsultImeiResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetSot_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSot" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetSot_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSotResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetQuestionsAnswerSecurity_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetQuestionsAnswerSecurity" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetQuestionsAnswerSecurity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetQuestionsAnswerSecurityResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetConsultMarkModel_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConsultMarkModel" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetConsultMarkModel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConsultMarkModelResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetEquipmentForeign_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEquipmentForeign" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetEquipmentForeign_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEquipmentForeignResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetInsertEquipmentForeign_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInsertEquipmentForeign" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetInsertEquipmentForeign_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInsertEquipmentForeignResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetListEquipmentRegistered_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetListEquipmentRegistered" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetListEquipmentRegistered_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListEquipmentRegisteredResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetConsultByGroupParameter_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConsultByGroupParameter" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetConsultByGroupParameter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConsultByGroupParameterResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetInteraction_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInteraction" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetInteraction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInteractionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetBlackListOsiptel_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBlackListOsiptel" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetBlackListOsiptel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBlackListOsiptelResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetSchedulingRule_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSchedulingRule" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetSchedulingRule_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSchedulingRuleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetETAAuditRequestCapacity_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetETAAuditRequestCapacity" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetETAAuditRequestCapacity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetETAAuditRequestCapacityResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_RegisterEtaRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterEtaRequest" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_RegisterEtaRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterEtaRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_RegisterEtaResponse_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterEtaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_RegisterEtaResponse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterEtaResponseResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetTimeZones_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTimeZones" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetTimeZones_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTimeZonesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetPuntosAtencion_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPuntosAtencion" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetPuntosAtencion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPuntosAtencionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetOffice_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOffice" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetOffice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOfficeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetNationalityList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNationalityList" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetNationalityList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNationalityListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetCivilStatusList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCivilStatusList" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetCivilStatusList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCivilStatusListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetValidateCollaborator_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetValidateCollaborator" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetValidateCollaborator_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetValidateCollaboratorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetConsultCampaign_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConsultCampaign" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetConsultCampaign_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConsultCampaignResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetConsultServiceBono_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConsultServiceBono" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetConsultServiceBono_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConsultServiceBonoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetRegisterBonoSpeed_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRegisterBonoSpeed" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetRegisterBonoSpeed_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRegisterBonoSpeedResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_PostValidateDeliveryBAV_InputMessage">
+    <wsdl:part name="parameters" element="tns:PostValidateDeliveryBAV" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_PostValidateDeliveryBAV_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PostValidateDeliveryBAVResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetRegisterCampaign_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRegisterCampaign" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetRegisterCampaign_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRegisterCampaignResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetReadDataUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReadDataUser" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetReadDataUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReadDataUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetValidateQuantityCampaign_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetValidateQuantityCampaign" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetValidateQuantityCampaign_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetValidateQuantityCampaignResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_EmailSubmit_InputMessage">
+    <wsdl:part name="parameters" element="tns:EmailSubmit" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_EmailSubmit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EmailSubmitResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GenerateContancyWithXml_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateContancyWithXml" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GenerateContancyWithXml_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateContancyWithXmlResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_CheckingUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckingUser" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_CheckingUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckingUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetParamsBSCS_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetParamsBSCS" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetParamsBSCS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetParamsBSCSResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetEmployeByUserwithDP_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeByUserwithDP" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetEmployeByUserwithDP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeByUserwithDPResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_ReadOptionsByUserwithDP_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadOptionsByUserwithDP" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_ReadOptionsByUserwithDP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadOptionsByUserwithDPResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetGenerateContancyNamePDF_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGenerateContancyNamePDF" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetGenerateContancyNamePDF_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGenerateContancyNamePDFResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_ConsultarClaroPuntos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarClaroPuntos" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_ConsultarClaroPuntos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarClaroPuntosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_ConsultarPaqDisponibles_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarPaqDisponibles" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_ConsultarPaqDisponibles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarPaqDisponiblesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_ComprarPaquetes_InputMessage">
+    <wsdl:part name="parameters" element="tns:ComprarPaquetes" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_ComprarPaquetes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ComprarPaquetesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_ConsultarPCRFDegradacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarPCRFDegradacion" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_ConsultarPCRFDegradacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarPCRFDegradacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetDatosporNroDocumentos_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDatosporNroDocumentos" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetDatosporNroDocumentos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDatosporNroDocumentosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetUploadDocumentOnBase_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUploadDocumentOnBase" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetUploadDocumentOnBase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUploadDocumentOnBaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetConstancyPDFWithOnbase_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConstancyPDFWithOnbase" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_GetConstancyPDFWithOnbase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConstancyPDFWithOnbaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_ObtenerTelefonosClienteLTE_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerTelefonosClienteLTE" />
+  </wsdl:message>
+  <wsdl:message name="ICommonTransacService_ObtenerTelefonosClienteLTE_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerTelefonosClienteLTEResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICommonTransacService">
+    <wsdl:operation name="GetMotiveSot">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetMotiveSot" message="tns:ICommonTransacService_GetMotiveSot_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetMotiveSotResponse" message="tns:ICommonTransacService_GetMotiveSot_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateSchedule">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/ValidateSchedule" message="tns:ICommonTransacService_ValidateSchedule_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/ValidateScheduleResponse" message="tns:ICommonTransacService_ValidateSchedule_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGenerateContancyPDF">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetGenerateContancyPDF" message="tns:ICommonTransacService_GetGenerateContancyPDF_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetGenerateContancyPDFResponse" message="tns:ICommonTransacService_GetGenerateContancyPDF_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertLogTrx">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/InsertLogTrx" message="tns:ICommonTransacService_InsertLogTrx_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/InsertLogTrxResponse" message="tns:ICommonTransacService_InsertLogTrx_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListClientDocumentType">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetListClientDocumentType" message="tns:ICommonTransacService_GetListClientDocumentType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetListClientDocumentTypeResponse" message="tns:ICommonTransacService_GetListClientDocumentType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetParameterData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetParameterData" message="tns:ICommonTransacService_GetParameterData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetParameterDataResponse" message="tns:ICommonTransacService_GetParameterData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateNotes">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/UpdateNotes" message="tns:ICommonTransacService_UpdateNotes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/UpdateNotesResponse" message="tns:ICommonTransacService_UpdateNotes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBusinessRules">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetBusinessRules" message="tns:ICommonTransacService_GetBusinessRules_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetBusinessRulesResponse" message="tns:ICommonTransacService_GetBusinessRules_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRegions">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetRegions" message="tns:ICommonTransacService_GetRegions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetRegionsResponse" message="tns:ICommonTransacService_GetRegions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCacDacType">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetCacDacType" message="tns:ICommonTransacService_GetCacDacType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetCacDacTypeResponse" message="tns:ICommonTransacService_GetCacDacType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetValueXml">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetValueXml" message="tns:ICommonTransacService_GetValueXml_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetValueXmlResponse" message="tns:ICommonTransacService_GetValueXml_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListValueXML">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetListValueXML" message="tns:ICommonTransacService_GetListValueXML_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetListValueXMLResponse" message="tns:ICommonTransacService_GetListValueXML_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTypification">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetTypification" message="tns:ICommonTransacService_GetTypification_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetTypificationResponse" message="tns:ICommonTransacService_GetTypification_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReceipts">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetReceipts" message="tns:ICommonTransacService_GetReceipts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetReceiptsResponse" message="tns:ICommonTransacService_GetReceipts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInteractionClient">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetInteractionClient" message="tns:ICommonTransacService_GetInteractionClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetInteractionClientResponse" message="tns:ICommonTransacService_GetInteractionClient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertRecordSubClaseDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/InsertRecordSubClaseDetail" message="tns:ICommonTransacService_InsertRecordSubClaseDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/InsertRecordSubClaseDetailResponse" message="tns:ICommonTransacService_InsertRecordSubClaseDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertInt">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/InsertInt" message="tns:ICommonTransacService_InsertInt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/InsertIntResponse" message="tns:ICommonTransacService_InsertInt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetObClient">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetObClient" message="tns:ICommonTransacService_GetObClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetObClientResponse" message="tns:ICommonTransacService_GetObClient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInsertInteractionTemplate">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetInsertInteractionTemplate" message="tns:ICommonTransacService_GetInsertInteractionTemplate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetInsertInteractionTemplateResponse" message="tns:ICommonTransacService_GetInsertInteractionTemplate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInsInteractionTemplate">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetInsInteractionTemplate" message="tns:ICommonTransacService_GetInsInteractionTemplate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetInsInteractionTemplateResponse" message="tns:ICommonTransacService_GetInsInteractionTemplate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertInteract">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/InsertInteract" message="tns:ICommonTransacService_InsertInteract_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/InsertInteractResponse" message="tns:ICommonTransacService_InsertInteract_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInsertBusinnesInteraction2">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetInsertBusinnesInteraction2" message="tns:ICommonTransacService_GetInsertBusinnesInteraction2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetInsertBusinnesInteraction2Response" message="tns:ICommonTransacService_GetInsertBusinnesInteraction2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetinsertInteractionGeneral">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetinsertInteractionGeneral" message="tns:ICommonTransacService_GetinsertInteractionGeneral_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetinsertInteractionGeneralResponse" message="tns:ICommonTransacService_GetinsertInteractionGeneral_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetinsertInteractionTemplateGeneral">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetinsertInteractionTemplateGeneral" message="tns:ICommonTransacService_GetinsertInteractionTemplateGeneral_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetinsertInteractionTemplateGeneralResponse" message="tns:ICommonTransacService_GetinsertInteractionTemplateGeneral_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInsertDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetInsertDetail" message="tns:ICommonTransacService_GetInsertDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetInsertDetailResponse" message="tns:ICommonTransacService_GetInsertDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateXInter29">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/UpdateXInter29" message="tns:ICommonTransacService_UpdateXInter29_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/UpdateXInter29Response" message="tns:ICommonTransacService_UpdateXInter29_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCivilStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetCivilStatus" message="tns:ICommonTransacService_GetCivilStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetCivilStatusResponse" message="tns:ICommonTransacService_GetCivilStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOccupationClient">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetOccupationClient" message="tns:ICommonTransacService_GetOccupationClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetOccupationClientResponse" message="tns:ICommonTransacService_GetOccupationClient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReasonRegistry">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetReasonRegistry" message="tns:ICommonTransacService_GetReasonRegistry_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetReasonRegistryResponse" message="tns:ICommonTransacService_GetReasonRegistry_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBrandList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetBrandList" message="tns:ICommonTransacService_GetBrandList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetBrandListResponse" message="tns:ICommonTransacService_GetBrandList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConsultDepartment">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetConsultDepartment" message="tns:ICommonTransacService_GetConsultDepartment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetConsultDepartmentResponse" message="tns:ICommonTransacService_GetConsultDepartment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBrandModel">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetBrandModel" message="tns:ICommonTransacService_GetBrandModel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetBrandModelResponse" message="tns:ICommonTransacService_GetBrandModel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConsultProvince">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetConsultProvince" message="tns:ICommonTransacService_GetConsultProvince_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetConsultProvinceResponse" message="tns:ICommonTransacService_GetConsultProvince_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConsultDistrict">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetConsultDistrict" message="tns:ICommonTransacService_GetConsultDistrict_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetConsultDistrictResponse" message="tns:ICommonTransacService_GetConsultDistrict_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConsultNationality">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetConsultNationality" message="tns:ICommonTransacService_GetConsultNationality_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetConsultNationalityResponse" message="tns:ICommonTransacService_GetConsultNationality_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServicesVAS">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetServicesVAS" message="tns:ICommonTransacService_GetServicesVAS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetServicesVASResponse" message="tns:ICommonTransacService_GetServicesVAS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMigratedElements">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetMigratedElements" message="tns:ICommonTransacService_GetMigratedElements_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetMigratedElementsResponse" message="tns:ICommonTransacService_GetMigratedElements_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMigratedElements2">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetMigratedElements2" message="tns:ICommonTransacService_GetMigratedElements2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetMigratedElements2Response" message="tns:ICommonTransacService_GetMigratedElements2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveAudit">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/SaveAudit" message="tns:ICommonTransacService_SaveAudit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/SaveAuditResponse" message="tns:ICommonTransacService_SaveAudit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveAuditM">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/SaveAuditM" message="tns:ICommonTransacService_SaveAuditM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/SaveAuditMResponse" message="tns:ICommonTransacService_SaveAuditM_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GeneratePDF">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GeneratePDF" message="tns:ICommonTransacService_GeneratePDF_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GeneratePDFResponse" message="tns:ICommonTransacService_GeneratePDF_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInsertInteractHFC">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetInsertInteractHFC" message="tns:ICommonTransacService_GetInsertInteractHFC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetInsertInteractHFCResponse" message="tns:ICommonTransacService_GetInsertInteractHFC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInsertInteract">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetInsertInteract" message="tns:ICommonTransacService_GetInsertInteract_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetInsertInteractResponse" message="tns:ICommonTransacService_GetInsertInteract_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSendEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetSendEmail" message="tns:ICommonTransacService_GetSendEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetSendEmailResponse" message="tns:ICommonTransacService_GetSendEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSendEmailAttach">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetSendEmailAttach" message="tns:ICommonTransacService_GetSendEmailAttach_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetSendEmailAttachResponse" message="tns:ICommonTransacService_GetSendEmailAttach_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSendEmailAlt">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetSendEmailAlt" message="tns:ICommonTransacService_GetSendEmailAlt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetSendEmailAltResponse" message="tns:ICommonTransacService_GetSendEmailAlt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetfileDefaultImpersonation">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetfileDefaultImpersonation" message="tns:ICommonTransacService_GetfileDefaultImpersonation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetfileDefaultImpersonationResponse" message="tns:ICommonTransacService_GetfileDefaultImpersonation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInfoInteractionTemplate">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetInfoInteractionTemplate" message="tns:ICommonTransacService_GetInfoInteractionTemplate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetInfoInteractionTemplateResponse" message="tns:ICommonTransacService_GetInfoInteractionTemplate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNumberGWP">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetNumberGWP" message="tns:ICommonTransacService_GetNumberGWP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetNumberGWPResponse" message="tns:ICommonTransacService_GetNumberGWP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNumberEAI">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetNumberEAI" message="tns:ICommonTransacService_GetNumberEAI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetNumberEAIResponse" message="tns:ICommonTransacService_GetNumberEAI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVerifyUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetVerifyUser" message="tns:ICommonTransacService_GetVerifyUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetVerifyUserResponse" message="tns:ICommonTransacService_GetVerifyUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEvaluateAmount">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetEvaluateAmount" message="tns:ICommonTransacService_GetEvaluateAmount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetEvaluateAmountResponse" message="tns:ICommonTransacService_GetEvaluateAmount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEvaluateAmount_DCM">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetEvaluateAmount_DCM" message="tns:ICommonTransacService_GetEvaluateAmount_DCM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetEvaluateAmount_DCMResponse" message="tns:ICommonTransacService_GetEvaluateAmount_DCM_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIdTrazabilidad">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetIdTrazabilidad" message="tns:ICommonTransacService_GetIdTrazabilidad_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetIdTrazabilidadResponse" message="tns:ICommonTransacService_GetIdTrazabilidad_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMzBloEdiTypePVU">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetMzBloEdiTypePVU" message="tns:ICommonTransacService_GetMzBloEdiTypePVU_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetMzBloEdiTypePVUResponse" message="tns:ICommonTransacService_GetMzBloEdiTypePVU_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTipDptInt">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetTipDptInt" message="tns:ICommonTransacService_GetTipDptInt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetTipDptIntResponse" message="tns:ICommonTransacService_GetTipDptInt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartmentsPVU">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetDepartmentsPVU" message="tns:ICommonTransacService_GetDepartmentsPVU_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetDepartmentsPVUResponse" message="tns:ICommonTransacService_GetDepartmentsPVU_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProvincesPVU">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetProvincesPVU" message="tns:ICommonTransacService_GetProvincesPVU_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetProvincesPVUResponse" message="tns:ICommonTransacService_GetProvincesPVU_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDistrictsPVU">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetDistrictsPVU" message="tns:ICommonTransacService_GetDistrictsPVU_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetDistrictsPVUResponse" message="tns:ICommonTransacService_GetDistrictsPVU_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCenterPopulatPVU">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetCenterPopulatPVU" message="tns:ICommonTransacService_GetCenterPopulatPVU_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetCenterPopulatPVUResponse" message="tns:ICommonTransacService_GetCenterPopulatPVU_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetZoneTypeCOBS">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetZoneTypeCOBS" message="tns:ICommonTransacService_GetZoneTypeCOBS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetZoneTypeCOBSResponse" message="tns:ICommonTransacService_GetZoneTypeCOBS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBuildingsPVU">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetBuildingsPVU" message="tns:ICommonTransacService_GetBuildingsPVU_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetBuildingsPVUResponse" message="tns:ICommonTransacService_GetBuildingsPVU_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkType">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetWorkType" message="tns:ICommonTransacService_GetWorkType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetWorkTypeResponse" message="tns:ICommonTransacService_GetWorkType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkSubType">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetWorkSubType" message="tns:ICommonTransacService_GetWorkSubType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetWorkSubTypeResponse" message="tns:ICommonTransacService_GetWorkSubType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentTypeCOBS">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetDocumentTypeCOBS" message="tns:ICommonTransacService_GetDocumentTypeCOBS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetDocumentTypeCOBSResponse" message="tns:ICommonTransacService_GetDocumentTypeCOBS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateRedirectCommunication">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/ValidateRedirectCommunication" message="tns:ICommonTransacService_ValidateRedirectCommunication_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/ValidateRedirectCommunicationResponse" message="tns:ICommonTransacService_ValidateRedirectCommunication_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertRedirectCommunication">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/InsertRedirectCommunication" message="tns:ICommonTransacService_InsertRedirectCommunication_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/InsertRedirectCommunicationResponse" message="tns:ICommonTransacService_InsertRedirectCommunication_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRedirectSession">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetRedirectSession" message="tns:ICommonTransacService_GetRedirectSession_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetRedirectSessionResponse" message="tns:ICommonTransacService_GetRedirectSession_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPagOptionXuserVn">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetPagOptionXuserVn" message="tns:ICommonTransacService_GetPagOptionXuserVn_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetPagOptionXuserVnResponse" message="tns:ICommonTransacService_GetPagOptionXuserVn_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPagOptionXuser">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetPagOptionXuser" message="tns:ICommonTransacService_GetPagOptionXuser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetPagOptionXuserResponse" message="tns:ICommonTransacService_GetPagOptionXuser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetUser" message="tns:ICommonTransacService_GetUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetUserResponse" message="tns:ICommonTransacService_GetUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPenaltyChangePlan">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetPenaltyChangePlan" message="tns:ICommonTransacService_GetPenaltyChangePlan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetPenaltyChangePlanResponse" message="tns:ICommonTransacService_GetPenaltyChangePlan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployerDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetEmployerDate" message="tns:ICommonTransacService_GetEmployerDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetEmployerDateResponse" message="tns:ICommonTransacService_GetEmployerDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConsultIGV">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetConsultIGV" message="tns:ICommonTransacService_GetConsultIGV_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetConsultIGVResponse" message="tns:ICommonTransacService_GetConsultIGV_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContractByPhoneNumber">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetContractByPhoneNumber" message="tns:ICommonTransacService_GetContractByPhoneNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetContractByPhoneNumberResponse" message="tns:ICommonTransacService_GetContractByPhoneNumber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSendEmailSB">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetSendEmailSB" message="tns:ICommonTransacService_GetSendEmailSB_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetSendEmailSBResponse" message="tns:ICommonTransacService_GetSendEmailSB_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNoteInteraction">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetNoteInteraction" message="tns:ICommonTransacService_GetNoteInteraction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetNoteInteractionResponse" message="tns:ICommonTransacService_GetNoteInteraction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDynamicCaseTemplateData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetDynamicCaseTemplateData" message="tns:ICommonTransacService_GetDynamicCaseTemplateData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetDynamicCaseTemplateDataResponse" message="tns:ICommonTransacService_GetDynamicCaseTemplateData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRegisterServiceCommercial">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetRegisterServiceCommercial" message="tns:ICommonTransacService_GetRegisterServiceCommercial_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetRegisterServiceCommercialResponse" message="tns:ICommonTransacService_GetRegisterServiceCommercial_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUpdatexInter30">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetUpdatexInter30" message="tns:ICommonTransacService_GetUpdatexInter30_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetUpdatexInter30Response" message="tns:ICommonTransacService_GetUpdatexInter30_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProgramTask">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetProgramTask" message="tns:ICommonTransacService_GetProgramTask_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetProgramTaskResponse" message="tns:ICommonTransacService_GetProgramTask_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTypeTransaction">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetTypeTransaction" message="tns:ICommonTransacService_GetTypeTransaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetTypeTransactionResponse" message="tns:ICommonTransacService_GetTypeTransaction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetParameterTerminalTPI">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetParameterTerminalTPI" message="tns:ICommonTransacService_GetParameterTerminalTPI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetParameterTerminalTPIResponse" message="tns:ICommonTransacService_GetParameterTerminalTPI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInsertEvidence">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetInsertEvidence" message="tns:ICommonTransacService_GetInsertEvidence_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetInsertEvidenceResponse" message="tns:ICommonTransacService_GetInsertEvidence_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSendEmailFixed">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetSendEmailFixed" message="tns:ICommonTransacService_GetSendEmailFixed_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetSendEmailFixedResponse" message="tns:ICommonTransacService_GetSendEmailFixed_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConsultImei">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetConsultImei" message="tns:ICommonTransacService_GetConsultImei_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetConsultImeiResponse" message="tns:ICommonTransacService_GetConsultImei_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSot">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetSot" message="tns:ICommonTransacService_GetSot_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetSotResponse" message="tns:ICommonTransacService_GetSot_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQuestionsAnswerSecurity">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetQuestionsAnswerSecurity" message="tns:ICommonTransacService_GetQuestionsAnswerSecurity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetQuestionsAnswerSecurityResponse" message="tns:ICommonTransacService_GetQuestionsAnswerSecurity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConsultMarkModel">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetConsultMarkModel" message="tns:ICommonTransacService_GetConsultMarkModel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetConsultMarkModelResponse" message="tns:ICommonTransacService_GetConsultMarkModel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEquipmentForeign">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetEquipmentForeign" message="tns:ICommonTransacService_GetEquipmentForeign_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetEquipmentForeignResponse" message="tns:ICommonTransacService_GetEquipmentForeign_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInsertEquipmentForeign">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetInsertEquipmentForeign" message="tns:ICommonTransacService_GetInsertEquipmentForeign_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetInsertEquipmentForeignResponse" message="tns:ICommonTransacService_GetInsertEquipmentForeign_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListEquipmentRegistered">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetListEquipmentRegistered" message="tns:ICommonTransacService_GetListEquipmentRegistered_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetListEquipmentRegisteredResponse" message="tns:ICommonTransacService_GetListEquipmentRegistered_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConsultByGroupParameter">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetConsultByGroupParameter" message="tns:ICommonTransacService_GetConsultByGroupParameter_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetConsultByGroupParameterResponse" message="tns:ICommonTransacService_GetConsultByGroupParameter_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInteraction">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetInteraction" message="tns:ICommonTransacService_GetInteraction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetInteractionResponse" message="tns:ICommonTransacService_GetInteraction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBlackListOsiptel">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetBlackListOsiptel" message="tns:ICommonTransacService_GetBlackListOsiptel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetBlackListOsiptelResponse" message="tns:ICommonTransacService_GetBlackListOsiptel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSchedulingRule">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetSchedulingRule" message="tns:ICommonTransacService_GetSchedulingRule_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetSchedulingRuleResponse" message="tns:ICommonTransacService_GetSchedulingRule_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetETAAuditRequestCapacity">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetETAAuditRequestCapacity" message="tns:ICommonTransacService_GetETAAuditRequestCapacity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetETAAuditRequestCapacityResponse" message="tns:ICommonTransacService_GetETAAuditRequestCapacity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterEtaRequest">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/RegisterEtaRequest" message="tns:ICommonTransacService_RegisterEtaRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/RegisterEtaRequestResponse" message="tns:ICommonTransacService_RegisterEtaRequest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterEtaResponse">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/RegisterEtaResponse" message="tns:ICommonTransacService_RegisterEtaResponse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/RegisterEtaResponseResponse" message="tns:ICommonTransacService_RegisterEtaResponse_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTimeZones">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetTimeZones" message="tns:ICommonTransacService_GetTimeZones_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetTimeZonesResponse" message="tns:ICommonTransacService_GetTimeZones_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPuntosAtencion">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetPuntosAtencion" message="tns:ICommonTransacService_GetPuntosAtencion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetPuntosAtencionResponse" message="tns:ICommonTransacService_GetPuntosAtencion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOffice">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetOffice" message="tns:ICommonTransacService_GetOffice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetOfficeResponse" message="tns:ICommonTransacService_GetOffice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNationalityList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetNationalityList" message="tns:ICommonTransacService_GetNationalityList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetNationalityListResponse" message="tns:ICommonTransacService_GetNationalityList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCivilStatusList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetCivilStatusList" message="tns:ICommonTransacService_GetCivilStatusList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetCivilStatusListResponse" message="tns:ICommonTransacService_GetCivilStatusList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetValidateCollaborator">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetValidateCollaborator" message="tns:ICommonTransacService_GetValidateCollaborator_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetValidateCollaboratorResponse" message="tns:ICommonTransacService_GetValidateCollaborator_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConsultCampaign">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetConsultCampaign" message="tns:ICommonTransacService_GetConsultCampaign_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetConsultCampaignResponse" message="tns:ICommonTransacService_GetConsultCampaign_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConsultServiceBono">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetConsultServiceBono" message="tns:ICommonTransacService_GetConsultServiceBono_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetConsultServiceBonoResponse" message="tns:ICommonTransacService_GetConsultServiceBono_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRegisterBonoSpeed">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetRegisterBonoSpeed" message="tns:ICommonTransacService_GetRegisterBonoSpeed_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetRegisterBonoSpeedResponse" message="tns:ICommonTransacService_GetRegisterBonoSpeed_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PostValidateDeliveryBAV">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/PostValidateDeliveryBAV" message="tns:ICommonTransacService_PostValidateDeliveryBAV_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/PostValidateDeliveryBAVResponse" message="tns:ICommonTransacService_PostValidateDeliveryBAV_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRegisterCampaign">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetRegisterCampaign" message="tns:ICommonTransacService_GetRegisterCampaign_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetRegisterCampaignResponse" message="tns:ICommonTransacService_GetRegisterCampaign_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReadDataUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetReadDataUser" message="tns:ICommonTransacService_GetReadDataUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetReadDataUserResponse" message="tns:ICommonTransacService_GetReadDataUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetValidateQuantityCampaign">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetValidateQuantityCampaign" message="tns:ICommonTransacService_GetValidateQuantityCampaign_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetValidateQuantityCampaignResponse" message="tns:ICommonTransacService_GetValidateQuantityCampaign_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EmailSubmit">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/EmailSubmit" message="tns:ICommonTransacService_EmailSubmit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/EmailSubmitResponse" message="tns:ICommonTransacService_EmailSubmit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateContancyWithXml">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GenerateContancyWithXml" message="tns:ICommonTransacService_GenerateContancyWithXml_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GenerateContancyWithXmlResponse" message="tns:ICommonTransacService_GenerateContancyWithXml_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckingUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/CheckingUser" message="tns:ICommonTransacService_CheckingUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/CheckingUserResponse" message="tns:ICommonTransacService_CheckingUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetParamsBSCS">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetParamsBSCS" message="tns:ICommonTransacService_GetParamsBSCS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetParamsBSCSResponse" message="tns:ICommonTransacService_GetParamsBSCS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeByUserwithDP">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetEmployeByUserwithDP" message="tns:ICommonTransacService_GetEmployeByUserwithDP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetEmployeByUserwithDPResponse" message="tns:ICommonTransacService_GetEmployeByUserwithDP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadOptionsByUserwithDP">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/ReadOptionsByUserwithDP" message="tns:ICommonTransacService_ReadOptionsByUserwithDP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/ReadOptionsByUserwithDPResponse" message="tns:ICommonTransacService_ReadOptionsByUserwithDP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGenerateContancyNamePDF">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetGenerateContancyNamePDF" message="tns:ICommonTransacService_GetGenerateContancyNamePDF_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetGenerateContancyNamePDFResponse" message="tns:ICommonTransacService_GetGenerateContancyNamePDF_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarClaroPuntos">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/ConsultarClaroPuntos" message="tns:ICommonTransacService_ConsultarClaroPuntos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/ConsultarClaroPuntosResponse" message="tns:ICommonTransacService_ConsultarClaroPuntos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPaqDisponibles">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/ConsultarPaqDisponibles" message="tns:ICommonTransacService_ConsultarPaqDisponibles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/ConsultarPaqDisponiblesResponse" message="tns:ICommonTransacService_ConsultarPaqDisponibles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ComprarPaquetes">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/ComprarPaquetes" message="tns:ICommonTransacService_ComprarPaquetes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/ComprarPaquetesResponse" message="tns:ICommonTransacService_ComprarPaquetes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPCRFDegradacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/ConsultarPCRFDegradacion" message="tns:ICommonTransacService_ConsultarPCRFDegradacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/ConsultarPCRFDegradacionResponse" message="tns:ICommonTransacService_ConsultarPCRFDegradacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDatosporNroDocumentos">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetDatosporNroDocumentos" message="tns:ICommonTransacService_GetDatosporNroDocumentos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetDatosporNroDocumentosResponse" message="tns:ICommonTransacService_GetDatosporNroDocumentos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUploadDocumentOnBase">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetUploadDocumentOnBase" message="tns:ICommonTransacService_GetUploadDocumentOnBase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetUploadDocumentOnBaseResponse" message="tns:ICommonTransacService_GetUploadDocumentOnBase_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConstancyPDFWithOnbase">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/GetConstancyPDFWithOnbase" message="tns:ICommonTransacService_GetConstancyPDFWithOnbase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/GetConstancyPDFWithOnbaseResponse" message="tns:ICommonTransacService_GetConstancyPDFWithOnbase_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTelefonosClienteLTE">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonTransacService/ObtenerTelefonosClienteLTE" message="tns:ICommonTransacService_ObtenerTelefonosClienteLTE_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonTransacService/ObtenerTelefonosClienteLTEResponse" message="tns:ICommonTransacService_ObtenerTelefonosClienteLTE_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ICommonTransacService" type="tns:ICommonTransacService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetMotiveSot">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetMotiveSot" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateSchedule">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/ValidateSchedule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGenerateContancyPDF">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetGenerateContancyPDF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertLogTrx">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/InsertLogTrx" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListClientDocumentType">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetListClientDocumentType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetParameterData">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetParameterData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateNotes">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/UpdateNotes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBusinessRules">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetBusinessRules" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegions">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetRegions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCacDacType">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetCacDacType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetValueXml">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetValueXml" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListValueXML">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetListValueXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTypification">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetTypification" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReceipts">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetReceipts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInteractionClient">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetInteractionClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertRecordSubClaseDetail">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/InsertRecordSubClaseDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertInt">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/InsertInt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetObClient">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetObClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInsertInteractionTemplate">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetInsertInteractionTemplate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInsInteractionTemplate">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetInsInteractionTemplate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertInteract">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/InsertInteract" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInsertBusinnesInteraction2">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetInsertBusinnesInteraction2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetinsertInteractionGeneral">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetinsertInteractionGeneral" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetinsertInteractionTemplateGeneral">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetinsertInteractionTemplateGeneral" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInsertDetail">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetInsertDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateXInter29">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/UpdateXInter29" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCivilStatus">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetCivilStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOccupationClient">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetOccupationClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReasonRegistry">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetReasonRegistry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBrandList">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetBrandList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConsultDepartment">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetConsultDepartment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBrandModel">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetBrandModel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConsultProvince">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetConsultProvince" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConsultDistrict">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetConsultDistrict" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConsultNationality">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetConsultNationality" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServicesVAS">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetServicesVAS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMigratedElements">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetMigratedElements" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMigratedElements2">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetMigratedElements2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveAudit">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/SaveAudit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveAuditM">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/SaveAuditM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GeneratePDF">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GeneratePDF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInsertInteractHFC">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetInsertInteractHFC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInsertInteract">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetInsertInteract" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSendEmail">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetSendEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSendEmailAttach">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetSendEmailAttach" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSendEmailAlt">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetSendEmailAlt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetfileDefaultImpersonation">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetfileDefaultImpersonation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInfoInteractionTemplate">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetInfoInteractionTemplate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNumberGWP">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetNumberGWP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNumberEAI">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetNumberEAI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVerifyUser">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetVerifyUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEvaluateAmount">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetEvaluateAmount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEvaluateAmount_DCM">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetEvaluateAmount_DCM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIdTrazabilidad">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetIdTrazabilidad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMzBloEdiTypePVU">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetMzBloEdiTypePVU" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTipDptInt">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetTipDptInt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartmentsPVU">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetDepartmentsPVU" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProvincesPVU">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetProvincesPVU" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDistrictsPVU">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetDistrictsPVU" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCenterPopulatPVU">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetCenterPopulatPVU" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetZoneTypeCOBS">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetZoneTypeCOBS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBuildingsPVU">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetBuildingsPVU" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkType">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetWorkType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkSubType">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetWorkSubType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentTypeCOBS">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetDocumentTypeCOBS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateRedirectCommunication">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/ValidateRedirectCommunication" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertRedirectCommunication">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/InsertRedirectCommunication" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRedirectSession">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetRedirectSession" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPagOptionXuserVn">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetPagOptionXuserVn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPagOptionXuser">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetPagOptionXuser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUser">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPenaltyChangePlan">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetPenaltyChangePlan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployerDate">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetEmployerDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConsultIGV">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetConsultIGV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContractByPhoneNumber">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetContractByPhoneNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSendEmailSB">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetSendEmailSB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNoteInteraction">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetNoteInteraction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDynamicCaseTemplateData">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetDynamicCaseTemplateData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegisterServiceCommercial">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetRegisterServiceCommercial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUpdatexInter30">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetUpdatexInter30" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProgramTask">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetProgramTask" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTypeTransaction">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetTypeTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetParameterTerminalTPI">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetParameterTerminalTPI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInsertEvidence">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetInsertEvidence" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSendEmailFixed">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetSendEmailFixed" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConsultImei">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetConsultImei" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSot">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetSot" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQuestionsAnswerSecurity">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetQuestionsAnswerSecurity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConsultMarkModel">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetConsultMarkModel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEquipmentForeign">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetEquipmentForeign" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInsertEquipmentForeign">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetInsertEquipmentForeign" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListEquipmentRegistered">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetListEquipmentRegistered" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConsultByGroupParameter">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetConsultByGroupParameter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInteraction">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetInteraction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBlackListOsiptel">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetBlackListOsiptel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSchedulingRule">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetSchedulingRule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetETAAuditRequestCapacity">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetETAAuditRequestCapacity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterEtaRequest">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/RegisterEtaRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterEtaResponse">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/RegisterEtaResponse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTimeZones">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetTimeZones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPuntosAtencion">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetPuntosAtencion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOffice">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetOffice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNationalityList">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetNationalityList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCivilStatusList">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetCivilStatusList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetValidateCollaborator">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetValidateCollaborator" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConsultCampaign">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetConsultCampaign" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConsultServiceBono">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetConsultServiceBono" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegisterBonoSpeed">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetRegisterBonoSpeed" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostValidateDeliveryBAV">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/PostValidateDeliveryBAV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegisterCampaign">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetRegisterCampaign" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReadDataUser">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetReadDataUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetValidateQuantityCampaign">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetValidateQuantityCampaign" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmailSubmit">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/EmailSubmit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateContancyWithXml">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GenerateContancyWithXml" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckingUser">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/CheckingUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetParamsBSCS">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetParamsBSCS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeByUserwithDP">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetEmployeByUserwithDP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReadOptionsByUserwithDP">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/ReadOptionsByUserwithDP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGenerateContancyNamePDF">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetGenerateContancyNamePDF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarClaroPuntos">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/ConsultarClaroPuntos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPaqDisponibles">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/ConsultarPaqDisponibles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ComprarPaquetes">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/ComprarPaquetes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPCRFDegradacion">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/ConsultarPCRFDegradacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatosporNroDocumentos">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetDatosporNroDocumentos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUploadDocumentOnBase">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetUploadDocumentOnBase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConstancyPDFWithOnbase">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/GetConstancyPDFWithOnbase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTelefonosClienteLTE">
+      <soap:operation soapAction="http://tempuri.org/ICommonTransacService/ObtenerTelefonosClienteLTE" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CommonTransacService">
+    <wsdl:port name="BasicHttpBinding_ICommonTransacService" binding="tns:BasicHttpBinding_ICommonTransacService">
+      <soap:address location="http://localhost:40204/CommonTransacService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

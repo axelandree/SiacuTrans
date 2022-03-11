@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetConfigurationIP" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetConfigurationIP" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed" />
+  <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd132" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInsertInteractHFC" />
+  <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd45" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common" />
+  <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd3" namespace="Claro" />
+  <xs:complexType name="ConfigurationIPRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="Claro" base="q1:Request">
+        <xs:sequence>
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed" minOccurs="0" name="oCustomer" nillable="true" type="q2:Customer" />
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInsertInteractHFC" minOccurs="0" name="oInsertInteractHFCRequest" nillable="true" type="q3:InsertInteractHFCRequest" />
+          <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common" minOccurs="0" name="oInsertTemplateInteraction" nillable="true" type="q4:InsertTemplateInteraction" />
+          <xs:element minOccurs="0" name="strApplicationName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strCodInterCaso" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strCodSolot" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strCodUbigeo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strCodZona" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strCodeDif" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strCodinssrv" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strCorreoDestinatario" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strFecProg" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strFlagContingencia" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strFormatoConstancia" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strFranjaHorario" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strIdPlano" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strIpCliente" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strJobType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strListaCose" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strListaSpCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strLote" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strManzana" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strMsisdn" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strNombreUrbanizacion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strNombreVia" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strNumCarta" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strNumeroVia" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strObservacion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strOperador" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strPresuscrito" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strPublicar" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strReferencia" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strTipoTrans" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strTipoTransaccion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strTipoUrbanizacion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strTipoVia" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strTypeServices" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strUsuarioReg" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strWeb" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="stradTmCode" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ConfigurationIPRequest" nillable="true" type="tns:ConfigurationIPRequest" />
+  <xs:complexType name="ConfigurationIPResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="oResponseStatus" nillable="true" type="tns:ResponseStatus" />
+      <xs:element minOccurs="0" name="strCodigoRespuesta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strDescripcionRespuesta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strIdInteraccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strNroSOT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strRutaConstacy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strflag" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConfigurationIPResponse" nillable="true" type="tns:ConfigurationIPResponse" />
+  <xs:complexType name="ResponseStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="dFecha" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="intEstado" type="xs:int" />
+      <xs:element minOccurs="0" name="strCodigoRespuesta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strDescripcionRespuesta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strOrigen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strUbicacionError" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseStatus" nillable="true" type="tns:ResponseStatus" />
+</xs:schema>

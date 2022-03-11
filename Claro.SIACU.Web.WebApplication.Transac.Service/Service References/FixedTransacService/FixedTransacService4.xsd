@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetSavePostventa" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetSavePostventa" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd3" namespace="Claro" />
+  <xs:complexType name="DataSavePostventaDetServRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="Claro" base="q1:Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="strBandwid_Id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strCodigoTipequ_id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strCodigo_ext_Id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strDscequ_Id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strDscsrv_Id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strFlag_Id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strFlag_lc_Id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strIGroupPrincipalId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strIdGroupId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strQuantity_Id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strQuantity_Intance_id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strQuantity_idline_Id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strServiceId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strSncode_Id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strSpcode_Id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strTipequ_Id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="striInteractionId" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DataSavePostventaDetServRequest" nillable="true" type="tns:DataSavePostventaDetServRequest" />
+  <xs:complexType name="DataSavePostventaDetServResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="intResultado_out" type="xs:int" />
+      <xs:element minOccurs="0" name="strErrmsg_out" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DataSavePostventaDetServResponse" nillable="true" type="tns:DataSavePostventaDetServResponse" />
+</xs:schema>

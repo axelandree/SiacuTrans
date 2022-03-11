@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetRedirectSession" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetRedirectSession" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd3" namespace="Claro" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common" />
+  <xs:complexType name="RedirectSessionRequestDashboard">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="Claro" base="q1:Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Application" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Option" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RedirectSessionRequestDashboard" nillable="true" type="tns:RedirectSessionRequestDashboard" />
+  <xs:complexType name="RedirectSessionResponseDashboard">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodeError" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ErrorMsg" nillable="true" type="xs:string" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common" minOccurs="0" name="listRedirect" nillable="true" type="q2:ArrayOfRedirect" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RedirectSessionResponseDashboard" nillable="true" type="tns:RedirectSessionResponseDashboard" />
+</xs:schema>

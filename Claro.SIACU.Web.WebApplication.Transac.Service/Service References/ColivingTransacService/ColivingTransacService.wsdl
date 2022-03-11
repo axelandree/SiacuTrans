@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ColivingTransacService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:40204/ColivingTransacService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:40204/ColivingTransacService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:40204/ColivingTransacService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Coliving.GetDataBilling" />
+      <xsd:import schemaLocation="http://localhost:40204/ColivingTransacService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Coliving" />
+      <xsd:import schemaLocation="http://localhost:40204/ColivingTransacService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Coliving.PutDataClient" />
+      <xsd:import schemaLocation="http://localhost:40204/ColivingTransacService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Coliving.PutBillingAddress" />
+      <xsd:import schemaLocation="http://localhost:40204/ColivingTransacService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Coliving.GetUpdateDataClient" />
+      <xsd:import schemaLocation="http://localhost:40204/ColivingTransacService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Coliving.PostHistoryClient" />
+      <xsd:import schemaLocation="http://localhost:40204/ColivingTransacService.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Coliving.GetParameter" />
+      <xsd:import schemaLocation="http://localhost:40204/ColivingTransacService.svc?xsd=xsd9" namespace="Claro" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IColivingTransacService_GetDataBilling_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataBilling" />
+  </wsdl:message>
+  <wsdl:message name="IColivingTransacService_GetDataBilling_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataBillingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IColivingTransacService_UpdateDatosClienteMigrado_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDatosClienteMigrado" />
+  </wsdl:message>
+  <wsdl:message name="IColivingTransacService_UpdateDatosClienteMigrado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDatosClienteMigradoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IColivingTransacService_GetParameter_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetParameter" />
+  </wsdl:message>
+  <wsdl:message name="IColivingTransacService_GetParameter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetParameterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IColivingTransacService_GetDocumentTypeTOBE_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentTypeTOBE" />
+  </wsdl:message>
+  <wsdl:message name="IColivingTransacService_GetDocumentTypeTOBE_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentTypeTOBEResponse" />
+  </wsdl:message>
+  <wsdl:message name="IColivingTransacService_HistoryDataClientTobe_InputMessage">
+    <wsdl:part name="parameters" element="tns:HistoryDataClientTobe" />
+  </wsdl:message>
+  <wsdl:message name="IColivingTransacService_HistoryDataClientTobe_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HistoryDataClientTobeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IColivingTransacService_PostDataHistoryClientResponse_InputMessage">
+    <wsdl:part name="parameters" element="tns:PostDataHistoryClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IColivingTransacService_PostDataHistoryClientResponse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PostDataHistoryClientResponseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IColivingTransacService_GetCuParticipante_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCuParticipante" />
+  </wsdl:message>
+  <wsdl:message name="IColivingTransacService_GetCuParticipante_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCuParticipanteResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IColivingTransacService">
+    <wsdl:operation name="GetDataBilling">
+      <wsdl:input wsaw:Action="http://tempuri.org/IColivingTransacService/GetDataBilling" message="tns:IColivingTransacService_GetDataBilling_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IColivingTransacService/GetDataBillingResponse" message="tns:IColivingTransacService_GetDataBilling_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDatosClienteMigrado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IColivingTransacService/UpdateDatosClienteMigrado" message="tns:IColivingTransacService_UpdateDatosClienteMigrado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IColivingTransacService/UpdateDatosClienteMigradoResponse" message="tns:IColivingTransacService_UpdateDatosClienteMigrado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetParameter">
+      <wsdl:input wsaw:Action="http://tempuri.org/IColivingTransacService/GetParameter" message="tns:IColivingTransacService_GetParameter_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IColivingTransacService/GetParameterResponse" message="tns:IColivingTransacService_GetParameter_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentTypeTOBE">
+      <wsdl:input wsaw:Action="http://tempuri.org/IColivingTransacService/GetDocumentTypeTOBE" message="tns:IColivingTransacService_GetDocumentTypeTOBE_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IColivingTransacService/GetDocumentTypeTOBEResponse" message="tns:IColivingTransacService_GetDocumentTypeTOBE_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HistoryDataClientTobe">
+      <wsdl:input wsaw:Action="http://tempuri.org/IColivingTransacService/HistoryDataClientTobe" message="tns:IColivingTransacService_HistoryDataClientTobe_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IColivingTransacService/HistoryDataClientTobeResponse" message="tns:IColivingTransacService_HistoryDataClientTobe_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PostDataHistoryClientResponse">
+      <wsdl:input wsaw:Action="http://tempuri.org/IColivingTransacService/PostDataHistoryClientResponse" message="tns:IColivingTransacService_PostDataHistoryClientResponse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IColivingTransacService/PostDataHistoryClientResponseResponse" message="tns:IColivingTransacService_PostDataHistoryClientResponse_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCuParticipante">
+      <wsdl:input wsaw:Action="http://tempuri.org/IColivingTransacService/GetCuParticipante" message="tns:IColivingTransacService_GetCuParticipante_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IColivingTransacService/GetCuParticipanteResponse" message="tns:IColivingTransacService_GetCuParticipante_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IColivingTransacService" type="tns:IColivingTransacService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetDataBilling">
+      <soap:operation soapAction="http://tempuri.org/IColivingTransacService/GetDataBilling" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDatosClienteMigrado">
+      <soap:operation soapAction="http://tempuri.org/IColivingTransacService/UpdateDatosClienteMigrado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetParameter">
+      <soap:operation soapAction="http://tempuri.org/IColivingTransacService/GetParameter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentTypeTOBE">
+      <soap:operation soapAction="http://tempuri.org/IColivingTransacService/GetDocumentTypeTOBE" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HistoryDataClientTobe">
+      <soap:operation soapAction="http://tempuri.org/IColivingTransacService/HistoryDataClientTobe" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostDataHistoryClientResponse">
+      <soap:operation soapAction="http://tempuri.org/IColivingTransacService/PostDataHistoryClientResponse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCuParticipante">
+      <soap:operation soapAction="http://tempuri.org/IColivingTransacService/GetCuParticipante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ColivingTransacService">
+    <wsdl:port name="BasicHttpBinding_IColivingTransacService" binding="tns:BasicHttpBinding_IColivingTransacService">
+      <soap:address location="http://localhost:40204/ColivingTransacService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

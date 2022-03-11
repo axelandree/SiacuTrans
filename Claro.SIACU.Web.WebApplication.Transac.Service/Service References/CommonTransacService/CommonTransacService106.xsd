@@ -1,0 +1,1910 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetMotiveSot" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetSchedule" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetGenerateConstancy" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInsertLogTrx" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetListClientDocumentType" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetParameterData" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd11" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetUpdateNotes" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd12" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetBusinessRules" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd13" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetRegion" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd14" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetCacDacType" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd15" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetValueXml" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd16" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetListItem" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd17" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetTypification" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd18" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetReceipts" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd20" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInteractionClient" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd21" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInteractionSubClasDetail" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd22" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInsertInt" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd23" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetClient" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd24" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInsertTemplateInteraction" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd25" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInsTemplateInteraction" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd26" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInsertInteract" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd27" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetBusinessInteraction2" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd28" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInsertGeneral" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd29" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInsertTemplateGeneral" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd30" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInsertDetail" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd32" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetUpdateXInter29" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd33" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetCivilStatus" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd34" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetOccupationClient" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd35" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetReasonRegistry" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd36" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetBrand" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd37" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetConsultDepartment" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd38" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetBrandModel" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd39" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetConsultProvince" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd40" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetConsultDistrict" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd41" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetConsultNationality" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd42" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetServicesVAS" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd43" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetMigratedElements" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd44" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetSaveAudit" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd45" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetSaveAuditM" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd46" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GeneratePDF" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd47" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInsertInteractHFC" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd48" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetSendEmail" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd50" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetFileDefaultImpersonation" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd51" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetDatTempInteraction" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd52" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetNumberGWP" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd53" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetNumberEAI" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd54" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetVerifyUser" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd55" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetEvaluateAmount" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd56" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetMzBloEdiType" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd57" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetTipDptInt" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd58" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetDepartmentsPVU" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd59" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetProvincesPVU" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd60" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetDistrictsPVU" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd61" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetCenterPopulatPVU" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd62" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetZoneTypeCOBS" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd63" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetBuildingsPVU" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd64" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetWorkType" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd65" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetWorkSubType" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd66" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetValidateCommunication" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd67" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.InsertRedirectCommunication" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd68" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetRedirectSession" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd69" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetPagOptionXuserNV" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd70" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetPagOptionXuser" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd71" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetUser" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd72" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetPenaltyChangePlans" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd73" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetEmployerDate" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd74" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetConsultIGV" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd75" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetContractByPhoneNumber" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd76" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetSendEmailSB" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd77" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetNoteInteraction" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd78" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetDynamicCaseTemplateData" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd79" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetRegisterServiceCommercial" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd80" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetUpdateInter30" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd81" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetProgramTask" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd82" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetTypeTransaction" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd83" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetParameterTerminalTPI" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd84" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInsertEvidence" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd85" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetConsultImei" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd86" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetSot" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd87" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetQuestionsAnswerSecurity" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd88" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetConsultMarkModel" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd89" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetEquipmentForeign" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd90" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInsertEquipmentForeign" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd91" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetListEquipmentRegistered" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd92" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetConsultByGroupParameter" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd93" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInteraction" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd94" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetBlackList" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd96" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetTransactionScheduled" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd97" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetETAAuditRequestCapacity" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd98" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetRegisterEta" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd99" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetTimeZones" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd100" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetPuntosAtencion" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd101" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetOffice" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd102" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetValidateCollaborator" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd103" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetConsultCampaign" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd104" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetConsultServiceBono" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd105" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetRegisterBonoSpeed" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd106" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.PostValidateDeliveryBAV" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd107" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetRegisterCampaign" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd108" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetReadDataUser" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd109" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetValidateQuantityCampaign" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd110" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetSubmitNotificationEmail" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd111" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.CheckingUser" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd112" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetEmployeByUser" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd113" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.ReadOptionsByUser" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd114" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetConsultarClaroPuntos" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd115" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetConsultarPaqDisponibles" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd116" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetComprarPaquetes" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd117" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetPCRFConsultation" />
+  <xs:import schemaLocation="http://localhost:40204/CommonTransacService.svc?xsd=xsd118" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetUploadDocumentOnBase" />
+  <xs:element name="GetMotiveSot">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetMotiveSot" minOccurs="0" name="objMotiveSotRequest" nillable="true" type="q1:MotiveSotRequestCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMotiveSotResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetMotiveSot" minOccurs="0" name="GetMotiveSotResult" nillable="true" type="q2:MotiveSotResponseCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateSchedule">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetSchedule" minOccurs="0" name="objScheduleRequest" nillable="true" type="q3:ScheduleRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateScheduleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ValidateScheduleResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGenerateContancyPDF">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetGenerateConstancy" minOccurs="0" name="request" nillable="true" type="q4:GenerateConstancyRequestCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGenerateContancyPDFResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetGenerateConstancy" minOccurs="0" name="GetGenerateContancyPDFResult" nillable="true" type="q5:GenerateConstancyResponseCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertLogTrx">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInsertLogTrx" minOccurs="0" name="request" nillable="true" type="q6:InsertLogTrxRequestCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertLogTrxResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInsertLogTrx" minOccurs="0" name="InsertLogTrxResult" nillable="true" type="q7:InsertLogTrxResponseCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListClientDocumentType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetListClientDocumentType" minOccurs="0" name="request" nillable="true" type="q8:ListClientDocumentTypeRequestCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListClientDocumentTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetListClientDocumentType" minOccurs="0" name="GetListClientDocumentTypeResult" nillable="true" type="q9:ListClientDocumentTypeResponseCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetParameterData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetParameterData" minOccurs="0" name="request" nillable="true" type="q10:ParameterDataRequestCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetParameterDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetParameterData" minOccurs="0" name="GetParameterDataResult" nillable="true" type="q11:ParameterDataResponseCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateNotes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetUpdateNotes" minOccurs="0" name="request" nillable="true" type="q12:UpdateNotesRequestCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateNotesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetUpdateNotes" minOccurs="0" name="UpdateNotesResult" nillable="true" type="q13:UpdateNotesResponseCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBusinessRules">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetBusinessRules" minOccurs="0" name="objBusinessRulesRequest" nillable="true" type="q14:BusinessRulesRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBusinessRulesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetBusinessRules" minOccurs="0" name="GetBusinessRulesResult" nillable="true" type="q15:BusinessRulesResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRegions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetRegion" minOccurs="0" name="objRegionRequest" nillable="true" type="q16:RegionRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRegionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetRegion" minOccurs="0" name="GetRegionsResult" nillable="true" type="q17:RegionResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCacDacType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetCacDacType" minOccurs="0" name="objCacDacTypeRequest" nillable="true" type="q18:CacDacTypeRequestCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCacDacTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetCacDacType" minOccurs="0" name="GetCacDacTypeResult" nillable="true" type="q19:CacDacTypeResponseCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetValueXml">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetValueXml" minOccurs="0" name="objRequest" nillable="true" type="q20:ValueXmlRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetValueXmlResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetValueXml" minOccurs="0" name="GetValueXmlResult" nillable="true" type="q21:ValueXmlResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListValueXML">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetListItem" minOccurs="0" name="objListItemRequest" nillable="true" type="q22:ListItemRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListValueXMLResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetListItem" minOccurs="0" name="GetListValueXMLResult" nillable="true" type="q23:ListItemResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTypification">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetTypification" minOccurs="0" name="objTypificationRequest" nillable="true" type="q24:TypificationRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTypificationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetTypification" minOccurs="0" name="GetTypificationResult" nillable="true" type="q25:TypificationResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReceipts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetReceipts" minOccurs="0" name="objRequest" nillable="true" type="q26:ReceiptsRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReceiptsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetReceipts" minOccurs="0" name="GetReceiptsResult" nillable="true" type="q27:ReceiptsResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInteractionClient">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInteractionClient" minOccurs="0" name="objInteractionRequest" nillable="true" type="q28:GetInteractionClientRequestCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInteractionClientResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInteractionClient" minOccurs="0" name="GetInteractionClientResult" nillable="true" type="q29:GetInteractionClientResponseCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertRecordSubClaseDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInteractionSubClasDetail" minOccurs="0" name="objrequest" nillable="true" type="q30:InteractionSubClasDetailRequestCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertRecordSubClaseDetailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInteractionSubClasDetail" minOccurs="0" name="InsertRecordSubClaseDetailResult" nillable="true" type="q31:InteractionSubClasDetailResponseCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertInt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInsertInt" minOccurs="0" name="objrequest" nillable="true" type="q32:InsertIntRequestCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertIntResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInsertInt" minOccurs="0" name="InsertIntResult" nillable="true" type="q33:InsertIntResponseCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetObClient">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetClient" minOccurs="0" name="objrequest" nillable="true" type="q34:GetClientRequestCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetObClientResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetClient" minOccurs="0" name="GetObClientResult" nillable="true" type="q35:GetClientResponseComon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInsertInteractionTemplate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInsertTemplateInteraction" minOccurs="0" name="objresquest" nillable="true" type="q36:InsertTemplateInteractionRequestCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInsertInteractionTemplateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInsertTemplateInteraction" minOccurs="0" name="GetInsertInteractionTemplateResult" nillable="true" type="q37:InsertTemplateInteractionResponseCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInsInteractionTemplate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInsTemplateInteraction" minOccurs="0" name="objrequest" nillable="true" type="q38:InsTemplateInteractionRequestCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInsInteractionTemplateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInsTemplateInteraction" minOccurs="0" name="GetInsInteractionTemplateResult" nillable="true" type="q39:InsTemplateInteractionResponseCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertInteract">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInsertInteract" minOccurs="0" name="objrequest" nillable="true" type="q40:InsertInteractRequestCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertInteractResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInsertInteract" minOccurs="0" name="InsertInteractResult" nillable="true" type="q41:InsertInteractResponseCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInsertBusinnesInteraction2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetBusinessInteraction2" minOccurs="0" name="obrequest" nillable="true" type="q42:BusinessInteraction2RequestCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInsertBusinnesInteraction2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetBusinessInteraction2" minOccurs="0" name="GetInsertBusinnesInteraction2Result" nillable="true" type="q43:BusinessInteraction2ResponseCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetinsertInteractionGeneral">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInsertGeneral" minOccurs="0" name="request" nillable="true" type="q44:InsertGeneralRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetinsertInteractionGeneralResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInsertGeneral" minOccurs="0" name="GetinsertInteractionGeneralResult" nillable="true" type="q45:InsertGeneralResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetinsertInteractionTemplateGeneral">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInsertTemplateGeneral" minOccurs="0" name="request" nillable="true" type="q46:InsertTemplateGeneralRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetinsertInteractionTemplateGeneralResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInsertTemplateGeneral" minOccurs="0" name="GetinsertInteractionTemplateGeneralResult" nillable="true" type="q47:InsertTemplateGeneralResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInsertDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInsertDetail" minOccurs="0" name="request" nillable="true" type="q48:InsertDetailREquestCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInsertDetailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInsertDetail" minOccurs="0" name="GetInsertDetailResult" nillable="true" type="q49:InsertDetailResponseCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateXInter29">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetUpdateXInter29" minOccurs="0" name="objRequest" nillable="true" type="q50:UpdateXInter29RequestCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateXInter29Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetUpdateXInter29" minOccurs="0" name="UpdateXInter29Result" nillable="true" type="q51:UpdateXInter29ResponseCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCivilStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetCivilStatus" minOccurs="0" name="objRequest" nillable="true" type="q52:CivilStatusRequestPrepaid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCivilStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetCivilStatus" minOccurs="0" name="GetCivilStatusResult" nillable="true" type="q53:CivilStatusResponsePrepaid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOccupationClient">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetOccupationClient" minOccurs="0" name="objRequest" nillable="true" type="q54:OccupationClientRequestPrepaid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOccupationClientResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetOccupationClient" minOccurs="0" name="GetOccupationClientResult" nillable="true" type="q55:OccupationClientResponsePrepaid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReasonRegistry">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q56="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetReasonRegistry" minOccurs="0" name="objRequest" nillable="true" type="q56:ReasonRegistryRequestPrepaid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReasonRegistryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q57="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetReasonRegistry" minOccurs="0" name="GetReasonRegistryResult" nillable="true" type="q57:ReasonRegistryResponsePrepaid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBrandList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q58="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetBrand" minOccurs="0" name="objRequest" nillable="true" type="q58:BrandRequestPrepaid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBrandListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q59="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetBrand" minOccurs="0" name="GetBrandListResult" nillable="true" type="q59:BrandResponsePrepaid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConsultDepartment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q60="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetConsultDepartment" minOccurs="0" name="objRequest" nillable="true" type="q60:ConsultDepartmentRequestPrepaid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConsultDepartmentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q61="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetConsultDepartment" minOccurs="0" name="GetConsultDepartmentResult" nillable="true" type="q61:ConsultDepartmentResponsePrepaid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBrandModel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q62="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetBrandModel" minOccurs="0" name="objRequest" nillable="true" type="q62:BrandModelRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBrandModelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q63="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetBrandModel" minOccurs="0" name="GetBrandModelResult" nillable="true" type="q63:BrandModelResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConsultProvince">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q64="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetConsultProvince" minOccurs="0" name="objRequest" nillable="true" type="q64:ConsultProvinceRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConsultProvinceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q65="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetConsultProvince" minOccurs="0" name="GetConsultProvinceResult" nillable="true" type="q65:ConsultProvinceResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConsultDistrict">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q66="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetConsultDistrict" minOccurs="0" name="objRequest" nillable="true" type="q66:ConsultDistrictRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConsultDistrictResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q67="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetConsultDistrict" minOccurs="0" name="GetConsultDistrictResult" nillable="true" type="q67:ConsultDistrictResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConsultNationality">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q68="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetConsultNationality" minOccurs="0" name="objRequest" nillable="true" type="q68:BrandRequestPrepaid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConsultNationalityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q69="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetConsultNationality" minOccurs="0" name="GetConsultNationalityResult" nillable="true" type="q69:BrandResponsePrepaid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServicesVAS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q70="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetServicesVAS" minOccurs="0" name="objRequest" nillable="true" type="q70:ServicesVASRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServicesVASResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q71="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetServicesVAS" minOccurs="0" name="GetServicesVASResult" nillable="true" type="q71:ServicesVASResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMigratedElements">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q72="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetMigratedElements" minOccurs="0" name="objRequest" nillable="true" type="q72:MigratedElementsRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMigratedElementsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q73="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetMigratedElements" minOccurs="0" name="GetMigratedElementsResult" nillable="true" type="q73:MigratedElementsResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMigratedElements2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q74="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetMigratedElements" minOccurs="0" name="objRequest" nillable="true" type="q74:MigratedElementsRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMigratedElements2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q75="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetMigratedElements" minOccurs="0" name="GetMigratedElements2Result" nillable="true" type="q75:MigratedElementsResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveAudit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q76="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetSaveAudit" minOccurs="0" name="objGrabarAuditReq" nillable="true" type="q76:SaveAuditRequestCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveAuditResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q77="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetSaveAudit" minOccurs="0" name="SaveAuditResult" nillable="true" type="q77:SaveAuditResponseCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveAuditM">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q78="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetSaveAuditM" minOccurs="0" name="objRegAuditReq" nillable="true" type="q78:SaveAuditMRequestCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveAuditMResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q79="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetSaveAuditM" minOccurs="0" name="SaveAuditMResult" nillable="true" type="q79:SaveAuditMResponseCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GeneratePDF">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q80="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GeneratePDF" minOccurs="0" name="objPlansRequest" nillable="true" type="q80:GeneratePDFDataRequestHfc" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GeneratePDFResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q81="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GeneratePDF" minOccurs="0" name="GeneratePDFResult" nillable="true" type="q81:GeneratePDFDataResponseHfc" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInsertInteractHFC">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q82="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInsertInteractHFC" minOccurs="0" name="objRegAuditReq" nillable="true" type="q82:InsertInteractHFCRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInsertInteractHFCResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q83="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInsertInteractHFC" minOccurs="0" name="GetInsertInteractHFCResult" nillable="true" type="q83:InsertInteractHFCResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInsertInteract">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q84="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInsertInteract" minOccurs="0" name="objRegAuditReq" nillable="true" type="q84:InsertInteractRequestCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInsertInteractResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q85="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInsertInteract" minOccurs="0" name="GetInsertInteractResult" nillable="true" type="q85:InsertInteractResponseCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSendEmail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q86="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetSendEmail" minOccurs="0" name="objrequest" nillable="true" type="q86:SendEmailRequestCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSendEmailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q87="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetSendEmail" minOccurs="0" name="GetSendEmailResult" nillable="true" type="q87:SendEmailResponseCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSendEmailAttach">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q88="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetSendEmail" minOccurs="0" name="objrequest" nillable="true" type="q88:SendEmailRequestCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSendEmailAttachResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q89="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetSendEmail" minOccurs="0" name="GetSendEmailAttachResult" nillable="true" type="q89:SendEmailResponseCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSendEmailAlt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q90="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetSendEmail" minOccurs="0" name="objresuqest" nillable="true" type="q90:SendEmailRequestCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSendEmailAltResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q91="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetSendEmail" minOccurs="0" name="GetSendEmailAltResult" nillable="true" type="q91:SendEmailResponseCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetfileDefaultImpersonation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q92="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetFileDefaultImpersonation" minOccurs="0" name="objrequest" nillable="true" type="q92:FileDefaultImpersonationRequestCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetfileDefaultImpersonationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q93="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetFileDefaultImpersonation" minOccurs="0" name="GetfileDefaultImpersonationResult" nillable="true" type="q93:FileDefaultImpersonationResponseCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInfoInteractionTemplate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q94="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetDatTempInteraction" minOccurs="0" name="objRequest" nillable="true" type="q94:DatTempInteractionRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInfoInteractionTemplateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q95="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetDatTempInteraction" minOccurs="0" name="GetInfoInteractionTemplateResult" nillable="true" type="q95:DatTempInteractionResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNumberGWP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q96="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetNumberGWP" minOccurs="0" name="objRequest" nillable="true" type="q96:NumberGWPRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNumberGWPResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q97="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetNumberGWP" minOccurs="0" name="GetNumberGWPResult" nillable="true" type="q97:NumberGWPResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNumberEAI">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q98="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetNumberEAI" minOccurs="0" name="objRequest" nillable="true" type="q98:NumberEAIRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNumberEAIResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q99="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetNumberEAI" minOccurs="0" name="GetNumberEAIResult" nillable="true" type="q99:NumberEAIResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVerifyUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q100="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetVerifyUser" minOccurs="0" name="objRequest" nillable="true" type="q100:VerifyUserRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVerifyUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q101="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetVerifyUser" minOccurs="0" name="GetVerifyUserResult" nillable="true" type="q101:VerifyUserResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEvaluateAmount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q102="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetEvaluateAmount" minOccurs="0" name="objRequest" nillable="true" type="q102:EvaluateAmountRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEvaluateAmountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q103="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetEvaluateAmount" minOccurs="0" name="GetEvaluateAmountResult" nillable="true" type="q103:EvaluateAmountResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEvaluateAmount_DCM">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q104="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetEvaluateAmount" minOccurs="0" name="objRequest" nillable="true" type="q104:EvaluateAmountRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEvaluateAmount_DCMResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q105="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetEvaluateAmount" minOccurs="0" name="GetEvaluateAmount_DCMResult" nillable="true" type="q105:EvaluateAmountResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIdTrazabilidad">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strIdSession" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTransaction" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intCodGrupo" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIdTrazabilidadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetIdTrazabilidadResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMzBloEdiTypePVU">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q106="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetMzBloEdiType" minOccurs="0" name="objMzBloEdiTypeRequest" nillable="true" type="q106:MzBloEdiTypeRequestCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMzBloEdiTypePVUResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q107="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetMzBloEdiType" minOccurs="0" name="GetMzBloEdiTypePVUResult" nillable="true" type="q107:MzBloEdiTypeResponseCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTipDptInt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q108="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetTipDptInt" minOccurs="0" name="objTipDptIntRequest" nillable="true" type="q108:TipDptIntRequestCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTipDptIntResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q109="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetTipDptInt" minOccurs="0" name="GetTipDptIntResult" nillable="true" type="q109:TipDptIntResponseCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDepartmentsPVU">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q110="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetDepartmentsPVU" minOccurs="0" name="objDepartmentsRequest" nillable="true" type="q110:DepartmentsPvuRequestCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDepartmentsPVUResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q111="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetDepartmentsPVU" minOccurs="0" name="GetDepartmentsPVUResult" nillable="true" type="q111:DepartmentsPvuResponseCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProvincesPVU">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q112="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetProvincesPVU" minOccurs="0" name="objProvincesRequest" nillable="true" type="q112:ProvincesPvuRequestCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProvincesPVUResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q113="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetProvincesPVU" minOccurs="0" name="GetProvincesPVUResult" nillable="true" type="q113:ProvincesPvuResponseCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDistrictsPVU">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q114="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetDistrictsPVU" minOccurs="0" name="objDistrictsRequest" nillable="true" type="q114:DistrictsPvuRequestCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDistrictsPVUResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q115="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetDistrictsPVU" minOccurs="0" name="GetDistrictsPVUResult" nillable="true" type="q115:DistrictsPvuResponseCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCenterPopulatPVU">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q116="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetCenterPopulatPVU" minOccurs="0" name="objCenterPopulatRequest" nillable="true" type="q116:CenterPopulatPvuRequestCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCenterPopulatPVUResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q117="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetCenterPopulatPVU" minOccurs="0" name="GetCenterPopulatPVUResult" nillable="true" type="q117:CenterPopulatPvuResponseCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetZoneTypeCOBS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q118="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetZoneTypeCOBS" minOccurs="0" name="objZoneTypeRequest" nillable="true" type="q118:ZoneTypeCobsRequestCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetZoneTypeCOBSResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q119="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetZoneTypeCOBS" minOccurs="0" name="GetZoneTypeCOBSResult" nillable="true" type="q119:ZoneTypeCobsResponseCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBuildingsPVU">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q120="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetBuildingsPVU" minOccurs="0" name="objBuildingsRequest" nillable="true" type="q120:BuildingsPvuRequestCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBuildingsPVUResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q121="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetBuildingsPVU" minOccurs="0" name="GetBuildingsPVUResult" nillable="true" type="q121:BuildingsResponsePvuCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWorkType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q122="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetWorkType" minOccurs="0" name="objWorkTypeRequest" nillable="true" type="q122:WorkTypeRequestCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWorkTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q123="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetWorkType" minOccurs="0" name="GetWorkTypeResult" nillable="true" type="q123:WorkTypeResponseCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWorkSubType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q124="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetWorkSubType" minOccurs="0" name="objWorkSubTypeRequest" nillable="true" type="q124:WorkSubTypeRequestCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWorkSubTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q125="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetWorkSubType" minOccurs="0" name="GetWorkSubTypeResult" nillable="true" type="q125:WorkSubTypeResponseCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocumentTypeCOBS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strIdSession" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTransaction" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strCodCargaDdl" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocumentTypeCOBSResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q126="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common" minOccurs="0" name="GetDocumentTypeCOBSResult" nillable="true" type="q126:ArrayOfListItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateRedirectCommunication">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q127="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetValidateCommunication" minOccurs="0" name="objValidateCommunicationRequest" nillable="true" type="q127:ValidateCommunicationRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateRedirectCommunicationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q128="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetValidateCommunication" minOccurs="0" name="ValidateRedirectCommunicationResult" nillable="true" type="q128:ValidateCommunicationResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertRedirectCommunication">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q129="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.InsertRedirectCommunication" minOccurs="0" name="objInsertRedirectComRequest" nillable="true" type="q129:InsertRedirectComRequestDashboard" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertRedirectCommunicationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q130="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.InsertRedirectCommunication" minOccurs="0" name="InsertRedirectCommunicationResult" nillable="true" type="q130:InsertRedirectComResponseDashboard" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRedirectSession">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q131="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetRedirectSession" minOccurs="0" name="objRedirectSessionRequest" nillable="true" type="q131:RedirectSessionRequestDashboard" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRedirectSessionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q132="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetRedirectSession" minOccurs="0" name="GetRedirectSessionResult" nillable="true" type="q132:RedirectSessionResponseDashboard" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPagOptionXuserVn">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q133="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetPagOptionXuserNV" minOccurs="0" name="objRequest" nillable="true" type="q133:PagOptionXuserNVRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPagOptionXuserVnResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q134="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetPagOptionXuserNV" minOccurs="0" name="GetPagOptionXuserVnResult" nillable="true" type="q134:PagOptionXuserNVResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPagOptionXuser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q135="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetPagOptionXuser" minOccurs="0" name="objRequest" nillable="true" type="q135:PagOptionXuserRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPagOptionXuserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q136="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetPagOptionXuser" minOccurs="0" name="GetPagOptionXuserResult" nillable="true" type="q136:PagOptionXuserResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q137="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetUser" minOccurs="0" name="objRequest" nillable="true" type="q137:UserRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q138="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetUser" minOccurs="0" name="GetUserResult" nillable="true" type="q138:UserResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPenaltyChangePlan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q139="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetPenaltyChangePlans" minOccurs="0" name="objRequest" nillable="true" type="q139:PenaltyChangePlanRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPenaltyChangePlanResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q140="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetPenaltyChangePlans" minOccurs="0" name="GetPenaltyChangePlanResult" nillable="true" type="q140:PenaltyChangePlanResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmployerDate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q141="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetEmployerDate" minOccurs="0" name="objDatosEmpleadoRequest" nillable="true" type="q141:GetEmployerDateRequestCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmployerDateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q142="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetEmployerDate" minOccurs="0" name="GetEmployerDateResult" nillable="true" type="q142:GetEmployerDateResponseCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConsultIGV">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q143="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetConsultIGV" minOccurs="0" name="objRequest" nillable="true" type="q143:ConsultIGVRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConsultIGVResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q144="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetConsultIGV" minOccurs="0" name="GetConsultIGVResult" nillable="true" type="q144:ConsultIGVResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContractByPhoneNumber">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q145="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetContractByPhoneNumber" minOccurs="0" name="objRequest" nillable="true" type="q145:ContractByPhoneNumberRequestCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContractByPhoneNumberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q146="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetContractByPhoneNumber" minOccurs="0" name="GetContractByPhoneNumberResult" nillable="true" type="q146:ContractByPhoneNumberResponseCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSendEmailSB">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q147="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetSendEmailSB" minOccurs="0" name="objRequest" nillable="true" type="q147:SendEmailSBRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSendEmailSBResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q148="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetSendEmailSB" minOccurs="0" name="GetSendEmailSBResult" nillable="true" type="q148:SendEmailSBResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNoteInteraction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q149="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetNoteInteraction" minOccurs="0" name="objRequest" nillable="true" type="q149:NoteInteractionRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNoteInteractionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q150="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetNoteInteraction" minOccurs="0" name="GetNoteInteractionResult" nillable="true" type="q150:NoteInteractionResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDynamicCaseTemplateData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q151="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetDynamicCaseTemplateData" minOccurs="0" name="objRequest" nillable="true" type="q151:DynamicCaseTemplateDataRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDynamicCaseTemplateDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q152="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetDynamicCaseTemplateData" minOccurs="0" name="GetDynamicCaseTemplateDataResult" nillable="true" type="q152:DynamicCaseTemplateDataResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRegisterServiceCommercial">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q153="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetRegisterServiceCommercial" minOccurs="0" name="objRequest" nillable="true" type="q153:RegisterServiceCommercialRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRegisterServiceCommercialResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q154="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetRegisterServiceCommercial" minOccurs="0" name="GetRegisterServiceCommercialResult" nillable="true" type="q154:RegisterServiceCommercialResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUpdatexInter30">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q155="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetUpdateInter30" minOccurs="0" name="objRequest" nillable="true" type="q155:UpdatexInter30Request" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUpdatexInter30Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q156="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetUpdateInter30" minOccurs="0" name="GetUpdatexInter30Result" nillable="true" type="q156:UpdatexInter30Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProgramTask">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q157="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetProgramTask" minOccurs="0" name="objRequest" nillable="true" type="q157:ProgramTaskRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProgramTaskResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q158="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetProgramTask" minOccurs="0" name="GetProgramTaskResult" nillable="true" type="q158:ProgramTaskResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTypeTransaction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q159="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetTypeTransaction" minOccurs="0" name="objRequest" nillable="true" type="q159:TypeTransactionRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTypeTransactionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q160="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetTypeTransaction" minOccurs="0" name="GetTypeTransactionResult" nillable="true" type="q160:TypeTransactionResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetParameterTerminalTPI">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q161="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetParameterTerminalTPI" minOccurs="0" name="objRequest" nillable="true" type="q161:ParameterTerminalTPIRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetParameterTerminalTPIResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q162="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetParameterTerminalTPI" minOccurs="0" name="GetParameterTerminalTPIResult" nillable="true" type="q162:ParameterTerminalTPIResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInsertEvidence">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q163="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInsertEvidence" minOccurs="0" name="objRequest" nillable="true" type="q163:InsertEvidenceRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInsertEvidenceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q164="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInsertEvidence" minOccurs="0" name="GetInsertEvidenceResult" nillable="true" type="q164:InsertEvidenceResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSendEmailFixed">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q165="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetSendEmail" minOccurs="0" name="objrequest" nillable="true" type="q165:SendEmailRequestCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSendEmailFixedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q166="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetSendEmail" minOccurs="0" name="GetSendEmailFixedResult" nillable="true" type="q166:SendEmailResponseCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConsultImei">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q167="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetConsultImei" minOccurs="0" name="objRequest" nillable="true" type="q167:ConsultImeiRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConsultImeiResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q168="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetConsultImei" minOccurs="0" name="GetConsultImeiResult" nillable="true" type="q168:ConsultImeiResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSot">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q169="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetSot" minOccurs="0" name="objRequest" nillable="true" type="q169:GetSotRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSotResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q170="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetSot" minOccurs="0" name="GetSotResult" nillable="true" type="q170:GetSotResponseCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetQuestionsAnswerSecurity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q171="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetQuestionsAnswerSecurity" minOccurs="0" name="objRequest" nillable="true" type="q171:QuestionsAnswerSecurityRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetQuestionsAnswerSecurityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q172="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetQuestionsAnswerSecurity" minOccurs="0" name="GetQuestionsAnswerSecurityResult" nillable="true" type="q172:QuestionsAnswerSecurityResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConsultMarkModel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q173="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetConsultMarkModel" minOccurs="0" name="objRequest" nillable="true" type="q173:ConsultMarkModelRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConsultMarkModelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q174="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetConsultMarkModel" minOccurs="0" name="GetConsultMarkModelResult" nillable="true" type="q174:ConsultMarkModelResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEquipmentForeign">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q175="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetEquipmentForeign" minOccurs="0" name="objRequest" nillable="true" type="q175:EquipmentForeignRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEquipmentForeignResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q176="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetEquipmentForeign" minOccurs="0" name="GetEquipmentForeignResult" nillable="true" type="q176:EquipmentForeignResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInsertEquipmentForeign">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q177="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInsertEquipmentForeign" minOccurs="0" name="objrequest" nillable="true" type="q177:InsertEquipmentForeignRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInsertEquipmentForeignResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q178="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInsertEquipmentForeign" minOccurs="0" name="GetInsertEquipmentForeignResult" nillable="true" type="q178:InsertEquipmentForeignResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListEquipmentRegistered">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q179="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetListEquipmentRegistered" minOccurs="0" name="objRequest" nillable="true" type="q179:ListEquipmentRegisteredRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListEquipmentRegisteredResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q180="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetListEquipmentRegistered" minOccurs="0" name="GetListEquipmentRegisteredResult" nillable="true" type="q180:ListEquipmentRegisteredResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConsultByGroupParameter">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q181="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetConsultByGroupParameter" minOccurs="0" name="objRequest" nillable="true" type="q181:ConsultByGroupParameterRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConsultByGroupParameterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q182="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetConsultByGroupParameter" minOccurs="0" name="GetConsultByGroupParameterResult" nillable="true" type="q182:ConsultByGroupParameterResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInteraction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q183="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInteraction" minOccurs="0" name="objRequest" nillable="true" type="q183:InteractionRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInteractionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q184="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInteraction" minOccurs="0" name="GetInteractionResult" nillable="true" type="q184:InteractionResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBlackListOsiptel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q185="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetBlackList" minOccurs="0" name="objBlackListRequest" nillable="true" type="q185:BlackListRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBlackListOsiptelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q186="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetBlackList" minOccurs="0" name="GetBlackListOsiptelResult" nillable="true" type="q186:BlackListResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSchedulingRule">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q187="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetTransactionScheduled" minOccurs="0" name="objRequest" nillable="true" type="q187:TransactionScheduledRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSchedulingRuleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q188="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetTransactionScheduled" minOccurs="0" name="GetSchedulingRuleResult" nillable="true" type="q188:TransactionScheduledResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetETAAuditRequestCapacity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q189="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetETAAuditRequestCapacity" minOccurs="0" name="objETAAuditRequestCapacity" nillable="true" type="q189:ETAAuditRequestCapacity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetETAAuditRequestCapacityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q190="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetETAAuditRequestCapacity" minOccurs="0" name="GetETAAuditRequestCapacityResult" nillable="true" type="q190:ETAAuditResponseCapacity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegisterEtaRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q191="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetRegisterEta" minOccurs="0" name="objRegisterEtaRequest" nillable="true" type="q191:RegisterEtaRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegisterEtaRequestResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RegisterEtaRequestResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegisterEtaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q192="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetRegisterEta" minOccurs="0" name="objRegisterEtaResponse" nillable="true" type="q192:RegisterEtaResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegisterEtaResponseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RegisterEtaResponseResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTimeZones">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q193="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetTimeZones" minOccurs="0" name="objTimeZonesRequest" nillable="true" type="q193:TimeZonesRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTimeZonesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q194="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetTimeZones" minOccurs="0" name="GetTimeZonesResult" nillable="true" type="q194:TimeZonesResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPuntosAtencion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q195="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetPuntosAtencion" minOccurs="0" name="objPuntosAtencionRequest" nillable="true" type="q195:PuntosAtencionRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPuntosAtencionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q196="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetPuntosAtencion" minOccurs="0" name="GetPuntosAtencionResult" nillable="true" type="q196:responseDataObtenerTabPuntosAtencionPost" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOffice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q197="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetOffice" minOccurs="0" name="objOfficeRequest" nillable="true" type="q197:OfficeRequestCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOfficeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q198="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetOffice" minOccurs="0" name="GetOfficeResult" nillable="true" type="q198:OfficeResponseCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNationalityList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q199="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetConsultNationality" minOccurs="0" name="objRequest" nillable="true" type="q199:BrandRequestPrepaid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNationalityListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q200="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetConsultNationality" minOccurs="0" name="GetNationalityListResult" nillable="true" type="q200:BrandResponsePrepaid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCivilStatusList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q201="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetCivilStatus" minOccurs="0" name="objRequest" nillable="true" type="q201:CivilStatusRequestPrepaid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCivilStatusListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q202="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetCivilStatus" minOccurs="0" name="GetCivilStatusListResult" nillable="true" type="q202:CivilStatusResponsePrepaid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetValidateCollaborator">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q203="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetValidateCollaborator" minOccurs="0" name="objRequest" nillable="true" type="q203:GetValidateCollaboratorRequest" />
+        <xs:element minOccurs="0" name="strIdSession" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetValidateCollaboratorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q204="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetValidateCollaborator" minOccurs="0" name="GetValidateCollaboratorResult" nillable="true" type="q204:GetValidateCollaboratorResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConsultCampaign">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q205="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetConsultCampaign" minOccurs="0" name="objRequest" nillable="true" type="q205:GetConsultCampaignRequest" />
+        <xs:element minOccurs="0" name="strIdSession" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConsultCampaignResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q206="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetConsultCampaign" minOccurs="0" name="GetConsultCampaignResult" nillable="true" type="q206:GetConsultCampaignResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConsultServiceBono">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q207="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetConsultServiceBono" minOccurs="0" name="objRequest" nillable="true" type="q207:GetConsultServiceBonoRequest" />
+        <xs:element minOccurs="0" name="strIdSession" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConsultServiceBonoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q208="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetConsultServiceBono" minOccurs="0" name="GetConsultServiceBonoResult" nillable="true" type="q208:GetConsultServiceBonoResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRegisterBonoSpeed">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q209="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetRegisterBonoSpeed" minOccurs="0" name="objRequest" nillable="true" type="q209:GetRegisterBonoSpeedRequest" />
+        <xs:element minOccurs="0" name="strIdSession" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRegisterBonoSpeedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q210="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetRegisterBonoSpeed" minOccurs="0" name="GetRegisterBonoSpeedResult" nillable="true" type="q210:GetRegisterBonoSpeedResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PostValidateDeliveryBAV">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q211="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.PostValidateDeliveryBAV" minOccurs="0" name="objRequest" nillable="true" type="q211:PostValidateDeliveryBAVRequest" />
+        <xs:element minOccurs="0" name="strIdSession" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PostValidateDeliveryBAVResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q212="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.PostValidateDeliveryBAV" minOccurs="0" name="PostValidateDeliveryBAVResult" nillable="true" type="q212:PostValidateDeliveryBAVResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRegisterCampaign">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q213="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetRegisterCampaign" minOccurs="0" name="objRequest" nillable="true" type="q213:GetRegisterCampaignRequest" />
+        <xs:element minOccurs="0" name="strIdSession" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRegisterCampaignResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q214="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetRegisterCampaign" minOccurs="0" name="GetRegisterCampaignResult" nillable="true" type="q214:GetRegisterCampaignResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReadDataUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q215="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetReadDataUser" minOccurs="0" name="objRequest" nillable="true" type="q215:leerDatosUsuario" />
+        <xs:element minOccurs="0" name="strIdSession" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReadDataUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q216="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetReadDataUser" minOccurs="0" name="GetReadDataUserResult" nillable="true" type="q216:leerDatosUsuarioResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetValidateQuantityCampaign">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q217="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetValidateQuantityCampaign" minOccurs="0" name="objRequest" nillable="true" type="q217:GetValidateQuantityCampaignRequest" />
+        <xs:element minOccurs="0" name="strIdSession" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetValidateQuantityCampaignResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q218="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetValidateQuantityCampaign" minOccurs="0" name="GetValidateQuantityCampaignResult" nillable="true" type="q218:GetValidateQuantityCampaignResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EmailSubmit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q219="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetSubmitNotificationEmail" minOccurs="0" name="objRequest" nillable="true" type="q219:EmailSubmitRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EmailSubmitResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q220="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetSubmitNotificationEmail" minOccurs="0" name="EmailSubmitResult" nillable="true" type="q220:EmailSubmitResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GenerateContancyWithXml">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q221="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetGenerateConstancy" minOccurs="0" name="request" nillable="true" type="q221:GenerateConstancyRequestCommon" />
+        <xs:element minOccurs="0" name="xml" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GenerateContancyWithXmlResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q222="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetGenerateConstancy" minOccurs="0" name="GenerateContancyWithXmlResult" nillable="true" type="q222:GenerateConstancyResponseCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckingUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q223="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.CheckingUser" minOccurs="0" name="objCheckingUserRequest" nillable="true" type="q223:CheckingUserRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckingUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q224="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.CheckingUser" minOccurs="0" name="CheckingUserResult" nillable="true" type="q224:CheckingUserResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetParamsBSCS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q225="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetReceipts" minOccurs="0" name="objRequest" nillable="true" type="q225:ReceiptsRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetParamsBSCSResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q226="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetReceipts" minOccurs="0" name="GetParamsBSCSResult" nillable="true" type="q226:ReceiptsResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmployeByUserwithDP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q227="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetEmployeByUser" minOccurs="0" name="objRequest" nillable="true" type="q227:EmployeeRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmployeByUserwithDPResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q228="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetEmployeByUser" minOccurs="0" name="GetEmployeByUserwithDPResult" nillable="true" type="q228:EmployeeResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadOptionsByUserwithDP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q229="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.ReadOptionsByUser" minOccurs="0" name="objRequest" nillable="true" type="q229:ReadOptionsByUserRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadOptionsByUserwithDPResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q230="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.ReadOptionsByUser" minOccurs="0" name="ReadOptionsByUserwithDPResult" nillable="true" type="q230:ReadOptionsByUserResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGenerateContancyNamePDF">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q231="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetGenerateConstancy" minOccurs="0" name="request" nillable="true" type="q231:GenerateConstancyRequestCommon" />
+        <xs:element minOccurs="0" name="NombrePDF" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGenerateContancyNamePDFResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q232="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetGenerateConstancy" minOccurs="0" name="GetGenerateContancyNamePDFResult" nillable="true" type="q232:GenerateConstancyResponseCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarClaroPuntos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q233="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetConsultarClaroPuntos" minOccurs="0" name="objRequest" nillable="true" type="q233:ConsultarClaroPuntosRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarClaroPuntosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q234="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetConsultarClaroPuntos" minOccurs="0" name="ConsultarClaroPuntosResult" nillable="true" type="q234:ConsultarClaroPuntosResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarPaqDisponibles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q235="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetConsultarPaqDisponibles" minOccurs="0" name="objRequest" nillable="true" type="q235:ConsultarPaqDisponibles_x0020_Request" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarPaqDisponiblesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q236="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetConsultarPaqDisponibles" minOccurs="0" name="ConsultarPaqDisponiblesResult" nillable="true" type="q236:ConsultarPaqDisponibles_x0020_Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ComprarPaquetes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q237="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetComprarPaquetes" minOccurs="0" name="objRequest" nillable="true" type="q237:ComprarPaquetes_x0020_Request" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ComprarPaquetesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q238="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetComprarPaquetes" minOccurs="0" name="ComprarPaquetesResult" nillable="true" type="q238:ComprarPaquetesBodyResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarPCRFDegradacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q239="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetPCRFConsultation" minOccurs="0" name="objRequest" nillable="true" type="q239:PCRFConnectorRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarPCRFDegradacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q240="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetPCRFConsultation" minOccurs="0" name="ConsultarPCRFDegradacionResult" nillable="true" type="q240:PCRFConnectorResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDatosporNroDocumentos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strIdSession" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTransaction" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTipDoc" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strDocumento" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strEstado" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDatosporNroDocumentosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q241="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common" minOccurs="0" name="GetDatosporNroDocumentosResult" nillable="true" type="q241:ArrayOfClient" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUploadDocumentOnBase">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q242="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetUploadDocumentOnBase" minOccurs="0" name="objUploadDocumentOnBaseRequest" nillable="true" type="q242:UploadDocumentOnBaseRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUploadDocumentOnBaseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q243="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetUploadDocumentOnBase" minOccurs="0" name="GetUploadDocumentOnBaseResult" nillable="true" type="q243:UploadDocumentOnBaseResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConstancyPDFWithOnbase">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q244="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetGenerateConstancy" minOccurs="0" name="request" nillable="true" type="q244:GenerateConstancyRequestCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConstancyPDFWithOnbaseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q245="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetGenerateConstancy" minOccurs="0" name="GetConstancyPDFWithOnbaseResult" nillable="true" type="q245:GenerateConstancyResponseCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerTelefonosClienteLTE">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q246="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetPCRFConsultation" minOccurs="0" name="objRequest" nillable="true" type="q246:PCRFConnectorRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerTelefonosClienteLTEResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q247="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetPCRFConsultation" minOccurs="0" name="ObtenerTelefonosClienteLTEResult" nillable="true" type="q247:PCRFConnectorResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
