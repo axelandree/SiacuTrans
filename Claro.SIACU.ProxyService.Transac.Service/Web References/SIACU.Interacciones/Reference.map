@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Results>
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://172.19.74.138:8903/CRM_Services/Clarify/Transaction/TransaccionInteraccionesAsync?wsdl" filename="TransaccionInteraccionesAsync.wsdl" />
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://limdesosbv05.tim.com.pe:8909/CRM_Services/Clarify/Transaction/TransaccionInteraccionesAsync?SCHEMA%2FCRM+Services%2FClarify%2FCommons%2Fxsd%2FClarify" filename="TransaccionInteraccionesAsync.xsd" />
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://limdesosbv05.tim.com.pe:8909/CRM_Services/Clarify/Transaction/TransaccionInteraccionesAsync?SCHEMA%2FUtilities%2Fxsd%2FAudit" filename="TransaccionInteraccionesAsync0.xsd" />
-  </Results>
-</DiscoveryClientResultsFile>

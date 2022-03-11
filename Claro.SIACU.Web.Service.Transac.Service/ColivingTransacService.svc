@@ -1,1 +1,0 @@
-﻿<%@ ServiceHost Language="C#" Debug="true" Service="Claro.SIACU.Web.Service.Transac.Service.ColivingTransacService" CodeBehind="ColivingTransacService.svc.cs" %>

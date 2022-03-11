@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Results>
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://10.172.139.167:7001/CambioDatosSIACWS/ebsCambioDatosSIACSB11?xsd=1" filename="ebsCambioDatosSIACSB11.xsd" />
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://10.172.139.167:7001/CambioDatosSIACWS/ebsCambioDatosSIACSB11?WSDL" filename="CambioDatosSIACWS.wsdl" />
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://10.172.139.167:7001/CambioDatosSIACWS/ebsCambioDatosSIACSB11?xsd=2" filename="ebsCambioDatosSIACSB110.xsd" />
-  </Results>
-</DiscoveryClientResultsFile>
