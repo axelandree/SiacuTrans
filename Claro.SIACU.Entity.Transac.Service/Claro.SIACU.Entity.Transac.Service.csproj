@@ -518,6 +518,7 @@
     <Compile Include="Fixed\Discard\RegistrarProcesoContinue\registrarProcesoContinueRequest.cs" />
     <Compile Include="Fixed\Discard\RegistrarProcesoContinue\registrarProcesoContinueResponse.cs" />
     <Compile Include="Fixed\Discard\RegistrarProcesoContinue\responseAudit.cs" />
+    <Compile Include="Fixed\Discard\TipificacionesDescartes.cs" />
     <Compile Include="Fixed\GenerarConstanciaDecoderLte.cs" />
     <Compile Include="Fixed\GetAccountStatus\AccountStatus.cs" />
     <Compile Include="Fixed\GetAccountStatus\AccountStatusDetail.cs" />

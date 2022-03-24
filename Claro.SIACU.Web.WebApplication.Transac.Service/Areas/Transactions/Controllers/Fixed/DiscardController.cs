@@ -657,10 +657,13 @@ namespace Claro.SIACU.Web.WebApplication.Transac.Service.Areas.Transactions.Cont
             string strCodigoRespuesta = string.Empty;
             bool blActivarDesactivarContinueWS = false;
             bool blRegistroTransaccion = false;
-            bool blRegistroTipificacion = false;
-            bool blRegistroPlantillaInteraccion = false;
+            bool blRegistroTipificacionContinue = false;
+            bool blRegistroPlantillaTipificacionContinue = false;
+            bool blRegistroOtrosEscenariosContinue = false;
+            bool blRegistroInconvenienteOtrosEscenarios = false;
             string strInteractionId = string.Empty;
             int reintentos = 2;
+            string tipificacionOtrosEscenarios = "0";
 
             try
             {
@@ -697,26 +700,54 @@ namespace Claro.SIACU.Web.WebApplication.Transac.Service.Areas.Transactions.Cont
                         }
                     }
 
-                    //Registrar Tipificaciones
+                    //Registrar Primera Tipificacion (POSTPAGO - VARIACION - FALLAS TECNICAS - APLICAR RETIRAR CONTINGENCIA)
                     for (int i = 1; i <= reintentos; i++)
                     {
-                        blRegistroTipificacion = RegistrarTipificacionContinue(auditRequest, objRequestContinue, ref strInteractionId);
+                        blRegistroTipificacionContinue = RegistrarTipificacionContinue(auditRequest, objRequestContinue, tipificacionOtrosEscenarios, ref strInteractionId);
 
-                        if (blRegistroTipificacion)
+                        if (blRegistroTipificacionContinue)
                         {
                             break;
                         }
                     }
 
-                    if (blRegistroTipificacion)
+                    if (blRegistroTipificacionContinue)
                     {
                         for (int i = 1; i <= reintentos; i++)
                         {
-                            blRegistroPlantillaInteraccion = RegistrarPlantillaTipificacionContinue(auditRequest, objRequestContinue, strInteractionId);
+                            blRegistroPlantillaTipificacionContinue = RegistrarPlantillaTipificacionContinue(auditRequest, objRequestContinue, strInteractionId);
 
-                            if (blRegistroPlantillaInteraccion)
+                            if (blRegistroPlantillaTipificacionContinue)
                             {
                                 break;
+                            }
+                        }
+                    }
+
+                    //Registrar Segunda Tipificacion (POSTPAGO - VARIACION - FALLAS TECNICAS - FALLA TECNICA)
+                    if (objRequestContinue.Accion == "A")
+                    {
+                        tipificacionOtrosEscenarios = "1";
+                        for (int i = 1; i <= reintentos; i++)
+                        {
+                            blRegistroOtrosEscenariosContinue = RegistrarTipificacionContinue(auditRequest, objRequestContinue, tipificacionOtrosEscenarios, ref strInteractionId);
+
+                            if (blRegistroOtrosEscenariosContinue)
+                            {
+                                break;
+                            }
+                        }
+
+                        if (blRegistroOtrosEscenariosContinue)
+                        {
+                            for (int i = 1; i <= reintentos; i++)
+                            {
+                                blRegistroInconvenienteOtrosEscenarios = RegistrarInconvenienteOtrosEscenarios(strIdSession, strInteractionId);
+
+                                if (blRegistroInconvenienteOtrosEscenarios)
+                                {
+                                    break;
+                                }
                             }
                         }
                     }
@@ -724,7 +755,7 @@ namespace Claro.SIACU.Web.WebApplication.Transac.Service.Areas.Transactions.Cont
                     //Validar mensaje de respuesta
                     objItem.Code = "0";
 
-                    if (!blRegistroTransaccion && (!blRegistroTipificacion || !blRegistroPlantillaInteraccion))
+                    if (!blRegistroTransaccion && (!blRegistroTipificacionContinue || !blRegistroPlantillaTipificacionContinue))
                     {
                         objItem.Description = "Se aplicó contingencia de manera exitosa, error al registrar transacción y tipificación";
                     }
@@ -732,7 +763,7 @@ namespace Claro.SIACU.Web.WebApplication.Transac.Service.Areas.Transactions.Cont
                     {
                         objItem.Description = "Se aplicó contingencia de manera exitosa, error al registrar transacción";
                     }
-                    else if (!blRegistroTipificacion || !blRegistroPlantillaInteraccion)
+                    else if (!blRegistroTipificacionContinue || !blRegistroPlantillaTipificacionContinue)
                     {
                         objItem.Description = "Se aplicó contingencia de manera exitosa, error al registrar tipificación";
                     }
@@ -750,8 +781,8 @@ namespace Claro.SIACU.Web.WebApplication.Transac.Service.Areas.Transactions.Cont
 
                     Claro.Web.Logging.Info(strIdSession, strTransaccion, string.Format("{0} --> {1}", "[INICIATIVA-986 - ProcesarContinue][blActivarDesactivarContinueWS]", Functions.CheckStr(blActivarDesactivarContinueWS)));
                     Claro.Web.Logging.Info(strIdSession, strTransaccion, string.Format("{0} --> {1}", "[INICIATIVA-986 - ProcesarContinue][blRegistroTransaccion]", Functions.CheckStr(blRegistroTransaccion)));
-                    Claro.Web.Logging.Info(strIdSession, strTransaccion, string.Format("{0} --> {1}", "[INICIATIVA-986 - ProcesarContinue][blRegistroTipificacion]", Functions.CheckStr(blRegistroTipificacion)));
-                    Claro.Web.Logging.Info(strIdSession, strTransaccion, string.Format("{0} --> {1}", "[INICIATIVA-986 - ProcesarContinue][blRegistroPlantillaInteraccion]", Functions.CheckStr(blRegistroPlantillaInteraccion)));
+                    Claro.Web.Logging.Info(strIdSession, strTransaccion, string.Format("{0} --> {1}", "[INICIATIVA-986 - ProcesarContinue][blRegistroTipificacionContinue]", Functions.CheckStr(blRegistroTipificacionContinue)));
+                    Claro.Web.Logging.Info(strIdSession, strTransaccion, string.Format("{0} --> {1}", "[INICIATIVA-986 - ProcesarContinue][blRegistroPlantillaTipificacionContinue]", Functions.CheckStr(blRegistroPlantillaTipificacionContinue)));
                     Claro.Web.Logging.Info(strIdSession, strTransaccion, string.Format("{0} --> {1}", "[INICIATIVA-986 - ProcesarContinue][objResponse.Code]", objItem.Code));
                     Claro.Web.Logging.Info(strIdSession, strTransaccion, string.Format("{0} --> {1}", "[INICIATIVA-986 - ProcesarContinue][objResponse.Description]", objItem.Description));
                 }
@@ -980,7 +1011,7 @@ namespace Claro.SIACU.Web.WebApplication.Transac.Service.Areas.Transactions.Cont
             #endregion
         }
 
-        public bool RegistrarTipificacionContinue(CommonTransacService.AuditRequest auditRequest, FIXED.AplicarRetirarContingencia objRequestContinue, ref string strInteractionId)
+        public bool RegistrarTipificacionContinue(CommonTransacService.AuditRequest auditRequest, FIXED.AplicarRetirarContingencia objRequestContinue, string strTipificacionOtrosEscenarios, ref string strInteractionId)
         {
             string strIdSession = Functions.CheckStr(auditRequest.Session);
             string strTransaccion = Functions.CheckStr(auditRequest.transaction);
@@ -995,9 +1026,38 @@ namespace Claro.SIACU.Web.WebApplication.Transac.Service.Areas.Transactions.Cont
             objRequestInteraccion.item.TELEFONO = objRequestContinue.Linea;
             objRequestInteraccion.item.TIPO = Functions.CheckStr(ConfigurationManager.AppSettings("TipoTipificacionPostpago"));
             objRequestInteraccion.item.CLASE = Functions.CheckStr(ConfigurationManager.AppSettings("ClaseTipificacionVariacionFallasTecnicas"));
+
+            if (strTipificacionOtrosEscenarios == "1")
+            {
+                objRequestInteraccion.item.SUBCLASE = Functions.CheckStr(ConfigurationManager.AppSettings("SubClaseTipificacionFallaTecnica"));
+
+                switch (objRequestContinue.Escenario)
+                {
+                    case "Línea no provisionada":
+                        objRequestInteraccion.item.NOTAS = objRequestContinue.PlataformaActivacion == Constants.ASIS ? Functions.CheckStr(ConfigurationManager.AppSettings("NotasContinueLineaNoProvisionadaASIS"))
+                                                           : Functions.CheckStr(ConfigurationManager.AppSettings("NotasContinueLineaNoProvisionadaTOBE"));
+                        break;
+                    case "Plan no provisionado":
+                        objRequestInteraccion.item.NOTAS = objRequestContinue.PlataformaActivacion == Constants.ASIS ? Functions.CheckStr(ConfigurationManager.AppSettings("NotasContinuePlanNoProvisionadoASIS"))
+                                                           : Functions.CheckStr(ConfigurationManager.AppSettings("NotasContinuePlanNoProvisionadoTOBE"));
+                        break;
+                    case "Desalineación de plan":
+                        objRequestInteraccion.item.NOTAS = objRequestContinue.PlataformaActivacion == Constants.ASIS ? Functions.CheckStr(ConfigurationManager.AppSettings("NotasContinueDesalineacionDePlanASIS"))
+                                                           : Functions.CheckStr(ConfigurationManager.AppSettings("NotasContinueDesalineacionDePlanTOBE"));
+                        break;
+                    case "Otros Escenarios":
+                        objRequestInteraccion.item.NOTAS = objRequestContinue.PlataformaActivacion == Constants.ASIS ? Functions.CheckStr(ConfigurationManager.AppSettings("NotasContinueOtrosEscenariosASIS"))
+                                                           : Functions.CheckStr(ConfigurationManager.AppSettings("NotasContinueOtrosEscenariosTOBE"));
+                        break;
+                }
+            }
+            else
+            {
             objRequestInteraccion.item.SUBCLASE = objRequestContinue.Accion == "A" ? Functions.CheckStr(ConfigurationManager.AppSettings("SubClaseTipificacionAplicarContingencia"))
                                                                         : Functions.CheckStr(ConfigurationManager.AppSettings("SubClaseTipificacionRetirarContingencia"));
+            }
 
+            Claro.Web.Logging.Info(strIdSession, strTransaccion, string.Format("{0} --> {1}", "[INICIATIVA-986 - RegistrarInteraccionContinue][strTipificacionOtrosEscenarios]", strTipificacionOtrosEscenarios));
             Claro.Web.Logging.Info(strIdSession, strTransaccion, "[INICIATIVA-986 - RegistrarInteraccionContinue][Inicio invocacion a metodo generico RegistrarInteraccion]");
 
             objResponseInteraccion = RegistrarInteraccion(auditRequest.Session, objRequestInteraccion);
@@ -1042,17 +1102,23 @@ namespace Claro.SIACU.Web.WebApplication.Transac.Service.Areas.Transactions.Cont
             {
                 strNotas = ConfigurationManager.AppSettings("NotasContinueRetirarContingencia");
             }
-            else if (objRequestContinue.Escenario == "Línea no provisionada")
+            else
             {
-                strNotas = ConfigurationManager.AppSettings("NotasContinueLineaNoProvisionada");
+                switch (objRequestContinue.Escenario)
+            {
+                    case "Línea no provisionada":
+                        strNotas = Functions.CheckStr(ConfigurationManager.AppSettings("NotasContinueLineaNoProvisionada"));
+                        break;
+                    case "Plan no provisionado":
+                        strNotas = Functions.CheckStr(ConfigurationManager.AppSettings("NotasContinuePlanNoProvisionado"));
+                        break;
+                    case "Desalineación de plan":
+                        strNotas = Functions.CheckStr(ConfigurationManager.AppSettings("NotasContinueDesalineacionDePlan"));
+                        break;
+                    case "Otros Escenarios":
+                        strNotas = Functions.CheckStr(ConfigurationManager.AppSettings("NotasContinueOtrosEscenarios"));
+                        break;
             }
-            else if (objRequestContinue.Escenario == "Plan no provisionado")
-            {
-                strNotas = ConfigurationManager.AppSettings("NotasContinuePlanNoProvisionado");
-            }
-            else if (objRequestContinue.Escenario == "Desalineación de plan")
-            {
-                strNotas = ConfigurationManager.AppSettings("NotasContinueDesalineacionDePlan");
             }
 
             objRequestPlantillaInteraccion.audit = auditRequest;
@@ -1099,7 +1165,212 @@ namespace Claro.SIACU.Web.WebApplication.Transac.Service.Areas.Transactions.Cont
             return blRespuesta;
         }
 
+        public bool RegistrarInconvenienteOtrosEscenarios(string strIdSession, string strInteractionid)
+        {
+            Claro.Web.Logging.Info(strIdSession, strIdSession, "FIN INICIATIVA-986 - RegistrarInconvenienteOtrosEscenarios");
+            InteractionSubClasDetailRequestCommon objRequestDetalleAutomatico = new InteractionSubClasDetailRequestCommon();
+            InteractionSubClasDetailResponseCommon objResponseDetalleInteraccion = new InteractionSubClasDetailResponseCommon();
+            bool blRespuesta = false;
+
+            try
+            {
+                objRequestDetalleAutomatico.item = new InteractionSubClasDetail();
+                objRequestDetalleAutomatico.item.INTERACT_ID = strInteractionid;
+                objRequestDetalleAutomatico.item.CASOID = "-1";
+                objRequestDetalleAutomatico.item.TIPO_CODIGO = Functions.CheckStr(ConfigurationManager.AppSettings("codTipoTipificacionPostpago"));
+                objRequestDetalleAutomatico.item.CLASE_CODIGO = Functions.CheckStr(ConfigurationManager.AppSettings("codClaseVariacionFallasTecnicasPostpago"));
+                objRequestDetalleAutomatico.item.SUBCLASE_CODIGO = Functions.CheckStr(ConfigurationManager.AppSettings("codSubClaseFallaTecnicaPostpago"));
+                objRequestDetalleAutomatico.item.SERVAFECT_CODE = Functions.CheckStr(ConfigurationManager.AppSettings("codServicioAfectadoFallaDeSistemaCBIO"));
+                objRequestDetalleAutomatico.item.TIPO = Functions.CheckStr(ConfigurationManager.AppSettings("TipoTipificacionPostpago"));
+                objRequestDetalleAutomatico.item.CLASE = Functions.CheckStr(ConfigurationManager.AppSettings("ClaseTipificacionVariacionFallasTecnicas"));
+                objRequestDetalleAutomatico.item.SUBCLASE = Functions.CheckStr(ConfigurationManager.AppSettings("SubClaseTipificacionFallaTecnica"));
+                objRequestDetalleAutomatico.item.SERVAFECT = Functions.CheckStr(ConfigurationManager.AppSettings("ServicioAfectadoInternetSMSLlamadas")); //AGREGAR WEBCONFIG
+                objRequestDetalleAutomatico.item.INCONVEN_CODE = Functions.CheckStr(ConfigurationManager.AppSettings("codInconvenienteFallaDeSistemaCBIO")); //AGREGAR WEBCONFIG
+                objRequestDetalleAutomatico.item.INCONVEN = Functions.CheckStr(ConfigurationManager.AppSettings("InconvenienteFallaDeSistemaCBIO")); //AGREGAR WEBCONFIG
+
+                Claro.Web.Logging.Info(strIdSession, strIdSession, "[INICIATIVA-986 - RegistrarInconvenienteOtrosEscenarios - Se obtuvo el detalle automatico del detalle de interaccion con exito]");
+
+                objResponseDetalleInteraccion = RegistrarDetalleInteraccion(strIdSession, objRequestDetalleAutomatico);
+
+                if (objResponseDetalleInteraccion != null)
+                {
+                    if (objResponseDetalleInteraccion.CodeError == 0)
+                    {
+                        blRespuesta = true;
+                    }
+                }
+
+                Claro.Web.Logging.Info(strIdSession, strIdSession, string.Format("{0} --> {1}", "[INICIATIVA-986 - RegistrarInconvenienteOtrosEscenarios][blRespuesta]", Functions.CheckStr(blRespuesta)));
+            }
+            catch (Exception ex)
+            {
+                Claro.Web.Logging.Info(strIdSession, strIdSession, "[INICIATIVA-986 - RegistrarInconvenienteOtrosEscenarios - Ocurrio un error al obtener el detalle automatico del detalle de interaccion de otros escenarios]");
+                Claro.Web.Logging.Error(strIdSession, strIdSession, string.Format("{0} => [{1}|{2}]", "[INICIATIVA-986 - RegistrarInconvenienteOtrosEscenarios][Error]", ex.Message, ex.StackTrace));
+            }
+
+            Claro.Web.Logging.Info(strIdSession, strIdSession, "FIN INICIATIVA-986 - RegistrarInconvenienteOtrosEscenarios");
+
+            return blRespuesta;
+        }
+
         #region Tipificaciones - Descartes AT
+        public JsonResult GenerarTipificacionReinicioRedDatos(string strIdSession, TipificacionesDescartes objRequestTipificacion)
+        {
+            CommonTransacService.AuditRequest auditRequest = new CommonTransacService.AuditRequest();
+            auditRequest = App_Code.Common.CreateAuditRequest<CommonTransacService.AuditRequest>(strIdSession);
+
+            Claro.Web.Logging.Info(strIdSession, auditRequest.transaction, "INICIO INICIATIVA-986 - GenerarTipificacionReinicioRedDatosMoviles");
+
+            ItemGeneric objItem = new ItemGeneric();
+            InsertIntRequestCommon objRequestInteraccion = new InsertIntRequestCommon();
+            InsertIntResponseCommon objResponseInteraccion = new InsertIntResponseCommon();
+            InteractionSubClasDetailRequestCommon objRequestDetalleInteraccion = new InteractionSubClasDetailRequestCommon();
+            InteractionSubClasDetailResponseCommon objResponseDetalleInteraccion = new InteractionSubClasDetailResponseCommon();
+            string strTransaccion = auditRequest.transaction;
+            string strInteractionId = string.Empty;
+            bool blRegistroInteraccion = false;
+            bool blRegistroDetalleInteraccion = false;
+
+            try
+            {
+                objRequestInteraccion.item = new CommonService.Iteraction();
+                objRequestInteraccion.item.OBJID_CONTACTO = objRequestTipificacion.ContactCode;
+                objRequestInteraccion.item.TELEFONO = objRequestTipificacion.Linea;
+                objRequestInteraccion.item.CLASE = Functions.CheckStr(ConfigurationManager.AppSettings("ClaseTipificacionVariacionFallasTecnicas"));
+                objRequestInteraccion.item.SUBCLASE = Functions.CheckStr(ConfigurationManager.AppSettings("SubClaseTipificacionFallaTecnica"));
+                objRequestInteraccion.item.NOTAS = objRequestTipificacion.Notas;
+                objRequestInteraccion.item.TIPO = objRequestTipificacion.TipoVenta == "POSTPAGO" ? Functions.CheckStr(ConfigurationManager.AppSettings("TipoTipificacionPostpago"))
+                                                                        : Functions.CheckStr(ConfigurationManager.AppSettings("TipoTipificacionPrepago"));
+
+                objResponseInteraccion = RegistrarInteraccion(strIdSession, objRequestInteraccion);
+
+                if (objResponseInteraccion != null)
+                {
+                    if (objResponseInteraccion.FlagInsercion == "OK" && !string.IsNullOrEmpty(objResponseInteraccion.Interactionid))
+                    {
+                        objRequestTipificacion.InteractionId = objResponseInteraccion.Interactionid;
+                        blRegistroInteraccion = true;
+                    }
+                }
+
+                if (blRegistroInteraccion)
+                {
+                    objRequestDetalleInteraccion = ObtenerDetalleInteraccionReinicioRedDatos(strIdSession, objRequestTipificacion);
+                    objResponseDetalleInteraccion = RegistrarDetalleInteraccion(strIdSession, objRequestDetalleInteraccion);
+
+                    if (objResponseDetalleInteraccion != null)
+                    {
+                        if (objResponseDetalleInteraccion.CodeError == 0)
+                        {
+                            blRegistroDetalleInteraccion = true;
+                        }
+                    }
+
+                    if (blRegistroDetalleInteraccion)
+                    {
+                        objItem.Code = "0";
+                        objItem.Description = Functions.CheckStr(ConfigurationManager.AppSettings("MensajeExitoTipificacion")); //"Se registró la tipificación de manera exitosa";
+                    }
+                    else
+                    {
+                        objItem.Code = "1";
+                        objItem.Description = Functions.CheckStr(ConfigurationManager.AppSettings("MensajeErrorTipificacion")); //"Ocurrió un error al registrar la tipificación, intentar nuevamente";
+                    }
+                    Claro.Web.Logging.Info(strIdSession, strTransaccion, string.Format("{0} --> {1}", "[INICIATIVA-986 - GenerarTipificacionReinicioRedDatosMoviles][blRegistroInteraccion]", Functions.CheckStr(blRegistroInteraccion)));
+                    Claro.Web.Logging.Info(strIdSession, strTransaccion, string.Format("{0} --> {1}", "[INICIATIVA-986 - GenerarTipificacionReinicioRedDatosMoviles][blRegistroDetalleInteraccion]", Functions.CheckStr(blRegistroDetalleInteraccion)));
+                    Claro.Web.Logging.Info(strIdSession, strTransaccion, string.Format("{0} --> {1}", "[INICIATIVA-986 - GenerarTipificacionReinicioRedDatosMoviles][objResponse.Code]", objItem.Code));
+                    Claro.Web.Logging.Info(strIdSession, strTransaccion, string.Format("{0} --> {1}", "[INICIATIVA-986 - GenerarTipificacionReinicioRedDatosMoviles][objResponse.Description]", objItem.Description));
+                }
+                else
+                {
+                    objItem.Code = "1";
+                    objItem.Description = Functions.CheckStr(ConfigurationManager.AppSettings("MensajeErrorTipificacion")); //"Ocurrió un error al registrar la tipificación, intentar nuevamente";
+
+                    Claro.Web.Logging.Info(strIdSession, strTransaccion, string.Format("{0} --> {1}", "[INICIATIVA-986 - GenerarTipificacionReinicioRedDatosMoviles][blRegistroInteraccion]", Functions.CheckStr(blRegistroInteraccion)));
+                    Claro.Web.Logging.Info(strIdSession, strTransaccion, string.Format("{0} --> {1}", "[INICIATIVA-986 - GenerarTipificacionReinicioRedDatosMoviles][objResponse.Code]", objItem.Code));
+                    Claro.Web.Logging.Info(strIdSession, strTransaccion, string.Format("{0} --> {1}", "[INICIATIVA-986 - GenerarTipificacionReinicioRedDatosMoviles][objResponse.Description]", objItem.Description));
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            JsonResult objJsonResponse = Json(new { data = objItem });
+
+            Claro.Web.Logging.Info(strIdSession, auditRequest.transaction, "FIN INICIATIVA-986 - GenerarTipificacionReinicioRedDatosMoviles");
+
+            return objJsonResponse;
+        }
+
+        public InteractionSubClasDetailRequestCommon ObtenerDetalleInteraccionReinicioRedDatos(string strIdSession, TipificacionesDescartes objRequestTipificacion)
+        {
+            Claro.Web.Logging.Info(strIdSession, strIdSession, "INICIO INICIATIVA-986 - ObtenerDetalleInteraccionReinicioRedDatos");
+            InteractionSubClasDetailRequestCommon objRequestDetalleAutomatico = new InteractionSubClasDetailRequestCommon();
+
+            try
+            {
+                objRequestDetalleAutomatico.item = new InteractionSubClasDetail();
+                objRequestDetalleAutomatico.item.INTERACT_ID = objRequestTipificacion.InteractionId;
+                objRequestDetalleAutomatico.item.CASOID = "-1";
+
+                if (objRequestTipificacion.TipoVenta == "POSTPAGO")
+                {
+                    objRequestDetalleAutomatico.item.TIPO_CODIGO = Functions.CheckStr(ConfigurationManager.AppSettings("codTipoTipificacionPostpago"));
+                    objRequestDetalleAutomatico.item.CLASE_CODIGO = Functions.CheckStr(ConfigurationManager.AppSettings("codClaseVariacionFallasTecnicasPostpago"));
+                    objRequestDetalleAutomatico.item.SUBCLASE_CODIGO = Functions.CheckStr(ConfigurationManager.AppSettings("codSubClaseFallaTecnicaPostpago"));
+                    objRequestDetalleAutomatico.item.SERVAFECT_CODE = Functions.CheckStr(ConfigurationManager.AppSettings("codServicioAfectadoInternetPostpago"));
+                    objRequestDetalleAutomatico.item.TIPO = Functions.CheckStr(ConfigurationManager.AppSettings("TipoTipificacionPostpago"));
+                    objRequestDetalleAutomatico.item.CLASE = Functions.CheckStr(ConfigurationManager.AppSettings("ClaseTipificacionVariacionFallasTecnicas"));
+                    objRequestDetalleAutomatico.item.SUBCLASE = Functions.CheckStr(ConfigurationManager.AppSettings("SubClaseTipificacionFallaTecnica"));
+                    objRequestDetalleAutomatico.item.SERVAFECT = Functions.CheckStr(ConfigurationManager.AppSettings("ServicioAfectadoInternet"));
+
+                    if (objRequestTipificacion.TipoInconveniente == "12750220") //Reinicio de Datos Moviles
+                    {
+                        objRequestDetalleAutomatico.item.INCONVEN_CODE = Functions.CheckStr(ConfigurationManager.AppSettings("codInconvenienteReinicioDatosMovilesPostpago"));
+                        objRequestDetalleAutomatico.item.INCONVEN = Functions.CheckStr(ConfigurationManager.AppSettings("InconvenienteReinicioDatosMoviles"));
+                    }
+                    else //12750225 - Reinicio de Red
+                    {
+                        objRequestDetalleAutomatico.item.INCONVEN_CODE = Functions.CheckStr(ConfigurationManager.AppSettings("codInconvenienteReinicioDeRedPostpago"));
+                        objRequestDetalleAutomatico.item.INCONVEN = Functions.CheckStr(ConfigurationManager.AppSettings("InconvenienteReinicioDeRed"));
+                    }
+                }
+                else //PREPAGO
+                {
+                    objRequestDetalleAutomatico.item.TIPO_CODIGO = Functions.CheckStr(ConfigurationManager.AppSettings("codTipoTipificacionPrepago"));
+                    objRequestDetalleAutomatico.item.CLASE_CODIGO = Functions.CheckStr(ConfigurationManager.AppSettings("codClaseTipificacionVariacionFallasTecnicas"));
+                    objRequestDetalleAutomatico.item.SUBCLASE_CODIGO = Functions.CheckStr(ConfigurationManager.AppSettings("codSubClaseTipificacionFallaTecnica"));
+                    objRequestDetalleAutomatico.item.SERVAFECT_CODE = Functions.CheckStr(ConfigurationManager.AppSettings("codServicioAfectadoInternet"));
+                    objRequestDetalleAutomatico.item.TIPO = Functions.CheckStr(ConfigurationManager.AppSettings("TipoTipificacionPrepago"));
+                    objRequestDetalleAutomatico.item.CLASE = Functions.CheckStr(ConfigurationManager.AppSettings("ClaseTipificacionVariacionFallasTecnicas"));
+                    objRequestDetalleAutomatico.item.SUBCLASE = Functions.CheckStr(ConfigurationManager.AppSettings("SubClaseTipificacionFallaTecnica"));
+                    objRequestDetalleAutomatico.item.SERVAFECT = Functions.CheckStr(ConfigurationManager.AppSettings("ServicioAfectadoInternet"));
+
+                    if (objRequestTipificacion.TipoInconveniente == "101300220") //Reinicio de Datos Moviles
+                    {
+                        objRequestDetalleAutomatico.item.INCONVEN_CODE = Functions.CheckStr(ConfigurationManager.AppSettings("codInconvenienteReinicioDatosMovilesPrepago"));
+                        objRequestDetalleAutomatico.item.INCONVEN = Functions.CheckStr(ConfigurationManager.AppSettings("InconvenienteReinicioDatosMoviles"));
+                    }
+                    else //101300221 - Reinicio de Red
+                    {
+                        objRequestDetalleAutomatico.item.INCONVEN_CODE = Functions.CheckStr(ConfigurationManager.AppSettings("codInconvenienteReinicioDeRedPrepago"));
+                        objRequestDetalleAutomatico.item.INCONVEN = Functions.CheckStr(ConfigurationManager.AppSettings("InconvenienteReinicioDeRed"));
+                    }
+                }
+                Claro.Web.Logging.Info(strIdSession, strIdSession, "[INICIATIVA-986 - ObtenerDetalleInteraccionReinicioRedDatos - Se obtuvo el detalle automatico del detalle de interaccion con exito]");
+            }
+            catch (Exception ex)
+            {
+                Claro.Web.Logging.Info(strIdSession, strIdSession, "[INICIATIVA-986 - ObtenerDetalleInteraccionReinicioRedDatos - Ocurrio un error al obtener el detalle automatico del detalle de interaccion de red y datos]");
+                Claro.Web.Logging.Error(strIdSession, strIdSession, string.Format("{0} => [{1}|{2}]", "[INICIATIVA-986 - ObtenerDetalleInteraccionReinicioRedDatos][Error]", ex.Message, ex.StackTrace));
+            }
+
+            Claro.Web.Logging.Info(strIdSession, strIdSession, "FIN INICIATIVA-986 - ObtenerDetalleInteraccionReinicioRedDatos");
+
+            return objRequestDetalleAutomatico;
+        }
+
         //SP: SA.PCK_INTERACT_CLFY.SP_CREATE_INTERACT
         public InsertIntResponseCommon RegistrarInteraccion(string strIdSession, InsertIntRequestCommon objRequestInteraccion)
         {
@@ -1166,60 +1437,6 @@ namespace Claro.SIACU.Web.WebApplication.Transac.Service.Areas.Transactions.Cont
             return objResponse;
         }
 
-        public InteractionSubClasDetailRequestCommon ObtenerDetalleInteraccionAutomaticoDescarte(string strTipo, string strTipoInconveniente)
-        {
-            InteractionSubClasDetailRequestCommon objRequestDetalleAutomatico = new InteractionSubClasDetailRequestCommon();
-
-            if (strTipo == "POSTPAGO")
-            {
-                objRequestDetalleAutomatico.item = new InteractionSubClasDetail();
-                objRequestDetalleAutomatico.item.TIPO_CODIGO = Functions.CheckStr(ConfigurationManager.AppSettings("codTipoTipificacionPostpago"));
-                objRequestDetalleAutomatico.item.CLASE_CODIGO = Functions.CheckStr(ConfigurationManager.AppSettings("codClaseVariacionFallasTecnicasPostpago"));
-                objRequestDetalleAutomatico.item.SUBCLASE_CODIGO = Functions.CheckStr(ConfigurationManager.AppSettings("codSubClaseFallaTecnicaPostpago"));
-                objRequestDetalleAutomatico.item.SERVAFECT_CODE = Functions.CheckStr(ConfigurationManager.AppSettings("codServicioAfectadoInternetPostpago"));
-                objRequestDetalleAutomatico.item.TIPO = Functions.CheckStr(ConfigurationManager.AppSettings("TipoTipificacionPostpago"));
-                objRequestDetalleAutomatico.item.CLASE = Functions.CheckStr(ConfigurationManager.AppSettings("ClaseTipificacionVariacionFallasTecnicas"));
-                objRequestDetalleAutomatico.item.SUBCLASE = Functions.CheckStr(ConfigurationManager.AppSettings("SubClaseTipificacionFallaTecnica"));
-                objRequestDetalleAutomatico.item.SERVAFECT = Functions.CheckStr(ConfigurationManager.AppSettings("ServicioAfectadoInternet"));
-
-                if (strTipoInconveniente == "12750220") //Reinicio de Datos Moviles
-                {
-                    objRequestDetalleAutomatico.item.INCONVEN_CODE = Functions.CheckStr(ConfigurationManager.AppSettings("codInconvenienteReinicioDatosMovilesPostpago"));
-                    objRequestDetalleAutomatico.item.INCONVEN = Functions.CheckStr(ConfigurationManager.AppSettings("InconvenienteReinicioDatosMoviles"));
-                }
-                else if (strTipoInconveniente == "12750225") //Reinicio de Red
-                {
-                    objRequestDetalleAutomatico.item.INCONVEN_CODE = Functions.CheckStr(ConfigurationManager.AppSettings("codInconvenienteReinicioDeRedPostpago"));
-                    objRequestDetalleAutomatico.item.INCONVEN = Functions.CheckStr(ConfigurationManager.AppSettings("InconvenienteReinicioDeRed"));
-                }
-            }
-            else if (strTipo == "PREPAGO")
-            {
-                objRequestDetalleAutomatico.item = new InteractionSubClasDetail();
-                objRequestDetalleAutomatico.item.TIPO_CODIGO = Functions.CheckStr(ConfigurationManager.AppSettings("codTipoTipificacionPrepago"));
-                objRequestDetalleAutomatico.item.CLASE_CODIGO = Functions.CheckStr(ConfigurationManager.AppSettings("codClaseTipificacionVariacionFallasTecnicas"));
-                objRequestDetalleAutomatico.item.SUBCLASE_CODIGO = Functions.CheckStr(ConfigurationManager.AppSettings("codSubClaseTipificacionFallaTecnica"));
-                objRequestDetalleAutomatico.item.SERVAFECT_CODE = Functions.CheckStr(ConfigurationManager.AppSettings("codServicioAfectadoInternet"));
-                objRequestDetalleAutomatico.item.TIPO = Functions.CheckStr(ConfigurationManager.AppSettings("TipoTipificacionPrepago"));
-                objRequestDetalleAutomatico.item.CLASE = Functions.CheckStr(ConfigurationManager.AppSettings("ClaseTipificacionVariacionFallasTecnicas"));
-                objRequestDetalleAutomatico.item.SUBCLASE = Functions.CheckStr(ConfigurationManager.AppSettings("SubClaseTipificacionFallaTecnica"));
-                objRequestDetalleAutomatico.item.SERVAFECT = Functions.CheckStr(ConfigurationManager.AppSettings("ServicioAfectadoInternet"));
-
-                if (strTipoInconveniente == "101300220") //Reinicio de Datos Moviles
-                {
-                    objRequestDetalleAutomatico.item.INCONVEN_CODE = Functions.CheckStr(ConfigurationManager.AppSettings("codInconvenienteReinicioDatosMovilesPrepago"));
-                    objRequestDetalleAutomatico.item.INCONVEN = Functions.CheckStr(ConfigurationManager.AppSettings("InconvenienteReinicioDatosMoviles"));
-                }
-                else if (strTipoInconveniente == "101300221") //Reinicio de Red
-                {
-                    objRequestDetalleAutomatico.item.INCONVEN_CODE = Functions.CheckStr(ConfigurationManager.AppSettings("codInconvenienteReinicioDeRedPrepago"));
-                    objRequestDetalleAutomatico.item.INCONVEN = Functions.CheckStr(ConfigurationManager.AppSettings("InconvenienteReinicioDeRed"));
-                }
-            }
-
-            return objRequestDetalleAutomatico;
-        }
-
         //SP: SA.PCK_CASE_CLFY.SP_INS_DET_INTERACCION
         public InteractionSubClasDetailResponseCommon RegistrarDetalleInteraccion(string strIdSession, InteractionSubClasDetailRequestCommon objRequestDetalleInteraccion)
         {
@@ -1269,7 +1486,7 @@ namespace Claro.SIACU.Web.WebApplication.Transac.Service.Areas.Transactions.Cont
                 objResponse = _oServiceCommon.InsertRecordSubClaseDetail(objRequest);
 
                 Claro.Web.Logging.Info(strIdSession, auditRequest.transaction, string.Format("{0} --> {1}", "[INICIATIVA-986 - RegistrarDetalleInteraccion][objResponse.codigoRespuesta]", Functions.CheckStr(objResponse.CodeError)));
-                Claro.Web.Logging.Info(strIdSession, auditRequest.transaction, string.Format("{0} --> {1}", "[INICIATIVA-986 - RegistrarDetalleInteraccion][objResponse.]", Functions.CheckStr(objResponse.MsgError)));
+                Claro.Web.Logging.Info(strIdSession, auditRequest.transaction, string.Format("{0} --> {1}", "[INICIATIVA-986 - RegistrarDetalleInteraccion][objResponse.mensajeRespuesta]", Functions.CheckStr(objResponse.MsgError)));
                 #endregion
             }
             catch (Exception ex)
@@ -1281,6 +1498,5 @@ namespace Claro.SIACU.Web.WebApplication.Transac.Service.Areas.Transactions.Cont
         }
         #endregion
         #endregion
-        //FIN: INICIATIVA-871
     }
 }
