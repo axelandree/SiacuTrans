@@ -140,6 +140,7 @@ console.log(SessionTransac);
         desalineacionDePlan: '',
         servicioVolte: '',
         //FIN: INICIATIVA-986 - CONTINUE
+        blTipificacionReinicioRedDatos: '',
 
         ValidarAcceso: function (callback) {
 
@@ -190,9 +191,14 @@ OcultarBodyDetRec: function () {
         },
 
         //INI: INICIATIVA-986 - CONTINUE
-        f_ProcesarContinue: function () {
+        f_ProcesarContinue: function (object) {
+			var that = this;
+			if(object.id == 'btnAplicarContinueOtros'){
+				that.escenarioContingencia = 'Otros Escenarios';
+				that.accionContingencia = 'A';
+			}
+			
             showLoading('Procesando...');
-            var that = this;
             var oCustomer = SessionTransac.SessionParams.DATACUSTOMER;
             var objServicio = SessionTransac.SessionParams.DATASERVICE;
             var strLinea = '';
@@ -239,7 +245,12 @@ OcultarBodyDetRec: function () {
                         if (response.data != null) {
                             if (response.data.Code == "0") {
                                 alert(response.data.Description);
-                                document.getElementById('btnContinue').style.display = 'none';
+								if(that.accionContingencia == 'A'){
+									document.getElementById('btnAplicarContinue').style.display = 'none';
+								}
+								else{
+									document.getElementById('btnRetirarContinue').style.display = 'none';
+								}
                                 that.f_actualizarDescartesPostContinue();
                             }
                             else {
@@ -281,6 +292,78 @@ OcultarBodyDetRec: function () {
             });
         },
         //FIN: INICIATIVA-986 - CONTINUE
+		
+		//INI: INICIATIVA-986 - OTROS ESCENARIOS CONTINUE
+		f_ProcesarContinueOtros: function (object) {
+			if(object.id == 'btnAplicarContinueOtros'){
+				alert('Entro 1');
+			}
+			else{
+				alert('Entro 2');
+			}
+		},
+		//INI: INICIATIVA-986 - OTROS ESCENARIOS CONTINUE
+		
+        //INI: INICIATIVA-986 - TIPIFICACION REINICIO DE RED - DATOS MOVILES
+        f_RegistrarTipificacionRedDatos: function (id) {
+            showLoading('Procesando...');
+            var that = this;
+            var oCustomer = SessionTransac.SessionParams.DATACUSTOMER;
+            var strLinea = ''; //HARCODEO
+			var strContactCode = '';
+			var strTipoInconveniente = '';
+			
+			if(id == 'btnTipificacionRed'){
+				strTipoInconveniente = '12750225';
+			}
+			else{
+				strTipoInconveniente = '12750220';
+			}
+			 
+            if ($.isEmptyObject(oCustomer) == false) {
+                strLinea = ((oCustomer.Telephone == null || oCustomer.Telephone == '') ?
+						(oCustomer.TelephoneCustomer == null || oCustomer.TelephoneCustomer == '') ? '' : oCustomer.TelephoneCustomer
+						: oCustomer.Telephone);
+				strContactCode = SessionTransac.SessionParams.DATACUSTOMER.ContactCode; //'391070108'; //
+            }
+			
+			//strLinea = '997101267'; //HARCODEO
+			
+            var objRequestTipificacion = {
+                strIdSession: Session.IDSESSION,
+                objRequestTipificacion: {
+                    Linea: strLinea,
+                    ContactCode: strContactCode,
+					Notas: '',
+					TipoVenta: 'POSTPAGO',
+					TipoInconveniente: strTipoInconveniente
+                }
+            };
+
+            $.app.ajax({
+                type: 'POST',
+                contentType: "application/json; charset=utf-8",
+                dataType: 'json',
+                url: '/Transactions/Fixed/Discard/GenerarTipificacionReinicioRedDatos',
+                data: JSON.stringify(objRequestTipificacion),
+                success: function (response) {
+                    if (response != null) {
+                        if (response.data != null) {
+                            if (response.data.Code == "0") {
+                                alert(response.data.Description);
+                            }
+                            else {
+                                alert(response.data.Description);
+                            }
+                        }
+                    }
+                },
+                error: function (msger) {
+                    callback();
+                }
+            });
+        },
+        //FIN: INICIATIVA-986 - TIPIFICACION REINICIO DE RED - DATOS MOVILES
 
         MetbtnActualizartab: function (e) {
             var that = this;
@@ -555,6 +638,33 @@ OcultarBodyDetRec: function () {
                 var IdGrupoInternetPostpago = GetKeyConfig("strIdGrupoInternetPostpago");
                 var IdGrupoSMSPostpago = GetKeyConfig("strIdGrupoSMSPostpago");
 
+				//INI: INICIATIVA-986 - CONTINUE
+				var perfilesPermitidosContinue = GetKeyConfig("PerfilesPermitidosContinue").split(','); 
+				var objUserAccess = SessionTransac.SessionParams.USERACCESS;
+				var blPerfilPermitidosContinue = false;
+				
+				$.grep(perfilesPermitidosContinue, function(value){
+					if(value == objUserAccess.profileId){
+						blPerfilPermitidosContinue = true;
+					}
+				});
+				console.log('blPerfilPermitidosContinue: ' + blPerfilPermitidosContinue);
+				//FIN: INICIATIVA-986 - CONTINUE
+				
+				//INI: INICIATIVA-986 - OTROS ESCENARIOS CONTINUE
+				var usuariosPermitidosContinueOtros = GetKeyConfig("UsuariosPermitidosContinueOtrosEscenarios").split(','); 
+				var objUserAccess = SessionTransac.SessionParams.USERACCESS;
+				var blUsuarioPermitidoContinueOtros = false;
+				
+				$.grep(usuariosPermitidosContinueOtros, function(value){
+					if(value == objUserAccess.login){
+						blUsuarioPermitidoContinueOtros = true;
+					}
+				});
+				console.log('blUsuarioPermitidoContinueOtros: ' + blUsuarioPermitidoContinueOtros);
+				//FIN: INICIATIVA-986 - OTROS ESCENARIOS CONTINUE
+				
+				
                 $.grep(that.dataListDescartes.listaGrupos, function (ItemGroup) {
 
                     var classActive = '';
@@ -911,7 +1021,16 @@ OcultarBodyDetRec: function () {
                                     divTable.append(divTabletBody);
                                     }
 
+                                    //INI: INICIATIVA-986 - TIPIFICACION REINICIO DE RED - DATOS MOVILES
+                                    if (value.id_descarte == '57') {
+                                        if (value.flag_Error == 0) {
+                                            that.blTipificacionReinicioRedDatos = true;
+                                        }
+                                    }
+                                    //FIN: INICIATIVA-986 - TIPIFICACION REINICIO DE RED - DATOS MOVILES
+
                                     //INI: INICIATIVA-986 - CONTINUE
+									if(blPerfilPermitidosContinue){
                                     if (value.id_descarte == '7') {
                                         if (value.descarteValor == 'Línea no provisionada') {
                                             that.lineaNoProvisionada = value.descarteValor;
@@ -934,6 +1053,7 @@ OcultarBodyDetRec: function () {
                                     else if (value.id_descarte == '15' && value.descarteValor == 'NORM (Línea en contingencia)') {
                                         blChargingNORM = true;
                                     }
+									}
                                     //FIN: INICIATIVA-986 - CONTINUE
                                 });
                             }
@@ -945,55 +1065,114 @@ OcultarBodyDetRec: function () {
                         divPanel.append(divPanelBody);
                         controls.divContenedor.append(divPanel);
 
+						//INI: INICIATIVA-986 - OTROS ESCENARIOS CONTINUE
+						if (ItemGroup.degriIdGrupo == 2) {
+							if(blUsuarioPermitidoContinueOtros){
+								var btnAplicarContinueOtros = document.createElement("input");
+									btnAplicarContinueOtros.className = 'btn claro-btn-info btn-xs';
+									btnAplicarContinueOtros.id = 'btnAplicarContinueOtros';
+									btnAplicarContinueOtros.type = 'button';
+									btnAplicarContinueOtros.value = 'Contingencia Otros Escenarios';
+									btnAplicarContinueOtros.setAttribute("style", "text-align:center; cursor:pointer; margin-top: 6px; margin-left: -20px;")
+									btnAplicarContinueOtros.onclick = function () { that.f_ProcesarContinue(this) };
+										
+								$('#divColumnTerceroPanelBody2').append(btnAplicarContinueOtros);
+							}
+						}
+						//FIN: INICIATIVA-986 - OTROS ESCENARIOS CONTINUE
+
                         //INI: INICIATIVA-986 - CONTINUE
-                        //Validar que accion de continue se debe realizar
-                        if (that.lineaNoProvisionada != '' && !blChargingNORM) {
-                            that.accionContingencia = 'A'; //Aplicar continue
-                        }
-                        else if (that.planNoProvisionado != '' && !blChargingNORM) {
-                            that.accionContingencia = 'A'; //Aplicar continue
-                        }
-                        else if (that.desalineacionDePlan != '' && !blChargingNORM) {
-                            that.accionContingencia = 'A'; //Aplicar continue
-                        }
-                        else if (blLineaProvisionada && blPlanProvisionado && blChargingNORM) {
-                            that.accionContingencia = 'R'; //Retirar continue
-                        }
-
-                        //Validar que escenario de continue se debe registrar
-                        if (that.lineaNoProvisionada != '' && that.lineaNoProvisionada != undefined) {
-                            that.escenarioContingencia = that.lineaNoProvisionada;
-                        }
-                        else if (that.planNoProvisionado != '' && that.planNoProvisionado != undefined) {
-                            that.escenarioContingencia = that.planNoProvisionado;
-                        }
-                        else if (that.desalineacionDePlan != '' && that.desalineacionDePlan != undefined) {
-                            that.escenarioContingencia = that.desalineacionDePlan;
-                        }
-
-                        if (ItemGroup.degriIdGrupo == 2) {
-                            //Validar que boton de accion de continue mostrar
-                            if (that.accionContingencia == 'A') {
-                                var btnAplicarContinue = $(that.CrearControl.btn("btnContinue", "Aplicar Contingencia", "btn claro-btn-info btn-xs"));
-                                btnAplicarContinue.attr("style", "text-align:center; cursor:pointer;")
-                                btnAplicarContinue.addEvent(that, 'click', that.f_ProcesarContinue);
-
-                                if (that.escenarioContingencia == that.lineaNoProvisionada) {
-                                    $('#divTabletBodytrSecondTD7').append(btnAplicarContinue);
-                                }
-                                else if (that.escenarioContingencia == that.planNoProvisionado || that.escenarioContingencia == that.escenarioContingencia) {
-                                    $('#divTabletBodytrSecondTD8').append(btnAplicarContinue);
-                                }
-                            }
-                            else if (that.accionContingencia == 'R') {
-                                var btnRetirarContinue = $(that.CrearControl.btn("btnContinue", "Retirar Contingencia", "btn claro-btn-info btn-xs"));
-                                btnRetirarContinue.attr("style", "text-align:center; cursor:pointer;")
-                                btnRetirarContinue.addEvent(that, 'click', that.f_ProcesarContinue);
-
-                                $('#divTabletBodytrSecondTD15').append(btnRetirarContinue);
-                            }
-                        }
+						if(blPerfilPermitidosContinue){
+							//Validar que accion de continue se debe realizar
+							if (that.lineaNoProvisionada != '' && !blChargingNORM) {
+								that.accionContingencia = 'A'; //Aplicar continue
+							}
+							else if (that.planNoProvisionado != '' && !blChargingNORM) {
+								that.accionContingencia = 'A'; //Aplicar continue
+							}
+							else if (that.desalineacionDePlan != '' && !blChargingNORM) {
+								that.accionContingencia = 'A'; //Aplicar continue
+							}
+							else if (blLineaProvisionada && blPlanProvisionado && blChargingNORM) {
+								that.accionContingencia = 'R'; //Retirar continue
+							}
+	
+							//Validar que escenario de continue se debe registrar
+							if (that.lineaNoProvisionada != '' && that.lineaNoProvisionada != undefined) {
+								that.escenarioContingencia = that.lineaNoProvisionada;
+							}
+							else if (that.planNoProvisionado != '' && that.planNoProvisionado != undefined) {
+								that.escenarioContingencia = that.planNoProvisionado;
+							}
+							else if (that.desalineacionDePlan != '' && that.desalineacionDePlan != undefined) {
+								that.escenarioContingencia = that.desalineacionDePlan;
+							}
+	
+							//HARCODEO
+							//that.accionContingencia = 'R';
+							//that.escenarioContingencia = 'Línea no provisionada';
+							//HARCODEO
+							if (ItemGroup.degriIdGrupo == 2) {
+								//Validar que boton de accion de continue mostrar
+								if (that.accionContingencia == 'A') {
+									var btnAplicarContinue = document.createElement("input");
+									btnAplicarContinue.className = 'btn claro-btn-info btn-xs';
+									btnAplicarContinue.id = 'btnAplicarContinue';
+									btnAplicarContinue.type = 'button';
+									btnAplicarContinue.value = 'Aplicar Contingencia';
+									btnAplicarContinue.setAttribute("style", "text-align:center; cursor:pointer;")
+									btnAplicarContinue.onclick = function () { that.f_ProcesarContinue(this) };
+									
+									if (that.escenarioContingencia == that.lineaNoProvisionada) {
+										$('#divTabletBodytrSecondTD7').append(btnAplicarContinue);
+									}
+									else if (that.escenarioContingencia == that.planNoProvisionado || that.escenarioContingencia == that.escenarioContingencia) {
+										$('#divTabletBodytrSecondTD8').append(btnAplicarContinue);
+									}
+								}
+								else if (that.accionContingencia == 'R') {
+									var btnRetirarContinue = document.createElement("input");
+									btnRetirarContinue.className = 'btn claro-btn-info btn-xs';
+									btnRetirarContinue.id = 'btnRetirarContinue';
+									btnRetirarContinue.type = 'button';
+									btnRetirarContinue.value = 'Retirar Contingencia';
+									btnRetirarContinue.setAttribute("style", "text-align:center; cursor:pointer;")
+									btnRetirarContinue.onclick = function () { that.f_ProcesarContinue(this) };
+	
+									$('#divTabletBodytrSecondTD15').append(btnRetirarContinue);
+								}
+							}
+						}
                         //FIN: INICIATIVA-986 - CONTINUE
+
+                        //INI: INICIATIVA-986 - TIPIFICACION REINICIO DE RED - DATOS MOVILES
+                        if (ItemGroup.degriIdGrupo == 11) {
+                            if (that.blTipificacionReinicioRedDatos) {
+                                //Crear botones de Tipificacion de Reinicio de Red y Datos Moviles
+                                var btnTipificacionRed = $(that.CrearControl.btn("btnTipificacionRed", "Reinicio de Red", "btn claro-btn-info btn-xs"));
+                                btnTipificacionRed.attr("style", "text-align:center; cursor:pointer;");
+                                //btnTipificacionRed.addEvent(that, 'click', that.f_RegistrarTipificacionRedDatos);
+
+                                var btnTipificacionDatosMoviles = $(that.CrearControl.btn("btnTipificacionDatosMoviles", "Reinicio Datos Móviles", "btn claro-btn-info btn-xs"));
+                                btnTipificacionDatosMoviles.attr("style", "text-align:center; cursor:pointer;");
+                                //btnTipificacionDatosMoviles.addEvent(that, 'click', that.f_RegistrarTipificacionRedDatos);
+
+                                //Crear border para agrupar botones
+                                var divBorderCuadro = $(that.CrearControl.Div('divBorderCuadro', 'panel panel-default'));
+                                divBorderCuadro.attr("style", "padding: 1%");
+                                divBorderCuadro.append(btnTipificacionRed);
+                                divBorderCuadro.append('&nbsp;&nbsp;&nbsp;');
+                                divBorderCuadro.append(btnTipificacionDatosMoviles);
+
+                                //Crear nuevo TD para agregar el border de los botones
+                                var tdBotonesTipificaciones = $(that.CrearControl.td('tdBotonesTipificaciones', "25%"));
+                                tdBotonesTipificaciones.append('<br>');
+                                tdBotonesTipificaciones.append(divBorderCuadro);
+                                $('#divTabletBodytr11').append(tdBotonesTipificaciones); //Agregar nuevo TD al TR divTabletBodytr11
+                                $('#divTabletBodytrSecondTD57').attr("width", "5%"); //Minimizar tamaño de divTabletBodytrSecondTD57
+                            }
+						}
+                        //FIN: INICIATIVA-986 - TIPIFICACION REINICIO DE RED - DATOS MOVILES
                     }
                 });
             });
