@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetProductTracDeacServ" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetProductTracDeacServ" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetCommertialPlan" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetCommertialPlan" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd3" namespace="Claro" />
-  <xs:complexType name="ProductTracDeacServRequest">
+  <xs:complexType name="CommertialPlanRequest">
     <xs:complexContent mixed="false">
       <xs:extension xmlns:q1="Claro" base="q1:Request">
         <xs:sequence>
-          <xs:element minOccurs="0" name="match" type="xs:boolean" />
-          <xs:element minOccurs="0" name="vod" type="xs:boolean" />
-          <xs:element minOccurs="0" name="vstrCoId" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="vstrIdentificador" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StrCoId" nillable="true" type="xs:string" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="ProductTracDeacServRequest" nillable="true" type="tns:ProductTracDeacServRequest" />
-  <xs:complexType name="ProductTracDeacServResponse">
+  <xs:element name="CommertialPlanRequest" nillable="true" type="tns:CommertialPlanRequest" />
+  <xs:complexType name="CommertialPlanResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" name="IdProductoMayor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="rCodigoPlan" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="rResult" type="xs:boolean" />
+      <xs:element minOccurs="0" name="rintCodigoError" type="xs:int" />
+      <xs:element minOccurs="0" name="rstrDescripcionError" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="ProductTracDeacServResponse" nillable="true" type="tns:ProductTracDeacServResponse" />
+  <xs:element name="CommertialPlanResponse" nillable="true" type="tns:CommertialPlanResponse" />
 </xs:schema>

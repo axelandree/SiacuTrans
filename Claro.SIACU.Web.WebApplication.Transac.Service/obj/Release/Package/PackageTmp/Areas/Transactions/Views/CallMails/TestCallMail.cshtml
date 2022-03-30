@@ -1,0 +1,92 @@
+﻿
+@{
+    ViewBag.Title = "TestCallMail";
+    Layout = "~/Areas/Transactions/Views/Shared/_Layout.cshtml";
+}
+<script type="text/javascript" src="~/Areas/Transactions/Content/Lib/BloqueoF12.js"></script>
+
+        <div id="CallMail-Contenedor" class="container">
+                        
+            <div class="row">
+
+                @*Datos de la transaccion*@
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Datos de Transacción:
+                    </div>
+                    <div class="panel-body">
+                        <form id="tbDatoTransaccion" class="form-horizontal">
+                            <label class="col-sm-2 control-label">Emails:</label>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Remitente:</label>
+                                <div class="col-sm-2">
+                                    <input type="text" id="txtRemitente">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Para</label>
+                                <div class="col-sm-2">
+                                    <input type="text" id="txtPara">
+                                </div>
+                            </div>
+                            <label class="col-sm-2 control-label"></label>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">CC</label>
+                                <div class="col-sm-2">
+                                    <input type="text" id="txtCC">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">BCC</label>
+                                <div class="col-sm-2">
+                                    <input type="text" id="txtBCC">
+                                </div>
+                            </div>
+                            <label class="col-sm-2 control-label"></label>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Asunto</label>
+                                <div class="col-sm-2">
+                                    <input type="text" id="txtAsunto">
+                                </div>
+                            </div>
+                            <label class="col-sm-2 control-label"></label>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Archivo Adjunto:</label>
+                                <div class="col-sm-2">
+                                    <input type="file" id="txtAdjunto">
+                                </div>
+                            </div>
+                            <label class="col-sm-2 control-label"></label>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label"></label>
+                                <div class="col-sm-1">
+                                    <button id="btnbuscar" type="button" style="width:100px;" class="btn claro-btn-info btn-sm">
+                                        <span class="glyphicon glyphicon-search">&nbsp;</span>Buscar
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="col-xs-3">
+                        <span class="label label-primary">X</span>
+                        <span class="badge">1</span>
+                    </div>
+                    <div class="col-xs-3">
+                        <span class="label label-warning">Y</span>
+                        <span class="badge">1</span>
+                    </div>
+                    <div class="col-xs-3">
+                        <span class="label label-info">Z</span>
+                        <span class="badge">1</span>
+                    </div>
+                    <div class="col-xs-3">
+                        <span class="label label-danger">W</span>
+                        <span class="badge">1</span>
+                    </div>
+                </div>
+
+            </div>
+            </div>
+       </div>

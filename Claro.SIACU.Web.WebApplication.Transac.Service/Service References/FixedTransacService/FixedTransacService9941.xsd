@@ -1,27 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetAddressUpdate" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetAddressUpdate" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetCoverage" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetCoverage" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd3" namespace="Claro" />
-  <xs:complexType name="AddressUpdateFixedRequest">
+  <xs:complexType name="CoverageFixedRequest">
     <xs:complexContent mixed="false">
       <xs:extension xmlns:q1="Claro" base="q1:Request">
         <xs:sequence>
-          <xs:element minOccurs="0" name="StrDepartament" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="strCodPostal" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="strCountryLegal" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="strDistrict" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="strDomicile" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="strIdCustomer" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="strProvince" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="strReference" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strCob" nillable="true" type="xs:string" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="AddressUpdateFixedRequest" nillable="true" type="tns:AddressUpdateFixedRequest" />
-  <xs:complexType name="AddressUpdateFixedResponse">
+  <xs:element name="CoverageFixedRequest" nillable="true" type="tns:CoverageFixedRequest" />
+  <xs:complexType name="CoverageFixedResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" name="blnResult" type="xs:boolean" />
+      <xs:element minOccurs="0" name="strCoverage" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="AddressUpdateFixedResponse" nillable="true" type="tns:AddressUpdateFixedResponse" />
+  <xs:element name="CoverageFixedResponse" nillable="true" type="tns:CoverageFixedResponse" />
 </xs:schema>

@@ -1,24 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetInsertETASelection" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetInsertETASelection" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetInsertDetailServiceInteraction" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetInsertDetailServiceInteraction" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd3" namespace="Claro" />
-  <xs:complexType name="InsertETASelectionRequest">
+  <xs:complexType name="InsertDetailServiceInteractionRequest">
     <xs:complexContent mixed="false">
       <xs:extension xmlns:q1="Claro" base="q1:Request">
         <xs:sequence>
-          <xs:element minOccurs="0" name="vfechaCompromiso" type="xs:dateTime" />
-          <xs:element minOccurs="0" name="vfranja" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="vidInteraccion" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="vid_bucket" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="vidconsulta" type="xs:int" />
+          <xs:element minOccurs="0" name="cantidad" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="cf" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="codinterac" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="equipo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="gruposerv" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="nombreserv" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="tiposerv" nillable="true" type="xs:string" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="InsertETASelectionRequest" nillable="true" type="tns:InsertETASelectionRequest" />
-  <xs:complexType name="InsertETASelectionResponse">
+  <xs:element name="InsertDetailServiceInteractionRequest" nillable="true" type="tns:InsertDetailServiceInteractionRequest" />
+  <xs:complexType name="InsertDetailServiceInteractionResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" name="vresp" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="mensaje" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="rResul" type="xs:boolean" />
+      <xs:element minOccurs="0" name="resultado" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="InsertETASelectionResponse" nillable="true" type="tns:InsertETASelectionResponse" />
+  <xs:element name="InsertDetailServiceInteractionResponse" nillable="true" type="tns:InsertDetailServiceInteractionResponse" />
 </xs:schema>

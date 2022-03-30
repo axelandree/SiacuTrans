@@ -1,34 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetListScheduledTransactions" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetListScheduledTransactions" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd3" namespace="Claro" />
-  <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed" />
-  <xs:complexType name="ListScheduledTransactionsRequest">
-    <xs:complexContent mixed="false">
-      <xs:extension xmlns:q1="Claro" base="q1:Request">
-        <xs:sequence>
-          <xs:element minOccurs="0" name="Account" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="Advisor" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="ApplicationCode" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="ApplicationName" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="CodeInteraction" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="IdTransaction" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="NameCACDAC" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="ServiCoId" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="ServiceState" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="StrEndDate" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="StrStartDate" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="TransactionType" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="UserApp" nillable="true" type="xs:string" />
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="ListScheduledTransactionsRequest" nillable="true" type="tns:ListScheduledTransactionsRequest" />
-  <xs:complexType name="ListScheduledTransactionsResponse">
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.Discard.BannerDesc" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.Discard.BannerDesc" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="BannerDescartesConsultaReq">
     <xs:sequence>
-      <xs:element minOccurs="0" name="CorrectProcess" type="xs:boolean" />
-      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed" minOccurs="0" name="LstTransactions" nillable="true" type="q2:ArrayOfScheduledTransaction" />
+      <xs:element minOccurs="0" name="bannerDescartesRequest" nillable="true" type="tns:BannerDescartesRequest" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="ListScheduledTransactionsResponse" nillable="true" type="tns:ListScheduledTransactionsResponse" />
+  <xs:element name="BannerDescartesConsultaReq" nillable="true" type="tns:BannerDescartesConsultaReq" />
+  <xs:complexType name="BannerDescartesRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="accion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fecha" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="grupo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BannerDescartesRequest" nillable="true" type="tns:BannerDescartesRequest" />
+  <xs:complexType name="BannerDescartesConsultaResp">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bannerDescartesResponse" nillable="true" type="tns:BannerDescartesResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BannerDescartesConsultaResp" nillable="true" type="tns:BannerDescartesConsultaResp" />
+  <xs:complexType name="BannerDescartesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="responseAudit" nillable="true" type="tns:ResponseAudi" />
+      <xs:element minOccurs="0" name="responseData" nillable="true" type="tns:ResponseDataConsult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BannerDescartesResponse" nillable="true" type="tns:BannerDescartesResponse" />
+  <xs:complexType name="ResponseAudi">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigoRespuesta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="idTransaccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="mensajeRespuesta" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseAudi" nillable="true" type="tns:ResponseAudi" />
+  <xs:complexType name="ResponseDataConsult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseDataConsult" nillable="true" type="tns:ResponseDataConsult" />
 </xs:schema>

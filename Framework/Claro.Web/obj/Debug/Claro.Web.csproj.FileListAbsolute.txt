@@ -1,0 +1,11 @@
+D:\Fuentes\28032022\SiacuTrans\Framework\Claro.Web\bin\Debug\Claro.Web.dll
+D:\Fuentes\28032022\SiacuTrans\Framework\Claro.Web\bin\Debug\Claro.Web.pdb
+D:\Fuentes\28032022\SiacuTrans\Framework\Claro.Web\bin\Debug\log4net.dll
+D:\Fuentes\28032022\SiacuTrans\Framework\Claro.Web\obj\Debug\Claro.Web.dll
+D:\Fuentes\28032022\SiacuTrans\Framework\Claro.Web\obj\Debug\Claro.Web.pdb
+D:\SiacuTrans\Framework\Claro.Web\bin\Debug\Claro.Web.dll
+D:\SiacuTrans\Framework\Claro.Web\bin\Debug\Claro.Web.pdb
+D:\SiacuTrans\Framework\Claro.Web\bin\Debug\log4net.dll
+D:\SiacuTrans\Framework\Claro.Web\obj\Debug\Claro.Web.csprojResolveAssemblyReference.cache
+D:\SiacuTrans\Framework\Claro.Web\obj\Debug\Claro.Web.dll
+D:\SiacuTrans\Framework\Claro.Web\obj\Debug\Claro.Web.pdb

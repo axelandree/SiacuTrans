@@ -1,22 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetHubs" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetHubs" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetTechnicalVisitResult" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetTechnicalVisitResult" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd3" namespace="Claro" />
-  <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd45" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common" />
-  <xs:complexType name="GetHubsRequest">
+  <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed" />
+  <xs:complexType name="TechnicalVisitResultRequest">
     <xs:complexContent mixed="false">
       <xs:extension xmlns:q1="Claro" base="q1:Request">
         <xs:sequence>
-          <xs:element minOccurs="0" name="strContrato" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strCoId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strCodPlanSisact" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="strCustomerId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strTmCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strTrama" nillable="true" type="xs:string" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="GetHubsRequest" nillable="true" type="tns:GetHubsRequest" />
-  <xs:complexType name="GetHubsResponse">
+  <xs:element name="TechnicalVisitResultRequest" nillable="true" type="tns:TechnicalVisitResultRequest" />
+  <xs:complexType name="TechnicalVisitResultResponse">
     <xs:sequence>
-      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common" minOccurs="0" name="listHub" nillable="true" type="q2:ArrayOfBEHub" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed" minOccurs="0" name="Result" nillable="true" type="q2:TechnicalVisit" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="GetHubsResponse" nillable="true" type="tns:GetHubsResponse" />
+  <xs:element name="TechnicalVisitResultResponse" nillable="true" type="tns:TechnicalVisitResultResponse" />
 </xs:schema>

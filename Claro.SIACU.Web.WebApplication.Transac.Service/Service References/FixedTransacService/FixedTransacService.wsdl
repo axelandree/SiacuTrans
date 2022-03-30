@@ -74,87 +74,88 @@
       <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd69" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetNetflixServices" />
       <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd70" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.ProxyService.Transac.Service.InstantLinkSOA" />
       <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd71" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.Discard.ProcesarContinue" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd72" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetListScheduledTransactions" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd73" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetCommercialServices" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd74" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetCommertialPlan" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd75" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetProductTracDeacServ" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd76" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetInsertInteractHFC" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd77" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetInfoInteractionTemplate" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd78" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetCustomer" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd79" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetInsertInteractionMixed" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd80" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetCustomerPhone" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd81" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetCallDetailDB1" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd82" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetBpelCallDetail" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd83" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetCallDetail" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd84" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetFacturePDI" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd85" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetFactureDBTO" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd86" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetServicesByPlan" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd87" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetCarrierList" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd88" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetServicesByInteraction" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd89" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetTransactionRuleList" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd90" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetOrderType" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd91" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetGroupCapacity" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd92" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetTimeZones" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd93" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.ExecutePlanMigrationLte" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd94" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetCurrentPlan" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd95" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetServicesByCurrentPlan" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd96" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.SendNewPlanServices" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd97" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetEquipmentByCurrentPlan" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd98" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetTechnicalVisitResult" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd99" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetHubs" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd100" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetExecutePlanMigrationLTE" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd101" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetGenericSot" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd102" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetUpdateInter29" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd103" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetValidateCustomerID" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd104" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetRegisterEtaSelection" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd105" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetService" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd106" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetRecordTransExtInt" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd107" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetPhoneNumber" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd108" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetETAAuditoriaRequestCapacity" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd109" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetRegisterEta" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd110" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetDetailTransExtra" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd111" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetProductDetail" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd112" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetAddtionalEquipment" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd113" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetProcessingServices" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd114" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetDecoDetailByIdService" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd115" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetInsertDecoAdditional" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd116" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetInsertDetailServiceInteraction" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd117" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetInsertETASelection" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd118" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetInsertTransaction" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd119" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetInsertInteractionBusiness" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd120" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetGenerateOCC" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd121" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetDecoServices" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd122" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetListTownCenter" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd123" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetIdUbigeo" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd124" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetListPlans" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd125" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetListEbuildings" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd126" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetCoverage" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd127" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetAddressUpdate" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd128" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetJobTypeConfigIP" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd129" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetTypeConfip" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd130" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetBranchCustomer" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd131" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetConfigurationIP" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd132" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInsertInteractHFC" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd133" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetMotiveSoft" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd134" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetActivationDesactivation" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd135" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetConsultationServiceByContract" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd136" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetCallDetailInputFixed" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd137" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd138" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetMotiveSOTByTypeJob" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd139" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetValidateActDesService" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd140" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetServiceDTH" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd141" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetPlanCommercial" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd142" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetComServiceActivation" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd143" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.DeleteProgramTask" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd144" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.DeleteProgramTaskHfc" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd145" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetSaveOCC" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd146" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetInsertLoyalty" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd147" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.PostExecuteSuspension" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd148" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetReconeService" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd149" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.PostUpdateProgTaskLte" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd150" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.PostSuspensionLte" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd151" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service" />
-      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd152" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.PostReconexionLte" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd72" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.Discard.BannerDesc" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd73" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetListScheduledTransactions" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd74" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetCommercialServices" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd75" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetCommertialPlan" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd76" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetProductTracDeacServ" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd77" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetInsertInteractHFC" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd78" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetInfoInteractionTemplate" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd79" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetCustomer" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd80" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetInsertInteractionMixed" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd81" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetCustomerPhone" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd82" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetCallDetailDB1" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd83" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetBpelCallDetail" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd84" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetCallDetail" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd85" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetFacturePDI" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd86" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetFactureDBTO" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd87" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetServicesByPlan" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd88" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetCarrierList" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd89" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetServicesByInteraction" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd90" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetTransactionRuleList" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd91" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetOrderType" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd92" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetGroupCapacity" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd93" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetTimeZones" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd94" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.ExecutePlanMigrationLte" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd95" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetCurrentPlan" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd96" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetServicesByCurrentPlan" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd97" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.SendNewPlanServices" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd98" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetEquipmentByCurrentPlan" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd99" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetTechnicalVisitResult" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd100" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetHubs" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd101" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetExecutePlanMigrationLTE" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd102" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetGenericSot" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd103" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetUpdateInter29" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd104" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetValidateCustomerID" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd105" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetRegisterEtaSelection" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd106" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetService" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd107" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetRecordTransExtInt" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd108" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetPhoneNumber" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd109" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetETAAuditoriaRequestCapacity" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd110" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetRegisterEta" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd111" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetDetailTransExtra" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd112" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetProductDetail" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd113" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetAddtionalEquipment" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd114" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetProcessingServices" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd115" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetDecoDetailByIdService" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd116" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetInsertDecoAdditional" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd117" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetInsertDetailServiceInteraction" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd118" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetInsertETASelection" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd119" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetInsertTransaction" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd120" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetInsertInteractionBusiness" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd121" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetGenerateOCC" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd122" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetDecoServices" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd123" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetListTownCenter" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd124" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetIdUbigeo" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd125" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetListPlans" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd126" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetListEbuildings" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd127" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetCoverage" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd128" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetAddressUpdate" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd129" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetJobTypeConfigIP" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd130" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetTypeConfip" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd131" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetBranchCustomer" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd132" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetConfigurationIP" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd133" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetInsertInteractHFC" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd134" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetMotiveSoft" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd135" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetActivationDesactivation" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd136" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetConsultationServiceByContract" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd137" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetCallDetailInputFixed" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd138" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Postpaid" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd139" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetMotiveSOTByTypeJob" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd140" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetValidateActDesService" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd141" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetServiceDTH" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd142" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetPlanCommercial" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd143" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetComServiceActivation" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd144" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.DeleteProgramTask" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd145" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.DeleteProgramTaskHfc" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd146" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetSaveOCC" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd147" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetInsertLoyalty" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd148" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.PostExecuteSuspension" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd149" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetReconeService" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd150" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.PostUpdateProgTaskLte" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd151" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.PostSuspensionLte" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd152" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service" />
+      <xsd:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd153" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.PostReconexionLte" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IFixedTransacService_LTERegisterTransaction_InputMessage">
@@ -636,6 +637,12 @@
   </wsdl:message>
   <wsdl:message name="IFixedTransacService_RegistrarActualizarContingencia_OutputMessage">
     <wsdl:part name="parameters" element="tns:RegistrarActualizarContingenciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFixedTransacService_BannerDescartesAcBus_InputMessage">
+    <wsdl:part name="parameters" element="tns:BannerDescartesAcBus" />
+  </wsdl:message>
+  <wsdl:message name="IFixedTransacService_BannerDescartesAcBus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BannerDescartesAcBusResponse" />
   </wsdl:message>
   <wsdl:message name="IFixedTransacService_GetListScheduledTransactions_InputMessage">
     <wsdl:part name="parameters" element="tns:GetListScheduledTransactions" />
@@ -1725,6 +1732,10 @@
     <wsdl:operation name="RegistrarActualizarContingencia">
       <wsdl:input wsaw:Action="http://tempuri.org/IFixedTransacService/RegistrarActualizarContingencia" message="tns:IFixedTransacService_RegistrarActualizarContingencia_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IFixedTransacService/RegistrarActualizarContingenciaResponse" message="tns:IFixedTransacService_RegistrarActualizarContingencia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BannerDescartesAcBus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFixedTransacService/BannerDescartesAcBus" message="tns:IFixedTransacService_BannerDescartesAcBus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFixedTransacService/BannerDescartesAcBusResponse" message="tns:IFixedTransacService_BannerDescartesAcBus_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetListScheduledTransactions">
       <wsdl:input wsaw:Action="http://tempuri.org/IFixedTransacService/GetListScheduledTransactions" message="tns:IFixedTransacService_GetListScheduledTransactions_InputMessage" />
@@ -2954,6 +2965,15 @@
     </wsdl:operation>
     <wsdl:operation name="RegistrarActualizarContingencia">
       <soap:operation soapAction="http://tempuri.org/IFixedTransacService/RegistrarActualizarContingencia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BannerDescartesAcBus">
+      <soap:operation soapAction="http://tempuri.org/IFixedTransacService/BannerDescartesAcBus" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

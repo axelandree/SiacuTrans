@@ -1,0 +1,11 @@
+D:\Fuentes\28032022\SiacuTrans\Framework\Claro.Helpers\bin\Debug\Claro.Helpers.dll
+D:\Fuentes\28032022\SiacuTrans\Framework\Claro.Helpers\bin\Debug\Claro.Helpers.pdb
+D:\Fuentes\28032022\SiacuTrans\Framework\Claro.Helpers\bin\Debug\EPPlus.dll
+D:\Fuentes\28032022\SiacuTrans\Framework\Claro.Helpers\obj\Debug\Claro.Helpers.dll
+D:\Fuentes\28032022\SiacuTrans\Framework\Claro.Helpers\obj\Debug\Claro.Helpers.pdb
+D:\SiacuTrans\Framework\Claro.Helpers\bin\Debug\Claro.Helpers.dll
+D:\SiacuTrans\Framework\Claro.Helpers\bin\Debug\Claro.Helpers.pdb
+D:\SiacuTrans\Framework\Claro.Helpers\bin\Debug\EPPlus.dll
+D:\SiacuTrans\Framework\Claro.Helpers\obj\Debug\Claro.Helpers.csprojResolveAssemblyReference.cache
+D:\SiacuTrans\Framework\Claro.Helpers\obj\Debug\Claro.Helpers.dll
+D:\SiacuTrans\Framework\Claro.Helpers\obj\Debug\Claro.Helpers.pdb

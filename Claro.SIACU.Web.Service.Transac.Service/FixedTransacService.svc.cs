@@ -14,6 +14,7 @@ using POSTPREDATA = Claro.SIACU.ProxyService.Transac.Service.SIAC.Post.DatosPreP
 using Claro.SIACU.Entity.Transac.Service.Fixed.Discard; //INICIATIVA-871
 using Claro.SIACU.Entity.Transac.Service.Fixed.GetNetflixServices;
 using Claro.SIACU.Entity.Transac.Service.Fixed.Discard.ProcesarContinue;
+using Claro.SIACU.Entity.Transac.Service.Fixed.Discard.BannerDesc;
 
 namespace Claro.SIACU.Web.Service.Transac.Service
 {
@@ -4515,6 +4516,22 @@ public EntitiesFixed.PostExecuteDecosLte.DecosLteResponse PostExecuteDecosLte(En
             }
             return objResponse;
         }
+
+        public BannerDescartesConsultaResp BannerDescartesAcBus(BannerDescartesConsultaReq objRequest, Tools.Entity.AuditRequest objAuditRequest)
+        {
+            BannerDescartesConsultaResp objResponse = new BannerDescartesConsultaResp();
+            try
+            {
+                objResponse = Claro.Web.Logging.ExecuteMethod(() => { return Business.Transac.Service.Fixed.Fixed.BannerDescartesAcBus(objRequest, objAuditRequest); });
+            }
+            catch(Exception ex)
+            {
+                Claro.Web.Logging.Error(objAuditRequest.Session, objAuditRequest.Transaction, FUNCTIONS.Functions.GetExceptionMessage(ex));
+                throw;
+            }
+            return objResponse;
+        }
+
         //FIN: INICIATIVA-986
     }
 }

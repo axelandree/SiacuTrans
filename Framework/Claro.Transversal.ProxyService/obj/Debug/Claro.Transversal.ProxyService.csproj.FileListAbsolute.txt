@@ -1,0 +1,11 @@
+D:\Fuentes\28032022\SiacuTrans\Framework\Claro.Transversal.ProxyService\bin\Debug\Claro.Transversal.ProxyService.dll.config
+D:\Fuentes\28032022\SiacuTrans\Framework\Claro.Transversal.ProxyService\bin\Debug\Claro.Transversal.ProxyService.dll
+D:\Fuentes\28032022\SiacuTrans\Framework\Claro.Transversal.ProxyService\bin\Debug\Claro.Transversal.ProxyService.pdb
+D:\Fuentes\28032022\SiacuTrans\Framework\Claro.Transversal.ProxyService\obj\Debug\Claro.Transversal.ProxyService.dll
+D:\Fuentes\28032022\SiacuTrans\Framework\Claro.Transversal.ProxyService\obj\Debug\Claro.Transversal.ProxyService.pdb
+D:\SiacuTrans\Framework\Claro.Transversal.ProxyService\bin\Debug\Claro.Transversal.ProxyService.dll.config
+D:\SiacuTrans\Framework\Claro.Transversal.ProxyService\bin\Debug\Claro.Transversal.ProxyService.dll
+D:\SiacuTrans\Framework\Claro.Transversal.ProxyService\bin\Debug\Claro.Transversal.ProxyService.pdb
+D:\SiacuTrans\Framework\Claro.Transversal.ProxyService\obj\Debug\Claro.Transversal.ProxyService.csprojResolveAssemblyReference.cache
+D:\SiacuTrans\Framework\Claro.Transversal.ProxyService\obj\Debug\Claro.Transversal.ProxyService.dll
+D:\SiacuTrans\Framework\Claro.Transversal.ProxyService\obj\Debug\Claro.Transversal.ProxyService.pdb

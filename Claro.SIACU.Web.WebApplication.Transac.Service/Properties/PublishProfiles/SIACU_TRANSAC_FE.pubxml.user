@@ -5,1076 +5,1076 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
 -->
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <_PublishTargetUrl>C:\PUBLICADO\EntregaRTC_ST_100322</_PublishTargetUrl>
+    <_PublishTargetUrl>D:\Pufron</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="Areas/Transactions/Content/bootstrap.css">
-      <publishTime>03/10/2022 10:31:24</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/bootstrap.min.css">
-      <publishTime>03/10/2022 10:31:24</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/css/bootstrap-theme.css">
-      <publishTime>03/10/2022 10:31:36</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/css/bootstrap-theme.css.map">
-      <publishTime>03/10/2022 10:31:36</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/css/bootstrap-theme.min.css">
-      <publishTime>03/10/2022 10:31:36</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/css/bootstrap-theme.min.css.map">
-      <publishTime>03/10/2022 10:31:36</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/css/bootstrap.css">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/css/bootstrap.css.map">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/css/bootstrap.min.css">
-      <publishTime>03/10/2022 10:31:36</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/css/bootstrap.min.css.map">
-      <publishTime>03/10/2022 10:31:36</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/css/bootstrap4.css">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/css/dataTables.bootstrap.min.css">
-      <publishTime>03/10/2022 10:31:36</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/css/datepicker.css">
-      <publishTime>03/10/2022 10:31:36</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/css/font-awesome.css">
-      <publishTime>03/10/2022 10:31:36</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/css/font-awesome.min.css">
-      <publishTime>03/10/2022 10:31:36</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/css/Footer.css">
-      <publishTime>03/10/2022 10:31:36</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/css/Header.css">
-      <publishTime>03/10/2022 10:31:36</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/css/isotope.css">
-      <publishTime>03/10/2022 10:31:36</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/css/jquery-ui.css">
-      <publishTime>03/10/2022 10:31:36</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/css/jquery.bar.css">
-      <publishTime>03/10/2022 10:31:36</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/css/jquery.dataTables.min.css">
-      <publishTime>03/10/2022 10:31:36</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/css/jquery.dataTables.select.css">
-      <publishTime>03/10/2022 10:31:36</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/css/jquery.smartmenus.bootstrap.css">
-      <publishTime>03/10/2022 10:31:36</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/css/magic-check.css">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/css/MyContainer.css">
-      <publishTime>03/10/2022 10:31:36</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/css/Site.css">
-      <publishTime>03/10/2022 10:31:36</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/css/stilo1.css">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/css/TreeView.css">
-      <publishTime>03/10/2022 10:31:36</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/Lib/BloqueoF12.js">
-      <publishTime>03/10/2022 10:31:35</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/Lib/bootstrap-datepicker.js">
-      <publishTime>03/10/2022 10:31:35</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/Lib/bootstrap.js">
-      <publishTime>03/10/2022 10:31:36</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/Lib/bootstrap.min.js">
-      <publishTime>03/10/2022 10:31:36</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/Lib/dataTables.bootstrap.min.js">
-      <publishTime>03/10/2022 10:31:36</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/Lib/hoverIntent-touch.js">
-      <publishTime>03/10/2022 10:31:36</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/Lib/jquery-1.8.3.min.js">
-      <publishTime>03/10/2022 10:31:36</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/Lib/jquery-1.9.1.min.js">
-      <publishTime>03/10/2022 10:31:35</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/Lib/jquery-2.0.0.js">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/Lib/jquery-2.0.0.min.js">
-      <publishTime>03/10/2022 10:31:36</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/Lib/jquery-2.0.0.min.map">
-      <publishTime>03/10/2022 10:31:36</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/Lib/jquery-ui.js">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/Lib/jquery.bar.js">
-      <publishTime>03/10/2022 10:31:36</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/Lib/jquery.blockUI.js">
-      <publishTime>03/10/2022 10:31:36</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/Lib/jquery.dataTables.min.js">
-      <publishTime>03/10/2022 10:31:35</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/Lib/jquery.dataTables.select.js">
-      <publishTime>03/10/2022 10:31:36</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/Lib/jquery.numeric.js">
-      <publishTime>03/10/2022 10:31:36</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/Lib/jquery.scrollbar.js">
-      <publishTime>03/10/2022 10:31:35</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/Lib/jquery.scrollbar.min.js">
-      <publishTime>03/10/2022 10:31:35</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/Lib/jquery.smartmenus.bootstrap.js">
-      <publishTime>03/10/2022 10:31:36</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/Lib/jquery.smartmenus.bootstrap.min.js">
-      <publishTime>03/10/2022 10:31:36</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/Lib/jquery.smartmenus.js">
-      <publishTime>03/10/2022 10:31:35</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/Lib/jquery.smartmenus.min.js">
-      <publishTime>03/10/2022 10:31:35</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/Lib/jquery.sticky.js">
-      <publishTime>03/10/2022 10:31:36</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/Lib/jquery.validate.js">
-      <publishTime>03/10/2022 10:31:36</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/Lib/jquery.validate.min.js">
-      <publishTime>03/10/2022 10:31:36</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/Lib/jquery.validate.unobtrusive.js">
-      <publishTime>03/10/2022 10:31:35</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/Lib/jquery.validate.unobtrusive.min.js">
-      <publishTime>03/10/2022 10:31:36</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/Lib/moment-es.js">
-      <publishTime>03/10/2022 10:31:36</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/Lib/moment.js">
-      <publishTime>03/10/2022 10:31:36</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/Lib/respond.js">
-      <publishTime>03/10/2022 10:31:36</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/Lib/respond.matchmedia.addListener.js">
-      <publishTime>03/10/2022 10:31:36</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/Lib/respond.matchmedia.addListener.min.js">
-      <publishTime>03/10/2022 10:31:36</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/Lib/respond.min.js">
-      <publishTime>03/10/2022 10:31:36</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/Scripts/ClaroAppCommon.js">
-      <publishTime>03/10/2022 10:31:35</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/Scripts/ClaroCommon.js">
-      <publishTime>03/10/2022 10:31:35</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/Scripts/ClaroLayout.js">
-      <publishTime>03/10/2022 10:31:35</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/Scripts/ClaroModalLoad.js">
-      <publishTime>03/10/2022 10:31:35</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/Scripts/ClaroModalTemplate.js">
-      <publishTime>03/10/2022 10:31:35</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/Scripts/ClaroOptionsDefault.js">
-      <publishTime>03/10/2022 10:31:35</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/Scripts/ClaroRedirect.js">
-      <publishTime>03/10/2022 10:31:35</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/Scripts/ClaroSession.js">
-      <publishTime>03/10/2022 10:31:35</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/Scripts/ClaroValidate.js">
-      <publishTime>03/10/2022 10:31:35</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/Scripts/ContactoGrilla.js">
-      <publishTime>03/10/2022 10:31:35</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/Scripts/plupload.full.min.js">
-      <publishTime>03/10/2022 10:31:35</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Content/Site.css">
-      <publishTime>03/10/2022 10:31:23</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/ContentTransac/css/MigrationPlan.css">
-      <publishTime>03/10/2022 10:31:31</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/ContentTransac/css/Site-Transaction.css">
-      <publishTime>03/10/2022 10:31:31</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/ContentTransac/css/ToolTipToggle.css">
-      <publishTime>03/10/2022 10:31:31</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/ContentTransac/lib/steps.js">
-      <publishTime>03/10/2022 10:31:31</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Images/loading.gif">
-      <publishTime>03/10/2022 10:31:23</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/AdditionalPoints/HFCAdditionalPoints.js">
-      <publishTime>03/10/2022 10:31:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/AdditionalPoints/HFCAdditionalPointsConstPrint.js">
-      <publishTime>03/10/2022 10:31:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/AdditionalPoints/LTEAdditionalPoints.js">
-      <publishTime>03/10/2022 10:31:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/AdditionalPoints/LTEAdditionalPointsConstPrint.js">
-      <publishTime>03/10/2022 10:31:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/AdditionalServices/HFCAdditionalServices.js">
-      <publishTime>03/10/2022 10:31:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/AdditionalServices/LTEAdditionalServices.js">
-      <publishTime>03/10/2022 10:31:34</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/AdditionalServices/PostpaidAdditionalServices.js">
-      <publishTime>03/10/2022 10:31:34</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/AdditionalServicesConstModCP/AdditionalServicesConstModCP.js">
-      <publishTime>03/10/2022 10:31:35</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/AdditionalServicesDetailCommercial/AdditionalServicesDetailCommercial.js">
-      <publishTime>03/10/2022 10:31:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/AuthUser/AuthUser.js">
-      <publishTime>03/10/2022 10:31:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/BilledOutCallDetail/PostpaidBilledOutCallDetail.js">
-      <publishTime>03/10/2022 10:31:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/BilledOutCallDetail/PostpaidBilledOutCallDetailConstancy.js">
-      <publishTime>03/10/2022 10:31:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/BilledOutCallDetail/PrepaidBilledOutCallDetail.js">
-      <publishTime>03/10/2022 10:31:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/CallDetails/HFCBilledCallsDetail.js">
-      <publishTime>03/10/2022 10:31:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/CallDetails/HFCBilledCallsDetailConstancy.js">
-      <publishTime>03/10/2022 10:31:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/CallDetails/HFCBilledCallsDetailPrint.js">
-      <publishTime>03/10/2022 10:31:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/CallDetails/HFCUnbilledCallDetail.js">
-      <publishTime>03/10/2022 10:31:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/CallDetails/LTEBilledCallsDetail.js">
-      <publishTime>03/10/2022 10:31:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/CallMails/CallMails.js">
-      <publishTime>03/10/2022 10:31:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/ChangeData/ChangeData.js">
-      <publishTime>03/10/2022 10:31:35</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/ChangeData/HFCChangeData.js">
-      <publishTime>03/10/2022 10:31:34</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/ChangeEquipment/DTHChangeEquipment.js">
-      <publishTime>03/10/2022 10:31:34</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/ChangeEquipment/DTHChangeEquipmentAssociate.js">
-      <publishTime>03/10/2022 10:31:34</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/ChangeEquipment/HFCChangeEquipment.js">
-      <publishTime>03/10/2022 10:31:34</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/ChangeEquipment/LTEChangeEquipment.js">
-      <publishTime>03/10/2022 10:31:34</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/ChangeEquipment/LTEChangeEquipmentAssociate.js">
-      <publishTime>03/10/2022 10:31:34</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/ChangePhoneNumber/HFCChangePhoneNumber.js">
-      <publishTime>03/10/2022 10:31:34</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/ChangePhoneNumber/LTEChangePhoneNumber.js">
-      <publishTime>03/10/2022 10:31:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/ChangePhoneNumber/PostpaidChangePhoneNumber.js">
-      <publishTime>03/10/2022 10:31:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/ChangeTypeCustomer/PostpaidChangeTypeCustomer.js">
-      <publishTime>03/10/2022 10:31:34</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/CheckDevices/HfcCheckDevices.js">
-      <publishTime>03/10/2022 10:31:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/CheckDevices/LteCheckDevices.js">
-      <publishTime>03/10/2022 10:31:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/CheckDevices/PostpaidCheckDevices.js">
-      <publishTime>03/10/2022 10:31:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/ClaroVideo/ClaroVideoLib.js">
-      <publishTime>03/10/2022 10:31:34</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/ClaroVideo/HistoryActivateService.js">
-      <publishTime>03/10/2022 10:31:34</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/ClaroVideo/HistoryRentalUser.js">
-      <publishTime>03/10/2022 10:31:34</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/ClaroVideo/HistoryVisualizationClient.js">
-      <publishTime>03/10/2022 10:31:34</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/ClaroVideo/SuscripcionClaroVideo.js">
-      <publishTime>03/10/2022 10:31:35</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/ClaroVideo/ViewHistoryDevice.js">
-      <publishTime>03/10/2022 10:31:34</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/ClaroVideo/ViewServiceAdditional.js">
-      <publishTime>03/10/2022 10:31:34</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/Common/Biometria.js">
-      <publishTime>03/10/2022 10:31:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/Common/DeclaracionJuradaNoBiometria.js">
-      <publishTime>03/10/2022 10:31:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/Common/NoBiometria.js">
-      <publishTime>03/10/2022 10:31:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/Common/OptionApplicant.js">
-      <publishTime>03/10/2022 10:31:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/Common/TypeApplicant.js">
-      <publishTime>03/10/2022 10:31:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/Common/ValidationBiometria.js">
-      <publishTime>03/10/2022 10:31:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/Common/ValidationBiometriaPrepaid.js">
-      <publishTime>03/10/2022 10:31:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/Common/ValidationNoBiometria.js">
-      <publishTime>03/10/2022 10:31:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/Common/ValidationNoBiometriaPrepaId.js">
-      <publishTime>03/10/2022 10:31:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/ConfigurationIP/HFCConfigurationIP.js">
-      <publishTime>03/10/2022 10:31:35</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/ConfigurationIP/HFCConfigurationIPConstPrint.js">
-      <publishTime>03/10/2022 10:31:35</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/Discard/DiscardLib.js">
-      <publishTime>03/10/2022 10:31:34</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/Discard/DiscardListPost.js">
-      <publishTime>03/10/2022 10:50:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/Discard/DiscardListPre.js">
-      <publishTime>03/10/2022 10:31:34</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/ExternalInternalTransfer/HFCExternalInternalTransfer.js">
-      <publishTime>03/10/2022 10:31:35</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/ExternalInternalTransfer/LTEExternalInternalTransfer.js">
-      <publishTime>03/10/2022 10:31:35</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/FidelizacionServices/HFCFidelizacionServices.js">
-      <publishTime>03/10/2022 10:31:35</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/FidelizacionServices/LTEFidelizacionServices.js">
-      <publishTime>03/10/2022 10:31:35</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/IncomingCallDetail/HfcIncomingCallDetail.js">
-      <publishTime>03/10/2022 10:31:34</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/IncomingCallDetail/HfcIncomingCallDetailPrint.js">
-      <publishTime>03/10/2022 10:31:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/IncomingCallDetail/PostpaidIncomingCallDetail.js">
-      <publishTime>03/10/2022 10:31:34</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/IncomingCallDetail/PrepaidIncomingCallDetail.js">
-      <publishTime>03/10/2022 10:31:34</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/LeftPanelCustomer/LeftPanelCustomer.js">
-      <publishTime>03/10/2022 10:31:34</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/NetflixServices/HfcNetflixServices.js">
-      <publishTime>03/10/2022 10:31:35</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/NetflixServices/PostpaidNetflixServices.js">
-      <publishTime>03/10/2022 10:31:35</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/PackagePurchaseServices/LTEPackagePurchaseServices.js">
-      <publishTime>03/10/2022 10:31:34</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/PlanMigration/HFCCoreCable.js">
-      <publishTime>03/10/2022 10:31:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/PlanMigration/HFCCoreInternet.js">
-      <publishTime>03/10/2022 10:31:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/PlanMigration/HFCCorePhone.js">
-      <publishTime>03/10/2022 10:31:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/PlanMigration/HFCPlanMigration.js">
-      <publishTime>03/10/2022 10:31:34</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/PlanMigration/HFCRentalEquipment.js">
-      <publishTime>03/10/2022 10:31:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/PlanMigration/HFCSelectCoreServicesByPlan.js">
-      <publishTime>03/10/2022 10:31:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/PlanMigration/HFCSelectPlan.js">
-      <publishTime>03/10/2022 10:31:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/PlanMigration/HFCSelectServicesByPlan.js">
-      <publishTime>03/10/2022 10:31:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/PlanMigration/LTEChooseCoreServicesByPlan.js">
-      <publishTime>03/10/2022 10:31:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/PlanMigration/LTEChooseEquipmentByPlan.js">
-      <publishTime>03/10/2022 10:31:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/PlanMigration/LTEChoosePlan.js">
-      <publishTime>03/10/2022 10:31:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/PlanMigration/LTEChooseServicesByPlan.js">
-      <publishTime>03/10/2022 10:31:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/PlanMigration/LTECoreCable.js">
-      <publishTime>03/10/2022 10:31:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/PlanMigration/LTECoreInternet.js">
-      <publishTime>03/10/2022 10:31:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/PlanMigration/LTECorePhone.js">
-      <publishTime>03/10/2022 10:31:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/PlanMigration/LTEPlanMigration.js">
-      <publishTime>03/10/2022 10:31:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/PlanMigration/LTEPlansTable.js">
-      <publishTime>03/10/2022 10:31:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/PlanMigration/LTERentalEquipment.js">
-      <publishTime>03/10/2022 10:31:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/PlanMigration/LTESelectCoreServicesByPlan.js">
-      <publishTime>03/10/2022 10:31:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/PlanMigration/LTESelectPlan.js">
-      <publishTime>03/10/2022 10:31:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/PlanMigration/LTESelectServicesByPlan.js">
-      <publishTime>03/10/2022 10:31:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/PlanMigration/PrepaidTFIPlanMigration.js">
-      <publishTime>03/10/2022 10:31:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/PostpaidPlanMigration/PostpaidPlanMigration.js">
-      <publishTime>03/10/2022 10:31:35</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/PostpaidPlanMigration/PostpaidPlansMigrations.js">
-      <publishTime>03/10/2022 10:31:35</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/ProgramTask/HfcProgramTask.js">
-      <publishTime>03/10/2022 10:31:34</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/ProgramTask/LteProgramTask.js">
-      <publishTime>03/10/2022 10:31:35</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/ReadRecordPdf/ReadRecord.js">
-      <publishTime>03/10/2022 10:31:35</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/ReceptionEquipment/ReceptionEquipment.js">
-      <publishTime>03/10/2022 10:31:35</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/RecordEquipmentForeign/RecordEquipmentForeign.js">
-      <publishTime>03/10/2022 10:31:35</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/Redirect/AppRedirect.js">
-      <publishTime>03/10/2022 10:31:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/Redirect/Redirect.js">
-      <publishTime>03/10/2022 10:31:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/ReplaceEquipment/FixedReplaceEquipment.js">
-      <publishTime>03/10/2022 10:31:34</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/ReplaceEquipment/FixedReplaceEquipmentAssociate.js">
-      <publishTime>03/10/2022 10:31:34</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/RestricSellInfoPromotion/RestricSellInfoPromotion.js">
-      <publishTime>03/10/2022 10:31:35</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/RestricSellInfoPromotion/RestricSellInfoPromotionLib.js">
-      <publishTime>03/10/2022 10:31:34</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/RestricSellInfoPromotion/UploadInfoProm.js">
-      <publishTime>03/10/2022 10:31:34</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/RetentionCancelServices/HFCRetentionCancelServices.js">
-      <publishTime>03/10/2022 10:31:35</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/RetentionCancelServices/LTERetentionCancelServices.js">
-      <publishTime>03/10/2022 10:31:35</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/RetentionCancelServices/PostpaidRetentionCancelServices.js">
-      <publishTime>03/10/2022 10:31:34</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/RetentionCancelServices/SIACPOSession.js">
-      <publishTime>03/10/2022 10:31:34</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/SearchIMEI/SearchIMEI.js">
-      <publishTime>03/10/2022 10:31:34</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/SearchQuestionsAnswer/SearchQuestionsAnswer.js">
-      <publishTime>03/10/2022 10:31:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/SessionArea.js">
-      <publishTime>03/10/2022 10:31:23</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/SuspensionService/HfcSuspensionService.js">
-      <publishTime>03/10/2022 10:31:35</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/SuspensionService/LteSuspensionService.js">
-      <publishTime>03/10/2022 10:31:35</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/UnbilledOutCallDetail/PostpaidUnbilledOutCallDetail.js">
-      <publishTime>03/10/2022 10:31:35</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/UninstallInstallationOfDecoder/UninstallInstallationOfDecoderLTE.js">
-      <publishTime>03/10/2022 10:31:34</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/UnistallInstallationOfDecoder/HFCListAddtionalEquipment.js">
-      <publishTime>03/10/2022 10:31:35</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/UnistallInstallationOfDecoder/HFCListUninstallEquipment.js">
-      <publishTime>03/10/2022 10:31:35</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/UnistallInstallationOfDecoder/HFCPOSTSession.js">
-      <publishTime>03/10/2022 10:31:35</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/UnistallInstallationOfDecoder/UnistallInstallationOfDecoder.js">
-      <publishTime>03/10/2022 10:31:35</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Scripts/UnlinkingEquipment/UnlinkingEquipment.js">
-      <publishTime>03/10/2022 10:31:35</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Template/ExportExcelHfcIncomingCall.xlsx">
-      <publishTime>03/10/2022 10:31:24</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Template/ExportExcelLteIncomingCall.xlsx">
-      <publishTime>03/10/2022 10:31:24</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Template/ExportExcelUnBilledCallDetails.xlsx">
-      <publishTime>03/10/2022 10:31:24</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Template/ExportExcelUnBilledCallDetailsLte.xlsx">
-      <publishTime>03/10/2022 10:31:24</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Template/ExportHfcBilledCallDetails.xlsx">
-      <publishTime>03/10/2022 10:31:24</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Template/ExportHfcCallDetails.xlsx">
-      <publishTime>03/10/2022 10:31:24</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Template/ExportHfcGetScheduledTask.xlsx">
-      <publishTime>03/10/2022 10:31:24</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Template/ExportLteBilledCallDetails.xlsx">
-      <publishTime>03/10/2022 10:31:24</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Template/ExportLteGetScheduledTask.xlsx">
-      <publishTime>03/10/2022 10:31:24</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Template/ExportPostpaidCallOutDetails.xlsx">
-      <publishTime>03/10/2022 10:31:24</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Template/ExportPostpaidIncomingCall.xlsx">
-      <publishTime>03/10/2022 10:31:24</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Template/ExportPostPaidOutgoingCallNB.xlsx">
-      <publishTime>03/10/2022 10:31:24</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Template/ExportPrepaidCallOutDetails.xlsx">
-      <publishTime>03/10/2022 10:31:24</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Template/ExportPrepaidIncomingCall.xlsx">
-      <publishTime>03/10/2022 10:31:24</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/AdditionalPoints/HFCAdditionalPoints.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/AdditionalPoints/HFCAdditionalPointsConstPrint.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/AdditionalPoints/LTEAdditionalPoints.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/AdditionalPoints/LTEAdditionalPointsConstPrint.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/AdditionalServices/HFCAdditionalServices.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/AdditionalServices/LTEAdditionalServices.cshtml">
-      <publishTime>03/10/2022 10:31:38</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/AdditionalServices/PostpaidAdditionalServices.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/AdditionalServicesConstModCP/AdditionalServicesConstModCP.cshtml">
-      <publishTime>03/10/2022 10:31:38</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/AdditionalServicesDetailCommercial/AdditionalServicesDetailCommercial.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/Auth/AuthUserHtml.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/BilledOutCallDetail/PostpaidBilledOutCallDetail.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/BilledOutCallDetail/PostpaidBilledOutCallDetailPrint.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/BilledOutCallDetail/PostpaidBilledOutCallsDetailConstancy.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/BilledOutCallDetail/PrepaidBilledOutCallDetail.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/CallDetails/HFCBilledCallsDetail.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/CallDetails/HfcBilledCallsDetailConstancy.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/CallDetails/HfcBilledCallsDetailPrint.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/CallDetails/HFCUnbilledCallDetail.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/CallDetails/LTEBilledCallsDetail.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/CallDetails/LTEUnbilledCallDetail.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/CallMails/TestCallMail.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/ChangeData/ChangeData.cshtml">
-      <publishTime>03/10/2022 10:31:38</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/ChangeData/HFCChangeData.cshtml">
-      <publishTime>03/10/2022 10:31:38</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/ChangeEquipment/DTHChangeEquipment.cshtml">
-      <publishTime>03/10/2022 10:31:38</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/ChangeEquipment/DTHChangeEquipmentAssociate.cshtml">
-      <publishTime>03/10/2022 10:31:38</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/ChangeEquipment/HFCChangeEquipment.cshtml">
-      <publishTime>03/10/2022 10:31:38</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/ChangeEquipment/LTEChangeEquipment.cshtml">
-      <publishTime>03/10/2022 10:31:38</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/ChangeEquipment/LTEChangeEquipmentAssociate.cshtml">
-      <publishTime>03/10/2022 10:31:38</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/ChangePhoneNumber/HFCChangePhoneNumber.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/ChangePhoneNumber/LTEChangePhoneNumber.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/ChangePhoneNumber/PostpaidChangePhoneNumber.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/ChangePhoneNumber/PostpaidSteps.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/ChangeTypeCustomer/PostpaidDetail.cshtml">
-      <publishTime>03/10/2022 10:31:38</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/ChangeTypeCustomer/PostpaidPartialConsultPlan.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/ChangeTypeCustomer/PostpaidPlanDetail.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/CheckDevices/HfcCheckDevices.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/CheckDevices/LteCheckDevices.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/CheckDevices/PostpaidCheckDevices.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/ClaroVideo/HistoryActivateService.cshtml">
-      <publishTime>03/10/2022 10:31:38</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/ClaroVideo/HistoryRentalUser.cshtml">
-      <publishTime>03/10/2022 10:31:38</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/ClaroVideo/HistoryVisualizationClient.cshtml">
-      <publishTime>03/10/2022 10:31:38</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/ClaroVideo/SuscripcionClaroVideo.cshtml">
-      <publishTime>03/10/2022 10:31:38</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/ClaroVideo/ViewHistoryDevice.cshtml">
-      <publishTime>03/10/2022 10:31:38</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/ClaroVideo/ViewServiceAdditional.cshtml">
-      <publishTime>03/10/2022 10:31:38</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/Common/CantApplicant.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/Common/DeclaracionJuradaNoBiometria.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/Common/OptionApplicant.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/Common/QuestionsAnswerSecurity.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/Common/SearchImei.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/Common/SearchQuestionsAnswer.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/Common/TypeApplicant.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/Common/ValidationBiometria.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/Common/ValidationBiometriaPrepaid.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/Common/ValidationNoBiometria.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/Common/ValidationNoBiometriaPrepaId.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/ConfigurationIP/ConfigurationIP.cshtml">
-      <publishTime>03/10/2022 10:31:38</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/ConfigurationIP/HFCConfigurationIPConstPrint.cshtml">
-      <publishTime>03/10/2022 10:31:38</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/Discard/DiscardListPost.cshtml">
-      <publishTime>03/10/2022 10:31:38</publishTime>
+      <publishTime>03/28/2022 15:03:51</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/Discard/DiscardListPre.cshtml">
-      <publishTime>03/10/2022 10:31:38</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/ExternalInternalTransfer/HFCExternalInternalTransfer.cshtml">
-      <publishTime>03/10/2022 10:31:38</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/ExternalInternalTransfer/LTEExternalInternalTransfer.cshtml">
-      <publishTime>03/10/2022 10:31:38</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/FidelizacionServices/HFCFidelizacionServices.cshtml">
-      <publishTime>03/10/2022 10:31:38</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/FidelizacionServices/LTEFidelizacionServices.cshtml">
-      <publishTime>03/10/2022 10:31:38</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/IncomingCallDetail/HfcIncomingCallDetail.cshtml">
-      <publishTime>03/10/2022 10:31:38</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/IncomingCallDetail/HfcIncomingCallDetailPrint.cshtml">
-      <publishTime>03/10/2022 10:31:38</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/IncomingCallDetail/PostpaidIncomingCallDetail.cshtml">
-      <publishTime>03/10/2022 10:31:38</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/IncomingCallDetail/PostpaidIncomingCallDetailPrint.cshtml">
-      <publishTime>03/10/2022 10:31:38</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/IncomingCallDetail/PrepaidIncomingCallDetail.cshtml">
-      <publishTime>03/10/2022 10:31:38</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/IncomingCallDetail/PrepaidIncomingCallDetailPrint.cshtml">
-      <publishTime>03/10/2022 10:31:38</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/NetflixServices/HfcNetflixServices.cshtml">
-      <publishTime>03/10/2022 10:31:38</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/NetflixServices/PostpaidNetflixServices.cshtml">
-      <publishTime>03/10/2022 10:31:38</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/PackagePurchaseServices/LTEPackagePurchaseServices.cshtml">
-      <publishTime>03/10/2022 10:31:38</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/PlanMigration/HFCChooseCoreServicesByPlan.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/PlanMigration/HFCChoosePlan.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/PlanMigration/HFCChooseServicesByPlan.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/PlanMigration/HFCCoreCable.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/PlanMigration/HFCCoreInternet.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/PlanMigration/HFCCorePhone.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/PlanMigration/HFCListServicesByPlan.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/PlanMigration/HfcPlanMigration.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/PlanMigration/HFCTableCableServices.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/PlanMigration/HFCTableInternetServices.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/PlanMigration/HFCTablePhoneServices.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/PlanMigration/LTEChooseCoreServicesByPlan.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/PlanMigration/LTEChooseEquipmentByPlan.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/PlanMigration/LTEChoosePlan.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/PlanMigration/LTEChooseServicesByPlan.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/PlanMigration/LTECoreCable.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/PlanMigration/LTECoreInternet.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/PlanMigration/LTECorePhone.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/PlanMigration/LTEListServicesByPlan.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/PlanMigration/LtePlanMigration.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/PlanMigration/LTEPlansTable.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/PlanMigration/LTETableCableServices.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/PlanMigration/LTETableInternetServices.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/PlanMigration/LTETablePhoneServices.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/PlanMigration/PostpaidPlanMigration.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/PlanMigration/PostpaidPlansMigrations.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/PlanMigration/PrepaidTFIPlanMigration.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/ProgramTask/HfcProgramTask.cshtml">
-      <publishTime>03/10/2022 10:31:38</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/ProgramTask/LteProgramTask.cshtml">
-      <publishTime>03/10/2022 10:31:38</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/ReceptionEquipment/ReceptionEquipmentMovil.cshtml">
-      <publishTime>03/10/2022 10:31:38</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/RecordEquipmentForeign/RecordEquipment.cshtml">
-      <publishTime>03/10/2022 10:31:38</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/Redirect/BritgeRedirect.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/Redirect/ChangeNumber.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/ReplaceEquipment/FixedReplaceEquipment.cshtml">
-      <publishTime>03/10/2022 10:31:38</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/ReplaceEquipment/FixedReplaceEquipmentAssociate.cshtml">
-      <publishTime>03/10/2022 10:31:38</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/RestricSellInfoPromotion/RestricSellInfoPromotion.cshtml">
-      <publishTime>03/10/2022 10:31:38</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/RestricSellInfoPromotion/UploadInfoProm.cshtml">
-      <publishTime>03/10/2022 10:31:38</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/RetentionCancelServices/HFCRetentionCancelServices.cshtml">
-      <publishTime>03/10/2022 10:31:38</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/RetentionCancelServices/LTERetentionCancelServices.cshtml">
-      <publishTime>03/10/2022 10:31:38</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/RetentionCancelServices/PostpaidRetentionCancelServices.cshtml">
-      <publishTime>03/10/2022 10:31:38</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/Shared/ViewPartial/HFCLeftPanelCustomer.cshtml">
-      <publishTime>03/10/2022 10:31:39</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/Shared/ViewPartial/LeftPanelCustomer.cshtml">
-      <publishTime>03/10/2022 10:31:40</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/Shared/ViewPartial/LTELeftPanelCustomer.cshtml">
-      <publishTime>03/10/2022 10:31:39</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/Shared/ViewPartial/Schedule.cshtml">
-      <publishTime>03/10/2022 10:31:40</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/Shared/ViewPartial/ScheduleAdicional.cshtml">
-      <publishTime>03/10/2022 10:31:40</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/Shared/ViewPartial/ScheduleSC.cshtml">
-      <publishTime>03/10/2022 10:31:40</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/Shared/ViewPartial/ShortDate.cshtml">
-      <publishTime>03/10/2022 10:31:40</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/Shared/_Layout.cshtml">
-      <publishTime>03/10/2022 10:31:37</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/SuspensionService/HfcSuspensionService.cshtml">
-      <publishTime>03/10/2022 10:31:38</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/SuspensionService/LteSuspensionService.cshtml">
-      <publishTime>03/10/2022 10:31:38</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/UnbilledOutCallDetail/PostpaidUnbilledOutCallDetail.cshtml">
-      <publishTime>03/10/2022 10:31:38</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/UninstallInstallationOfDecoder/UninstallInstallationOfDecoderLTE.cshtml">
-      <publishTime>03/10/2022 10:31:38</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/UnistallInstallationOfDecoder/AdditionalDecoder.cshtml">
-      <publishTime>03/10/2022 10:31:38</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/UnistallInstallationOfDecoder/UninstallDecoder.cshtml">
-      <publishTime>03/10/2022 10:31:38</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/UnistallInstallationOfDecoder/UnistallInstallationOfDecoder.cshtml">
-      <publishTime>03/10/2022 10:31:38</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/UnlinkingEquipment/UnlinkingEquipmentMovil.cshtml">
-      <publishTime>03/10/2022 10:31:38</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/web.config">
-      <publishTime>03/10/2022 10:31:24</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Areas/Transactions/Views/_ViewStart.cshtml">
-      <publishTime>03/10/2022 10:31:24</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="bin/Antlr3.Runtime.dll">
-      <publishTime>03/10/2022 10:30:50</publishTime>
+      <publishTime>03/28/2022 13:26:20</publishTime>
     </File>
     <File Include="bin/AutoMapper.dll">
-      <publishTime>03/10/2022 10:31:30</publishTime>
+      <publishTime>03/28/2022 13:26:20</publishTime>
     </File>
     <File Include="bin/Claro.Data.dll">
-      <publishTime>03/10/2022 11:15:39</publishTime>
+      <publishTime>03/28/2022 16:22:31</publishTime>
     </File>
     <File Include="bin/Claro.dll">
-      <publishTime>03/10/2022 11:15:29</publishTime>
+      <publishTime>03/28/2022 16:22:14</publishTime>
     </File>
     <File Include="bin/Claro.Entity.dll">
-      <publishTime>03/10/2022 11:15:29</publishTime>
+      <publishTime>03/28/2022 16:22:14</publishTime>
     </File>
     <File Include="bin/Claro.Helpers.Transac.Service.dll">
-      <publishTime>03/10/2022 11:15:29</publishTime>
+      <publishTime>03/28/2022 16:22:14</publishTime>
     </File>
     <File Include="bin/Claro.Security.dll">
-      <publishTime>03/10/2022 11:15:38</publishTime>
+      <publishTime>03/28/2022 16:22:28</publishTime>
     </File>
     <File Include="bin/Claro.SIACU.dll">
-      <publishTime>03/10/2022 11:15:38</publishTime>
+      <publishTime>03/28/2022 16:22:29</publishTime>
     </File>
     <File Include="bin/Claro.SIACU.Entity.Transac.Service.dll">
-      <publishTime>03/10/2022 11:15:40</publishTime>
+      <publishTime>03/29/2022 07:42:16</publishTime>
     </File>
     <File Include="bin/Claro.SIACU.ProxyService.Transac.Service.dll">
-      <publishTime>03/10/2022 11:15:31</publishTime>
+      <publishTime>03/28/2022 16:22:19</publishTime>
     </File>
     <File Include="bin/Claro.SIACU.ProxyService.Transac.Service.XmlSerializers.dll">
-      <publishTime>03/10/2022 11:15:36</publishTime>
+      <publishTime>03/28/2022 16:22:27</publishTime>
     </File>
     <File Include="bin/Claro.SIACU.Transac.Service.dll">
-      <publishTime>03/10/2022 11:15:38</publishTime>
+      <publishTime>03/28/2022 16:22:31</publishTime>
     </File>
     <File Include="bin/Claro.SIACU.Web.WebApplication.Transac.Service.dll">
-      <publishTime>03/10/2022 11:15:58</publishTime>
+      <publishTime>03/29/2022 08:17:35</publishTime>
     </File>
     <File Include="bin/Claro.Web.dll">
-      <publishTime>03/10/2022 11:15:29</publishTime>
+      <publishTime>03/28/2022 16:22:14</publishTime>
     </File>
     <File Include="bin/EPPlus.dll">
-      <publishTime>03/10/2022 10:30:12</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="bin/es/System.Net.Http.Formatting.resources.dll">
       <publishTime>07/09/2013 11:33:54</publishTime>
@@ -1083,1201 +1083,1204 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>07/09/2013 11:33:54</publishTime>
     </File>
     <File Include="bin/itextsharp.dll">
-      <publishTime>03/10/2022 10:31:05</publishTime>
+      <publishTime>03/28/2022 13:26:20</publishTime>
     </File>
     <File Include="bin/log4net.dll">
-      <publishTime>03/10/2022 10:30:07</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="bin/Microsoft.Web.Infrastructure.dll">
-      <publishTime>03/10/2022 10:31:26</publishTime>
+      <publishTime>03/28/2022 13:26:20</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
-      <publishTime>03/10/2022 10:31:29</publishTime>
+      <publishTime>03/28/2022 13:26:20</publishTime>
     </File>
     <File Include="bin/Oracle.DataAccess.dll">
-      <publishTime>03/10/2022 10:30:09</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="bin/System.Net.Http.Formatting.dll">
       <publishTime>07/09/2013 11:04:28</publishTime>
     </File>
     <File Include="bin/System.Web.Helpers.dll">
-      <publishTime>03/10/2022 10:31:26</publishTime>
+      <publishTime>03/28/2022 13:26:20</publishTime>
     </File>
     <File Include="bin/System.Web.Http.dll">
       <publishTime>07/09/2013 11:04:28</publishTime>
     </File>
     <File Include="bin/System.Web.Mvc.dll">
-      <publishTime>03/10/2022 10:31:27</publishTime>
+      <publishTime>03/28/2022 13:26:20</publishTime>
     </File>
     <File Include="bin/System.Web.Optimization.dll">
-      <publishTime>03/10/2022 10:31:25</publishTime>
+      <publishTime>03/28/2022 13:26:20</publishTime>
     </File>
     <File Include="bin/System.Web.Razor.dll">
-      <publishTime>03/10/2022 10:31:27</publishTime>
+      <publishTime>03/28/2022 13:26:20</publishTime>
     </File>
     <File Include="bin/System.Web.Webpages.Deployment.dll">
-      <publishTime>03/10/2022 10:31:25</publishTime>
+      <publishTime>03/28/2022 13:26:20</publishTime>
     </File>
     <File Include="bin/System.Web.Webpages.dll">
-      <publishTime>03/10/2022 10:31:27</publishTime>
+      <publishTime>03/28/2022 13:26:20</publishTime>
     </File>
     <File Include="bin/System.Web.Webpages.Razor.dll">
-      <publishTime>03/10/2022 10:31:26</publishTime>
+      <publishTime>03/28/2022 13:26:20</publishTime>
     </File>
     <File Include="bin/Tools.Entity.dll">
-      <publishTime>03/10/2022 10:30:06</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="bin/Tools.Utils.dll">
-      <publishTime>03/10/2022 10:30:06</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="bin/WebGrease.dll">
-      <publishTime>03/10/2022 10:30:56</publishTime>
+      <publishTime>03/28/2022 13:26:20</publishTime>
     </File>
     <File Include="DataTransac/ConstancyChangeData.xml">
-      <publishTime>03/10/2022 10:30:03</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="DataTransac/ConstancyChangeEquipment.xml">
-      <publishTime>03/10/2022 10:30:03</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="DataTransac/ConstancyUninstallInstallationOfDecoder.xml">
-      <publishTime>03/10/2022 10:30:03</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="DataTransac/Data.xml">
-      <publishTime>03/10/2022 10:30:03</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="DataTransac/FixedConfigMsg.config">
-      <publishTime>03/10/2022 10:30:03</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="DataTransac/HFCConfig.config">
-      <publishTime>03/10/2022 10:30:03</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="DataTransac/HFCConfigMsg.config">
-      <publishTime>03/10/2022 10:30:03</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="DataTransac/HFCConfigurationIPConstance.xml">
-      <publishTime>03/10/2022 10:30:03</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="DataTransac/HFCConfigurationIPConstance.xslt">
-      <publishTime>03/10/2022 10:30:03</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="DataTransac/HFCConstance.xml">
-      <publishTime>03/10/2022 10:30:03</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="DataTransac/HFCConstance.xslt">
-      <publishTime>03/10/2022 10:30:03</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="DataTransac/HFCDatos.xml">
-      <publishTime>03/10/2022 10:30:03</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="DataTransac/LTEConfigMsg.config">
-      <publishTime>03/10/2022 10:30:03</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="DataTransac/LTEConstance.xml">
-      <publishTime>03/10/2022 10:30:03</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="DataTransac/LTEConstance.xslt">
-      <publishTime>03/10/2022 10:30:03</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="DataTransac/SIACDatosPre.xml">
-      <publishTime>03/10/2022 10:30:03</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="DataTransac/SIACPOConfig.config">
-      <publishTime>03/10/2022 10:30:03</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="DataTransac/SIACPODatosPos.xml">
-      <publishTime>03/10/2022 10:30:03</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="DataTransac/SiactUnico.config">
-      <publishTime>03/10/2022 10:30:03</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="DataTransac/SiacutData.xml">
-      <publishTime>03/10/2022 10:30:03</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="DataTransac/SiacutDataPrepaid.xml">
-      <publishTime>03/10/2022 10:30:03</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Fonts/fontawesome-webfont.eot">
-      <publishTime>03/10/2022 10:30:03</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Fonts/fontawesome-webfont.svg">
-      <publishTime>03/10/2022 10:30:03</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Fonts/fontawesome-webfont.ttf">
-      <publishTime>03/10/2022 10:30:03</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Fonts/fontawesome-webfont.woff">
-      <publishTime>03/10/2022 10:30:03</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Fonts/fontawesome-webfont.woff2">
-      <publishTime>03/10/2022 10:30:03</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Fonts/FontAwesome.otf">
-      <publishTime>03/10/2022 10:30:03</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Fonts/glyphicons-halflings-regular.eot">
-      <publishTime>03/10/2022 10:30:03</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Fonts/glyphicons-halflings-regular.svg">
-      <publishTime>03/10/2022 10:30:03</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Fonts/glyphicons-halflings-regular.ttf">
-      <publishTime>03/10/2022 10:30:03</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Fonts/glyphicons-halflings-regular.woff">
-      <publishTime>03/10/2022 10:30:03</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Fonts/glyphicons-halflings-regular.woff2">
-      <publishTime>03/10/2022 10:30:02</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Global.asax">
-      <publishTime>03/10/2022 10:29:42</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Images/btn_Buscar.gif">
-      <publishTime>03/10/2022 10:30:03</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Images/check.png">
-      <publishTime>03/10/2022 10:30:03</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Images/cross.png">
-      <publishTime>03/10/2022 10:30:03</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Images/cross_hover.png">
-      <publishTime>03/10/2022 10:30:03</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Images/delete.png">
-      <publishTime>03/10/2022 10:30:03</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Images/details_close.png">
-      <publishTime>03/10/2022 10:30:03</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Images/details_open.png">
-      <publishTime>03/10/2022 10:30:03</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Images/favicon.ico">
-      <publishTime>03/10/2022 10:30:03</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Images/hm_tim.gif">
-      <publishTime>03/10/2022 10:30:03</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Images/img_claro.png">
-      <publishTime>03/10/2022 10:30:03</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Images/img_marca.png">
-      <publishTime>03/10/2022 10:30:03</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Images/loading.gif">
-      <publishTime>03/10/2022 10:30:03</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Images/loading2.gif">
-      <publishTime>03/10/2022 10:30:03</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Images/loading_3.gif">
-      <publishTime>03/10/2022 10:30:03</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Images/logo-claro.png">
-      <publishTime>03/10/2022 10:30:03</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Images/sort_asc.png">
-      <publishTime>03/10/2022 10:30:03</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Images/sort_asc_disabled.png">
-      <publishTime>03/10/2022 10:30:03</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Images/sort_both.png">
-      <publishTime>03/10/2022 10:30:03</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Images/sort_desc.png">
-      <publishTime>03/10/2022 10:30:03</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="packages.config">
-      <publishTime>03/10/2022 10:29:42</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/ColivingTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.ColivingTransacService.DataHistorical.datasource">
-      <publishTime>03/10/2022 10:30:27</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/ColivingTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.ColivingTransacService.GetDataBillingResponse.datasource">
-      <publishTime>03/10/2022 10:30:27</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/ColivingTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.ColivingTransacService.GetParameterResponse.datasource">
-      <publishTime>03/10/2022 10:30:27</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/ColivingTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.ColivingTransacService.ListItems.datasource">
-      <publishTime>03/10/2022 10:30:27</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/ColivingTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.ColivingTransacService.Response.datasource">
-      <publishTime>03/10/2022 10:30:27</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/ColivingTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.ColivingTransacService.ResponseCUParticipante.datasource">
-      <publishTime>03/10/2022 10:30:27</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.BlackListResponse.datasource">
-      <publishTime>03/10/2022 10:30:28</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.BrandModelResponse.datasource">
-      <publishTime>03/10/2022 10:30:29</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.BrandResponsePrepaid.datasource">
-      <publishTime>03/10/2022 10:30:30</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.BrandResponsePrepaid1.datasource">
-      <publishTime>03/10/2022 10:30:28</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.BuildingsResponsePvuCommon.datasource">
-      <publishTime>03/10/2022 10:30:29</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.BusinessInteraction2ResponseCommon.datasource">
-      <publishTime>03/10/2022 10:30:29</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.BusinessRulesResponse.datasource">
-      <publishTime>03/10/2022 10:30:31</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.CacDacTypeResponseCommon.datasource">
-      <publishTime>03/10/2022 10:30:28</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.CenterPopulatPvuResponseCommon.datasource">
-      <publishTime>03/10/2022 10:30:28</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.CheckingUserResponse.datasource">
-      <publishTime>03/10/2022 10:30:30</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.CivilStatusResponsePrepaid.datasource">
-      <publishTime>03/10/2022 10:30:29</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.Client.datasource">
-      <publishTime>03/10/2022 10:30:31</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.ComprarPaquetesBodyResponse.datasource">
-      <publishTime>03/10/2022 10:30:30</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.ConsultarClaroPuntosResponse.datasource">
-      <publishTime>03/10/2022 10:30:29</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.ConsultarPaqDisponiblesResponse.datasource">
-      <publishTime>03/10/2022 10:30:31</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.ConsultByGroupParameterResponse.datasource">
-      <publishTime>03/10/2022 10:30:30</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.ConsultDepartmentResponsePrepaid.datasource">
-      <publishTime>03/10/2022 10:30:30</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.ConsultDistrictResponse.datasource">
-      <publishTime>03/10/2022 10:30:29</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.ConsultIGVResponse.datasource">
-      <publishTime>03/10/2022 10:30:32</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.ConsultImeiResponse.datasource">
-      <publishTime>03/10/2022 10:30:31</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.ConsultMarkModelResponse.datasource">
-      <publishTime>03/10/2022 10:30:32</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.ConsultProvinceResponse.datasource">
-      <publishTime>03/10/2022 10:30:29</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.ContractByPhoneNumberResponseCommon.datasource">
-      <publishTime>03/10/2022 10:30:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.DatTempInteractionResponse.datasource">
-      <publishTime>03/10/2022 10:30:29</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.DepartmentsPvuResponseCommon.datasource">
-      <publishTime>03/10/2022 10:30:30</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.DistrictsPvuResponseCommon.datasource">
-      <publishTime>03/10/2022 10:30:29</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.DynamicCaseTemplateDataResponse.datasource">
-      <publishTime>03/10/2022 10:30:32</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.EmailSubmitResponse.datasource">
-      <publishTime>03/10/2022 10:30:30</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.EmployeeResponse.datasource">
-      <publishTime>03/10/2022 10:30:31</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.EquipmentForeignResponse.datasource">
-      <publishTime>03/10/2022 10:30:29</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.ETAAuditResponseCapacity.datasource">
-      <publishTime>03/10/2022 10:30:32</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.EvaluateAmountResponse.datasource">
-      <publishTime>03/10/2022 10:30:30</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.FileDefaultImpersonationResponseCommon.datasource">
-      <publishTime>03/10/2022 10:30:29</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.GenerateConstancyResponseCommon.datasource">
-      <publishTime>03/10/2022 10:30:32</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.GeneratePDFDataResponseHfc.datasource">
-      <publishTime>03/10/2022 10:30:30</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.GetClientResponseComon.datasource">
-      <publishTime>03/10/2022 10:30:32</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.GetConsultCampaignResponse.datasource">
-      <publishTime>03/10/2022 10:30:32</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.GetConsultServiceBonoResponse.datasource">
-      <publishTime>03/10/2022 10:30:31</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.GetEmployerDateResponseCommon.datasource">
-      <publishTime>03/10/2022 10:30:29</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.GetInteractionClientResponseCommon.datasource">
-      <publishTime>03/10/2022 10:30:31</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.GetRegisterBonoSpeedResponse.datasource">
-      <publishTime>03/10/2022 10:30:29</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.GetRegisterCampaignResponse.datasource">
-      <publishTime>03/10/2022 10:30:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.GetSotResponseCommon.datasource">
-      <publishTime>03/10/2022 10:30:29</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.GetValidateCollaboratorResponse.datasource">
-      <publishTime>03/10/2022 10:30:32</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.GetValidateQuantityCampaignResponse.datasource">
-      <publishTime>03/10/2022 10:30:30</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.InsertDetailResponseCommon.datasource">
-      <publishTime>03/10/2022 10:30:31</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.InsertEquipmentForeignResponse.datasource">
-      <publishTime>03/10/2022 10:30:32</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.InsertEvidenceResponse.datasource">
-      <publishTime>03/10/2022 10:30:32</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.InsertGeneralResponse.datasource">
-      <publishTime>03/10/2022 10:30:29</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.InsertInteractHFCResponse.datasource">
-      <publishTime>03/10/2022 10:30:29</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.InsertInteractResponseCommon.datasource">
-      <publishTime>03/10/2022 10:30:31</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.InsertIntResponseCommon.datasource">
-      <publishTime>03/10/2022 10:30:31</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.InsertLogTrxResponseCommon.datasource">
-      <publishTime>03/10/2022 10:30:32</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.InsertRedirectComResponseDashboard.datasource">
-      <publishTime>03/10/2022 10:30:30</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.InsertTemplateGeneralResponse.datasource">
-      <publishTime>03/10/2022 10:30:30</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.InsertTemplateInteractionResponseCommon.datasource">
-      <publishTime>03/10/2022 10:30:32</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.InsTemplateInteractionResponseCommon.datasource">
-      <publishTime>03/10/2022 10:30:30</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.InteractionResponse.datasource">
-      <publishTime>03/10/2022 10:30:31</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.InteractionSubClasDetailResponseCommon.datasource">
-      <publishTime>03/10/2022 10:30:30</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.leerDatosUsuarioResponse.datasource">
-      <publishTime>03/10/2022 10:30:29</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.ListClientDocumentTypeResponseCommon.datasource">
-      <publishTime>03/10/2022 10:30:31</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.ListEquipmentRegisteredResponse.datasource">
-      <publishTime>03/10/2022 10:30:31</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.ListItem.datasource">
-      <publishTime>03/10/2022 10:30:31</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.ListItemResponse.datasource">
-      <publishTime>03/10/2022 10:30:32</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.MigratedElementsResponse.datasource">
-      <publishTime>03/10/2022 10:30:28</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.MotiveSotResponseCommon.datasource">
-      <publishTime>03/10/2022 10:30:30</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.MzBloEdiTypeResponseCommon.datasource">
-      <publishTime>03/10/2022 10:30:28</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.NoteInteractionResponse.datasource">
-      <publishTime>03/10/2022 10:30:31</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.NumberEAIResponse.datasource">
-      <publishTime>03/10/2022 10:30:31</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.NumberGWPResponse.datasource">
-      <publishTime>03/10/2022 10:30:32</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.OccupationClientResponsePrepaid.datasource">
-      <publishTime>03/10/2022 10:30:29</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.OfficeResponseCommon.datasource">
-      <publishTime>03/10/2022 10:30:31</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.PagOptionXuserNVResponse.datasource">
-      <publishTime>03/10/2022 10:30:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.PagOptionXuserResponse.datasource">
-      <publishTime>03/10/2022 10:30:29</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.ParameterDataResponseCommon.datasource">
-      <publishTime>03/10/2022 10:30:32</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.ParameterTerminalTPIResponse.datasource">
-      <publishTime>03/10/2022 10:30:29</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.PCRFConnectorResponse.datasource">
-      <publishTime>03/10/2022 10:30:30</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.PenaltyChangePlanResponse.datasource">
-      <publishTime>03/10/2022 10:30:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.PostValidateDeliveryBAVResponse.datasource">
-      <publishTime>03/10/2022 10:30:31</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.ProgramTaskResponse.datasource">
-      <publishTime>03/10/2022 10:30:29</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.ProvincesPvuResponseCommon.datasource">
-      <publishTime>03/10/2022 10:30:28</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.QuestionsAnswerSecurityResponse.datasource">
-      <publishTime>03/10/2022 10:30:30</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.ReadOptionsByUserResponse.datasource">
-      <publishTime>03/10/2022 10:30:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.ReasonRegistryResponsePrepaid.datasource">
-      <publishTime>03/10/2022 10:30:29</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.ReceiptsResponse.datasource">
-      <publishTime>03/10/2022 10:30:30</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.RedirectSessionResponseDashboard.datasource">
-      <publishTime>03/10/2022 10:30:30</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.RegionResponse.datasource">
-      <publishTime>03/10/2022 10:30:29</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.RegisterServiceCommercialResponse.datasource">
-      <publishTime>03/10/2022 10:30:31</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.responseDataObtenerTabPuntosAtencionPost.datasource">
-      <publishTime>03/10/2022 10:30:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.SaveAuditMResponseCommon.datasource">
-      <publishTime>03/10/2022 10:30:30</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.SaveAuditResponseCommon.datasource">
-      <publishTime>03/10/2022 10:30:28</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.SendEmailResponseCommon.datasource">
-      <publishTime>03/10/2022 10:30:29</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.SendEmailSBResponse.datasource">
-      <publishTime>03/10/2022 10:30:31</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.ServicesVASResponse.datasource">
-      <publishTime>03/10/2022 10:30:29</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.TimeZonesResponse.datasource">
-      <publishTime>03/10/2022 10:30:28</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.TipDptIntResponseCommon.datasource">
-      <publishTime>03/10/2022 10:30:29</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.TransactionScheduledResponse.datasource">
-      <publishTime>03/10/2022 10:30:31</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.TypeTransactionResponse.datasource">
-      <publishTime>03/10/2022 10:30:30</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.TypificationResponse.datasource">
-      <publishTime>03/10/2022 10:30:31</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.UpdateNotesResponseCommon.datasource">
-      <publishTime>03/10/2022 10:30:31</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.UpdateXInter29ResponseCommon.datasource">
-      <publishTime>03/10/2022 10:30:31</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.UpdatexInter30Response.datasource">
-      <publishTime>03/10/2022 10:30:32</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.UploadDocumentOnBaseResponse.datasource">
-      <publishTime>03/10/2022 10:30:31</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.UserResponse.datasource">
-      <publishTime>03/10/2022 10:30:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.ValidateCommunicationResponse.datasource">
-      <publishTime>03/10/2022 10:30:31</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.ValueXmlResponse.datasource">
-      <publishTime>03/10/2022 10:30:30</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.VerifyUserResponse.datasource">
-      <publishTime>03/10/2022 10:30:33</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.WorkSubTypeResponseCommon.datasource">
-      <publishTime>03/10/2022 10:30:31</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.WorkTypeResponseCommon.datasource">
-      <publishTime>03/10/2022 10:30:32</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/CommonTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.CommonTransacService.ZoneTypeCobsResponseCommon.datasource">
-      <publishTime>03/10/2022 10:30:32</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.AccountStatusResponse.datasource">
-      <publishTime>03/10/2022 10:30:24</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.ActivationDesactivationResponse.datasource">
-      <publishTime>03/10/2022 11:10:01</publishTime>
+      <publishTime>03/29/2022 08:14:04</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.AddDayWorkResponse.datasource">
-      <publishTime>03/10/2022 11:10:03</publishTime>
+      <publishTime>03/29/2022 08:14:05</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.AddressUpdateFixedResponse.datasource">
-      <publishTime>03/10/2022 11:10:03</publishTime>
+      <publishTime>03/29/2022 08:14:05</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.AddtionalEquipmentResponse.datasource">
-      <publishTime>03/10/2022 10:30:24</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.AvailabilitySimcardResponse.datasource">
-      <publishTime>03/10/2022 11:10:03</publishTime>
+      <publishTime>03/29/2022 08:14:05</publishTime>
+    </File>
+    <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.BannerDescartesConsultaResp.datasource">
+      <publishTime>03/29/2022 08:14:04</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.BEDecoServicesResponseFixed.datasource">
-      <publishTime>03/10/2022 11:10:03</publishTime>
+      <publishTime>03/29/2022 08:14:04</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.BEETAAuditoriaResponseCapacityHFC.datasource">
-      <publishTime>03/10/2022 11:10:01</publishTime>
+      <publishTime>03/29/2022 08:14:04</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.BodyResponse.datasource">
-      <publishTime>03/10/2022 10:30:24</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.BpelCallDetailResponse.datasource">
-      <publishTime>03/10/2022 11:10:01</publishTime>
+      <publishTime>03/29/2022 08:14:05</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.BranchCustomerResponse.datasource">
-      <publishTime>03/10/2022 11:10:01</publishTime>
+      <publishTime>03/29/2022 08:14:04</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.CallDetailDB1Response.datasource">
-      <publishTime>03/10/2022 11:10:02</publishTime>
+      <publishTime>03/29/2022 08:14:04</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.CallDetailInputFixedResponse.datasource">
-      <publishTime>03/10/2022 11:10:01</publishTime>
+      <publishTime>03/29/2022 08:14:04</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.CallDetailResponse.datasource">
-      <publishTime>03/10/2022 11:10:02</publishTime>
+      <publishTime>03/29/2022 08:14:05</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.CamapaignResponse.datasource">
-      <publishTime>03/10/2022 11:10:01</publishTime>
+      <publishTime>03/29/2022 08:14:04</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.CancelSubscriptionSNResponse.datasource">
-      <publishTime>03/10/2022 11:10:01</publishTime>
+      <publishTime>03/29/2022 08:14:04</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.CarrierResponseHfc.datasource">
-      <publishTime>03/10/2022 11:10:02</publishTime>
+      <publishTime>03/29/2022 08:14:04</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.CaseInsertResponse.datasource">
-      <publishTime>03/10/2022 11:10:03</publishTime>
+      <publishTime>03/29/2022 08:14:05</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.CaseTemplate.datasource">
-      <publishTime>03/10/2022 11:10:01</publishTime>
+      <publishTime>03/29/2022 08:14:04</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.ChangeEquipmentResponse.datasource">
-      <publishTime>03/10/2022 11:10:02</publishTime>
+      <publishTime>03/29/2022 08:14:05</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.CommercialServicesResponse.datasource">
-      <publishTime>03/10/2022 11:10:03</publishTime>
+      <publishTime>03/29/2022 08:14:04</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.CommertialPlanResponse.datasource">
-      <publishTime>03/10/2022 11:10:01</publishTime>
+      <publishTime>03/29/2022 08:14:05</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.ComServiceActivationResponse.datasource">
-      <publishTime>03/10/2022 10:30:24</publishTime>
+      <publishTime>03/29/2022 08:14:05</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.ConsultaLineaResponse.datasource">
-      <publishTime>03/10/2022 10:30:26</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.consultarDatosLineaResponse.datasource">
-      <publishTime>03/10/2022 11:10:01</publishTime>
+      <publishTime>03/29/2022 08:14:04</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.ConsultationServiceByContractResponse.datasource">
-      <publishTime>03/10/2022 11:10:01</publishTime>
+      <publishTime>03/29/2022 08:14:04</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.ConsultClientSNResponse.datasource">
-      <publishTime>03/10/2022 11:10:02</publishTime>
+      <publishTime>03/29/2022 08:14:05</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.ConsultDiscardRTIResponse.datasource">
-      <publishTime>03/10/2022 11:10:02</publishTime>
+      <publishTime>03/29/2022 08:14:05</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.ConsultDiscartRTITOBEResponse.datasource">
-      <publishTime>03/10/2022 11:10:02</publishTime>
+      <publishTime>03/29/2022 08:14:04</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.ConsultIPTVResponse.datasource">
-      <publishTime>03/10/2022 11:10:02</publishTime>
+      <publishTime>03/29/2022 08:14:05</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.ConsultSNResponse.datasource">
-      <publishTime>03/10/2022 10:30:27</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.contarLineasResponse.datasource">
-      <publishTime>03/10/2022 11:10:03</publishTime>
+      <publishTime>03/29/2022 08:14:05</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.ContractedBusinessServicesResponsePostPaid.datasource">
-      <publishTime>03/10/2022 10:30:26</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.CoverageFixedResponse.datasource">
-      <publishTime>03/10/2022 11:10:03</publishTime>
+      <publishTime>03/29/2022 08:14:05</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.CurrentPlanResponse.datasource">
-      <publishTime>03/10/2022 11:10:02</publishTime>
+      <publishTime>03/28/2022 13:46:16</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.CustomerPhoneResponse.datasource">
-      <publishTime>03/10/2022 11:10:02</publishTime>
+      <publishTime>03/29/2022 08:14:05</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.CustomerResponse.datasource">
-      <publishTime>03/10/2022 11:10:03</publishTime>
+      <publishTime>03/29/2022 08:14:04</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.DataEquipmentResponse.datasource">
-      <publishTime>03/10/2022 11:10:02</publishTime>
+      <publishTime>03/29/2022 08:14:05</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.DataLineResponse.datasource">
-      <publishTime>03/10/2022 10:30:24</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.DataSavePostventaDetServResponse.datasource">
-      <publishTime>03/10/2022 11:10:02</publishTime>
+      <publishTime>03/29/2022 08:14:05</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.DataServByIdResponseLTE.datasource">
-      <publishTime>03/10/2022 10:30:25</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.DecoDetailByIdServiceResponse.datasource">
-      <publishTime>03/10/2022 10:30:25</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.DecoMatrizResponse.datasource">
-      <publishTime>03/10/2022 11:10:02</publishTime>
+      <publishTime>03/29/2022 08:14:05</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.DecosLteResponse.datasource">
-      <publishTime>03/10/2022 11:10:03</publishTime>
+      <publishTime>03/29/2022 08:14:05</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.DecoTypeResponse.datasource">
-      <publishTime>03/10/2022 11:10:02</publishTime>
+      <publishTime>03/29/2022 08:14:05</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.DeleteClientSNResponse.datasource">
-      <publishTime>03/10/2022 10:30:26</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.DeleteClientSNResponse1.datasource">
-      <publishTime>03/10/2022 10:30:26</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.DeleteProgramTaskResponse.datasource">
-      <publishTime>03/10/2022 11:10:02</publishTime>
+      <publishTime>03/29/2022 08:14:05</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.DeleteProgTaskHfcResponse.datasource">
-      <publishTime>03/10/2022 11:10:03</publishTime>
+      <publishTime>03/28/2022 13:46:17</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.DetailTransExtraResponse.datasource">
-      <publishTime>03/10/2022 10:30:26</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.DispEquipmentResponse.datasource">
-      <publishTime>03/10/2022 11:10:02</publishTime>
+      <publishTime>03/29/2022 08:14:04</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.EquipmentsByCurrentPlanResponse.datasource">
-      <publishTime>03/10/2022 11:10:01</publishTime>
+      <publishTime>03/28/2022 13:46:15</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.ETAAuditoriaCapacityResponseHfc.datasource">
-      <publishTime>03/10/2022 11:10:01</publishTime>
+      <publishTime>03/28/2022 13:46:16</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.ETAFlowResponseHfc.datasource">
-      <publishTime>03/10/2022 11:10:03</publishTime>
+      <publishTime>03/29/2022 08:14:05</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.EtaInboundToaResponse.datasource">
-      <publishTime>03/10/2022 11:10:02</publishTime>
+      <publishTime>03/29/2022 08:14:05</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.ExecutePlanMigrationLTEResponse.datasource">
-      <publishTime>03/10/2022 11:10:02</publishTime>
+      <publishTime>03/29/2022 08:14:05</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.ExecuteSuspensionResponse.datasource">
-      <publishTime>03/10/2022 11:10:02</publishTime>
+      <publishTime>03/29/2022 08:14:05</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.FactureDBTOResponse.datasource">
-      <publishTime>03/10/2022 11:10:01</publishTime>
+      <publishTime>03/28/2022 13:46:16</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.FacturePDIResponse.datasource">
-      <publishTime>03/10/2022 11:10:03</publishTime>
+      <publishTime>03/29/2022 08:14:04</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.GenerateOCCResponse.datasource">
-      <publishTime>03/10/2022 11:10:03</publishTime>
+      <publishTime>03/29/2022 08:14:05</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.GenerateSOTResponseFixed.datasource">
-      <publishTime>03/10/2022 10:30:24</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.GenericSotResponse.datasource">
-      <publishTime>03/10/2022 11:10:02</publishTime>
+      <publishTime>03/29/2022 08:14:05</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.GetHubsResponse.datasource">
-      <publishTime>03/10/2022 11:10:02</publishTime>
+      <publishTime>03/29/2022 08:14:05</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.GetInsertInteractionMixedResponse.datasource">
-      <publishTime>03/10/2022 11:10:01</publishTime>
+      <publishTime>03/29/2022 08:14:04</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.GetTypeProductDatResponse.datasource">
-      <publishTime>03/10/2022 11:10:02</publishTime>
+      <publishTime>03/29/2022 08:14:04</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.HistoryDeviceResponse.datasource">
-      <publishTime>03/10/2022 11:10:03</publishTime>
+      <publishTime>03/29/2022 08:14:05</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.HistoryToaResponse.datasource">
-      <publishTime>03/10/2022 11:10:01</publishTime>
+      <publishTime>03/29/2022 08:14:04</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.IdUbigeoFixedResponse.datasource">
-      <publishTime>03/10/2022 11:10:03</publishTime>
+      <publishTime>03/29/2022 08:14:05</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.InfoInteractionTemplateResponse.datasource">
-      <publishTime>03/10/2022 10:30:27</publishTime>
+      <publishTime>03/29/2022 08:14:05</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.InsertDecoAdditionalResponse.datasource">
-      <publishTime>03/10/2022 10:30:25</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.InsertDetailServiceInteractionResponse.datasource">
-      <publishTime>03/10/2022 10:30:24</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.InsertETASelectionResponse.datasource">
-      <publishTime>03/10/2022 10:30:25</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.InsertInteractHFCResponse.datasource">
-      <publishTime>03/10/2022 11:10:02</publishTime>
+      <publishTime>03/28/2022 13:46:16</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.InsertInteractionBusinessResponse.datasource">
-      <publishTime>03/10/2022 10:30:25</publishTime>
+      <publishTime>03/29/2022 08:14:05</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.InsertLoyaltyResponse.datasource">
-      <publishTime>03/10/2022 11:10:02</publishTime>
+      <publishTime>03/29/2022 08:14:05</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.InsertTransactionResponse.datasource">
-      <publishTime>03/10/2022 10:30:24</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.Interaction.datasource">
-      <publishTime>03/10/2022 11:10:01</publishTime>
+      <publishTime>03/29/2022 08:14:04</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.InteractionServiceResponseHfc.datasource">
-      <publishTime>03/10/2022 11:10:01</publishTime>
+      <publishTime>03/29/2022 08:14:04</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.JobTypesConfigIPResponse.datasource">
-      <publishTime>03/10/2022 11:10:03</publishTime>
+      <publishTime>03/29/2022 08:14:05</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.JobTypesResponseHfc.datasource">
-      <publishTime>03/10/2022 11:10:03</publishTime>
+      <publishTime>03/29/2022 08:14:05</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.ListEbuildingsFixedResponse.datasource">
-      <publishTime>03/10/2022 11:10:03</publishTime>
+      <publishTime>03/29/2022 08:14:05</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.ListPlansFixedResponse.datasource">
-      <publishTime>03/10/2022 11:10:03</publishTime>
+      <publishTime>03/29/2022 08:14:05</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.ListScheduledTransactionsResponse.datasource">
-      <publishTime>03/10/2022 11:10:01</publishTime>
+      <publishTime>03/29/2022 08:14:05</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.ListTownCenterFixedResponse.datasource">
-      <publishTime>03/10/2022 11:10:02</publishTime>
+      <publishTime>03/29/2022 08:14:05</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.LoyaltyAmountResponse.datasource">
-      <publishTime>03/10/2022 11:10:02</publishTime>
+      <publishTime>03/29/2022 08:14:05</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.MessageResponseRegistrarProcesoContinue.datasource">
-      <publishTime>03/10/2022 11:10:02</publishTime>
+      <publishTime>03/29/2022 08:14:05</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.MigratedPlanResponseLte.datasource">
-      <publishTime>03/10/2022 11:10:02</publishTime>
+      <publishTime>03/29/2022 08:14:05</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.MotiveSoftLTEFixedResponse.datasource">
-      <publishTime>03/10/2022 11:10:01</publishTime>
+      <publishTime>03/29/2022 08:14:04</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.MotiveSOTByTypeJobResponse.datasource">
-      <publishTime>03/10/2022 11:10:01</publishTime>
+      <publishTime>03/29/2022 08:14:04</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.NewPlanServicesResponse.datasource">
-      <publishTime>03/10/2022 11:10:03</publishTime>
+      <publishTime>03/29/2022 08:14:04</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.OnBaseCargaResponse.datasource">
-      <publishTime>03/10/2022 11:10:02</publishTime>
+      <publishTime>03/29/2022 08:14:05</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.OrderSubType.datasource">
-      <publishTime>03/10/2022 11:10:02</publishTime>
+      <publishTime>03/29/2022 08:14:05</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.OrderSubTypesResponseHfc.datasource">
-      <publishTime>03/10/2022 10:30:24</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.OrderTypesResponseHfc.datasource">
-      <publishTime>03/10/2022 11:10:03</publishTime>
+      <publishTime>03/29/2022 08:14:04</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.PersonalizaMensajeOTTResponse.datasource">
-      <publishTime>03/10/2022 11:10:01</publishTime>
+      <publishTime>03/29/2022 08:14:04</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.PhoneNumberResponse.datasource">
-      <publishTime>03/10/2022 11:10:02</publishTime>
+      <publishTime>03/29/2022 08:14:05</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.PlanCommercialResponse.datasource">
-      <publishTime>03/10/2022 11:10:02</publishTime>
+      <publishTime>03/28/2022 13:46:16</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.PlanServiceResponse.datasource">
-      <publishTime>03/10/2022 10:30:24</publishTime>
+      <publishTime>03/29/2022 08:14:04</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.PlanServicesResponse.datasource">
-      <publishTime>03/10/2022 10:30:26</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.PlansResponseHfc.datasource">
-      <publishTime>03/10/2022 10:30:26</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.PostSuspensionLteResponse.datasource">
-      <publishTime>03/10/2022 10:30:24</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.ProcessingServicesResponse.datasource">
-      <publishTime>03/10/2022 10:30:26</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.ProductDetailResponse.datasource">
-      <publishTime>03/10/2022 10:30:26</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.ProductTracDeacServResponse.datasource">
-      <publishTime>03/10/2022 11:10:02</publishTime>
+      <publishTime>03/29/2022 08:14:04</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.ProvisionSubscriptionResponse.datasource">
-      <publishTime>03/10/2022 11:10:03</publishTime>
+      <publishTime>03/29/2022 08:14:05</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.QueryDebtResponse.datasource">
-      <publishTime>03/10/2022 11:10:02</publishTime>
+      <publishTime>03/29/2022 08:14:04</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.ReconeServiceResponse.datasource">
-      <publishTime>03/10/2022 11:10:03</publishTime>
+      <publishTime>03/29/2022 08:14:05</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.ReconexionLteResponse.datasource">
-      <publishTime>03/10/2022 10:30:26</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.RecordTranferExtIntResponseFixed.datasource">
-      <publishTime>03/10/2022 11:10:02</publishTime>
+      <publishTime>03/29/2022 08:14:05</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.RegistarInstaDecoAdiHFCResponse.datasource">
-      <publishTime>03/10/2022 11:10:02</publishTime>
+      <publishTime>03/29/2022 08:14:04</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.RegisterClientSNResponse.datasource">
-      <publishTime>03/10/2022 11:10:02</publishTime>
+      <publishTime>03/29/2022 08:14:05</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.RegisterInteractionAdjustResponse.datasource">
-      <publishTime>03/10/2022 10:30:27</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.RegisterTransactionLTEFixedResponse.datasource">
-      <publishTime>03/10/2022 11:10:03</publishTime>
+      <publishTime>03/29/2022 08:14:05</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.RegistrarControlesResponse.datasource">
-      <publishTime>03/10/2022 10:30:24</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.Response1.datasource">
-      <publishTime>03/10/2022 11:10:02</publishTime>
+      <publishTime>03/29/2022 08:14:04</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.RetentionCancelServicesResponse.datasource">
-      <publishTime>03/10/2022 11:10:03</publishTime>
+      <publishTime>03/29/2022 08:14:05</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.SaveOCCResponse.datasource">
-      <publishTime>03/10/2022 10:30:24</publishTime>
+      <publishTime>03/29/2022 08:14:05</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.SearchStateLineEmailResponse.datasource">
-      <publishTime>03/10/2022 11:10:02</publishTime>
+      <publishTime>03/29/2022 08:14:05</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.ServiceDTHResponse.datasource">
-      <publishTime>03/10/2022 11:10:01</publishTime>
+      <publishTime>03/29/2022 08:14:05</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.ServiceResponse.datasource">
-      <publishTime>03/10/2022 11:10:02</publishTime>
+      <publishTime>03/29/2022 08:14:05</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.ServicesByCurrentPlanResponse.datasource">
-      <publishTime>03/10/2022 10:30:27</publishTime>
+      <publishTime>03/29/2022 08:14:05</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.ServicesLteFixedResponse.datasource">
-      <publishTime>03/10/2022 11:10:02</publishTime>
+      <publishTime>03/29/2022 08:14:04</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.ServicesNXResponse.datasource">
-      <publishTime>03/10/2022 11:10:02</publishTime>
+      <publishTime>03/29/2022 08:14:04</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.TechnicalVisitResultResponse.datasource">
-      <publishTime>03/10/2022 10:30:24</publishTime>
+      <publishTime>03/29/2022 08:14:04</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.TimeZonesResponseHfc.datasource">
-      <publishTime>03/10/2022 10:30:24</publishTime>
+      <publishTime>03/29/2022 08:14:04</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.TransactionRulesResponseHfc.datasource">
-      <publishTime>03/10/2022 11:10:01</publishTime>
+      <publishTime>03/29/2022 08:14:05</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.TransactionScheduledResponse.datasource">
-      <publishTime>03/10/2022 11:10:01</publishTime>
+      <publishTime>03/29/2022 08:14:04</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.TypeConfigIpResponse.datasource">
-      <publishTime>03/10/2022 11:10:03</publishTime>
+      <publishTime>03/29/2022 08:14:04</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.UpdateClientSNResponse.datasource">
-      <publishTime>03/10/2022 11:10:02</publishTime>
+      <publishTime>03/29/2022 08:14:04</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.UpdateInter29Response.datasource">
-      <publishTime>03/10/2022 11:10:03</publishTime>
+      <publishTime>03/29/2022 08:14:05</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.UpdateProgTaskLteResponse.datasource">
-      <publishTime>03/10/2022 11:10:03</publishTime>
+      <publishTime>03/28/2022 13:46:17</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.UpdateStateLineEmailResponse.datasource">
-      <publishTime>03/10/2022 10:30:26</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.ValidateActDesServiceResponse.datasource">
-      <publishTime>03/10/2022 11:10:01</publishTime>
+      <publishTime>03/29/2022 08:14:04</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.ValidateCustomerIdResponse.datasource">
-      <publishTime>03/10/2022 11:10:02</publishTime>
+      <publishTime>03/29/2022 08:14:05</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.ValidateDepVelLteResponse.datasource">
-      <publishTime>03/10/2022 11:10:01</publishTime>
+      <publishTime>03/29/2022 08:14:04</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.ValidateElegibilityResponse.datasource">
-      <publishTime>03/10/2022 11:10:01</publishTime>
+      <publishTime>03/29/2022 08:14:04</publishTime>
     </File>
     <File Include="Service References/FixedTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.ValidateIPTVResponse.datasource">
-      <publishTime>03/10/2022 11:10:02</publishTime>
+      <publishTime>03/29/2022 08:14:04</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.ActDesServProgResponse.datasource">
-      <publishTime>03/10/2022 10:30:33</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.AdjustForClaimsResponse.datasource">
-      <publishTime>03/10/2022 10:30:36</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.AgreementResponse.datasource">
-      <publishTime>03/10/2022 10:30:36</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.AmountIncomingCallResponse.datasource">
-      <publishTime>03/10/2022 10:30:33</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.ApprovalBusinessCreditLimitResponse.datasource">
-      <publishTime>03/10/2022 10:30:33</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.AreaResponse.datasource">
-      <publishTime>03/10/2022 10:30:36</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.BillDataResponsePostPaid.datasource">
-      <publishTime>03/10/2022 10:30:33</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.BillingCycleResponse.datasource">
-      <publishTime>03/10/2022 10:30:35</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.BillPostDetailResponseTransactions.datasource">
-      <publishTime>03/10/2022 10:30:35</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.BiometricConfigurationResponse.datasource">
-      <publishTime>03/10/2022 10:30:34</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.CallDetailNBDB1BSCSResponsePostPaid.datasource">
-      <publishTime>03/10/2022 10:30:36</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.CallDetailNBDB1ResponsePostPaid.datasource">
-      <publishTime>03/10/2022 10:30:33</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.ChangePhoneNumber.datasource">
-      <publishTime>03/10/2022 10:30:36</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.ChangePhoneNumberResponse.datasource">
-      <publishTime>03/10/2022 10:30:36</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.CodeChangeCustomerResponse.datasource">
-      <publishTime>03/10/2022 10:30:34</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.ConsultServiceResponse1.datasource">
-      <publishTime>03/10/2022 10:30:33</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.ConsumeLimitResponseTransactions.datasource">
-      <publishTime>03/10/2022 10:30:33</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.ConsumptionStopResponse.datasource">
-      <publishTime>03/10/2022 10:30:35</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.DataByContractResponsePostPaid.datasource">
-      <publishTime>03/10/2022 10:30:34</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.DataByCountResponsePostPaid.datasource">
-      <publishTime>03/10/2022 10:30:36</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.DataCustomerResponsePostPaid.datasource">
-      <publishTime>03/10/2022 10:30:33</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.DataLineResponsePostPaid.datasource">
-      <publishTime>03/10/2022 10:30:35</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.ElementMigrationResponse.datasource">
-      <publishTime>03/10/2022 10:30:34</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.ExecuteMigrationPlanResponseTransactions.datasource">
-      <publishTime>03/10/2022 10:30:35</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.FixedChargeResponseTransactions.datasource">
-      <publishTime>03/10/2022 10:30:33</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.FixedCostBasePlanResponseTransactions.datasource">
-      <publishTime>03/10/2022 10:30:33</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.HLRResponse.datasource">
-      <publishTime>03/10/2022 10:30:33</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.InsertTraceabilityResponse.datasource">
-      <publishTime>03/10/2022 10:30:33</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.ListCallDetailPDIResponseTransactions.datasource">
-      <publishTime>03/10/2022 10:30:33</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.ListCallDetailResponseTransactions.datasource">
-      <publishTime>03/10/2022 10:30:35</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.ListInvoiceResponseTransactions.datasource">
-      <publishTime>03/10/2022 10:30:35</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.ListInvoice_PDIResponseTransactions.datasource">
-      <publishTime>03/10/2022 10:30:34</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.ListItem.datasource">
-      <publishTime>03/10/2022 10:30:33</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.MaintenancePlanResponseTransactions.datasource">
-      <publishTime>03/10/2022 10:30:35</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.MigrationPlanResponseTransactions.datasource">
-      <publishTime>03/10/2022 10:30:36</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.ModifyServiceQuotAmountResponse.datasource">
-      <publishTime>03/10/2022 10:30:36</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.MotiveByAreaResponse.datasource">
-      <publishTime>03/10/2022 10:30:33</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.NewPlanResponseTransactions.datasource">
-      <publishTime>03/10/2022 10:30:35</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.ParameterBusinnesResponse.datasource">
-      <publishTime>03/10/2022 10:30:35</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.PortabilityResponse.datasource">
-      <publishTime>03/10/2022 10:30:36</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.ProgramerMigrationResponse.datasource">
-      <publishTime>03/10/2022 10:30:33</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.QueryAssociatedLinesResponsePostPaid.datasource">
-      <publishTime>03/10/2022 10:30:34</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.ReceiptResponseTransactions.datasource">
-      <publishTime>03/10/2022 10:30:36</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.RechargeListResponseTransactions.datasource">
-      <publishTime>03/10/2022 10:30:35</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.RegisterPlanResponseTransactions.datasource">
-      <publishTime>03/10/2022 10:30:33</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.RetentionCancel1.datasource">
-      <publishTime>03/10/2022 10:30:35</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.ServByTransCodeProductResponse.datasource">
-      <publishTime>03/10/2022 10:30:35</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.ServiceBSCSResponse.datasource">
-      <publishTime>03/10/2022 10:30:36</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.ServiceByContractResponse.datasource">
-      <publishTime>03/10/2022 10:30:34</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.ServicesDTHResponse.datasource">
-      <publishTime>03/10/2022 10:30:35</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.SignDocumentResponse.datasource">
-      <publishTime>03/10/2022 10:30:33</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.SimCardPhone.datasource">
-      <publishTime>03/10/2022 10:30:35</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.StriationsResponse.datasource">
-      <publishTime>03/10/2022 10:30:35</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.SubMotiveResponse.datasource">
-      <publishTime>03/10/2022 10:30:35</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.TarifePlanResponse.datasource">
-      <publishTime>03/10/2022 10:30:33</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.TypeTransactionBRMSResponse1.datasource">
-      <publishTime>03/10/2022 10:30:35</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.UpdateChangeDataResponse.datasource">
-      <publishTime>03/10/2022 10:30:35</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.UpdateInteractionResponse.datasource">
-      <publishTime>03/10/2022 10:30:33</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.UserExistsBSCSResponse.datasource">
-      <publishTime>03/10/2022 10:30:33</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.ValidateActDesServProgResponse.datasource">
-      <publishTime>03/10/2022 10:30:35</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.ValidateBagShareResponseTransactions.datasource">
-      <publishTime>03/10/2022 10:30:33</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.ValidateProgByProductResponseTransactions.datasource">
-      <publishTime>03/10/2022 10:30:35</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PostTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PostTransacService.ValidationProgDeudaBloqSuspResponse.datasource">
-      <publishTime>03/10/2022 10:30:33</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PreTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PreTransacService.CallResponse.datasource">
-      <publishTime>03/10/2022 10:30:28</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PreTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PreTransacService.CambioPlanTFIResponse.datasource">
-      <publishTime>03/10/2022 10:30:28</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PreTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PreTransacService.ConsultPointOfSaleResponse.datasource">
-      <publishTime>03/10/2022 10:30:28</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PreTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PreTransacService.DataBagResponsePrepaid.datasource">
-      <publishTime>03/10/2022 10:30:27</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PreTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PreTransacService.IncomingCallDetailResponsePrepaid.datasource">
-      <publishTime>03/10/2022 10:30:27</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PreTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PreTransacService.LineDataResponsePrepaid.datasource">
-      <publishTime>03/10/2022 10:30:28</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PreTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PreTransacService.RechargeResponse.datasource">
-      <publishTime>03/10/2022 10:30:28</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PreTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PreTransacService.responseDataObtenerTabConsultaPlanTFIPost.datasource">
-      <publishTime>03/10/2022 10:30:28</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Service References/PreTransacService/Claro.SIACU.Web.WebApplication.Transac.Service.PreTransacService.TipifCallOutPrepResponse.datasource">
-      <publishTime>03/10/2022 10:30:28</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Views/Home/DialogTemplate.cshtml">
-      <publishTime>03/10/2022 10:30:24</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>03/10/2022 10:30:24</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Views/web.config">
-      <publishTime>03/10/2022 10:30:02</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>03/10/2022 11:16:35</publishTime>
+      <publishTime>03/28/2022 15:17:03</publishTime>
     </File>
   </ItemGroup>
 </Project>

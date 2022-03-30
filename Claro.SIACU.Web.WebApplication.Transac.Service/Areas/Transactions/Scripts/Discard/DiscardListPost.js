@@ -121,6 +121,14 @@ console.log(SessionTransac);
             center: function () {
                 var lab = document.createElement("center");
                 return lab;
+            },
+            c_Element: function (id, values, clasname, element, type) {
+                var divRow = document.createElement(element);
+                divRow.className = clasname;
+                divRow.id = id;
+                divRow.type = type;
+                divRow.value = values;
+                return divRow;
             }
         },
         OcultarBdRe: 0,
@@ -141,6 +149,13 @@ console.log(SessionTransac);
         servicioVolte: '',
         //FIN: INICIATIVA-986 - CONTINUE
         blTipificacionReinicioRedDatos: '',
+        BannerGrupo: '986',
+        BannerAccion: 'S',
+        BannerUsuario: '',
+        BannerFecha: '',
+        BannerDescripcion: '',
+        BannerPermiso: '',
+        BannerAccionBtn: '',
 
         ValidarAcceso: function (callback) {
 
@@ -179,7 +194,7 @@ console.log(SessionTransac);
                 });
             }
         },
-OcultarBodyDetRec: function () {
+        OcultarBodyDetRec: function () {
             var that = this;
             if (that.OcultarBdRe == 0) {
                 document.getElementById("divTabletBody17").removeAttribute('style');
@@ -192,12 +207,12 @@ OcultarBodyDetRec: function () {
 
         //INI: INICIATIVA-986 - CONTINUE
         f_ProcesarContinue: function (object) {
-			var that = this;
-			if(object.id == 'btnAplicarContinueOtros'){
-				that.escenarioContingencia = 'Otros Escenarios';
-				that.accionContingencia = 'A';
-			}
-			
+            var that = this;
+            if (object.id == 'btnAplicarContinueOtros') {
+                that.escenarioContingencia = 'Otros Escenarios';
+                that.accionContingencia = 'A';
+            }
+
             showLoading('Procesando...');
             var oCustomer = SessionTransac.SessionParams.DATACUSTOMER;
             var objServicio = SessionTransac.SessionParams.DATASERVICE;
@@ -245,12 +260,12 @@ OcultarBodyDetRec: function () {
                         if (response.data != null) {
                             if (response.data.Code == "0") {
                                 alert(response.data.Description);
-								if(that.accionContingencia == 'A'){
-									document.getElementById('btnAplicarContinue').style.display = 'none';
-								}
-								else{
-									document.getElementById('btnRetirarContinue').style.display = 'none';
-								}
+                                if (that.accionContingencia == 'A') {
+                                    document.getElementById('btnAplicarContinue').style.display = 'none';
+                                }
+                                else {
+                                    document.getElementById('btnRetirarContinue').style.display = 'none';
+                                }
                                 that.f_actualizarDescartesPostContinue();
                             }
                             else {
@@ -292,51 +307,51 @@ OcultarBodyDetRec: function () {
             });
         },
         //FIN: INICIATIVA-986 - CONTINUE
-		
-		//INI: INICIATIVA-986 - OTROS ESCENARIOS CONTINUE
-		f_ProcesarContinueOtros: function (object) {
-			if(object.id == 'btnAplicarContinueOtros'){
-				alert('Entro 1');
-			}
-			else{
-				alert('Entro 2');
-			}
-		},
-		//INI: INICIATIVA-986 - OTROS ESCENARIOS CONTINUE
-		
+
+        //INI: INICIATIVA-986 - OTROS ESCENARIOS CONTINUE
+        f_ProcesarContinueOtros: function (object) {
+            if (object.id == 'btnAplicarContinueOtros') {
+                alert('Entro 1');
+            }
+            else {
+                alert('Entro 2');
+            }
+        },
+        //INI: INICIATIVA-986 - OTROS ESCENARIOS CONTINUE
+
         //INI: INICIATIVA-986 - TIPIFICACION REINICIO DE RED - DATOS MOVILES
         f_RegistrarTipificacionRedDatos: function (id) {
             showLoading('Procesando...');
             var that = this;
             var oCustomer = SessionTransac.SessionParams.DATACUSTOMER;
             var strLinea = ''; //HARCODEO
-			var strContactCode = '';
-			var strTipoInconveniente = '';
-			
-			if(id == 'btnTipificacionRed'){
-				strTipoInconveniente = '12750225';
-			}
-			else{
-				strTipoInconveniente = '12750220';
-			}
-			 
+            var strContactCode = '';
+            var strTipoInconveniente = '';
+
+            if (id == 'btnTipificacionRed') {
+                strTipoInconveniente = '12750225';
+            }
+            else {
+                strTipoInconveniente = '12750220';
+            }
+
             if ($.isEmptyObject(oCustomer) == false) {
                 strLinea = ((oCustomer.Telephone == null || oCustomer.Telephone == '') ?
 						(oCustomer.TelephoneCustomer == null || oCustomer.TelephoneCustomer == '') ? '' : oCustomer.TelephoneCustomer
 						: oCustomer.Telephone);
-				strContactCode = SessionTransac.SessionParams.DATACUSTOMER.ContactCode; //'391070108'; //
+                strContactCode = SessionTransac.SessionParams.DATACUSTOMER.ContactCode; //'391070108'; //
             }
-			
-			//strLinea = '997101267'; //HARCODEO
-			
+
+            //strLinea = '997101267'; //HARCODEO
+
             var objRequestTipificacion = {
                 strIdSession: Session.IDSESSION,
                 objRequestTipificacion: {
                     Linea: strLinea,
                     ContactCode: strContactCode,
-					Notas: '',
-					TipoVenta: 'POSTPAGO',
-					TipoInconveniente: strTipoInconveniente
+                    Notas: '',
+                    TipoVenta: 'POSTPAGO',
+                    TipoInconveniente: strTipoInconveniente
                 }
             };
 
@@ -471,21 +486,21 @@ OcultarBodyDetRec: function () {
                                                 contUDB = 1;
                                             }
                                         } else {
-                                        var lblDato = valueItemls.split(",")[3];
-                                        var ColorTexto = '';
-                                        if (value.flag_OK != null) {
-                                            if (value.flag_OK == '0') {
-                                                ColorTexto = 'text-danger';
-                                            } else if (value.flag_OK == '1') {
-                                                ColorTexto = 'text-success';
+                                            var lblDato = valueItemls.split(",")[3];
+                                            var ColorTexto = '';
+                                            if (value.flag_OK != null) {
+                                                if (value.flag_OK == '0') {
+                                                    ColorTexto = 'text-danger';
+                                                } else if (value.flag_OK == '1') {
+                                                    ColorTexto = 'text-success';
+                                                }
                                             }
-                                        }
-                                        document.getElementById(lblDato).removeAttribute('class');
-                                        document.getElementById(lblDato).setAttribute('class', 'control-label ' + ColorTexto + ' line ');
-                                        document.getElementById(lblDato).innerHTML = '&nbsp;&nbsp;' + value.descarteValor;
-                                        if (value.flag_Error != 0) {
-                                            cont2++;
-                                        }
+                                            document.getElementById(lblDato).removeAttribute('class');
+                                            document.getElementById(lblDato).setAttribute('class', 'control-label ' + ColorTexto + ' line ');
+                                            document.getElementById(lblDato).innerHTML = '&nbsp;&nbsp;' + value.descarteValor;
+                                            if (value.flag_Error != 0) {
+                                                cont2++;
+                                            }
                                         }
                                     } else {
                                         if ((valueItemls.split(",")[1] == 17 || valueItemls.split(",")[1] == 25 || valueItemls.split(",")[1] == 29) && value.flag_Error == 0) {
@@ -622,6 +637,97 @@ OcultarBodyDetRec: function () {
                 that.list_idDescarte = "";
             }
         },
+
+        MetBannerActualizar: function (e) {
+            console.log("MetBannerActualizar");
+            var that = this;
+            that.BannerAccion = 'U';
+            var idEliminarBan = $(e).attr('id');
+
+            if (idEliminarBan == "btnFallaElim") {
+                document.getElementById("txtFalla").value = "";
+                that.BannerAccionBtn = 'E';
+            }
+            that.BannerDescripcion = document.getElementById("txtFalla").value;
+            that.MetBannerDescartesAcBus();
+        },
+
+        MetBannerDescartesAcBus: function () {
+            console.log("MetBannerDescartesAcBus");
+            var that = this;
+
+            if (that.BannerDescripcion == "") {
+                that.BannerDescripcion = " ";
+            }
+
+            var objRequest = {
+                strIdSession: Session.IDSESSION,
+                bannerDescartesRequest: {
+                    descripcion: that.BannerDescripcion,
+                    usuario: that.BannerUsuario,
+                    fecha: that.BannerFecha,
+                    grupo: that.BannerGrupo,
+                    accion: that.BannerAccion
+                }
+            };
+
+            $.app.ajax({
+                type: 'POST',
+                contentType: "application/json; charset=utf-8",
+                dataType: 'json',
+                url: '/Transactions/Fixed/Discard/BannerDescartesAcBus',
+                data: JSON.stringify(objRequest),
+                success: function (response) {
+                    if (response != null) {
+                        if (response.data != null) {
+                            if (response.data.bannerDescartesResponse != null) {
+                                if (response.data.bannerDescartesResponse.responseAudit != null) {
+                                    if (response.data.bannerDescartesResponse.responseAudit.codigoRespuesta == "0") {
+                                if (response.data.bannerDescartesResponse.responseData != null) {
+                                            if (response.data.bannerDescartesResponse.responseData.descripcion != null) {
+                                        var strdescripcion = document.getElementById('txtFalla');
+                                                if (response.data.bannerDescartesResponse.responseData.descripcion.trim() != "") {
+                                                    strdescripcion.value = response.data.bannerDescartesResponse.responseData.descripcion.trim();
+                                                } else {
+                                                    if (that.BannerPermiso == "1") {
+                                                        strdescripcion.value = response.data.bannerDescartesResponse.responseData.descripcion.trim();
+                                                    } else {
+                                                        var DivBanner = document.getElementById('idBanner');
+                                                        DivBanner.style.display = 'none';
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        if (that.BannerAccion == 'U') {
+                                            if (that.BannerAccionBtn == 'E') {
+                                                alert("Banner Eliminado Correctamente");
+                                            } else {
+                                                alert("Banner Actualizado Correctamente");
+                                            }
+                                        }
+                                    } else {
+                                        if (that.BannerAccion == 'U') {
+                                            if (that.BannerAccionBtn == 'E') {
+                                                alert("Banner No Eliminado");
+                                            } else {
+                                                alert("Banner No Actualizado");
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                error: function (msger) {
+                    console.log(msger);
+                    var strdescripcion = document.getElementById('txtFalla');
+                    strdescripcion.value = "";
+                    callback();
+                }
+            });
+        },
+
         GetInfoTableDiscard: function () {
 
             var that = this,
@@ -638,33 +744,58 @@ OcultarBodyDetRec: function () {
                 var IdGrupoInternetPostpago = GetKeyConfig("strIdGrupoInternetPostpago");
                 var IdGrupoSMSPostpago = GetKeyConfig("strIdGrupoSMSPostpago");
 
-				//INI: INICIATIVA-986 - CONTINUE
-				var perfilesPermitidosContinue = GetKeyConfig("PerfilesPermitidosContinue").split(','); 
-				var objUserAccess = SessionTransac.SessionParams.USERACCESS;
-				var blPerfilPermitidosContinue = false;
-				
-				$.grep(perfilesPermitidosContinue, function(value){
-					if(value == objUserAccess.profileId){
-						blPerfilPermitidosContinue = true;
-					}
-				});
-				console.log('blPerfilPermitidosContinue: ' + blPerfilPermitidosContinue);
-				//FIN: INICIATIVA-986 - CONTINUE
-				
-				//INI: INICIATIVA-986 - OTROS ESCENARIOS CONTINUE
-				var usuariosPermitidosContinueOtros = GetKeyConfig("UsuariosPermitidosContinueOtrosEscenarios").split(','); 
-				var objUserAccess = SessionTransac.SessionParams.USERACCESS;
-				var blUsuarioPermitidoContinueOtros = false;
-				
-				$.grep(usuariosPermitidosContinueOtros, function(value){
-					if(value == objUserAccess.login){
-						blUsuarioPermitidoContinueOtros = true;
-					}
-				});
-				console.log('blUsuarioPermitidoContinueOtros: ' + blUsuarioPermitidoContinueOtros);
-				//FIN: INICIATIVA-986 - OTROS ESCENARIOS CONTINUE
-				
-				
+                //INI: INICIATIVA-986 - CONTINUE
+                var perfilesPermitidosContinue = GetKeyConfig("PerfilesPermitidosContinue").split(',');
+                var objUserAccess = SessionTransac.SessionParams.USERACCESS;
+                var blPerfilPermitidosContinue = false;
+
+                $.grep(perfilesPermitidosContinue, function (value) {
+                    if (value == objUserAccess.profileId) {
+                        blPerfilPermitidosContinue = true;
+                    }
+                });
+                //console.log('blPerfilPermitidosContinue: ' + blPerfilPermitidosContinue);
+                //FIN: INICIATIVA-986 - CONTINUE
+
+                //INI: INICIATIVA-986 - OTROS ESCENARIOS CONTINUE
+                var usuariosPermitidosContinueOtros = GetKeyConfig("UsuariosPermitidosContinueOtrosEscenarios").split(',');
+                var blUsuarioPermitidoContinueOtros = false;
+
+                $.grep(usuariosPermitidosContinueOtros, function (value) {
+                    if (value == objUserAccess.login) {
+                        blUsuarioPermitidoContinueOtros = true;
+                    }
+                });
+                //console.log('blUsuarioPermitidoContinueOtros: ' + blUsuarioPermitidoContinueOtros);
+                //FIN: INICIATIVA-986 - OTROS ESCENARIOS CONTINUE
+
+                //INI: INICIATIVA-986 - BANNER
+                var divBanner = $(that.CrearControl.c_Element('idBanner', '', 'c_Banner', 'div', ''));
+                var banInput = $(that.CrearControl.c_Element('txtFalla', '', 'txtFallas', 'input', 'text'));
+                divBanner.append(banInput);
+
+                var perfilesPermitidosBanner = GetKeyConfig("PerfilesPermitidosContinue").split('|');
+                $.grep(perfilesPermitidosBanner, function (value) {
+                    if (value == objUserAccess.profileId) {
+                        var banbtnElim = $(that.CrearControl.c_Element('btnFallaElim', 'Eliminar', 'btnFallaBann', 'input', 'button'));
+                        var banbtnActu = $(that.CrearControl.c_Element('btnFallaAct', 'Actualizar', 'btnFallaBann', 'input', 'button'));
+                        banbtnActu.addEvent(that, 'click', that.MetBannerActualizar);
+                        banbtnElim.addEvent(that, 'click', that.MetBannerActualizar);
+                        var Bfecha = new Date();
+                        that.BannerFecha = Bfecha.getDate() + "/" + (Bfecha.getMonth() + 1) + "/" + Bfecha.getFullYear();
+                        that.BannerUsuario = objUserAccess.login;
+                        that.BannerPermiso = '1';
+                        divBanner.append(banbtnElim);
+                        divBanner.append(banbtnActu);
+                    } else {
+                        banInput.attr("disabled", "");
+                    }
+                });
+                controls.divContenedor.append(divBanner);
+                that.MetBannerDescartesAcBus();
+
+                //FIN: INICIATIVA-986 - BANNER
+
                 $.grep(that.dataListDescartes.listaGrupos, function (ItemGroup) {
 
                     var classActive = '';
@@ -744,7 +875,7 @@ OcultarBodyDetRec: function () {
                         });
 
                         if (ListaDescartesGrupo != null) {
-                            console.log(JSON.stringify(ListaDescartesGrupo));
+                            //console.log(JSON.stringify(ListaDescartesGrupo));
                             if (ListaDescartesGrupo.length > 0) {
                                 var conTitu = 0;
                                 $.each(ListaDescartesGrupo, function (index, value) {
@@ -876,8 +1007,8 @@ OcultarBodyDetRec: function () {
                                     //Obtener valor de descarte "SIAC - VoLTE"
                                     if (value.id_descarte == '86') {
                                         that.servicioVolte = value.descarteValor;
-                                        console.log("VOLTE");
-                                        console.log(that.servicioVolte);
+                                        //console.log("VOLTE");
+                                        //console.log(that.servicioVolte);
                                     }
                                 });
                             }
@@ -983,42 +1114,42 @@ OcultarBodyDetRec: function () {
                                         }
                                     } else {
 
-                                    var divTabletBodytr = $(that.CrearControl.tr('divTabletBodytr' + ItemGroup.degriIdGrupo, '')); //armamos fila
-                                    var divTabletBodytrFirstTD = $(that.CrearControl.td('divTabletBodytrFirstTD' + ItemGroup.degriIdGrupo, '30%')); //armamos fila
+                                        var divTabletBodytr = $(that.CrearControl.tr('divTabletBodytr' + ItemGroup.degriIdGrupo, '')); //armamos fila
+                                        var divTabletBodytrFirstTD = $(that.CrearControl.td('divTabletBodytrFirstTD' + ItemGroup.degriIdGrupo, '30%')); //armamos fila
                                         var divTabletBodytrSecondTD = $(that.CrearControl.td('divTabletBodytrSecondTD' + value.id_descarte, '30%')); //armamos fila //PRUEBA CONTINUE
-                                    var divTabletBodytrFirstTDLabel = $(that.CrearControl.Label('divTabletBodytrFirstTDLabel' + ItemGroup.degriIdGrupo, 'control-label ', value.desc_descarte)); //armamos fila
+                                        var divTabletBodytrFirstTDLabel = $(that.CrearControl.Label('divTabletBodytrFirstTDLabel' + ItemGroup.degriIdGrupo, 'control-label ', value.desc_descarte)); //armamos fila
 
-                                    if (value.flag_OK != null) {
-                                        if (value.flag_OK == '0') {
-                                            ColorTexto = 'text-danger';
-                                        } else if (value.flag_OK == '1') {
-                                            ColorTexto = 'text-success';
-                                        }                                        
-                                    }
+                                        if (value.flag_OK != null) {
+                                            if (value.flag_OK == '0') {
+                                                ColorTexto = 'text-danger';
+                                            } else if (value.flag_OK == '1') {
+                                                ColorTexto = 'text-success';
+                                            }
+                                        }
 
                                         var idLabel = 'divTabletBodytrSecondTDLabel' + value.id_descarte; //PRUEBA CONTINUE ItemGroup.degriIdGrupo
 
-                                    if (value.flag_Error != 0) {
-                                        if (conTitu == 0) {
-                                            var btnTitu = $(that.CrearControl.btn(value.nombre_variable, "", "btnActualizar"));
-                                            btnTitu.addEvent(that, 'click', that.MetbtnActualizartab);
-                                            divTabletrTh.append("<h43>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h43>");
-                                            divTabletrTh.append(btnTitu);
-                                        }
-                                        conTitu++;
+                                        if (value.flag_Error != 0) {
+                                            if (conTitu == 0) {
+                                                var btnTitu = $(that.CrearControl.btn(value.nombre_variable, "", "btnActualizar"));
+                                                btnTitu.addEvent(that, 'click', that.MetbtnActualizartab);
+                                                divTabletrTh.append("<h43>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h43>");
+                                                divTabletrTh.append(btnTitu);
+                                            }
+                                            conTitu++;
                                             idLabel = 'divTabletBodytrSecondTDLabel' + value.id_descarte + conTitu; //PRUEBA CONTINUE ItemGroup.degriIdGrupo
-                                        var MetTex = ItemGroup.degriIdGrupo + "," + value.id_descarte + "," + value.nombre_variable + "," + idLabel;
-                                        that.CadenaDescartes = MetTex + ";" + that.CadenaDescartes;
-                                    }
+                                            var MetTex = ItemGroup.degriIdGrupo + "," + value.id_descarte + "," + value.nombre_variable + "," + idLabel;
+                                            that.CadenaDescartes = MetTex + ";" + that.CadenaDescartes;
+                                        }
 
-                                    var divTabletBodytrSecondTDLabel = $(that.CrearControl.Label(idLabel, 'control-label ' + ColorTexto, value.descarteValor == null ? '' : value.descarteValor)); //armamos fila
-                                    
-                                    divTabletBodytrFirstTD.append(divTabletBodytrFirstTDLabel);
-                                    divTabletBodytrSecondTD.append(divTabletBodytrSecondTDLabel);
-                                    divTabletBodytr.append(divTabletBodytrFirstTD);
-                                    divTabletBodytr.append(divTabletBodytrSecondTD);
-                                    divTabletBody.append(divTabletBodytr);
-                                    divTable.append(divTabletBody);
+                                        var divTabletBodytrSecondTDLabel = $(that.CrearControl.Label(idLabel, 'control-label ' + ColorTexto, value.descarteValor == null ? '' : value.descarteValor)); //armamos fila
+
+                                        divTabletBodytrFirstTD.append(divTabletBodytrFirstTDLabel);
+                                        divTabletBodytrSecondTD.append(divTabletBodytrSecondTDLabel);
+                                        divTabletBodytr.append(divTabletBodytrFirstTD);
+                                        divTabletBodytr.append(divTabletBodytrSecondTD);
+                                        divTabletBody.append(divTabletBodytr);
+                                        divTable.append(divTabletBody);
                                     }
 
                                     //INI: INICIATIVA-986 - TIPIFICACION REINICIO DE RED - DATOS MOVILES
@@ -1030,30 +1161,30 @@ OcultarBodyDetRec: function () {
                                     //FIN: INICIATIVA-986 - TIPIFICACION REINICIO DE RED - DATOS MOVILES
 
                                     //INI: INICIATIVA-986 - CONTINUE
-									if(blPerfilPermitidosContinue){
-                                    if (value.id_descarte == '7') {
-                                        if (value.descarteValor == 'Línea no provisionada') {
-                                            that.lineaNoProvisionada = value.descarteValor;
+                                    if (blPerfilPermitidosContinue) {
+                                        if (value.id_descarte == '7') {
+                                            if (value.descarteValor == 'Línea no provisionada') {
+                                                that.lineaNoProvisionada = value.descarteValor;
+                                            }
+                                            else if (value.descarteValor == 'Línea provisionada') {
+                                                blLineaProvisionada = true;
+                                            }
                                         }
-                                        else if (value.descarteValor == 'Línea provisionada') {
-                                            blLineaProvisionada = true;
+                                        else if (value.id_descarte == '8') {
+                                            if (value.descarteValor == 'Plan no provisionado') {
+                                                that.planNoProvisionado = value.descarteValor;
+                                            }
+                                            else if (value.descarteValor == 'Desalineación de plan') {
+                                                that.desalineacionDePlan = value.descarteValor;
+                                            }
+                                            else if (value.descarteValor == 'Plan provisionado') {
+                                                blPlanProvisionado = true;
+                                            }
+                                        }
+                                        else if (value.id_descarte == '15' && value.descarteValor == 'NORM (Línea en contingencia)') {
+                                            blChargingNORM = true;
                                         }
                                     }
-                                    else if (value.id_descarte == '8') {
-                                        if (value.descarteValor == 'Plan no provisionado') {
-                                            that.planNoProvisionado = value.descarteValor;
-                                        }
-                                        else if (value.descarteValor == 'Desalineación de plan') {
-                                            that.desalineacionDePlan = value.descarteValor;
-                                        }
-                                        else if (value.descarteValor == 'Plan provisionado') {
-                                            blPlanProvisionado = true;
-                                        }
-                                    }
-                                    else if (value.id_descarte == '15' && value.descarteValor == 'NORM (Línea en contingencia)') {
-                                        blChargingNORM = true;
-                                    }
-									}
                                     //FIN: INICIATIVA-986 - CONTINUE
                                 });
                             }
@@ -1065,113 +1196,123 @@ OcultarBodyDetRec: function () {
                         divPanel.append(divPanelBody);
                         controls.divContenedor.append(divPanel);
 
-						//INI: INICIATIVA-986 - OTROS ESCENARIOS CONTINUE
-						if (ItemGroup.degriIdGrupo == 2) {
-							if(blUsuarioPermitidoContinueOtros){
-								var btnAplicarContinueOtros = document.createElement("input");
-									btnAplicarContinueOtros.className = 'btn claro-btn-info btn-xs';
-									btnAplicarContinueOtros.id = 'btnAplicarContinueOtros';
-									btnAplicarContinueOtros.type = 'button';
-									btnAplicarContinueOtros.value = 'Contingencia Otros Escenarios';
-									btnAplicarContinueOtros.setAttribute("style", "text-align:center; cursor:pointer; margin-top: 6px; margin-left: -20px;")
-									btnAplicarContinueOtros.onclick = function () { that.f_ProcesarContinue(this) };
-										
-								$('#divColumnTerceroPanelBody2').append(btnAplicarContinueOtros);
-							}
-						}
-						//FIN: INICIATIVA-986 - OTROS ESCENARIOS CONTINUE
+                        //INI: INICIATIVA-986 - OTROS ESCENARIOS CONTINUE
+                        if (ItemGroup.degriIdGrupo == 2) {
+                            if (blUsuarioPermitidoContinueOtros) {
+                                var btnAplicarContinueOtros = document.createElement("input");
+                                btnAplicarContinueOtros.className = 'btn claro-btn-info btn-xs';
+                                btnAplicarContinueOtros.id = 'btnAplicarContinueOtros';
+                                btnAplicarContinueOtros.type = 'button';
+                                btnAplicarContinueOtros.value = 'Contingencia Otros Escenarios';
+                                btnAplicarContinueOtros.setAttribute("style", "text-align:center; cursor:pointer; margin-top: 6px; margin-left: -20px;")
+                                btnAplicarContinueOtros.onclick = function () { that.f_ProcesarContinue(this) };
+
+                                $('#divColumnTerceroPanelBody2').append(btnAplicarContinueOtros);
+                            }
+                        }
+                        //FIN: INICIATIVA-986 - OTROS ESCENARIOS CONTINUE
 
                         //INI: INICIATIVA-986 - CONTINUE
-						if(blPerfilPermitidosContinue){
-							//Validar que accion de continue se debe realizar
-							if (that.lineaNoProvisionada != '' && !blChargingNORM) {
-								that.accionContingencia = 'A'; //Aplicar continue
-							}
-							else if (that.planNoProvisionado != '' && !blChargingNORM) {
-								that.accionContingencia = 'A'; //Aplicar continue
-							}
-							else if (that.desalineacionDePlan != '' && !blChargingNORM) {
-								that.accionContingencia = 'A'; //Aplicar continue
-							}
-							else if (blLineaProvisionada && blPlanProvisionado && blChargingNORM) {
-								that.accionContingencia = 'R'; //Retirar continue
-							}
-	
-							//Validar que escenario de continue se debe registrar
-							if (that.lineaNoProvisionada != '' && that.lineaNoProvisionada != undefined) {
-								that.escenarioContingencia = that.lineaNoProvisionada;
-							}
-							else if (that.planNoProvisionado != '' && that.planNoProvisionado != undefined) {
-								that.escenarioContingencia = that.planNoProvisionado;
-							}
-							else if (that.desalineacionDePlan != '' && that.desalineacionDePlan != undefined) {
-								that.escenarioContingencia = that.desalineacionDePlan;
-							}
-	
-							//HARCODEO
-							//that.accionContingencia = 'R';
-							//that.escenarioContingencia = 'Línea no provisionada';
-							//HARCODEO
-							if (ItemGroup.degriIdGrupo == 2) {
-								//Validar que boton de accion de continue mostrar
-								if (that.accionContingencia == 'A') {
-									var btnAplicarContinue = document.createElement("input");
-									btnAplicarContinue.className = 'btn claro-btn-info btn-xs';
-									btnAplicarContinue.id = 'btnAplicarContinue';
-									btnAplicarContinue.type = 'button';
-									btnAplicarContinue.value = 'Aplicar Contingencia';
-									btnAplicarContinue.setAttribute("style", "text-align:center; cursor:pointer;")
-									btnAplicarContinue.onclick = function () { that.f_ProcesarContinue(this) };
-									
-									if (that.escenarioContingencia == that.lineaNoProvisionada) {
-										$('#divTabletBodytrSecondTD7').append(btnAplicarContinue);
-									}
-									else if (that.escenarioContingencia == that.planNoProvisionado || that.escenarioContingencia == that.escenarioContingencia) {
-										$('#divTabletBodytrSecondTD8').append(btnAplicarContinue);
-									}
-								}
-								else if (that.accionContingencia == 'R') {
-									var btnRetirarContinue = document.createElement("input");
-									btnRetirarContinue.className = 'btn claro-btn-info btn-xs';
-									btnRetirarContinue.id = 'btnRetirarContinue';
-									btnRetirarContinue.type = 'button';
-									btnRetirarContinue.value = 'Retirar Contingencia';
-									btnRetirarContinue.setAttribute("style", "text-align:center; cursor:pointer;")
-									btnRetirarContinue.onclick = function () { that.f_ProcesarContinue(this) };
-	
-									$('#divTabletBodytrSecondTD15').append(btnRetirarContinue);
-								}
-							}
-						}
+                        if (blPerfilPermitidosContinue) {
+                            //Validar que accion de continue se debe realizar
+                            if (that.lineaNoProvisionada != '' && !blChargingNORM) {
+                                that.accionContingencia = 'A'; //Aplicar continue
+                            }
+                            else if (that.planNoProvisionado != '' && !blChargingNORM) {
+                                that.accionContingencia = 'A'; //Aplicar continue
+                            }
+                            else if (that.desalineacionDePlan != '' && !blChargingNORM) {
+                                that.accionContingencia = 'A'; //Aplicar continue
+                            }
+                            else if (blLineaProvisionada && blPlanProvisionado && blChargingNORM) {
+                                that.accionContingencia = 'R'; //Retirar continue
+                            }
+
+                            //Validar que escenario de continue se debe registrar
+                            if (that.lineaNoProvisionada != '' && that.lineaNoProvisionada != undefined) {
+                                that.escenarioContingencia = that.lineaNoProvisionada;
+                            }
+                            else if (that.planNoProvisionado != '' && that.planNoProvisionado != undefined) {
+                                that.escenarioContingencia = that.planNoProvisionado;
+                            }
+                            else if (that.desalineacionDePlan != '' && that.desalineacionDePlan != undefined) {
+                                that.escenarioContingencia = that.desalineacionDePlan;
+                            }
+
+                            //HARCODEO
+                            //that.accionContingencia = 'R';
+                            //that.escenarioContingencia = 'Línea no provisionada';
+                            //HARCODEO
+                            if (ItemGroup.degriIdGrupo == 2) {
+                                //Validar que boton de accion de continue mostrar
+                                if (that.accionContingencia == 'A') {
+                                    var btnAplicarContinue = document.createElement("input");
+                                    btnAplicarContinue.className = 'btn claro-btn-info btn-xs';
+                                    btnAplicarContinue.id = 'btnAplicarContinue';
+                                    btnAplicarContinue.type = 'button';
+                                    btnAplicarContinue.value = 'Aplicar Contingencia';
+                                    btnAplicarContinue.setAttribute("style", "text-align:center; cursor:pointer;")
+                                    btnAplicarContinue.onclick = function () { that.f_ProcesarContinue(this) };
+
+                                    if (that.escenarioContingencia == that.lineaNoProvisionada) {
+                                        $('#divTabletBodytrSecondTD7').append(btnAplicarContinue);
+                                    }
+                                    else if (that.escenarioContingencia == that.planNoProvisionado || that.escenarioContingencia == that.escenarioContingencia) {
+                                        $('#divTabletBodytrSecondTD8').append(btnAplicarContinue);
+                                    }
+                                }
+                                else if (that.accionContingencia == 'R') {
+                                    var btnRetirarContinue = document.createElement("input");
+                                    btnRetirarContinue.className = 'btn claro-btn-info btn-xs';
+                                    btnRetirarContinue.id = 'btnRetirarContinue';
+                                    btnRetirarContinue.type = 'button';
+                                    btnRetirarContinue.value = 'Retirar Contingencia';
+                                    btnRetirarContinue.setAttribute("style", "text-align:center; cursor:pointer;")
+                                    btnRetirarContinue.onclick = function () { that.f_ProcesarContinue(this) };
+
+                                    $('#divTabletBodytrSecondTD15').append(btnRetirarContinue);
+                                }
+                            }
+                        }
                         //FIN: INICIATIVA-986 - CONTINUE
 
                         //INI: INICIATIVA-986 - TIPIFICACION REINICIO DE RED - DATOS MOVILES
                         if (ItemGroup.degriIdGrupo == 11) {
                             if (that.blTipificacionReinicioRedDatos) {
                                 //Crear botones de Tipificacion de Reinicio de Red y Datos Moviles
-                                var btnTipificacionRed = $(that.CrearControl.btn("btnTipificacionRed", "Reinicio de Red", "btn claro-btn-info btn-xs"));
-                                btnTipificacionRed.attr("style", "text-align:center; cursor:pointer;");
-                                //btnTipificacionRed.addEvent(that, 'click', that.f_RegistrarTipificacionRedDatos);
-
-                                var btnTipificacionDatosMoviles = $(that.CrearControl.btn("btnTipificacionDatosMoviles", "Reinicio Datos Móviles", "btn claro-btn-info btn-xs"));
+                                var btnTipificacionDatosMoviles = $(that.CrearControl.btn("btnTipificacionDatosMoviles", "Datos Móviles", "btn claro-btn-info btn-xs"));
                                 btnTipificacionDatosMoviles.attr("style", "text-align:center; cursor:pointer;");
-                                //btnTipificacionDatosMoviles.addEvent(that, 'click', that.f_RegistrarTipificacionRedDatos);
+
+                                var btnTipificacionRed = $(that.CrearControl.btn("btnTipificacionRed", "Equipo", "btn claro-btn-info btn-xs"));
+                                btnTipificacionRed.attr("style", "text-align:center; cursor:pointer;");
+
+                                var btnTipificacionRedDatos = $(that.CrearControl.btn("btnTipificacionRedDatos", "Red Datos", "btn claro-btn-info btn-xs"));
+                                btnTipificacionRedDatos.attr("style", "text-align:center; cursor:pointer;");
+
+                                var btnTipificacionRedVozDatos = $(that.CrearControl.btn("btnTipificacionRedVozDatos", "Red Voz y Datos", "btn claro-btn-info btn-xs"));
+                                btnTipificacionRedVozDatos.attr("style", "text-align:center; cursor:pointer;");
 
                                 //Crear border para agrupar botones
                                 var divBorderCuadro = $(that.CrearControl.Div('divBorderCuadro', 'panel panel-default'));
-                                divBorderCuadro.attr("style", "padding: 1%");
+                                divBorderCuadro.attr("style", "padding: 1%; margin-top: -10px; margin-bottom: 7px;");
+                                divBorderCuadro.append(btnTipificacionDatosMoviles);
+                                divBorderCuadro.append('&nbsp;&nbsp;&nbsp;');
                                 divBorderCuadro.append(btnTipificacionRed);
                                 divBorderCuadro.append('&nbsp;&nbsp;&nbsp;');
-                                divBorderCuadro.append(btnTipificacionDatosMoviles);
+                                divBorderCuadro.append(btnTipificacionRedDatos);
+                                divBorderCuadro.append('&nbsp;&nbsp;&nbsp;');
+                                divBorderCuadro.append(btnTipificacionRedVozDatos);
+                                divBorderCuadro.append('<br></br>');
 
                                 //Crear nuevo TD para agregar el border de los botones
                                 var tdBotonesTipificaciones = $(that.CrearControl.td('tdBotonesTipificaciones', "25%"));
                                 tdBotonesTipificaciones.append('<br>');
                                 tdBotonesTipificaciones.append(divBorderCuadro);
                                 $('#divTabletBodytr11').append(tdBotonesTipificaciones); //Agregar nuevo TD al TR divTabletBodytr11
-                                $('#divTabletBodytrSecondTD57').attr("width", "5%"); //Minimizar tamaño de divTabletBodytrSecondTD57
+                                $('#divTabletBodytrFirstTD11').attr("width", "18%"); //Minimizar tamaño de divTabletBodytrFirstTD11
+                                $('#divTabletBodytrSecondTD57').attr("width", "3%"); //Minimizar tamaño de divTabletBodytrSecondTD57
                             }
-						}
+                        }
                         //FIN: INICIATIVA-986 - TIPIFICACION REINICIO DE RED - DATOS MOVILES
                     }
                 });
@@ -1183,7 +1324,7 @@ OcultarBodyDetRec: function () {
            controls = this.getControls();
 
             if (that.CadenaDescartes == "") {
-            showLoading('Cargando información de descartes.');
+                showLoading('Cargando información de descartes.');
             }
 
             var oCustomer = SessionTransac.SessionParams.DATACUSTOMER;
@@ -1209,9 +1350,9 @@ OcultarBodyDetRec: function () {
 
             var varConsultDiscardRTIRequest = {
                 consultarDescartesRtiPrePostRequest: {
-                coId: ContractID,
-                msisdn: Telefono,
-                tipoLinea: TipoLinea
+                    coId: ContractID,
+                    msisdn: Telefono,
+                    tipoLinea: TipoLinea
                 }
             };
 
@@ -1221,14 +1362,14 @@ OcultarBodyDetRec: function () {
                     Body: varConsultDiscardRTIRequest
                 },
                 requestToBe: {
-                    consultarDescartesRtiRequest:{
+                    consultarDescartesRtiRequest: {
                         coId: ContractID,
-                        coIdPub: oCustomer.coIdPub, 
+                        coIdPub: oCustomer.coIdPub,
                         msisdn: Telefono,
                         tipoLinea: TipoLinea,
                         customerId: oCustomer.CustomerID,
                         flagConvivencia: oCustomer.objPostDataAccount.plataformaAT == that.FLA_PLATFORM_CONST.ASIS ? that.FLAG_MIGRATED_CONST.BSCS70 : SessionTransac.SessionParams.DATACUSTOMER.flagConvivencia == that.FLAG_COEXISTENCE_CONST.MIGRATED ? that.FLAG_MIGRATED_CONST.MIGRADO : that.FLAG_MIGRATED_CONST.TOBE
-                }
+                    }
                 },
                 plataforma: SessionTransac.SessionParams.DATACUSTOMER.objPostDataAccount.plataformaAT,
                 objParametrosSesion: { //INICIATIVA-871
@@ -1260,76 +1401,76 @@ OcultarBodyDetRec: function () {
                         that.dataListDescartes.listaGrupos = [];
 
                         if (response.data.listaDescartes != null) {
-                        if (response.data.listaDescartes.length > 0) {
-                            $.each(response.data.listaDescartes, function (index, value) {
+                            if (response.data.listaDescartes.length > 0) {
+                                $.each(response.data.listaDescartes, function (index, value) {
 
-                                var listaDescartes = {
-                                    id_descarte: "",
-                                    nombre_variable: "",
-                                    desc_descarte: "",
-                                    tipo_descarte: "",
-                                    flag_descarte: "",
-                                    orden_descarte: "",
-                                    fecha_reg: "",
-                                    id_grupo: "",
-                                    flag_OK: "",
+                                    var listaDescartes = {
+                                        id_descarte: "",
+                                        nombre_variable: "",
+                                        desc_descarte: "",
+                                        tipo_descarte: "",
+                                        flag_descarte: "",
+                                        orden_descarte: "",
+                                        fecha_reg: "",
+                                        id_grupo: "",
+                                        flag_OK: "",
                                         flag_Error: "",
-                                    descarteValor: "",
-                                    descarteListaValor: ""
-                                }
+                                        descarteValor: "",
+                                        descarteListaValor: ""
+                                    }
 
-                                listaDescartes.id_descarte = value.id_descarte,
-                                listaDescartes.nombre_variable = value.nombre_variable;
-                                listaDescartes.desc_descarte = value.desc_descarte;
-                                listaDescartes.tipo_descarte = value.tipo_descarte;
-                                listaDescartes.flag_descarte = value.flag_descarte;
-                                listaDescartes.orden_descarte = value.orden_descarte;
-                                listaDescartes.fecha_reg = value.fecha_reg;
-                                listaDescartes.id_grupo = value.id_grupo;
-                                listaDescartes.flag_OK = value.flag_OK;
+                                    listaDescartes.id_descarte = value.id_descarte,
+                                    listaDescartes.nombre_variable = value.nombre_variable;
+                                    listaDescartes.desc_descarte = value.desc_descarte;
+                                    listaDescartes.tipo_descarte = value.tipo_descarte;
+                                    listaDescartes.flag_descarte = value.flag_descarte;
+                                    listaDescartes.orden_descarte = value.orden_descarte;
+                                    listaDescartes.fecha_reg = value.fecha_reg;
+                                    listaDescartes.id_grupo = value.id_grupo;
+                                    listaDescartes.flag_OK = value.flag_OK;
                                     listaDescartes.flag_Error = value.flag_Error;
-                                listaDescartes.descarteValor = value.descarteValor;
-                                listaDescartes.descarteListaValor = value.descarteListaValor;
+                                    listaDescartes.descarteValor = value.descarteValor;
+                                    listaDescartes.descarteListaValor = value.descarteListaValor;
 
-                                that.dataListDescartes.listaDescartes.push(listaDescartes);
+                                    that.dataListDescartes.listaDescartes.push(listaDescartes);
 
-                            });
-                        }
+                                });
+                            }
                         }
 
                         if (response.data.listaGrupos != null) {
-                        if (response.data.listaGrupos.length > 0) {
-                            $.each(response.data.listaGrupos, function (index, value) {
+                            if (response.data.listaGrupos.length > 0) {
+                                $.each(response.data.listaGrupos, function (index, value) {
 
-                                var listaGrupos = {
-                                    degriIdGrupo: "",
-                                    degrvDescripcion: "",
-                                    degrvTipo: "",
-                                    degriFlagVisual: "",
-                                    degriOrden: "",
-                                    degrvUsuReg: "",
-                                    degrdFecReg: "",
-                                    degrvUsuMod: "",
-                                    degrdFecMod: "",
-                                    degriEstadoReg: ""
-                                }
+                                    var listaGrupos = {
+                                        degriIdGrupo: "",
+                                        degrvDescripcion: "",
+                                        degrvTipo: "",
+                                        degriFlagVisual: "",
+                                        degriOrden: "",
+                                        degrvUsuReg: "",
+                                        degrdFecReg: "",
+                                        degrvUsuMod: "",
+                                        degrdFecMod: "",
+                                        degriEstadoReg: ""
+                                    }
 
-                                listaGrupos.degriIdGrupo = value.degriIdGrupo,
-                                listaGrupos.degrvDescripcion = value.degrvDescripcion;
-                                listaGrupos.degrvTipo = value.degrvTipo;
-                                listaGrupos.degriFlagVisual = value.degriFlagVisual;
-                                listaGrupos.degriOrden = value.degriOrden;
-                                listaGrupos.degrvUsuReg = value.degrvUsuReg;
-                                listaGrupos.degrdFecReg = value.degrdFecReg;
-                                listaGrupos.degrvUsuMod = value.degrvUsuMod;
-                                listaGrupos.degrdFecMod = value.degrdFecMod;
-                                listaGrupos.degriEstadoReg = value.degriEstadoReg;
+                                    listaGrupos.degriIdGrupo = value.degriIdGrupo,
+                                    listaGrupos.degrvDescripcion = value.degrvDescripcion;
+                                    listaGrupos.degrvTipo = value.degrvTipo;
+                                    listaGrupos.degriFlagVisual = value.degriFlagVisual;
+                                    listaGrupos.degriOrden = value.degriOrden;
+                                    listaGrupos.degrvUsuReg = value.degrvUsuReg;
+                                    listaGrupos.degrdFecReg = value.degrdFecReg;
+                                    listaGrupos.degrvUsuMod = value.degrvUsuMod;
+                                    listaGrupos.degrdFecMod = value.degrdFecMod;
+                                    listaGrupos.degriEstadoReg = value.degriEstadoReg;
 
-                                that.dataListDescartes.listaGrupos.push(listaGrupos);
+                                    that.dataListDescartes.listaGrupos.push(listaGrupos);
 
-                            });
+                                });
+                            }
                         }
-}
                         //console.log("dataListDescartes");
                         //console.log(that.dataListDescartes);
                         callback();

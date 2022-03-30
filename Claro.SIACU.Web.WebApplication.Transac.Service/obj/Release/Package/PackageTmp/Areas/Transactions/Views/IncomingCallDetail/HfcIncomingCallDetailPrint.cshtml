@@ -1,0 +1,88 @@
+﻿@model Claro.SIACU.Web.WebApplication.Transac.Service.Areas.Transactions.Helpers.HFC.IncomingCallDetail.IncomingCallDetailPrint
+@{
+    ViewBag.Title = "";
+    Layout = "~/Areas/Transactions/Views/Shared/_Layout.cshtml";
+}
+<script type="text/javascript" src="~/Areas/Transactions/Content/Lib/BloqueoF12.js"></script>
+<div class="container-fluid">
+    <div class="col-sm-12">
+        <div class="col-sm-3">
+            <img src="~/Images/hm_tim.gif" class="img-responsive img-rounded" alt="Responsive image">
+        </div>
+        <center>
+            <div class="col-sm-6">
+                <label><b><u>DETALLE LLAMADAS ENTRANTES</u></b></label>
+                <br />
+                <label id="lblPhoneCliente">@Model.phone</label>
+                <br />
+                <label id="lblPrintCliente">@Model.fullName</label>
+                <br />
+                <label id="lblDate">@string.Format("{0} - {1}", Model.fecStart, Model.fecEnd) </label>
+                <br />
+                <label id="lblCacDac">@Model.cacdac</label>
+            </div>
+            <div class="col-sm-3">
+
+            </div>
+        </center>
+
+
+    </div>
+    <div id="contenedorDetailVisualizeCall">
+        <div class="row">
+            <div class="col-sm-12">
+                <table id="tblDetailVisualizeCall" class="table table-bordered table-hover table-striped">
+                    <thead class="btn-danger">
+                        <tr>
+                            <th class="col-sm-2">N°</th>
+                            <th class="col-sm-2">Número</th>
+                            <th class="col-sm-2">Fecha</th>
+                            <th class="col-sm-2">Hora</th>
+                            <th class="col-sm-2">Número Entrante</th>
+                            <th class="col-sm-2">Duración</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @*@if (Model.LstPhoneCall != null)
+                        {
+                            foreach (var item in Model.LstPhoneCall)
+                            {
+                                <tr>
+                                    <td class="col-sm-3">@item.NroOrd</td>
+                                    <td class="col-sm-3">@item.MSISDN</td>
+                                    <td class="col-sm-3">@item.CallDate</td>
+                                    <td class="col-sm-3">@item.CallTime</td>
+                                    <td class="col-sm-3">@item.CallNumber</td>
+                                    <td class="col-sm-3">@item.CallDuration</td>
+                                </tr>
+                            }
+                        }*@
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div id="myModalLoad" style="display:none;">
+        <span>
+            <img src="~/Images/loading2.gif" width="25" height="25" />  Cargando ....
+        </span>
+    </div>
+
+    <center>
+        <div id="botonesConst">
+            <table>
+                <tr>
+                    <td height="50px">
+                        <button class="btn transaction-button  btn-sm" id="btnPrintConstancy" type="button"><span class="glyphicon glyphicon-print">&nbsp;</span>Imprimir</button>
+                        <button class="btn transaction-button  btn-sm" id="btnCloseConstancy" type="button"><span class="glyphicon glyphicon-remove">&nbsp;</span>Cerrar</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </center>
+</div>
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/Transactions/HFC/HfcIncomingCallDetailPrint")
+}

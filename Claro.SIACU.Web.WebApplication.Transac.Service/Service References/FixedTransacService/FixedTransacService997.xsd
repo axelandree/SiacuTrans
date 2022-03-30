@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetValidateCustomerID" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetValidateCustomerID" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetUpdateInter29" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetUpdateInter29" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd3" namespace="Claro" />
-  <xs:complexType name="ValidateCustomerIdRequest">
+  <xs:complexType name="UpdateInter29Request">
     <xs:complexContent mixed="false">
       <xs:extension xmlns:q1="Claro" base="q1:Request">
         <xs:sequence>
-          <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="p_objid" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="p_orden" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="p_texto" nillable="true" type="xs:string" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="ValidateCustomerIdRequest" nillable="true" type="tns:ValidateCustomerIdRequest" />
-  <xs:complexType name="ValidateCustomerIdResponse">
+  <xs:element name="UpdateInter29Request" nillable="true" type="tns:UpdateInter29Request" />
+  <xs:complexType name="UpdateInter29Response">
     <xs:sequence>
-      <xs:element minOccurs="0" name="ContactObjID" type="xs:int" />
-      <xs:element minOccurs="0" name="FlgResult" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="MsError" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="resultado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="rFlagInsercion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="rMsgText" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="rResult" type="xs:boolean" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="ValidateCustomerIdResponse" nillable="true" type="tns:ValidateCustomerIdResponse" />
+  <xs:element name="UpdateInter29Response" nillable="true" type="tns:UpdateInter29Response" />
 </xs:schema>

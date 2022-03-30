@@ -1,0 +1,64 @@
+﻿
+@{
+    ViewBag.Title = "AdditionalServicesDetailCommercial";
+    Layout = "~/Areas/Transactions/Views/Shared/_Layout.cshtml";
+}
+<script type="text/javascript" src="~/Areas/Transactions/Content/Lib/BloqueoF12.js"></script>
+<div id="AdditionalServicesDetailCommercial" class="container-fluid">
+    <div id="myModalLoad" style="display:none;">
+        <span>
+            <img src="~/Images/loading2.gif" width="25" height="25" />  Cargando ....
+        </span>
+    </div>
+    <div class="panel claro-panel-primary">
+        <br />
+        <center>
+            <p>
+                <strong>Servicio Comercial : </strong>
+                <label id="lblServiceCommercial">dasdadasd</label>
+            </p>
+        </center>
+        
+        <div>
+            <table id="tblAdditionalServicesDetailCommercial" class="table table-bordered table-hover table-striped table-responsive">
+
+                <thead class="btn-danger">
+
+                    <tr>
+                        <th>Descripción</th>
+                        <th>Paquete servicio</th>
+                        <th>Fecha Actual</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <div>
+            <br />
+            <br />
+            <br />
+        </div>
+        <div>
+            <center>
+                <button id="btnCloseDetailCommercial" type="button" class="btn transaction-button btn-sm"><span class="glyphicon glyphicon-home"></span> Cerrar</button>
+            </center>
+        </div>
+        <br />
+
+        <div id="divErrorAlert" class="alert alert-transaction alert-danger" role="alert">
+            <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <strong><span id="lblErrorMessage"></span></strong>
+        </div>
+
+        <br />
+    </div>
+    
+
+    
+</div>
+
+@section scripts
+{
+        <script src="~/Areas/Transactions/Scripts/AdditionalServicesDetailCommercial/AdditionalServicesDetailCommercial.js"></script>
+        <script src="~/Areas/Transactions/Scripts/AdditionalServices/PostpaidAdditionalServices.js"></script>
+}

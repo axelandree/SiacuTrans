@@ -4,3 +4,15 @@ C:\NET\Claro.Helpers.Transac.Service\bin\Release\EPPlus.dll
 C:\NET\Claro.Helpers.Transac.Service\obj\Release\Claro.Helpers.Transac.Service.dll
 C:\NET\Claro.Helpers.Transac.Service\obj\Release\Claro.Helpers.Transac.Service.pdb
 C:\NET\Claro.Helpers.Transac.Service\obj\Release\Claro.Helpers.Transac.Service.csprojResolveAssemblyReference.cache
+D:\Fuentes\28032022\SiacuTrans\Claro.Helpers.Transac.Service\bin\Release\Claro.Helpers.Transac.Service.dll
+D:\Fuentes\28032022\SiacuTrans\Claro.Helpers.Transac.Service\bin\Release\Claro.Helpers.Transac.Service.pdb
+D:\Fuentes\28032022\SiacuTrans\Claro.Helpers.Transac.Service\bin\Release\EPPlus.dll
+D:\Fuentes\28032022\SiacuTrans\Claro.Helpers.Transac.Service\obj\Release\Claro.Helpers.Transac.Service.csprojResolveAssemblyReference.cache
+D:\Fuentes\28032022\SiacuTrans\Claro.Helpers.Transac.Service\obj\Release\Claro.Helpers.Transac.Service.dll
+D:\Fuentes\28032022\SiacuTrans\Claro.Helpers.Transac.Service\obj\Release\Claro.Helpers.Transac.Service.pdb
+D:\SiacuTrans\Claro.Helpers.Transac.Service\bin\Release\Claro.Helpers.Transac.Service.dll
+D:\SiacuTrans\Claro.Helpers.Transac.Service\bin\Release\Claro.Helpers.Transac.Service.pdb
+D:\SiacuTrans\Claro.Helpers.Transac.Service\bin\Release\EPPlus.dll
+D:\SiacuTrans\Claro.Helpers.Transac.Service\obj\Release\Claro.Helpers.Transac.Service.csprojResolveAssemblyReference.cache
+D:\SiacuTrans\Claro.Helpers.Transac.Service\obj\Release\Claro.Helpers.Transac.Service.dll
+D:\SiacuTrans\Claro.Helpers.Transac.Service\obj\Release\Claro.Helpers.Transac.Service.pdb

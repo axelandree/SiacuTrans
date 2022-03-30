@@ -5,104 +5,104 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
 -->
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <_PublishTargetUrl>C:\PUBLICADO\EntregaRTC_ST_100322\siacu-backend</_PublishTargetUrl>
+    <_PublishTargetUrl>D:\Pubac</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/Claro.Data.dll">
-      <publishTime>03/10/2022 11:15:39</publishTime>
+      <publishTime>03/28/2022 16:22:31</publishTime>
     </File>
     <File Include="bin/Claro.dll">
-      <publishTime>03/10/2022 11:15:29</publishTime>
+      <publishTime>03/28/2022 16:22:14</publishTime>
     </File>
     <File Include="bin/Claro.Entity.dll">
-      <publishTime>03/10/2022 11:15:29</publishTime>
+      <publishTime>03/28/2022 16:22:14</publishTime>
     </File>
     <File Include="bin/Claro.SAP.Transac.Service.dll">
-      <publishTime>03/10/2022 11:15:38</publishTime>
+      <publishTime>03/28/2022 16:22:30</publishTime>
     </File>
     <File Include="bin/Claro.Security.dll">
-      <publishTime>03/10/2022 11:15:38</publishTime>
+      <publishTime>03/28/2022 16:22:28</publishTime>
     </File>
     <File Include="bin/Claro.SIACU.Business.Transac.Service.dll">
-      <publishTime>03/10/2022 11:15:47</publishTime>
+      <publishTime>03/29/2022 07:42:27</publishTime>
     </File>
     <File Include="bin/Claro.SIACU.Data.Transac.Service.dll">
-      <publishTime>03/10/2022 11:15:43</publishTime>
+      <publishTime>03/29/2022 07:42:22</publishTime>
     </File>
     <File Include="bin/Claro.SIACU.dll">
-      <publishTime>03/10/2022 11:15:38</publishTime>
+      <publishTime>03/28/2022 16:22:29</publishTime>
     </File>
     <File Include="bin/Claro.SIACU.Entity.Transac.Service.dll">
-      <publishTime>03/10/2022 11:15:40</publishTime>
+      <publishTime>03/29/2022 07:42:16</publishTime>
     </File>
     <File Include="bin/Claro.SIACU.ProxyService.Transac.Service.dll">
-      <publishTime>03/10/2022 11:15:31</publishTime>
+      <publishTime>03/28/2022 16:22:19</publishTime>
     </File>
     <File Include="bin/Claro.SIACU.ProxyService.Transac.Service.XmlSerializers.dll">
-      <publishTime>03/10/2022 11:15:36</publishTime>
+      <publishTime>03/28/2022 16:22:27</publishTime>
     </File>
     <File Include="bin/Claro.SIACU.Transac.Service.dll">
-      <publishTime>03/10/2022 11:15:38</publishTime>
+      <publishTime>03/28/2022 16:22:31</publishTime>
     </File>
     <File Include="bin/Claro.SIACU.Web.Service.Transac.Service.dll">
-      <publishTime>03/10/2022 11:15:52</publishTime>
+      <publishTime>03/29/2022 07:42:32</publishTime>
     </File>
     <File Include="bin/Claro.Transversal.ProxyService.dll">
-      <publishTime>03/10/2022 11:15:29</publishTime>
+      <publishTime>03/28/2022 16:22:14</publishTime>
     </File>
     <File Include="bin/Claro.Web.dll">
-      <publishTime>03/10/2022 11:15:29</publishTime>
+      <publishTime>03/28/2022 16:22:14</publishTime>
     </File>
     <File Include="bin/log4net.dll">
-      <publishTime>03/10/2022 10:30:07</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
-      <publishTime>03/10/2022 10:30:08</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="bin/Oracle.DataAccess.dll">
-      <publishTime>03/10/2022 10:30:09</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="bin/Renci.SshNet.dll">
-      <publishTime>03/10/2022 10:30:07</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="bin/sapnco.dll">
-      <publishTime>03/10/2022 10:30:07</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="bin/sapnco_utils.dll">
-      <publishTime>03/10/2022 10:30:14</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="bin/Tools.Connections.dll">
-      <publishTime>03/10/2022 10:30:06</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="bin/Tools.Entity.dll">
-      <publishTime>03/10/2022 10:30:06</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="bin/Tools.Traces.dll">
-      <publishTime>03/10/2022 10:30:06</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="bin/Tools.Transversal.ProxyService.dll">
-      <publishTime>03/10/2022 10:30:06</publishTime>
+      <publishTime>03/28/2022 13:26:19</publishTime>
     </File>
     <File Include="ColivingTransacService.svc">
-      <publishTime>03/10/2022 10:29:43</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="CommonTransacService.svc">
-      <publishTime>03/10/2022 10:29:43</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="DataTransac/SiacutDataPrepaidWS.xml">
-      <publishTime>03/10/2022 10:30:03</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="FixedTransacService.svc">
-      <publishTime>03/10/2022 10:29:43</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="PostTransacService.svc">
-      <publishTime>03/10/2022 10:29:43</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="PreTransacService.svc">
-      <publishTime>03/10/2022 10:29:43</publishTime>
+      <publishTime>03/28/2022 13:26:18</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>03/10/2022 11:17:07</publishTime>
+      <publishTime>03/28/2022 15:17:56</publishTime>
     </File>
   </ItemGroup>
 </Project>

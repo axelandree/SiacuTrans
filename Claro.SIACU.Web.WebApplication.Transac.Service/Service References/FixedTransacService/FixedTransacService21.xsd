@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetFactureDBTO" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetFactureDBTO" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetFacturePDI" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetFacturePDI" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd3" namespace="Claro" />
   <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed" />
-  <xs:complexType name="FactureDBTORequest">
+  <xs:complexType name="FacturePDIRequest">
     <xs:complexContent mixed="false">
       <xs:extension xmlns:q1="Claro" base="q1:Request">
         <xs:sequence>
@@ -11,11 +11,11 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="FactureDBTORequest" nillable="true" type="tns:FactureDBTORequest" />
-  <xs:complexType name="FactureDBTOResponse">
+  <xs:element name="FacturePDIRequest" nillable="true" type="tns:FacturePDIRequest" />
+  <xs:complexType name="FacturePDIResponse">
     <xs:sequence>
       <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed" minOccurs="0" name="LstGenericItem" nillable="true" type="q2:ArrayOfGenericItem" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="FactureDBTOResponse" nillable="true" type="tns:FactureDBTOResponse" />
+  <xs:element name="FacturePDIResponse" nillable="true" type="tns:FacturePDIResponse" />
 </xs:schema>

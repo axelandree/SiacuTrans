@@ -1,75 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.DeleteProgramTask" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.DeleteProgramTask" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetComServiceActivation" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetComServiceActivation" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd3" namespace="Claro" />
-  <xs:complexType name="DeleteProgramTaskRequest">
+  <xs:complexType name="ComServiceActivationRequest">
     <xs:complexContent mixed="false">
       <xs:extension xmlns:q1="Claro" base="q1:Request">
         <xs:sequence>
-          <xs:element minOccurs="0" name="Asesor" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="CadDac" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="Cantidad" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="Cargo" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="CargoFijo" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="CentroPobladoId" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="CodCaso" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="CodInteraccion" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="CodReclamo" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="CodigoAplicacion" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="ConId" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="Cuenta" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="CustomerId" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="EdificioId" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="FechaDesde" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="FechaHasta" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="FechaProg" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="FechaProgramada" type="xs:dateTime" />
-          <xs:element minOccurs="0" name="FlagActDirFact" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="FranjaHora" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="FranjaHoraId" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="IdInteraccion" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="InterCasoId" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="IpAplicacion" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="ListaCoser" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="ListaSpCode" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="MotivoId" type="xs:int" />
-          <xs:element minOccurs="0" name="NomUrb" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="NomVia" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="NombreAplicacion" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="NroVia" type="xs:int" />
-          <xs:element minOccurs="0" name="NumCarta" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="NumLote" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="NumMz" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="Observacion" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="Operador" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="Presuscrito" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="Publicar" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="Referencia" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="ServiCod" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="ServiEstado" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="ServicioId" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="StrIdSession" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="StrTransaction" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="TipMz" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="TipoTransaccion" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="TipoUrb" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="TipoVia" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="TmCode" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="TrabajoId" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="TransTipo" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="Ubigeo" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="Usrregis" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="UsuarioApp" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="UsuarioSistema" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="ZonaId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StrCoId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StrCoSer" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StrCodeAplication" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StrCodeBell" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StrCodeCustomer" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StrCodeInteraction" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StrCost" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StrDatRegistry" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StrDateProgramation" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="StrDateRegistre" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="StrDesCoSer" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StrEmailUserApp" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StrFlagOccPenalty" type="xs:int" />
+          <xs:element minOccurs="0" name="StrFlagSearch" type="xs:int" />
+          <xs:element minOccurs="0" name="StrIdTransaction" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StrIpAplication" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StrMessage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StrNroAccount" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StrProIds" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StrTelephone" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StrTypeRegistry" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StrTypeService" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StrUser" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StrUserApp" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StrUserSystem" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strAmountFIdPenalty" type="xs:double" />
+          <xs:element minOccurs="0" name="strBillingCycle" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strInteraction" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strNewCF" type="xs:double" />
+          <xs:element minOccurs="0" name="strPenalty" type="xs:double" />
+          <xs:element minOccurs="0" name="strTicklerCode" nillable="true" type="xs:string" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="DeleteProgramTaskRequest" nillable="true" type="tns:DeleteProgramTaskRequest" />
-  <xs:complexType name="DeleteProgramTaskResponse">
+  <xs:element name="ComServiceActivationRequest" nillable="true" type="tns:ComServiceActivationRequest" />
+  <xs:complexType name="ComServiceActivationResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" name="ResponseStatus" type="xs:boolean" />
+      <xs:element minOccurs="0" name="BlValues" type="xs:boolean" />
+      <xs:element minOccurs="0" name="StrMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrResult" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="DeleteProgramTaskResponse" nillable="true" type="tns:DeleteProgramTaskResponse" />
+  <xs:element name="ComServiceActivationResponse" nillable="true" type="tns:ComServiceActivationResponse" />
 </xs:schema>

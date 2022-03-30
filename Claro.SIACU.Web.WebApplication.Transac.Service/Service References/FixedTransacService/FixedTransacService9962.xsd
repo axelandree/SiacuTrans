@@ -1,34 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:complexType name="SuspensionLte">
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.PostSuspensionLte" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.PostSuspensionLte" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd152" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service" />
+  <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd3" namespace="Claro" />
+  <xs:complexType name="PostSuspensionLteRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="Claro" base="q1:Request">
+        <xs:sequence>
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service" minOccurs="0" name="Suspension" nillable="true" type="q2:SuspensionLte" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PostSuspensionLteRequest" nillable="true" type="tns:PostSuspensionLteRequest" />
+  <xs:complexType name="PostSuspensionLteResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" name="coId" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="coSer" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="coState" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="codCliente" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="codigoAplicacion" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="codigoInteraccion" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="desCoSer" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="desTickler" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="emailUsuarioApp" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="fechaProgramacion" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="fechaSuspension" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="fideliza" type="xs:int" />
-      <xs:element minOccurs="0" name="flagAccion" type="xs:int" />
-      <xs:element minOccurs="0" name="ipAplicacion" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="montoOCC" type="xs:double" />
-      <xs:element minOccurs="0" name="nombreAplicacion" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="nroCuenta" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="nroDias" type="xs:int" />
-      <xs:element minOccurs="0" name="reason" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="telefono" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="ticklerCode" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="tipoRegistro" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="tipoServicio" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="usuarioApp" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="usuarioSistema" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResponseStatus" type="xs:boolean" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="SuspensionLte" nillable="true" type="tns:SuspensionLte" />
+  <xs:element name="PostSuspensionLteResponse" nillable="true" type="tns:PostSuspensionLteResponse" />
 </xs:schema>

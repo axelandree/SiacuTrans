@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetOrderType" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetOrderType" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetTransactionRuleList" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetTransactionRuleList" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd3" namespace="Claro" />
   <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed" />
-  <xs:complexType name="OrderTypesRequestHfc">
+  <xs:complexType name="TransactionRulesRequestHfc">
     <xs:complexContent mixed="false">
       <xs:extension xmlns:q1="Claro" base="q1:Request">
         <xs:sequence>
-          <xs:element minOccurs="0" name="vIdtiptra" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SubClase" nillable="true" type="xs:string" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="OrderTypesRequestHfc" nillable="true" type="tns:OrderTypesRequestHfc" />
-  <xs:complexType name="OrderTypesResponseHfc">
+  <xs:element name="TransactionRulesRequestHfc" nillable="true" type="tns:TransactionRulesRequestHfc" />
+  <xs:complexType name="TransactionRulesResponseHfc">
     <xs:sequence>
-      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed" minOccurs="0" name="ordertypes" nillable="true" type="q2:ArrayOfOrderType" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed" minOccurs="0" name="rules" nillable="true" type="q2:ArrayOfTransactionRule" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="OrderTypesResponseHfc" nillable="true" type="tns:OrderTypesResponseHfc" />
+  <xs:element name="TransactionRulesResponseHfc" nillable="true" type="tns:TransactionRulesResponseHfc" />
 </xs:schema>

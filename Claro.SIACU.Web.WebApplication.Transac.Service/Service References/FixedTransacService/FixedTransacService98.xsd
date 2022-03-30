@@ -1,25 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetTechnicalVisitResult" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetTechnicalVisitResult" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetEquipmentByCurrentPlan" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetEquipmentByCurrentPlan" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd3" namespace="Claro" />
   <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed" />
-  <xs:complexType name="TechnicalVisitResultRequest">
+  <xs:complexType name="EquipmentsByCurrentPlanRequest">
     <xs:complexContent mixed="false">
       <xs:extension xmlns:q1="Claro" base="q1:Request">
         <xs:sequence>
-          <xs:element minOccurs="0" name="strCoId" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="strCodPlanSisact" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="strCustomerId" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="strTmCode" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="strTrama" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strIdContract" nillable="true" type="xs:string" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="TechnicalVisitResultRequest" nillable="true" type="tns:TechnicalVisitResultRequest" />
-  <xs:complexType name="TechnicalVisitResultResponse">
+  <xs:element name="EquipmentsByCurrentPlanRequest" nillable="true" type="tns:EquipmentsByCurrentPlanRequest" />
+  <xs:complexType name="EquipmentsByCurrentPlanResponse">
     <xs:sequence>
-      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed" minOccurs="0" name="Result" nillable="true" type="q2:TechnicalVisit" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed" minOccurs="0" name="Equipments" nillable="true" type="q2:ArrayOfEquipmentByCurrentPlan" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="TechnicalVisitResultResponse" nillable="true" type="tns:TechnicalVisitResultResponse" />
+  <xs:element name="EquipmentsByCurrentPlanResponse" nillable="true" type="tns:EquipmentsByCurrentPlanResponse" />
 </xs:schema>

@@ -1,0 +1,52 @@
+﻿body {
+    padding-right:0 !important;
+}
+    .row {
+    padding-top:0px;
+    padding-bottom:0px;
+    }
+    caption {
+    padding-top:0px;
+    padding-bottom:0px;
+    }
+    .dataTables_scrollFoot {
+        display: none;
+    }
+    #tblCurrentPlanCable_info {
+    display:none;
+    }
+    #tblCurrentPlanInternet_info {
+        display: none;
+    }
+    #tblCurrentPlanPhone_info {
+        display: none;
+    }
+    #tblCandidatePlanCable_info {
+        display: none;
+    }
+
+    #tblCandidatePlanInternet_info {
+        display: none;
+    }
+
+    #tblCandidatePlanPhone_info {
+        display: none;
+    }
+    #tblCableCurrentEquipment_info {
+    display:none;
+    }
+    #tblInternetCurrentEquipment_info {
+        display: none;
+    }
+    #tblPhoneCurrentEquipment_info {
+        display: none;
+    }
+    #tblCableCandidateEquipment_info {
+        display: none;
+    }
+    #tblInternetCandidateEquipment_info {
+        display: none;
+    }
+    #tblPhoneCandidateEquipment_info {
+        display: none;
+    }

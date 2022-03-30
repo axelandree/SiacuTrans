@@ -1,0 +1,16 @@
+D:\Fuentes\28032022\SiacuTrans\Claro.SIACU.ProxyService.Transac.Service\bin\Debug\Claro.SIACU.ProxyService.Transac.Service.dll.config
+D:\Fuentes\28032022\SiacuTrans\Claro.SIACU.ProxyService.Transac.Service\bin\Debug\Claro.SIACU.ProxyService.Transac.Service.dll
+D:\Fuentes\28032022\SiacuTrans\Claro.SIACU.ProxyService.Transac.Service\bin\Debug\Claro.SIACU.ProxyService.Transac.Service.pdb
+D:\Fuentes\28032022\SiacuTrans\Claro.SIACU.ProxyService.Transac.Service\bin\Debug\Claro.Entity.dll
+D:\Fuentes\28032022\SiacuTrans\Claro.SIACU.ProxyService.Transac.Service\bin\Debug\Claro.Entity.pdb
+D:\Fuentes\28032022\SiacuTrans\Claro.SIACU.ProxyService.Transac.Service\obj\Debug\Claro.SIACU.ProxyService.Transac.Service.csprojResolveAssemblyReference.cache
+D:\Fuentes\28032022\SiacuTrans\Claro.SIACU.ProxyService.Transac.Service\obj\Debug\Claro.SIACU.ProxyService.Transac.Service.dll
+D:\Fuentes\28032022\SiacuTrans\Claro.SIACU.ProxyService.Transac.Service\obj\Debug\Claro.SIACU.ProxyService.Transac.Service.pdb
+D:\SiacuTrans\Claro.SIACU.ProxyService.Transac.Service\bin\Debug\Claro.SIACU.ProxyService.Transac.Service.dll.config
+D:\SiacuTrans\Claro.SIACU.ProxyService.Transac.Service\bin\Debug\Claro.SIACU.ProxyService.Transac.Service.dll
+D:\SiacuTrans\Claro.SIACU.ProxyService.Transac.Service\bin\Debug\Claro.SIACU.ProxyService.Transac.Service.pdb
+D:\SiacuTrans\Claro.SIACU.ProxyService.Transac.Service\bin\Debug\Claro.Entity.dll
+D:\SiacuTrans\Claro.SIACU.ProxyService.Transac.Service\bin\Debug\Claro.Entity.pdb
+D:\SiacuTrans\Claro.SIACU.ProxyService.Transac.Service\obj\Debug\Claro.SIACU.ProxyService.Transac.Service.csprojResolveAssemblyReference.cache
+D:\SiacuTrans\Claro.SIACU.ProxyService.Transac.Service\obj\Debug\Claro.SIACU.ProxyService.Transac.Service.dll
+D:\SiacuTrans\Claro.SIACU.ProxyService.Transac.Service\obj\Debug\Claro.SIACU.ProxyService.Transac.Service.pdb

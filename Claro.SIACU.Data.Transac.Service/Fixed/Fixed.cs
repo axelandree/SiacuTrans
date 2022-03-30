@@ -34,6 +34,7 @@ using Claro.SIACU.Entity.Transac.Service.GetDataPower;
 using Claro.SIACU.Entity.Transac.Service.Fixed.Discard;
 using Claro.SIACU.ProxyService.Transac.Service.InstantLinkSOA;
 using Claro.SIACU.Entity.Transac.Service.Fixed.Discard.ProcesarContinue;
+using Claro.SIACU.Entity.Transac.Service.Fixed.Discard.BannerDesc;
 using System.Text;
 using System.IO;
 //FIN: INICIATIVA-871
@@ -4171,6 +4172,32 @@ namespace Claro.SIACU.Data.Transac.Service.Fixed
             }
             return objResponse;
         }
+
+        public static BannerDescartesConsultaResp BannerDescartesAcBus(BannerDescartesConsultaReq objRequest, Tools.Entity.AuditRequest objAuditRequest)
+        {
+            BannerDescartesConsultaResp objResponse = new BannerDescartesConsultaResp();
+            
+            try
+            {
+                Hashtable datosHeader = new Hashtable();
+                datosHeader.Add("idTransaccion", objAuditRequest.Transaction);
+                datosHeader.Add("msgId", Functions.CheckStr(""));
+                datosHeader.Add("timestamp", DateTime.Now.ToString("yyyy-MM-dd'T'HH:mm:ss'Z'"));
+                datosHeader.Add("userId", objAuditRequest.UserName);
+
+                objResponse = Claro.Data.RestService.PostInvoqueSDP<BannerDescartesConsultaResp>(Claro.SIACU.Data.Transac.Service.Configuration.RestServiceConfiguration.DESCARTE_BANNER_AC_BUS, datosHeader, objRequest);
+            }
+            catch (Exception ex)
+            {
+                Claro.Web.Logging.Error(objAuditRequest.Session, objAuditRequest.Transaction, ex.Message);
+                throw new Claro.MessageException(objAuditRequest.Transaction);
+            }
+            return objResponse;
+        }
+
+
+
+
         //FIN: INICIATIVA-986
     }
 }

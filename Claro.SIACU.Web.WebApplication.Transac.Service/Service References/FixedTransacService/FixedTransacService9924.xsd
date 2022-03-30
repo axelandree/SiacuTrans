@@ -1,28 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetInsertDetailServiceInteraction" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetInsertDetailServiceInteraction" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetInsertDecoAdditional" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetInsertDecoAdditional" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd3" namespace="Claro" />
-  <xs:complexType name="InsertDetailServiceInteractionRequest">
+  <xs:complexType name="InsertDecoAdditionalRequest">
     <xs:complexContent mixed="false">
       <xs:extension xmlns:q1="Claro" base="q1:Request">
         <xs:sequence>
-          <xs:element minOccurs="0" name="cantidad" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="cf" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="codinterac" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="equipo" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="gruposerv" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="nombreserv" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="tiposerv" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="vBandwid" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="vCantIdLinea" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="vCantidad" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="vCantidadInst" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="vCargoFijo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="vCodTipoEquipo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="vCodigoExt" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="vDscEquipo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="vDscServ" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="vFlagLc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="vGrupo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="vGrupoPrincipal" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="vInter" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="vServ" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="vSnCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="vSpCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="vTipoEquipo" nillable="true" type="xs:string" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="InsertDetailServiceInteractionRequest" nillable="true" type="tns:InsertDetailServiceInteractionRequest" />
-  <xs:complexType name="InsertDetailServiceInteractionResponse">
+  <xs:element name="InsertDecoAdditionalRequest" nillable="true" type="tns:InsertDecoAdditionalRequest" />
+  <xs:complexType name="InsertDecoAdditionalResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" name="mensaje" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="rResul" type="xs:boolean" />
-      <xs:element minOccurs="0" name="resultado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="rCodRes" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="rDescRes" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="rResultado" type="xs:boolean" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="InsertDetailServiceInteractionResponse" nillable="true" type="tns:InsertDetailServiceInteractionResponse" />
+  <xs:element name="InsertDecoAdditionalResponse" nillable="true" type="tns:InsertDecoAdditionalResponse" />
 </xs:schema>

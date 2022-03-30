@@ -171,6 +171,7 @@
     <MetadataFile FileName="FixedTransacService9956.xsd" MetadataType="Schema" ID="03eb8764-4ce6-4264-b628-704229f6708b" SourceId="1" SourceUrl="http://localhost:40204/FixedTransacService.svc?xsd=xsd145" />
     <MetadataFile FileName="FixedTransacService98.xsd" MetadataType="Schema" ID="f7be0bcf-d31f-4945-b80c-1bb0ee6ab335" SourceId="1" SourceUrl="http://localhost:40204/FixedTransacService.svc?xsd=xsd98" />
     <MetadataFile FileName="FixedTransacService2.xsd" MetadataType="Schema" ID="dac544d3-7b3f-4406-96d6-8ce3c9ae65d8" SourceId="1" SourceUrl="http://localhost:40204/FixedTransacService.svc?xsd=xsd36" />
+    <MetadataFile FileName="FixedTransacService9963.xsd" MetadataType="Schema" ID="9733d224-b671-4f30-9f81-4f9237b00c5a" SourceId="1" SourceUrl="http://localhost:40204/FixedTransacService.svc?xsd=xsd153" />
     <MetadataFile FileName="FixedTransacService9961.xsd" MetadataType="Schema" ID="9a257e74-1723-4ac7-b74b-d07d24c29978" SourceId="1" SourceUrl="http://localhost:40204/FixedTransacService.svc?xsd=xsd152" />
     <MetadataFile FileName="FixedTransacService9962.xsd" MetadataType="Schema" ID="1132e2d5-8556-4345-ad7a-066093da2b01" SourceId="1" SourceUrl="http://localhost:40204/FixedTransacService.svc?xsd=xsd151" />
     <MetadataFile FileName="FixedTransacService9960.xsd" MetadataType="Schema" ID="a013721d-9db8-486c-a3e3-b10eab699f21" SourceId="1" SourceUrl="http://localhost:40204/FixedTransacService.svc?xsd=xsd150" />

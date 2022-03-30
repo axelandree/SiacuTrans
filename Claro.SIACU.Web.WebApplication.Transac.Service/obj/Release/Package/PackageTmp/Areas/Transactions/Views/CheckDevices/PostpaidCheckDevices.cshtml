@@ -1,0 +1,96 @@
+﻿
+@{
+    ViewBag.Title = "Consultar Equipos Postpago";
+    Layout = "~/Areas/Transactions/Views/Shared/_Layout.cshtml";
+    ViewBag.TitleHtml = "Consultar Equipos Postpago";
+}
+<script type="text/javascript" src="~/Areas/Transactions/Content/Lib/BloqueoF12.js"></script>
+<div id="CheckDevicesPostpaid" class="container-fluid">
+    <br />
+            <div id="DataCustomer" class="panel-group" role="tablist" aria-multiselectable="true">
+                <div class="panel claro-panel-primary">
+                    <div id="customerDataHead" role="tab" class="panel-heading">
+                        <span class="glyphicon glyphicon-user"></span>
+                        <a data-toggle="collapse" href="#customerDataCollapse" aria-expanded="true" data-parent="#DataCustomer" aria-controls="customerDataCollapse" class="collapsed transaction-ref-color"> Datos del Cliente</a>
+                    </div>
+                    <div class="panel-body panel-collapse collapse in" id="customerDataCollapse" role="tabpanel" aria-labelledby="customerDataHead">
+                        <table class="table table-condensed">
+                            <tbody>
+                            <tr>
+                                <td class="col-md-3">Codigo de Cliente:</td>
+                                <td><label id="lblCustomerId"></label> </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-3">Cuenta:</td>
+                                <td><label id="lblAccountNumber"></label></td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-3">Cliente:</td>
+                                <td><label id="lblCustomerName"></label></td>
+                            </tr>
+
+                            <tr>
+                                <td class="col-md-3">Contacto:</td>
+                                <td><label id="lblContactName"></label></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        
+        
+            <div class="panel-group">
+                <div class="panel claro-panel-primary">
+                    <table id="tblCheckDevicesPostpaid" class="table  table-striped table-hover table-responsive claro-modal-tabla table-bordered">
+                        <thead>
+                        <tr class="claro-bg-primary">
+                            <th class="col-md-3">Código Deco </th>
+                            <th class="col-md-3">Tipo Deco</th>
+                            <th class="col-md-3">Codigo Tarjeta</th>
+                            <th class="col-md-3">Tipo Equipo</th>
+                            <th class="col-md-3">Estado</th>
+                            <th class="col-md-3">Fecha Estado</th>
+                        </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                    <div id="myModalLoad" style="display:none;">
+                        <span>
+                            <img src="~/Images/loading2.gif" width="25" height="25" />  Cargando ....
+                        </span>
+                    </div>
+
+                    <br />
+                    <br />
+                    <br />
+                    <div id="divErrorAlert" class="alert alert-transaction alert-danger" role="alert">
+                        <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <strong><span id="lblErrorMessage"></span></strong>
+                    </div>
+                    <br /><br />
+                    <div class="container" align="center">
+                        <a id="btnCloseCheckDevices" class="btn transaction-button"><span class="glyphicon glyphicon-home"></span> Cerrar</a>
+                    </div>
+                    <br />
+                </div>
+
+            </div>
+</div>
+
+
+<style>
+    .modal-open {
+        overflow: scroll;
+    }
+</style>
+
+
+@section scripts{
+    
+    <script src="~/Areas/Transactions/Scripts/CheckDevices/PostpaidCheckDevices.js"></script>
+    <script src="~/Areas/Transactions/Scripts/AdditionalServices/PostpaidAdditionalServices.js"></script>
+}
+
+
+

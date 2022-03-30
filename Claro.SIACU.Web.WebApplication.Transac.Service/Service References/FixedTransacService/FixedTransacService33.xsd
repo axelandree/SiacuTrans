@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetServicesByCurrentPlan" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetServicesByCurrentPlan" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetCurrentPlan" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetCurrentPlan" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd3" namespace="Claro" />
   <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed" />
-  <xs:complexType name="ServicesByCurrentPlanRequest">
+  <xs:complexType name="CurrentPlanRequest">
     <xs:complexContent mixed="false">
       <xs:extension xmlns:q1="Claro" base="q1:Request">
         <xs:sequence>
-          <xs:element minOccurs="0" name="ContractId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CoId" nillable="true" type="xs:string" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="ServicesByCurrentPlanRequest" nillable="true" type="tns:ServicesByCurrentPlanRequest" />
-  <xs:complexType name="ServicesByCurrentPlanResponse">
+  <xs:element name="CurrentPlanRequest" nillable="true" type="tns:CurrentPlanRequest" />
+  <xs:complexType name="CurrentPlanResponse">
     <xs:sequence>
-      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed" minOccurs="0" name="ServicesByCurrentPlan" nillable="true" type="q2:ArrayOfServiceByCurrentPlan" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed" minOccurs="0" name="Plan" nillable="true" type="q2:CurrentPlan" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="ServicesByCurrentPlanResponse" nillable="true" type="tns:ServicesByCurrentPlanResponse" />
+  <xs:element name="CurrentPlanResponse" nillable="true" type="tns:CurrentPlanResponse" />
 </xs:schema>

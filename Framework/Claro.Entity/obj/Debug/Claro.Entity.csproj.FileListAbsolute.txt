@@ -1,0 +1,8 @@
+D:\Fuentes\28032022\SiacuTrans\Framework\Claro.Entity\bin\Debug\Claro.Entity.dll
+D:\Fuentes\28032022\SiacuTrans\Framework\Claro.Entity\bin\Debug\Claro.Entity.pdb
+D:\Fuentes\28032022\SiacuTrans\Framework\Claro.Entity\obj\Debug\Claro.Entity.dll
+D:\Fuentes\28032022\SiacuTrans\Framework\Claro.Entity\obj\Debug\Claro.Entity.pdb
+D:\SiacuTrans\Framework\Claro.Entity\bin\Debug\Claro.Entity.dll
+D:\SiacuTrans\Framework\Claro.Entity\bin\Debug\Claro.Entity.pdb
+D:\SiacuTrans\Framework\Claro.Entity\obj\Debug\Claro.Entity.dll
+D:\SiacuTrans\Framework\Claro.Entity\obj\Debug\Claro.Entity.pdb

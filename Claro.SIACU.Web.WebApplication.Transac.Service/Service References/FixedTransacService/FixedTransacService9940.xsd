@@ -1,37 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetGenerateOCC" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetGenerateOCC" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetInsertInteractionBusiness" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetInsertInteractionBusiness" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd45" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common" />
   <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd3" namespace="Claro" />
-  <xs:complexType name="GenerateOCCRequest">
+  <xs:complexType name="InsertInteractionBusinessRequest">
     <xs:complexContent mixed="false">
       <xs:extension xmlns:q1="Claro" base="q1:Request">
         <xs:sequence>
-          <xs:element minOccurs="0" name="codigoOcc" type="xs:decimal" />
-          <xs:element minOccurs="0" name="codigoOccSpecified" type="xs:boolean" />
-          <xs:element minOccurs="0" name="customerId" type="xs:decimal" />
-          <xs:element minOccurs="0" name="customerIdSpecified" type="xs:boolean" />
-          <xs:element minOccurs="0" name="ipApp" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="montoOcc" type="xs:float" />
-          <xs:element minOccurs="0" name="montoOccSpecified" type="xs:boolean" />
-          <xs:element minOccurs="0" name="nroCuotas" type="xs:decimal" />
-          <xs:element minOccurs="0" name="nroCuotasSpecified" type="xs:boolean" />
-          <xs:element minOccurs="0" name="recDate" type="xs:dateTime" />
-          <xs:element minOccurs="0" name="recDateSpecified" type="xs:boolean" />
-          <xs:element minOccurs="0" name="remark" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="txId" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="usrApp" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExecuteTransactation" type="xs:boolean" />
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common" minOccurs="0" name="Interaction" nillable="true" type="q2:Iteraction" />
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common" minOccurs="0" name="InteractionTemplate" nillable="true" type="q3:InsertTemplateInteraction" />
+          <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserApp" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserPass" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserSystem" nillable="true" type="xs:string" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="GenerateOCCRequest" nillable="true" type="tns:GenerateOCCRequest" />
-  <xs:complexType name="GenerateOCCResponse">
+  <xs:element name="InsertInteractionBusinessRequest" nillable="true" type="tns:InsertInteractionBusinessRequest" />
+  <xs:complexType name="InsertInteractionBusinessResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" name="errorCode" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="errorMsg" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="registraOcc" type="xs:decimal" />
-      <xs:element minOccurs="0" name="registraOccSpecified" type="xs:boolean" />
-      <xs:element minOccurs="0" name="txId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodReturnTransaction" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FlagInsercion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FlagInsercionInteraction" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InteractionId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MsgText" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MsgTextInteraction" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MsgTextTransaccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Result" type="xs:boolean" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="GenerateOCCResponse" nillable="true" type="tns:GenerateOCCResponse" />
+  <xs:element name="InsertInteractionBusinessResponse" nillable="true" type="tns:InsertInteractionBusinessResponse" />
 </xs:schema>

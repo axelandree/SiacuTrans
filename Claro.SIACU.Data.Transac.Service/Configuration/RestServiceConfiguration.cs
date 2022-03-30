@@ -44,6 +44,8 @@ public static readonly string OBTENER_DATA_CUPARTICIPANTE = "strGetCuParticipant
         //INI AMCO  
         public static readonly string OBTENER_TIPO_PRODUCTO_DAT_TOBE = "strGetTypeProductDatTobeRest";
         //FIN AMCO
+        //BANNER
+        public static readonly string DESCARTE_BANNER_AC_BUS = "UrlDescarteBanner";
 
         public static readonly string ConsultarPaqDisponibles_DP = "ConsultarPaqDisponibles";
         public static readonly string ConsultarClaroPuntos_DP = "ConsultarClaroPuntos";

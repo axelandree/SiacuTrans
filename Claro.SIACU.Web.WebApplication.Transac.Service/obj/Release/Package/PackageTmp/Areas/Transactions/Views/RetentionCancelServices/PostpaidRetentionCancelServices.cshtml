@@ -1,0 +1,650 @@
+﻿
+@{
+    ViewBag.Title = "PostpaidRetentionCancelServices";
+}
+<style>
+    table > tbody > tr > td.border-top {
+        border-top: 0px;
+    }
+
+    textarea.form-control {
+        height: 100px;
+    }
+
+    body {
+        padding-right: 0 !important;
+    }
+
+    .text-center {
+        text-align: center !important;
+    }
+</style>
+<script type="text/javascript" src="~/Areas/Transactions/Content/Lib/BloqueoF12.js"></script>
+<div id="PostpaidRetentionCancelServices" class="container-fluid">
+    <div class="scrollbudy">
+        <div class="col-md-3">
+            <div class="panel-tabs">
+                <div id="DataCustomer" class="panel-group" role="tablist" aria-multiselectable="true">
+                    <div class="panel claro-panel-primary">
+                        <div id="customerDataHead" role="tab" class="panel-heading">
+                            <span class="glyphicon glyphicon-user"></span>
+                            <a data-toggle="collapse" href="#customerDataCollapse" aria-expanded="true" data-parent="#DataCustomer" aria-controls="customerDataCollapse" class="collapsed transaction-ref-color"> Datos del Cliente</a>
+                        </div>
+                        <div class="panel-body panel-collapse collapse in" id="customerDataCollapse" role="tabpanel" aria-labelledby="customerDataHead">
+                            <table class="table table-condensed">
+                                <tbody>
+                                    <tr>
+                                        <td class="col-md-3">Nro. Servicio:</td>
+                                        <td class="col-md-3"><label id="lblNroTelefono"></label></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-md-3">Tipo de Cliente:</td>
+                                        <td class="col-md-3"><label id="lblTipoCliente"></label></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-md-3">Contacto:</td>
+                                        <td class="col-md-3"><label id="lblContacto"></label></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-md-3">Cliente:</td>
+                                        <td class="col-md-3"><label id="lblCliente"></label></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-md-3">Plan:</td>
+                                        <td class="col-md-3"><label id="lblPlan"></label></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-md-3">Fecha Activación:</td>
+                                        <td class="col-md-3"><label id="lblFecActivacion"></label></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-md-3">Tipo Acuerdo:</td>
+                                        <td class="col-md-3"><label id="lblTipAcuerdo"></label></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-md-3">Estado Línea:</td>
+                                        <td class="col-md-3"><label id="lblEstadoLinea"></label></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-md-3">Estado Acuerdo:</td>
+                                        <td class="col-md-3"><label id="lblEstadoAcuerdo"></label></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-md-3">Fecha Activación Línea:</td>
+                                        <td class="col-md-3"><label id="lblFecActivacionLinea"></label></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-md-3">Fecha Fin Acuerdo:</td>
+                                        <td class="col-md-3"><label id="lblFecFinAcuerdo"></label></td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="content" class="col-md-9 transaction-content">
+            <div class="panel-tabs">
+                <ul class="nav nav-tabs" role="tablist" data-tabs="tabs">
+                    <li role="presentation" class="active">
+                        <div style="padding: 10px 15px; background-color: white; border-radius: 4px 4px 0 0;">
+                            <i class="fa fa-map" aria-hidden="true"></i> <strong>Retención Cancelación de Servicio</strong>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="divExternalTransf">
+                        <div class="transaction-container-step ">
+                            <div class="process">
+                                <div class="process-row nav nav-tabs">
+                                    <div class="process-step process-step-3-left">
+                                        <button type="button" class="btn btn-circle transaction-button" data-toggle="tab" role="tab" href="#tabProducts" percent="0%"><i class="fa fa-table" aria-hidden="true"></i></button>
+                                        <p>Datos de la Transacción</p>
+                                    </div>
+                                    <div class="process-step process-step-3">
+                                        <button type="button" class="btn btn-circle disabled" data-toggle="tab" role="tab" href="#tabNewDestAddress" percent="37.5%" disabled><i class="fa fa-address-book" aria-hidden="true"></i></button>
+                                        <p>Retención</p>
+                                    </div>
+                                    <div class="process-step process-step-3">
+                                        <button type="button" class="btn btn-circle disabled" data-toggle="tab" role="tab" href="#tabNoteAddress" percent="62.5%" disabled><i class="fa fa-book" aria-hidden="true"></i></button>
+                                        <p>Acción</p>
+                                    </div>
+                                    <div class="process-step process-step-3-right">
+                                        <button type="button" class="btn btn-circle disabled" data-toggle="tab" role="tab" href="#tabSummary" percent="99%" disabled id="btnSummary"><i class="fa fa-list-ul" aria-hidden="true"></i></button>
+                                        <p>Resumen</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="transaction-progress">
+                                <div class="progress transaction-bar">
+                                    <div id="prog" class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-content">
+                            <div id="tabProducts" class="step tab-pane active" role="tabpanel" percent="0%">
+                                <div class="panel panel-default">
+                                    <div class="panel-body">
+                                        <form class="form-horizontal">
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">Reintegro APADECE:</label>
+                                                <div class="col-sm-2">
+                                                    <input id="txtReintegro" type="text" class="form-control input-sm" />
+                                                </div>
+                                                <label class="col-sm-3 control-label">Penalidad PCS:</label>
+                                                <div class="col-sm-2">
+                                                    <input id="txtPenalidadPCS" type="text" class="form-control input-sm" />
+                                                </div>
+                                                <div class="col-sm-2"></div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">Total:</label>
+                                                <div class="col-sm-2">
+                                                    <input id="txtTotalPenalidad" type="text" class="form-control input-sm" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-sm-3"></div>
+                                                <div class="col-sm-4">
+                                                    <label class="radio-inline">
+                                                        <input type="radio" name="inlineRadioOptions" id="rdbRetenido" value="option1" checked>
+                                                        <strong> Retenido</strong>
+                                                    </label>
+                                                    <label class="radio-inline">
+                                                        <input type="radio" name="inlineRadioOptions" id="rdbNoRetenido" value="option2">
+                                                        <strong> No Retenido</strong>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <div class="form-group">
+                                            <center>
+                                                <button type="button" class="btn transaction-button next-step" id="btnSiguiente01">Siguiente <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>
+                                                <button id="btnCerrar01" type="button" class="btn transaction-button"><span class="glyphicon glyphicon-home"></span> Cerrar</button>
+                                            </center>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="tabNewDestAddress" class="step tab-pane fade" role="tabpanel" percent="37.5%">
+                                <div class="panel panel-default">
+                                    <div class="panel-body">
+                                        <form class="form-horizontal">
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">Motivo Cancelación:</label>
+                                                <div class="col-sm-3">
+                                                    <select id="cboMotCancelacion" class="form-control input-sm"></select>
+                                                </div>
+                                                <label class="col-sm-3 control-label">Total Inversión:</label>
+                                                <div class="col-sm-2">
+                                                    <input id="txtTotalInversion" type="text" class="form-control input-sm" />
+                                                </div>
+                                                <div class="col-sm-1"></div>
+                                            </div>
+                                        </form>
+                                        <div class="form-group">
+                                            <center>
+                                                <button type="button" class="btn transaction-button prev-step"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Anterior</button>
+                                                <button type="button" class="btn transaction-button next-step" id="btnSiguiente02">Siguiente <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>
+                                                <button id="btnCerrar02" type="button" class="btn transaction-button"><span class="glyphicon glyphicon-home"></span> Cerrar</button>
+                                            </center>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="tabNoteAddress" class="step tab-pane fade" role="tabpanel" percent="62.5%">
+                                <div class="panel panel-default">
+                                    <div class="panel-body">
+                                        <form class="form-horizontal">
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">Acción:</label>
+                                                <div class="col-sm-4">
+                                                    <select id="cboAccion" class="form-control input-sm"></select>
+                                                </div>
+                                            </div>
+                                            <div id="divRetenido">
+                                                <div id="divFidelizacion">
+                                                    <div class="form-group">
+                                                        <label class="col-sm-3 control-label"></label>
+                                                        <label class="col-sm-4 control-label text-center">Bonos</label>
+                                                        <label class="col-sm-4 control-label text-center">Nro. Periodos</label>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-sm-3 control-label" id="lblMinutos">[lblMinutos]</label>
+                                                        <div class="col-sm-4">
+                                                            <select id="cboMinutos" class="form-control input-sm"></select>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                            <select id="cboMinutosP" class="form-control input-sm"></select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-sm-3 control-label" id="lblSMS">[lblSMS]</label>
+                                                        <div class="col-sm-4">
+                                                            <select id="cboSMS" class="form-control input-sm"></select>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                            <select id="cboSMSP" class="form-control input-sm"></select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-sm-3 control-label" id="lblInternet">[lblInternet]</label>
+                                                        <div class="col-sm-4">
+                                                            <select id="cboInternet" class="form-control input-sm"></select>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                            <select id="cboInternetP" class="form-control input-sm"></select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-sm-3 control-label" id="lblRPC">[lblRPC]</label>
+                                                        <div class="col-sm-4">
+                                                            <select id="cboRPC" class="form-control input-sm"></select>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                            <select id="cboRPCP" class="form-control input-sm"></select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="divDescuento">
+                                                    <div class="form-group">
+                                                        <label class="col-sm-3 control-label">Dscto:</label>
+                                                        <div class="col-sm-2">
+                                                            <div class="input-group input-group-sm">
+                                                                <span class="input-group-addon">S/</span>
+                                                                <input id="txtDescuento" type="text" class="form-control text-right">
+                                                            </div>
+                                                        </div>
+                                                        <label class="col-sm-2 control-label">OCC:</label>
+                                                        <label class="col-sm-2 control-label" style="text-align: left; font-weight: normal" id="lblOCC">[lblOCC]</label>
+                                                    </div>
+                                                </div>
+                                                <div id="divDescuentoETI">
+                                                    <div class="form-group">
+                                                        <label class="col-sm-3 control-label">Dscto:</label>
+                                                        <div class="col-sm-2">
+                                                            <div class="input-group input-group-sm">
+                                                                <span class="input-group-addon">S/</span>
+                                                                <input id="txtCosto" type="text" class="form-control text-right">
+                                                            </div>
+                                                        </div>
+                                                        <label class="col-sm-4 control-label" style="text-align: left; font-weight: normal" id="lblConcepto">[lblConcepto]</label>
+                                                    </div>
+                                                </div>
+                                                <div id="divFidelizaDTH">
+                                                    <div class="form-group">
+                                                        <label class="col-sm-3 control-label" id="divSeccionBonoDTH1">Descuento:</label>
+                                                        <div class="col-sm-2" id="divSeccionBonoDTH2">
+                                                            <div class="input-group input-group-sm">
+                                                                <span class="input-group-addon">S/</span>
+                                                                <input id="txtDstBonoDTH" type="text" class="form-control text-right">
+                                                            </div>
+                                                        </div>
+                                                        <label class="col-sm-3 control-label">Nro. Periodos:</label>
+                                                        <div class="col-sm-3">
+                                                            <select id="cboPeriodosDHT" class="form-control input-sm"></select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group" id="divSeccionDstoBonoDTH">
+                                                        <label class="col-sm-3 control-label">Dscto:</label>
+                                                        <label class="col-sm-6 control-label" id="lblDstoBonoDTH" style="text-align: left; font-weight: normal">[lblDstoBonoDTH]</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="divNoRetenido">
+                                                <div class="form-group">
+                                                    <label class="col-sm-3 control-label">Fecha Cancelación:</label>
+                                                    <div class="col-sm-3">
+                                                        <div class="input-daterange input-group">
+                                                            <input type="text" class="form-control input-sm" id="txtFCancelacion" name="txtFCancelacion">
+                                                            <label class="input-group-addon btn transaction-button" for="txtFCancelacion">
+                                                                <span class="glyphicon glyphicon-calendar"></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-3 control-label">Pago Reintegro APADECE:</label>
+                                                    <div class="col-sm-4">
+                                                        <label class="radio-inline">
+                                                            <input type="radio" name="pagoReintegro" id="rbtReintegroEfectivo" value="option1">
+                                                            <strong> En Efectivo</strong>
+                                                        </label>
+                                                        <label class="radio-inline">
+                                                            <input type="radio" name="pagoReintegro" id="rbtReintegroOCC" value="option2">
+                                                            <strong> OCC</strong>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-3 control-label">Pago Penalidad PCS:</label>
+                                                    <div class="col-sm-4">
+                                                        <label class="radio-inline">
+                                                            <input type="radio" name="pagoPenalidad" id="rbtPenalidadEfectivo" value="option1">
+                                                            <strong> En efectivo</strong>
+                                                        </label>
+                                                        <label class="radio-inline">
+                                                            <input type="radio" name="pagoPenalidad" id="rbtPenalidadDebito" value="option2">
+                                                            <strong> Nota de Débito</strong>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div id="divEfectivo">
+                                                    <div class="form-group">
+                                                        <label class="col-sm-3 control-label">Num. Boleta:</label>
+                                                        <div class="col-sm-2">
+                                                            <input type="text" class="form-control input-sm" id="txtNumBoleta" />
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <button id="btnValidarBoleta" class="btn transaction-button btn-sm w-100">
+                                                                <span class="glyphicon glyphicon-cog">&nbsp;</span>Validar
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="divDebito">
+                                                    <div class="form-group">
+                                                        <label class="col-sm-3 control-label">Área:</label>
+                                                        <div class="col-sm-4">
+                                                            <select id="cboArea" class="form-control input-sm"></select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-sm-3 control-label">Motivo:</label>
+                                                        <div class="col-sm-4">
+                                                            <select id="cboMotivoNR" class="form-control input-sm"></select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-sm-3 control-label">Sub Motivo:</label>
+                                                        <div class="col-sm-4">
+                                                            <select id="cboSubMotivo" class="form-control input-sm"></select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="divAccion">
+                                                <div class="form-group">
+                                                    <label class="col-sm-3 control-label">Acción Aprobada por Supervisor/Jefe:</label>
+                                                    <div class="col-sm-1">
+                                                        <input type="checkbox" id="chkAccion" value="">
+                                                    </div>
+                                                </div>
+                                                <div id="divSupevJefe">
+                                                    <div class="form-group">
+                                                        <label class="col-sm-3 control-label">Supervisor/Jefe:</label>
+                                                        <div class="col-sm-4">
+                                                            <select id="cboSupervJefe" class="form-control input-sm"></select>
+                                                        </div>
+                                                    </div>
+                                                    <div id="divDescuentoSJ">
+                                                        <div class="form-group">
+                                                            <label class="col-sm-3 control-label">Dscto:</label>
+                                                            <div class="col-sm-2">
+                                                                <div class="input-group input-group-sm">
+                                                                    <span class="input-group-addon">S/</span>
+                                                                    <input id="txtDescuentoSJ" type="text" class="form-control text-right">
+                                                                </div>
+                                                            </div>
+                                                            <label class="col-sm-2 control-label">OCC:</label>
+                                                            <label class="col-sm-2 control-label" style="text-align: left; font-weight: normal" id="lblOCCSJ">[lblOCCSJ]</label>
+                                                        </div>
+                                                    </div>
+                                                    <div id="divDescuentoEtiSJ">
+                                                        <div class="form-group">
+                                                            <label class="col-sm-3 control-label">Dscto:</label>
+                                                            <div class="col-sm-2">
+                                                                <div class="input-group input-group-sm">
+                                                                    <span class="input-group-addon">S/</span>
+                                                                    <input id="txtCostoSJ" type="text" class="form-control text-right">
+                                                                </div>
+                                                            </div>
+                                                            <label class="col-sm-4 control-label" style="text-align: left; font-weight: normal" id="lblConceptoSJ">[lblConceptoSJ]</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">Punto de Atención:</label>
+                                                <div class="col-sm-4">
+                                                    <select id="ddlCACDAC" class="form-control input-sm"></select>
+                                                </div>
+                                            </div>
+                                            <div id="divListaLineas">
+                                                <div class="form-group">
+                                                    <div class="col-sm-3"></div>
+                                                    <div class="col-sm-6">
+                                                        <div class="input-group">
+                                                            <span class="input-group-addon" >
+                                                                <input type="checkbox" id="chkSuspReacXCuenta" value="">
+                                                            </span>
+                                                            @*<label class="control-label">RETENCIÓN/CANCELACIÓN POR CUENTA</label>*@
+                                                            <input type="text" class="form-control input-sm" value="RETENCIÓN/CANCELACIÓN POR CUENTA" disabled>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="col-sm-3"></div>
+                                                    <div class="col-sm-7">
+                                                        <label class="radio-inline">
+                                                            <input type="radio" name="AplicaServ" id="rbtAplicaTodoServ" value="option1">
+                                                            <strong> Aplica a todos los Nros. de Servicio</strong>
+                                                        </label>
+                                                        <label class="radio-inline">
+                                                            <input type="radio" name="AplicaServ" id="rbtAplicaAlgunosServ" value="option1">
+                                                            <strong> Aplica a algunos Nros. de Servicio</strong>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="col-sm-3 text-right">
+                                                        <button type="button" class="btn transaction-button btn-sm" id="btnImportar"><span class="glyphicon glyphicon-import" aria-hidden="true"></span> Importar</button>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <input type="file" class="form-control input-sm" id=""/>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="col-sm-12 text-center">
+                                                        <label class="control-label">Relación de Nros. de Servicios Activos</label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="col-sm-2">
+                                                        <button type="button" class="btn transaction-button btn-sm" id="btnQuitar"><span class="glyphicon glyphicon-chevron-left"></span> Limpiar</button>
+                                                    </div>
+                                                    <div class="col-sm-2">
+                                                        <button type="button" class="btn transaction-button btn-sm" id="btnAgregar"><span class="glyphicon glyphicon-chevron-left"></span> Agregar</button>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="col-sm-12">
+                                                        <table id="tblServicios" class="table table-bordered table-striped">
+                                                            <thead class="btn-danger">
+                                                                <tr>
+                                                                    <th><input id="chkAllServicios" type="checkbox" /></th>
+                                                                    <th>Nro. Servicio</th>
+                                                                    <th>Contrato</th>
+                                                                    <th>Estado</th>
+                                                                    <th>Plan</th>
+                                                                    <th>Tipo Producto</th>
+                                                                </tr>
+                                                            </thead>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-3 control-label">Total del Cliente/Cuenta:</label>
+                                                    <label class="col-sm-3 control-label" id="lblTotalClienteCuenta" style="text-align: left; font-weight: normal">[lblTotalClienteCuenta]</label>
+                                                </div>
+                                                <div id="divPedido">
+                                                    <div class="form-group">
+                                                        <div class="col-sm-12">
+                                                            <table id="tblListaServResumen" class="table table-bordered table-striped">
+                                                                <thead class="btn-danger">
+                                                                    <tr>
+                                                                        <th>Nro. Cuenta</th>
+                                                                        <th>Cantidad Total de Servicios</th>
+                                                                    </tr>
+                                                                </thead>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <div class="col-sm-2">
+                                                            <button type="button" class="btn transaction-button btn-sm" id="btnBorrarPedido"><span class="glyphicon glyphicon-chevron-left"></span> Borrar Pedido</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">Nota:</label>
+                                                <div class="col-sm-8">
+                                                    <textarea id="txtNota" class="form-control input-sm"></textarea>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <div class="form-group">
+                                            <center>
+                                                <button type="button" class="btn transaction-button prev-step"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Anterior</button>
+                                                <button type="button" class="btn transaction-button next-step" id="btnSiguiente03">Siguiente <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>
+                                                <button id="btnCerrar03" type="button" class="btn transaction-button"><span class="glyphicon glyphicon-home"></span> Cerrar</button>
+                                            </center>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="tabSummary" class="step tab-pane fade" role="tabpanel" percent="99%">
+                                <div class="panel claro-panel-primary">
+                                    <div id="tabSummary" role="tab" class="panel-heading">
+                                        <span class="glyphicon glyphicon-user"></span>
+                                        <label data-toggle="collapse" aria-expanded="true" data-parent="#DataCustomer" aria-controls="customerDataCollapse" class="collapsed transaction-ref-color"> Resumen</label>
+                                    </div>
+                                    <div class="panel-body">
+                                        <form id="tbDatoTransaccion" class="form-horizontal">
+                                            <table class="table table-condensed table-responsive">
+                                                <tbody>
+                                                    <tr>
+                                                        <td colspan="4"><label>Datos Transacción</label></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Penalidad</td>
+                                                        <td><label data-bind-transfer="Penalidad"></label></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Retenido</td>
+                                                        <td><label data-bind-transfer="Retenido"></label></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="4"><label>Retención</label></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Motivo de Cancelación</td>
+                                                        <td><label data-bind-transfer="MotivoCancelacion"></label></td>
+                                                        <td>Total Inversión</td>
+                                                        <td><label data-bind-transfer="TotalInversion"></label></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Sub Motivo</td>
+                                                        <td><label data-bind-transfer="SubMotivo"></label></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+
+                                                    <tr class="retenido">
+                                                        <td>Tipo Trabajo</td>
+                                                        <td><label data-bind-transfer="TipoTrabajo"></label></td>
+                                                        <td>Motivo Sot</td>
+                                                        <td><label data-bind-transfer="MotivoSot"></label></td>
+                                                    </tr>
+                                                    <tr class="retenido">
+                                                        <td>Sub Tipo Trabajo</td>
+                                                        <td><label data-bind-transfer="SubTipoTrabjo"></label></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr class="retenido">
+                                                        <td>Fecha Compromiso</td>
+                                                        <td><label data-bind-transfer="FechaCompromiso"></label></td>
+                                                        <td>Horario</td>
+                                                        <td><label data-bind-transfer="Horario"></label></td>
+                                                    </tr>
+                                                    <tr class="retenido">
+                                                        <td>Aplica Caso</td>
+                                                        <td><label data-bind-transfer="AplicaCaso"></label></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td colspan="4"><label>Acción</label></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Acción</td>
+                                                        <td><label data-bind-transfer="Accion"></label></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Correo</td>
+                                                        <td><label data-bind-transfer="Correo"></label></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Punto de Atención</td>
+                                                        <td><label data-bind-transfer="PuntoVenta"></label></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Notas</td>
+                                                        <td><label data-bind-transfer="Nota"></label></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </form>
+
+                                        <center>
+                                            <button type="button" class="btn transaction-button prev-step"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Anterior</button>
+                                            <button id="btnGuardar" type="button" class="btn transaction-button"><span class="glyphicon glyphicon-floppy-disk"></span> Guardar</button>
+                                            <button id="btnCerrar04" type="button" class="btn transaction-button"><span class="glyphicon glyphicon-home"></span> Cerrar</button>
+                                            <button id="btnConstancia" type="button" class="btn transaction-button"><span class="glyphicon glyphicon-list-alt"></span> Constancia</button>
+                                        </center>
+                                        <br />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="divErrorAlert" class="alert alert-transaction alert-danger" role="alert" style="display: none">
+                            <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <strong><span id="lblErrorMessage"></span></strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts
+{
+    <script src="~/Areas/Transactions/Content/Lib/Steps.js"></script>
+    <script src="~/Areas/Transactions/Scripts/RetentionCancelServices/SIACPOSession.js"></script>
+    <script src="~/Areas/Transactions/Scripts/RetentionCancelServices/PostpaidRetentionCancelServices.js"></script>
+}

@@ -21,6 +21,7 @@ using POSTPREDATA = Claro.SIACU.ProxyService.Transac.Service.SIAC.Post.DatosPreP
 using Tools.Entity;
 using Claro.SIACU.Entity.Transac.Service.Fixed.Discard;
 using Claro.SIACU.Entity.Transac.Service.Fixed.Discard.ProcesarContinue; //INICIATIVA-871
+using Claro.SIACU.Entity.Transac.Service.Fixed.Discard.BannerDesc;
 
 namespace Claro.SIACU.Business.Transac.Service.Fixed
 {
@@ -1826,6 +1827,25 @@ namespace Claro.SIACU.Business.Transac.Service.Fixed
                 Web.Logging.Error(objAuditRequest.Session, objAuditRequest.Transaction, ex.Message);
             }
 
+            return objResponse;
+        }
+
+        public static BannerDescartesConsultaResp BannerDescartesAcBus(BannerDescartesConsultaReq objRequest, Tools.Entity.AuditRequest objAuditRequest)
+        {
+            BannerDescartesConsultaResp objResponse = new BannerDescartesConsultaResp();
+            
+            try
+            {
+                objResponse = Claro.Web.Logging.ExecuteMethod<BannerDescartesConsultaResp>(objAuditRequest.Session, objAuditRequest.Transaction, () =>
+                {
+                    return Data.Transac.Service.Fixed.Fixed.BannerDescartesAcBus(objRequest, objAuditRequest);
+                });
+            }
+            catch (Exception ex)
+            {
+                Claro.Web.Logging.Error(objAuditRequest.Session, objAuditRequest.Transaction, ex.Message);
+                throw new Claro.MessageException(objAuditRequest.Transaction);
+            }
             return objResponse;
         }
         //FIN: INICIATIVA-986

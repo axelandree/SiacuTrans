@@ -1,0 +1,97 @@
+﻿@using System.Web.Optimization;
+
+@{
+    Layout = null;
+}
+<script type="text/javascript" src="~/Areas/Transactions/Content/Lib/BloqueoF12.js"></script>
+<div id="divTFIPlanMigration" class="contenedor">
+    <div class="container-fluid">
+        <div id="DataCustomer" class="panel-group" role="tablist">
+            <table class="table table-condensed">
+                <tbody>
+                    <tr>
+                        <td><label class="col-md-6">Nro. Teléfono: </label>
+                        <label id="lblPhoneNumber" class="text-message-info"></label></td>
+                        <td><label class="col-md-6">Tipo de Cliente: </label>
+                        <label id="lblCustomerType" class="text-message-info"></label></td>
+                        <td><label class="col-md-6">Contacto: </label>
+                        <label id="lblContactCust" class="text-message-info"></label></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="form-group">
+            <div id="customerDataHead" role="tab" class="panel-heading">
+                <span class="glyphicon glyphicon-user"></span>
+                <a data-toggle="collapse" href="#customer" aria-expanded="true" data-parent="#DataCustomer" aria-controls="customerDataCollapse" class="collapsed transaction-ref-color"> Datos Actuales del Cliente</a>
+            </div>
+            <div class="panel-group" role="tablist"><br />
+                <table class="table table-condensed">
+                    <tbody>
+                        <tr>
+                            <td><label class="col-md-3">Cliente: </label></td>
+                            <td><label id="lblCustomer" class="text-message-info"></label></td>
+                            <td><label class="col-md-6">Fecha de Activación: </label></td>
+                            <td><label id="lblDateActivation" class="text-message-info"></label></td>
+                        </tr>
+                        <tr>
+                            <td><label class ="col-md-6">Plan actual: </label></td>
+                            <td><label id="lblPlan" class="text-message-info"></label></td>
+                            <td><label class="col-md-6">Fecha de vencimiento: </label></td>
+                            <td><label id="lblDueDate" class="text-message-info"></label></td>
+                        </tr>
+                        <tr>
+                            <td><label class="col-md-3">DNI/RUC: </label></td>
+                            <td><label id="lblDocument" class="text-message-info"></label></td>
+                            <td><label class="col-md-6">Estado de Línea: </label></td>
+                            <td><label id="lblStatus" class="text-message-info"></label></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="form-group">
+            <div id="PlanData" role="tab" class="panel-heading">
+                <span class="glyphicon glyphicon-phone-alt"></span>
+                <a class="collapsed transaction-ref-color"> Datos del Plan </a>
+            </div>
+            <div class="panel-group" role="tablist"><br />
+                <div>
+                    <table class="table table-condensed">
+                        <tbody>
+                            <tr>
+                                <td><label class="col-md-6">Nuevo plan: </label></td>
+                                <td><select class="form-control input-sm" id="ddlNewPlan" style="width:80%"></select></td>
+                            </tr>
+                            <tr>
+                                <td><label class="col-md-6" style="height:25px">Enviar por Email: </label>
+                                <input type="checkbox" id="chkSendMail" value="false"></td>
+                                <td><input type="text" class="form-control" id="txtSendMail" style="display: none; width:80%"></td>
+                            </tr>
+                            <tr>
+                                <td><label class="col-md-6">Punto de atención: </label></td>
+                                <td><select class="form-control input-sm" id="ddlPuntosAtencion" style="width:80%"></select></td>
+                            </tr>
+                            <tr>
+                                <td><label class="col-md-6">Notas: </label></td>
+                                <td><textarea class="form-control" rows="5" maxlength="4000" style="width:80%" id="txtNotes" onkeypress="return alpha(event)"></textarea></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div id ="tabSummary" class="step tab-pane" role="tabpanel" >
+            <center>
+                <form class="form-inline">
+                    <div class="form-group">
+                        <button class="btn transaction-button btn-sm" id="btnSave" type="button"><span class="glyphicon glyphicon-floppy-disk">&nbsp;</span>Guardar</button>
+                        <button class="btn transaction-button btn-sm" id="btnConstancy" type="button"><span class="glyphicon glyphicon-file">&nbsp;</span>Constancia</button>
+                        <button class="btn transaction-button btn-sm" id="btnClose" type="button"><span class="glyphicon glyphicon-remove">&nbsp;</span>Cerrar</button>
+                    </div>
+                </form>
+            </center>
+        </div>
+    </div>
+</div>
+@Scripts.Render("~/bundles/Transaction/PrepaidTFIPlanMigration/PlanMigration")

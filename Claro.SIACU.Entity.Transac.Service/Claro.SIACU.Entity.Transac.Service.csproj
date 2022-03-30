@@ -492,6 +492,12 @@
     <Compile Include="Fixed\DataServBy.cs" />
     <Compile Include="Fixed\DetEquipmentService.cs" />
     <Compile Include="Fixed\Discard\AplicarRetirarContingencia.cs" />
+    <Compile Include="Fixed\Discard\BannerDesc\BannerDescartesConsultaReq.cs" />
+    <Compile Include="Fixed\Discard\BannerDesc\BannerDescartesConsultaResp.cs" />
+    <Compile Include="Fixed\Discard\BannerDesc\BannerDescartesRequest.cs" />
+    <Compile Include="Fixed\Discard\BannerDesc\BannerDescartesResponse.cs" />
+    <Compile Include="Fixed\Discard\BannerDesc\ResponseAudi.cs" />
+    <Compile Include="Fixed\Discard\BannerDesc\ResponseDataConsult.cs" />
     <Compile Include="Fixed\Discard\DatosSIMPrepago.cs" />
     <Compile Include="Fixed\Discard\Discard.cs" />
     <Compile Include="Fixed\Discard\DiscardListValue.cs" />

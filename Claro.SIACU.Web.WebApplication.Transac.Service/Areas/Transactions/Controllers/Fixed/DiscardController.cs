@@ -38,6 +38,7 @@ using Claro.SIACU.Web.WebApplication.Transac.Service.Areas.Transactions.Helpers.
 using Claro.SIACU.ProxyService.Transac.Service.InstantLinkSOA;//INICIATIVA-871
 using Claro.SIACU.Entity.Transac.Service.Common.GetInsertInt;
 using Claro.SIACU.Entity.Transac.Service.Fixed.Discard;
+using BannerDes = Claro.SIACU.Entity.Transac.Service.Fixed.Discard.BannerDesc;
 
 namespace Claro.SIACU.Web.WebApplication.Transac.Service.Areas.Transactions.Controllers.Fixed
 {
@@ -1498,5 +1499,35 @@ namespace Claro.SIACU.Web.WebApplication.Transac.Service.Areas.Transactions.Cont
         }
         #endregion
         #endregion
+
+        public JsonResult BannerDescartesAcBus(string strIdSession, BannerDescartesConsultaReq objRequest)
+        {
+            FIXED.BannerDescartesConsultaResp objResponse = new FIXED.BannerDescartesConsultaResp();
+
+            AuditRequest1 auditRequest = new AuditRequest1();
+            auditRequest = App_Code.Common.CreateAuditRequest<FixedTransacService.AuditRequest1>(strIdSession);
+
+            Claro.Web.Logging.Info(strIdSession, auditRequest.transaction, "INICIO INICIATIVA- - RegistrarDetalleInteraccion");
+            Claro.Web.Logging.Info(strIdSession, auditRequest.transaction, string.Format("_oServiceFixed.ConsultarDescartesBanner Requestq: {0}", new System.Web.Script.Serialization.JavaScriptSerializer().Serialize(objRequest)));
+
+            try
+            {
+                objResponse = _oServiceFixed.BannerDescartesAcBus(objRequest, auditRequest);
+            }
+            catch (Exception ex)
+            {
+                Claro.Web.Logging.Error(strIdSession, auditRequest.transaction, ex.Message);
+                throw new Claro.MessageException(auditRequest.transaction);
+            }
+
+            Claro.Web.Logging.Info(strIdSession, auditRequest.transaction, string.Format("_oServiceFixed.ConsultarDescartesBanner Response: {0}", new System.Web.Script.Serialization.JavaScriptSerializer().Serialize(objResponse)));
+            Claro.Web.Logging.Info(strIdSession, auditRequest.transaction, "FIN INICIATIVA- - ConsultarBannerDescartes");
+
+            JsonResult jsonBann = Json(new { data = objResponse });
+
+            return jsonBann;
+        }
+
+       
     }
 }

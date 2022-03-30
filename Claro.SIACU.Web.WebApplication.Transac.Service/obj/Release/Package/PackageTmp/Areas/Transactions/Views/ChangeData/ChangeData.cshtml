@@ -1,0 +1,966 @@
+﻿@{
+    Layout = null;
+}
+<style>
+    #frmChangeData .error {
+        background: #ffffff !important;
+        padding: 0px !important;
+        position: relative;
+        margin-top: 5px;
+        color: #a94442;
+    }
+
+    .alert {
+        padding: 10px;
+        margin-bottom: 5px;
+        border: 1px solid transparent;
+        border-radius: 4px;
+    }
+
+    .control-label {
+        padding-top: 7px;
+        margin-bottom: 0;
+        text-align: left !important;
+    }
+
+    .alert2 {
+        margin-left: 5px;
+        margin-right: 5px;
+        padding: 10px;
+        margin-bottom: 5px;
+        border: 1px solid transparent;
+        border-radius: 4px;
+    }
+
+    .alert2-info {
+        color: #020202;
+        background-color: #a7a8aa;
+        border-color: #a7a8aa;
+        font-weight: bold;
+    }
+
+    .panel-info {
+        /*background-color: #b5dbef !important;
+        border-color: #bce8f1 !important;*/
+        font-weight: bold !important;
+    }
+
+    .row {
+        padding: 0px 5px 0px 5px !important;
+    }
+
+    .form-group {
+        margin-bottom: 10px;
+    }
+
+    body {
+        font-size: 11px;
+    }
+
+    .form-control {
+        height: 33px;
+    }
+
+    label {
+        margin-bottom: 0px;
+    }
+
+    .modal {
+        display: block;
+        padding-right: 1px !important;
+        position: fixed !important;
+        top: 35% !important;
+        right: 40%;
+        bottom: 0%;
+        left: 40%;
+        z-index: 1150;
+        outline: 0px;
+        height: 160px;
+        width: 300px;
+    }
+</style>
+<script type="text/javascript" src="~/Areas/Transactions/Content/Lib/BloqueoF12.js"></script>
+<div id="INTChangeData" class="container-fluid">
+    <div class="scrollbudy">
+        <div class="col-sm-3">
+            <div id="DataCustomer" class="panel-group" role="tablist" aria-multiselectable="true">
+                <div class="panel claro-panel-primary">
+                    <div id="customerDataHead" role="tab" class="panel-heading">
+                        <span class="glyphicon glyphicon-user"></span>
+                        <a data-toggle="collapse" href="#customerDataCollapse" aria-expanded="true" aria-controls="customerDataCollapse" class="collapsed transaction-ref-color"> Datos del Cliente</a>
+                    </div>
+                    <div class="panel-body panel-collapse collapse in" id="customerDataCollapse" role="tabpanel" aria-labelledby="customerDataHead">
+                        <table class="table table-condensed">
+                            <tbody>
+                                <tr>
+                                    <td class="col-sm-6"><label class="control-label">Nro Teléfono:</label></td>
+                                    <td class="col-sm-6">
+                                        <label id="lblNroTelefono"></label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-6"><label class="control-label">Tipo de Cliente:</label></td>
+                                    <td class="col-sm-6"><label id="lblTipoCliente"></label></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-6"><label class="control-label">Cliente:</label></td>
+                                    <td class="col-sm-6"><label id="lblContacto"></label></td>
+                                </tr>
+                                <tr id="trCC">
+                                    <td class="col-sm-6"><label class="control-label">Contacto Cliente:</label></td>
+                                    <td class="col-sm-6"><label id="lblContCliente"></label></td>
+                                </tr>
+                                <tr id="trRL">
+                                    <td class="col-sm-6"><label class="control-label">Representante Legal:</label></td>
+                                    <td class="col-sm-6"><label id="lblRepLegal"></label></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-6"><label class="control-label">Tipo Documento:</label></td>
+                                    <td class="col-sm-6"><label id="lblTipoDoc"></label></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-6"><label class="control-label">Nro. Documento:</label></td>
+                                    <td class="col-sm-6"><label id="lblDNI_RUC"></label></td>
+                                </tr>                                                               
+                                <tr>
+                                    <td class="col-sm-6"><label class="control-label">Fecha de Nacimiento:</label></td>
+                                    <td class="col-sm-6"><label id="lblFechaNac"></label></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-6"><label class="control-label">Nacionalidad:</label></td>
+                                    <td class="col-sm-6"><label id="lblNacionalidad"></label></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-6"><label class="control-label">Sexo:</label></td>
+                                    <td class="col-sm-6"><label id="lblSexoCli"></label></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-6"><label class="control-label">Estado Civil:</label></td>
+                                    <td class="col-sm-6"><label id="lblEstadoCiv"></label></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-6"><label class="control-label">Tel. Referencia 1:</label></td>
+                                    <td class="col-sm-6"><label id="lblCelular"></label></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-6"><label class="control-label">Tel. Referencia 2:</label></td>
+                                    <td class="col-sm-6"><label id="lblTelefono"></label></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-6"><label class="control-label">Email:</label></td>
+                                    <td class="col-sm-6"><label id="lblEmail"></label></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="addressLegalDataHead" role="tab" class="panel-heading">
+                        <span class="glyphicon glyphicon-home"></span>
+                        <a data-toggle="collapse" href="#addressLegalDataCollapse" aria-expanded="true" aria-controls="addressLegalDataCollapse" class="collapsed transaction-ref-color"> Dirección de Domicilio</a>
+                    </div>
+                    <div id="addressLegalDataCollapse" role="tabpanel" aria-labelledby="addressLegalDataHead">
+                        <table class="table table-condensed">
+                            <tr>
+                                <td class="col-sm-6"><label class="control-label">Calle:</label></td>
+                                <td class="col-sm-6"><label id="lblDireccionLegal"></label></td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-6"><label class="control-label">Referencia:</label></td>
+                                <td class="col-sm-6"><label id="lblReferenciaLegal"></label></td>
+                            </tr>
+
+                            <tr>
+                                <td class="col-sm-6"><label class="control-label">Código Postal:</label></td>
+                                <td class="col-sm-6"><label id="lblCodPostalLegal"></label></td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-6"><label class="control-label">Departamento:</label></td>
+                                <td class="col-sm-6"><label id="lblDepartamentoLegal"></label></td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-6"><label class="control-label">Provincia:</label></td>
+                                <td class="col-sm-6"><label id="lblProvinciaLegal"></label></td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-6"><label class="control-label">Distrito:</label></td>
+                                <td class="col-sm-6"><label id="lblDistritoLegal"></label></td>
+                            </tr>
+
+
+
+                        </table>
+                    </div>
+
+                    <div id="addressDataHead" role="tab" class="panel-heading">
+                        <span class="glyphicon glyphicon-home"></span>
+                        <a data-toggle="collapse" href="#addressDataCollapse" aria-expanded="true" aria-controls="addressDataCollapse" class="collapsed transaction-ref-color"> Dirección de Facturación</a>
+                    </div>
+                    <div id="addressDataCollapse" role="tabpanel" aria-labelledby="addressDataHead">
+                        <table class="table table-condensed">
+                            <tr>
+                                <td class="col-sm-6"><label class="control-label">Calle:</label></td>
+                                <td class="col-sm-6"><label id="lblDireccion"></label></td>
+                            </tr>
+
+
+
+                            <tr>
+                                <td class="col-sm-6"><label class="control-label">Referencia:</label></td>
+                                <td class="col-sm-6"><label id="lblReferencia"></label></td>
+                            </tr>
+
+                            <tr>
+                                <td class="col-sm-6"><label class="control-label">Código Postal:</label></td>
+                                <td class="col-sm-6"><label id="lblCodPostal"></label></td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-6"><label class="control-label">Departamento:</label></td>
+                                <td class="col-sm-6"><label id="lblDepartamento"></label></td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-6"><label class="control-label">Provincia:</label></td>
+                                <td class="col-sm-6"><label id="lblProvincia"></label></td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-6"><label class="control-label">Distrito:</label></td>
+                                <td class="col-sm-6"><label id="lblDistrito"></label></td>
+                            </tr>
+
+
+
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-sm-9">
+
+
+
+            <div id="tabProducts">
+
+                <div class="panel claro-panel-primary">
+                    <div class="panel-heading">
+                        CAMBIO DE DATOS
+                    </div>
+                    <div class="panel-body">
+                        <input id="hidCadena" style="WIDTH: 24px; HEIGHT: 22px" type="hidden" name="hidCadena">
+                        <input id="hidContadorD1" style="WIDTH: 24px; HEIGHT: 22px" type="hidden" name="hidCadena">
+                        <input id="hidContadorD2" style="WIDTH: 24px; HEIGHT: 22px" type="hidden" name="hidCadena">
+                        <input id="hidContadorFD1" style="WIDTH: 24px; HEIGHT: 22px" type="hidden" name="hidCadena">
+                        <input id="hidContadorFD2" style="WIDTH: 24px; HEIGHT: 22px" type="hidden" name="hidCadena">
+                        <input id="hidTipoDato" style="WIDTH: 24px; HEIGHT: 22px" type="hidden" name="hidCadena">
+                        <input id="hidLongDoc" style="WIDTH: 24px; HEIGHT: 22px" type="hidden" name="hidCadena">
+                        <input id="hidDNIRUC" style="WIDTH: 24px; HEIGHT: 22px" type="hidden" name="hidCadena">
+                        <input id="hidTipoDatoRL" style="WIDTH: 24px; HEIGHT: 22px" type="hidden" name="hidCadena">
+                        <input id="hidLongDocRL" style="WIDTH: 24px; HEIGHT: 22px" type="hidden" name="hidCadena">
+                        <input id="hidrlIdCur" style="WIDTH: 24px; HEIGHT: 22px" type="hidden" name="hidCadena">
+                        <input id="hidtdCboTDO" style="WIDTH: 24px; HEIGHT: 22px" type="hidden" name="hidCadena">
+                        <input id="hidtdCboTDOLong" style="WIDTH: 24px; HEIGHT: 22px" type="hidden" name="hidCadena">
+                        <input id="hidtdCboTDT" style="WIDTH: 24px; HEIGHT: 22px" type="hidden" name="hidCadena">
+                        <input id="hidtdCboTDTLong" style="WIDTH: 24px; HEIGHT: 22px" type="hidden" name="hidCadena">
+                        <input id="hidflagdniruc" style="WIDTH: 24px; HEIGHT: 22px" type="hidden" name="hidCadena">
+                        <input id="hidflagrl" style="WIDTH: 24px; HEIGHT: 22px" type="hidden" name="hidCadena" value="0">
+                        <div class="container-fluid">
+                                                    <div class="row">
+                                <form class="form-horizontal">
+                                                        <div class="form-group">
+                                        <label for="cboMotivoChange" class="col-sm-2 control-label">Tipo de Cambio</label>
+                                                            <div class="col-sm-4">
+                                                                <select id="cboMotivoChange" name="nmcboMotivoChangeData" class="form-control input-sm"></select>
+                                                            </div>
+                                                    </div>
+                                </form>
+                                                </div>
+                                            </div>
+                      
+                                        </div>
+
+                                            <div class="panel-heading">
+                        NUEVOS DATOS DEL CLIENTE
+                                            </div>
+                                            <div class="panel-body">
+                        <div class="container-fluid">
+                            <div id="DataCustomerB" class="panel-group" role="tablist" aria-multiselectable="true">
+                                <div class="panel claro-panel-primary">
+                                    <div id="personalDataHead" role="tab" class="panel-heading panel-info">
+                                        <span class="glyphicon glyphicon-user"></span>
+                                        <a data-toggle="collapse" href="#personalDataCollapse" aria-expanded="true" aria-controls="personalDataCollapse" class="collapsed transaction-ref-color" style="color: #020202 !important;"> Datos de Identificación Personal</a>
+                                                            </div>
+                                    <div class="panel-body panel-collapse collapse in" id="personalDataCollapse" role="tabpanel" aria-labelledby="personalDataHead">
+                                        <div class="container-fluid">
+                                                    <div class="row">
+                                                <form class="form-horizontal">
+                                                        <div class="form-group">
+                                                        <label class="col-sm-2 control-label" for="cboTipDoc">Tipo Documento</label>
+                                                            <div class="col-sm-4">
+                                                                <select id="cboTipDoc" name="nmcboTipDoc" class="form-control input-sm"></select>
+                                                            </div>
+                                                        <label class="col-sm-2 control-label" for="txtNewNroDoc">Nro. Documento</label>
+                                                            <div class="col-sm-4">
+                                                            <input id="txtNewNroDoc" oninput="process(this)" name="nmtxtNewNroDoc" class="form-control input-sm" />
+                                                            </div>
+                                                        </div>
+                                                    <div class="form-group" id="divNameCli">
+                                                        <label class="col-sm-2 control-label" for="txtNewNombCli">Nombre</label>
+                                                            <div class="col-sm-4">
+                                                            <input id="txtNewNombCli" name="nmtxtNewNombCli" class="form-control input-sm" />
+                                                            </div>
+                                                        <label class="col-sm-2 control-label clasis" for="txtNewApeCli">Apellidos</label>
+                                                        <div class="col-sm-4 clasis">
+                                                            <input id="txtNewApeCli" name="nmtxtNewApeCli" class="form-control input-sm" />
+                                                        </div>
+                                                        
+                                                    </div>
+                                                    <div class="form-group" id="divApeTobe">
+                                                        <label class="col-sm-2 control-label cltobe" for="txtNewApeCli">Apellido Paterno</label>
+                                                        <div class="col-sm-4 cltobe">
+                                                            <input id="txtNewApeCliPat" name="nmtxtNewApeCliPat" class="form-control input-sm" />
+                                                        </div>
+                                                        <label class="col-sm-2 control-label cltobe" for="txtNewApeCli">Apellido Materno</label>
+                                                        <div class="col-sm-4 cltobe">
+                                                            <input id="txtNewApeCliMat" name="nmtxtNewApeCliMat" class="form-control input-sm" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group" id="divNameC">
+                                                        <label class="col-sm-2 control-label" for="txtNewRs">Razón Social</label>
+                                                            <div class="col-sm-4">
+                                                                <input id="txtNewRs" name="nmtxtNewRs" class="form-control input-sm text-right" />
+                                                            </div>
+                                                        <label for="txtNameComChangeData" class="col-sm-2 control-label">Nombre Comercial</label>
+                                                            <div class="col-sm-4">
+                                                            <input type="text" id="txtNameComChangeData" name="nmtxtNameComChangeData" class="form-control input-sm" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group" style="display:none;">
+
+                                                        <label for="txtCargoDesem" class="col-sm-2 control-label">Cargo Desempeñado</label>
+                                                            <div class="col-sm-4">
+                                                            <input id="txtCargoDesem" name="nmtxtCargoDesem" class="form-control input-sm" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group" id="divAccion">
+                                                        <label class="col-sm-2 control-label" for="txtDateChangeData">Fecha Nacimiento(*)</label>
+                                                            <div class=" col-sm-4">
+                                                                <div class="input-group input-group-sm">
+                                                                    <input type="text" class="form-control input-sm" id="txtDateChangeData" name="nmtxtDateChangeData" placeholder="DD/MM/AAAA">
+                                                                    <label id="txtCalendarDateChangeData" class="btn transaction-button input-group-addon" for="txtDateChangeData">
+                                                                        <span class="glyphicon glyphicon-calendar"></span>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        <label for="cboNacionalidadChangeData" class="col-sm-2 control-label">Nacionalidad</label>
+                                                            <div class="col-sm-4">
+                                                                <select id="cboNacionalidadChangeData" name="nmcboNacionalidadChangeData" class="form-control input-sm"></select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+
+                                                        <label for="cbocivilstatus" class="col-sm-2 control-label">Estado Civil</label>
+                                                            <div class="col-sm-4">
+                                                                <select id="cbocivilstatus" name="nmcbocivilstatus" class="form-control input-sm"></select>
+                                                            </div>
+
+
+
+                                                        <label for="idSexo" class="col-sm-2 control-label">Sexo</label>
+                                                            <div class="col-sm-1">
+                                                                <label class="radio-inline">
+                                                                    <input type="radio" name="rdbSexo" id="rdbHombre" value="M"><strong>Hombre</strong>
+                                                                </label>
+                                                            </div>
+                                                            <div class="col-sm-1">
+                                                                <label class="radio-inline">
+                                                                    <input type="radio" name="rdbSexo" id="rdbMujer" value="F"><strong>Mujer</strong>
+                                                                </label>
+                                                            </div>
+                                                            <div class="col-sm-1">
+                                                                <label class="radio-inline">
+                                                                    <input type="radio" name="rdbSexo" id="rdbNA" value="U"><strong>NA</strong>
+                                                                </label>
+                                                            </div>
+
+                                                        </div>
+                                                    <div class="form-group" style="display:none;">
+                                                        <div id="divFlatChangeData">
+                                                            <label for="txtNumberChangeData" class="col-sm-2 control-label">Numero Fax:</label>
+                                                                <div class="col-sm-4">
+                                                                    <input type="text" id="txtNumberChangeData" name="nmtxtNumberChangeData" class="form-control input-sm text-right" />
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                </form>
+
+                                                    </div>
+                                                            </div>
+                                        
+                                                        </div>
+
+
+                                    <div id="contactDataHead" role="tab" class="panel-heading panel-info">
+                                        <span class="glyphicon glyphicon-user"></span>
+                                        <a data-toggle="collapse" href="#contactDataCollapse" aria-expanded="true" aria-controls="contactDataCollapse" class="collapsed transaction-ref-color" style="color: #020202 !important;"> Datos de Contacto</a>
+                                                    </div>
+                                    <div class="panel-body panel-collapse collapse in" id="contactDataCollapse" role="tabpanel" aria-labelledby="contactDataHead">
+                                        <div class="container-fluid">
+                                                    <div class="row">
+                                                <form class="form-horizontal">
+                                                        <div class="form-group">
+                                                        <label for="txtMovilChangeData" class="col-sm-2 control-label">Tel. Referencia 1</label>
+                                                            <div class="col-sm-4">
+                                                                <input type="text" id="txtMovilChangeData" name="nmtxtMovilChangeData" class="form-control input-sm text-right" maxlength="@ViewBag.LengthPhone" />
+                                                            </div>
+                                                        <label for="txtPhoneChangeData" class="col-sm-2 control-label">Tel. Referencia 2</label>
+                                                            <div class="col-sm-4">
+                                                                <input id="txtPhoneChangeData" name="nmtxtPhoneChangeData" class="form-control input-sm text-right" maxlength="@ViewBag.LengthPhone" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                        <label class="col-sm-2 control-label" for="txtEmailChangeData">Email</label>
+                                                            <div class="col-sm-4 error-input">
+                                                            <input type="text" id="txtEmailChangeData" name="nmtxtEmailChangeData" class="form-control input-sm" />
+                                                            </div>
+                                                        <label for="idEmail" class="col-sm-2 control-label" form="txtConfirmarEmailChangeData">Confirmar Email(*)</label>
+                                                            <div class="col-sm-4 error-input">
+                                                            <input type="text" id="txtConfirmarEmailChangeData" name="nmtxtConfEmailChangeData" class="form-control input-sm" />
+                                                            </div>
+                                                        </div>
+                                                </form>
+                                                    </div>
+
+                                            <div class="panel-group" role="tablist" aria-multiselectable="true">
+                                                <div class="panel claro-panel-primary">
+                                                    <div id="InvoiceAddressHead" role="tab" class="panel-heading panel-info">
+                                                        <span class="glyphicon glyphicon-user"></span>
+                                                        <a data-toggle="collapse" href="#InvoiceAddressCollapse" aria-expanded="true" aria-controls="InvoiceAddressCollapse" class="collapsed transaction-ref-color" style="color: #020202 !important;"> Nueva Dirección de Facturación</a>
+                                                    </div>
+                                                    <div class="panel-body panel-collapse collapse" id="InvoiceAddressCollapse" role="tabpanel" aria-labelledby="InvoiceAddressHead">
+                                                        <div class="container-fluid">
+                                                            <div class="row">
+                                                                <form class="form-horizontal">
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-2 control-label" for="cboTipoViaF">Calle/Av./Jr(*)</label>
+                                                                        <div class="col-sm-3 error-input"><select class="form-control input-sm select-list" id="cboTipoViaF" name="nmcboTipoViaF"></select></div>
+                                                                        <label class="col-sm-2 control-label" for="txtViaF">Nombre Calle/Av./Jr(*)</label>
+                                                                        <div class="col-sm-5"><input type="text" class="form-control input-sm" id="txtViaF" /></div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-2 control-label" for="txtNumeroCalleF">Número(*)</label>
+                                                                        <div class="col-sm-3"><input type="text" class="form-control input-sm" id="txtNumeroCalleF" name="nmNumeroCalleF" /></div>
+                                                                        <label class="col-sm-2 control-label" for="chkSNF">S/N</label>
+                                                                        <div class="col-sm-3" style="width: 35px;"><input id="chkSNF" type="checkbox" class="form-check-input" /></div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-2 control-label" for="cboTipoMzF">Mz/Bloque/Edif</label>
+                                                                        <div class="col-sm-3 error-input"><select class="form-control input-sm select-list" id="cboTipoMzF" name="nmcboTipoMzF"></select></div>
+                                                                        <label class="col-sm-2 control-label" for="txtNroMzF">Nro Mz/Bloque/Edif</label>
+                                                                        <div class="col-sm-3"><input type="text" class="form-control input-sm" id="txtNroMzF" name="nmtxtNroMzF" /></div>
+                                                                        <label class="col-sm-1 control-label" for="txtLoteF">Lote</label>
+                                                                        <div class="col-sm-1"><input type="text" class="form-control input-sm" id="txtLoteF" name="nmtxtLoteF" disabled /></div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-2 control-label" for="cboTipoInteriorF">Tipo Dpt/Int</label>
+                                                                        <div class="col-sm-3"><select class="form-control input-sm select-list" id="cboTipoInteriorF" name="nmcboTipoInteriorF"></select></div>
+                                                                        <label class="col-sm-2 control-label" for="txtInteriorF">Número Dpto/Int</label>
+                                                                        <div class="col-sm-3"><input type="text" class="form-control input-sm" id="txtInteriorF" name="nmtxtInteriorF" /></div>
+                                                                        <label style="color: red; font-weight: bold; text-align: right;" class="col-sm-1 control-label">(Máx.40)</label>
+                                                                        <div class="col-sm-1"><input type="text" class="form-control input-sm" id="txtContadorFD1" style="color: black; font-weight: bold;" disabled /></div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-2 control-label" for="cboTipoUrbF">Urb/Res/Pjo</label>
+                                                                        <div class="col-sm-3 error-input"><select class="form-control input-sm select-list" id="cboTipoUrbF"></select></div>
+                                                                        <label class="col-sm-2 control-label" for="txtUrbF">Nombre Urb/Res/Pjo</label>
+                                                                        <div class="col-sm-5"><input type="text" class="form-control input-sm" id="txtUrbF" /></div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-2 control-label" for="cboTipoZonaF">Zona/Etapa</label>
+                                                                        <div class="col-sm-3 error-input"><select class="form-control input-sm select-list" id="cboTipoZonaF"></select></div>
+                                                                        <label class="col-sm-2 control-label" for="txtZonaF">Nombre Zona/Etapa</label>
+                                                                        <div class="col-sm-5"><input type="text" class="form-control input-sm" id="txtZonaF" /></div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-2 control-label" for="txtReferenciaF">Referencias(*)</label>
+                                                                        <div class="col-sm-5 error-input"><input class="form-control input-sm" id="txtReferenciaF" name="nmtxtReferenciaF" /></div>
+                                                                        <label class="col-sm-2"></label>
+                                                                        <label style="color:red;font-weight:bold;" class="col-sm-2 control-label">(MÁX 40 Caráct.)</label>
+                                                                        <div class="col-sm-1"><input type="text" class="form-control input-sm" id="txtContadorFD2" style="color: black; font-weight: bold;" disabled /></div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-2 control-label" for="cboPaisModF">País</label>
+                                                                        <div class="col-sm-3"><select class="form-control input-sm select-list" id="cboPaisModF" disabled></select></div>
+                                                                        <label class="col-sm-2 control-label" for="cboDepModF">Departamento(*)</label>
+                                                                        <div class="col-sm-4 error-input"><select class="form-control input-sm select-list" id="cboDepModF" name="nmcboDepModF"></select></div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-2 control-label" for="cboProvinciaModF">Provincia(*)</label>
+                                                                        <div class="col-sm-3 error-input"><select class="form-control input-sm select-list" id="cboProvinciaModF" name="nmcboProvinciaModF"></select></div>
+                                                                        <label class="col-sm-2 control-label" for="cboDistritoModF">Distrito(*)</label>
+                                                                        <div class="col-sm-4 error-input"><select class="form-control input-sm select-list" id="cboDistritoModF" name="nmcboDistritoModF"></select></div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-2 control-label" for="txtCodPostalModF">Cod Postal</label>
+                                                                        <div class="col-sm-2"><input type="text" class="form-control input-sm" id="txtCodPostalModF" /></div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-3 text-left" style="color:red;font-weight:bold;">(*) Campos Obligatorios</label>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                            @*---------------*@
+                                                            <div class="row">
+                                                                <div class="col-sm-12">
+                                                                    <div class="checkbox">
+                                                                        <label>
+                                                                            <input id="chkFacturacion" type="checkbox" value="" class="form-check-input">
+                                                                            <strong>Actualizar dirección de Domicilio</strong>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            @*---------------*@
+                                                            <div id="divFacturacion" style="display:none;">
+                                                                <div class="row">
+                                                                    <div class="col-sm-12">
+                                                                        <div class="checkbox">
+                                                                            <label>
+                                                                                <input id="chkCopy" type="checkbox" class="form-check-input" />
+                                                                                <strong>Copiar la dirección de domicilio</strong>
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="row">
+                                                                    <div class="panel-group" role="tablist" aria-multiselectable="true">
+        <div class="panel claro-panel-primary">
+            <div id="HomeAddressHead" role="tab" class="panel-heading panel-info">
+                <span class="glyphicon glyphicon-user"></span>
+                <a data-toggle="collapse" href="#HomeAddressCollapse" aria-expanded="true" aria-controls="HomeAddressCollapse" class="collapsed transaction-ref-color" style="color: #020202 !important;"> Nueva Dirección de Domicilio</a>
+                </div>
+            <div class="panel-body panel-collapse collapse" id="HomeAddressCollapse" role="tabpanel" aria-labelledby="HomeAddressHead">
+                <div class="container-fluid">
+            <div class="row">
+                        <form class="form-horizontal">
+                <div class="form-group">
+                                <label class="col-sm-2 control-label" for="cboTipoVia">Calle/Av./Jr(*)</label>
+                                <div class="col-sm-3 error-input"><select class="form-control input-sm select-list" id="cboTipoVia" name="nmcboTipoVia"></select></div>
+                                <label class="col-sm-2 control-label" for="txtVia">Nombre Calle/Av./Jr(*)</label>
+                    <div class="col-sm-5"><input type="text" class="form-control input-sm" id="txtVia" /></div>
+                </div>
+                <div class="form-group">
+                                <label class="col-sm-2 control-label" for="txtNumeroCalle">Número(*)</label>
+                    <div class="col-sm-3"><input type="text" class="form-control input-sm" id="txtNumeroCalle" name="nmNumeroCalle" /></div>
+                                <label class="col-sm-2 control-label" for="chkSN">S/N</label>
+                    <div class="col-sm-3" style="width: 35px;"><input id="chkSN" type="checkbox" class="form-check-input" /></div>
+                </div>
+                <div class="form-group">
+                                <label class="col-sm-2 control-label" for="cboTipoMz">Mz/Bloque/Edif</label>
+                                <div class="col-sm-3 error-input"><select class="form-control input-sm select-list" id="cboTipoMz" name="nmcboTipoMz"></select></div>
+                                <label class="col-sm-2 control-label" for="txtNroMz">Nro Mz/Bloque/Edif</label>
+                    <div class="col-sm-3"><input type="text" class="form-control input-sm" id="txtNroMz" name="nmtxtNroMz" /></div>
+                                <label class="col-sm-1 control-label" for="txtLote">Lote</label>
+                    <div class="col-sm-1"><input type="text" class="form-control input-sm" id="txtLote" name="nmtxtLote" disabled /></div>
+                </div>
+                <div class="form-group">
+                                <label class="col-sm-2 control-label" for="cboTipoInterior">Tipo Dpt/Int</label>
+                                <div class="col-sm-3"><select class="form-control input-sm select-list" id="cboTipoInterior" name="nmcboTipoInterior"></select></div>
+                                <label class="col-sm-2 control-label" for="txtInterior">Número Dpto/Int</label>
+                    <div class="col-sm-3"><input type="text" class="form-control input-sm" id="txtInterior" name="nmtxtInterior" /></div>
+                                <label style="color: red; font-weight: bold; text-align: right;" class="col-sm-1 control-label">(Máx.40)</label>
+                    <div class="col-sm-1"><input type="text" class="form-control input-sm" id="txtContadorD1" style="color: black; font-weight: bold;" disabled /></div>
+                </div>
+                <div class="form-group">
+                                <label class="col-sm-2 control-label" for="cboTipoUrb">Urb/Res/Pjo</label>
+                                <div class="col-sm-3 error-input"><select class="form-control input-sm select-list" id="cboTipoUrb"></select></div>
+                                <label class="col-sm-2 control-label" for="txtUrb">Nombre Urb/Res/Pjo</label>
+                    <div class="col-sm-5"><input type="text" class="form-control input-sm" id="txtUrb" /></div>
+                </div>
+                <div class="form-group">
+                                <label class="col-sm-2 control-label" for="cboTipoZona">Zona/Etapa</label>
+                                <div class="col-sm-3 error-input"><select class="form-control input-sm select-list" id="cboTipoZona"></select></div>
+                                <label class="col-sm-2 control-label" for="txtZona">Nombre Zona/Etapa</label>
+                    <div class="col-sm-5"><input type="text" class="form-control input-sm" id="txtZona" /></div>
+                </div>
+                <div class="form-group">
+                                <label class="col-sm-2 control-label" for="txtReferencia">Referencias(*)</label>
+                    <div class="col-sm-5 error-input"><input class="form-control input-sm" id="txtReferencia" name="nmtxtReferencia" /></div>
+                                <label class="col-sm-2 control-label"></label>
+                                <label style="color:red;font-weight:bold;" class="col-sm-2 control-label">(MÁX 40 Caráct.)</label>
+                    <div class="col-sm-1"><input type="text" class="form-control input-sm" id="txtContadorD2" style="color: black; font-weight: bold;" disabled /></div>
+                </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="cboPaisMod">País</label>
+                                <div class="col-sm-3"><select class="form-control input-sm select-list" id="cboPaisMod" disabled></select></div>
+                                <label class="col-sm-2 control-label" for="cboDepMod">Departamento(*)</label>
+                                <div class="col-sm-4 error-input"><select class="form-control input-sm select-list" id="cboDepMod" name="nmcboDepMod"></select></div>
+            </div>
+                <div class="form-group">
+                                <div><label class="col-sm-2 control-label" for="cboProvinciaMod">Provincia(*)</label></div>
+                                <div class="col-sm-3 error-input"><select class="form-control input-sm select-list" id="cboProvinciaMod" name="nmcboProvinciaMod"></select></div>
+                                <div><label class="col-sm-2 control-label" for="cboDistritoMod">Distrito(*)</label></div>
+                                <div class="col-sm-4 error-input"><select class="form-control input-sm select-list" id="cboDistritoMod" name="nmcboDistritoMod"></select></div>
+                </div>
+                <div class="form-group">
+                                <label class="col-sm-2 control-label" for="txtCodPostalMod">Cod Postal</label>
+                                <div class="col-sm-2"><input type="text" class="form-control input-sm" id="txtCodPostalMod" /></div>
+                </div>
+                <div class="form-group">
+                                <label class="col-sm-3 text-left" style="color:red;font-weight:bold;">(*) Campos Obligatorios</label>
+                </div>
+                        </form>
+            </div>
+
+                            </div>
+                        </div>
+                    </div>
+                        </div>
+                                                                </div>
+                                                            </div>
+                                                            </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                           
+
+
+                                                            </div>
+                                                                </div>
+
+                                                            </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                    <div class="panel-body">
+                        <div class="container-fluid">
+                            <div id="NuevosDatos" class="row">
+                                            <div class="col-md-6">
+                                                <div class="panel claro-panel-primary">
+                                        <div class="alert alert2-info">
+                                                        <span>Datos del Representante Legal</span>
+                                                    </div>
+                                                    <div class="panel-body">
+                                            <form class="form-horizontal">
+                                                                <div class="form-group">
+                                                    <label class="col-sm-4 control-label" for="txtNewNombRep">Nombre</label>
+                                                                    <div class="col-sm-8">
+                                                        <input id="txtNewNombRep" name="nmtxtNewNombRep" class="form-control input-sm" />
+                                                                </div>
+                                                            </div>
+                                                                <div class="form-group">
+                                                    <label class="col-sm-4 control-label" for="cboTipoDocRep">Tipo Documento</label>
+                                                                    <div class="col-sm-8">
+                                                                        <select id="cboTipoDocRep" name="nmcboTipoDocRep" class="form-control input-sm"></select>
+                                                                    </div>
+                                                            </div>
+                                                                <div class="form-group">
+                                                    <label class="col-sm-4 control-label" for="txtNroDocRep">Nro. Documento</label>
+                                                                    <div class="col-sm-8">
+                                                        <input id="txtNroDocRep" name="nmtxtNroDocRep" class="form-control input-sm" />
+                                                            </div>
+                                                        </div>
+                                            </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="panel claro-panel-primary">
+                                        <div class="alert alert2-info">
+                                                        <span>Datos del Contacto Cliente</span>
+                                                    </div>
+                                                    <div class="panel-body">
+                                            <form class="form-horizontal">
+                                                                <div class="form-group">
+                                                    <label class="col-sm-4 control-label" for="txtNewNombCont">Nombre</label>
+                                                                    <div class="col-sm-8">
+                                                        <input id="txtNewNombCont" name="nmtxtNewNombCont" class="form-control input-sm" />
+                                                                </div>
+                                                            </div>
+                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        <div id="divRRLL" style="display:none">
+                                            <div class="row mb-2">
+                                                <div class="col-md-8">
+                                                    <div id="divRL1" class="panel-group" role="tablist" aria-multiselectable="true">
+                                                        <div class="panel claro-panel-primary">
+                                                            <div id="rloHead" role="tab" class="panel-heading panel-info">
+                                                                <span class="glyphicon glyphicon-user"></span>
+                                                                <a data-toggle="collapse" href="#rloCollapse" aria-expanded="true" aria-controls="rloCollapse" class="collapsed transaction-ref-color" style="color: #020202 !important;"> Representante Legal - 1</a>
+                                                            </div>
+                                                            <div class="panel-body panel-collapse collapse" id="rloCollapse" role="tabpanel" aria-labelledby="rloHead">
+                                                                <div class="container-fluid">
+                                                                    <div class="row">
+                                                                        <form class="form-horizontal">
+                                                                            <div class="form-group">
+                                                                                <label class="col-sm-2 control-label" for="cboTD1">Tipo Documento</label>
+                                                                                <div class="col-sm-3 error-input"><select class="form-control input-sm select-list" id="cboTD1" name="nmcboTD1"></select></div>
+                                                                                <label class="col-sm-2 control-label" for="txtND1">Nro. Documento</label>
+                                                                                <div class="col-sm-5"><input type="text" oninput="process(this)" class="form-control input-sm" id="txtND1" /></div>
+                                                                            </div>
+                                                                            <div class="form-group">
+                                                                                <label class="col-sm-2 control-label" for="txtN1">Nombre</label>
+                                                                                <div class="col-sm-3"><input type="text" class="form-control input-sm" id="txtN1" name="nmtxtN1" /></div>
+                                                                            </div>
+                                                                            <div class="form-group">
+                                                                                <label class="col-sm-2 control-label" for="txtAP1">Apellido Paterno</label>
+                                                                                <div class="col-sm-3 error-input"><input type="text" class="form-control input-sm" id="txtAP1" name="nmtxtAP1" /></div>
+                                                                                <label class="col-sm-2 control-label" for="txtAM1">Apellido Materno</label>
+                                                                                <div class="col-sm-5"><input type="text" class="form-control input-sm" id="txtAM1" name="nmtxtAM1" /></div>
+                                                                            </div>
+                                                                        </form>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div id="divRLC" class="panel-group" role="tablist" aria-multiselectable="true">
+                                                        <div class="panel claro-panel-primary">
+                                                            <div id="rlcoHead" role="tab" class="panel-heading panel-info">
+                                                                <span class="glyphicon glyphicon-user"></span>
+                                                                <a data-toggle="collapse" href="#rlcoCollapse" aria-expanded="true" aria-controls="rlcoCollapse" class="collapsed transaction-ref-color" style="color: #020202 !important;"> Datos del Contacto Cliente</a>
+                                                            </div>
+                                                            <div class="panel-body panel-collapse collapse" id="rlcoCollapse" role="tabpanel" aria-labelledby="rlcoHead">
+                                                                <div class="container-fluid">
+                                                                    <div class="row">
+                                                                        <div class="form-group">
+                                                                            <label class="col-sm-2 control-label" for="txtNC">Nombres</label>
+                                                                            <div class="col-sm-10 error-input"><input type="text" class="form-control input-sm" id="txtNC" name="nmtxtNC" /></div>
+                                                                            <br />
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        
+                                            <div id="divRL2" class="panel-group" role="tablist" aria-multiselectable="true">
+                                                <div class="panel claro-panel-primary">
+                                                    <div id="rltHead" role="tab" class="panel-heading panel-info">
+                                                        <span class="glyphicon glyphicon-user"></span>
+                                                        <a data-toggle="collapse" href="#rltCollapse" aria-expanded="true" aria-controls="rltCollapse" class="collapsed transaction-ref-color" style="color: #020202 !important;"> Representante Legal - 2</a>
+                                                    </div>
+                                                    <div class="panel-body panel-collapse collapse" id="rltCollapse" role="tabpanel" aria-labelledby="rltHead">
+                                                        <div class="container-fluid">
+                                                            <div class="row">
+                                                                <form class="form-horizontal">
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-2 control-label" for="cboTD2">Tipo Documento</label>
+                                                                        <div class="col-sm-3 error-input"><select class="form-control input-sm select-list" id="cboTD2" name="nmcboTD2"></select></div>
+                                                                        <label class="col-sm-2 control-label" for="txtND2">Nro. Documento</label>
+                                                                        <div class="col-sm-5"><input type="text" oninput="process(this)" class="form-control input-sm" id="txtND2" /></div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-2 control-label" for="txtN2">Nombre</label>
+                                                                        <div class="col-sm-3"><input type="text" class="form-control input-sm" id="txtN2" name="nmtxtN2" /></div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-2 control-label" for="txtAP2">Apellido Paterno</label>
+                                                                        <div class="col-sm-3 error-input"><input type="text" class="form-control input-sm" id="txtAP2" name="nmtxtAP2" /></div>
+                                                                        <label class="col-sm-2 control-label" for="txtAM2">Apellido Materno</label>
+                                                                        <div class="col-sm-5"><input type="text" class="form-control input-sm" id="txtAM2" name="nmtxtAM2" /></div>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        
+                                            <div id="divRL3" class="panel-group" role="tablist" aria-multiselectable="true">
+                                                <div class="panel claro-panel-primary">
+                                                    <div id="rlwHead" role="tab" class="panel-heading panel-info">
+                                                        <span class="glyphicon glyphicon-user"></span>
+                                                        <a data-toggle="collapse" href="#rlwCollapse" aria-expanded="true" aria-controls="rlwCollapse" class="collapsed transaction-ref-color" style="color: #020202 !important;"> Representante Legal - 3</a>
+                                                    </div>
+                                                    <div class="panel-body panel-collapse collapse" id="rlwCollapse" role="tabpanel" aria-labelledby="rlwHead">
+                                                        <div class="container-fluid">
+                                                            <div class="row">
+                                                                <form class="form-horizontal">
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-2 control-label" for="cboTD3">Tipo Documento</label>
+                                                                        <div class="col-sm-3 error-input"><select class="form-control input-sm select-list" id="cboTD3" name="nmcboTD3"></select></div>
+                                                                        <label class="col-sm-2 control-label" for="txtND3">Nro. Documento</label>
+                                                                        <div class="col-sm-5"><input type="text" oninput="process(this)" class="form-control input-sm" id="txtND3" /></div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-2 control-label" for="txtN3">Nombre</label>
+                                                                        <div class="col-sm-3"><input type="text" class="form-control input-sm" id="txtN3" name="nmtxtN3" /></div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-2 control-label" for="txtAP3">Apellido Paterno</label>
+                                                                        <div class="col-sm-3 error-input"><input type="text" class="form-control input-sm" id="txtAP3" name="nmtxtAP3" /></div>
+                                                                        <label class="col-sm-2 control-label" for="txtAM3">Apellido Materno</label>
+                                                                        <div class="col-sm-5"><input type="text" class="form-control input-sm" id="txtAM3" name="nmtxtAM3" /></div>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        
+                                            <div id="divRL4" class="panel-group" role="tablist" aria-multiselectable="true">
+                                                <div class="panel claro-panel-primary">
+                                                    <div id="rljHead" role="tab" class="panel-heading panel-info">
+                                                        <span class="glyphicon glyphicon-user"></span>
+                                                        <a data-toggle="collapse" href="#rljCollapse" aria-expanded="true" aria-controls="rljCollapse" class="collapsed transaction-ref-color" style="color: #020202 !important;"> Representante Legal - 4</a>
+                                                    </div>
+                                                    <div class="panel-body panel-collapse collapse" id="rljCollapse" role="tabpanel" aria-labelledby="rljHead">
+                                                        <div class="container-fluid">
+                                                            <div class="row">
+                                                                <form class="form-horizontal">
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-2 control-label" for="cboTD4">Tipo Documento</label>
+                                                                        <div class="col-sm-3 error-input"><select class="form-control input-sm select-list" id="cboTD4" name="nmcboTD4"></select></div>
+                                                                        <label class="col-sm-2 control-label" for="txtND4">Nro. Documento</label>
+                                                                        <div class="col-sm-5"><input type="text" oninput="process(this)" class="form-control input-sm" id="txtND4" /></div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-2 control-label" for="txtN4">Nombre</label>
+                                                                        <div class="col-sm-3"><input type="text" class="form-control input-sm" id="txtN4" name="nmtxtN4" /></div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-2 control-label" for="txtAP4">Apellido Paterno</label>
+                                                                        <div class="col-sm-3 error-input"><input type="text" class="form-control input-sm" id="txtAP4" name="nmtxtAP4" /></div>
+                                                                        <label class="col-sm-2 control-label" for="txtAM4">Apellido Materno</label>
+                                                                        <div class="col-sm-5"><input type="text" class="form-control input-sm" id="txtAM4" name="nmtxtAM4" /></div>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div id="divRL5" class="panel-group" role="tablist" aria-multiselectable="true">
+                                                <div class="panel claro-panel-primary">
+                                                    <div id="rlujHead" role="tab" class="panel-heading panel-info">
+                                                        <span class="glyphicon glyphicon-user"></span>
+                                                        <a data-toggle="collapse" href="#rljuCollapse" aria-expanded="true" aria-controls="rljuCollapse" class="collapsed transaction-ref-color" style="color: #020202 !important;"> Representante Legal - 5</a>
+                                                    </div>
+                                                    <div class="panel-body panel-collapse collapse" id="rljuCollapse" role="tabpanel" aria-labelledby="rlujHead">
+                                                        <div class="container-fluid">
+                                                            <div class="row">
+                                                                <form class="form-horizontal">
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-2 control-label" for="cboTD5">Tipo Documento</label>
+                                                                        <div class="col-sm-3 error-input"><select class="form-control input-sm select-list" id="cboTD5" name="nmcboTD5"></select></div>
+                                                                        <label class="col-sm-2 control-label" for="txtND5">Nro. Documento</label>
+                                                                        <div class="col-sm-5"><input type="text" oninput="process(this)" class="form-control input-sm" id="txtND5" /></div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-2 control-label" for="txtN5">Nombre</label>
+                                                                        <div class="col-sm-3"><input type="text" class="form-control input-sm" id="txtN5" name="nmtxtN5" /></div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-2 control-label" for="txtAP5">Apellido Paterno</label>
+                                                                        <div class="col-sm-3 error-input"><input type="text" class="form-control input-sm" id="txtAP5" name="nmtxtAP5" /></div>
+                                                                        <label class="col-sm-2 control-label" for="txtAM5">Apellido Materno</label>
+                                                                        <div class="col-sm-5"><input type="text" class="form-control input-sm" id="txtAM5" name="nmtxtAM5" /></div>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                       </div>
+                                    </div>
+                                </div>
+                               
+                    <div class="panel-body">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <form class="form-horizontal">
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label" for="chkEmail">Envío por E-mail</label>
+                                        <div class="col-sm-1">
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input id="chkEmail" type="checkbox" value="">
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4 error-input">
+                                            <input type="text" class="form-control input-sm" id="txtEmail" name="nmtxtEmail" placeholder="Correo Electrónico" style="display: none" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cboCACDAC" class="col-sm-2 control-label">Punto de Atención</label>
+                                        <div class="col-sm-3 error-input">
+                                            <select class="form-control input-sm" name="nmcboCACDAC" id="cboCACDAC"></select>
+                                        </div>
+                                        <div class="col-sm-4"><input type="text" class="form-control input-sm" id="txtDireccion" style="visibility:hidden" /></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label" for="txtNote">Notas</label>
+                                        <div class="col-sm-7">
+                                            <textarea id="txtNote" class="form-control input-sm" placeholder="Agregar Notas" name="nmtxtNote" rows="4"></textarea>
+                                        </div>
+                                    </div>
+                                </form>
+                                    </div>
+                            <br />
+                            <div class="row">
+                            <center>
+                                <button id="btnGuardar" type="button" class="btn transaction-button"><span class="glyphicon glyphicon-floppy-disk"></span> Guardar</button>
+                                <button id="btnCerrar" type="button" class="btn transaction-button"><span class="glyphicon glyphicon-home"></span> Cerrar</button>
+                                <button id="btnConstancia" type="button" class="btn transaction-button"><span class="glyphicon glyphicon-list-alt"></span> Constancia</button>
+                                <input id="hidCheck" style="WIDTH: 10px; HEIGHT: 18px" type="hidden" size="1" name="hidAccion">
+                                <input id="hidCheckF" style="WIDTH: 10px; HEIGHT: 18px" type="hidden" size="1" name="hidAccion">
+                            </center>
+                            </div>
+                            <br />
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <div id="divErrorAlert" class="alert alert-transaction alert-danger" role="alert">
+                <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <strong><span id="lblErrorMessage"></span></strong>
+            </div>
+
+
+
+        </div>
+    </div>
+    <div id="myModalLoad" style="display:none;">
+        <span> <img src="~/Images/loading2.gif" width="25" height="25" />  Cargando ....</span>
+    </div>
+</div>
+<input id="hidOpcion" type="hidden" name="hidOpcion" />
+<input id="hidCodOpcion" type="hidden" name="hidCodOpcion" />
+<input id="hidAccion" type="hidden" name="hidAccion" />
+<input id="hidTipDocRRLL1" type="hidden" name="hidTipDocRRLL1" />
+<input id="hidTipDocRRLL2" type="hidden" name="hidTipDocRRLL2" />
+<input id="hidTipDocRRLL3" type="hidden" name="hidTipDocRRLL3" />
+<input id="hidTipDocRRLL4" type="hidden" name="hidTipDocRRLL4" />
+<input id="hidTipDocRRLL5" type="hidden" name="hidTipDocRRLL5" />
+<input id="hidLongRRLL1" type="hidden" name="hidLongRRLL1" />
+<input id="hidLongRRLL2" type="hidden" name="hidLongRRLL2" />
+<input id="hidLongRRLL3" type="hidden" name="hidLongRRLL3" />
+<input id="hidLongRRLL4" type="hidden" name="hidLongRRLL4" />
+<input id="hidLongRRLL5" type="hidden" name="hidLongRRLL5" />
+<input id="hidPlataform" type="hidden" name="hidPlataform" />
+<input type="hidden" id="hidExisteParticipante" value="@System.Configuration.ConfigurationManager.AppSettings["strExisteParticipante"]" />
+<input type="hidden" id="hidNoExisteParticipante" value="@System.Configuration.ConfigurationManager.AppSettings["strNoExisteParticipante"]" />
+
+
+
+@System.Web.Optimization.Scripts.Render("~/bundles/Transactions/ReadRecordPDF/ReadRecord")
+@System.Web.Optimization.Scripts.Render("~/bundles/Transactions/Auth/AuthUser")
+<script type="text/javascript" src="~/Areas/Transactions/Scripts/ChangeData/ChangeData.js"></script>

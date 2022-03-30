@@ -1,0 +1,129 @@
+﻿<script type="text/javascript" src="~/Areas/Transactions/Content/Lib/BloqueoF12.js"></script>
+<div id="DataCustomer" class="panel-group" role="tablist" aria-multiselectable="true">
+    <div class="panel claro-panel-primary">
+        <div id="customerDataHead" role="tab" class="panel-heading">
+            <span class="glyphicon glyphicon-user"></span>
+            <a data-toggle="collapse" href="#customerDataCollapse" aria-expanded="true" data-parent="#DataCustomer" aria-controls="customerDataCollapse" class="collapsed transaction-ref-color"> Datos del Cliente</a>
+        </div>
+        <div class="panel-body panel-collapse collapse in" id="customerDataCollapse" role="tabpanel" aria-labelledby="customerDataHead">
+            <table class="table table-condensed">
+                <tbody>
+                    <tr>
+                        <td class="col-md-3">Contrato:</td>
+                        <td><label id="lblContract"></label></td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-3">
+                            Tipo Cliente:
+                        </td>
+                        <td><label id="lblTypeCustomer"></label></td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-3">Cliente:</td>
+                        <td><label id="lblCustomerName"></label></td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-3">Contacto:</td>
+                        <td><label id="lblContact"></label></td>
+
+                    </tr>
+                    <tr>
+                        <td class="col-md-3">DNI/RUC:</td>
+                        <td><label id="lblIdentificationDocument"></label></td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-3">Plan Actual:</td>
+                        <td><label id="lblPlanName"></label></td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-3">Fecha de Activación:</td>
+                        <td><label id="lblDateActivation"></label></td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-3">Ciclo de Facturación:</td>
+                        <td><label id="lblCycleFacture"></label></td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-3">Límite de Crédito:</td>
+                        <td><label id="lblLimitCredit"></label></td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-3">Representante Legal:</td>
+                        <td><label id="lblReprLegal"></label> </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-3">Codigo de Cliente:</td>
+                        <td><label id="lblCustomerId"></label> </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-3">Doc Repres. Legal:</td>
+                        <td><label id="lblDocReprLegal"></label></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="addressDataHead" role="tab" class="panel-heading">
+            <span class="glyphicon glyphicon-home"></span>
+            <a data-toggle="collapse" href="#addressDataCollapse" aria-expanded="false" data-parent="#DataCustomer" aria-controls="addressDataCollapse" class="collapsed transaction-ref-color"> Dirección de Facturación</a>
+        </div>
+        <div class="panel-body panel-collapse collapse" id="addressDataCollapse" role="tabpanel" aria-labelledby="addressDataHead">
+            <table class="table table-condensed">
+                <tr>
+                    <td class="col-md-3">Dirección</td>
+                    <td class="col-md-3">
+                        <label id="lblAddress"></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-3">Referencia</td>
+                    <td class="col-md-3">
+                        <label id="lblAddressNote"></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-3">Departamento</td>
+                    <td class="col-md-3">
+                        <label id="lblDepartamento"></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-3">País</td>
+                    <td class="col-md-3">
+                        <label id="lblPais"></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-3">Distrito</td>
+                    <td class="col-md-3">
+                        <label id="lblDistrito"></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-3">Provincia</td>
+                    <td class="col-md-3">
+                        <label id="lblProvincia"></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-3">Código de Plano</td>
+                    <td class="col-md-3">
+                        <label id="lblCodePlans"></label>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="businessRulesHead" role="tab" class="panel-heading">
+            <span class="glyphicon glyphicon-th-list"></span>
+            <a data-toggle="collapse" href="#businessRulesCollapse" aria-expanded="true" data-parent="#DataCustomer" aria-controls="businessRulesCollapse" class="collapsed transaction-ref-color"> Reglas de Atención</a>
+        </div>
+        <div id="businessRulesCollapse" class="panel-body panel-collapse collapse" role="tabpanel" aria-labelledby="businessRulesHead">
+            <div id="divRules">
+
+            </div>
+        </div>
+ 
+    </div>
+</div>
+
+<script src="~/Areas/Transactions/Scripts/LeftPanelCustomer/LeftPanelCustomer.js"></script>

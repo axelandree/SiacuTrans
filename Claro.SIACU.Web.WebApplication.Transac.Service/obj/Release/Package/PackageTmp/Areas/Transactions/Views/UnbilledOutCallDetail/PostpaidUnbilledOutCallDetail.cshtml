@@ -1,0 +1,146 @@
+﻿@{ 
+    //Layout = "~/Areas/Transactions/Views/Shared/_Layout.cshtml"; 
+    Layout = null;
+}
+<script type="text/javascript" src="~/Areas/Transactions/Content/Lib/BloqueoF12.js"></script>
+<input id="hidOpcion" type="hidden" name="hidOpcion" />
+<div id="OutgoingCallNotBilledDetail" class="container-fluid">
+    <div class="col-md-3">
+        <div class="panel claro-panel-primary">
+            <div id="customerDataHead" role="tab" class="panel-heading">
+                <span class="glyphicon glyphicon-user"></span>
+                <a data-toggle="collapse" href="#customerDataCollapse" aria-expanded="true" data-parent="#DataCustomer" aria-controls="customerDataCollapse" class="collapsed transaction-ref-color"> Datos del Cliente</a>
+            </div>
+            <div class="panel-body panel-collapse collapse in" id="customerDataCollapse" role="tabpanel" aria-labelledby="customerDataHead">
+                <table class="table table-condensed">
+                    <tr>
+                        <td><strong>Cliente: </strong></td>
+                        <td><label id="lblCustomerName" class="text-message-info"></label></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Contacto del cliente: </strong></td>
+                        <td><label id="lblContactCustomer" class="text-message-info"></label></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Contacto: </strong></td>
+                        <td><label id="lblContact" class="text-message-info"></label></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Representante Legal: </strong></td>
+                        <td><label id="lblLegalRepresentative" class="text-message-info"></label></td>
+                    </tr>
+                    <tr>
+                        <td><strong>DNI/RUC: </strong></td>
+                        <td><label id="lblIdentificationDocument" class="text-message-info"></label></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Doc. Repres. Legal: </strong></td>
+                        <td><label id="lblIdentificationDocumentoLR" class="text-message-info"></label></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Fecha de Activación: </strong></td>
+                        <td><label id="lblActivationDate" class="text-message-info"></label></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div id="content" class="col-md-9 transaction-content">
+        @*Datos para la busqueda*@
+        <div class="panel claro-panel-primary">
+            <div class="panel-heading">
+                Detalle de llamadas Salientes No Facturado Postpago
+            </div>
+            <div class="panel-body">
+                <form id="tbDatoBusqueda" class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Teléfono:</label>
+                        <label id="lblTelephone" class="col-sm-1 control-label text-message-info"></label>
+
+                        <label class="col-sm-1 control-label">Desde:</label>
+                        <div class="col-sm-2">
+                            <div class="input-daterange input-group">
+                                <input type="text" id="txtDateStar" class="input-sm form-control" name="end" />
+                                <label class="input-group-addon btn transaction-button" for="txtDateStar">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <label class="col-sm-1 control-label">Hasta</label>
+                        <div class="col-sm-2">
+                            <div class="input-daterange input-group">
+                                <input type="text" id="txtDateEnd" class="input-sm form-control" name="end" />
+                                <label class="input-group-addon btn transaction-button" for="txtDateEnd">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-sm-1">
+                            <button id="btnSearch" type="button" class="btn transaction-button" accesskey="btnBuscar">Buscar &nbsp;<span class="glyphicon glyphicon-search"></span></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            @*Seccion Detalle Llamadas*@
+            <div id="ContainerDetailVisualizeCall" class="table">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table id="tblDetailVisualizeCall" class="table  table-striped table-hover table-responsive claro-modal-tabla table-bordered">
+                                <thead>
+                                    <tr class="claro-bg-primary">
+                                        <th>Nro</th>
+                                        <th>Fecha</th>
+                                        <th>Hora</th>
+                                        <th>Teléfono Destino</th>
+                                        <th>Consumo</th>
+                                        <th>Costo (S/.)</th>
+                                        <th>Plan</th>
+                                        <th>Tarifa</th>
+                                        <th>Tipo</th>
+                                        <th>Destino</th>
+                                        <th>Operador</th>
+                                        <th>Horario</th>
+                                        <th>Tipo Llamada</th>
+                                        <th>Consumo (S/.)</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="myModalLoad" style="display: none;">
+                <span>
+                    <img src="~/Images/loading2.gif" width="25" height="25" /> Cargando ....
+                </span>
+            </div>
+
+            @*Botones*@
+            <div class="row">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label id="lblSummary" class="col-sm-offset-1 col-sm-11 text-info">Total Registro: 0</label>
+                    </div>
+                    <div class="form-group">
+                        <label id="lblErrorMessage" class="col-sm-offset-1 col-sm-11 text-message-error">Mensaje</label>
+                    </div>
+                    <center>
+                        <div class="form-group">
+                            <button type="button" class="btn transaction-button" id="btnExport" style="display: none;"><span class="glyphicon glyphicon-list-alt">&nbsp;</span>Exportar</button>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <button type="button" class="btn transaction-button" id="btnClose"><span class="glyphicon glyphicon-remove">&nbsp;</span>Cerrar</button>
+                        </div>
+                    </center>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+  
+
+@Scripts.Render("~/bundles/Transactions/UnbilledOutCallDetail/PostpaidUnbilledOutCallDetail");
+@Scripts.Render("~/bundles/Transactions/Auth/AuthUser")

@@ -1,0 +1,11 @@
+D:\Fuentes\28032022\SiacuTrans\Claro.Helpers.Transac.Service\bin\Debug\Claro.Helpers.Transac.Service.dll
+D:\Fuentes\28032022\SiacuTrans\Claro.Helpers.Transac.Service\bin\Debug\Claro.Helpers.Transac.Service.pdb
+D:\Fuentes\28032022\SiacuTrans\Claro.Helpers.Transac.Service\bin\Debug\EPPlus.dll
+D:\Fuentes\28032022\SiacuTrans\Claro.Helpers.Transac.Service\obj\Debug\Claro.Helpers.Transac.Service.dll
+D:\Fuentes\28032022\SiacuTrans\Claro.Helpers.Transac.Service\obj\Debug\Claro.Helpers.Transac.Service.pdb
+D:\SiacuTrans\Claro.Helpers.Transac.Service\bin\Debug\Claro.Helpers.Transac.Service.dll
+D:\SiacuTrans\Claro.Helpers.Transac.Service\bin\Debug\Claro.Helpers.Transac.Service.pdb
+D:\SiacuTrans\Claro.Helpers.Transac.Service\bin\Debug\EPPlus.dll
+D:\SiacuTrans\Claro.Helpers.Transac.Service\obj\Debug\Claro.Helpers.Transac.Service.dll
+D:\SiacuTrans\Claro.Helpers.Transac.Service\obj\Debug\Claro.Helpers.Transac.Service.pdb
+D:\SiacuTrans\Claro.Helpers.Transac.Service\obj\Debug\Claro.Helpers.Transac.Service.csprojResolveAssemblyReference.cache

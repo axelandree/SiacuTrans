@@ -1340,6 +1340,9 @@
     <None Include="Service References\CommonTransacService\CommonTransacService99.xsd">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="Service References\FixedTransacService\Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.BannerDescartesConsultaResp.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Service References\FixedTransacService\Claro.SIACU.Web.WebApplication.Transac.Service.FixedTransacService.ConfigurationIPResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -1872,6 +1875,9 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\FixedTransacService\FixedTransacService9962.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FixedTransacService\FixedTransacService9963.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\FixedTransacService\FixedTransacService997.xsd">

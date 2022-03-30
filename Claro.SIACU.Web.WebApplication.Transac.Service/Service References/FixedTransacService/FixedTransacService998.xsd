@@ -1,50 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetExecutePlanMigrationLTE" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetExecutePlanMigrationLTE" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed" />
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetHubs" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common.GetHubs" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd3" namespace="Claro" />
-  <xs:complexType name="ExecutePlanMigrationLTERequest">
+  <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd45" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common" />
+  <xs:complexType name="GetHubsRequest">
     <xs:complexContent mixed="false">
       <xs:extension xmlns:q1="Claro" base="q1:Request">
         <xs:sequence>
-          <xs:element minOccurs="0" name="blFlagContingencia" type="xs:boolean" />
-          <xs:element minOccurs="0" name="blFlagCrearPlantilla" type="xs:boolean" />
-          <xs:element minOccurs="0" name="blFlagValidaEta" type="xs:boolean" />
-          <xs:element minOccurs="0" name="dblLimiteCredito" type="xs:double" />
-          <xs:element minOccurs="0" name="dblMontoTopeConsumo" type="xs:double" />
-          <xs:element minOccurs="0" name="dblTopeConsumo" type="xs:double" />
-          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed" minOccurs="0" name="lstListCoser" nillable="true" type="q2:ArrayOfCoser" />
-          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed" minOccurs="0" name="lstServicesList" nillable="true" type="q3:ArrayOfServiceByPlan" />
-          <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed" minOccurs="0" name="objActualizarTipificacion" nillable="true" type="q4:ActualizarTipificacion" />
-          <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed" minOccurs="0" name="objAuditRegister" nillable="true" type="q5:AuditRegister" />
-          <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed" minOccurs="0" name="objClientParameters" nillable="true" type="q6:ClientParameters" />
-          <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed" minOccurs="0" name="objContract" nillable="true" type="q7:Contract" />
-          <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed" minOccurs="0" name="objEtaParameters" nillable="true" type="q8:EtaParameters" />
-          <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed" minOccurs="0" name="objEtaSelection" nillable="true" type="q9:EtaSelection" />
-          <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed" minOccurs="0" name="objMainParameters" nillable="true" type="q10:MainParameters" />
-          <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed" minOccurs="0" name="objPlusParameters" nillable="true" type="q11:PlusParameters" />
-          <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed" minOccurs="0" name="objSotParametersLTE" nillable="true" type="q12:SotParametersLTE" />
-          <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed" minOccurs="0" name="objTipification" nillable="true" type="q13:TypificationItem" />
-          <xs:element minOccurs="0" name="strAnotacionToa" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="strCodOCCTope" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="strCodPlan" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="strCodServicioGeneralTope" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="strComentTopeConsumo" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="strDestinatarioCorreo" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="strNotes" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="strParametrosConstancia" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="strTipoPlan" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="strTipoProducto" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="strTmCode" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="strTransactionId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strContrato" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strCustomerId" nillable="true" type="xs:string" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="ExecutePlanMigrationLTERequest" nillable="true" type="tns:ExecutePlanMigrationLTERequest" />
-  <xs:complexType name="ExecutePlanMigrationLTEResponse">
+  <xs:element name="GetHubsRequest" nillable="true" type="tns:GetHubsRequest" />
+  <xs:complexType name="GetHubsResponse">
     <xs:sequence>
-      <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed" minOccurs="0" name="result" nillable="true" type="q14:OsbLteEntity" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Common" minOccurs="0" name="listHub" nillable="true" type="q2:ArrayOfBEHub" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="ExecutePlanMigrationLTEResponse" nillable="true" type="tns:ExecutePlanMigrationLTEResponse" />
+  <xs:element name="GetHubsResponse" nillable="true" type="tns:GetHubsResponse" />
 </xs:schema>

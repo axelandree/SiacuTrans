@@ -107,6 +107,14 @@ console.log(SessionTransac);
             center: function () {
                 var lab = document.createElement("center");
                 return lab;
+            },
+            c_Element: function (id, values, clasname, element, type) {
+                var divRow = document.createElement(element);
+                divRow.className = clasname;
+                divRow.id = id;
+                divRow.type = type;
+                divRow.value = values;
+                return divRow;
             }
         },
         OcultarBdRe: 0,
@@ -117,6 +125,14 @@ console.log(SessionTransac);
         ContBloqSiacUDBActivo: "0",
         ContBloqSiacUDBServErr: "0",
         ContBloqSiacUDBTotal: "0",
+        BannerGrupo: '986',
+        BannerAccion: 'S',
+        BannerUsuario: '',
+        BannerFecha: '',
+        BannerDescripcion: '',
+        BannerPermiso: '',
+        BannerAccionBtn: '',
+
         ValidarAcceso: function (callback) {
 
             var that = this,
@@ -164,7 +180,7 @@ console.log(SessionTransac);
                 that.OcultarBdRe = 0;
             }
         },
-MetbtnActualizartab: function (e) {
+        MetbtnActualizartab: function (e) {
             var that = this;
             var lista = that.CadenaDescartes.split(";");
             var nom_Descarbtn = $(e).attr('id');
@@ -182,7 +198,7 @@ MetbtnActualizartab: function (e) {
 
             document.getElementById(nom_Descarbtn).setAttribute('style', 'display:none');
 
-var idGrupo = "";
+            var idGrupo = "";
             var list_idLabel = "";
 
             if (lista.length > 0) {
@@ -270,21 +286,21 @@ var idGrupo = "";
                                                 contUDB = 1;
                                             }
                                         } else {
-                                        var lblDato = valueItemls.split(",")[3];
-                                        var ColorTexto = '';
-                                        if (value.flag_OK != null) {
-                                            if (value.flag_OK == '0') {
-                                                ColorTexto = 'text-danger';
-                                            } else if (value.flag_OK == '1') {
-                                                ColorTexto = 'text-success';
+                                            var lblDato = valueItemls.split(",")[3];
+                                            var ColorTexto = '';
+                                            if (value.flag_OK != null) {
+                                                if (value.flag_OK == '0') {
+                                                    ColorTexto = 'text-danger';
+                                                } else if (value.flag_OK == '1') {
+                                                    ColorTexto = 'text-success';
+                                                }
                                             }
-                                        }
-                                        document.getElementById(lblDato).removeAttribute('class');
-                                        document.getElementById(lblDato).setAttribute('class', 'control-label ' + ColorTexto + ' line ');
-                                        document.getElementById(lblDato).innerHTML = '&nbsp;&nbsp;' + value.descarteValor;
-                                        if (value.flag_Error != 0) {
-                                            cont2++;
-                                        }
+                                            document.getElementById(lblDato).removeAttribute('class');
+                                            document.getElementById(lblDato).setAttribute('class', 'control-label ' + ColorTexto + ' line ');
+                                            document.getElementById(lblDato).innerHTML = '&nbsp;&nbsp;' + value.descarteValor;
+                                            if (value.flag_Error != 0) {
+                                                cont2++;
+                                            }
                                         }
                                     } else {
                                         if ((valueItemls.split(",")[1] == 17 || valueItemls.split(",")[1] == 25 || valueItemls.split(",")[1] == 29) && value.flag_Error == 0) {
@@ -323,7 +339,7 @@ var idGrupo = "";
                                                         var divTabletBodytrSecondCombinadoTDLabel3 = document.createElement("label");
                                                         divTabletBodytrSecondCombinadoTDLabel3.className = 'control-label text-success line'
                                                         divTabletBodytrSecondCombinadoTDLabel3.id = 'divTabletBodytrSecondCombinadoTDLabel3' + valueItemls.split(",")[0];
-                                                        divTabletBodytrSecondCombinadoTDLabel3.innerHTML = '&nbsp;&nbsp;' + valueItem.fechavencimiento + '&nbsp;&nbsp;';
+                                                        divTabletBodytrSecondCombinadoTDLabel3.innerHTML = '&nbsp;&nbsp;' + valueItem.fechaVencimiento + '&nbsp;&nbsp;';
 
                                                         var ColorValor = valueItem.valor.toUpperCase();
                                                         ColorValor = ColorValor.replace(/ /g, "");
@@ -342,9 +358,9 @@ var idGrupo = "";
                                                         }
 
                                                         if (ColorValor <= 0) {
-                                                            divTabletBodytrSecondCombinadoTDLabel1.attr("style", "color: #a94442");
-                                                            divTabletBodytrSecondCombinadoTDLabel2.attr("style", "color: #a94442");
-                                                            divTabletBodytrSecondCombinadoTDLabel3.attr("style", "color: #a94442");
+                                                            divTabletBodytrSecondCombinadoTDLabel1.setAttribute("style", "color: #a94442");
+                                                            divTabletBodytrSecondCombinadoTDLabel2.setAttribute("style", "color: #a94442");
+                                                            divTabletBodytrSecondCombinadoTDLabel3.setAttribute("style", "color: #a94442");
                                                         }
 
                                                         if (index == 0) {
@@ -421,6 +437,97 @@ var idGrupo = "";
                 that.list_idDescarte = "";
             }
         },
+
+        MetBannerActualizar: function (e) {
+            console.log("MetBannerActualizar");
+            var that = this;
+            that.BannerAccion = 'U';
+            var idEliminarBan = $(e).attr('id');
+
+            if (idEliminarBan == "btnFallaElim") {
+                document.getElementById("txtFalla").value = "";
+                that.BannerAccionBtn = 'E';
+            }
+            that.BannerDescripcion = document.getElementById("txtFalla").value;
+            that.MetBannerDescartesAcBus();
+        },
+
+        MetBannerDescartesAcBus: function () {
+            console.log("MetBannerDescartesAcBus");
+            var that = this;
+
+            if (that.BannerDescripcion == "") {
+                that.BannerDescripcion = " ";
+            }
+
+            var objRequest = {
+                strIdSession: Session.IDSESSION,
+                bannerDescartesRequest: {
+                    descripcion: that.BannerDescripcion,
+                    usuario: that.BannerUsuario,
+                    fecha: that.BannerFecha,
+                    grupo: that.BannerGrupo,
+                    accion: that.BannerAccion
+                }
+            };
+
+            $.app.ajax({
+                type: 'POST',
+                contentType: "application/json; charset=utf-8",
+                dataType: 'json',
+                url: '/Transactions/Fixed/Discard/BannerDescartesAcBus',
+                data: JSON.stringify(objRequest),
+                success: function (response) {
+                    if (response != null) {
+                        if (response.data != null) {
+                            if (response.data.bannerDescartesResponse != null) {
+                                if (response.data.bannerDescartesResponse.responseAudit != null) {
+                                    if (response.data.bannerDescartesResponse.responseAudit.codigoRespuesta == "0") {
+                                        if (response.data.bannerDescartesResponse.responseData != null) {
+                                            if (response.data.bannerDescartesResponse.responseData.descripcion != null) {
+                                                var strdescripcion = document.getElementById('txtFalla');
+                                                if (response.data.bannerDescartesResponse.responseData.descripcion.trim() != "") {
+                                                    strdescripcion.value = response.data.bannerDescartesResponse.responseData.descripcion.trim();
+                                                } else {
+                                                    if (that.BannerPermiso == "1") {
+                                                        strdescripcion.value = response.data.bannerDescartesResponse.responseData.descripcion.trim();
+                                                    } else {
+                                                        var DivBanner = document.getElementById('idBanner');
+                                                        DivBanner.style.display = 'none';
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        if (that.BannerAccion == 'U') {
+                                            if (that.BannerAccionBtn == 'E') {
+                                                alert("Banner Eliminado Correctamente");
+                                            } else {
+                                                alert("Banner Actualizado Correctamente");
+                                            }
+                                        }
+                                    } else {
+                                        if (that.BannerAccion == 'U') {
+                                            if (that.BannerAccionBtn == 'E') {
+                                                alert("Banner No Eliminado");
+                                            } else {
+                                                alert("Banner No Actualizado");
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                error: function (msger) {
+                    console.log(msger);
+                    var strdescripcion = document.getElementById('txtFalla');
+                    strdescripcion.value = "";
+                    callback();
+                }
+            });
+        },
+
         GetInfoTableDiscard: function () {
 
             var that = this,
@@ -437,6 +544,33 @@ var idGrupo = "";
                 var IdGrupoInternetPrepago = GetKeyConfig("strIdGrupoInternetPrepago");
                 var IdGrupoSMSPostPrepago = GetKeyConfig("strIdGrupoSMSPostPrepago");
 
+                //INI: INICIATIVA- BANNER
+                var divBanner = $(that.CrearControl.c_Element('idBanner', '', 'c_Banner', 'div', ''));
+                var banInput = $(that.CrearControl.c_Element('txtFalla', '', 'txtFallas', 'input', 'text'));
+                divBanner.append(banInput);
+
+                var perfilesPermitidosBanner = GetKeyConfig("PerfilesPermitidosContinue").split('|');
+                var objUserAccess = SessionTransac.SessionParams.USERACCESS;
+                $.grep(perfilesPermitidosBanner, function (value) {
+                    if (value == objUserAccess.profileId) {
+                        var banbtnElim = $(that.CrearControl.c_Element('btnFallaElim', 'Eliminar', 'btnFallaBann', 'input', 'button'));
+                        var banbtnActu = $(that.CrearControl.c_Element('btnFallaAct', 'Actualizar', 'btnFallaBann', 'input', 'button'));
+                        banbtnActu.addEvent(that, 'click', that.MetBannerActualizar);
+                        banbtnElim.addEvent(that, 'click', that.MetBannerActualizar);
+                        var Bfecha = new Date();
+                        that.BannerFecha = Bfecha.getDate() + "/" + (Bfecha.getMonth() + 1) + "/" + Bfecha.getFullYear();
+                        that.BannerUsuario = objUserAccess.login;
+                        that.BannerPermiso = '1';
+                        divBanner.append(banbtnElim);
+                        divBanner.append(banbtnActu);
+                    } else {
+                        banInput.attr("disabled", "");
+                    }
+                });
+                controls.divContenedor.append(divBanner);
+                that.MetBannerDescartesAcBus();
+
+                //FIN: INICIATIVA- BANNER
                 $.grep(that.dataListDescartes.listaGrupos, function (ItemGroup) {
 
                     var classActive = '';
@@ -472,7 +606,7 @@ var idGrupo = "";
                             IconoSpan = 'glyphicon glyphicon-envelope';
                         }
 
-                         var divliaSpan = $(that.CrearControl.span('divliaSpan' + ItemGroup.degriIdGrupo, IconoSpan)); //armamos fila
+                        var divliaSpan = $(that.CrearControl.span('divliaSpan' + ItemGroup.degriIdGrupo, IconoSpan)); //armamos fila
                         divlia.append(divliaSpan);
                         divli.append(divlia);
                         divul.append(divli);
@@ -541,7 +675,7 @@ var idGrupo = "";
                                         if (conTitu == 0) {
                                             var btnTitu = $(that.CrearControl.btn(value.nombre_variable, "", "btnActualizar"));
                                             btnTitu.addEvent(that, 'click', that.MetbtnActualizartab);
-											divTabletrTh.append("<h43>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h43>");
+                                            divTabletrTh.append("<h43>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h43>");
                                             divTabletrTh.append(btnTitu);
                                         }
                                         conTitu++;
@@ -743,42 +877,42 @@ var idGrupo = "";
                                         }
                                     } else {
 
-                                    var divTabletBodytr = $(that.CrearControl.tr('divTabletBodytr' + ItemGroup.degriIdGrupo, '')); //armamos fila
-                                    var divTabletBodytrFirstTD = $(that.CrearControl.td('divTabletBodytrFirstTD' + ItemGroup.degriIdGrupo, '30%')); //armamos fila
-                                    var divTabletBodytrSecondTD = $(that.CrearControl.td('divTabletBodytrSecondTD' + ItemGroup.degriIdGrupo, '30%')); //armamos fila
-                                    var divTabletBodytrFirstTDLabel = $(that.CrearControl.Label('divTabletBodytrFirstTDLabel' + ItemGroup.degriIdGrupo, 'control-label ', value.desc_descarte)); //armamos fila
+                                        var divTabletBodytr = $(that.CrearControl.tr('divTabletBodytr' + ItemGroup.degriIdGrupo, '')); //armamos fila
+                                        var divTabletBodytrFirstTD = $(that.CrearControl.td('divTabletBodytrFirstTD' + ItemGroup.degriIdGrupo, '30%')); //armamos fila
+                                        var divTabletBodytrSecondTD = $(that.CrearControl.td('divTabletBodytrSecondTD' + ItemGroup.degriIdGrupo, '30%')); //armamos fila
+                                        var divTabletBodytrFirstTDLabel = $(that.CrearControl.Label('divTabletBodytrFirstTDLabel' + ItemGroup.degriIdGrupo, 'control-label ', value.desc_descarte)); //armamos fila
 
-                                    if (value.flag_OK != null) {
-                                        if (value.flag_OK == '0') {
-                                            ColorTexto = 'text-danger';
-                                        } else if (value.flag_OK == '1') {
-                                            ColorTexto = 'text-success';
-                                        }                                        
-                                    }
-
-                                    var idLabel = 'divTabletBodytrSecondTDLabel' + ItemGroup.degriIdGrupo;
-
-                                    if (value.flag_Error != 0) {
-                                        if (conTitu == 0) {
-                                            var btnTitu = $(that.CrearControl.btn(value.nombre_variable, "", "btnActualizar"));
-                                            btnTitu.addEvent(that, 'click', that.MetbtnActualizartab);
-											divTabletrTh.append("<h43>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h43>");
-                                            divTabletrTh.append(btnTitu);
+                                        if (value.flag_OK != null) {
+                                            if (value.flag_OK == '0') {
+                                                ColorTexto = 'text-danger';
+                                            } else if (value.flag_OK == '1') {
+                                                ColorTexto = 'text-success';
+                                            }
                                         }
-                                        conTitu++;
-                                        idLabel = 'divTabletBodytrSecondTDLabel' + ItemGroup.degriIdGrupo + conTitu;
-                                        var MetTex = ItemGroup.degriIdGrupo + "," + value.id_descarte + "," + value.nombre_variable + "," + idLabel;
-                                        that.CadenaDescartes = MetTex + ";" + that.CadenaDescartes;
-                                    }
 
-                                    var divTabletBodytrSecondTDLabel = $(that.CrearControl.Label(idLabel, 'control-label ' + ColorTexto, value.descarteValor == null ? '' : value.descarteValor)); //armamos fila
-                                    
-                                    divTabletBodytrFirstTD.append(divTabletBodytrFirstTDLabel);
-                                    divTabletBodytrSecondTD.append(divTabletBodytrSecondTDLabel);
-                                    divTabletBodytr.append(divTabletBodytrFirstTD);
-                                    divTabletBodytr.append(divTabletBodytrSecondTD);
-                                    divTabletBody.append(divTabletBodytr);
-                                    divTable.append(divTabletBody);
+                                        var idLabel = 'divTabletBodytrSecondTDLabel' + ItemGroup.degriIdGrupo;
+
+                                        if (value.flag_Error != 0) {
+                                            if (conTitu == 0) {
+                                                var btnTitu = $(that.CrearControl.btn(value.nombre_variable, "", "btnActualizar"));
+                                                btnTitu.addEvent(that, 'click', that.MetbtnActualizartab);
+                                                divTabletrTh.append("<h43>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h43>");
+                                                divTabletrTh.append(btnTitu);
+                                            }
+                                            conTitu++;
+                                            idLabel = 'divTabletBodytrSecondTDLabel' + ItemGroup.degriIdGrupo + conTitu;
+                                            var MetTex = ItemGroup.degriIdGrupo + "," + value.id_descarte + "," + value.nombre_variable + "," + idLabel;
+                                            that.CadenaDescartes = MetTex + ";" + that.CadenaDescartes;
+                                        }
+
+                                        var divTabletBodytrSecondTDLabel = $(that.CrearControl.Label(idLabel, 'control-label ' + ColorTexto, value.descarteValor == null ? '' : value.descarteValor)); //armamos fila
+
+                                        divTabletBodytrFirstTD.append(divTabletBodytrFirstTDLabel);
+                                        divTabletBodytrSecondTD.append(divTabletBodytrSecondTDLabel);
+                                        divTabletBodytr.append(divTabletBodytrFirstTD);
+                                        divTabletBodytr.append(divTabletBodytrSecondTD);
+                                        divTabletBody.append(divTabletBodytr);
+                                        divTable.append(divTabletBody);
                                     }
                                 });
                             }
@@ -799,7 +933,7 @@ var idGrupo = "";
            controls = this.getControls();
 
             if (that.CadenaDescartes == "") {
-            showLoading('Cargando información de descartes.');
+                showLoading('Cargando información de descartes.');
             }
 
             var oCustomer = SessionTransac.SessionParams.DATACUSTOMER;
@@ -860,9 +994,9 @@ var idGrupo = "";
 
             var varConsultDiscardRTIRequest = {
                 consultarDescartesRtiPrePostRequest: {
-                coId: ContractID,
-                msisdn: Telefono,
-                tipoLinea: TipoLinea
+                    coId: ContractID,
+                    msisdn: Telefono,
+                    tipoLinea: TipoLinea
                 }
             };
 
@@ -901,75 +1035,75 @@ var idGrupo = "";
                         that.dataListDescartes.listaGrupos = [];
 
                         if (response.data.listaDescartes != null) {
-                        if (response.data.listaDescartes.length > 0) {
-                            $.each(response.data.listaDescartes, function (index, value) {
+                            if (response.data.listaDescartes.length > 0) {
+                                $.each(response.data.listaDescartes, function (index, value) {
 
-                                var listaDescartes = {
-                                    id_descarte: "",
-                                    nombre_variable: "",
-                                    desc_descarte: "",
-                                    tipo_descarte: "",
-                                    flag_descarte: "",
-                                    orden_descarte: "",
-                                    fecha_reg: "",
-                                    id_grupo: "",
-                                    flag_OK: "",
+                                    var listaDescartes = {
+                                        id_descarte: "",
+                                        nombre_variable: "",
+                                        desc_descarte: "",
+                                        tipo_descarte: "",
+                                        flag_descarte: "",
+                                        orden_descarte: "",
+                                        fecha_reg: "",
+                                        id_grupo: "",
+                                        flag_OK: "",
                                         flag_Error: "",
-                                    descarteValor: "",
-                                    descarteListaValor: ""
-                                }
+                                        descarteValor: "",
+                                        descarteListaValor: ""
+                                    }
 
-                                listaDescartes.id_descarte = value.id_descarte,
-                                listaDescartes.nombre_variable = value.nombre_variable;
-                                listaDescartes.desc_descarte = value.desc_descarte;
-                                listaDescartes.tipo_descarte = value.tipo_descarte;
-                                listaDescartes.flag_descarte = value.flag_descarte;
-                                listaDescartes.orden_descarte = value.orden_descarte;
-                                listaDescartes.fecha_reg = value.fecha_reg;
-                                listaDescartes.id_grupo = value.id_grupo;
-                                listaDescartes.flag_OK = value.flag_OK;
+                                    listaDescartes.id_descarte = value.id_descarte,
+                                    listaDescartes.nombre_variable = value.nombre_variable;
+                                    listaDescartes.desc_descarte = value.desc_descarte;
+                                    listaDescartes.tipo_descarte = value.tipo_descarte;
+                                    listaDescartes.flag_descarte = value.flag_descarte;
+                                    listaDescartes.orden_descarte = value.orden_descarte;
+                                    listaDescartes.fecha_reg = value.fecha_reg;
+                                    listaDescartes.id_grupo = value.id_grupo;
+                                    listaDescartes.flag_OK = value.flag_OK;
                                     listaDescartes.flag_Error = value.flag_Error;
-                                listaDescartes.descarteValor = value.descarteValor;
-                                listaDescartes.descarteListaValor = value.descarteListaValor;
+                                    listaDescartes.descarteValor = value.descarteValor;
+                                    listaDescartes.descarteListaValor = value.descarteListaValor;
 
-                                that.dataListDescartes.listaDescartes.push(listaDescartes);
+                                    that.dataListDescartes.listaDescartes.push(listaDescartes);
 
-                            });
-                        }
+                                });
+                            }
                         }
 
                         if (response.data.listaGrupos != null) {
-                        if (response.data.listaGrupos.length > 0) {
-                            $.each(response.data.listaGrupos, function (index, value) {
+                            if (response.data.listaGrupos.length > 0) {
+                                $.each(response.data.listaGrupos, function (index, value) {
 
-                                var listaGrupos = {
-                                    degriIdGrupo: "",
-                                    degrvDescripcion: "",
-                                    degrvTipo: "",
-                                    degriFlagVisual: "",
-                                    degriOrden: "",
-                                    degrvUsuReg: "",
-                                    degrdFecReg: "",
-                                    degrvUsuMod: "",
-                                    degrdFecMod: "",
-                                    degriEstadoReg: ""
-                                }
+                                    var listaGrupos = {
+                                        degriIdGrupo: "",
+                                        degrvDescripcion: "",
+                                        degrvTipo: "",
+                                        degriFlagVisual: "",
+                                        degriOrden: "",
+                                        degrvUsuReg: "",
+                                        degrdFecReg: "",
+                                        degrvUsuMod: "",
+                                        degrdFecMod: "",
+                                        degriEstadoReg: ""
+                                    }
 
-                                listaGrupos.degriIdGrupo = value.degriIdGrupo,
-                                listaGrupos.degrvDescripcion = value.degrvDescripcion;
-                                listaGrupos.degrvTipo = value.degrvTipo;
-                                listaGrupos.degriFlagVisual = value.degriFlagVisual;
-                                listaGrupos.degriOrden = value.degriOrden;
-                                listaGrupos.degrvUsuReg = value.degrvUsuReg;
-                                listaGrupos.degrdFecReg = value.degrdFecReg;
-                                listaGrupos.degrvUsuMod = value.degrvUsuMod;
-                                listaGrupos.degrdFecMod = value.degrdFecMod;
-                                listaGrupos.degriEstadoReg = value.degriEstadoReg;
+                                    listaGrupos.degriIdGrupo = value.degriIdGrupo,
+                                    listaGrupos.degrvDescripcion = value.degrvDescripcion;
+                                    listaGrupos.degrvTipo = value.degrvTipo;
+                                    listaGrupos.degriFlagVisual = value.degriFlagVisual;
+                                    listaGrupos.degriOrden = value.degriOrden;
+                                    listaGrupos.degrvUsuReg = value.degrvUsuReg;
+                                    listaGrupos.degrdFecReg = value.degrdFecReg;
+                                    listaGrupos.degrvUsuMod = value.degrvUsuMod;
+                                    listaGrupos.degrdFecMod = value.degrdFecMod;
+                                    listaGrupos.degriEstadoReg = value.degriEstadoReg;
 
-                                that.dataListDescartes.listaGrupos.push(listaGrupos);
+                                    that.dataListDescartes.listaGrupos.push(listaGrupos);
 
-                            });
-                        }
+                                });
+                            }
                         }
                         console.log("dataListDescartes");
                         console.log(that.dataListDescartes);

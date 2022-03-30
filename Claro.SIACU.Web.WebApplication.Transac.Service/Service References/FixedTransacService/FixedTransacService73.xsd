@@ -1,21 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetCustomerPhone" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetCustomerPhone" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd3" namespace="Claro" />
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetInsertInteractionMixed" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetInsertInteractionMixed" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed" />
-  <xs:complexType name="CustomerPhoneRequest">
+  <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd3" namespace="Claro" />
+  <xs:complexType name="GetInsertInteractionMixedRequest">
     <xs:complexContent mixed="false">
       <xs:extension xmlns:q1="Claro" base="q1:Request">
         <xs:sequence>
-          <xs:element minOccurs="0" name="IdContract" type="xs:int" />
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed" minOccurs="0" name="Interaction" nillable="true" type="q2:Interaction" />
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed" minOccurs="0" name="InteractionTemplate" nillable="true" type="q3:InteractionTemplate" />
+          <xs:element minOccurs="0" name="vEjecutarTransaccion" type="xs:boolean" />
+          <xs:element minOccurs="0" name="vNroTelefono" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="vPASSWORD_USUARIO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="vUSUARIO_APLICACION" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="vUSUARIO_SISTEMA" nillable="true" type="xs:string" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="CustomerPhoneRequest" nillable="true" type="tns:CustomerPhoneRequest" />
-  <xs:complexType name="CustomerPhoneResponse">
+  <xs:element name="GetInsertInteractionMixedRequest" nillable="true" type="tns:GetInsertInteractionMixedRequest" />
+  <xs:complexType name="GetInsertInteractionMixedResponse">
     <xs:sequence>
-      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed" minOccurs="0" name="LstCustomerPhone" nillable="true" type="q2:ArrayOfGenericItem" />
+      <xs:element minOccurs="0" name="rCodigoRetornoTransaccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="rFlagInsercion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="rFlagInsercionInteraccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="rInteraccionId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="rMsgText" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="rMsgTextInteraccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="rMsgTextTransaccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="rResult" type="xs:boolean" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="CustomerPhoneResponse" nillable="true" type="tns:CustomerPhoneResponse" />
+  <xs:element name="GetInsertInteractionMixedResponse" nillable="true" type="tns:GetInsertInteractionMixedResponse" />
 </xs:schema>

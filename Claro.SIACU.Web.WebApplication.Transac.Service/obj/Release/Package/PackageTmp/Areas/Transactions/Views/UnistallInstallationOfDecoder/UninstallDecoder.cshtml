@@ -1,0 +1,21 @@
+﻿@*@model Claro.SIACU.Web.WebApplication.Transac.Service.Areas.Transactions.Models.Postpaid.PlanViewModel*@
+<script type="text/javascript" src="~/Areas/Transactions/Content/Lib/BloqueoF12.js"></script>
+<div id="HFCListUninstallEquipment">
+    <div id="modal-content">
+        <div class="panel panel-danger">
+            <table id="tblBajaEquipos" class="table table-bordered table-striped">
+                <thead class="btn-danger">
+                    <tr>
+                        <th><input id="chkBajaEquipos" type="checkbox" /></th>
+                        <th>Descripción del Equipo</th>
+                        <th>Cargo Fijo (S/) Con IGV</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+@Scripts.Render("~/bundles/Transactions/HFC/HFCListUninstallEquipment")
+@*<script src="~/Areas/Transactions/Scripts/UnistallInstallationOfDecoder/HFCListUninstallEquipment.js"></script>*@

@@ -3,3 +3,13 @@ C:\NET\Framework\Claro\bin\Release\Claro.pdb
 C:\NET\Framework\Claro\obj\Release\Claro.dll
 C:\NET\Framework\Claro\obj\Release\Claro.pdb
 C:\NET\Framework\Claro\obj\Release\Claro.csprojResolveAssemblyReference.cache
+D:\Fuentes\28032022\SiacuTrans\Framework\Claro\bin\Release\Claro.dll
+D:\Fuentes\28032022\SiacuTrans\Framework\Claro\bin\Release\Claro.pdb
+D:\Fuentes\28032022\SiacuTrans\Framework\Claro\obj\Release\Claro.csprojResolveAssemblyReference.cache
+D:\Fuentes\28032022\SiacuTrans\Framework\Claro\obj\Release\Claro.dll
+D:\Fuentes\28032022\SiacuTrans\Framework\Claro\obj\Release\Claro.pdb
+D:\SiacuTrans\Framework\Claro\bin\Release\Claro.dll
+D:\SiacuTrans\Framework\Claro\bin\Release\Claro.pdb
+D:\SiacuTrans\Framework\Claro\obj\Release\Claro.csprojResolveAssemblyReference.cache
+D:\SiacuTrans\Framework\Claro\obj\Release\Claro.dll
+D:\SiacuTrans\Framework\Claro\obj\Release\Claro.pdb

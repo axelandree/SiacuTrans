@@ -15,6 +15,7 @@ using Claro.Entity;
 using Claro.SIACU.Entity.Transac.Service.Fixed.GetNetflixServices;
 using Claro.SIACU.Entity.Transac.Service.Fixed.Discard;
 using Claro.SIACU.Entity.Transac.Service.Fixed.Discard.ProcesarContinue;
+using Claro.SIACU.Entity.Transac.Service.Fixed.Discard.BannerDesc;
 
 namespace Claro.SIACU.Web.Service.Transac.Service
 {
@@ -645,6 +646,10 @@ namespace Claro.SIACU.Web.Service.Transac.Service
 
         [OperationContract]
         MessageResponseRegistrarProcesoContinue RegistrarActualizarContingencia(MessageRequestRegistrarProcesoContinue objRequest, Tools.Entity.AuditRequest objAuditRequest);
+
+        [OperationContract]
+        BannerDescartesConsultaResp BannerDescartesAcBus(BannerDescartesConsultaReq objRequest, Tools.Entity.AuditRequest objAuditRequest);
+
         //FIN: INICIATIVA-986 
     }
 

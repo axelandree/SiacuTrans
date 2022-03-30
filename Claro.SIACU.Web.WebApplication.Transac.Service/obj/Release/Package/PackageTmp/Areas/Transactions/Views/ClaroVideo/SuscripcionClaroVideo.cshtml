@@ -1,0 +1,594 @@
+﻿<style type="text/css">
+    fieldset.scheduler-border {
+        border: solid 2px #DDD !important;
+        padding: 0 10px 10px 10px;
+        border-bottom: none;
+    }
+
+    legend.scheduler-border {
+        width: auto !important;
+        border: none;
+        font-size: 16px;
+    }
+
+    /*.card-header {
+        padding: .75rem 1.25rem;
+        margin-bottom: 0;
+        background-color: #A9A6A5;
+        border-bottom: 1px solid rgba(0,0,0,.125);
+    }
+
+        .card-header:first-child {
+            border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
+            color: white;
+        }*/
+
+
+    .border-1 {
+        border-width: 1px !important;
+    }
+
+    .nav > li > a {
+        color: #fff;
+        text-decoration: none;
+        background-color: #9E9C9C;
+    }
+
+        .nav > li > a:hover {
+            background: #696766;
+        }
+
+    .nav-tabs > li.active > a:focus {
+        color: white;
+        cursor: default;
+        background-color: #da291c;
+        border: 1px solid #ddd;
+        border-bottom-color: transparent;
+    }
+
+    .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover {
+        color: white;
+        cursor: default;
+        background-color: #da291c;
+        border: 1px solid #ddd;
+        border-bottom-color: transparent;
+    }
+
+    /*.form-group input[type="checkbox"] {
+        display: none;
+    }*/
+
+    .form-group input[type="checkbox"] + .btn-group > label span {
+        width: 15px;
+    }
+
+        .form-group input[type="checkbox"] + .btn-group > label span:first-child {
+            display: none;
+        }
+
+        .form-group input[type="checkbox"] + .btn-group > label span:last-child {
+            display: inline-block;
+        }
+
+    .form-group input[type="checkbox"]:checked + .btn-group > label span:first-child {
+        display: inline-block;
+    }
+
+    .form-group input[type="checkbox"]:checked + .btn-group > label span:last-child {
+        display: none;
+    }
+
+
+    .panel-danger-Claro {
+        border: 1px solid #ddd;
+    }
+
+        .panel-danger-Claro > .panel-heading {
+            color: #FFFCFC;
+            background-color: #9E9C9C;
+            border-color: #9E9C9C;
+        }
+    .gris_Class_Row {
+        background: #eee;
+    }
+
+    .cursor_block_iptv {
+        cursor: not-allowed !important;
+    }
+    .inactiveLink {
+         pointer-events: none;
+         cursor: default;
+    }
+</style>
+<script type="text/javascript" src="~/Areas/Transactions/Content/Lib/BloqueoF12.js"></script>
+<div id="ContentSuscripcionClaroVideo">
+    <div class="panel panel-default" style="margin-left:15px; margin-right:15px">
+        <div class="panel-body">
+            <div class="form-horizontal">
+
+                <div class="panel">
+                    <ul id="divDashboardTabs" class="nav nav-tabs" role="tablist" style="cursor: pointer" data-tabs="tabs">
+
+                        <li id="TabSuscripcion" class="active text-center col-md-4" style="padding: 1px"><a href="#divpreposttitular" role="tab" data-toggle="tab" data-parent="divDashboardTabs"><span class="glyphicon glyphicon-th-large"></span> Suscripcion</a></li>
+                        <li id="TabAdministracion" class="text-center col-md-4" style="padding: 1px"><a href="#divPrePostContacto" role="tab" data-toggle="tab" data-parent="divDashboardTabs"><span class="glyphicon glyphicon-cog"></span> Administracion de Claro Video</a></li>
+                        <li id="TabConsulta" class="text-center col-md-4" style="padding: 1px"><a id="idConsultaCV" href="#divPrePostContactoConsulta" role="tab" data-toggle="tab" data-parent="divDashboardTabs"><span class="glyphicon glyphicon-th-large"></span>Consulta</a></li>
+
+                    </ul>
+                    <div class="tab-content">
+                        <div id="divpreposttitular" class="tab-pane fade active in" @*class="tab-pane active"*@>
+                            <form>
+                                <center> <h3><label class="control-label"> REGISTRAR</label></h3></center>
+
+                                @*<fieldset class="scheduler-border">
+                                    <legend class="scheduler-border rounded"> </legend>*@
+                                <div class="panel panel-default">
+                                    <div class="panel panel-heading"> <i class="glyphicon glyphicon-user"></i> Datos del usuario</div>
+                                    <div class="panel-body">
+
+                                        <div class="form-group row">
+                                            <div class="col-sm-3"></div>
+                                            <label for="txtCorreoelectronico" class="col-sm-2 col-form-label">Correo Electronico: <label class="control-label label-red ">*</label></label>
+
+                                            <div class="col-sm-3">
+                                                <input type="text" class="form-control" id="txtCorreoelectronico" placeholder="Ingrese su correo electronico">
+                                            </div>
+                                            <div class="col-sm-2"></div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-sm-3"></div>
+                                            <label for="txtNombre" class="col-sm-2 col-form-label">Nombres:<label class="control-label label-red">*</label></label>
+
+                                            <div class="col-sm-3">
+                                                <input type="text" class="form-control" id="txtNombre" placeholder="Ingrese su nombre" disabled>
+                                            </div>
+                                            <div class="col-sm-2"></div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-sm-3"></div>
+                                            <label for="txtApellido" class="col-sm-2 col-form-label">Apellidos: <label class="control-label label-red">*</label></label>
+
+                                            <div class="col-sm-3">
+                                                <input type="text" class="form-control" id="txtApellido" placeholder="Ingrese su apellido" disabled>
+                                            </div>
+                                            <div class="col-sm-2"></div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-sm-3"></div>
+                                            <label for="txtLinea" class="col-sm-2 col-form-label">L&iacute;nea / contrato: <label class="control-label label-red">*</label></label>
+
+                                            <div class="col-sm-2">
+                                                <input type="text" class="form-control" id="txtLinea" placeholder="Ingrese su linea" disabled>
+                                            </div>
+                                            <div class="col-sm-2"></div>
+                                        </div>
+
+                                        <div class="form-group row text-right" style="margin-left:10px; margin-right:10px" id="PanelRegistrar">
+
+                                            <center>
+                                                <div class="card">
+                                                    <div class="card-header" style="cursor: pointer">
+                                                        <button style="padding-left: 35px; padding-right: 35px; margin: 5px; width: 150px;" class="btn claro-btn-info btn-sm" id="btnRegistrar" type="button"> Registrar</button>
+                                                    </div>
+                                                </div>
+                                            </center>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="row "></div>
+                            <div id="PanelDesplegables" style="width:100%">
+                                <div class="accordion" id="accordionExample">
+                                    <div class="card">
+                                        <div class="card-header" style="cursor: pointer" id="headingOne" data-toggle="collapse" data-target="#collapseOneCero" aria-expanded="true" aria-controls="collapseOne">
+                                            <h5 class="mb-0">
+                                                <button class="" type="button" data-toggle="collapse" data-target="#collapseOneCero" aria-expanded="true" aria-controls="collapseOne"></button>
+                                                <span>
+                                                    Suscripcion del usuario
+                                                </span>
+                                            </h5>
+                                        </div>
+                                        <div id="collapseOneCero" class="collapsing" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                            <div class="row" style="margin-left:20px; margin-right:1px">
+                                                <div class="" style="">
+                                                    <div class="" style="">
+                                                        <div class="row" id="divtbtbPackageList" style="width:100%">
+                                                            <table id="tbPackageList" class="table table-white table-bordered table-hover" style="width:100%">
+                                                                <thead class="claro-bg-primary">
+                                                                    <tr>
+                                                                        <th style="text-align: center; width: inherit;">Titulo</th>
+                                                                        <th style="text-align: center; width: inherit;">Estado</th>
+                                                                        <th style="text-align: center; width: inherit;">Fecha de renovaci&oacute;n</th>
+                                                                        <th style="text-align: center; width: inherit;">Per&iacute;odo</th>
+                                                                        <th style="text-align: center; width: inherit;">Precio</th>
+                                                                        <th style="text-align: center; width: inherit;">Servicio</th>
+                                                                        <th style="text-align: center; width: inherit;">Acci&oacute;n</th>
+                                                                        <th style="text-align: center; width: inherit;">Historial</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody id="tbPackageBodyList"></tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                @*aqui*@
+
+
+                                            </div>
+                                        </div>
+                                        <div class="card-footer text-muted text-right">
+                                            Lista de suscripciones
+                                        </div>
+                                    </div>
+                                    <div class="row">
+
+                                    </div>
+                                    <div class="card">
+
+                                        <div class="card-header" style="cursor: pointer" id="headingOne" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            <h5 class="mb-0">
+                                                <button class="" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"></button><span>
+                                                    Alquileres de usuario
+                                                </span>
+                                            </h5>
+                                        </div>
+
+                                        <div id="collapseOne" class="collapsing" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <div class="row text-right" style="cursor: pointer; margin-left: 20px; margin-right: 25px">
+                                                    <button class="btn btn-default btn-sm" id="btnViewHistory" type="button"> <i class="glyphicon glyphicon-copy"></i>  Ver Historial </button>
+
+                                                </div>
+                                                <div class="row" style="margin-left:20px; margin-right:1px">
+                                                    <div class="">
+                                                        <div class="">
+                                                            @*<div class="row" id="divtbTreeNodes">*@
+                                                            <div class="row" id="divtbtbRentalUser" style="width:100%">
+                                                                <table id="tbRentalUser" class="table table-bordered table-hover" style="width:100%">
+                                                                    <thead class="claro-bg-primary">
+                                                                        <tr>
+                                                                            <th style="text-align: center; width: inherit;">Titulo del alquiler</th>
+                                                                            <th style="text-align: center; width: inherit;">IP Usuario</th>
+                                                                            <th style="text-align: center; width: inherit;">Ultimo tiempo de visualizaci&oacute;n</th>
+                                                                            <th style="text-align: center; width: inherit;">Tiempo Maximo de visualizaci&oacute;n</th>
+                                                                            <th style="text-align: center; width: inherit;">Fecha de Alta</th>
+                                                                            <th style="text-align: center; width: inherit;">Fecha de expiraci&oacute;n</th>
+                                                                            <th style="text-align: center; width: inherit;">Precio</th>
+                                                                            <th style="text-align: center; width: inherit;">Medio de Pago</th>
+                                                                            <th style="text-align: center; width: inherit;">Acciones</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody id="tbRentaPeliculaBodyList"></tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                @*@</div>*@
+                                            </div>
+                                        </div>
+
+                                        <div class="card-footer text-muted text-right">
+                                            Lista de alquileres
+                                        </div>
+
+                                    </div>
+                                    <div class="row">
+
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header" style="cursor: pointer" id="headingTwo" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            <h5 class="mb-0">
+                                                <button class="" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"></button>
+                                                <span>
+                                                    Visualizaciones de usuario
+                                                </span>
+                                            </h5>
+                                        </div>
+                                        <div id="collapseTwo" class="collapsing" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <div class="row text-right" style="cursor: pointer; margin-left: 20px; margin-right: 25px">
+                                                    <button class="btn btn-default btn-sm" id="btnViewHistoryVisualization" type="button"> <i class="glyphicon glyphicon-copy"></i> Ver Historial </button>
+
+                                                </div>
+                                                <div class="row" style="margin-left:20px; margin-right:1px">
+                                                    <div class="">
+                                                        <div class="">
+                                                            @*<div class="row" id="divtbTreeNodes">*@
+                                                            <div class="row" id="divtbtbVisualizationClient" style="width:100%">
+                                                                <table id="tbVisualizationClient" class="table table-bordered table-hover">
+                                                                    <thead class="claro-bg-primary">
+                                                                        <tr>
+                                                                            <th style="text-align: center; width: inherit;">ID</th>
+                                                                            <th style="text-align: center; width: inherit;">Titulo de la pelicula</th>
+                                                                            <th style="text-align: center; width: inherit;">IP Usuario</th>
+                                                                            <th style="text-align: center; width: inherit;">Fecha de tiempo de visualizaci&oacute;n</th>
+                                                                            <th style="text-align: center; width: inherit;">Ultimo tiempo de visualizaci&oacute;n</th>
+                                                                            <th style="text-align: center; width: inherit;">Fecha de maxima visualizaci&oacute;n </th>
+                                                                            <th style="text-align: center; width: inherit;">Tiempo maximo de visualizaci&oacute;n</th>
+                                                                            <th style="text-align: center; width: inherit; display:none">order</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody id="tbVisualizationBody"></tbody>
+                                                                </table>
+                                                                @*</div>*@
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer text-muted text-right">
+                                            Lista de visualizaciones
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+
+                            </div>
+
+
+                        </div>
+                        <div id="divPrePostContacto" class="tab-pane fade ">
+                            <div class="form-group row">
+                                <center> <h3><label class="control-label"> ACCIONES</label></h3></center>
+                            </div>
+
+                            <form>
+                                <fieldset class="scheduler-border">
+                                    <legend class="scheduler-border"> </legend>
+
+                                    <div class="form-group row">
+                                        <div class="col-sm-2"></div>
+                                        <label class="col-sm-2 control-label input-sm" style="text-align:left" for="txtCambiarCorreo">Cambiar Correo:</label>
+
+                                        <div class="col-sm-1">
+                                            <input class="" type="checkbox" id="chkChangeEmail" style="cursor: pointer" value="Marcado">
+
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <input id="txtCambiarCorreo" type="text" class="form-control" placeholder="Email" name="txtCambiarCorreo" disabled>
+                                        </div>
+
+                                        <div class="col-sm-2"></div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-2"></div>
+                                        <label class="col-sm-2 control-label input-sm" style="text-align:left">Cambiar contraseña: </label>
+
+                                        <div class="col-sm-1">
+                                            <input class="" type="checkbox" id="chkChangePassword" style="cursor: pointer" value="Marcado">
+                                        </div>
+                                        <div class="col-sm-5">
+                                            <label class="control-label" style="text-align:left" id="lblMessagePass"> </label>
+                                        </div>
+                                        <div class="col-sm-2"></div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-2"></div>
+                                        <label class="col-sm-2 control-label input-sm" style="text-align:left">Desvincular: </label>
+
+                                        <div class="col-sm-6">
+                                            <input class="" type="checkbox" id="chkDesvincular" style="cursor: pointer" value="Marcado">
+                                        </div>
+                                        <div class="col-sm-2"></div>
+                                    </div>
+                                </fieldset>
+                            </form>
+                            <div class="row">
+
+                            </div>
+
+                            <div class="accordion" id="accordionExample1" style="display:none">
+                                <div class="card">
+                                    <div class="card-header" style="cursor: pointer" id="headingOne" data-toggle="collapse" data-target="#collapseOne1" aria-expanded="false" aria-controls="collapseOne1">
+                                        <h5 class="mb-0">
+                                            <button class="" type="button" data-toggle="collapse" data-target="#collapseOne1" aria-expanded="false" aria-controls="collapseOne1"></button>
+                                            <span>
+                                                Dispositivos del Usuario
+                                            </span>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseOne1" class="collapse in" aria-labelledby="headingOne" data-parent="#accordionExample1">
+                                        <div class="card-body">
+                                            <div class="row text-right" style="cursor: pointer; margin-left: 20px; margin-right: 25px">
+                                                <button class="btn btn-default btn-sm" id="btnViewHistoryDevice" type="button"> <i class="glyphicon glyphicon-copy"></i> Ver Historial </button>
+
+                                            </div>
+                                            <div class="row" style="margin-left:20px; margin-right:1px">
+                                                <div class="">
+                                                    <div class="">
+                                                        <div class="row" id="divtbtbDeviceUser" style="width:100%">
+                                                            <table id="tbDeviceUser" class="table table-bordered table-hover" style="width:100%">
+                                                                <thead class="claro-bg-primary">
+                                                                    <tr>
+                                                                        <th style="text-align: center; width: inherit;">Dispositivo</th>
+                                                                        <th style="text-align: center; width: inherit;">Nombre</th>
+                                                                        <th style="text-align: center; width: inherit;">Product: ID/Serial</th>
+                                                                        <th style="text-align: center; width: inherit;">Fecha de Activaci&oacute;n</th>
+                                                                        <th style="text-align: center; width: inherit;">Acciones</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody id="tbDeviceUserBodyList"></tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer text-muted text-right">
+                                        Lista de dispositivos
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+
+                            </div>
+
+                            <p id="spanMensajeNoCliente" class="bg-danger hide" style="color: #903535; padding: 10px 10px 10px 10px;"></p>
+
+                        </div>
+                        @*INICIO - PROY-140510 - AMCO - Modulo de consulta y eliminar cuenta de Claro Video*@
+                        <div id="divPrePostContactoConsulta" class="tab-pane fade active">
+                            <form>
+                                <center><h3><label class="control-label"> CONSULTAR</label></h3></center>
+                                <div class="panel panel-default">
+                                    <div class="panel panel-heading"> <i class="glyphicon glyphicon-user"></i> Datos del usuario</div>
+                                    <div class="panel-body">
+                                        <table class="table-white" style="width:100%">
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="form-group row">
+                                                            <div class="col-sm-3">
+                                                                <label for="txtCorreoelectronico2" class="col-form-label">Consulta de correo: <label class="control-label label-red ">*</label></label>
+                                                            </div>
+                                                            <div class="col-sm-5" style="padding-left: 5px; padding-right: 20px;">
+                                                                <input type="text" class="form-control" id="txtEmailAMCO">
+                                                            </div>
+                                                            <div style="cursor: pointer">
+                                                                <button style="padding-left: 35px; padding-right: 35px; margin: 2px; width: 150px;" class="btn claro-btn-info btn-sm" id="btnConsultar" type="button"> Consultar</button>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="form-group row">
+                                                            <div class="col-sm-3">
+                                                                <label for="txtCorreoelectronico" class="col-form-label">Correo Electronico: <label class="control-label label-red ">*</label></label>
+                                                            </div>
+                                                            <div class="col-sm-7">
+                                                                <input type="text" class="form-control" id="txtEmailAMCO2" disabled>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td>
+                                                        <div class="form-group row">
+                                                            <div class="col-sm-3">
+                                                                <label for="txtNombre" class="col-form-label">Nombres:<label class="control-label label-red">*</label></label>
+                                                            </div>
+                                                            <div class="col-sm-7">
+                                                                <input type="text" class="form-control" id="txtNamesAMCO" disabled>
+                                                            </div>
+                                                            <div class="col-sm-2"></div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td>
+                                                        <div class="form-group row">
+                                                            <div class="col-sm-3">
+                                                                <label for="txtApellido" class="col-form-label">Apellidos: <label class="control-label label-red">*</label></label>
+                                                            </div>
+                                                            <div class="col-sm-7">
+                                                                <input type="text" class="form-control" id="txtLastNamesAMCO" disabled>
+                    </div>
+                                                            <div class="col-sm-2"></div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td>
+                                                        <div class="form-group row">
+                                                            <div class="col-sm-3">
+                                                                <label for="txtLinea2" class="col-form-label">L&iacute;nea / ID: <label class="control-label label-red">*</label></label>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <input type="text" class="form-control" id="txtLineAMCO" disabled>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                        <div class="form-group row text-right" style="margin-left:10px; margin-right:10px" id="PanelEliminar">
+
+                                            <center>
+                                                <div class="card">
+                                                    <div class="card-header" style="cursor: pointer">
+                                                        <button style="padding-left: 35px; padding-right: 35px; margin: 5px; width: 150px;" class="btn claro-btn-info btn-sm" id="btnEliminar" type="button" disabled="disabled"> ELIMINAR</button>
+                                                    </div>
+                                                </div>
+                                            </center>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        @*FIN - PROY-140510 - AMCO - Modulo de consulta y eliminar cuenta de Claro Video*@
+                    </div>
+                    <div class="row">
+
+                    </div>
+                    <form>
+                        <div id="divSectionEmail" class="tab-pane fade active">
+                        <div class="form-group row">
+                            <div class="col-sm-2"></div>
+                            <label class="col-sm-2 control-label" style="text-align:left" for="txtSendforEmail">Enviar Correo: <input class="" type="checkbox" id="chkSentEmail" style="cursor: pointer" value="Marcado"></label>
+
+                            <div class="col-sm-3">
+                                <input id="txtSendforEmail" type="text" class="form-control" placeholder="Email" name="txtSendforEmail" disabled>
+                            </div>
+                            <div class="col-sm-5"></div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-sm-2"></div>
+                            <label for="cboPuntoVenta" class="col-sm-2 col-form-label">Punto de atencion:</label>
+
+                            <div class="col-sm-3">
+                                <select id="cboPuntoVenta" class="input-sm form-control"></select>
+                            </div>
+                            <div class="col-sm-5"></div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-sm-2"></div>
+                            <label for="colFormLabel" class="col-sm-2 col-form-label">Nota:</label>
+
+                            <div class="col-sm-5">
+                                <textarea id="txtNote" class="form-control" rows="5"></textarea>
+                            </div>
+                            <div class="col-sm-3"></div>
+                        </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div id="content" class="panel-body" style="margin-left:15px; margin-right:15px">
+                    <div class="row">
+                        <div class="">
+                            <center>
+                                <div class="card">
+                                    <div class="card-header" style="cursor: pointer">
+                                        <button style="padding-left: 35px; padding-right: 35px; margin: 5px; width:150px;" class="btn claro-btn-secondary btn-sm" id="btnSave" type="button" disabled><i class="glyphicon glyphicon-floppy-saved"></i>  Guardar</button>
+                                        <button style="padding-left: 35px; padding-right: 35px; margin: 5px; width: 150px;" class="btn claro-btn-info btn-sm" id="btnConstancia" type="button" disabled> <i class="glyphicon glyphicon-file"></i>  Constancia</button>
+                                        <button style="padding-left: 35px; padding-right: 35px; margin: 5px; width: 150px;" class="btn btn-danger btn-sm" id="btnClose" type="button"><i class="glyphicon glyphicon-remove"></i>  Cerrar</button>
+                                    </div>
+                                </div>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @* wbc - inicio *@
+    <input type="hidden" id="hdTmcode" value="0" />
+    <input type="hidden" id="contienepaqueteiptv" value=""/>
+           @* wbc - fin *@>
+
+    @* INICIATIVA-794 *@>
+    <input type="hidden" id="LstValidacionIPTV" value="@ViewBag.LstValidacionIPTV" />
+</div>
+
+
+@Scripts.Render("~/bundles/Transactions/ClaroVideoLib")
+@Scripts.Render("~/bundles/Transactions/SuscripcionClaroVideo")
+@Scripts.Render("~/bundles/Transactions/Auth/AuthUser")

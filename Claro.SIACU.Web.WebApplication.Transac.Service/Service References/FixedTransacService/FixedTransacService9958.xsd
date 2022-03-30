@@ -1,70 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.PostUpdateProgTaskLte" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.PostUpdateProgTaskLte" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetReconeService" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetReconeService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed" />
   <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd3" namespace="Claro" />
-  <xs:complexType name="UpdateProgTaskLteRequest">
+  <xs:complexType name="ReconeServiceRequest">
     <xs:complexContent mixed="false">
       <xs:extension xmlns:q1="Claro" base="q1:Request">
         <xs:sequence>
-          <xs:element minOccurs="0" name="Asesor" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="CadDac" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="Cantidad" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="Cargo" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="CargoFijo" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="CentroPobladoId" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="CodInteraccion" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="CodReclamo" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="CodigoAplicacion" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="ConId" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="Cuenta" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="CustomerId" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="EdificioId" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="FechaDesde" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="FechaHasta" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="FechaProg" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="FechaProgramada" type="xs:dateTime" />
-          <xs:element minOccurs="0" name="FlagActDirFact" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="FranjaHora" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="FranjaHoraId" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="IdTransaccion" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="InterCasoId" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="IpAplicacion" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="MotivoId" type="xs:int" />
-          <xs:element minOccurs="0" name="NomUrb" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="NomVia" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="NombreAplicacion" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="NroVia" type="xs:int" />
-          <xs:element minOccurs="0" name="NumCarta" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="NumLote" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="NumMz" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="Observacion" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="Operador" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="Referencia" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="ServiCod" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="ServiEstado" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="ServicioId" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="StrIdSession" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="StrTransaction" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="TipMz" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="TipoTransaccion" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="TipoUrb" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="TipoVia" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="TmCode" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="TrabajoId" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="TransTipo" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="Ubigeo" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="Usrregis" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="UsuarioApp" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="UsuarioSistema" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="ZonaId" nillable="true" type="xs:string" />
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed" minOccurs="0" name="GetReconection" nillable="true" type="q2:Reconection" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="UpdateProgTaskLteRequest" nillable="true" type="tns:UpdateProgTaskLteRequest" />
-  <xs:complexType name="UpdateProgTaskLteResponse">
+  <xs:element name="ReconeServiceRequest" nillable="true" type="tns:ReconeServiceRequest" />
+  <xs:complexType name="ReconeServiceResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" name="ResultStatus" type="xs:boolean" />
+      <xs:element minOccurs="0" name="BoolResult" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IdTransaction" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Result" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="UpdateProgTaskLteResponse" nillable="true" type="tns:UpdateProgTaskLteResponse" />
+  <xs:element name="ReconeServiceResponse" nillable="true" type="tns:ReconeServiceResponse" />
 </xs:schema>

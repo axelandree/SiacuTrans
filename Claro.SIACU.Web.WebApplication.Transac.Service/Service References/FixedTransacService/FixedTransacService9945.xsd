@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetTypeConfip" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetTypeConfip" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetJobTypeConfigIP" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Claro.SIACU.Entity.Transac.Service.Fixed.GetJobTypeConfigIP" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://localhost:40204/FixedTransacService.svc?xsd=xsd3" namespace="Claro" />
-  <xs:complexType name="TypeConfigIpRequest">
+  <xs:complexType name="JobTypesConfigIPRequest">
     <xs:complexContent mixed="false">
       <xs:extension xmlns:q1="Claro" base="q1:Request">
-        <xs:sequence>
-          <xs:element minOccurs="0" name="an_tiptrabajo" type="xs:int" />
-        </xs:sequence>
+        <xs:sequence />
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="TypeConfigIpRequest" nillable="true" type="tns:TypeConfigIpRequest" />
-  <xs:complexType name="ArrayOfTypeConfigIpResponse">
+  <xs:element name="JobTypesConfigIPRequest" nillable="true" type="tns:JobTypesConfigIPRequest" />
+  <xs:complexType name="ArrayOfJobTypesConfigIPResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="TypeConfigIpResponse" nillable="true" type="tns:TypeConfigIpResponse" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="JobTypesConfigIPResponse" nillable="true" type="tns:JobTypesConfigIPResponse" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="ArrayOfTypeConfigIpResponse" nillable="true" type="tns:ArrayOfTypeConfigIpResponse" />
-  <xs:complexType name="TypeConfigIpResponse">
+  <xs:element name="ArrayOfJobTypesConfigIPResponse" nillable="true" type="tns:ArrayOfJobTypesConfigIPResponse" />
+  <xs:complexType name="JobTypesConfigIPResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" name="CODIGON" type="xs:int" />
-      <xs:element minOccurs="0" name="DESCRIP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DESCRIPCION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FLAG_ACTIVA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TIPO_SERV" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TIPTRA" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="TypeConfigIpResponse" nillable="true" type="tns:TypeConfigIpResponse" />
+  <xs:element name="JobTypesConfigIPResponse" nillable="true" type="tns:JobTypesConfigIPResponse" />
 </xs:schema>

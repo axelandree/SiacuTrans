@@ -1,0 +1,8 @@
+D:\Fuentes\28032022\SiacuTrans\Framework\Claro\bin\Debug\Claro.dll
+D:\Fuentes\28032022\SiacuTrans\Framework\Claro\bin\Debug\Claro.pdb
+D:\Fuentes\28032022\SiacuTrans\Framework\Claro\obj\Debug\Claro.dll
+D:\Fuentes\28032022\SiacuTrans\Framework\Claro\obj\Debug\Claro.pdb
+D:\SiacuTrans\Framework\Claro\bin\Debug\Claro.dll
+D:\SiacuTrans\Framework\Claro\bin\Debug\Claro.pdb
+D:\SiacuTrans\Framework\Claro\obj\Debug\Claro.dll
+D:\SiacuTrans\Framework\Claro\obj\Debug\Claro.pdb
